@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <VersionPrefix>1.2.2</VersionPrefix>
+    <GenerateFullPaths>true</GenerateFullPaths>
+    <Common>$(MsBuildThisFileDirectory)</Common>
+    <SolutionDir>$(Common)../</SolutionDir>
+    <BaseOutputPath>$(MSBuildProjectDirectory)/bin</BaseOutputPath>
+    <OutputPath>$(BaseOutputPath)</OutputPath>
+    
+    <PackageTargetFallback>$(PackageTargetFallback);dotnet;portable-net45+win8;netstandard1.3</PackageTargetFallback>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.0</TargetFramework>
+  </PropertyGroup>
+
+  <Target Name="Nuke" AfterTargets="clean" >
+    <Delete Files="$(BaseOutputPath)**;$(BaseIntermediateOutputPath)razor/**;$(BaseIntermediateOutputPath)Debug/**;$(BaseIntermediateOutputPath)Release/**" />
+    <RemoveDir Directories="$(BaseOutputPath);$(BaseIntermediateOutputPath)/Debug;$(BaseIntermediateOutputPath)/Release" />
+  </Target>
+  
+  <ItemGroup>
+    <Content Include="$(MSBuildProjectDirectory)\Resource\**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="1.1.0.0" />
+    <!-- <PackageReference Include="Microsoft.NETCore.App" Version="1.0.1" /> -->
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0-preview-20161123-03" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0-beta4-build1194" />
+    <PackageReference Include="xunit" Version="2.2.0-beta4-build3444" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resource\Swagger\swagger-x-ms-discriminator-value.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <ProjectReference Include="$(SolutionDir)src/autorest.modeler.csproj" />
+  </ItemGroup>
+ 
+  <ProjectExtensions><VisualStudio><UserProperties Resource_4Swagger_4swagger-x-ms-discriminator-value_1json__JSONSchema="..\..\..\..\..\schema\swagger-extensions.json" /></VisualStudio></ProjectExtensions>
+</Project>
