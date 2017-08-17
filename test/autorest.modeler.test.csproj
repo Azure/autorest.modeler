@@ -1,11 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+﻿<Project Sdk="Microsoft.NET.Sdk" >
   <PropertyGroup>
     <VersionPrefix>1.2.2</VersionPrefix>
     <GenerateFullPaths>true</GenerateFullPaths>
     <Common>$(MsBuildThisFileDirectory)</Common>
     <SolutionDir>$(Common)../</SolutionDir>
-    <BaseOutputPath>$(MSBuildProjectDirectory)/bin</BaseOutputPath>
-    <OutputPath>$(BaseOutputPath)</OutputPath>
     
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
@@ -23,11 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
-    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="1.1.0.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0-preview-20161123-03" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0-beta4-build1194" />
-    <PackageReference Include="xunit" Version="2.2.0-beta4-build3444" />
+     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0-preview-20170810-02" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
+    <PackageReference Include="xunit" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
