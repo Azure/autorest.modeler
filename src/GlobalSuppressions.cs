@@ -9,141 +9,141 @@
 // You do not need to add suppressions to this file manually.
 
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.Operation.#Security", 
+    Scope = "member", Target = "AutoRest.Modeler.Model.Operation.#Security", 
     Justification = "This type is strictly a serialization model.")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.ServiceDefinition.#Paths", 
+    Scope = "member", Target = "AutoRest.Modeler.Model.ServiceDefinition.#Paths", 
     Justification = "This type is strictly a serialization model.")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.ServiceDefinition.#Security", 
+    Scope = "member", Target = "AutoRest.Modeler.Model.ServiceDefinition.#Security", 
     Justification = "This type is strictly a serialization model.")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1054:UriParametersShouldNotBeStrings", 
     MessageId = "1#", Scope = "member", 
-    Target = "AutoRest.Swagger.OperationBuilder.#BuildMethod(AutoRest.Core.Model.HttpMethod,System.String,System.String,System.String)", Justification = "May not parse as valid Uri")]
+    Target = "AutoRest.Modeler.OperationBuilder.#BuildMethod(AutoRest.Core.Model.HttpMethod,System.String,System.String,System.String)", Justification = "May not parse as valid Uri")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1054:UriParametersShouldNotBeStrings", 
     MessageId = "1#", Scope = "member", 
-    Target = "AutoRest.Swagger.SwaggerModeler.#BuildMethod(AutoRest.Core.Model.HttpMethod,System.String,System.String,AutoRest.Swagger.Model.Operation)", Justification = "May not parse as valid Uri")]
+    Target = "AutoRest.Modeler.SwaggerModeler.#BuildMethod(AutoRest.Core.Model.HttpMethod,System.String,System.String,AutoRest.Modeler.Model.Operation)", Justification = "May not parse as valid Uri")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1055:UriReturnValuesShouldNotBeStrings", 
-    Scope = "member", Target = "AutoRest.Swagger.SwaggerModeler.#BuildMethodBaseUrl(AutoRest.Core.Model.CodeModel,System.String)", Justification = "May not parse as valid Uri")]
+    Scope = "member", Target = "AutoRest.Modeler.SwaggerModeler.#BuildMethodBaseUrl(AutoRest.Core.Model.CodeModel,System.String)", Justification = "May not parse as valid Uri")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1056:UriPropertiesShouldNotBeStrings", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.Contact.#Url", Justification = "May not parse as valid Uri")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.Contact.#Url", Justification = "May not parse as valid Uri")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1056:UriPropertiesShouldNotBeStrings", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.ExternalDoc.#Url", Justification = "May not parse as valid Uri")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.ExternalDoc.#Url", Justification = "May not parse as valid Uri")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1056:UriPropertiesShouldNotBeStrings", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.License.#Url", Justification = "May not parse as valid Uri")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.License.#Url", Justification = "May not parse as valid Uri")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1056:UriPropertiesShouldNotBeStrings", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.SecurityDefinition.#AuthorizationUrl", Justification = "May not parse as valid Uri")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.SecurityDefinition.#AuthorizationUrl", Justification = "May not parse as valid Uri")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1056:UriPropertiesShouldNotBeStrings", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.SecurityDefinition.#TokenUrl", Justification = "May not parse as valid Uri")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "AutoRest.Core.Logging.ErrorManager.CreateError(System.String,System.Object[])", Scope = "member", Target = "AutoRest.Swagger.SwaggerParser.#Parse(System.String)", Justification = "Generated Code")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.SecurityDefinition.#TokenUrl", Justification = "May not parse as valid Uri")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "AutoRest.Core.Logging.ErrorManager.CreateError(System.String,System.Object[])", Scope = "member", Target = "AutoRest.Modeler.SwaggerParser.#Parse(System.String)", Justification = "Generated Code")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1308:NormalizeStringsToUppercase", 
-    Scope = "member", Target = "AutoRest.Swagger.Extensions.#ToHttpMethod(System.String)", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Extensions.#ToHttpMethod(System.String)", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1308:NormalizeStringsToUppercase", 
-    Scope = "member", Target = "AutoRest.Swagger.SchemaResolver.#Dereference(System.String)", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.SchemaResolver.#Dereference(System.String)", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1308:NormalizeStringsToUppercase", 
-    Scope = "member", Target = "AutoRest.Swagger.SwaggerModeler.#InitializeClientModel()", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.SwaggerModeler.#InitializeClientModel()", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", 
-    Scope = "member", Target = "AutoRest.Swagger.OperationBuilder.#BuildMethod(AutoRest.Core.Model.HttpMethod,System.String,System.String,System.String)", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.OperationBuilder.#BuildMethod(AutoRest.Core.Model.HttpMethod,System.String,System.String,System.String)", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", 
     MessageId = "param", Scope = "member", 
-    Target = "AutoRest.Swagger.CollectionFormatBuilder.#OnBuildMethodParameter(AutoRest.Core.Model.Method,AutoRest.Swagger.Model.SwaggerParameter,System.Text.StringBuilder)", Justification = "Serialization Type")]
+    Target = "AutoRest.Modeler.CollectionFormatBuilder.#OnBuildMethodParameter(AutoRest.Core.Model.Method,AutoRest.Modeler.Model.SwaggerParameter,System.Text.StringBuilder)", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", 
     MessageId = "Param", Scope = "member", 
-    Target = "AutoRest.Swagger.CollectionFormatBuilder.#OnBuildMethodParameter(AutoRest.Core.Model.Method,AutoRest.Swagger.Model.SwaggerParameter,System.Text.StringBuilder)", Justification = "Serialization Type")]
+    Target = "AutoRest.Modeler.CollectionFormatBuilder.#OnBuildMethodParameter(AutoRest.Core.Model.Method,AutoRest.Modeler.Model.SwaggerParameter,System.Text.StringBuilder)", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1702:CompoundWordsShouldBeCasedCorrectly", 
-    MessageId = "OAuth", Scope = "type", Target = "AutoRest.Swagger.Model.OAuthFlow", Justification = "Serialization Type")]
+    MessageId = "OAuth", Scope = "type", Target = "AutoRest.Modeler.Model.OAuthFlow", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1702:CompoundWordsShouldBeCasedCorrectly", 
-    MessageId = "OAuth", Scope = "member", Target = "AutoRest.Swagger.Model.SecuritySchemeType.#OAuth2", Justification = "Serialization Type")]
+    MessageId = "OAuth", Scope = "member", Target = "AutoRest.Modeler.Model.SecuritySchemeType.#OAuth2", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", 
-    MessageId = "Ws", Scope = "member", Target = "AutoRest.Swagger.Model.TransferProtocolScheme.#Ws", Justification = "Serialization Type")]
+    MessageId = "Ws", Scope = "member", Target = "AutoRest.Modeler.Model.TransferProtocolScheme.#Ws", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", 
-    MessageId = "Wss", Scope = "member", Target = "AutoRest.Swagger.Model.TransferProtocolScheme.#Wss", Justification = "Serialization Type")]
+    MessageId = "Wss", Scope = "member", Target = "AutoRest.Modeler.Model.TransferProtocolScheme.#Wss", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", 
-    MessageId = "Ws", Scope = "member", Target = "AutoRest.Swagger.Model.TransferProtocolScheme.#Ws", Justification = "Serialization Type")]
+    MessageId = "Ws", Scope = "member", Target = "AutoRest.Modeler.Model.TransferProtocolScheme.#Ws", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1716:IdentifiersShouldNotMatchKeywords", 
-    MessageId = "Default", Scope = "member", Target = "AutoRest.Swagger.Model.SwaggerObject.#Default", Justification = "Serialization Type")]
+    MessageId = "Default", Scope = "member", Target = "AutoRest.Modeler.Model.SwaggerObject.#Default", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1716:IdentifiersShouldNotMatchKeywords", 
-    MessageId = "Enum", Scope = "member", Target = "AutoRest.Swagger.Model.SwaggerObject.#Enum", Justification = "Serialization Type")]
+    MessageId = "Enum", Scope = "member", Target = "AutoRest.Modeler.Model.SwaggerObject.#Enum", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1721:PropertyNamesShouldNotMatchGetMethods", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.SwaggerObject.#Type", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.SwaggerObject.#Type", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1724:TypeNamesShouldNotMatchNamespaces", 
-    Scope = "type", Target = "AutoRest.Swagger.Model.Schema", Justification = "Serialization Type")]
+    Scope = "type", Target = "AutoRest.Modeler.Model.Schema", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.SwaggerObject.#GetBuilder(AutoRest.Swagger.SwaggerModeler)")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.SwaggerObject.#GetBuilder(AutoRest.Modeler.SwaggerModeler)")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", 
     MessageId = "operation", Scope = "member", 
-    Target = "AutoRest.Swagger.OperationBuilder.#SwaggerOperationProducesJson(AutoRest.Swagger.Model.Operation)")]
+    Target = "AutoRest.Modeler.OperationBuilder.#SwaggerOperationProducesJson(AutoRest.Modeler.Model.Operation)")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", 
     MessageId = "operation", Scope = "member", 
-    Target = "AutoRest.Swagger.OperationBuilder.#SwaggerOperationConsumesJson(AutoRest.Swagger.Model.Operation)")]
+    Target = "AutoRest.Modeler.OperationBuilder.#SwaggerOperationConsumesJson(AutoRest.Modeler.Model.Operation)")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", 
     MessageId = "operation", Scope = "member", 
-    Target = "AutoRest.Swagger.OperationBuilder.#SwaggerOperationProducesOctetStream(AutoRest.Swagger.Model.Operation)")]
+    Target = "AutoRest.Modeler.OperationBuilder.#SwaggerOperationProducesOctetStream(AutoRest.Modeler.Model.Operation)")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", 
     MessageId = "operation", Scope = "member", 
-    Target = "AutoRest.Swagger.OperationBuilder.#SwaggerOperationConsumesMultipartFormData(AutoRest.Swagger.Model.Operation)", Justification = "Serialization Type")]
+    Target = "AutoRest.Modeler.OperationBuilder.#SwaggerOperationConsumesMultipartFormData(AutoRest.Modeler.Model.Operation)", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", 
     "CA1703:ResourceStringsShouldBeSpelledCorrectly", MessageId = "multi", Scope = "resource", 
-    Target = "AutoRest.Swagger.Properties.Resources.resources", Justification = "Serialization Type")]
+    Target = "AutoRest.Modeler.Properties.Resources.resources", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", 
-    MessageId = "Auth", Scope = "type", Target = "AutoRest.Swagger.Model.OAuthFlow", Justification = "Serialization Type")]
+    MessageId = "Auth", Scope = "type", Target = "AutoRest.Modeler.Model.OAuthFlow", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", 
-    MessageId = "Auth", Scope = "member", Target = "AutoRest.Swagger.Model.SecuritySchemeType.#OAuth2")]
+    MessageId = "Auth", Scope = "member", Target = "AutoRest.Modeler.Model.SecuritySchemeType.#OAuth2")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.Operation.#Tags", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.Operation.#Tags", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.Operation.#Consumes", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.Operation.#Consumes", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.Operation.#Produces", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.Operation.#Produces", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.Operation.#Parameters", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.Operation.#Parameters", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.Operation.#Responses", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.Operation.#Responses", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.Operation.#Schemes", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.Operation.#Schemes", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.Operation.#Security", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.Operation.#Security", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.OperationResponse.#Headers", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.OperationResponse.#Headers", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.OperationResponse.#Examples", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.OperationResponse.#Examples", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.Schema.#Properties", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.Schema.#Properties", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.Schema.#Required", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.Schema.#Required", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.Schema.#AllOf", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.Schema.#AllOf", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.SecurityDefinition.#Scopes", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.SecurityDefinition.#Scopes", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.ServiceDefinition.#Schemes", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.ServiceDefinition.#Schemes", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.ServiceDefinition.#Consumes", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.ServiceDefinition.#Consumes", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.ServiceDefinition.#Produces", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.ServiceDefinition.#Produces", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.ServiceDefinition.#Paths", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.ServiceDefinition.#Paths", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.ServiceDefinition.#Definitions", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.ServiceDefinition.#Definitions", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.ServiceDefinition.#Parameters", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.ServiceDefinition.#Parameters", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.ServiceDefinition.#Responses", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.ServiceDefinition.#Responses", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.ServiceDefinition.#SecurityDefinitions", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.ServiceDefinition.#SecurityDefinitions", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.ServiceDefinition.#Security", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.ServiceDefinition.#Security", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.ServiceDefinition.#Tags", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.ServiceDefinition.#Tags", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.ServiceDefinition.#ExternalReferences", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.ServiceDefinition.#ExternalReferences", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.SwaggerBase.#Extensions", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.SwaggerBase.#Extensions", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.SwaggerObject.#Enum", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.SwaggerObject.#Enum", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.JsonConverters.SwaggerJsonConverter.#Document", Justification = "Serialization Type")]
+    Scope = "member", Target = "AutoRest.Modeler.JsonConverters.SwaggerJsonConverter.#Document", Justification = "Serialization Type")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly", 
-    Scope = "member", Target = "AutoRest.Swagger.Model.ServiceDefinition.#CustomPaths", Justification = "Serialization Type")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Scope = "member", Target = "AutoRest.Swagger.SchemaBuilder.#BuildServiceType(System.String)")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "AutoRest.Core.Logging.ErrorManager.CreateError(System.String,System.Object[])", Scope = "member", Target = "AutoRest.Swagger.SwaggerModeler.#Build()")]
+    Scope = "member", Target = "AutoRest.Modeler.Model.ServiceDefinition.#CustomPaths", Justification = "Serialization Type")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Scope = "member", Target = "AutoRest.Modeler.SchemaBuilder.#BuildServiceType(System.String)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "AutoRest.Core.Logging.ErrorManager.CreateError(System.String,System.Object[])", Scope = "member", Target = "AutoRest.Modeler.SwaggerModeler.#Build()")]

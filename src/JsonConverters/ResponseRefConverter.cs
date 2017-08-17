@@ -2,11 +2,11 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
 using System;
-using AutoRest.Swagger.Model;
+using AutoRest.Modeler.Model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace AutoRest.Swagger.JsonConverters
+namespace AutoRest.Modeler.JsonConverters
 {
     public class ResponseRefConverter : SwaggerJsonConverter
     {

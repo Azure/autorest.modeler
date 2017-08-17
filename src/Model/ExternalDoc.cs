@@ -3,7 +3,7 @@
 
 using AutoRest.Core.Utilities;
 
-namespace AutoRest.Swagger.Model
+namespace AutoRest.Modeler.Model
 {
     /// <summary>
     /// Allows referencing an external resource for extended documentation.

@@ -5,7 +5,7 @@ using AutoRest.Core.Utilities;
 using System;
 using System.Collections.Generic;
 
-namespace AutoRest.Swagger.Model
+namespace AutoRest.Modeler.Model
 {
     /// <summary>
     /// Describes a single response from an API Operation.

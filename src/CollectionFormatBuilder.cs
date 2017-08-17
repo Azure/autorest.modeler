@@ -6,11 +6,11 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Text;
 using AutoRest.Core.Model;
-using AutoRest.Swagger.Model;
-using AutoRest.Swagger.Properties;
-using ParameterLocation = AutoRest.Swagger.Model.ParameterLocation;
+using AutoRest.Modeler.Model;
+using AutoRest.Modeler.Properties;
+using ParameterLocation = AutoRest.Modeler.Model.ParameterLocation;
 
-namespace AutoRest.Swagger
+namespace AutoRest.Modeler
 {
     public static class CollectionFormatBuilder
     {

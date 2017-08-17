@@ -10,11 +10,12 @@ using AutoRest.Core;
 using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
 using AutoRest.Core.Utilities.Collections;
-using AutoRest.Swagger.Model;
+using AutoRest.Modeler.Model;
 using static AutoRest.Core.Utilities.DependencyInjection;
 using Newtonsoft.Json.Linq;
+using AutoRest.Swagger;
 
-namespace AutoRest.Swagger
+namespace AutoRest.Modeler
 {
     /// <summary>
     /// The builder for building a generic swagger object into parameters, 

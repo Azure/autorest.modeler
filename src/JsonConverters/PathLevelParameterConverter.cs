@@ -3,12 +3,12 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using AutoRest.Swagger.Model;
+using AutoRest.Modeler.Model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using AutoRest.Core.Logging;
 
-namespace AutoRest.Swagger.JsonConverters
+namespace AutoRest.Modeler.JsonConverters
 {
     public class PathLevelParameterConverter : SwaggerJsonConverter
     {

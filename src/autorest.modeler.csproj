@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
-  <PropertyGroup><PowerShell># 2>nul || type %~df0|C:\Windows\system32\find.exe /v "setlocal"|C:\Windows\system32\find.exe /v "errorlevel"|powershell.exe -noninteractive -&amp; exit %errorlevel% || #</PowerShell></PropertyGroup>
+  <PropertyGroup><PowerShell># 2&gt;nul || type %~df0|C:\Windows\system32\find.exe /v "setlocal"|C:\Windows\system32\find.exe /v "errorlevel"|powershell.exe -noninteractive -&amp; exit %errorlevel% || #</PowerShell></PropertyGroup>
 
   <PropertyGroup>
     <AssemblyName>autorest.modeler</AssemblyName>
@@ -30,15 +30,16 @@
     <OutputType>exe</OutputType>
     <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>AutoRest.Modeler</RootNamespace>
  
   </PropertyGroup>
 
-  <Target Name="Nuke" AfterTargets="clean" >
+  <Target Name="Nuke" AfterTargets="clean">
     <Delete Files="$(BaseOutputPath)**;$(BaseIntermediateOutputPath)razor/**;$(BaseIntermediateOutputPath)Debug/**;$(BaseIntermediateOutputPath)Release/**" />
     <RemoveDir Directories="$(BaseOutputPath);$(BaseIntermediateOutputPath)/Debug;$(BaseIntermediateOutputPath)/Release" />
   </Target>
   
-  <Target Name="UpdateResources" BeforeTargets="BeforeBuild" >
+  <Target Name="UpdateResources" BeforeTargets="BeforeBuild">
     <!-- <Message Text="Ensuring resources .cs files are netframework compatible [$(MSBuildProjectName)]" Importance="high" /> -->
     <PropertyGroup>
       <ResGenFix>$(Powershell)
@@ -62,11 +63,11 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
     <PackageReference Include="YamlDotNet.Signed" Version="4.2.1" />
-    <!-- <PackageReference Include="autorest.common"  Version="2.0.13" /> -->
+    <PackageReference Include="autorest.common"  Version="2.0.*" />
   </ItemGroup>
   
   <ItemGroup>
-  <ProjectReference Include="../../autorest.common/src/autorest.common.csproj" />
+  <!-- <ProjectReference Include="../../autorest.common/src/autorest.common.csproj" /> -->
 </ItemGroup>
 
   <ItemGroup>

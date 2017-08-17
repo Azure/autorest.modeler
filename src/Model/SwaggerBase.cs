@@ -4,7 +4,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace AutoRest.Swagger.Model
+namespace AutoRest.Modeler.Model
 {
     public abstract class SwaggerBase
     {

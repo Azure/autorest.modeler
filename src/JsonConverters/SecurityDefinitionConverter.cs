@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using AutoRest.Swagger.Model;
+using AutoRest.Modeler.Model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace AutoRest.Swagger.JsonConverters
+namespace AutoRest.Modeler.JsonConverters
 {
     public class SecurityDefinitionConverter : SwaggerJsonConverter
     {

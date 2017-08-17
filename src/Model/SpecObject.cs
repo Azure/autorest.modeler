@@ -3,7 +3,7 @@
 
 using System;
 
-namespace AutoRest.Swagger.Model
+namespace AutoRest.Modeler.Model
 {
     public abstract class SpecObject : SwaggerBase
     {

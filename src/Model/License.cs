@@ -3,7 +3,7 @@
 
 using System;
 
-namespace AutoRest.Swagger.Model
+namespace AutoRest.Modeler.Model
 {
     /// <summary>
     /// License information for the defined API.

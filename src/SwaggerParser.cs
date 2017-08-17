@@ -7,20 +7,21 @@ using AutoRest.Core;
 using AutoRest.Core.Logging;
 using AutoRest.Core.Parsing;
 using AutoRest.Core.Utilities;
-using AutoRest.Swagger.JsonConverters;
-using AutoRest.Swagger.Model;
-using AutoRest.Swagger.Properties;
+using AutoRest.Modeler.JsonConverters;
+using AutoRest.Modeler.Model;
+using AutoRest.Modeler.Properties;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.IO;
 
-namespace AutoRest.Swagger
+namespace AutoRest.Modeler
 {
     public static class SwaggerParser
     {
         static string Normalize(string swaggerDocument)
         {
+            
             // normalize YAML to JSON since that's what we process
             swaggerDocument = swaggerDocument.EnsureYamlIsJson();
             return swaggerDocument;

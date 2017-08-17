@@ -3,7 +3,7 @@
 
 using System;
 
-namespace AutoRest.Swagger.Model
+namespace AutoRest.Modeler.Model
 {
     /// <summary>
     /// The object provides metadata about the API. 

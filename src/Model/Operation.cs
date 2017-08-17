@@ -5,7 +5,7 @@ using System.Linq;
 using System.Collections.Generic;
 using AutoRest.Core.Utilities;
 
-namespace AutoRest.Swagger.Model
+namespace AutoRest.Modeler.Model
 {
     /// <summary>
     /// Describes a single API operation on a path.

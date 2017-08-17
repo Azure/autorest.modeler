@@ -6,11 +6,11 @@ using System.Collections.Generic;
 using System.Globalization;
 using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
-using AutoRest.Swagger.Properties;
+using AutoRest.Modeler.Properties;
 using Newtonsoft.Json;
 using static AutoRest.Core.Utilities.DependencyInjection;
 
-namespace AutoRest.Swagger.Model
+namespace AutoRest.Modeler.Model
 {
     /// <summary>
     /// Describes a single operation determining with this object is mandatory.

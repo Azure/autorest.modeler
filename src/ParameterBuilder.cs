@@ -4,11 +4,12 @@
 using System;
 using System.Linq;
 using AutoRest.Core.Model;
-using AutoRest.Swagger.Model;
-using ParameterLocation = AutoRest.Swagger.Model.ParameterLocation;
+using AutoRest.Modeler.Model;
+using ParameterLocation = AutoRest.Modeler.Model.ParameterLocation;
 using static AutoRest.Core.Utilities.DependencyInjection;
+using AutoRest.Swagger;
 
-namespace AutoRest.Swagger
+namespace AutoRest.Modeler
 {
     /// <summary>
     /// The builder for building swagger parameters into client model parameters, 

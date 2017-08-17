@@ -5,7 +5,7 @@ using System;
 using AutoRest.Core.Model;
 using System.Collections.Generic;
 
-namespace AutoRest.Swagger.Model
+namespace AutoRest.Modeler.Model
 {
     /// <summary>
     /// Swagger schema object.

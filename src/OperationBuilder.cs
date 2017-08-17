@@ -11,15 +11,15 @@ using System.Text;
 using AutoRest.Core.Model;
 using AutoRest.Core.Logging;
 using AutoRest.Core.Utilities;
-using AutoRest.Swagger.Model;
-using AutoRest.Swagger.Properties;
+using AutoRest.Modeler.Model;
+using AutoRest.Modeler.Properties;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using ParameterLocation = AutoRest.Swagger.Model.ParameterLocation;
-
+using ParameterLocation = AutoRest.Modeler.Model.ParameterLocation;
+using AutoRest.Swagger;
 using static AutoRest.Core.Utilities.DependencyInjection;
 
-namespace AutoRest.Swagger
+namespace AutoRest.Modeler
 {
     /// <summary>
     /// The builder for building swagger operations into client model methods.

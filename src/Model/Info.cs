@@ -4,7 +4,7 @@
 using AutoRest.Core.Utilities;
 using Newtonsoft.Json;
 
-namespace AutoRest.Swagger.Model
+namespace AutoRest.Modeler.Model
 {
     /// <summary>
     /// The object provides metadata about the API. 

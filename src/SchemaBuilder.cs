@@ -6,12 +6,13 @@ using System.Globalization;
 using AutoRest.Core;
 using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
-using AutoRest.Swagger.Model;
-using AutoRest.Swagger.Properties;
+using AutoRest.Modeler.Model;
+using AutoRest.Modeler.Properties;
 using static AutoRest.Core.Utilities.DependencyInjection;
 using System.Linq;
+using AutoRest.Swagger;
 
-namespace AutoRest.Swagger
+namespace AutoRest.Modeler
 {
     /// <summary>
     /// The builder for building swagger schema into client model parameters, 

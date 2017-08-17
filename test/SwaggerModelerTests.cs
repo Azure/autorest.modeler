@@ -10,7 +10,7 @@ using AutoRest.Core.Utilities;
 using Xunit;
 using System.Globalization;
 
-namespace AutoRest.Swagger.Tests
+namespace AutoRest.Modeler.Tests
 {
     [Collection("AutoRest Tests")]
     public class SwaggerModelerTests

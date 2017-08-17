@@ -5,14 +5,14 @@ using System;
 using System.Globalization;
 using AutoRest.Core.Logging;
 using AutoRest.Core.Utilities;
-using AutoRest.Swagger.JsonConverters;
-using AutoRest.Swagger.Model;
-using AutoRest.Swagger.Properties;
+using AutoRest.Modeler.JsonConverters;
+using AutoRest.Modeler.Model;
+using AutoRest.Modeler.Properties;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using AutoRest.Core.Model;
 
-namespace AutoRest.Swagger
+namespace AutoRest.Modeler
 {
     public static class BuilderExtensions
     {

@@ -8,7 +8,7 @@ using System.Linq;
 using AutoRest.Core.Utilities;
 using Xunit;
 
-namespace AutoRest.Swagger.Tests
+namespace AutoRest.Modeler.Tests
 {
     public class SwaggerModelerXmlTests
     {

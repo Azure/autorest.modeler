@@ -3,7 +3,7 @@
 
 using System;
 
-namespace AutoRest.Swagger.Model
+namespace AutoRest.Modeler.Model
 {
     /// <summary>
     /// Swagger header object.

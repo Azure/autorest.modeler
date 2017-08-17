@@ -3,7 +3,7 @@
 
 using AutoRest.Core.Utilities;
 
-namespace AutoRest.Swagger.Model
+namespace AutoRest.Modeler.Model
 {
     /// <summary>
     /// Represents a Swagger Tag

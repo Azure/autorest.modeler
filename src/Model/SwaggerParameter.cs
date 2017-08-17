@@ -3,7 +3,7 @@
 
 using Newtonsoft.Json;
 
-namespace AutoRest.Swagger.Model
+namespace AutoRest.Modeler.Model
 {
     /// <summary>
     /// Describes a single operation parameter.

@@ -1,0 +1,4 @@
+{
+    // we use gulp. npm is just for show.
+    "npm.autoDetect": "off"
+}
