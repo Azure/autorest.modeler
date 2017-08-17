@@ -36,7 +36,15 @@ task 'build','dotnet',['restore'], (done) ->
   execute "dotnet build -c #{configuration} #{solution} /nologo /clp:NoSummary", (code, stdout, stderr) ->
     done()
 
-task 'restore','restores the dotnet packages for the projects', (done) -> 
+task 'clear-cache-on-force', '', (done)->
+  if global.force 
+    execute "dotnet nuget locals http-cache --clear", (c,o,e) ->
+      done()
+  else 
+    done()
+
+task 'restore','restores the dotnet packages for the projects',['clear-cache-on-force'], (done) -> 
+  
   if ! test '-d', "#{os.homedir()}/.nuget"
     global.force = true
 

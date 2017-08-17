@@ -15,9 +15,11 @@ namespace AutoRest.Modeler.Tests
     [Collection("AutoRest Tests")]
     public class SwaggerModelerTests
     {
+        string CodeBaseDirectory => Directory.GetParent( typeof(SwaggerModelerTests).GetAssembly().Location).ToString();
+
         public SwaggerModelerTests()
         {
-            Directory.SetCurrentDirectory(Core.Utilities.Extensions.CodeBaseDirectory);
+            Directory.SetCurrentDirectory(CodeBaseDirectory);
         }
 
         private string CreateCSharpDeclarationString(Parameter parameter)
@@ -50,7 +52,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestcodeModelFromSimpleSwagger()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-simple-spec.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-simple-spec.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -110,7 +112,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestcodeModelWithInheritance()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-allOf.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-allOf.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -128,7 +130,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestcodeModelWithXmsDiscriminatorValue()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-x-ms-discriminator-value.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-x-ms-discriminator-value.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -147,7 +149,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestcodeModelPolymorhism()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-polymorphism.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-polymorphism.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -167,7 +169,7 @@ namespace AutoRest.Modeler.Tests
         // [Fact] skipping - test runner dies.
         public void codeModelWithCircularDependencyThrowsError()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-allOf-circular.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-allOf-circular.json");
             var modeler = new SwaggerModeler();
             var ex = Assert.Throws<InvalidOperationException>(() => modeler.Build(SwaggerParser.Parse(File.ReadAllText(input))));
             Assert.Contains("circular", ex.Message, StringComparison.OrdinalIgnoreCase);
@@ -177,7 +179,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestcodeModelWithRecursiveTypes()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-recursive-type.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-recursive-type.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -191,7 +193,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestcodeModelWithManyAllOfRelationships()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-ref-allOf-inheritance.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-ref-allOf-inheritance.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -225,7 +227,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestcodeModelWithNoContent()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-no-content.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-no-content.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -239,7 +241,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestcodeModelWithDifferentReturnsTypesBasedOnStatusCode()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-multiple-response-schemas.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-multiple-response-schemas.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -263,7 +265,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void DefaultReturnsCorrectType()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-multiple-response-schemas.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-multiple-response-schemas.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -275,7 +277,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void GlobalResponsesReference()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-global-responses.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-global-responses.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -286,7 +288,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestcodeModelWithStreamAndByteArray()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-streaming.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-streaming.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -313,7 +315,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestcodeModelWithMethodGroups()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-optional-params.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-optional-params.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -326,7 +328,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestDataTypes()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-data-types.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-data-types.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -440,7 +442,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestClientWithValidation()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-validation.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-validation.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -503,7 +505,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestConstants()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-validation.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-validation.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -554,7 +556,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestCompositeConstants()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-composite-constants.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-composite-constants.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -565,7 +567,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestcodeModelWithResponseHeaders()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-response-headers.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-response-headers.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -591,7 +593,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestCustomPaths()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-x-ms-paths.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-x-ms-paths.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -603,7 +605,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestYamlParsing()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-simple-spec.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-simple-spec.json");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
@@ -613,7 +615,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestAdditionalProperties()
         {
-            var input = Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", "swagger-additional-properties.yaml");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-additional-properties.yaml");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
