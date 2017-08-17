@@ -1,6 +1,4 @@
-
 require './common.iced'
-semver = require 'semver'
 
 # ==============================================================================
 # tasks required for this build 
@@ -11,6 +9,7 @@ Tasks "dotnet"  # dotnet functions
 Import
   initialized: false
   solution: "#{basefolder}/autorest.modeler.sln"
+  sourceFolder:  "#{basefolder}/src/"
 
 # ==============================================================================
 # Tasks

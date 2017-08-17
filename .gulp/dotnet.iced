@@ -58,6 +58,5 @@ task 'test', 'dotnet',['restore'] , (done) ->
       execute "dotnet test #{ each.path } /nologo",{retry:1}, (code,stderr,stdout) ->
         done()
         
-
 # the dotnet gulp-plugin.
 module.exports = dotnet

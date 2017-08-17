@@ -19,16 +19,17 @@
     <PackageLicenseUrl>https://raw.githubusercontent.com/Microsoft/dotnet/master/LICENSE</PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     
+    <!--
     <DelaySign Condition="$(Configuration) == 'Release'">true</DelaySign>
     <AssemblyOriginatorKeyFile Condition="$(Configuration) == 'Release'">$(SolutionDir)/tools/MSSharedLibKey.snk</AssemblyOriginatorKeyFile>
     <SignAssembly Condition="$(Configuration) == 'Release'">true</SignAssembly>
-    
     <PackageTargetFallback>$(PackageTargetFallback);dotnet;portable-net45+win8;netstandard1.3</PackageTargetFallback>
+    -->
  
     <RuntimeIdentifiers>win7-x64</RuntimeIdentifiers> 
     <OutputType>exe</OutputType>
-    <TargetFrameworks>netcoreapp1.0</TargetFrameworks>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
  
   </PropertyGroup>
 
@@ -61,11 +62,12 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
     <PackageReference Include="YamlDotNet.Signed" Version="4.2.1" />
+    <!-- <PackageReference Include="autorest.common"  Version="2.0.13" /> -->
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="../../autorest.common/src/autorest.common.csproj" />
-  </ItemGroup>
+  <ProjectReference Include="../../autorest.common/src/autorest.common.csproj" />
+</ItemGroup>
 
   <ItemGroup>
     <Folder Include="Properties\" />

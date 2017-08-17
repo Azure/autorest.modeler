@@ -1,6 +1,7 @@
 through = require 'through2'
 util = require 'util'
 
+
 # place an object into global namespace 
 global['Import'] = (object) -> 
   for key, value of object
@@ -35,6 +36,7 @@ Install 'util'
 Install 'moment'
 Install 'chalk'
 Install 'yargs'
+Install 'semver'
 
 Install 'eol', 'gulp-line-ending-corrector'
 Install 'through', 'through2-parallel'
@@ -157,7 +159,9 @@ module.exports =
     
     # add the new task.
     # gulp.task name, deps, fn
-    skip = (name.startsWith "init") or (name.startsWith "npm-install") or (name.startsWith "clean") or (name is "copy-dts-files") or (name.startsWith "nuke") or (name.startsWith "reset") or (name.startsWith "autorest")
+    skip = (name.startsWith "init") or (name.startsWith "npm-install") or (name.startsWith "clean") or (name is "copy-dts-files") or (name.startsWith "nuke") or (name.startsWith "reset") or (name.startsWith "autorest") or description.endsWith("!")
+    
+    description = '' if description = '!'
     
     if !skip
       deps.unshift "init" 
@@ -390,16 +394,16 @@ Import module.exports
 process.env["autorest.home"] = path.normalize("#{os.tmpdir()}/autorest#{hashCode(basefolder)}")
 process.env.tmp = process.env.tmp or "#{basefolder}/tmp"
 
+package_json = require("#{basefolder}/package.json")
+
+
 Import 
-  versionsuffix: if argv["version-suffix"]? then "--version-suffix=#{argv["version-suffix"]}" else ""
-  version: argv.version or (cat "#{basefolder}/VERSION").trim()
+  stable: argv.stable or false
   configuration: if argv.configuration then configString( argv.configuration)  else (if argv.release then 'Release' else 'Debug')
   github_apikey: argv.github_apikey or process.env.GITHUB_APIKEY or null
   nuget_apikey: argv.nuget_apikey or process.env.NUGET_APIKEY or null
-  myget_apikey: argv.myget_apikey or process.env.MYGET_APIKEY or null
   npm_apikey:  argv.npm_apikey or process.env.NPM_APIKEY or null
   autorest_home: process.env["autorest.home"]
-  github_feed: argv.feed or "azure"
   today: moment().format('YYYYMMDD')
   now: moment().format('YYYYMMDD-HHmm')
   force: argv.force or false
@@ -463,8 +467,18 @@ task 'default','', ->
 
 task 'test', "Run Tests", ->
   
-
 task 'fix-line-endings', 'Fixes line endings to file-type appropriate values.', ->
   source "**/*.iced"
     .pipe eol {eolc: 'LF', encoding:'utf8'}
     .pipe destination '.'
+
+task 'version-number', '!', (done)->
+  if argv.version
+    global.version =  argv.version if argv.version
+    done();
+  else 
+    # git rev-list --parents HEAD --count --full-history
+    execute "git rev-list --parents HEAD --count --full-history" , {silent:true}, (c,o,e)->
+      pv = (package_json.version).trim()
+      global.version = "#{semver.major(pv)}.#{semver.minor(pv)}.#{o.trim()}"
+      done();
