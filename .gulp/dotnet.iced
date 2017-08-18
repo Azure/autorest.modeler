@@ -32,7 +32,6 @@ dotnet = (cmd) ->
 
 
 task 'build','dotnet',['restore'], (done) ->
-  global.ts_ready++
   execute "dotnet build -c #{configuration} #{solution} /nologo /clp:NoSummary", (code, stdout, stderr) ->
     execute "dotnet publish -c #{configuration} #{sourceFolder} /nologo /clp:NoSummary ", (code, stdout, stderr) ->
       done()

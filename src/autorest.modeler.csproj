@@ -29,6 +29,8 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <RootNamespace>AutoRest.Modeler</RootNamespace>
  
+    <BaseOutputPath>$(MSBuildProjectDirectory)/bin</BaseOutputPath>
+    <OutputPath>$(BaseOutputPath)</OutputPath>
   </PropertyGroup>
 
   <Target Name="Nuke" AfterTargets="clean">
