@@ -24,7 +24,7 @@
     <PackageTargetFallback>$(PackageTargetFallback);dotnet;portable-net45+win8;netstandard1.3</PackageTargetFallback>
     -->
  
-    <OutputType>exe</OutputType>
+    <OutputType>Exe</OutputType>
     <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <RootNamespace>AutoRest.Modeler</RootNamespace>
@@ -60,9 +60,8 @@
   </Target>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="8.0.1" />
     <PackageReference Include="YamlDotNet.Signed" Version="4.2.1" />
-    <PackageReference Include="System.Threading" Version="4.3.0" />
     <!-- <PackageReference Include="autorest.common"  Version="2.0.14" /> -->
   </ItemGroup>
   
