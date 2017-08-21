@@ -193,6 +193,7 @@ namespace AutoRest.Modeler
                 ServiceDefinition.Host, ServiceDefinition.BasePath);
 
             // Copy extensions
+            ServiceDefinition.Info?.CodeGenerationSettings.Extensions.ForEach(extention => CodeModel.CodeGenExtensions.AddOrSet(extention.Key, extention.Value));
             ServiceDefinition.Extensions.ForEach(extention => CodeModel.Extensions.AddOrSet(extention.Key, extention.Value));
         }
 
