@@ -1,11 +1,12 @@
 {
   "name": "@microsoft.azure/autorest.modeler",
-  "version": "1.9.1",
+  "version": "1.9.2",
   "description": "The modeler extension for classic generators in AutoRest.",
   "scripts": {
     "start": "dotnet src/bin/netcoreapp2.0/autorest.modeler.dll --server",
     "test": "gulp test",
     "build": "gulp build",
+    "prepare": "gulp build",
     "clean": "gulp clean",
     "nuke": "git clean -xdf"
   },
