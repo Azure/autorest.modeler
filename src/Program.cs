@@ -15,7 +15,7 @@ namespace AutoRest.Modeler
             if(args != null && args.Length > 0 && args[0] == "--server") {
                 var connection = new Connection(Console.OpenStandardOutput(), Console.OpenStandardInput());
                 connection.Dispatch<IEnumerable<string>>("GetPluginNames", async () => new []{ "modeler" });
-                connection.Dispatch<string, string, bool>("Process", (plugin, sessionId) => new Program(connection, sessionId).Process());
+                connection.Dispatch<string, string, bool>("Process", (plugin, sessionId) => new Program(connection, plugin, sessionId).Process());
                 connection.DispatchNotification("Shutdown", connection.Stop);
 
                 // wait for something to do.
@@ -29,9 +29,7 @@ namespace AutoRest.Modeler
             return 1;
         }
 
-        public Program(Connection connection, string sessionId) : base(connection, sessionId)
-        {
-        }
+        public Program(Connection connection, string plugin, string sessionId) : base(connection, plugin, sessionId) { }
 
         protected override async Task<bool> ProcessInternal()
         {
