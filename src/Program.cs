@@ -49,7 +49,7 @@ namespace AutoRest.Modeler
             fs.WriteAllText(files[0], content);
 
             var serviceDefinition = SwaggerParser.Parse(fs.ReadAllText(files[0]));
-            var modeler = new SwaggerModeler(settings);
+            var modeler = new SwaggerModeler(settings, true == await GetValue<bool?>("generate-empty-classes"));
             var codeModel = modeler.Build(serviceDefinition);
 
             var genericSerializer = new ModelSerializer<CodeModel>();
