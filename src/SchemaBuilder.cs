@@ -41,7 +41,7 @@ namespace AutoRest.Modeler
             }
 
             // If it's known primary type, return that type
-            var primaryType = _schema.GetSimplePrimaryType();
+            var primaryType = _schema.GetSimplePrimaryType(Modeler.GenerateEmptyClasses);
             if (primaryType != KnownPrimaryType.None)
             {
                 var result = New<PrimaryType>(primaryType);

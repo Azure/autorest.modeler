@@ -30,9 +30,12 @@ namespace AutoRest.Modeler
         internal Dictionary<string, CompositeType> GeneratedTypes = new Dictionary<string, CompositeType>();
         internal Dictionary<Schema, CompositeType> GeneratingTypes = new Dictionary<Schema, CompositeType>();
 
-        public SwaggerModeler(Settings settings = null)
+        public bool GenerateEmptyClasses { get; private set; }
+
+        public SwaggerModeler(Settings settings = null, bool generateEmptyClasses = false)
         {
             this.settings = settings ?? new Settings();
+            this.GenerateEmptyClasses = generateEmptyClasses;
         }
 
         /// <summary>
