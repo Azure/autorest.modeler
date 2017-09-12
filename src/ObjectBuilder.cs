@@ -131,6 +131,11 @@ namespace AutoRest.Modeler
             }
             if (SwaggerObject.Type == DataType.Array)
             {
+                if (SwaggerObject.Items == null)
+                {
+                    throw new Exception($"Invalid Swagger: Missing 'items' definition of an 'array' type.");
+                }
+
                 string itemServiceTypeName;
                 if (SwaggerObject.Items.Reference != null)
                 {
