@@ -236,31 +236,39 @@ namespace AutoRest.Modeler
             foreach (var swaggerParameter in DeduplicateParameters(_operation.Parameters))
             {
                 var actualSwaggerParameter = _swaggerModeler.Unwrap(swaggerParameter);
-                if (actualSwaggerParameter.In == ParameterLocation.Header && actualSwaggerParameter.Name == "Content-Type") {
-                    // enrich Content-Type header with "consumes"
-                    if (actualSwaggerParameter.Enum == null && 
-                        _effectiveConsumes.Count > 1)
-                    {
-                        swaggerParameter.Default = actualSwaggerParameter.Default;
-                        swaggerParameter.Description = actualSwaggerParameter.Description;
-                        swaggerParameter.Extensions = actualSwaggerParameter.Extensions;
-                        swaggerParameter.In = actualSwaggerParameter.In;
-                        swaggerParameter.IsRequired = actualSwaggerParameter.IsRequired;
-                        swaggerParameter.Name = actualSwaggerParameter.Name;
-                        swaggerParameter.Schema = actualSwaggerParameter.Schema;
-                        swaggerParameter.Type = actualSwaggerParameter.Type;
-                        swaggerParameter.Enum = _effectiveConsumes.ToList();
+                // As per the OpenAPI spec, some header parameters shall be ignored (https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#fixed-fields-10):
+                if (actualSwaggerParameter.In == ParameterLocation.Header) {
+                    switch (actualSwaggerParameter.Name) {
+                        case "Accept":
+                        case "Authorization":
+                            continue; // ignore these
+                        case "Content-Type": // special treatment for data-plane
+                            // enrich Content-Type header with "consumes"
+                            if (actualSwaggerParameter.Enum == null && 
+                                _effectiveConsumes.Count > 1)
+                            {
+                                swaggerParameter.Default = actualSwaggerParameter.Default;
+                                swaggerParameter.Description = actualSwaggerParameter.Description;
+                                swaggerParameter.Extensions = actualSwaggerParameter.Extensions;
+                                swaggerParameter.In = actualSwaggerParameter.In;
+                                swaggerParameter.IsRequired = actualSwaggerParameter.IsRequired;
+                                swaggerParameter.Name = actualSwaggerParameter.Name;
+                                swaggerParameter.Schema = actualSwaggerParameter.Schema;
+                                swaggerParameter.Type = actualSwaggerParameter.Type;
+                                swaggerParameter.Enum = _effectiveConsumes.ToList();
 
-                        // if not treated explicitly, add choices to the global choices
-                        if (swaggerParameter.Extensions.GetValue<JObject>("x-ms-enum") == null) {
-                            _swaggerModeler.ContentTypeChoices.UnionWith(_effectiveConsumes);
-                        }
+                                // if not treated explicitly, add choices to the global choices
+                                if (swaggerParameter.Extensions.GetValue<JObject>("x-ms-enum") == null) {
+                                    _swaggerModeler.ContentTypeChoices.UnionWith(_effectiveConsumes);
+                                }
 
-                        var ctParameter = ((ParameterBuilder)swaggerParameter.GetBuilder(_swaggerModeler)).Build();
-                        // you have to specify the content type, even if the OpenAPI definition claims it's optional
-                        ctParameter.IsRequired = true;
-                        method.Add(ctParameter);
-                        continue;
+                                var ctParameter = ((ParameterBuilder)swaggerParameter.GetBuilder(_swaggerModeler)).Build();
+                                // you have to specify the content type, even if the OpenAPI definition claims it's optional
+                                ctParameter.IsRequired = true;
+                                method.Add(ctParameter);
+                                continue;
+                            }
+                            break;
                     }
                 }
 
