@@ -124,7 +124,18 @@ namespace AutoRest.Modeler
                 else
                 {
                     enumType.ModelAsString = true;
-                    enumType.SetName( string.Empty);
+                    if (SwaggerObject is SwaggerParameter)
+                    {
+                        enumType.SetName((SwaggerObject as SwaggerParameter).Name.ToPascalCase());
+                    }
+                    else
+                    {
+                        // For a model property serviceTypeName is ModelName_PropertyName.
+                        // Hence we set the value after underscore as the name of the enum. 
+                        enumType.SetName(serviceTypeName.Substring(serviceTypeName.IndexOf("_") + 1).ToPascalCase());
+                    }
+                    
+                    Modeler.CodeModel.Add(enumType);
                 }
                 enumType.XmlProperties = (SwaggerObject as Schema)?.Xml;
                 return enumType;
