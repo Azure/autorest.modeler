@@ -56,7 +56,7 @@ namespace AutoRest.Modeler
             type.XmlProperties = (SwaggerObject as Schema)?.Xml;
             type.Format = SwaggerObject.Format;
             var xMsEnum = SwaggerObject.Extensions.GetValue<JToken>(Core.Model.XmsExtensions.Enum.Name);
-            if ((SwaggerObject.Enum != null || xMsEnum != null) && type.KnownPrimaryType == KnownPrimaryType.String && !(IsSwaggerObjectConstant(SwaggerObject)))
+            if ((SwaggerObject.Enum != null || xMsEnum != null) && type.KnownPrimaryType == KnownPrimaryType.String && !SwaggerObject.IsConstant)
             {
                 var enumType = New<EnumType>();
                 if (SwaggerObject.Enum != null)
@@ -204,7 +204,7 @@ namespace AutoRest.Modeler
             parameter.IsRequired = swaggerObject.IsRequired;
             parameter.DefaultValue = swaggerObject.Default;
 
-            if (IsSwaggerObjectConstant(swaggerObject))
+            if (swaggerObject.IsConstant)
             {
                 parameter.DefaultValue = swaggerObject.Enum[0];
                 parameter.IsConstant = true;
@@ -217,11 +217,6 @@ namespace AutoRest.Modeler
             parameter.Extensions.AddRange(swaggerObject.Extensions);
 
             SetConstraints(parameter.Constraints, swaggerObject);
-        }
-
-        private static bool IsSwaggerObjectConstant(SwaggerObject swaggerObject)
-        {
-            return (swaggerObject.Enum != null && swaggerObject.Enum.Count == 1 && swaggerObject.IsRequired);
         }
 
         public static void SetConstraints(Dictionary<Constraint, string> constraints, SwaggerObject swaggerObject)

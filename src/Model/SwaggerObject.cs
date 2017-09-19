@@ -9,6 +9,7 @@ using AutoRest.Core.Utilities;
 using AutoRest.Modeler.Properties;
 using Newtonsoft.Json;
 using static AutoRest.Core.Utilities.DependencyInjection;
+using Newtonsoft.Json.Linq;
 
 namespace AutoRest.Modeler.Model
 {
@@ -60,6 +61,34 @@ namespace AutoRest.Modeler.Model
         /// Determines the format of the array if type array is used.
         /// </summary>
         public virtual CollectionFormat CollectionFormat { get; set; }
+
+        /// <summary>
+        /// Determines whether the enum should be treated as a constant.
+        /// If the enum contains exactly one value and is a constraint on a
+        /// required parameter or a required property and has modelAsString set to true.
+        /// Value for "modelAsString" is deduced based on the following conditions:
+        /// - xmsEnum extension applied like this: "x-ms-enum": { "modelAsString": true }.
+        /// - xmsEnum extension not applied at all. Then we treat it as if it was applied like above.
+        /// </summary>
+        [JsonIgnore]
+        public bool IsConstant {
+            get
+            {
+                var result = false;
+                var xmsEnum = Extensions.GetValue<JToken>(Core.Model.XmsExtensions.Enum.Name);
+                var enumObject = xmsEnum as JContainer;
+                var modelAsString = true;
+                if (xmsEnum != null)
+                {
+                    if (enumObject["modelAsString"] != null)
+                    {
+                        modelAsString = bool.Parse(enumObject["modelAsString"].ToString());
+                    }
+                }
+                result = IsRequired && Enum != null && Enum.Count == 1 && modelAsString;
+                return result;
+            }
+        }
 
         /// <summary>
         /// Sets a default value to the parameter.
