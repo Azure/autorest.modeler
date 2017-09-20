@@ -68,11 +68,40 @@ namespace AutoRest.Modeler
                     var enumObject = xMsEnum as JContainer;
                     if (enumObject != null)
                     {
-                        enumType.SetName(enumObject["name"].ToString() );
+                        // set the enum name
+                        enumType.SetName(enumObject["name"].ToString());
+                        
+                        // process modelAsString
                         if (enumObject["modelAsString"] != null)
                         {
                             enumType.ModelAsString = bool.Parse(enumObject["modelAsString"].ToString());
                         }
+
+                        // check for default and propogate it to SwaggerObject if present.
+                        // Required enums with a default value will make the underlying property/parameter
+                        // optional with a default value. This will have an effect on the method/constructor
+                        // signature and will also improve usability experience for sdk customers.
+                        var defaultEnumValue = enumObject["default"]?.ToString();
+                        if (defaultEnumValue != null)
+                        {
+                            if(SwaggerObject.Enum.Contains(defaultEnumValue))
+                            {
+                                SwaggerObject.Default = defaultEnumValue;
+                            }
+                            else
+                            {
+                                throw new InvalidOperationException(
+                                    string.Format(CultureInfo.InvariantCulture,
+                                    "{0} extension for {1} specifies a default value {2}. " + 
+                                    "However, the default value is not present in the array " + 
+                                    "of valid values {3}.",
+                                    Core.Model.XmsExtensions.Enum.Name,
+                                    serviceTypeName,
+                                    defaultEnumValue,
+                                    string.Join(", ", SwaggerObject.Enum)));
+                            }
+                        }
+
                         var valueOverrides = enumObject["values"] as JArray;
                         if (valueOverrides != null)
                         {
