@@ -56,7 +56,7 @@ namespace AutoRest.Modeler
             type.XmlProperties = (SwaggerObject as Schema)?.Xml;
             type.Format = SwaggerObject.Format;
             var xMsEnum = SwaggerObject.Extensions.GetValue<JToken>(Core.Model.XmsExtensions.Enum.Name);
-            if ((SwaggerObject.Enum != null || xMsEnum != null) && !SwaggerObject.IsConstant)
+            if (SwaggerObject.Enum != null && !SwaggerObject.IsConstant)
             {
                 var enumType = New<EnumType>();
                 // Set the underlying type. This helps to determine whether the values in EnumValue are of type string, number, etc.
@@ -77,31 +77,6 @@ namespace AutoRest.Modeler
                         if (enumObject["modelAsString"] != null)
                         {
                             enumType.ModelAsString = bool.Parse(enumObject["modelAsString"].ToString());
-                        }
-
-                        // check for default and propogate it to SwaggerObject if present.
-                        // Required enums with a default value will make the underlying property/parameter
-                        // optional with a default value. This will have an effect on the method/constructor
-                        // signature and will also improve usability experience for sdk customers.
-                        var defaultEnumValue = enumObject["default"]?.ToString();
-                        if (defaultEnumValue != null)
-                        {
-                            if(SwaggerObject.Enum.Contains(defaultEnumValue))
-                            {
-                                SwaggerObject.Default = defaultEnumValue;
-                            }
-                            else
-                            {
-                                throw new InvalidOperationException(
-                                    string.Format(CultureInfo.InvariantCulture,
-                                    "{0} extension for {1} specifies a default value {2}. " + 
-                                    "However, the default value is not present in the array " + 
-                                    "of valid values {3}.",
-                                    Core.Model.XmsExtensions.Enum.Name,
-                                    serviceTypeName,
-                                    defaultEnumValue,
-                                    string.Join(", ", SwaggerObject.Enum)));
-                            }
                         }
 
                         var valueOverrides = enumObject["values"] as JArray;

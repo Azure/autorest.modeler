@@ -74,19 +74,13 @@ namespace AutoRest.Modeler.Model
         public bool IsConstant {
             get
             {
-                var result = false;
-                var xmsEnum = Extensions.GetValue<JToken>(Core.Model.XmsExtensions.Enum.Name);
-                var enumObject = xmsEnum as JContainer;
+                var xmsEnum = Extensions.GetValue<JToken>(Core.Model.XmsExtensions.Enum.Name) as JContainer;
                 var modelAsString = true;
-                if (xmsEnum != null)
+                if (xmsEnum?["modelAsString"] != null)
                 {
-                    if (enumObject["modelAsString"] != null)
-                    {
-                        modelAsString = bool.Parse(enumObject["modelAsString"].ToString());
-                    }
+                    modelAsString = bool.Parse(xmsEnum["modelAsString"].ToString());
                 }
-                result = IsRequired && Enum != null && Enum.Count == 1 && modelAsString;
-                return result;
+                return IsRequired && Enum != null && Enum.Count == 1 && modelAsString;
             }
         }
 
