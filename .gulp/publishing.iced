@@ -9,7 +9,7 @@ task 'publish-preview', '', ['version-number'] , (done) ->
 
   # 2. call npm publish --tag preview 
   # Note : this will call the npm prepare task, which will call 
-  execute "npm publish --tag preview",{cwd:package_folder, silent:false }, (c,o,e) -> 
+  execute "#{basefolder}/node_modules/.bin/yarn publish --tag preview",{cwd:package_folder, silent:false }, (c,o,e) -> 
     echo  "\n\nPublished:  #{package_json.name}@#{info package_json.version} (tagged as @preview)\n\n"
     done()
     
