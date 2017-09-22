@@ -23,6 +23,9 @@ namespace AutoRest.Modeler.Model
             set { _isRequired = value; }
         }
 
+        [JsonIgnore]
+        public bool IsConstant => IsRequired && Enum != null && Enum.Count == 1;
+
         /// <summary>
         /// The schema defining the type used for the body parameter.
         /// </summary>
