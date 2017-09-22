@@ -32,8 +32,8 @@ dotnet = (cmd) ->
 
 
 task 'build','dotnet',['restore', 'version-number'], (done) ->
-  execute "dotnet build -c #{configuration} #{solution}/nologo /clp:NoSummary /p:VersionPrefix=#{version}", (code, stdout, stderr) ->
-    execute "dotnet publish -c #{configuration} #{sourceFolder} --output #{sourceFolder}/bin/netcoreapp2.0/nologo /clp:NoSummary /p:VersionPrefix=#{version}", (code, stdout, stderr) ->
+  execute "dotnet build -c #{configuration} #{solution} /nologo /clp:NoSummary /p:VersionPrefix=#{version}", (code, stdout, stderr) ->
+    execute "dotnet publish -c #{configuration} #{sourceFolder} --output #{sourceFolder}/bin/netcoreapp2.0 /nologo /clp:NoSummary /p:VersionPrefix=#{version}", (code, stdout, stderr) ->
       done()
 
 task 'clear-cache-on-force', '', (done)->
