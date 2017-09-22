@@ -545,8 +545,7 @@ namespace AutoRest.Modeler.Tests
             Assert.True(codeModel.ModelTypes.First(m => m.Name == "Product").Properties[9].DefaultValue.IsNullOrEmpty());
 
             Assert.Equal("RefIntEnum", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[10].Name);
-            Assert.Equal(true, codeModel.ModelTypes.First(m => m.Name == "Product").Properties[10].ModelType is EnumType);
-            Assert.Equal(true, (codeModel.ModelTypes.First(m => m.Name == "Product").Properties[10].ModelType as EnumType).UnderlyingType.IsPrimaryType(KnownPrimaryType.Int));
+            Assert.Equal(true, codeModel.ModelTypes.First(m => m.Name == "Product").Properties[10].ModelType.IsPrimaryType(KnownPrimaryType.Int));
             Assert.Equal(false, codeModel.ModelTypes.First(m => m.Name == "Product").Properties[10].IsConstant);
             Assert.True(codeModel.ModelTypes.First(m => m.Name == "Product").Properties[10].DefaultValue.IsNullOrEmpty());
 
