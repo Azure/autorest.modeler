@@ -341,7 +341,7 @@ namespace AutoRest.Modeler.Tests
             Assert.Equal("Double double", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[5]));
             Assert.Equal("Decimal decimal", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[6]));
             Assert.Equal("String string", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[7]));
-            Assert.Equal("Color color", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[8]));
+            Assert.Equal("enum color", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[8]));
             Assert.Equal("ByteArray byte", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[9]));
             Assert.Equal("Boolean boolean", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[10]));
             Assert.Equal("Date date", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[11]));
@@ -358,7 +358,7 @@ namespace AutoRest.Modeler.Tests
                 new[] { new EnumValue { Name = "red" }, new EnumValue { Name = "blue" }, new EnumValue { Name = "green" } }
                     .ToList());
             Assert.True(variableEnumInPath.ModelAsString);
-            Assert.Equal("Color", variableEnumInPath.Name.RawValue);
+            Assert.Empty(variableEnumInPath.Name.RawValue);
 
             var variableEnumInQuery =
                 codeModel.Methods.First(m => m.Name == "List" && m.Group.IsNullOrEmpty())
@@ -372,7 +372,7 @@ namespace AutoRest.Modeler.Tests
                         new EnumValue {Name = "purple"}
                 }.ToList());
             Assert.True(variableEnumInQuery.ModelAsString);
-            Assert.Equal("Color1", variableEnumInQuery.Name.RawValue);
+            Assert.Empty(variableEnumInQuery.Name.RawValue);
 
             var differentEnum =
                 codeModel.Methods.First(m => m.Name == "List" && m.Group == "DiffEnums")
@@ -382,7 +382,7 @@ namespace AutoRest.Modeler.Tests
             Assert.Equal(differentEnum.Values,
                 new[] { new EnumValue { Name = "cyan" }, new EnumValue { Name = "yellow" } }.ToList());
             Assert.True(differentEnum.ModelAsString);
-            Assert.Equal("Color3", differentEnum.Name.RawValue);
+            Assert.Empty(differentEnum.Name.RawValue);
 
             var sameEnum =
                 codeModel.Methods.First(m => m.Name == "Get" && m.Group == "SameEnums")
@@ -393,7 +393,7 @@ namespace AutoRest.Modeler.Tests
                 new[] { new EnumValue { Name = "blue" }, new EnumValue { Name = "green" }, new EnumValue { Name = "red" } }
                     .ToList());
             Assert.True(sameEnum.ModelAsString);
-            Assert.Equal("Color21", sameEnum.Name.RawValue);
+            Assert.Empty(sameEnum.Name.RawValue);
 
             var modelEnum =
                 codeModel.ModelTypes.First(m => m.Name == "Product")
@@ -404,7 +404,7 @@ namespace AutoRest.Modeler.Tests
                 new[] { new EnumValue { Name = "red" }, new EnumValue { Name = "blue" }, new EnumValue { Name = "green" } }
                     .ToList());
             Assert.True(modelEnum.ModelAsString);
-            Assert.Equal("Color2", modelEnum.Name.RawValue);
+            Assert.Empty(modelEnum.Name.RawValue);
 
             var fixedEnum =
                 codeModel.ModelTypes.First(m => m.Name == "Product")
@@ -435,7 +435,7 @@ namespace AutoRest.Modeler.Tests
             Assert.Equal("RefColors", refEnum.Name);
 
 
-            Assert.Equal(7, codeModel.EnumTypes.Count);
+            Assert.Equal(2, codeModel.EnumTypes.Count);
             Assert.Equal("Colors", codeModel.EnumTypes.First().Name);
         }
 
@@ -540,7 +540,7 @@ namespace AutoRest.Modeler.Tests
             Assert.Equal("0", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[8].DefaultValue);
 
             Assert.Equal("RefStrEnum", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[9].Name);
-            Assert.Equal("RefStrEnum", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[9].ModelType.Name);
+            Assert.Equal("enum", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[9].ModelType.Name);
             Assert.Equal(false, codeModel.ModelTypes.First(m => m.Name == "Product").Properties[9].IsConstant);
             Assert.True(codeModel.ModelTypes.First(m => m.Name == "Product").Properties[9].DefaultValue.IsNullOrEmpty());
 
