@@ -1,8 +1,9 @@
-task 'publish-preview', '', ['version-number'] , (done) ->
+task 'publish-preview', '', ['version-number','build'] , (done) ->
   package_json = require "#{basefolder}/package.json"
 
-  # Note : this will call the npm prepare task, which will call 
+  # move .gitignore out  of the way - yarn bug
+  rm "-f", "#{basefolder}/.gitignore"
   execute "#{basefolder}/node_modules/.bin/yarn publish --tag preview --new-version #{version} --access public ",{cwd:basefolder, silent:false }, (c,o,e) -> 
     echo  "\n\nPublished:  #{package_json.name}@#{info version} (tagged as @preview)\n\n"
-    done()
-    
+    # bring back .gitignore!
+    execute "git checkout #{basefolder}/.gitignore",{cwd:basefolder, silent:true }, done
