@@ -7,4 +7,3 @@ task 'publish-preview', '', ['version-number','build'] , (done) ->
   # execute "npm publish --tag preview --access public ",{cwd:basefolder, silent:false }, (c,o,e) -> 
     echo  "\n\nPublished:  #{package_json.name}@#{info version} (tagged as @preview)\n\n"
     execute "git checkout #{basefolder}/.gitignore",{cwd:basefolder, silent:true }, done
-    
