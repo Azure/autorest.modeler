@@ -3,6 +3,7 @@ require './common.iced'
 # ==============================================================================
 # tasks required for this build 
 Tasks "dotnet"  # dotnet functions
+Tasks "publishing"
 
 # ==============================================================================
 # Settings
