@@ -19,7 +19,6 @@
   "readme": "https://github.com/Azure/autorest.modeler/readme.md",
   "keywords": [
     "autorest",
-    "classic-generators",
     "modeler"
   ],
   "author": "Microsoft Corporation",
