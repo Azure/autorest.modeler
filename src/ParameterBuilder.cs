@@ -70,11 +70,16 @@ namespace AutoRest.Modeler
             var swaggerParameter = Modeler.Unwrap(_swaggerParameter);
 
             // create service type
-            var serviceType = swaggerParameter.In == ParameterLocation.Body ?
-                swaggerParameter.Schema.GetBuilder(Modeler).BuildServiceType(serviceTypeName) :
-                swaggerParameter.GetBuilder(Modeler).ParentBuildServiceType(serviceTypeName);
-            
-            return serviceType;
+            if (swaggerParameter.In == ParameterLocation.Body)
+            {
+                if (swaggerParameter.Schema == null)
+                {
+                    throw new Exception($"Invalid Swagger: Body parameter{(serviceTypeName == null ? "" : $" '{serviceTypeName}'")} missing 'schema'.");
+                }
+                return swaggerParameter.Schema.GetBuilder(Modeler).BuildServiceType(serviceTypeName);
+            }
+
+            return swaggerParameter.GetBuilder(Modeler).ParentBuildServiceType(serviceTypeName);
         }
 
         public override IModelType ParentBuildServiceType(string serviceTypeName) => base.BuildServiceType(serviceTypeName);

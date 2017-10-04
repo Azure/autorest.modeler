@@ -34,7 +34,7 @@ namespace AutoRest.Modeler
         /// </summary>
         /// <param name="_schema"></param>
         /// <returns></returns>
-        public static KnownPrimaryType GetSimplePrimaryType(this Schema _schema)
+        public static KnownPrimaryType GetSimplePrimaryType(this Schema _schema, bool generateEmptyClasses)
         {
             // If object with file format treat as stream
             if (_schema.Type != null
@@ -45,7 +45,8 @@ namespace AutoRest.Modeler
             }
 
             // If the object does not have any properties, treat it as raw json (i.e. object)
-            if (_schema.Properties.IsNullOrEmpty() && string.IsNullOrEmpty(_schema.Extends) && _schema.AdditionalProperties == null)
+            if ((_schema.Properties == null || !generateEmptyClasses && _schema.Properties.Count == 0) &&
+                string.IsNullOrEmpty(_schema.Extends) && _schema.AdditionalProperties == null)
             {
                 return KnownPrimaryType.Object;
             }
@@ -80,16 +81,6 @@ namespace AutoRest.Modeler
                  default:
                     return false;
             }
-        }
-
-        /// <summary>
-        /// A schema represents a CompositeType if it's not a primitive type and it's not a simple primary type
-        /// </summary>
-        /// <param name="schema"></param>
-        /// <returns></returns>
-        public static bool RepresentsCompositeType(this Schema schema)
-        {
-            return !schema.IsPrimitiveType() && schema.GetSimplePrimaryType() == KnownPrimaryType.None;
         }
     }
 }
