@@ -120,7 +120,7 @@ namespace AutoRest.Modeler
                     }
                 }
             }
-
+            
             // Set base type
             foreach (var typeName in GeneratedTypes.Keys)
             {
@@ -134,6 +134,14 @@ namespace AutoRest.Modeler
             }
             CodeModel.AddRange(methods);
             
+            // What operation returns it decides whether an object is to be modeled as a 
+            // regular model class or an exception class
+            // Set base type
+            var errorResponses = 
+                ServiceDefinition.Paths.Values.SelectMany(pathObj=>pathObj.Values.SelectMany(opObj=>opObj.Responses.Values.Where(res=>res.Extensions?.ContainsKey("x-ms-error-response")==true && (bool)res.Extensions["x-ms-error-response"])));
+            var errorModels = errorResponses.Select(resp=>resp.Schema?.Reference).Where(modelRef=>!string.IsNullOrEmpty(modelRef)).Select(modelRef=>GeneratedTypes[modelRef]);
+            errorModels.ForEach(errorModel=>CodeModel.AddError(errorModel));
+
             // Build ContentType enum
             if (ContentTypeChoices.Count > 0)
             {
@@ -194,7 +202,7 @@ namespace AutoRest.Modeler
             CodeModel.BaseUrl = string.Format(CultureInfo.InvariantCulture, "{0}://{1}{2}",
                 ServiceDefinition.Schemes[0].ToString().ToLower(),
                 ServiceDefinition.Host, ServiceDefinition.BasePath);
-
+                
             // Copy extensions
             ServiceDefinition.Info?.CodeGenerationSettings?.Extensions.ForEach(extention => CodeModel.CodeGenExtensions.AddOrSet(extention.Key, extention.Value));
             ServiceDefinition.Extensions.ForEach(extention => CodeModel.Extensions.AddOrSet(extention.Key, extention.Value));
