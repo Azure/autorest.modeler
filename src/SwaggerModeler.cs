@@ -107,8 +107,13 @@ namespace AutoRest.Modeler
                         }
                         var method = BuildMethod(verb.ToHttpMethod(), url, methodName, operation);
                         method.Group = methodGroup;
-                        
                         methods.Add(method);
+
+                        // Add error models marked by x-ms-error-response
+                        method.Responses.Values.Where(resp=>resp.Extensions.ContainsKey("x-ms-error-response") && (bool)resp.Extensions["x-ms-error-response"] && resp.Body is CompositeType)
+                                                                           .Select(resp=>(CompositeType)resp.Body)
+                                                                           .ForEach(body=>CodeModel.AddError(body));
+
                         if (method.DefaultResponse.Body is CompositeType)
                         {
                             CodeModel.AddError((CompositeType)method.DefaultResponse.Body);
