@@ -305,7 +305,8 @@ namespace AutoRest.Modeler
                         : ServiceDefinition.Definitions[schema.Extends.StripDefinitionPath()];
 
                     if (parent != null &&
-                        !AncestorsHaveProperties(parent.Properties, parent.Extends))
+                        !AncestorsHaveProperties(parent.Properties, parent.Extends) &&
+                        !GenerateEmptyClasses)
                     {
                         throw ErrorManager.CreateError(Resources.InvalidAncestors, schemaName);
                     }
