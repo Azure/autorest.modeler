@@ -49,7 +49,7 @@ namespace AutoRest.Modeler
             PrimaryType type = SwaggerObject.ToType();
             Debug.Assert(type != null);
 
-            if (type.KnownPrimaryType == KnownPrimaryType.Object && SwaggerObject.KnownFormat == KnownFormat.file )
+            if (type.KnownPrimaryType == KnownPrimaryType.Object && SwaggerObject.KnownFormat == KnownFormat.file)
             {
                 type = New<PrimaryType>(KnownPrimaryType.Stream);
             }
@@ -59,6 +59,8 @@ namespace AutoRest.Modeler
             if ((SwaggerObject.Enum != null || xMsEnum != null) && type.KnownPrimaryType == KnownPrimaryType.String && !(IsSwaggerObjectConstant(SwaggerObject)))
             {
                 var enumType = New<EnumType>();
+                // Set the underlying type. This helps to determine whether the values in EnumValue are of type string, number, etc.
+                enumType.UnderlyingType = type;
                 if (SwaggerObject.Enum != null)
                 {
                     SwaggerObject.Enum.ForEach(v => enumType.Values.Add(new EnumValue { Name = v, SerializedName = v }));
@@ -68,7 +70,7 @@ namespace AutoRest.Modeler
                     var enumObject = xMsEnum as JContainer;
                     if (enumObject != null)
                     {
-                        enumType.SetName(enumObject["name"].ToString() );
+                        enumType.SetName(enumObject["name"].ToString());
                         if (enumObject["modelAsString"] != null)
                         {
                             enumType.ModelAsString = bool.Parse(enumObject["modelAsString"].ToString());
@@ -94,7 +96,7 @@ namespace AutoRest.Modeler
                     if (string.IsNullOrEmpty(enumType.Name))
                     {
                         throw new InvalidOperationException(
-                            string.Format(CultureInfo.InvariantCulture, 
+                            string.Format(CultureInfo.InvariantCulture,
                                 "{0} extension needs to specify an enum name.",
                                 Core.Model.XmsExtensions.Enum.Name));
                     }
@@ -124,7 +126,7 @@ namespace AutoRest.Modeler
                 else
                 {
                     enumType.ModelAsString = true;
-                    enumType.SetName( string.Empty);
+                    enumType.SetName(string.Empty);
                 }
                 enumType.XmlProperties = (SwaggerObject as Schema)?.Xml;
                 return enumType;
@@ -148,7 +150,7 @@ namespace AutoRest.Modeler
 
                 var elementType =
                     SwaggerObject.Items.GetBuilder(Modeler).BuildServiceType(itemServiceTypeName);
-                return New<SequenceType>(new 
+                return New<SequenceType>(new
                 {
                     ElementType = elementType,
                     Extensions = SwaggerObject.Items.Extensions,
@@ -167,7 +169,7 @@ namespace AutoRest.Modeler
                 {
                     dictionaryValueServiceTypeName = serviceTypeName + "Value";
                 }
-                return New<DictionaryType>(new 
+                return New<DictionaryType>(new
                 {
                     ValueType =
                         SwaggerObject.AdditionalProperties.GetBuilder(Modeler)
