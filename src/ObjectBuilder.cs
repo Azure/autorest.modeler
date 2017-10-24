@@ -82,11 +82,22 @@ namespace AutoRest.Modeler
                                 var value = valueOverride["value"];
                                 var description = valueOverride["description"];
                                 var name = valueOverride["name"] ?? value;
+                                List<string> allowedValues = null;
+                                if(valueOverride["allowedValues"]!=null)
+                                {
+                                    allowedValues = new List<string>();
+                                    foreach(var allowedValue in JArray.Parse(valueOverride["allowedValues"].ToString()))
+                                    {
+                                        allowedValues.Add(allowedValue.ToString());
+                                    }
+                                }
+
                                 enumType.Values.Add(new EnumValue
                                 {
                                     Name = (string)name,
                                     SerializedName = (string)value,
-                                    Description = (string)description
+                                    Description = (string)description,
+                                    AllowedValues = allowedValues
                                 });
                             }
                         }
