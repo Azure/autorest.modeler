@@ -67,10 +67,9 @@ namespace AutoRest.Modeler
                 }
                 if (xMsEnum != null)
                 {
-                    var enumObject = xMsEnum as JContainer;
-                    if (enumObject != null)
+                    if (xMsEnum is JContainer enumObject)
                     {
-                        enumType.SetName(enumObject["name"].ToString());
+                        enumType.SetName("" + enumObject["name"]);
                         if (enumObject["modelAsString"] != null)
                         {
                             enumType.ModelAsString = bool.Parse(enumObject["modelAsString"].ToString());
