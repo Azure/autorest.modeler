@@ -391,7 +391,7 @@ namespace AutoRest.Modeler
         {
             var referenceKey = serviceType.Name.RawValue;
             var responseType = _swaggerModeler.GeneratedTypes[referenceKey];
-            var property = responseType.Properties.FirstOrDefault(p => p.ModelType is PrimaryType && ((PrimaryType)p.ModelType).KnownPrimaryType == KnownPrimaryType.ByteArray);
+            var property = responseType.Properties.FirstOrDefault(p => (p.ModelType as PrimaryType)?.KnownPrimaryType == KnownPrimaryType.ByteArray);
             if (property == null)
             {
                 throw new KeyNotFoundException(

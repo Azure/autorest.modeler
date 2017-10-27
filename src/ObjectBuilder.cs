@@ -49,7 +49,7 @@ namespace AutoRest.Modeler
             PrimaryType type = SwaggerObject.ToType();
             Debug.Assert(type != null);
 
-            if (type.KnownPrimaryType == KnownPrimaryType.Object && SwaggerObject.KnownFormat == KnownFormat.file )
+            if (type.KnownPrimaryType == KnownPrimaryType.Object && SwaggerObject.KnownFormat == KnownFormat.file)
             {
                 type = New<PrimaryType>(KnownPrimaryType.Stream);
             }
@@ -59,56 +59,69 @@ namespace AutoRest.Modeler
             if ((SwaggerObject.Enum != null || xMsEnum != null) && type.KnownPrimaryType == KnownPrimaryType.String && !(IsSwaggerObjectConstant(SwaggerObject)))
             {
                 var enumType = New<EnumType>();
+                // Set the underlying type. This helps to determine whether the values in EnumValue are of type string, number, etc.
+                enumType.UnderlyingType = type;
                 if (SwaggerObject.Enum != null)
                 {
+                    if (SwaggerObject.Enum.Count == 0)
+                    {
+                        throw new InvalidOperationException($"Found an 'enum' with no values. Please remove this (unsatisfiable) restriction or add values.");
+                    }
                     SwaggerObject.Enum.ForEach(v => enumType.Values.Add(new EnumValue { Name = v, SerializedName = v }));
                 }
-                if (xMsEnum != null)
+                if (xMsEnum is JContainer enumObject)
                 {
-                    var enumObject = xMsEnum as JContainer;
-                    if (enumObject != null)
+                    var enumName = "" + enumObject["name"];
+                    if (string.IsNullOrEmpty(enumName))
                     {
-                        enumType.SetName(enumObject["name"].ToString() );
-                        if (enumObject["modelAsString"] != null)
-                        {
-                            enumType.ModelAsString = bool.Parse(enumObject["modelAsString"].ToString());
-                        }
-                        var valueOverrides = enumObject["values"] as JArray;
-                        if (valueOverrides != null)
-                        {
-                            enumType.Values.Clear();
-                            foreach (var valueOverride in valueOverrides)
-                            {
-                                var value = valueOverride["value"];
-                                var description = valueOverride["description"];
-                                var name = valueOverride["name"] ?? value;
-                                List<string> allowedValues = null;
-                                if(valueOverride["allowedValues"]!=null)
-                                {
-                                    allowedValues = new List<string>();
-                                    foreach(var allowedValue in JArray.Parse(valueOverride["allowedValues"].ToString()))
-                                    {
-                                        allowedValues.Add(allowedValue.ToString());
-                                    }
-                                }
+                        throw new InvalidOperationException($"{Core.Model.XmsExtensions.Enum.Name} extension needs to specify an enum name.");
+                    }
+                    enumType.SetName(enumName);
 
-                                enumType.Values.Add(new EnumValue
+                    if (enumObject["modelAsString"] != null)
+                    {
+                        enumType.ModelAsString = bool.Parse(enumObject["modelAsString"].ToString());
+                    }
+                    var valueOverrides = enumObject["values"] as JArray;
+                    if (valueOverrides != null)
+                    {
+                        var valuesBefore = new HashSet<string>(enumType.Values.Select(x => x.SerializedName));
+                        enumType.Values.Clear();
+                        foreach (var valueOverride in valueOverrides)
+                        {
+                            var value = valueOverride["value"];
+                            var description = valueOverride["description"];
+                            var name = valueOverride["name"] ?? value;
+                            
+                            List<string> allowedValues = null;
+                            if(valueOverride["allowedValues"]!=null)
+                            {
+                                allowedValues = new List<string>();
+                                foreach(var allowedValue in JArray.Parse(valueOverride["allowedValues"].ToString()))
                                 {
-                                    Name = (string)name,
-                                    SerializedName = (string)value,
-                                    Description = (string)description,
-                                    AllowedValues = allowedValues
-                                });
+                                    allowedValues.Add(allowedValue.ToString());
+                                }
                             }
+
+                            enumType.Values.Add(new EnumValue
+                            {
+                                Name = (string)name,
+                                SerializedName = (string)value,
+                                Description = (string)description,
+                                AllowedValues = allowedValues
+                            });
+                        }
+                        var valuesAfter = new HashSet<string>(enumType.Values.Select(x => x.SerializedName));
+                        // compare values
+                        if (!valuesBefore.SetEquals(valuesAfter))
+                        {
+                            throw new InvalidOperationException($"Values specified by 'enum' mismatch those specified by 'x-ms-enum' (name: '{enumName}'): "
+                                + string.Join(", ", valuesBefore.Select(x => $"'{x}'"))
+                                + " vs "
+                                + string.Join(", ", valuesAfter.Select(x => $"'{x}'")));
                         }
                     }
-                    if (string.IsNullOrEmpty(enumType.Name))
-                    {
-                        throw new InvalidOperationException(
-                            string.Format(CultureInfo.InvariantCulture, 
-                                "{0} extension needs to specify an enum name.",
-                                Core.Model.XmsExtensions.Enum.Name));
-                    }
+
                     var existingEnum =
                         Modeler.CodeModel.EnumTypes.FirstOrDefault(
                             e => e.Name.RawValue.EqualsIgnoreCase(enumType.Name.RawValue));
@@ -135,7 +148,7 @@ namespace AutoRest.Modeler
                 else
                 {
                     enumType.ModelAsString = true;
-                    enumType.SetName( string.Empty);
+                    enumType.SetName(string.Empty);
                 }
                 enumType.XmlProperties = (SwaggerObject as Schema)?.Xml;
                 return enumType;
@@ -159,7 +172,7 @@ namespace AutoRest.Modeler
 
                 var elementType =
                     SwaggerObject.Items.GetBuilder(Modeler).BuildServiceType(itemServiceTypeName);
-                return New<SequenceType>(new 
+                return New<SequenceType>(new
                 {
                     ElementType = elementType,
                     Extensions = SwaggerObject.Items.Extensions,
@@ -178,7 +191,7 @@ namespace AutoRest.Modeler
                 {
                     dictionaryValueServiceTypeName = serviceTypeName + "Value";
                 }
-                return New<DictionaryType>(new 
+                return New<DictionaryType>(new
                 {
                     ValueType =
                         SwaggerObject.AdditionalProperties.GetBuilder(Modeler)
