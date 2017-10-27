@@ -82,6 +82,10 @@ namespace AutoRest.Modeler
                     {
                         enumType.ModelAsString = bool.Parse(enumObject["modelAsString"].ToString());
                     }
+                    if (enumObject["modelAsExtensible"] != null)
+                    {
+                        enumType.ModelAsExtensible = bool.Parse(enumObject["modelAsExtensible"].ToString());
+                    }
                     var valueOverrides = enumObject["values"] as JArray;
                     if (valueOverrides != null)
                     {
