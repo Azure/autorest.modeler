@@ -369,7 +369,7 @@ namespace AutoRest.Modeler
                 if (response.Schema != null)
                 {
                     IModelType serviceType = response.Schema.GetBuilder(_swaggerModeler)
-                        .BuildServiceType(response.Schema.Reference.StripDefinitionPath());
+                        .BuildServiceType(response.Schema.Reference.StripComponentsSchemaPath());
 
                     Debug.Assert(serviceType != null);
 
@@ -474,7 +474,7 @@ namespace AutoRest.Modeler
                     string referenceKey;
                     if (response.Schema.Reference != null)
                     {
-                        referenceKey = response.Schema.Reference.StripDefinitionPath();
+                        referenceKey = response.Schema.Reference.StripComponentsSchemaPath();
                         response.Schema.Reference = referenceKey;
                     }
                     else

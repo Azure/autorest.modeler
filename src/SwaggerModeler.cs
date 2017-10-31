@@ -69,7 +69,7 @@ namespace AutoRest.Modeler
             BuildCompositeTypes();
 
             // Build client parameters
-            foreach (var swaggerParameter in ServiceDefinition.Parameters.Values)
+            foreach (var swaggerParameter in ServiceDefinition.Components.Parameters.Values)
             {
                 var parameter = ((ParameterBuilder)swaggerParameter.GetBuilder(this)).Build();
 
@@ -168,7 +168,7 @@ namespace AutoRest.Modeler
         /// <returns>The base ServiceModel Service</returns>
         private void InitializeClientModel()
         {
-            if (string.IsNullOrEmpty(ServiceDefinition.Swagger))
+            if (string.IsNullOrEmpty(ServiceDefinition.OpenApi))
             {
                 throw ErrorManager.CreateError(Resources.UnknownSwaggerVersion);
             }
@@ -291,18 +291,19 @@ namespace AutoRest.Modeler
         /// </summary>
         public virtual void BuildCompositeTypes()
         {
+            var schemas = ServiceDefinition.Components.Schemas;
             // Build service types and validate allOf
-            if (ServiceDefinition.Definitions != null)
+            if (schemas != null)
             {
-                foreach (var schemaName in ServiceDefinition.Definitions.Keys.ToArray())
+                foreach (var schemaName in schemas.Keys.ToArray())
                 {
-                    var schema = ServiceDefinition.Definitions[schemaName];
+                    var schema = schemas[schemaName];
                     schema.GetBuilder(this).BuildServiceType(schemaName);
 
                     Resolver.ExpandAllOf(schema);
-                    var parent = string.IsNullOrEmpty(schema.Extends.StripDefinitionPath())
+                    var parent = string.IsNullOrEmpty(schema.Extends.StripComponentsSchemaPath())
                         ? null
-                        : ServiceDefinition.Definitions[schema.Extends.StripDefinitionPath()];
+                        : schemas[schema.Extends.StripComponentsSchemaPath()];
 
                     if (parent != null &&
                         !AncestorsHaveProperties(parent.Properties, parent.Extends) &&
@@ -332,11 +333,12 @@ namespace AutoRest.Modeler
             {
                 return true;
             }
+            var schemas = ServiceDefinition.Components.Schemas;
 
-            extends = extends.StripDefinitionPath();
-            Debug.Assert(!string.IsNullOrEmpty(extends) && ServiceDefinition.Definitions.ContainsKey(extends));
-            return AncestorsHaveProperties(ServiceDefinition.Definitions[extends].Properties,
-                ServiceDefinition.Definitions[extends].Extends);
+            extends = extends.StripComponentsSchemaPath();
+            Debug.Assert(!string.IsNullOrEmpty(extends) && schemas.ContainsKey(extends));
+            return AncestorsHaveProperties(schemas[extends].Properties,
+                schemas[extends].Extends);
         }
 
         /// <summary>
@@ -394,7 +396,6 @@ namespace AutoRest.Modeler
 
         public static string GetMethodNameFromOperationId(string operationId) => 
             (operationId?.IndexOf('_') != -1) ? operationId.Split('_').Last(): operationId;
-        
 
         public SwaggerParameter Unwrap(SwaggerParameter swaggerParameter)
         {
@@ -406,15 +407,15 @@ namespace AutoRest.Modeler
             // If referencing global parameters serializationProperty
             if (swaggerParameter.Reference != null)
             {
-                string referenceKey = swaggerParameter.Reference.StripParameterPath();
-                if (!ServiceDefinition.Parameters.ContainsKey(referenceKey))
+                string referenceKey = swaggerParameter.Reference.StripComponentsParameterPath();
+                if (!ServiceDefinition.Components.Parameters.ContainsKey(referenceKey))
                 {
                     throw new ArgumentException(
                         string.Format(CultureInfo.InvariantCulture,
                         Resources.DefinitionDoesNotExist, referenceKey));
                 }
 
-                swaggerParameter = ServiceDefinition.Parameters[referenceKey];
+                swaggerParameter = ServiceDefinition.Components.Parameters[referenceKey];
             }
 
             // Unwrap the schema if in "body"

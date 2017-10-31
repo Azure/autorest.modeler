@@ -17,6 +17,34 @@ namespace AutoRest.Modeler
     public static class BuilderExtensions
     {
         /// <summary>
+        /// Removes #/components/parameters/ or url#/components/parameters from the reference path.
+        /// </summary>
+        public static string StripComponentsParameterPath(this string reference)
+        {
+            if (reference != null && reference.Contains("#/components/parameters/"))
+            {
+                reference = reference.Substring(reference.IndexOf("#/components/parameters/", StringComparison.OrdinalIgnoreCase) +
+                    "#/components/parameters/".Length);
+            }
+
+            return reference;
+        }
+
+        /// <summary>
+        /// Removes #/components/schemas/ or url#/components/schemas from the reference path.
+        /// </summary>
+        public static string StripComponentsSchemaPath(this string reference)
+        {
+            if (reference != null && reference.Contains("#/components/schemas/"))
+            {
+                reference = reference.Substring(reference.IndexOf("#/components/schemas/", StringComparison.OrdinalIgnoreCase) +
+                    "#/components/schemas/".Length);
+            }
+
+            return reference;
+        }
+
+        /// <summary>
         /// A schema represents a primitive type if it's not an object or it represents a dictionary
         /// </summary>
         /// <param name="_schema"></param>

@@ -76,7 +76,7 @@ namespace AutoRest.Modeler
                 {
                     ValueType = _schema.AdditionalProperties.GetBuilder(Modeler).BuildServiceType(
                                _schema.AdditionalProperties.Reference != null
-                               ? _schema.AdditionalProperties.Reference.StripDefinitionPath()
+                               ? _schema.AdditionalProperties.Reference.StripComponentsSchemaPath()
                                : serviceTypeName + "Value"),
                     Extensions = _schema.AdditionalProperties.Extensions,
                     SupportsAdditionalProperties = true
@@ -112,7 +112,7 @@ namespace AutoRest.Modeler
 
                         if (property.Value.Reference != null)
                         {
-                            propertyServiceTypeName = property.Value.Reference.StripDefinitionPath();
+                            propertyServiceTypeName = property.Value.Reference.StripComponentsSchemaPath();
                             var unwrappedSchema = Modeler.Resolver.Unwrap(property.Value);
 
                             // For Enums use the referenced schema in order to set the correct property Type and Enum values
@@ -182,7 +182,7 @@ namespace AutoRest.Modeler
             if (_schema.Extends != null)
             {
                 // Put this in the extended type serializationProperty for building method return type in the end
-                Modeler.ExtendedTypes[serviceTypeName] = _schema.Extends.StripDefinitionPath();
+                Modeler.ExtendedTypes[serviceTypeName] = _schema.Extends.StripComponentsSchemaPath();
             }
             
             // Put this in already generated types serializationProperty

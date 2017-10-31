@@ -17,8 +17,6 @@ namespace AutoRest.Modeler.Model
 
         public Operation()
         {
-            Consumes = new List<string>();
-            Produces = new List<string>();
         }
 
         /// <summary>
@@ -50,15 +48,11 @@ namespace AutoRest.Modeler.Model
         /// </summary>
         public ExternalDoc ExternalDocs { get; set; }
 
-        /// <summary>
-        /// A list of MIME types the operation can consume.
-        /// </summary>
-        public IList<string> Consumes { get; set; }
+        // TODO: fix/remove
+        public IList<string> Consumes => new List<string> { "application/json" };
 
-        /// <summary>
-        /// A list of MIME types the operation can produce. 
-        /// </summary>
-        public IList<string> Produces { get; set; }
+        // TODO: fix/remove
+        public IList<string> Produces => new List<string> { "application/json" };
 
         /// <summary>
         /// A list of parameters that are applicable for this operation. 

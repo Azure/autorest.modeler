@@ -4,6 +4,7 @@
 using AutoRest.Core.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AutoRest.Modeler.Model
 {
@@ -20,10 +21,18 @@ namespace AutoRest.Modeler.Model
             set { _description = value.StripControlCharacters(); }
         }
 
-        public Schema Schema { get; set; }
+        // TODO: get rid of this
+        public Schema Schema => Content?.Values.FirstOrDefault()?.Schema;
+
+        public Dictionary<string, MediaTypeObject> Content { get; set; }
 
         public Dictionary<string, Header> Headers { get; set; }
 
         public Dictionary<string, object> Examples { get; set; }
+    }
+
+    public class MediaTypeObject : SwaggerBase
+    {
+        public Schema Schema { get; set; }
     }
 }

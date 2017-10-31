@@ -37,7 +37,7 @@ namespace AutoRest.Modeler
 
             if (unwrappedParameter.Schema != null && unwrappedParameter.Schema.Reference != null)
             {
-                parameterName = unwrappedParameter.Schema.Reference.StripDefinitionPath();
+                parameterName = unwrappedParameter.Schema.Reference.StripComponentsSchemaPath();
             }
 
             if (parameterName == null)

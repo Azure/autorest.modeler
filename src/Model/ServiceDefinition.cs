@@ -16,23 +16,19 @@ namespace AutoRest.Modeler.Model
     {
         public ServiceDefinition()
         {
-            Definitions = new Dictionary<string, Schema>();
+            Components = new Components();
             Schemes = new List<TransferProtocolScheme>();
-            Consumes = new List<string>();
-            Produces = new List<string>();
             Paths = new Dictionary<string, Dictionary<string, Operation>>();
             CustomPaths = new Dictionary<string, Dictionary<string, Operation>>();
-            Parameters = new Dictionary<string, SwaggerParameter>();
-            Responses = new Dictionary<string, OperationResponse>();
             SecurityDefinitions = new Dictionary<string, SecurityDefinition>();
             Security = new List<Dictionary<string, List<string>>>();
             Tags = new List<Tag>();
         }
 
         /// <summary>
-        /// Specifies the Swagger Specification version being used. 
+        /// Specifies the OpenApi Specification version being used. 
         /// </summary>
-        public string Swagger { get; set; }
+        public string OpenApi { get; set; }
 
         /// <summary>
         /// Provides metadata about the API. The metadata can be used by the clients if needed.
@@ -54,15 +50,11 @@ namespace AutoRest.Modeler.Model
         /// </summary>
         public IList<TransferProtocolScheme> Schemes { get; set; }
 
-        /// <summary>
-        /// A list of MIME types the service can consume.
-        /// </summary>
-        public IList<string> Consumes { get; set; }
+        // TODO: remove
+        public IList<string> Consumes => new List<string>();
 
-        /// <summary>
-        /// A list of MIME types the APIs can produce.
-        /// </summary>
-        public IList<string> Produces { get; set; }
+        // TODO: remove
+        public IList<string> Produces => new List<string>();
 
         /// <summary>
         /// Key is actual path and the value is serializationProperty of http operations and operation objects.
@@ -75,21 +67,7 @@ namespace AutoRest.Modeler.Model
         [JsonProperty("x-ms-paths")]
         public Dictionary<string, Dictionary<string, Operation>> CustomPaths { get; set; }
 
-        /// <summary>
-        /// Key is the object serviceTypeName and the value is swagger definition.
-        /// </summary>
-        public Dictionary<string, Schema> Definitions { get; set; }
-
-        /// <summary>
-        /// Dictionary of parameters that can be used across operations.
-        /// This property does not define global parameters for all operations.
-        /// </summary>
-        public Dictionary<string, SwaggerParameter> Parameters { get; set; }
-
-        /// <summary>
-        /// Dictionary of responses that can be used across operations. The key indicates status code.
-        /// </summary>
-        public Dictionary<string, OperationResponse> Responses { get; set; }
+        public Components Components { get; set; }
 
         /// <summary>
         /// Key is the object serviceTypeName and the value is swagger security definition.
@@ -117,10 +95,32 @@ namespace AutoRest.Modeler.Model
         /// Additional external documentation
         /// </summary>
         public ExternalDoc ExternalDocs { get; set; }
+    }
+
+    public class Components
+    {
+        public Components()
+        {
+            Schemas = new Dictionary<string, Schema>();
+            Parameters = new Dictionary<string, SwaggerParameter>();
+            Responses = new Dictionary<string, OperationResponse>();
+        }
 
         /// <summary>
-        /// Path to this Swagger.
+        /// Key is the object serviceTypeName and the value is swagger definition.
         /// </summary>
-        internal Uri FilePath { get; set; }
+        public Dictionary<string, Schema> Schemas { get; set; }
+
+        /// <summary>
+        /// Dictionary of parameters that can be used across operations.
+        /// This property does not define global parameters for all operations.
+        /// </summary>
+        public Dictionary<string, SwaggerParameter> Parameters { get; set; }
+
+        /// <summary>
+        /// Dictionary of responses that can be used across operations. The key indicates status code.
+        /// </summary>
+        public Dictionary<string, OperationResponse> Responses { get; set; }
+
     }
 }

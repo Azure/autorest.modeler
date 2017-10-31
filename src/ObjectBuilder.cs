@@ -151,7 +151,7 @@ namespace AutoRest.Modeler
                 string itemServiceTypeName;
                 if (SwaggerObject.Items.Reference != null)
                 {
-                    itemServiceTypeName = SwaggerObject.Items.Reference.StripDefinitionPath();
+                    itemServiceTypeName = SwaggerObject.Items.Reference.StripComponentsSchemaPath();
                 }
                 else
                 {
@@ -173,7 +173,7 @@ namespace AutoRest.Modeler
                 string dictionaryValueServiceTypeName;
                 if (SwaggerObject.AdditionalProperties.Reference != null)
                 {
-                    dictionaryValueServiceTypeName = SwaggerObject.AdditionalProperties.Reference.StripDefinitionPath();
+                    dictionaryValueServiceTypeName = SwaggerObject.AdditionalProperties.Reference.StripComponentsSchemaPath();
                 }
                 else
                 {
