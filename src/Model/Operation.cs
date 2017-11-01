@@ -67,7 +67,7 @@ namespace AutoRest.Modeler.Model
                 var result = _parameters?.ToList();
                 if (RequestBody != null && result != null)
                 {
-                    result.Insert(RequestBody.Index, RequestBody.AsParameter());
+                    result.Insert(Extensions.Get<int>("x-ms-requestBody-index") ?? 0, RequestBody.AsParameter());
                 }
                 return result;
             }

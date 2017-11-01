@@ -45,6 +45,7 @@ namespace AutoRest.Modeler
                 parameterName = unwrappedParameter.Name;
             }
 
+            unwrappedParameter.IsRequired = unwrappedParameter.Schema.IsRequired = unwrappedParameter.IsRequired || unwrappedParameter.Schema.IsRequired || unwrappedParameter.In == AutoRest.Modeler.Model.ParameterLocation.Path;
             IModelType parameterType = BuildServiceType(parameterName);
             var parameter = New<Parameter>(new
             {
@@ -53,7 +54,6 @@ namespace AutoRest.Modeler
                 ModelType = parameterType,
                 Location = (Core.Model.ParameterLocation)Enum.Parse(typeof(Core.Model.ParameterLocation), unwrappedParameter.In.ToString())
             });
-            parameter.IsRequired = parameter.IsRequired || parameter.Location == Core.Model.ParameterLocation.Path;
             PopulateParameter(parameter, unwrappedParameter);
 
             if (_swaggerParameter.Reference != null)

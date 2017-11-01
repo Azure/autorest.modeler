@@ -26,16 +26,16 @@ namespace AutoRest.Modeler.Model
         public string Reference { get; set; }
 
         // TODO: get rid of this
-        public SwaggerParameter AsParameter() => new SwaggerParameter
-        {
-            Description = Description,
-            In = ParameterLocation.Body,
-            Name = Extensions.GetValue<string>("x-ms-client-name") ?? "body",
-            IsRequired = Required,
-            Schema = Content?.Values.FirstOrDefault()?.Schema,
-            Reference = Reference
-        };
-        public int Index => Extensions.Get<int>("x-ms-requestBody-index") ?? 0;
+        public SwaggerParameter AsParameter() =>
+            new SwaggerParameter
+            {
+                Description = Description,
+                In = ParameterLocation.Body,
+                Name = Extensions.GetValue<string>("x-ms-client-name") ?? "body",
+                IsRequired = Required,
+                Schema = Content?.Values.FirstOrDefault()?.Schema,
+                Reference = Reference
+            };
 
         public Dictionary<string, MediaTypeObject> Content { get; set; }
 
