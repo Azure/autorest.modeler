@@ -191,9 +191,7 @@ namespace AutoRest.Modeler
             CodeModel.ModelsName = settings.ModelsName;
             CodeModel.ApiVersion = ServiceDefinition.Info.Version;
             CodeModel.Documentation = ServiceDefinition.Info.Description;
-            CodeModel.BaseUrl = string.Format(CultureInfo.InvariantCulture, "{0}://{1}{2}",
-                ServiceDefinition.Schemes[0].ToString().ToLower(),
-                ServiceDefinition.Host, ServiceDefinition.BasePath);
+            CodeModel.BaseUrl = ServiceDefinition.Servers[0].Url.TrimEnd('/');
 
             // Copy extensions
             ServiceDefinition.Info?.CodeGenerationSettings?.Extensions.ForEach(extention => CodeModel.CodeGenExtensions.AddOrSet(extention.Key, extention.Value));

@@ -49,9 +49,15 @@ namespace AutoRest.Modeler
                 {
                     swaggerService.Schemes = new List<TransferProtocolScheme> { TransferProtocolScheme.Http };
                 }
-                if (string.IsNullOrEmpty(swaggerService.Host))
+                if (swaggerService.Servers == null || swaggerService.Servers.Count == 0)
                 {
-                    swaggerService.Host = "localhost";
+                    swaggerService.Servers = new List<Server>
+                    {
+                        new Server
+                        {
+                            Url = "/"
+                        }
+                    };
                 }
                 return swaggerService;
             }

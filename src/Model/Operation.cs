@@ -54,12 +54,27 @@ namespace AutoRest.Modeler.Model
         // TODO: fix/remove
         public IList<string> Produces => new List<string> { "application/json" };
 
+        IList<SwaggerParameter> _parameters;
         /// <summary>
         /// A list of parameters that are applicable for this operation. 
         /// If a parameter is already defined at the Path Item, the 
         /// new definition will override it, but can never remove it.
         /// </summary>
-        public IList<SwaggerParameter> Parameters { get; set; }
+        public IList<SwaggerParameter> Parameters
+        {
+            get
+            {
+                var result = _parameters?.ToList();
+                if (RequestBody != null && result != null)
+                {
+                    result.Insert(RequestBody.Index, RequestBody.AsParameter());
+                }
+                return result;
+            }
+            set => _parameters = value.Where(v => v.In != ParameterLocation.Body).ToList();
+        } // TODO: not like this...
+
+        public RequestBody RequestBody { get; set; }
 
         /// <summary>
         /// The list of possible responses as they are returned from executing this operation.

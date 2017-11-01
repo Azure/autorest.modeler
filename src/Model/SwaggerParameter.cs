@@ -9,7 +9,7 @@ namespace AutoRest.Modeler.Model
     /// Describes a single operation parameter.
     /// https://github.com/wordnik/swagger-spec/blob/master/versions/2.0.md#parameterObject 
     /// </summary>
-    public class SwaggerParameter : SwaggerObject
+    public class SwaggerParameter : SwaggerBase
     {
         private bool _isRequired;
         public string Name { get; set; }
@@ -17,14 +17,14 @@ namespace AutoRest.Modeler.Model
         public ParameterLocation In { get; set; }
 
         [JsonProperty(PropertyName = "required")]
-        public override bool IsRequired
+        public bool IsRequired
         {
             get { return (_isRequired) || In == ParameterLocation.Path; }
             set { _isRequired = value; }
         }
 
         [JsonIgnore]
-        public bool IsConstant => IsRequired && Enum != null && Enum.Count == 1;
+        public bool IsConstant => IsRequired && Schema?.Enum != null && Schema?.Enum.Count == 1;
 
         /// <summary>
         /// The schema defining the type used for the body parameter.

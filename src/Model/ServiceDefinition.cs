@@ -35,10 +35,7 @@ namespace AutoRest.Modeler.Model
         /// </summary>
         public Info Info { get; set; }
 
-        /// <summary>
-        /// The host (serviceTypeName or ip) serving the API.
-        /// </summary>
-        public string Host { get; set; }
+        public IList<Server> Servers { get; set; }
 
         /// <summary>
         /// The base path on which the API is served, which is relative to the host.
@@ -97,7 +94,14 @@ namespace AutoRest.Modeler.Model
         public ExternalDoc ExternalDocs { get; set; }
     }
 
-    public class Components
+    public class Server : SwaggerBase
+    {
+        public string Url { get; set; }
+        public string Description { get; set; }
+        public Dictionary<string, Schema> Variables { get; set; }
+    }
+
+    public class Components : SwaggerBase
     {
         public Components()
         {

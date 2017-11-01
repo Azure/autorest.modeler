@@ -120,7 +120,7 @@ namespace AutoRest.Modeler.Model
         /// </returns>
         public PrimaryType ToType()
         {
-            switch (Type)
+            switch (Type ?? (this as SwaggerParameter)?.Schema?.Type)
             {
                 case DataType.String:
                     switch (KnownFormat)

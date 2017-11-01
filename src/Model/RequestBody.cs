@@ -11,7 +11,7 @@ namespace AutoRest.Modeler.Model
     /// <summary>
     /// Describes a single response from an API Operation.
     /// </summary>
-    public class OperationResponse : SwaggerBase
+    public class RequestBody : SwaggerBase
     {
         private string _description;
 
@@ -22,12 +22,18 @@ namespace AutoRest.Modeler.Model
         }
 
         // TODO: get rid of this
-        public Schema Schema => Content?.Values.FirstOrDefault()?.Schema;
+        public SwaggerParameter AsParameter() => new SwaggerParameter
+        {
+            Description = Description,
+            In = ParameterLocation.Body,
+            Name = "body", // TODO
+            IsRequired = Required,
+            Schema = Content?.Values.FirstOrDefault()?.Schema
+        };
+        public int Index => 0; // TODO
 
         public Dictionary<string, MediaTypeObject> Content { get; set; }
 
-        public Dictionary<string, Header> Headers { get; set; }
-
-        public Dictionary<string, object> Examples { get; set; }
+        public bool Required { get; set; }
     }
 }
