@@ -20,7 +20,7 @@ namespace AutoRest.Modeler
         private readonly SwaggerParameter _swaggerParameter;
 
         public ParameterBuilder(SwaggerParameter swaggerParameter, SwaggerModeler modeler)
-            : base(swaggerParameter, modeler)
+            : base(swaggerParameter.Schema, modeler)
         {
             _swaggerParameter = swaggerParameter;
         }

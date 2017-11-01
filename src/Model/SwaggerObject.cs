@@ -90,19 +90,6 @@ namespace AutoRest.Modeler.Model
 
         public virtual IList<string> Enum { get; set; }
 
-        public ObjectBuilder GetBuilder(SwaggerModeler swaggerSpecBuilder)
-        {
-            if (this is SwaggerParameter)
-            {
-                return new ParameterBuilder(this as SwaggerParameter, swaggerSpecBuilder);
-            }
-            if (this is Schema)
-            {
-                return new SchemaBuilder(this as Schema, swaggerSpecBuilder);
-            }
-            return new ObjectBuilder(this, swaggerSpecBuilder);
-        }
-
         /// <summary>
         /// Returns the PrimaryType that the SwaggerObject maps to, given the Type and the KnownFormat.
         /// 
@@ -120,7 +107,7 @@ namespace AutoRest.Modeler.Model
         /// </returns>
         public PrimaryType ToType()
         {
-            switch (Type ?? (this as SwaggerParameter)?.Schema?.Type)
+            switch (Type)
             {
                 case DataType.String:
                     switch (KnownFormat)

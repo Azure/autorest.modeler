@@ -220,6 +220,34 @@ namespace AutoRest.Modeler
             SetConstraints(parameter.Constraints, swaggerObject);
         }
 
+        public static void PopulateParameter(IVariable parameter, SwaggerParameter swaggerObject)
+        {
+            if (swaggerObject == null)
+            {
+                throw new ArgumentNullException("swaggerObject");
+            }
+            if (parameter == null)
+            {
+                throw new ArgumentNullException("parameter");
+            }
+            parameter.IsRequired = swaggerObject.IsRequired;
+            parameter.DefaultValue = swaggerObject.Schema?.Default;
+
+            if (IsSwaggerObjectConstant(swaggerObject.Schema))
+            {
+                parameter.DefaultValue = swaggerObject.Schema.Enum[0];
+                parameter.IsConstant = true;
+            }
+
+            parameter.Documentation = swaggerObject.Description;
+            parameter.CollectionFormat = swaggerObject.Schema.CollectionFormat;
+
+            // tag the paramter with all the extensions from the swagger object
+            parameter.Extensions.AddRange(swaggerObject.Extensions);
+
+            SetConstraints(parameter.Constraints, swaggerObject.Schema);
+        }
+
         private static bool IsSwaggerObjectConstant(SwaggerObject swaggerObject)
         {
             return (swaggerObject.Enum != null && swaggerObject.Enum.Count == 1 && swaggerObject.IsRequired);

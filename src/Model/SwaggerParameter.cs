@@ -14,6 +14,11 @@ namespace AutoRest.Modeler.Model
         private bool _isRequired;
         public string Name { get; set; }
 
+        public string Description { get; set; }
+
+        [JsonProperty(PropertyName = "$ref")]
+        public string Reference { get; set; }
+
         public ParameterLocation In { get; set; }
 
         [JsonProperty(PropertyName = "required")]

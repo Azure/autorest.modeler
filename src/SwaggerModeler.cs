@@ -189,7 +189,9 @@ namespace AutoRest.Modeler
 
             CodeModel.Namespace = settings.Namespace;
             CodeModel.ModelsName = settings.ModelsName;
-            CodeModel.ApiVersion = ServiceDefinition.Info.Version;
+            CodeModel.ApiVersion = ServiceDefinition.Info.Version == "" // since info.version is required according to spec, swagger2openapi sets it to "" if missing
+                ? null                                                  // ...but that mocks with our multi-api-version treatment of inlining the api-version
+                : ServiceDefinition.Info.Version;
             CodeModel.Documentation = ServiceDefinition.Info.Description;
             CodeModel.BaseUrl = ServiceDefinition.Servers[0].Url.TrimEnd('/');
 
@@ -405,15 +407,30 @@ namespace AutoRest.Modeler
             // If referencing global parameters serializationProperty
             if (swaggerParameter.Reference != null)
             {
-                string referenceKey = swaggerParameter.Reference.StripComponentsParameterPath();
-                if (!ServiceDefinition.Components.Parameters.ContainsKey(referenceKey))
+                if (swaggerParameter.In == ParameterLocation.Body)
                 {
-                    throw new ArgumentException(
-                        string.Format(CultureInfo.InvariantCulture,
-                        Resources.DefinitionDoesNotExist, referenceKey));
-                }
+                    string referenceKey = swaggerParameter.Reference.StripComponentsRequestBodyPath();
+                    if (!ServiceDefinition.Components.RequestBodies.ContainsKey(referenceKey))
+                    {
+                        throw new ArgumentException(
+                            string.Format(CultureInfo.InvariantCulture,
+                            Resources.DefinitionDoesNotExist, referenceKey));
+                    }
 
-                swaggerParameter = ServiceDefinition.Components.Parameters[referenceKey];
+                    swaggerParameter = ServiceDefinition.Components.RequestBodies[referenceKey].AsParameter();
+                }
+                else
+                {
+                    string referenceKey = swaggerParameter.Reference.StripComponentsParameterPath();
+                    if (!ServiceDefinition.Components.Parameters.ContainsKey(referenceKey))
+                    {
+                        throw new ArgumentException(
+                            string.Format(CultureInfo.InvariantCulture,
+                            Resources.DefinitionDoesNotExist, referenceKey));
+                    }
+
+                    swaggerParameter = ServiceDefinition.Components.Parameters[referenceKey];
+                }
             }
 
             // Unwrap the schema if in "body"

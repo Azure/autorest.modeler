@@ -24,6 +24,8 @@ namespace AutoRest.Modeler.Model
         /// </summary>
         public string Discriminator { get; set; }
 
+        public bool? Nullable { get; set; }
+
         /// <summary>
         /// Key is a type serviceTypeName.
         /// </summary>

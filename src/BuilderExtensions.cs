@@ -17,32 +17,21 @@ namespace AutoRest.Modeler
     public static class BuilderExtensions
     {
         /// <summary>
-        /// Removes #/components/parameters/ or url#/components/parameters from the reference path.
+        /// Removes #/components/{component}/ or url#/components/{component} from the reference path.
         /// </summary>
-        public static string StripComponentsParameterPath(this string reference)
+        private static string StripSomeComponentPath(string component, string reference)
         {
-            if (reference != null && reference.Contains("#/components/parameters/"))
+            var prefix = $"#/components/{component}/";
+            if (reference != null && reference.Contains(prefix))
             {
-                reference = reference.Substring(reference.IndexOf("#/components/parameters/", StringComparison.OrdinalIgnoreCase) +
-                    "#/components/parameters/".Length);
+                reference = reference.Substring(reference.IndexOf(prefix, StringComparison.OrdinalIgnoreCase) + prefix.Length);
             }
-
             return reference;
         }
 
-        /// <summary>
-        /// Removes #/components/schemas/ or url#/components/schemas from the reference path.
-        /// </summary>
-        public static string StripComponentsSchemaPath(this string reference)
-        {
-            if (reference != null && reference.Contains("#/components/schemas/"))
-            {
-                reference = reference.Substring(reference.IndexOf("#/components/schemas/", StringComparison.OrdinalIgnoreCase) +
-                    "#/components/schemas/".Length);
-            }
-
-            return reference;
-        }
+        public static string StripComponentsParameterPath(this string reference) => StripSomeComponentPath("parameters", reference);
+        public static string StripComponentsRequestBodyPath(this string reference) => StripSomeComponentPath("requestBodies", reference);
+        public static string StripComponentsSchemaPath(this string reference) => StripSomeComponentPath("schemas", reference);
 
         /// <summary>
         /// A schema represents a primitive type if it's not an object or it represents a dictionary

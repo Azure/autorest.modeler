@@ -244,18 +244,16 @@ namespace AutoRest.Modeler
                             continue; // ignore these
                         case "Content-Type": // special treatment for data-plane
                             // enrich Content-Type header with "consumes"
-                            if (actualSwaggerParameter.Enum == null && 
+                            if (actualSwaggerParameter.Schema.Enum == null && 
                                 _effectiveConsumes.Count > 1)
                             {
-                                swaggerParameter.Default = actualSwaggerParameter.Default;
                                 swaggerParameter.Description = actualSwaggerParameter.Description;
                                 swaggerParameter.Extensions = actualSwaggerParameter.Extensions;
                                 swaggerParameter.In = actualSwaggerParameter.In;
                                 swaggerParameter.IsRequired = actualSwaggerParameter.IsRequired;
                                 swaggerParameter.Name = actualSwaggerParameter.Name;
                                 swaggerParameter.Schema = actualSwaggerParameter.Schema;
-                                swaggerParameter.Type = actualSwaggerParameter.Type;
-                                swaggerParameter.Enum = _effectiveConsumes.ToList();
+                                swaggerParameter.Schema.Enum = _effectiveConsumes.ToList();
 
                                 // if not treated explicitly, add choices to the global choices
                                 if (swaggerParameter.Extensions.GetValue<JObject>("x-ms-enum") == null) {

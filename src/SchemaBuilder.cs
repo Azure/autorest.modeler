@@ -34,6 +34,12 @@ namespace AutoRest.Modeler
         {
             _schema = Modeler.Resolver.Unwrap(_schema);
 
+            // translate nullable back to what "code-model-v1"-gen generators expect
+            if (_schema.Nullable.HasValue && !_schema.Extensions.ContainsKey("x-nullable"))
+            {
+                _schema.Extensions["x-nullable"] = _schema.Nullable.Value;
+            }
+
             // If it's a primitive type, let the parent build service handle it
             if (_schema.IsPrimitiveType())
             {

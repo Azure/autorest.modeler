@@ -93,38 +93,4 @@ namespace AutoRest.Modeler.Model
         /// </summary>
         public ExternalDoc ExternalDocs { get; set; }
     }
-
-    public class Server : SwaggerBase
-    {
-        public string Url { get; set; }
-        public string Description { get; set; }
-        public Dictionary<string, Schema> Variables { get; set; }
-    }
-
-    public class Components : SwaggerBase
-    {
-        public Components()
-        {
-            Schemas = new Dictionary<string, Schema>();
-            Parameters = new Dictionary<string, SwaggerParameter>();
-            Responses = new Dictionary<string, OperationResponse>();
-        }
-
-        /// <summary>
-        /// Key is the object serviceTypeName and the value is swagger definition.
-        /// </summary>
-        public Dictionary<string, Schema> Schemas { get; set; }
-
-        /// <summary>
-        /// Dictionary of parameters that can be used across operations.
-        /// This property does not define global parameters for all operations.
-        /// </summary>
-        public Dictionary<string, SwaggerParameter> Parameters { get; set; }
-
-        /// <summary>
-        /// Dictionary of responses that can be used across operations. The key indicates status code.
-        /// </summary>
-        public Dictionary<string, OperationResponse> Responses { get; set; }
-
-    }
 }
