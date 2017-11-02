@@ -104,7 +104,7 @@ namespace AutoRest.Modeler
                         {
                             MetadataPropertyHandling = MetadataPropertyHandling.Ignore
                         }));
-                    headerTypeReferences.Add(schema.GetBuilder(_swaggerModeler).BuildServiceType(headerTypeName));
+                    headerTypeReferences.Add(schema.GetBuilder(_swaggerModeler).BuildServiceType(headerTypeName, false));
                 }
                 else
                 {
@@ -124,6 +124,11 @@ namespace AutoRest.Modeler
                 });
                 foreach (var h in responseHeaders)
                 {
+                    var hv = h.Value;
+                    if (hv.Extensions.ContainsKey("x-ms-enum") && !hv.Schema.Extensions.ContainsKey("x-ms-enum"))
+                    {
+                        hv.Schema.Extensions["x-ms-enum"] = hv.Extensions["x-ms-enum"];
+                    }
                     if (h.Value.Extensions != null && h.Value.Extensions.ContainsKey("x-ms-header-collection-prefix"))
                     {
                         var property = New<Property>(new
@@ -131,10 +136,10 @@ namespace AutoRest.Modeler
                             Name = h.Key,
                             SerializedName = h.Key,
                             RealPath = new[] {h.Key},
-                            Extensions = h.Value.Extensions,
+                            Extensions = hv.Extensions,
                             ModelType = New<DictionaryType>(new
                             {
-                                ValueType = h.Value.Schema.GetBuilder(this._swaggerModeler).BuildServiceType(h.Key)
+                                ValueType = hv.Schema.GetBuilder(this._swaggerModeler).BuildServiceType(h.Key, false)
                             })
                         });
                         headerType.Add(property);
@@ -146,9 +151,9 @@ namespace AutoRest.Modeler
                             Name = h.Key,
                             SerializedName = h.Key,
                             RealPath = new[] {h.Key},
-                            Extensions = h.Value.Extensions,
-                            ModelType = h.Value.Schema.GetBuilder(this._swaggerModeler).BuildServiceType(h.Key),
-                            Documentation = h.Value.Description
+                            Extensions = hv.Extensions,
+                            ModelType = hv.Schema.GetBuilder(this._swaggerModeler).BuildServiceType(h.Key, false),
+                            Documentation = hv.Description
                         });
                         headerType.Add(property);
                     }
@@ -367,7 +372,7 @@ namespace AutoRest.Modeler
                 if (response.Schema != null)
                 {
                     IModelType serviceType = response.Schema.GetBuilder(_swaggerModeler)
-                        .BuildServiceType(response.Schema.Reference.StripComponentsSchemaPath());
+                        .BuildServiceType(response.Schema.Reference.StripComponentsSchemaPath(), false);
 
                     Debug.Assert(serviceType != null);
 
@@ -480,7 +485,7 @@ namespace AutoRest.Modeler
                         referenceKey = typeNamer(methodName);
                     }
 
-                    responseType = response.Schema.GetBuilder(_swaggerModeler).BuildServiceType(referenceKey);
+                    responseType = response.Schema.GetBuilder(_swaggerModeler).BuildServiceType(referenceKey, false);
                     handled = true;
                 }
             }

@@ -23,13 +23,7 @@ namespace AutoRest.Modeler
                 throw new ArgumentNullException("currentSwaggerParam");
             }
 
-            bool hasCollectionFormat = currentSwaggerParam.Schema?.CollectionFormat != CollectionFormat.None;
-
-            if (currentSwaggerParam.Schema?.Type == DataType.Array && !hasCollectionFormat)
-            {
-                // If the parameter type is array default the collectionFormat to csv
-                currentSwaggerParam.Schema.CollectionFormat = CollectionFormat.Csv;
-            }
+            bool hasCollectionFormat = currentSwaggerParam.CollectionFormat != CollectionFormat.None;
 
             if (hasCollectionFormat)
             {

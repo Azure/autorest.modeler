@@ -298,7 +298,7 @@ namespace AutoRest.Modeler
                 foreach (var schemaName in schemas.Keys.ToArray())
                 {
                     var schema = schemas[schemaName];
-                    schema.GetBuilder(this).BuildServiceType(schemaName);
+                    schema.GetBuilder(this).BuildServiceType(schemaName, false);
 
                     Resolver.ExpandAllOf(schema);
                     var parent = string.IsNullOrEmpty(schema.Extends.StripComponentsSchemaPath())
@@ -417,7 +417,7 @@ namespace AutoRest.Modeler
                             Resources.DefinitionDoesNotExist, referenceKey));
                     }
 
-                    swaggerParameter = ServiceDefinition.Components.RequestBodies[referenceKey].AsParameter();
+                    swaggerParameter = ServiceDefinition.Components.RequestBodies[referenceKey].AsParameters().First();
                 }
                 else
                 {

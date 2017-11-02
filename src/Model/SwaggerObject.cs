@@ -19,7 +19,6 @@ namespace AutoRest.Modeler.Model
     public abstract class SwaggerObject : SwaggerBase
     {
         private string _description;
-        public virtual bool IsRequired { get; set; }
 
         /// <summary>
         /// The type of the parameter.
@@ -55,11 +54,6 @@ namespace AutoRest.Modeler.Model
             get { return _description; }
             set { _description = value.StripControlCharacters(); }
         }
-
-        /// <summary>
-        /// Determines the format of the array if type array is used.
-        /// </summary>
-        public virtual CollectionFormat CollectionFormat { get; set; }
 
         /// <summary>
         /// Sets a default value to the parameter.

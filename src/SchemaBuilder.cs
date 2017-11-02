@@ -30,7 +30,7 @@ namespace AutoRest.Modeler
             _schema = schema;
         }
 
-        public override IModelType BuildServiceType(string serviceTypeName)
+        public override IModelType BuildServiceType(string serviceTypeName, bool required)
         {
             _schema = Modeler.Resolver.Unwrap(_schema);
 
@@ -43,7 +43,7 @@ namespace AutoRest.Modeler
             // If it's a primitive type, let the parent build service handle it
             if (_schema.IsPrimitiveType())
             {
-                return _schema.GetBuilder(Modeler).ParentBuildServiceType(serviceTypeName);
+                return _schema.GetBuilder(Modeler).ParentBuildServiceType(serviceTypeName, required);
             }
 
             // If it's known primary type, return that type
@@ -83,7 +83,7 @@ namespace AutoRest.Modeler
                     ValueType = _schema.AdditionalProperties.GetBuilder(Modeler).BuildServiceType(
                                _schema.AdditionalProperties.Reference != null
                                ? _schema.AdditionalProperties.Reference.StripComponentsSchemaPath()
-                               : serviceTypeName + "Value"),
+                               : serviceTypeName + "Value", false),
                     Extensions = _schema.AdditionalProperties.Extensions,
                     SupportsAdditionalProperties = true
                 });
@@ -110,12 +110,6 @@ namespace AutoRest.Modeler
                         string propertyServiceTypeName;
                         Schema refSchema = null;
 
-                        if (property.Value.ReadOnly && property.Value.IsRequired)
-                        {
-                            throw new InvalidOperationException(string.Format(CultureInfo.InvariantCulture,
-                           Resources.ReadOnlyNotRequired, name, serviceTypeName));
-                        }
-
                         if (property.Value.Reference != null)
                         {
                             propertyServiceTypeName = property.Value.Reference.StripComponentsSchemaPath();
@@ -125,10 +119,6 @@ namespace AutoRest.Modeler
                             if (unwrappedSchema.Enum != null)
                             {
                                 refSchema = new Schema().LoadFrom(unwrappedSchema);
-                                if (property.Value.IsRequired)
-                                {
-                                    refSchema.IsRequired = property.Value.IsRequired;
-                                }
                                 //Todo: Remove the following when referenced descriptions are correctly ignored (Issue https://github.com/Azure/autorest/issues/1283)
                                 refSchema.Description = property.Value.Description;
                             }
@@ -137,10 +127,10 @@ namespace AutoRest.Modeler
                         {
                             propertyServiceTypeName = serviceTypeName + "_" + property.Key;
                         }
-
+                        var isRequired = _schema.Required?.Contains(property.Key) ?? false;
                         var propertyType = refSchema != null
-                                           ? refSchema.GetBuilder(Modeler).BuildServiceType(propertyServiceTypeName)
-                                           : property.Value.GetBuilder(Modeler).BuildServiceType(propertyServiceTypeName);
+                                           ? refSchema.GetBuilder(Modeler).BuildServiceType(propertyServiceTypeName, isRequired)
+                                           : property.Value.GetBuilder(Modeler).BuildServiceType(propertyServiceTypeName, isRequired);
 
                         var propertyObj = New<Property>(new
                         {
@@ -150,7 +140,8 @@ namespace AutoRest.Modeler
                             ModelType = propertyType,
                             IsReadOnly = property.Value.ReadOnly,
                             Summary = property.Value.Title,
-                            XmlProperties = property.Value.Xml
+                            XmlProperties = property.Value.Xml,
+                            IsRequired = isRequired
                         });
                         PopulateParameter(propertyObj, refSchema != null ? refSchema : property.Value);
                         var propertyCompositeType = propertyType as CompositeType;
@@ -210,9 +201,9 @@ namespace AutoRest.Modeler
             return objectType;
         }
 
-        public override IModelType ParentBuildServiceType(string serviceTypeName)
+        public override IModelType ParentBuildServiceType(string serviceTypeName, bool required)
         {
-            return base.BuildServiceType(serviceTypeName);
+            return base.BuildServiceType(serviceTypeName, required);
         }
     }
 }

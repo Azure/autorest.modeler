@@ -4,6 +4,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using AutoRest.Core.Utilities;
+using Newtonsoft.Json;
 
 namespace AutoRest.Modeler.Model
 {
@@ -70,22 +71,24 @@ namespace AutoRest.Modeler.Model
             }
         }
 
+        [JsonIgnore]
         IList<SwaggerParameter> _parameters;
         /// <summary>
         /// A list of parameters that are applicable for this operation. 
         /// If a parameter is already defined at the Path Item, the 
         /// new definition will override it, but can never remove it.
         /// </summary>
-        public IList<SwaggerParameter> Parameters
+        [JsonProperty(PropertyName = "parameters")]
+        public SwaggerParameter[] Parameters
         {
             get
             {
-                var result = _parameters?.ToList();
-                if (RequestBody != null && result != null)
+                var result = _parameters?.ToList() ?? new List<SwaggerParameter>();
+                if (RequestBody != null)
                 {
-                    result.Insert(Extensions.Get<int>("x-ms-requestBody-index") ?? 0, RequestBody.AsParameter());
+                    result.InsertRange(Math.Min(Extensions.Get<int>("x-ms-requestBody-index") ?? 0, result.Count), RequestBody.AsParameters());
                 }
-                return result;
+                return result.ToArray();
             }
             set => _parameters = value.Where(v => v.In != ParameterLocation.Body).ToList();
         } // TODO: not like this...

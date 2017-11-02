@@ -40,7 +40,6 @@ namespace AutoRest.Modeler
                 settings.Converters.Add(new ResponseRefConverter(swaggerDocument));
                 settings.Converters.Add(new PathItemRefConverter(swaggerDocument));
                 settings.Converters.Add(new PathLevelParameterConverter(swaggerDocument));
-                settings.Converters.Add(new SchemaRequiredItemConverter());
                 settings.Converters.Add(new SecurityDefinitionConverter());
                 var swaggerService = JsonConvert.DeserializeObject<ServiceDefinition>(swaggerDocument, settings);
 
