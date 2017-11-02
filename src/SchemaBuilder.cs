@@ -105,7 +105,7 @@ namespace AutoRest.Modeler
                 foreach (var property in _schema.Properties)
                 {
                     string name = property.Key;
-                    if (name != _schema.Discriminator)
+                    if (name != _schema.Discriminator?.PropertyName)
                     {
                         string propertyServiceTypeName;
                         Schema refSchema = null;

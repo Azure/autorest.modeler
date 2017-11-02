@@ -22,7 +22,7 @@ namespace AutoRest.Modeler.Model
         /// the value MUST be the serviceTypeName of this schema or any schema that inherits it,
         /// or it can be overridden with the x-ms-discriminator-value extension.
         /// </summary>
-        public string Discriminator { get; set; }
+        public Discriminator Discriminator { get; set; }
 
         public bool? Nullable { get; set; }
 
