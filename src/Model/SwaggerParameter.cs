@@ -25,6 +25,11 @@ namespace AutoRest.Modeler.Model
         {
             get
             {
+                bool quirksMode = true; // disable/make settable as appropriate
+                if (!Style.HasValue && !Explode.HasValue && quirksMode)
+                {
+                    return CollectionFormat.None; // WAT
+                }
                 var style = Style ?? (In == ParameterLocation.Query || In == ParameterLocation.Cookie ? ParameterStyle.Form : ParameterStyle.Simple);
                 var explode = Explode ?? (style == ParameterStyle.Form);
                 if (explode)
@@ -42,7 +47,7 @@ namespace AutoRest.Modeler.Model
                     case ParameterStyle.TabDelimited: //FAKE
                         return CollectionFormat.Tsv;
                 }
-                return CollectionFormat.Csv;
+                throw new System.NotImplementedException($"Style '{style}' is not yet supported.");
             }
         }
 
