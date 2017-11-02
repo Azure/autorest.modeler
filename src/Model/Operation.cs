@@ -49,10 +49,26 @@ namespace AutoRest.Modeler.Model
         public ExternalDoc ExternalDocs { get; set; }
 
         // TODO: fix/remove
-        public IList<string> Consumes => new List<string> { "application/json" };
+        public IList<string> Consumes
+        {
+            get
+            {
+                var result = RequestBody?.Content?.Keys.ToList();
+                if (result == null || result.Count == 0) return new List<string> { "application/json" };
+                return result;
+            }
+        }
 
         // TODO: fix/remove
-        public IList<string> Produces => new List<string> { "application/json" };
+        public IList<string> Produces
+        {
+            get
+            {
+                var result = Responses?.Values.SelectMany(r => r.Content?.Keys ?? Enumerable.Empty<string>()).Distinct().ToList();
+                if (result == null || result.Count == 0) return new List<string> { "application/json" };
+                return result;
+            }
+        }
 
         IList<SwaggerParameter> _parameters;
         /// <summary>

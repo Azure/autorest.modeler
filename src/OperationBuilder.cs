@@ -134,7 +134,7 @@ namespace AutoRest.Modeler
                             Extensions = h.Value.Extensions,
                             ModelType = New<DictionaryType>(new
                             {
-                                ValueType = h.Value.GetBuilder(this._swaggerModeler).BuildServiceType(h.Key)
+                                ValueType = h.Value.Schema.GetBuilder(this._swaggerModeler).BuildServiceType(h.Key)
                             })
                         });
                         headerType.Add(property);
@@ -147,7 +147,7 @@ namespace AutoRest.Modeler
                             SerializedName = h.Key,
                             RealPath = new[] {h.Key},
                             Extensions = h.Value.Extensions,
-                            ModelType = h.Value.GetBuilder(this._swaggerModeler).BuildServiceType(h.Key),
+                            ModelType = h.Value.Schema.GetBuilder(this._swaggerModeler).BuildServiceType(h.Key),
                             Documentation = h.Value.Description
                         });
                         headerType.Add(property);

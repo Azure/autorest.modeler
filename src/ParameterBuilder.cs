@@ -46,6 +46,10 @@ namespace AutoRest.Modeler
             }
 
             unwrappedParameter.IsRequired = unwrappedParameter.Schema.IsRequired = unwrappedParameter.IsRequired || unwrappedParameter.Schema.IsRequired || unwrappedParameter.In == AutoRest.Modeler.Model.ParameterLocation.Path;
+            if (unwrappedParameter.Extensions.ContainsKey("x-ms-enum") && !unwrappedParameter.Schema.Extensions.ContainsKey("x-ms-enum"))
+            {
+                unwrappedParameter.Schema.Extensions["x-ms-enum"] = unwrappedParameter.Extensions["x-ms-enum"];
+            }
             IModelType parameterType = BuildServiceType(parameterName);
             var parameter = New<Parameter>(new
             {
