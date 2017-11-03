@@ -20,7 +20,6 @@ namespace AutoRest.Modeler.Model
             Schemes = new List<TransferProtocolScheme>();
             Paths = new Dictionary<string, Dictionary<string, Operation>>();
             CustomPaths = new Dictionary<string, Dictionary<string, Operation>>();
-            SecurityDefinitions = new Dictionary<string, SecurityDefinition>();
             Security = new List<Dictionary<string, List<string>>>();
             Tags = new List<Tag>();
         }
@@ -65,11 +64,6 @@ namespace AutoRest.Modeler.Model
         public Dictionary<string, Dictionary<string, Operation>> CustomPaths { get; set; }
 
         public Components Components { get; set; }
-
-        /// <summary>
-        /// Key is the object serviceTypeName and the value is swagger security definition.
-        /// </summary>
-        public Dictionary<string, SecurityDefinition> SecurityDefinitions { get; set; }
 
         /// <summary>
         /// A declaration of which security schemes are applied for the API as a whole. 

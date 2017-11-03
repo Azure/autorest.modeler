@@ -1,14 +1,14 @@
-﻿{
-  "swagger": "2.0",
+{
+  "openapi": "3.0.0",
+  "servers": [
+    {
+      "url": "https://autorestresourcesproxysite.azurewebsites.net:443/BlobConnector"
+    }
+  ],
   "info": {
     "version": "1.0",
     "title": "Blob Connector"
   },
-  "host": "autorestresourcesproxysite.azurewebsites.net:443",
-  "basePath": "/BlobConnector",
-  "schemes": [
-    "https"
-  ],
   "paths": {
     "/Container/Poll": {
       "get": {
@@ -17,56 +17,93 @@
         ],
         "summary": "Poll for blobs present in given Container. Directory-level Polling and filtering of Blobs is also supported. \r\n            Deletes Blobs from the Container once they are picked up",
         "operationId": "BlobConnector_TriggerOnBlobContainer",
-        "consumes": [
-
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
         "parameters": [
           {
             "name": "triggerState",
             "in": "query",
             "description": "Specify Trigger State",
             "required": true,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "directoryName",
             "in": "query",
             "description": "Virtual directory within Container from which we need to poll",
             "required": false,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "includeRegex",
             "in": "query",
             "description": "Include File Mask",
             "required": false,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "excludeRegex",
             "in": "query",
             "description": "Exclude File Mask",
             "required": false,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Operation is successful.",
-            "schema": {
-              "$ref": "#/definitions/MessageDescription"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDescription"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDescription"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDescription"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDescription"
+                }
+              }
             }
           },
           "202": {
             "description": "Operation is accepted",
-            "schema": {
-              "$ref": "#/definitions/MessageDescription"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDescription"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDescription"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDescription"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDescription"
+                }
+              }
             }
           },
           "400": {
@@ -89,56 +126,59 @@
         ],
         "summary": "Upload/Update a Blob to the Container",
         "operationId": "BlobConnector_UploadBlob",
-        "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "application/x-www-form-urlencoded"
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
         "parameters": [
-          {
-            "name": "blobContentAndDetails",
-            "in": "body",
-            "description": "JSON Object containing the Base-64 encoded Blob Content and a name-value pair containing Blob Properties",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/MessageDescription"
-            }
-          },
           {
             "name": "blobName",
             "in": "query",
             "description": "Name of the Uploaded Blob. Required",
             "required": true,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "directoryName",
             "in": "query",
             "description": "Virtual directory within the container to which Blob should be uploaded. Optional",
             "required": false,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "forceOverwrite",
             "in": "query",
             "description": "If a Blob with the same name already exists, should it be overwritten? Default value : true",
             "required": false,
-            "type": "boolean"
+            "schema": {
+              "type": "boolean"
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Operation is successful.",
-            "schema": {
-              "$ref": "#/definitions/BlobDetailsItem"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BlobDetailsItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BlobDetailsItem"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/BlobDetailsItem"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/BlobDetailsItem"
+                }
+              }
             }
           },
           "400": {
@@ -151,7 +191,40 @@
             "description": "Internal Server Error"
           }
         },
-        "deprecated": false
+        "deprecated": false,
+        "requestBody": {
+          "x-ms-client-name": "blobContentAndDetails",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MessageDescription"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MessageDescription"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/MessageDescription"
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/MessageDescription"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/MessageDescription"
+              }
+            }
+          },
+          "description": "JSON Object containing the Base-64 encoded Blob Content and a name-value pair containing Blob Properties",
+          "required": true
+        },
+        "x-ms-requestBody-index": 0
       }
     },
     "/Container": {
@@ -161,39 +234,62 @@
         ],
         "summary": "List all the blobs within the Container",
         "operationId": "BlobConnector_ListBlobsInContainer",
-        "consumes": [
-
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
         "parameters": [
           {
             "name": "blobDirectoryName",
             "in": "query",
             "description": "Name of specific directory within container for which listing must be performed. Optional.",
             "required": false,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "maxResults",
             "in": "query",
             "description": "Maximum number of blobs in the List Returned",
             "required": false,
-            "type": "integer",
-            "format": "int32"
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Operation is successful.",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/BlobDetailsItem"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BlobDetailsItem"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BlobDetailsItem"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BlobDetailsItem"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BlobDetailsItem"
+                  }
+                }
               }
             }
           },
@@ -217,36 +313,50 @@
         ],
         "summary": "Get a specific Blob from the container",
         "operationId": "BlobConnector_GetBlob",
-        "consumes": [
-
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
         "parameters": [
           {
             "name": "blobName",
             "in": "query",
             "description": "Name of the blob to retrieve",
             "required": true,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "directoryName",
             "in": "query",
             "description": "Virtual directory within the container from which Blob should be retrieved. Optional",
             "required": false,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Operation is successful.",
-            "schema": {
-              "$ref": "#/definitions/MessageDescription"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDescription"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDescription"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDescription"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDescription"
+                }
+              }
             }
           },
           "400": {
@@ -267,33 +377,35 @@
         ],
         "summary": "Delete specific Blob from a Container",
         "operationId": "BlobConnector_DeleteBlob",
-        "consumes": [
-
-        ],
-        "produces": [
-
-        ],
         "parameters": [
           {
             "name": "blobName",
             "in": "query",
             "description": "Name of the specific blob to delete",
             "required": true,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "directoryName",
             "in": "query",
             "description": "Virtual directory within the container from which Blob should be deleted. Optional",
             "required": false,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Operation is successful.",
-            "schema": {
-              "$ref": "#/definitions/Void"
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Void"
+                }
+              }
             }
           },
           "400": {
@@ -316,26 +428,26 @@
         ],
         "summary": "Create a read-only snapshot of a Specific Blob",
         "operationId": "BlobConnector_SnapshotBlob",
-        "consumes": [
-
-        ],
-        "produces": [
-
-        ],
         "parameters": [
           {
             "name": "blobName",
             "in": "query",
             "description": "Name of the specific blob for which snapshot must be created",
             "required": true,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Operation is successful.",
-            "schema": {
-              "$ref": "#/definitions/MessageDescription"
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDescription"
+                }
+              }
             }
           },
           "400": {
@@ -358,46 +470,54 @@
         ],
         "summary": "Copy a specific Blob to another container within the same storage account",
         "operationId": "BlobConnector_CopyBlobWithinSameAccount",
-        "consumes": [
-
-        ],
-        "produces": [
-
-        ],
         "parameters": [
           {
             "name": "sourceBlobName",
             "in": "query",
             "description": "Name of the blob which will be copied",
             "required": true,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "destinationContainerName",
             "in": "query",
             "description": "Name of the destination container",
             "required": true,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "destinationBlobName",
             "in": "query",
             "description": "Name of the destination blob. Optional, if not set it will be the same as source blob",
             "required": false,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Operation is successful.",
-            "schema": {
-              "$ref": "#/definitions/Void"
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Void"
+                }
+              }
             }
           },
           "202": {
             "description": "Accepted.",
-            "schema": {
-              "$ref": "#/definitions/Void"
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Void"
+                }
+              }
             }
           },
           "400": {
@@ -414,97 +534,95 @@
       }
     }
   },
-  "definitions": {
-    "MessageDescription": {
-      "required": [
-        "Content",
-        "Properties"
-      ],
-      "type": "object",
-      "properties": {
-        "Content": {
-          "$ref": "#/definitions/Content"
-        },
-        "Properties": {
-          "type": "object",
-          "additionalProperties": {
-            "$ref": "#/definitions/Object"
+  "components": {
+    "schemas": {
+      "MessageDescription": {
+        "required": [
+          "Content",
+          "Properties"
+        ],
+        "type": "object",
+        "properties": {
+          "Content": {
+            "$ref": "#/components/schemas/Content"
+          },
+          "Properties": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/Object"
+            }
           }
         }
-      }
-    },
-    "Content": {
-      "required": [
-        "ContentData",
-        "ContentType",
-        "ContentTransferEncoding"
-      ],
-      "type": "object",
-      "properties": {
-        "ContentData": {
-          "type": "string"
-        },
-        "ContentType": {
-          "type": "string"
-        },
-        "ContentTransferEncoding": {
-          "type": "string"
+      },
+      "Content": {
+        "required": [
+          "ContentData",
+          "ContentType",
+          "ContentTransferEncoding"
+        ],
+        "type": "object",
+        "properties": {
+          "ContentData": {
+            "type": "string"
+          },
+          "ContentType": {
+            "type": "string"
+          },
+          "ContentTransferEncoding": {
+            "type": "string"
+          }
         }
-      }
-    },
-    "Object": {
-      "type": "object",
-      "properties": {
-
-      }
-    },
-    "BlobDetailsItem": {
-      "required": [
-        "BlobName",
-        "BlobPath",
-        "LastModified",
-        "BlobType",
-        "ContentType",
-        "AbsoluteUri",
-        "BlobSize"
-      ],
-      "type": "object",
-      "properties": {
-        "BlobName": {
-          "description": "Blob Name",
-          "type": "string"
-        },
-        "BlobPath": {
-          "description": "Blob Path",
-          "type": "string"
-        },
-        "LastModified": {
-          "description": "Last Modified",
-          "type": "string"
-        },
-        "BlobType": {
-          "description": "Blob Type",
-          "type": "string"
-        },
-        "ContentType": {
-          "description": "Content Type",
-          "type": "string"
-        },
-        "AbsoluteUri": {
-          "description": "Absolute Uri",
-          "type": "string"
-        },
-        "BlobSize": {
-          "format": "int64",
-          "description": "Blob Size",
-          "type": "integer"
+      },
+      "Object": {
+        "type": "object",
+        "properties": {}
+      },
+      "BlobDetailsItem": {
+        "required": [
+          "BlobName",
+          "BlobPath",
+          "LastModified",
+          "BlobType",
+          "ContentType",
+          "AbsoluteUri",
+          "BlobSize"
+        ],
+        "type": "object",
+        "properties": {
+          "BlobName": {
+            "description": "Blob Name",
+            "type": "string"
+          },
+          "BlobPath": {
+            "description": "Blob Path",
+            "type": "string"
+          },
+          "LastModified": {
+            "description": "Last Modified",
+            "type": "string"
+          },
+          "BlobType": {
+            "description": "Blob Type",
+            "type": "string"
+          },
+          "ContentType": {
+            "description": "Content Type",
+            "type": "string"
+          },
+          "AbsoluteUri": {
+            "description": "Absolute Uri",
+            "type": "string"
+          },
+          "BlobSize": {
+            "format": "int64",
+            "description": "Blob Size",
+            "type": "integer"
+          }
         }
-      }
-    },
-    "Void": {
-      "type": "object",
-      "properties": {
-
+      },
+      "Void": {
+        "type": "object",
+        "properties": {}
       }
     }
   }

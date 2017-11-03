@@ -1,17 +1,15 @@
 {
-  "swagger": "2.0",
+  "openapi": "3.0.0",
+  "servers": [
+    {
+      "url": "https://management.azure.com/"
+    }
+  ],
   "info": {
     "title": "Optional Parameter test spec",
     "description": "Test correct generation of optional method parameters",
     "version": "1.0"
   },
-  "host": "management.azure.com",
-  "schemes": [
-    "https"
-  ],
-  "basePath": "/",
-  "produces": [ "application/json" ],
-  "consumes": [ "application/json" ],
   "paths": {
     "/params": {
       "get": {
@@ -23,61 +21,79 @@
             "name": "intParam",
             "in": "query",
             "description": "The maximum number of results to return.",
-            "type": "integer"
+            "schema": {
+              "type": "integer"
+            }
           },
-           {
+          {
             "name": "longParam",
             "in": "query",
             "description": "The maximum number of results to return.",
-            "type": "integer",
-            "format":  "int64"
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
           },
           {
             "name": "floatParam",
             "in": "query",
             "description": "The maximum number of results to return.",
-            "type": "number",
-            "format":  "float"
+            "schema": {
+              "type": "number",
+              "format": "float"
+            }
           },
           {
             "name": "doubleParam",
             "in": "query",
             "description": "The maximum number of results to return.",
-            "type": "number",
-            "format":  "double"
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
           },
           {
             "name": "byteParam",
             "in": "query",
             "description": "The maximum number of results to return.",
-            "type": "string",
-            "format":  "byte"
+            "schema": {
+              "type": "string",
+              "format": "byte"
+            }
           },
           {
             "name": "booleanParam",
             "in": "query",
             "description": "The maximum number of results to return.",
-            "type": "boolean"
+            "schema": {
+              "type": "boolean"
+            }
           },
           {
             "name": "dateParam",
             "in": "query",
             "description": "The maximum number of results to return.",
-            "type": "string",
-            "format":  "date"
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
           },
           {
             "name": "datetimeParam",
             "in": "query",
             "description": "The maximum number of results to return.",
-            "type": "string",
-            "format":  "date-time"
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
           },
-         {
+          {
             "name": "api-version",
             "in": "query",
             "description": "API version",
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "tags": [
@@ -86,18 +102,26 @@
         "responses": {
           "200": {
             "description": "A list of widgets",
-            "schema": {
-              "type":  "array",
-              "description":  "A list of widgets",
-              "items":  {
-                "$ref": "#/definitions/Widget"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "description": "A list of widgets",
+                  "items": {
+                    "$ref": "#/components/schemas/Widget"
+                  }
+                }
               }
             }
           },
           "default": {
             "description": "Unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
             }
           }
         }
@@ -114,61 +138,79 @@
             "in": "path",
             "description": "The id of the widget to get",
             "required": true,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "intParam",
             "in": "query",
             "description": "The maximum number of results to return.",
-            "type": "integer"
+            "schema": {
+              "type": "integer"
+            }
           },
-           {
+          {
             "name": "longParam",
             "in": "query",
             "description": "The maximum number of results to return.",
-            "type": "integer",
-            "format":  "int64"
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
           },
           {
             "name": "floatParam",
             "in": "query",
             "description": "The maximum number of results to return.",
-            "type": "number",
-            "format":  "float"
+            "schema": {
+              "type": "number",
+              "format": "float"
+            }
           },
           {
             "name": "doubleParam",
             "in": "query",
             "description": "The maximum number of results to return.",
-            "type": "number",
-            "format":  "double"
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
           },
           {
             "name": "byteParam",
             "in": "query",
             "description": "The maximum number of results to return.",
-            "type": "string",
-            "format":  "byte"
+            "schema": {
+              "type": "string",
+              "format": "byte"
+            }
           },
           {
             "name": "booleanParam",
             "in": "query",
             "description": "The maximum number of results to return.",
-            "type": "boolean"
+            "schema": {
+              "type": "boolean"
+            }
           },
           {
             "name": "dateParam",
             "in": "query",
             "description": "The maximum number of results to return.",
-            "type": "string",
-            "format":  "date"
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
           },
           {
             "name": "datetimeParam",
             "in": "query",
             "description": "The maximum number of results to return.",
-            "type": "string",
-            "format":  "date-time"
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
           }
         ],
         "tags": [
@@ -177,56 +219,66 @@
         "responses": {
           "200": {
             "description": "The returned product",
-            "schema": {
-              "$ref": "#/definitions/Widget"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Widget"
+                }
+              }
             }
           },
           "default": {
             "description": "Unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
             }
           }
         }
       }
     }
   },
-  "definitions": {
-    "Widget": {
-      "properties": {
-        "product_id": {
-          "type": "string",
-          "description": "Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles."
-        },
-        "description": {
-          "type": "string",
-          "description": "Description of product."
-        },
-        "display_name": {
-          "type": "string",
-          "description": "Display name of product."
-        },
-        "capacity": {
-          "type": "string",
-          "description": "Capacity of product. For example, 4 people."
-        },
-        "image": {
-          "type": "string",
-          "description": "Image URL representing the product."
+  "components": {
+    "schemas": {
+      "Widget": {
+        "properties": {
+          "product_id": {
+            "type": "string",
+            "description": "Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles."
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of product."
+          },
+          "display_name": {
+            "type": "string",
+            "description": "Display name of product."
+          },
+          "capacity": {
+            "type": "string",
+            "description": "Capacity of product. For example, 4 people."
+          },
+          "image": {
+            "type": "string",
+            "description": "Image URL representing the product."
+          }
         }
-      }
-    },
-    "Error": {
-      "properties": {
-        "code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "message": {
-          "type": "string"
-        },
-        "fields": {
-          "type": "string"
+      },
+      "Error": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "fields": {
+            "type": "string"
+          }
         }
       }
     }

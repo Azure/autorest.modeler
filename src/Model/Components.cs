@@ -12,6 +12,7 @@ namespace AutoRest.Modeler.Model
             Schemas = new Dictionary<string, Schema>();
             Parameters = new Dictionary<string, SwaggerParameter>();
             Responses = new Dictionary<string, OperationResponse>();
+            SecuritySchemes = new Dictionary<string, SecurityDefinition>();
         }
 
         /// <summary>
@@ -31,6 +32,11 @@ namespace AutoRest.Modeler.Model
         /// Dictionary of responses that can be used across operations. The key indicates status code.
         /// </summary>
         public Dictionary<string, OperationResponse> Responses { get; set; }
+
+        /// <summary>
+        /// Key is the object serviceTypeName and the value is swagger security definition.
+        /// </summary>
+        public Dictionary<string, SecurityDefinition> SecuritySchemes { get; set; }
 
     }
 }

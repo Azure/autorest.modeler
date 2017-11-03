@@ -168,11 +168,6 @@ namespace AutoRest.Modeler
         /// <returns>The base ServiceModel Service</returns>
         private void InitializeClientModel()
         {
-            if (string.IsNullOrEmpty(ServiceDefinition.OpenApi))
-            {
-                throw ErrorManager.CreateError(Resources.UnknownSwaggerVersion);
-            }
-
             if (ServiceDefinition.Info == null)
             {
                 throw ErrorManager.CreateError(Resources.InfoSectionMissing);

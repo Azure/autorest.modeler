@@ -66,7 +66,7 @@ namespace AutoRest.Modeler.Model
             get
             {
                 var result = Responses?.Values.SelectMany(r => r.Content?.Keys ?? Enumerable.Empty<string>()).Distinct().ToList();
-                if (result == null || result.Count == 0) return new List<string> { "application/json" };
+                if (result == null || result.Count == 0 || result.Count == 1 && result[0] == "*/*") return new List<string> { "application/json" };
                 return result;
             }
         }

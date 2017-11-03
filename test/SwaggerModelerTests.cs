@@ -67,7 +67,7 @@ namespace AutoRest.Modeler.Tests
             Assert.True(
                 codeModel.Properties.Any(p => p.Name.EqualsIgnoreCase("apiVersion")));
             Assert.Equal("2014-04-01-preview", codeModel.ApiVersion);
-            Assert.Equal("https://management.azure.com/", codeModel.BaseUrl);
+            Assert.Equal("https://management.azure.com", codeModel.BaseUrl);
             Assert.Equal("Some cool documentation.", codeModel.Documentation);
             //var allMethods = codeModel.Operations.SelectMany(each => each.Methods);
             Assert.Equal(2, codeModel.Methods.Count);
@@ -233,8 +233,7 @@ namespace AutoRest.Modeler.Tests
 
             Assert.Equal("DeleteBlob", codeModel.Methods[4].Name);
             Assert.True(codeModel.Methods[4].ReturnType.Body.IsPrimaryType(KnownPrimaryType.Object));
-            Assert.True(
-                codeModel.Methods[4].Responses[HttpStatusCode.OK].Body.IsPrimaryType(KnownPrimaryType.Object));
+            Assert.True(codeModel.Methods[4].Responses[HttpStatusCode.OK].Body.IsPrimaryType(KnownPrimaryType.Object));
             Assert.Null(codeModel.Methods[4].Responses[HttpStatusCode.BadRequest].Body);
         }
 
