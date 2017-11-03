@@ -52,7 +52,7 @@ namespace AutoRest.Modeler.Model
                     {
                         Description = Description,
                         In = ParameterLocation.Body,
-                        Name = Extensions.GetValue<string>("x-ms-client-name") ?? "body",
+                        Name = Extensions.GetValue<string>("x-ms-requestBody-name") ?? "body",
                         IsRequired = Required,
                         Schema = Content?.Values.FirstOrDefault()?.Schema,
                         Reference = Reference,

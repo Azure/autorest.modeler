@@ -50,25 +50,24 @@ namespace AutoRest.Modeler.Model
         public ExternalDoc ExternalDocs { get; set; }
 
         // TODO: fix/remove
-        public IList<string> Consumes
+        public IEnumerable<string> GetConsumes(Dictionary<string, RequestBody> requestBodies)
         {
-            get
+            var body = RequestBody;
+            if (body?.Reference != null)
             {
-                var result = RequestBody?.Content?.Keys.ToList();
-                if (result == null || result.Count == 0) return new List<string> { "application/json" };
-                return result;
+                body = requestBodies[body.Reference.StripComponentsRequestBodyPath()];
             }
+            var result = body?.Content?.Keys.ToList();
+            if (result == null || result.Count == 0) return new List<string> { "application/json" };
+            return result;
         }
 
         // TODO: fix/remove
-        public IList<string> Produces
+        public IEnumerable<string> GetProduces()
         {
-            get
-            {
-                var result = Responses?.Values.SelectMany(r => r.Content?.Keys ?? Enumerable.Empty<string>()).Distinct().ToList();
-                if (result == null || result.Count == 0 || result.Count == 1 && result[0] == "*/*") return new List<string> { "application/json" };
-                return result;
-            }
+            var result = Responses?.Values.SelectMany(r => r.Content?.Keys ?? Enumerable.Empty<string>()).Distinct().ToList();
+            if (result == null || result.Count == 0 || result.Count == 1 && result[0] == "*/*") return new List<string> { "application/json" };
+            return result;
         }
 
         [JsonIgnore]

@@ -264,18 +264,8 @@ namespace AutoRest.Modeler
                             CodeModel.HostParametersBack = hostParamList;
                         }
 
-                        if (useSchemePrefix)
-                        {
-                            CodeModel.BaseUrl = string.Format(CultureInfo.InvariantCulture, "{0}://{1}{2}",
-                                ServiceDefinition.Schemes[0].ToString().ToLowerInvariant(),
-                                hostTemplate, ServiceDefinition.BasePath);
-                        }
-                        else
-                        {
-                            CodeModel.BaseUrl = string.Format(CultureInfo.InvariantCulture, "{0}{1}",
-                                hostTemplate, ServiceDefinition.BasePath);
-                        }
-
+                        CodeModel.BaseUrl = string.Format(CultureInfo.InvariantCulture, "{0}{1}",
+                            hostTemplate, ServiceDefinition.BasePath);
                     }
                 }
             }

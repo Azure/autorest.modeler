@@ -31,14 +31,14 @@ namespace AutoRest.Modeler.Model
                     return CollectionFormat.None; // WAT
                 }
                 var style = Style ?? (In == ParameterLocation.Query || In == ParameterLocation.Cookie ? ParameterStyle.Form : ParameterStyle.Simple);
-                var explode = Explode ?? (style == ParameterStyle.Form);
+                var explode = Explode ?? (quirksMode ? false : style == ParameterStyle.Form);
                 if (explode)
                 {
                     return CollectionFormat.Multi;
                 }
                 switch (style)
                 {
-                    case ParameterStyle.Simple:
+                    case ParameterStyle.Form:
                         return CollectionFormat.Csv;
                     case ParameterStyle.SpaceDelimited:
                         return CollectionFormat.Ssv;

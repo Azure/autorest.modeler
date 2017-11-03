@@ -17,7 +17,6 @@ namespace AutoRest.Modeler.Model
         public ServiceDefinition()
         {
             Components = new Components();
-            Schemes = new List<TransferProtocolScheme>();
             Paths = new Dictionary<string, Dictionary<string, Operation>>();
             CustomPaths = new Dictionary<string, Dictionary<string, Operation>>();
             Security = new List<Dictionary<string, List<string>>>();
@@ -45,12 +44,6 @@ namespace AutoRest.Modeler.Model
         /// The transfer protocol of the API.
         /// </summary>
         public IList<TransferProtocolScheme> Schemes { get; set; }
-
-        // TODO: remove
-        public IList<string> Consumes => new List<string>();
-
-        // TODO: remove
-        public IList<string> Produces => new List<string>();
 
         /// <summary>
         /// Key is actual path and the value is serializationProperty of http operations and operation objects.

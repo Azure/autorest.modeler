@@ -37,8 +37,8 @@ namespace AutoRest.Modeler
         {
             _operation = operation ?? throw new ArgumentNullException("operation");
             _swaggerModeler = swaggerModeler ?? throw new ArgumentNullException("swaggerModeler");
-            _effectiveProduces = (operation.Produces.Any() ? operation.Produces : swaggerModeler.ServiceDefinition.Produces).ToList();
-            _effectiveConsumes = (operation.Consumes.Any() ? operation.Consumes : swaggerModeler.ServiceDefinition.Consumes).ToList();
+            _effectiveProduces = operation.GetProduces().ToList();
+            _effectiveConsumes = operation.GetConsumes(swaggerModeler.ServiceDefinition.Components.RequestBodies).ToList();
         }
 
         public Method BuildMethod(HttpMethod httpMethod, string url, string methodName, string methodGroup)
@@ -433,7 +433,7 @@ namespace AutoRest.Modeler
             }
             else
             {
-                if (_operation.Produces.IsNullOrEmpty())
+                if (_operation.GetProduces().IsNullOrEmpty())
                 {
                     method.Responses[responseStatusCode] = new Response(New<PrimaryType>(KnownPrimaryType.Object), headerType);
                     BuildMethodReturnTypeStack(New<PrimaryType>(KnownPrimaryType.Object), types);
