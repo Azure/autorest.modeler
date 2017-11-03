@@ -47,6 +47,10 @@ namespace AutoRest.Modeler.Model
                     case ParameterStyle.TabDelimited: //FAKE
                         return CollectionFormat.Tsv;
                 }
+                if (quirksMode)
+                {
+                    return CollectionFormat.Csv;
+                }
                 throw new System.NotImplementedException($"Style '{style}' is not yet supported.");
             }
         }

@@ -205,11 +205,6 @@ namespace AutoRest.Modeler
                 {
                     var hostTemplate = (string)hostExtension["hostTemplate"];
                     var parametersJson = hostExtension["parameters"].ToString();
-                    var useSchemePrefix = true;
-                    if (hostExtension.TryGetValue("useSchemePrefix", out var value))
-                    {
-                        useSchemePrefix = bool.Parse(value.ToString());
-                    }
 
                     var position = "first";
 
