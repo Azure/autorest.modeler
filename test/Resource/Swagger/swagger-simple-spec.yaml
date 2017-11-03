@@ -1,205 +1,135 @@
-{
-  "openapi": "3.0.0",
-  "servers": [
-    {
-      "url": "https://management.azure.com/"
-    }
-  ],
-  "info": {
-    "title": "Microsoft Azure Redis Cache Management API",
-    "description": "Some cool documentation.",
-    "version": "2014-04-01-preview"
-  },
-  "paths": {
-    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/Microsoft.Cache/Redis?api-version={apiVersion}": {
-      "get": {
-        "operationId": "list",
-        "summary": "Product Types",
-        "description": "The Products endpoint returns information about the Uber products offered at a given location. The response includes the display name and other details about each product, and lists the products in the proper display order.",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/SubscriptionIdParamterer"
-          },
-          {
-            "name": "resourceGroupName",
-            "in": "path",
-            "description": "Resource Group ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "$ref": "#/components/parameters/ApiVersionParameter"
-          }
-        ],
-        "tags": [
-          "Redis"
-        ],
-        "responses": {
-          "200": {
-            "description": "A list of caches",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Product"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "operationId": "reset",
-        "summary": "Resets products",
-        "description": "Resets products.",
-        "parameters": [
-          {
-            "name": "subscriptionId",
-            "in": "path",
-            "description": "Subscription ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "resourceGroupName",
-            "in": "path",
-            "description": "Resource Group ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "apiVersion",
-            "in": "path",
-            "description": "API ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "tags": [
-          "Redis"
-        ],
-        "responses": {
-          "204": {
-            "description": "A list of caches",
-            "content": {
-              "application/json": {
-                "examples": {
-                  "response": {
-                    "value": {
-                      "id": 9,
-                      "category": {
-                        "name": "domestic"
-                      },
-                      "name": "monster",
-                      "tags": [
-                        {
-                          "name": "for sale"
-                        }
-                      ],
-                      "status": "alive"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  },
-  "components": {
-    "schemas": {
-      "Product": {
-        "description": "The product documentation.",
-        "properties": {
-          "product_id": {
-            "type": "string",
-            "description": "Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles."
-          },
-          "description": {
-            "type": "string",
-            "description": "Description of product."
-          },
-          "display_name": {
-            "type": "string",
-            "description": "Display name of product."
-          },
-          "capacity": {
-            "type": "string",
-            "description": "Capacity of product. For example, 4 people.",
-            "default": "100"
-          },
-          "image": {
-            "type": "string",
-            "description": "Image URL representing the product."
-          }
-        },
-        "example": {
-          "name": "Puma",
-          "id": 1
-        }
-      },
-      "Error": {
-        "properties": {
-          "code": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string"
-          },
-          "fields": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    "parameters": {
-      "SubscriptionIdParamterer": {
-        "name": "subscriptionId",
-        "in": "path",
-        "description": "Subscription ID.",
-        "required": true,
-        "schema": {
-          "type": "string"
-        }
-      },
-      "ApiVersionParameter": {
-        "name": "apiVersion",
-        "in": "path",
-        "description": "API ID.",
-        "required": true,
-        "schema": {
-          "type": "string"
-        }
-      }
-    }
-  }
-}
+openapi: 3.0.0
+servers:
+- url: https://management.azure.com/
+info:
+  title: Microsoft Azure Redis Cache Management API
+  description: Some cool documentation.
+  version: 2014-04-01-preview
+paths:
+  "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/Microsoft.Cache/Redis?api-version={apiVersion}":
+    get:
+      operationId: list
+      summary: Product Types
+      description: The Products endpoint returns information about the Uber products
+        offered at a given location. The response includes the display name and other
+        details about each product, and lists the products in the proper display order.
+      parameters:
+      - "$ref": "#/components/parameters/SubscriptionIdParamterer"
+      - name: resourceGroupName
+        in: path
+        description: Resource Group ID.
+        required: true
+        schema:
+          type: string
+      - "$ref": "#/components/parameters/ApiVersionParameter"
+      tags:
+      - Redis
+      responses:
+        '200':
+          description: A list of caches
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/Product"
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/Error"
+    post:
+      operationId: reset
+      summary: Resets products
+      description: Resets products.
+      parameters:
+      - name: subscriptionId
+        in: path
+        description: Subscription ID.
+        required: true
+        schema:
+          type: string
+      - name: resourceGroupName
+        in: path
+        description: Resource Group ID.
+        required: true
+        schema:
+          type: string
+      - name: apiVersion
+        in: path
+        description: API ID.
+        required: true
+        schema:
+          type: string
+      tags:
+      - Redis
+      responses:
+        '204':
+          description: A list of caches
+          content:
+            application/json:
+              examples:
+                response:
+                  value:
+                    id: 9
+                    category:
+                      name: domestic
+                    name: monster
+                    tags:
+                    - name: for sale
+                    status: alive
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/Error"
+components:
+  schemas:
+    Product:
+      description: The product documentation.
+      properties:
+        product_id:
+          type: string
+          description: Unique identifier representing a specific product for a given
+            latitude & longitude. For example, uberX in San Francisco will have a
+            different product_id than uberX in Los Angeles.
+        description:
+          type: string
+          description: Description of product.
+        display_name:
+          type: string
+          description: Display name of product.
+        capacity:
+          type: string
+          description: Capacity of product. For example, 4 people.
+          default: '100'
+        image:
+          type: string
+          description: Image URL representing the product.
+      example:
+        name: Puma
+        id: 1
+    Error:
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+        fields:
+          type: string
+  parameters:
+    SubscriptionIdParamterer:
+      name: subscriptionId
+      in: path
+      description: Subscription ID.
+      required: true
+      schema:
+        type: string
+    ApiVersionParameter:
+      name: apiVersion
+      in: path
+      description: API ID.
+      required: true
+      schema:
+        type: string

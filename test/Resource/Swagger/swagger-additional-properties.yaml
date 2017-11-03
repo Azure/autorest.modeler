@@ -1,182 +1,122 @@
-{
-  "openapi": "3.0.0",
-  "servers": [
-    {
-      "url": "http://petstore-api.herokuapp.com/pet"
-    },
-    {
-      "url": "https://petstore-api.herokuapp.com/pet"
-    }
-  ],
-  "info": {
-    "version": "1.0.0",
-    "title": "PetStore on Heroku",
-    "description": "**This example has a working backend hosted in Heroku**\n\nYou can try all HTTP operation described in this Swagger spec.\n\nFind source code of this API [here](https://github.com/mohsen1/petstore-api)\n"
-  },
-  "paths": {
-    "/": {
-      "get": {
-        "operationId": "get_pets",
-        "parameters": [
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "number of pets to return",
-            "schema": {
-              "type": "integer",
-              "minimum": 11,
-              "maximum": 10000,
-              "default": 11
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "List all pets",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "title": "Pets",
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Pet"
-                  }
-                }
-              },
-              "text/html": {
-                "schema": {
-                  "title": "Pets",
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Pet"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "operationId": "post_pets",
-        "responses": {
-          "200": {
-            "description": "Make a new pet"
-          }
-        },
-        "requestBody": {
-          "$ref": "#/components/requestBodies/Pet"
-        },
-        "x-ms-requestBody-index": 0
-      },
-      "put": {
-        "operationId": "put_pets",
-        "responses": {
-          "200": {
-            "description": "Updates the pet"
-          }
-        },
-        "requestBody": {
-          "$ref": "#/components/requestBodies/Pet"
-        },
-        "x-ms-requestBody-index": 0
-      }
-    }
-  },
-  "components": {
-    "schemas": {
-      "Pet": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "object",
-          "$ref": "#/components/schemas/Feature"
-        },
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "birthday": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "wsd": {
-            "type": "object",
-            "$ref": "#/components/schemas/WithStringDictionary"
-          },
-          "wud": {
-            "type": "object",
-            "$ref": "#/components/schemas/WithUntypedDictionary"
-          },
-          "wtd": {
-            "type": "object",
-            "$ref": "#/components/schemas/WithTypedDictionary"
-          }
-        }
-      },
-      "Feature": {
-        "type": "object",
-        "properties": {
-          "foo": {
-            "type": "string"
-          },
-          "bar": {
-            "type": "integer",
-            "format": "int32"
-          }
-        }
-      },
-      "WithStringDictionary": {
-        "type": "object",
-        "properties": {
-          "abc": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": {
-          "type": "string"
-        }
-      },
-      "WithUntypedDictionary": {
-        "properties": {
-          "abc": {
-            "type": "string"
-          }
-        },
-        "type": "object",
-        "additionalProperties": {
-          "type": "object"
-        }
-      },
-      "WithTypedDictionary": {
-        "type": "object",
-        "properties": {
-          "abc": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": {
-          "type": "object",
-          "$ref": "#/components/schemas/Feature"
-        }
-      }
-    },
-    "requestBodies": {
-      "Pet": {
-        "x-ms-client-name": "pet",
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/Pet"
-            }
-          },
-          "text/xml": {
-            "schema": {
-              "$ref": "#/components/schemas/Pet"
-            }
-          }
-        },
-        "description": "The pet JSON you want to post",
-        "required": true
-      }
-    }
-  }
-}
+openapi: 3.0.0
+servers:
+- url: http://petstore-api.herokuapp.com/pet
+- url: https://petstore-api.herokuapp.com/pet
+info:
+  version: 1.0.0
+  title: PetStore on Heroku
+  description: |
+    **This example has a working backend hosted in Heroku**
+
+    You can try all HTTP operation described in this Swagger spec.
+
+    Find source code of this API [here](https://github.com/mohsen1/petstore-api)
+paths:
+  "/":
+    get:
+      operationId: get_pets
+      parameters:
+      - name: limit
+        in: query
+        description: number of pets to return
+        schema:
+          type: integer
+          minimum: 11
+          maximum: 10000
+          default: 11
+      responses:
+        '200':
+          description: List all pets
+          content:
+            application/json:
+              schema:
+                title: Pets
+                type: array
+                items:
+                  "$ref": "#/components/schemas/Pet"
+            text/html:
+              schema:
+                title: Pets
+                type: array
+                items:
+                  "$ref": "#/components/schemas/Pet"
+    post:
+      operationId: post_pets
+      responses:
+        '200':
+          description: Make a new pet
+      requestBody:
+        "$ref": "#/components/requestBodies/Pet"
+      x-ms-requestBody-index: 0
+    put:
+      operationId: put_pets
+      responses:
+        '200':
+          description: Updates the pet
+      requestBody:
+        "$ref": "#/components/requestBodies/Pet"
+      x-ms-requestBody-index: 0
+components:
+  schemas:
+    Pet:
+      type: object
+      additionalProperties:
+        type: object
+        "$ref": "#/components/schemas/Feature"
+      properties:
+        name:
+          type: string
+        birthday:
+          type: integer
+          format: int32
+        wsd:
+          type: object
+          "$ref": "#/components/schemas/WithStringDictionary"
+        wud:
+          type: object
+          "$ref": "#/components/schemas/WithUntypedDictionary"
+        wtd:
+          type: object
+          "$ref": "#/components/schemas/WithTypedDictionary"
+    Feature:
+      type: object
+      properties:
+        foo:
+          type: string
+        bar:
+          type: integer
+          format: int32
+    WithStringDictionary:
+      type: object
+      properties:
+        abc:
+          type: string
+      additionalProperties:
+        type: string
+    WithUntypedDictionary:
+      properties:
+        abc:
+          type: string
+      type: object
+      additionalProperties:
+        type: object
+    WithTypedDictionary:
+      type: object
+      properties:
+        abc:
+          type: string
+      additionalProperties:
+        type: object
+        "$ref": "#/components/schemas/Feature"
+  requestBodies:
+    Pet:
+      x-ms-client-name: pet
+      content:
+        application/json:
+          schema:
+            "$ref": "#/components/schemas/Pet"
+        text/xml:
+          schema:
+            "$ref": "#/components/schemas/Pet"
+      description: The pet JSON you want to post
+      required: true

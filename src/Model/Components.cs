@@ -11,31 +11,19 @@ namespace AutoRest.Modeler.Model
         {
             Schemas = new Dictionary<string, Schema>();
             Parameters = new Dictionary<string, SwaggerParameter>();
+            RequestBodies = new Dictionary<string, RequestBody>();
             Responses = new Dictionary<string, OperationResponse>();
             SecuritySchemes = new Dictionary<string, SecurityDefinition>();
         }
 
-        /// <summary>
-        /// Key is the object serviceTypeName and the value is swagger definition.
-        /// </summary>
         public Dictionary<string, Schema> Schemas { get; set; }
 
-        /// <summary>
-        /// Dictionary of parameters that can be used across operations.
-        /// This property does not define global parameters for all operations.
-        /// </summary>
         public Dictionary<string, SwaggerParameter> Parameters { get; set; }
 
         public Dictionary<string, RequestBody> RequestBodies { get; set; }
 
-        /// <summary>
-        /// Dictionary of responses that can be used across operations. The key indicates status code.
-        /// </summary>
         public Dictionary<string, OperationResponse> Responses { get; set; }
 
-        /// <summary>
-        /// Key is the object serviceTypeName and the value is swagger security definition.
-        /// </summary>
         public Dictionary<string, SecurityDefinition> SecuritySchemes { get; set; }
 
     }
