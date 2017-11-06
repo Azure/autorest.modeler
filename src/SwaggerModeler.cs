@@ -300,7 +300,7 @@ namespace AutoRest.Modeler
                     schema.GetBuilder(this).BuildServiceType(schemaName);
 
                     Resolver.ExpandAllOf(schema);
-                    var parent = string.IsNullOrEmpty(schema.Extends.StripDefinitionPath())
+                    var parent = string.IsNullOrEmpty(schema.Extends?.StripDefinitionPath())
                         ? null
                         : ServiceDefinition.Definitions[schema.Extends.StripDefinitionPath()];
 

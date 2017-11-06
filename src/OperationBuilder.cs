@@ -368,9 +368,11 @@ namespace AutoRest.Modeler
             {
                 if (response.Schema != null)
                 {
-                    IModelType serviceType = response.Schema.GetBuilder(_swaggerModeler)
+                    
+                    IModelType serviceType = String.IsNullOrEmpty(response.Schema.Reference)?
+                        response.Schema.ToType() : response.Schema.GetBuilder(_swaggerModeler)
                         .BuildServiceType(response.Schema.Reference.StripDefinitionPath());
-
+                    
                     Debug.Assert(serviceType != null);
 
                     BuildMethodReturnTypeStack(serviceType, types);
