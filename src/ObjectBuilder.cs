@@ -97,23 +97,23 @@ namespace AutoRest.Modeler
                             var description = valueOverride["description"];
                             var name = valueOverride["name"] ?? value;
                             
-                            List<string> allowedValues = null;
-                            if(valueOverride["allowedValues"]!=null)
-                            {
-                                allowedValues = new List<string>();
-                                foreach(var allowedValue in JArray.Parse(valueOverride["allowedValues"].ToString()))
-                                {
-                                    allowedValues.Add(allowedValue.ToString());
-                                }
-                            }
-
-                            enumType.Values.Add(new EnumValue
+                            var enumVal = new EnumValue
                             {
                                 Name = (string)name,
                                 SerializedName = (string)value,
-                                Description = (string)description,
-                                AllowedValues = allowedValues
-                            });
+                                Description = (string)description
+                            };
+
+                            // set the allowedValues if any
+                            if(valueOverride["allowedValues"]!=null)
+                            {
+                                foreach(var allowedValue in JArray.Parse(valueOverride["allowedValues"].ToString()))
+                                {
+                                    enumVal.AllowedValues.Add(allowedValue.ToString());
+                                }
+                            }
+
+                            enumType.Values.Add(enumVal);
                         }
                         var valuesAfter = new HashSet<string>(enumType.Values.Select(x => x.SerializedName));
                         // compare values
