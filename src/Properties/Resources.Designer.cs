@@ -267,15 +267,6 @@ namespace AutoRest.Modeler.Properties {
         }
         
         /// <summary>
-        ///    Looks up a localized string similar to Invalid swagger 2.0 specification. Missing version property. .
-        /// </summary>
-        public static string UnknownSwaggerVersion {
-            get {
-                return ResourceManager.GetString("UnknownSwaggerVersion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///    Looks up a localized string similar to The operation &apos;{0}&apos; has a response body in response &apos;{1}&apos;, but did not have a supported MIME type (&apos;application/json&apos; or &apos;application/octet-stream&apos;) in its Produces property..
         /// </summary>
         public static string UnsupportedMimeTypeForResponseBody {

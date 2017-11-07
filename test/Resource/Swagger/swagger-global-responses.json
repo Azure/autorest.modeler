@@ -1,17 +1,15 @@
 {
-  "swagger": "2.0",
+  "openapi": "3.0.0",
+  "servers": [
+    {
+      "url": "https://management.azure.com/"
+    }
+  ],
   "info": {
     "title": "Global Responses",
     "description": "Some cool documentation.",
     "version": "2014-04-01-preview"
   },
-  "host": "management.azure.com",
-  "schemes": [
-    "https"
-  ],
-  "basePath": "/",
-  "produces": [ "application/json" ],
-  "consumes": [ "application/json" ],
   "paths": {
     "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/Microsoft.Cache/Redis?api-version={apiVersion}": {
       "get": {
@@ -24,21 +22,27 @@
             "in": "path",
             "description": "Subscription ID.",
             "required": true,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "resourceGroupName",
             "in": "path",
             "description": "Resource Group ID.",
             "required": true,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "apiVersion",
             "in": "path",
             "description": "API ID.",
             "required": true,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "tags": [
@@ -46,72 +50,86 @@
         ],
         "responses": {
           "200": {
-            "$ref": "#/responses/successGetUserResponse"
+            "$ref": "#/components/responses/successGetUserResponse"
           },
           "default": {
             "description": "Unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
             }
           }
         }
       }
     }
   },
-  "definitions": {
-    "Product": {
-      "properties": {
-        "product_id": {
-          "type": "string",
-          "description": "Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles."
-        },
-        "description": {
-          "type": "string",
-          "description": "Description of product."
-        },
-        "display_name": {
-          "type": "string",
-          "description": "Display name of product."
-        },
-        "capacity": {
-          "type": "string",
-          "description": "Capacity of product. For example, 4 people."
-        },
-        "image": {
-          "type": "string",
-          "description": "Image URL representing the product."
+  "components": {
+    "schemas": {
+      "Product": {
+        "properties": {
+          "product_id": {
+            "type": "string",
+            "description": "Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles."
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of product."
+          },
+          "display_name": {
+            "type": "string",
+            "description": "Display name of product."
+          },
+          "capacity": {
+            "type": "string",
+            "description": "Capacity of product. For example, 4 people."
+          },
+          "image": {
+            "type": "string",
+            "description": "Image URL representing the product."
+          }
+        }
+      },
+      "Error": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "fields": {
+            "type": "string"
+          }
         }
       }
     },
-    "Error": {
-      "properties": {
-        "code": {
-          "type": "integer",
-          "format": "int32"
+    "responses": {
+      "successGetUserResponse": {
+        "description": "Product found",
+        "headers": {
+          "ocp-aad-diagnositcs-server-name": {
+            "description": "The identifier for the server that performed the requested operation.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "ocp-aad-session-key": {
+            "description": "The key that identifies the current session with the directory service.",
+            "schema": {
+              "type": "string"
+            }
+          }
         },
-        "message": {
-          "type": "string"
-        },
-        "fields": {
-          "type": "string"
-        }
-      }
-    }
-  },
-  "responses": {
-    "successGetUserResponse": {
-      "description": "Product found",
-      "schema": {
-        "$ref": "#/definitions/Product"
-      },
-      "headers": {
-        "ocp-aad-diagnositcs-server-name": {
-          "type": "string",
-          "description": "The identifier for the server that performed the requested operation."
-        },
-        "ocp-aad-session-key": {
-          "description": "The key that identifies the current session with the directory service.",
-          "type": "string"
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Product"
+            }
+          }
         }
       }
     }

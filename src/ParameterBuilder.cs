@@ -20,7 +20,7 @@ namespace AutoRest.Modeler
         private readonly SwaggerParameter _swaggerParameter;
 
         public ParameterBuilder(SwaggerParameter swaggerParameter, SwaggerModeler modeler)
-            : base(swaggerParameter, modeler)
+            : base(swaggerParameter.Schema, modeler)
         {
             _swaggerParameter = swaggerParameter;
         }
@@ -37,7 +37,7 @@ namespace AutoRest.Modeler
 
             if (unwrappedParameter.Schema != null && unwrappedParameter.Schema.Reference != null)
             {
-                parameterName = unwrappedParameter.Schema.Reference.StripDefinitionPath();
+                parameterName = unwrappedParameter.Schema.Reference.StripComponentsSchemaPath();
             }
 
             if (parameterName == null)
@@ -45,7 +45,13 @@ namespace AutoRest.Modeler
                 parameterName = unwrappedParameter.Name;
             }
 
-            IModelType parameterType = BuildServiceType(parameterName);
+            var isRequired = unwrappedParameter.IsRequired || unwrappedParameter.In == AutoRest.Modeler.Model.ParameterLocation.Path;
+            unwrappedParameter.IsRequired = isRequired;
+            if (unwrappedParameter.Extensions.ContainsKey("x-ms-enum") && !unwrappedParameter.Schema.Extensions.ContainsKey("x-ms-enum"))
+            {
+                unwrappedParameter.Schema.Extensions["x-ms-enum"] = unwrappedParameter.Extensions["x-ms-enum"];
+            }
+            IModelType parameterType = BuildServiceType(parameterName, isRequired);
             var parameter = New<Parameter>(new
             {
                 Name = unwrappedParameter.Name,
@@ -53,7 +59,13 @@ namespace AutoRest.Modeler
                 ModelType = parameterType,
                 Location = (Core.Model.ParameterLocation)Enum.Parse(typeof(Core.Model.ParameterLocation), unwrappedParameter.In.ToString())
             });
-            parameter.IsRequired = parameter.IsRequired || parameter.Location == Core.Model.ParameterLocation.Path;
+
+            // translate allowReserved back to what "code-model-v1"-gen generators expect
+            if (unwrappedParameter.AllowReserved.HasValue && !parameter.Extensions.ContainsKey("x-ms-skip-url-encoding"))
+            {
+                parameter.Extensions["x-ms-skip-url-encoding"] = unwrappedParameter.AllowReserved.Value;
+            }
+
             PopulateParameter(parameter, unwrappedParameter);
 
             if (_swaggerParameter.Reference != null)
@@ -65,7 +77,7 @@ namespace AutoRest.Modeler
             return parameter;
         }
 
-        public override IModelType BuildServiceType(string serviceTypeName)
+        public override IModelType BuildServiceType(string serviceTypeName, bool required)
         {
             var swaggerParameter = Modeler.Unwrap(_swaggerParameter);
 
@@ -76,12 +88,12 @@ namespace AutoRest.Modeler
                 {
                     throw new Exception($"Invalid Swagger: Body parameter{(serviceTypeName == null ? "" : $" '{serviceTypeName}'")} missing 'schema'.");
                 }
-                return swaggerParameter.Schema.GetBuilder(Modeler).BuildServiceType(serviceTypeName);
+                return swaggerParameter.Schema.GetBuilder(Modeler).BuildServiceType(serviceTypeName, swaggerParameter.IsRequired);
             }
 
-            return swaggerParameter.GetBuilder(Modeler).ParentBuildServiceType(serviceTypeName);
+            return swaggerParameter.GetBuilder(Modeler).ParentBuildServiceType(serviceTypeName, swaggerParameter.IsRequired);
         }
 
-        public override IModelType ParentBuildServiceType(string serviceTypeName) => base.BuildServiceType(serviceTypeName);
+        public override IModelType ParentBuildServiceType(string serviceTypeName, bool required) => base.BuildServiceType(serviceTypeName, required);
     }
 }

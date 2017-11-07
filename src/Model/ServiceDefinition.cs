@@ -16,33 +16,24 @@ namespace AutoRest.Modeler.Model
     {
         public ServiceDefinition()
         {
-            Definitions = new Dictionary<string, Schema>();
-            Schemes = new List<TransferProtocolScheme>();
-            Consumes = new List<string>();
-            Produces = new List<string>();
+            Components = new Components();
             Paths = new Dictionary<string, Dictionary<string, Operation>>();
             CustomPaths = new Dictionary<string, Dictionary<string, Operation>>();
-            Parameters = new Dictionary<string, SwaggerParameter>();
-            Responses = new Dictionary<string, OperationResponse>();
-            SecurityDefinitions = new Dictionary<string, SecurityDefinition>();
             Security = new List<Dictionary<string, List<string>>>();
             Tags = new List<Tag>();
         }
 
         /// <summary>
-        /// Specifies the Swagger Specification version being used. 
+        /// Specifies the OpenApi Specification version being used. 
         /// </summary>
-        public string Swagger { get; set; }
+        public string OpenApi { get; set; }
 
         /// <summary>
         /// Provides metadata about the API. The metadata can be used by the clients if needed.
         /// </summary>
         public Info Info { get; set; }
 
-        /// <summary>
-        /// The host (serviceTypeName or ip) serving the API.
-        /// </summary>
-        public string Host { get; set; }
+        public IList<Server> Servers { get; set; }
 
         /// <summary>
         /// The base path on which the API is served, which is relative to the host.
@@ -55,16 +46,6 @@ namespace AutoRest.Modeler.Model
         public IList<TransferProtocolScheme> Schemes { get; set; }
 
         /// <summary>
-        /// A list of MIME types the service can consume.
-        /// </summary>
-        public IList<string> Consumes { get; set; }
-
-        /// <summary>
-        /// A list of MIME types the APIs can produce.
-        /// </summary>
-        public IList<string> Produces { get; set; }
-
-        /// <summary>
         /// Key is actual path and the value is serializationProperty of http operations and operation objects.
         /// </summary>
         public Dictionary<string, Dictionary<string, Operation>> Paths { get; set; }
@@ -75,26 +56,7 @@ namespace AutoRest.Modeler.Model
         [JsonProperty("x-ms-paths")]
         public Dictionary<string, Dictionary<string, Operation>> CustomPaths { get; set; }
 
-        /// <summary>
-        /// Key is the object serviceTypeName and the value is swagger definition.
-        /// </summary>
-        public Dictionary<string, Schema> Definitions { get; set; }
-
-        /// <summary>
-        /// Dictionary of parameters that can be used across operations.
-        /// This property does not define global parameters for all operations.
-        /// </summary>
-        public Dictionary<string, SwaggerParameter> Parameters { get; set; }
-
-        /// <summary>
-        /// Dictionary of responses that can be used across operations. The key indicates status code.
-        /// </summary>
-        public Dictionary<string, OperationResponse> Responses { get; set; }
-
-        /// <summary>
-        /// Key is the object serviceTypeName and the value is swagger security definition.
-        /// </summary>
-        public Dictionary<string, SecurityDefinition> SecurityDefinitions { get; set; }
+        public Components Components { get; set; }
 
         /// <summary>
         /// A declaration of which security schemes are applied for the API as a whole. 
@@ -117,10 +79,5 @@ namespace AutoRest.Modeler.Model
         /// Additional external documentation
         /// </summary>
         public ExternalDoc ExternalDocs { get; set; }
-
-        /// <summary>
-        /// Path to this Swagger.
-        /// </summary>
-        internal Uri FilePath { get; set; }
     }
 }

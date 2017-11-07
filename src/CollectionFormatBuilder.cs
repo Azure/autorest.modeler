@@ -25,10 +25,10 @@ namespace AutoRest.Modeler
 
             bool hasCollectionFormat = currentSwaggerParam.CollectionFormat != CollectionFormat.None;
 
-            if (currentSwaggerParam.Type == DataType.Array && !hasCollectionFormat)
+            if (currentSwaggerParam.Schema?.Type == DataType.Array && !hasCollectionFormat)
             {
                 // If the parameter type is array default the collectionFormat to csv
-                currentSwaggerParam.CollectionFormat = CollectionFormat.Csv;
+                currentSwaggerParam.Style = ParameterStyle.Form;
             }
 
             if (hasCollectionFormat)

@@ -32,7 +32,7 @@ namespace AutoRest.Modeler
             Modeler = modeler;
         }
 
-        public virtual IModelType ParentBuildServiceType(string serviceTypeName)
+        public virtual IModelType ParentBuildServiceType(string serviceTypeName, bool required)
         {
             // Should not try to get parent from generic swagger object builder
             throw new InvalidOperationException();
@@ -44,7 +44,7 @@ namespace AutoRest.Modeler
         /// </summary>
         /// <param name="serviceTypeName">name for the service type</param>
         /// <returns>built service type</returns>
-        public virtual IModelType BuildServiceType(string serviceTypeName)
+        public virtual IModelType BuildServiceType(string serviceTypeName, bool required)
         {
             PrimaryType type = SwaggerObject.ToType();
             Debug.Assert(type != null);
@@ -56,7 +56,7 @@ namespace AutoRest.Modeler
             type.XmlProperties = (SwaggerObject as Schema)?.Xml;
             type.Format = SwaggerObject.Format;
             var xMsEnum = SwaggerObject.Extensions.GetValue<JToken>(Core.Model.XmsExtensions.Enum.Name);
-            if ((SwaggerObject.Enum != null || xMsEnum != null) && type.KnownPrimaryType == KnownPrimaryType.String && !(IsSwaggerObjectConstant(SwaggerObject)))
+            if ((SwaggerObject.Enum != null || xMsEnum != null) && type.KnownPrimaryType == KnownPrimaryType.String && !(IsSwaggerObjectConstant(SwaggerObject, required)))
             {
                 var enumType = New<EnumType>();
                 // Set the underlying type. This helps to determine whether the values in EnumValue are of type string, number, etc.
@@ -151,7 +151,7 @@ namespace AutoRest.Modeler
                 string itemServiceTypeName;
                 if (SwaggerObject.Items.Reference != null)
                 {
-                    itemServiceTypeName = SwaggerObject.Items.Reference.StripDefinitionPath();
+                    itemServiceTypeName = SwaggerObject.Items.Reference.StripComponentsSchemaPath();
                 }
                 else
                 {
@@ -159,7 +159,7 @@ namespace AutoRest.Modeler
                 }
 
                 var elementType =
-                    SwaggerObject.Items.GetBuilder(Modeler).BuildServiceType(itemServiceTypeName);
+                    SwaggerObject.Items.GetBuilder(Modeler).BuildServiceType(itemServiceTypeName, false);
                 return New<SequenceType>(new
                 {
                     ElementType = elementType,
@@ -173,7 +173,7 @@ namespace AutoRest.Modeler
                 string dictionaryValueServiceTypeName;
                 if (SwaggerObject.AdditionalProperties.Reference != null)
                 {
-                    dictionaryValueServiceTypeName = SwaggerObject.AdditionalProperties.Reference.StripDefinitionPath();
+                    dictionaryValueServiceTypeName = SwaggerObject.AdditionalProperties.Reference.StripComponentsSchemaPath();
                 }
                 else
                 {
@@ -183,7 +183,7 @@ namespace AutoRest.Modeler
                 {
                     ValueType =
                         SwaggerObject.AdditionalProperties.GetBuilder(Modeler)
-                            .BuildServiceType((dictionaryValueServiceTypeName)),
+                            .BuildServiceType(dictionaryValueServiceTypeName, false),
                     Extensions = SwaggerObject.AdditionalProperties.Extensions,
                     XmlProperties = (SwaggerObject as Schema)?.Xml
                 });
@@ -192,7 +192,34 @@ namespace AutoRest.Modeler
             return type;
         }
 
-        public static void PopulateParameter(IVariable parameter, SwaggerObject swaggerObject)
+        public static void PopulateParameter(Property parameter, SwaggerObject swaggerObject)
+        {
+            if (swaggerObject == null)
+            {
+                throw new ArgumentNullException("swaggerObject");
+            }
+            if (parameter == null)
+            {
+                throw new ArgumentNullException("parameter");
+            }
+            parameter.DefaultValue = swaggerObject.Default;
+
+            if (IsSwaggerObjectConstant(swaggerObject, parameter.IsRequired))
+            {
+                parameter.DefaultValue = swaggerObject.Enum[0];
+                parameter.IsConstant = true;
+            }
+
+            parameter.Documentation = swaggerObject.Description;
+            // parameter.CollectionFormat = swaggerObject.CollectionFormat;
+
+            // tag the paramter with all the extensions from the swagger object
+            parameter.Extensions.AddRange(swaggerObject.Extensions);
+
+            SetConstraints(parameter.Constraints, swaggerObject);
+        }
+
+        public static void PopulateParameter(IVariable parameter, SwaggerParameter swaggerObject)
         {
             if (swaggerObject == null)
             {
@@ -203,11 +230,11 @@ namespace AutoRest.Modeler
                 throw new ArgumentNullException("parameter");
             }
             parameter.IsRequired = swaggerObject.IsRequired;
-            parameter.DefaultValue = swaggerObject.Default;
+            parameter.DefaultValue = swaggerObject.Schema?.Default;
 
-            if (IsSwaggerObjectConstant(swaggerObject))
+            if (IsSwaggerObjectConstant(swaggerObject.Schema, parameter.IsRequired))
             {
-                parameter.DefaultValue = swaggerObject.Enum[0];
+                parameter.DefaultValue = swaggerObject.Schema.Enum[0];
                 parameter.IsConstant = true;
             }
 
@@ -217,12 +244,12 @@ namespace AutoRest.Modeler
             // tag the paramter with all the extensions from the swagger object
             parameter.Extensions.AddRange(swaggerObject.Extensions);
 
-            SetConstraints(parameter.Constraints, swaggerObject);
+            SetConstraints(parameter.Constraints, swaggerObject.Schema);
         }
 
-        private static bool IsSwaggerObjectConstant(SwaggerObject swaggerObject)
+        private static bool IsSwaggerObjectConstant(SwaggerObject swaggerObject, bool isRequired)
         {
-            return (swaggerObject.Enum != null && swaggerObject.Enum.Count == 1 && swaggerObject.IsRequired);
+            return (swaggerObject.Enum != null && swaggerObject.Enum.Count == 1 && isRequired);
         }
 
         public static void SetConstraints(Dictionary<Constraint, string> constraints, SwaggerObject swaggerObject)
