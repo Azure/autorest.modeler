@@ -14,7 +14,7 @@ namespace AutoRest.Modeler
         {
             if(args != null && args.Length > 0 && args[0] == "--server") {
                 var connection = new Connection(Console.OpenStandardOutput(), Console.OpenStandardInput());
-                connection.Dispatch<IEnumerable<string>>("GetPluginNames", async () => new []{ "modeler" });
+                connection.Dispatch<IEnumerable<string>>("GetPluginNames", async () => new []{ "imodeler1" });
                 connection.Dispatch<string, string, bool>("Process", (plugin, sessionId) => new Program(connection, plugin, sessionId).Process());
                 connection.DispatchNotification("Shutdown", connection.Stop);
 
