@@ -41,7 +41,7 @@ namespace AutoRest.Modeler.Model
                             Description = prop.Value.Description,
                             In = ParameterLocation.FormData,
                             Name = prop.Key,
-                            IsRequired = schema.Required.Contains(prop.Key),
+                            IsRequired = schema.Required?.Contains(prop.Key) ?? false,
                             Schema = prop.Value,
                             Extensions = schema.Extensions
                         });
