@@ -82,6 +82,10 @@ namespace AutoRest.Modeler
                     {
                         enumType.ModelAsString = bool.Parse(enumObject["modelAsString"].ToString());
                     }
+                    if (enumObject["modelAsExtensible"] != null)
+                    {
+                        enumType.ModelAsExtensible = bool.Parse(enumObject["modelAsExtensible"].ToString());
+                    }
                     var valueOverrides = enumObject["values"] as JArray;
                     if (valueOverrides != null)
                     {
@@ -92,12 +96,24 @@ namespace AutoRest.Modeler
                             var value = valueOverride["value"];
                             var description = valueOverride["description"];
                             var name = valueOverride["name"] ?? value;
-                            enumType.Values.Add(new EnumValue
+                            
+                            var enumVal = new EnumValue
                             {
                                 Name = (string)name,
                                 SerializedName = (string)value,
                                 Description = (string)description
-                            });
+                            };
+
+                            if(valueOverride["allowedValues"] is JArray allowedValues)
+                            {
+                                // set the allowedValues if any
+                                foreach(var allowedValue in allowedValues)
+                                {
+                                    enumVal.AllowedValues.Add(allowedValue.ToString());
+                                }
+                            }
+                            
+                            enumType.Values.Add(enumVal);
                         }
                         var valuesAfter = new HashSet<string>(enumType.Values.Select(x => x.SerializedName));
                         // compare values
