@@ -1,25 +1,17 @@
 {
-  "swagger": "2.0",
+  "openapi": "3.0.0",
+  "servers": [
+    {
+      "url": "https://management.azure.com/"
+    }
+  ],
   "info": {
     "title": "RedisManagementClient",
     "description": "A sample model for testing that swagger references and allOf gets understood by the modeler properly",
     "version": "1.0.0"
   },
-  "host": "management.azure.com",
-  "schemes": [
-    "https"
-  ],
-  "consumes": [
-    "application/json",
-    "text/json"
-  ],
-  "produces": [
-    "application/json",
-    "text/json"
-  ],
-  "securityDefinitions": { },
-  "security": [ ],
-  "tags": [ ],
+  "security": [],
+  "tags": [],
   "paths": {
     "providers/Microsoft.Cache/Redis/{name}": {
       "put": {
@@ -30,251 +22,273 @@
             "name": "name",
             "in": "path",
             "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "parameters",
-            "in": "body",
-            "required": true,
+            "description": "",
             "schema": {
-              "$ref": "#/definitions/RedisCreateOrUpdateParameters"
-            },
-            "description": "Parameters supplied to the CreateOrUpdate redis operation."
+              "type": "string"
+            }
           }
         ],
         "responses": {
           "201": {
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/Resource"
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Resource"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Resource"
+                }
+              }
             }
           }
-        }
+        },
+        "requestBody": {
+          "x-ms-client-name": "parameters",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RedisCreateOrUpdateParameters"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RedisCreateOrUpdateParameters"
+              }
+            }
+          },
+          "description": "Parameters supplied to the CreateOrUpdate redis operation.",
+          "required": true
+        },
+        "x-ms-requestBody-index": 1
       }
     }
   },
-  "definitions": {
-    "Sku": {
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "",
-          "enum": [
-            "Basic",
-            "Standard",
-            "Premium"
-          ],
-          "x-ms-enum": {
-            "name": "SkuName",
-            "modelAsString": true
+  "components": {
+    "schemas": {
+      "Sku": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "",
+            "enum": [
+              "Basic",
+              "Standard",
+              "Premium"
+            ],
+            "x-ms-enum": {
+              "name": "SkuName",
+              "modelAsString": true
+            }
+          },
+          "family": {
+            "type": "string",
+            "description": "",
+            "enum": [
+              "C",
+              "P"
+            ],
+            "x-ms-enum": {
+              "name": "SkuFamily",
+              "modelAsString": true
+            }
+          },
+          "capacity": {
+            "type": "integer",
+            "format": "int32",
+            "description": ""
           }
         },
-        "family": {
-          "type": "string",
-          "description": "",
-          "enum": [
-            "C",
-            "P"
-          ],
-          "x-ms-enum": {
-            "name": "SkuFamily",
-            "modelAsString": true
+        "required": [
+          "name",
+          "family",
+          "capacity"
+        ],
+        "description": "Sku parameters supplied to the create redis operation."
+      },
+      "RedisProperties": {
+        "properties": {
+          "sku": {
+            "$ref": "#/components/schemas/Sku",
+            "description": ""
+          },
+          "redisConfiguration": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": ""
+          },
+          "enableNonSslPort": {
+            "type": "boolean",
+            "description": ""
+          },
+          "tenantSettings": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": ""
+          },
+          "shardCount": {
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          "subnetId": {
+            "type": "string",
+            "description": ""
+          },
+          "staticIP": {
+            "type": "string",
+            "description": ""
           }
         },
-        "capacity": {
-          "type": "integer",
-          "format": "int32",
-          "description": ""
-        }
+        "required": [
+          "sku"
+        ],
+        "description": "'RedisProperties' - Parameters supplied to CreateOrUpdate redis operation."
       },
-      "required": [
-        "name",
-        "family",
-        "capacity"
-      ],
-      "description": "Sku parameters supplied to the create redis operation."
-    },
-    "RedisProperties": {
-      "properties": {
-        "sku": {
-          "$ref": "#/definitions/Sku",
-          "description": ""
-        },
-        "redisConfiguration": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          },
-          "description": ""
-        },
-        "enableNonSslPort": {
-          "type": "boolean",
-          "description": ""
-        },
-        "tenantSettings": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          },
-          "description": ""
-        },
-        "shardCount": {
-          "type": "integer",
-          "format": "int32",
-          "description": ""
-        },
-        "subnetId": {
-          "type": "string",
-          "description": ""
-        },
-        "staticIP": {
-          "type": "string",
-          "description": ""
-        }
-      },
-      "required": [
-        "sku"
-      ],
-      "description": "'RedisProperties' - Parameters supplied to CreateOrUpdate redis operation."
-    },
-    "Resource": {
-      "properties": {
-        "id": {
-          "readOnly": true,
-          "type": "string",
-          "description": "Resource Id"
-        },
-        "name": {
-          "readOnly": true,
-          "type": "string",
-          "description": "Resource name"
-        },
-        "type": {
-          "readOnly": true,
-          "type": "string",
-          "description": "Resource type"
-        },
-        "location": {
-          "type": "string",
-          "description": "Resource location"
-        },
-        "tags": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          },
-          "description": "Resource tags"
-        }
-      },
-      "description": "''Resource' - common resource information",
-      "required": [
-        "location"
-      ],
-      "x-ms-azure-resource": true
-    },
-    "RedisCreateOrUpdateParameters": {
-      "properties": {
+      "Resource": {
         "properties": {
-          "x-ms-client-flatten": true,
-          "$ref": "#/definitions/RedisProperties",
-          "description": "'RedisCreateOrUpdateParameters.properties' - Redis cache properties."
-        }
-      },
-      "required": [
-        "properties"
-      ],
-      "allOf": [
-        {
-          "$ref": "#/definitions/Resource"
-        }
-      ],
-      "description": "'RedisCreateOrUpdateParameters' - Parameters supplied to the CreateOrUpdate Redis operation."
-    },
-    "RedisAccessKeys": {
-      "properties": {
-        "primaryKey": {
-          "type": "string",
-          "description": ""
+          "id": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Resource Id"
+          },
+          "name": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Resource name"
+          },
+          "type": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Resource type"
+          },
+          "location": {
+            "type": "string",
+            "description": "Resource location"
+          },
+          "tags": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "Resource tags"
+          }
         },
-        "secondaryKey": {
-          "type": "string",
-          "description": ""
-        }
+        "description": "''Resource' - common resource information",
+        "required": [
+          "location"
+        ],
+        "x-ms-azure-resource": true
       },
-      "description": "'RedisAccessKeys' - Redis cache access keys."
-    },
-    "RedisReadableProperties": {
-      "properties": {
-        "provisioningState": {
-          "type": "string",
-          "description": "provisioning status"
-        },
-        "hostName": {
-          "type": "string",
-          "description": ""
-        },
-        "port": {
-          "type": "integer",
-          "format": "int32",
-          "description": ""
-        },
-        "sslPort": {
-          "type": "integer",
-          "format": "int32",
-          "description": ""
-        }
-      },
-      "allOf": [
-        {
-          "$ref": "#/definitions/RedisProperties"
-        }
-      ],
-      "description": "'RedisReadableProperties' - Parameters describing a redis instance"
-    },
-    "RedisReadablePropertiesWithAccessKey": {
-      "properties": {
-        "accessKeys": {
-          "$ref": "#/definitions/RedisAccessKeys",
-          "description": "Redis cache access keys."
-        }
-      },
-      "allOf": [
-        {
-          "$ref": "#/definitions/RedisReadableProperties"
-        }
-      ],
-      "description": "'RedisReadablePropertiesWithAccessKey' - Access Keys in addition to RedisReadableProperties"
-    },
-    "RedisResourceWithAccessKey": {
-      "properties": {
+      "RedisCreateOrUpdateParameters": {
         "properties": {
-          "x-ms-client-flatten": true,
-          "$ref": "#/definitions/RedisReadablePropertiesWithAccessKey",
-          "description": "'RedisResourceWithAccessKey.properties' Redis cache properties"
-        }
+          "properties": {
+            "x-ms-client-flatten": true,
+            "$ref": "#/components/schemas/RedisProperties",
+            "description": "'RedisCreateOrUpdateParameters.properties' - Redis cache properties."
+          }
+        },
+        "required": [
+          "properties"
+        ],
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Resource"
+          }
+        ],
+        "description": "'RedisCreateOrUpdateParameters' - Parameters supplied to the CreateOrUpdate Redis operation."
       },
-      "allOf": [
-        {
-          "$ref": "#/definitions/RedisResource"
-        }
-      ],
-      "description": "'RedisResourceWithAccessKey' - A redis item in CreateOrUpdate Operation response."
-    },
-    "RedisResource": {
-      "properties": {
+      "RedisAccessKeys": {
         "properties": {
-          "x-ms-client-flatten": true,
-          "$ref": "#/definitions/RedisReadableProperties",
-          "description": "'RedisResource.properties' - Redis cache properties"
-        }
+          "primaryKey": {
+            "type": "string",
+            "description": ""
+          },
+          "secondaryKey": {
+            "type": "string",
+            "description": ""
+          }
+        },
+        "description": "'RedisAccessKeys' - Redis cache access keys."
       },
-      "allOf": [
-        {
-          "$ref": "#/definitions/Resource"
-        }
-      ],
-      "description": "'RedisResource' - A redis resource"
+      "RedisReadableProperties": {
+        "properties": {
+          "provisioningState": {
+            "type": "string",
+            "description": "provisioning status"
+          },
+          "hostName": {
+            "type": "string",
+            "description": ""
+          },
+          "port": {
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          "sslPort": {
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          }
+        },
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/RedisProperties"
+          }
+        ],
+        "description": "'RedisReadableProperties' - Parameters describing a redis instance"
+      },
+      "RedisReadablePropertiesWithAccessKey": {
+        "properties": {
+          "accessKeys": {
+            "$ref": "#/components/schemas/RedisAccessKeys",
+            "description": "Redis cache access keys."
+          }
+        },
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/RedisReadableProperties"
+          }
+        ],
+        "description": "'RedisReadablePropertiesWithAccessKey' - Access Keys in addition to RedisReadableProperties"
+      },
+      "RedisResourceWithAccessKey": {
+        "properties": {
+          "properties": {
+            "x-ms-client-flatten": true,
+            "$ref": "#/components/schemas/RedisReadablePropertiesWithAccessKey",
+            "description": "'RedisResourceWithAccessKey.properties' Redis cache properties"
+          }
+        },
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/RedisResource"
+          }
+        ],
+        "description": "'RedisResourceWithAccessKey' - A redis item in CreateOrUpdate Operation response."
+      },
+      "RedisResource": {
+        "properties": {
+          "properties": {
+            "x-ms-client-flatten": true,
+            "$ref": "#/components/schemas/RedisReadableProperties",
+            "description": "'RedisResource.properties' - Redis cache properties"
+          }
+        },
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Resource"
+          }
+        ],
+        "description": "'RedisResource' - A redis resource"
+      }
     }
   }
 }

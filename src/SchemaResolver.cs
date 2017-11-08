@@ -344,15 +344,15 @@ namespace AutoRest.Modeler
                 throw new ArgumentException(Properties.Resources.ExceededMaximumReferenceDepth, referencePath);
             }
             visitedReferences.Add(referencePath.ToUpperInvariant());
-            var definitions = _serviceDefinition.Definitions;
-            if (definitions == null || !definitions.ContainsKey(referencePath.StripDefinitionPath()))
+            var definitions = _serviceDefinition.Components.Schemas;
+            if (definitions == null || !definitions.ContainsKey(referencePath.StripComponentsSchemaPath()))
             {
                 throw new ArgumentException(string.Format(CultureInfo.InvariantCulture,
                     Properties.Resources.ReferenceDoesNotExist,
-                    referencePath.StripDefinitionPath()));
+                    referencePath.StripComponentsSchemaPath()));
             }
 
-            var schema = _serviceDefinition.Definitions[referencePath.StripDefinitionPath()];
+            var schema = definitions[referencePath.StripComponentsSchemaPath()];
             if (schema.Reference != null)
             {
                 schema = DereferenceInner(schema.Reference, visitedReferences);

@@ -17,6 +17,23 @@ namespace AutoRest.Modeler
     public static class BuilderExtensions
     {
         /// <summary>
+        /// Removes #/components/{component}/ or url#/components/{component} from the reference path.
+        /// </summary>
+        private static string StripSomeComponentPath(string component, string reference)
+        {
+            var prefix = $"#/components/{component}/";
+            if (reference != null && reference.Contains(prefix))
+            {
+                reference = reference.Substring(reference.IndexOf(prefix, StringComparison.OrdinalIgnoreCase) + prefix.Length);
+            }
+            return reference;
+        }
+
+        public static string StripComponentsParameterPath(this string reference) => StripSomeComponentPath("parameters", reference);
+        public static string StripComponentsRequestBodyPath(this string reference) => StripSomeComponentPath("requestBodies", reference);
+        public static string StripComponentsSchemaPath(this string reference) => StripSomeComponentPath("schemas", reference);
+
+        /// <summary>
         /// A schema represents a primitive type if it's not an object or it represents a dictionary
         /// </summary>
         /// <param name="_schema"></param>

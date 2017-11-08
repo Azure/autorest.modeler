@@ -13,6 +13,7 @@ namespace AutoRest.Modeler.Model
         Header,
         Path,
         FormData,
-        Body
+        Body,
+        Cookie
     }
 }

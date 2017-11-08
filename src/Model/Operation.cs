@@ -4,6 +4,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using AutoRest.Core.Utilities;
+using Newtonsoft.Json;
 
 namespace AutoRest.Modeler.Model
 {
@@ -17,8 +18,6 @@ namespace AutoRest.Modeler.Model
 
         public Operation()
         {
-            Consumes = new List<string>();
-            Produces = new List<string>();
         }
 
         /// <summary>
@@ -50,22 +49,50 @@ namespace AutoRest.Modeler.Model
         /// </summary>
         public ExternalDoc ExternalDocs { get; set; }
 
-        /// <summary>
-        /// A list of MIME types the operation can consume.
-        /// </summary>
-        public IList<string> Consumes { get; set; }
+        // TODO: fix/remove
+        public IEnumerable<string> GetConsumes(Dictionary<string, RequestBody> requestBodies)
+        {
+            var body = RequestBody;
+            if (body?.Reference != null)
+            {
+                body = requestBodies[body.Reference.StripComponentsRequestBodyPath()];
+            }
+            var result = body?.Content?.Keys.ToList();
+            if (result == null || result.Count == 0) return new List<string> { "application/json" };
+            return result;
+        }
 
-        /// <summary>
-        /// A list of MIME types the operation can produce. 
-        /// </summary>
-        public IList<string> Produces { get; set; }
+        // TODO: fix/remove
+        public IEnumerable<string> GetProduces()
+        {
+            var result = Responses?.Values.SelectMany(r => r.Content?.Keys ?? Enumerable.Empty<string>()).Distinct().ToList();
+            if (result == null || result.Count == 0 || result.Count == 1 && result[0] == "*/*") return new List<string> { "application/json" };
+            return result;
+        }
 
+        [JsonIgnore]
+        IList<SwaggerParameter> _parameters;
         /// <summary>
         /// A list of parameters that are applicable for this operation. 
         /// If a parameter is already defined at the Path Item, the 
         /// new definition will override it, but can never remove it.
         /// </summary>
-        public IList<SwaggerParameter> Parameters { get; set; }
+        [JsonProperty(PropertyName = "parameters")]
+        public SwaggerParameter[] Parameters
+        {
+            get
+            {
+                var result = _parameters?.ToList() ?? new List<SwaggerParameter>();
+                if (RequestBody != null)
+                {
+                    result.InsertRange(Math.Min(Extensions.Get<int>("x-ms-requestBody-index") ?? 0, result.Count), RequestBody.AsParameters());
+                }
+                return result.ToArray();
+            }
+            set => _parameters = value.Where(v => v.In != ParameterLocation.Body).ToList();
+        } // TODO: not like this...
+
+        public RequestBody RequestBody { get; set; }
 
         /// <summary>
         /// The list of possible responses as they are returned from executing this operation.

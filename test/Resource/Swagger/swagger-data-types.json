@@ -1,17 +1,15 @@
 {
-  "swagger": "2.0",
+  "openapi": "3.0.0",
+  "servers": [
+    {
+      "url": "https://management.azure.com/"
+    }
+  ],
   "info": {
     "title": "Microsoft Azure Redis Cache Management API",
     "description": "Some cool documentation.",
     "version": "2014-04-01-preview"
   },
-  "host": "management.azure.com",
-  "schemes": [
-    "https"
-  ],
-  "basePath": "/",
-  "produces": [ "application/json" ],
-  "consumes": [ "application/json" ],
   "paths": {
     "/subscriptions/{integer}/{int}/{long}/{number}/{float}/{double}/{string}/{enum}/{byte}/{boolean}/{date}/{dateTime}/{base64url}?invalues='{array}'": {
       "get": {
@@ -22,97 +20,152 @@
           {
             "name": "integer",
             "in": "path",
-            "type": "integer"
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
           },
           {
             "name": "int",
             "in": "path",
-            "type": "integer",
-            "format": "int32"
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "required": true
           },
           {
             "name": "long",
             "in": "path",
-            "type": "integer",
-            "format": "int64"
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "required": true
           },
           {
             "name": "number",
             "in": "path",
-            "type": "number"
+            "schema": {
+              "type": "number"
+            },
+            "required": true
           },
           {
             "name": "float",
             "in": "path",
-            "type": "number",
-            "format": "float"
+            "schema": {
+              "type": "number",
+              "format": "float"
+            },
+            "required": true
           },
           {
             "name": "double",
             "in": "path",
-            "type": "number",
-            "format": "double"
+            "schema": {
+              "type": "number",
+              "format": "double"
+            },
+            "required": true
           },
           {
             "name": "decimal",
             "in": "path",
-            "type": "number",
-            "format": "decimal"
+            "schema": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "required": true
           },
           {
             "name": "string",
             "in": "path",
-            "type": "string"
+            "schema": {
+              "type": "string"
+            },
+            "required": true
           },
           {
             "name": "color",
             "in": "path",
-            "type": "string",
-            "enum": [ "red", "blue", "green" ]
+            "schema": {
+              "type": "string",
+              "enum": [
+                "red",
+                "blue",
+                "green"
+              ]
+            },
+            "required": true
           },
           {
             "name": "byte",
             "in": "path",
-            "type": "string",
-            "format": "byte"
+            "schema": {
+              "type": "string",
+              "format": "byte"
+            },
+            "required": true
           },
           {
             "name": "boolean",
             "in": "path",
-            "type": "boolean"
+            "schema": {
+              "type": "boolean"
+            },
+            "required": true
           },
           {
             "name": "date",
             "in": "path",
-            "type": "string",
-            "format": "date"
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "required": true
           },
           {
             "name": "dateTime",
             "in": "path",
-            "type": "string",
-            "format": "date-time"
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "required": true
           },
           {
             "name": "base64url",
             "in": "path",
-            "type": "string",
-            "format": "base64url"
+            "schema": {
+              "type": "string",
+              "format": "base64url"
+            },
+            "required": true
           },
           {
             "name": "array",
             "in": "query",
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "collectionFormat": "csv"
+            "style": "form",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
           },
           {
             "name": "color",
             "in": "query",
-            "type": "string",
-            "enum": [ "red", "blue", "green", "purple" ]
+            "schema": {
+              "type": "string",
+              "enum": [
+                "red",
+                "blue",
+                "green",
+                "purple"
+              ]
+            }
           }
         ],
         "tags": [
@@ -121,14 +174,22 @@
         "responses": {
           "200": {
             "description": "A list of caches",
-            "schema": {
-              "$ref": "#/definitions/Product"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Product"
+                }
+              }
             }
           },
           "default": {
             "description": "Unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
             }
           }
         }
@@ -142,24 +203,37 @@
           {
             "name": "color",
             "in": "query",
-            "type": "string",
-            "enum": [ "cyan", "yellow" ]
+            "schema": {
+              "type": "string",
+              "enum": [
+                "cyan",
+                "yellow"
+              ]
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "A list of caches",
-            "schema": {
-              "type": "string",
-              "additionalProperties": {
-                "$ref": "#/definitions/Product"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
               }
             }
           },
           "default": {
             "description": "Unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
             }
           }
         }
@@ -173,24 +247,38 @@
           {
             "name": "color2",
             "in": "query",
-            "type": "string",
-            "enum": [ "blue", "green", "red" ]
+            "schema": {
+              "type": "string",
+              "enum": [
+                "blue",
+                "green",
+                "red"
+              ]
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "A list of caches",
-            "schema": {
-              "type": "string",
-              "additionalProperties": {
-                "$ref": "#/definitions/Product"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
               }
             }
           },
           "default": {
             "description": "Unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
             }
           }
         }
@@ -203,17 +291,25 @@
         "responses": {
           "200": {
             "description": "A list of caches",
-            "schema": {
-              "type": "string",
-              "additionalProperties": {
-                "$ref": "#/definitions/Product"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
               }
             }
           },
           "default": {
             "description": "Unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
             }
           }
         }
@@ -226,17 +322,25 @@
         "responses": {
           "200": {
             "description": "A list of caches",
-            "schema": {
-              "type": "string",
-              "additionalProperties": {
-                "type": "string"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
               }
             }
           },
           "default": {
             "description": "Unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
             }
           }
         }
@@ -247,17 +351,25 @@
         "responses": {
           "200": {
             "description": "A list of caches",
-            "schema": {
-              "type": "string",
-              "additionalProperties": {
-                "type": "integer"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "additionalProperties": {
+                    "type": "integer"
+                  }
+                }
               }
             }
           },
           "default": {
             "description": "Unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
             }
           }
         }
@@ -270,17 +382,25 @@
         "responses": {
           "200": {
             "description": "A list of caches",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Product"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
               }
             }
           },
           "default": {
             "description": "Unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
             }
           }
         }
@@ -288,227 +408,266 @@
       "put": {
         "operationId": "put",
         "summary": "Create Product Types",
-        "parameters": [
-          {
-            "name": "product",
-            "in": "body",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Product"
-              }
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "A list of caches",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Product"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
               }
             }
           },
           "default": {
             "description": "Unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
             }
           }
-        }
+        },
+        "requestBody": {
+          "$ref": "#/components/requestBodies/ProductArray"
+        },
+        "x-ms-requestBody-index": 0
       },
       "post": {
         "operationId": "post",
         "summary": "Post product",
-        "parameters": [
-          {
-            "name": "product",
-            "in": "body",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Product"
-              }
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/Object"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Object"
+                }
+              }
             }
           },
           "default": {
             "description": "Unexpected error",
-            "schema": {
-              "$ref": "#/definitions/Error"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
             }
           }
-        }
+        },
+        "requestBody": {
+          "$ref": "#/components/requestBodies/ProductArray"
+        },
+        "x-ms-requestBody-index": 0
       }
     }
   },
-  "definitions": {
-    "Product": {
-      "type": "object",
-      "properties": {
-        "integer": {
-          "type": "integer"
-        },
-        "int": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "long": {
-          "type": "integer",
-          "format": "int64"
-        },
-        "number": {
-          "type": "number"
-        },
-        "float": {
-          "type": "number",
-          "format": "float"
-        },
-        "double": {
-          "type": "number",
-          "format": "double"
-        },
-        "string": {
-          "type": "string"
-        },
-        "color": {
-          "x-ms-enum": { "name": "Colors", "modelAsString": false },
-          "type": "string",
-          "enum": [ "red", "blue", "green" ]
-        },
-        "color2": {
-          "type": "string",
-          "enum": [ "red", "blue", "green" ]
-        },
-        "color3": {
-          "x-ms-enum": { "name": "Colors", "modelAsString": false },
-          "type": "string",
-          "enum": [ "red", "green", "blue" ]
-        },
-        "refColor": {
-          "$ref": "#/definitions/RefColor"
-        },
-        "byte": {
-          "type": "string",
-          "format": "byte"
-        },
-        "boolean": {
-          "type": "boolean"
-        },
-        "date": {
-          "type": "string",
-          "format": "date"
-        },
-        "dateTime": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "integerArray": {
-          "type": "array",
-          "items": {
+  "components": {
+    "schemas": {
+      "Product": {
+        "type": "object",
+        "properties": {
+          "integer": {
             "type": "integer"
-          }
-        },
-        "intArray": {
-          "type": "array",
-          "items": {
+          },
+          "int": {
             "type": "integer",
             "format": "int32"
-          }
-        },
-        "longArray": {
-          "type": "array",
-          "items": {
+          },
+          "long": {
             "type": "integer",
             "format": "int64"
-          }
-        },
-        "numberArray": {
-          "type": "array",
-          "items": {
+          },
+          "number": {
             "type": "number"
-          }
-        },
-        "floatArray": {
-          "type": "array",
-          "items": {
+          },
+          "float": {
             "type": "number",
             "format": "float"
-          }
-        },
-        "doubleArray": {
-          "type": "array",
-          "items": {
+          },
+          "double": {
             "type": "number",
             "format": "double"
-          }
-        },
-        "booleanArray": {
-          "type": "array",
-          "items": {
-            "type": "boolean"
-          }
-        },
-        "stringArray": {
-          "type": "array",
-          "items": {
+          },
+          "string": {
             "type": "string"
-          }
-        },
-        "byteArrayArray": {
-          "type": "array",
-          "items": {
+          },
+          "color": {
+            "x-ms-enum": {
+              "name": "Colors",
+              "modelAsString": false
+            },
+            "type": "string",
+            "enum": [
+              "red",
+              "blue",
+              "green"
+            ]
+          },
+          "color2": {
+            "type": "string",
+            "enum": [
+              "red",
+              "blue",
+              "green"
+            ]
+          },
+          "color3": {
+            "x-ms-enum": {
+              "name": "Colors",
+              "modelAsString": false
+            },
+            "type": "string",
+            "enum": [
+              "red",
+              "green",
+              "blue"
+            ]
+          },
+          "refColor": {
+            "$ref": "#/components/schemas/RefColor"
+          },
+          "byte": {
             "type": "string",
             "format": "byte"
-          }
-        },
-        "dateArray": {
-          "type": "array",
-          "items": {
+          },
+          "boolean": {
+            "type": "boolean"
+          },
+          "date": {
             "type": "string",
             "format": "date"
-          }
-        },
-        "dateTimeArray": {
-          "type": "array",
-          "items": {
+          },
+          "dateTime": {
             "type": "string",
             "format": "date-time"
+          },
+          "integerArray": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "intArray": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "longArray": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          "numberArray": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "floatArray": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "float"
+            }
+          },
+          "doubleArray": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          "booleanArray": {
+            "type": "array",
+            "items": {
+              "type": "boolean"
+            }
+          },
+          "stringArray": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "byteArrayArray": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "byte"
+            }
+          },
+          "dateArray": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          "dateTimeArray": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      },
+      "Object": {
+        "type": "object",
+        "properties": {}
+      },
+      "RefColor": {
+        "x-ms-enum": {
+          "name": "refColors",
+          "modelAsString": true
+        },
+        "type": "string",
+        "enum": [
+          "red",
+          "green",
+          "blue"
+        ]
+      },
+      "Error": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "fields": {
+            "type": "string"
           }
         }
       }
     },
-    "Object": {
-      "type": "object",
-      "properties": { }
-    },
-    "RefColor": {
-      "x-ms-enum": {
-        "name": "refColors",
-        "modelAsString": true
-      },
-      "type": "string",
-      "enum": [ "red", "green", "blue" ]
-    },
-    "Error": {
-      "properties": {
-        "code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "message": {
-          "type": "string"
-        },
-        "fields": {
-          "type": "string"
+    "requestBodies": {
+      "ProductArray": {
+        "x-ms-client-name": "product",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Product"
+              }
+            }
+          }
         }
       }
     }

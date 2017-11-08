@@ -30,15 +30,14 @@ namespace AutoRest.Modeler.JsonConverters
             {
                 referencePath = jo.GetValue("$ref", StringComparison.Ordinal).ToString();
                 // Shorthand notation
-                if (!referencePath.StartsWith("#/responses", StringComparison.Ordinal))
+                if (!referencePath.StartsWith("#/components/responses", StringComparison.Ordinal))
                 {
-                    referencePath = "#/responses/" + referencePath;
+                    referencePath = "#/components/responses/" + referencePath;
                 }
                 jo = Document.SelectToken(referencePath.Replace("#/", "").Replace("/", ".")) as JObject;
             }
 
-            OperationResponse swaggerResponse = JsonConvert.DeserializeObject<OperationResponse>(jo.ToString(),
-                GetSettings(serializer));
+            OperationResponse swaggerResponse = JsonConvert.DeserializeObject<OperationResponse>(jo.ToString(), GetSettings(serializer));
             return swaggerResponse;
         }
     }

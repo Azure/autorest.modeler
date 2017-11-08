@@ -1,13 +1,14 @@
-﻿{
-  "swagger": "2.0",
+{
+  "openapi": "3.0.0",
+  "servers": [
+    {
+      "url": "http://http://autorestresourcesproxysite.azurewebsites.net/Autorest.HelloWorld/"
+    }
+  ],
   "info": {
     "version": "1.0.13",
     "title": "Swagger Stream Store"
   },
-  "host": "http://autorestresourcesproxysite.azurewebsites.net/Autorest.HelloWorld",
-  "schemes": [
-    "http"
-  ],
   "paths": {
     "/values/formDate": {
       "post": {
@@ -15,60 +16,78 @@
           "Values"
         ],
         "operationId": "GetWithStreamFormData",
-        "consumes": [
-          "multipart/form-data"
-        ],
-        "produces": [
-          "image/jpeg"
-        ],
-        "parameters": [
-          {
-            "name": "fileContent",
-            "description": "file to upload",
-            "required": true,
-            "type": "file",
-            "in": "formData"
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK",
-            "schema": {
-              "type": "file"
+            "content": {
+              "image/jpeg": {
+                "schema": {
+                  "type": "file"
+                }
+              }
             }
           }
-        }
+        },
+        "requestBody": {
+          "x-ms-client-name": "fileContent",
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "fileContent": {
+                    "description": "file to upload",
+                    "type": "file"
+                  }
+                },
+                "required": [
+                  "fileContent"
+                ]
+              }
+            }
+          }
+        },
+        "x-ms-requestBody-index": 0
       },
       "get": {
         "tags": [
           "Values"
         ],
         "operationId": "PostWithByteArrayFormData",
-        "consumes": [
-          "multipart/form-data"
-        ],
-        "produces": [
-          "image/jpeg"
-        ],
-        "parameters": [
-          {
-            "name": "fileContent",
-            "description": "file to upload",
-            "required": true,
-            "type": "string",
-            "format": "byte",
-            "in": "formData"
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK",
-            "schema": {
-              "type": "string",
-              "format": "byte"
+            "content": {
+              "image/jpeg": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              }
             }
           }
-        }
+        },
+        "requestBody": {
+          "x-ms-client-name": "fileContent",
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "fileContent": {
+                    "description": "file to upload",
+                    "type": "string",
+                    "format": "byte"
+                  }
+                },
+                "required": [
+                  "fileContent"
+                ]
+              }
+            }
+          }
+        },
+        "x-ms-requestBody-index": 0
       }
     },
     "/values": {
@@ -77,15 +96,15 @@
           "Values"
         ],
         "operationId": "GetWithStream",
-        "consumes": [],
-        "produces": [
-          "image/jpeg"
-        ],
         "responses": {
           "200": {
             "description": "OK",
-            "schema": {
-              "type": "file"
+            "content": {
+              "image/jpeg": {
+                "schema": {
+                  "type": "file"
+                }
+              }
             }
           }
         }
@@ -95,16 +114,16 @@
           "Values"
         ],
         "operationId": "PostWithByteArray",
-        "consumes": [],
-        "produces": [
-          "image/jpeg"
-        ],
         "responses": {
           "200": {
             "description": "OK",
-            "schema": {
-              "type": "string",
-              "format": "byte"
+            "content": {
+              "image/jpeg": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              }
             }
           }
         }

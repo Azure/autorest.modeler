@@ -186,9 +186,6 @@
   <data name="TitleMissing" xml:space="preserve">
     <value>Swagger specification is missing title in info section</value>
   </data>
-  <data name="UnknownSwaggerVersion" xml:space="preserve">
-    <value>Invalid swagger 2.0 specification. Missing version property. </value>
-  </data>
   <data name="UnsupportedMimeTypeForResponseBody" xml:space="preserve">
     <value>The operation '{0}' has a response body in response '{1}', but did not have a supported MIME type ('application/json' or 'application/octet-stream') in its Produces property.</value>
   </data>

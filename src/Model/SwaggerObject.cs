@@ -19,7 +19,6 @@ namespace AutoRest.Modeler.Model
     public abstract class SwaggerObject : SwaggerBase
     {
         private string _description;
-        public virtual bool IsRequired { get; set; }
 
         /// <summary>
         /// The type of the parameter.
@@ -57,11 +56,6 @@ namespace AutoRest.Modeler.Model
         }
 
         /// <summary>
-        /// Determines the format of the array if type array is used.
-        /// </summary>
-        public virtual CollectionFormat CollectionFormat { get; set; }
-
-        /// <summary>
         /// Sets a default value to the parameter.
         /// </summary>
         public virtual string Default { get; set; }
@@ -89,19 +83,6 @@ namespace AutoRest.Modeler.Model
         public virtual bool UniqueItems { get; set; }
 
         public virtual IList<string> Enum { get; set; }
-
-        public ObjectBuilder GetBuilder(SwaggerModeler swaggerSpecBuilder)
-        {
-            if (this is SwaggerParameter)
-            {
-                return new ParameterBuilder(this as SwaggerParameter, swaggerSpecBuilder);
-            }
-            if (this is Schema)
-            {
-                return new SchemaBuilder(this as Schema, swaggerSpecBuilder);
-            }
-            return new ObjectBuilder(this, swaggerSpecBuilder);
-        }
 
         /// <summary>
         /// Returns the PrimaryType that the SwaggerObject maps to, given the Type and the KnownFormat.
