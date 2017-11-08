@@ -104,15 +104,15 @@ namespace AutoRest.Modeler
                                 Description = (string)description
                             };
 
-                            // set the allowedValues if any
-                            if(valueOverride["allowedValues"]!=null)
+                            if(valueOverride["allowedValues"] is JArray allowedValues)
                             {
-                                foreach(var allowedValue in JArray.Parse(valueOverride["allowedValues"].ToString()))
+                                // set the allowedValues if any
+                                foreach(var allowedValue in allowedValues)
                                 {
                                     enumVal.AllowedValues.Add(allowedValue.ToString());
                                 }
                             }
-
+                            
                             enumType.Values.Add(enumVal);
                         }
                         var valuesAfter = new HashSet<string>(enumType.Values.Select(x => x.SerializedName));
