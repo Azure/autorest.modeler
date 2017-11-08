@@ -31,8 +31,8 @@ namespace AutoRest.Modeler.Model
         {
             if (asParamCache == null)
             {
-                var isFormData = Content?.Keys?.FirstOrDefault() == "multipart/form-data" && Content.Values.First().Schema != null;
-                if (isFormData) // => in: form-data
+                Func<string, bool> isFormDataMimeType = type => type == "multipart/form-data" || type == "application/x-www-form-urlencoded";
+                if (isFormDataMimeType(Content?.Keys?.FirstOrDefault()) && Content.Values.First().Schema != null) // => in: formData
                 {
                     var schema = Content.Values.First().Schema;
                     asParamCache = schema.Properties.Select(prop =>
