@@ -227,7 +227,6 @@ namespace AutoRest.Modeler
             }
 
             parameter.Documentation = swaggerObject.Description;
-            // parameter.CollectionFormat = swaggerObject.CollectionFormat;
 
             // tag the paramter with all the extensions from the swagger object
             parameter.Extensions.AddRange(swaggerObject.Extensions);

@@ -89,7 +89,7 @@ namespace AutoRest.Modeler.Model
                 }
                 return result.ToArray();
             }
-            set => _parameters = value.Where(v => v.In != ParameterLocation.Body).ToList();
+            set => _parameters = value.ToList();
         } // TODO: not like this...
 
         public RequestBody RequestBody { get; set; }

@@ -83,10 +83,7 @@ namespace AutoRest.Modeler
             method.Deprecated = _operation.Deprecated;
 
             // Service parameters
-            if (_operation.Parameters != null)
-            {
-                BuildMethodParameters(method);
-            }
+            BuildMethodParameters(method);
 
             // Directly requested header types (x-ms-headers)
             var headerTypeReferences = new List<IModelType>();
