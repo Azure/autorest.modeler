@@ -1,0 +1,325 @@
+---
+apiVersion: 1.0.0
+baseUrl: '{vault}{secret}{dnsSuffix}'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - $ref: '1'
+extensions:
+  x-ms-parameterized-host:
+    hostTemplate: '{vault}{secret}{dnsSuffix}'
+    parameters:
+      - description: 'The vault name, e.g. https://myvault'
+        in: path
+        name: vault
+        required: true
+        schema:
+          description: 'The vault name, e.g. https://myvault'
+          in: path
+          name: vault
+          type: string
+          x-ms-skip-url-encoding: true
+        type: string
+        x-ms-skip-url-encoding: true
+      - description: Secret value.
+        in: path
+        name: secret
+        required: true
+        schema:
+          description: Secret value.
+          in: path
+          name: secret
+          type: string
+          x-ms-skip-url-encoding: true
+        type: string
+        x-ms-skip-url-encoding: true
+      - $ref: '#/components/parameters/dnsSuffix'
+    useSchemePrefix: false
+hostParametersFront:
+  - $id: '6'
+    clientProperty:
+      $id: '7'
+      collectionFormat: none
+      defaultValue:
+        fixed: false
+        raw: host
+      documentation:
+        fixed: false
+        raw: >-
+          A string value that is used as a global part of the parameterized
+          host. Default value 'host'.
+      extensions:
+        x-ms-skip-url-encoding: true
+      isConstant: false
+      isReadOnly: false
+      isRequired: true
+      modelType:
+        $id: '8'
+        $type: PrimaryType
+        knownPrimaryType: string
+        name:
+          fixed: false
+          raw: String
+      name:
+        fixed: false
+        raw: dnsSuffix
+      realPath:
+        - dnsSuffix
+      serializedName: dnsSuffix
+    collectionFormat: none
+    defaultValue:
+      fixed: false
+      raw: host
+    documentation:
+      fixed: false
+      raw: >-
+        A string value that is used as a global part of the parameterized host.
+        Default value 'host'.
+    extensions:
+      hostParameter: true
+      x-ms-skip-url-encoding: true
+    isConstant: false
+    isRequired: true
+    location: path
+    modelType:
+      $id: '9'
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    name:
+      fixed: false
+      raw: dnsSuffix
+    serializedName: dnsSuffix
+  - $id: '10'
+    collectionFormat: none
+    defaultValue:
+      fixed: false
+    documentation:
+      fixed: false
+      raw: Secret value.
+    extensions:
+      hostParameter: true
+      type: string
+      x-ms-skip-url-encoding: true
+    isConstant: false
+    isRequired: true
+    location: path
+    modelType:
+      $id: '11'
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    name:
+      fixed: false
+      raw: secret
+    serializedName: secret
+  - $id: '12'
+    collectionFormat: none
+    defaultValue:
+      fixed: false
+    documentation:
+      fixed: false
+      raw: 'The vault name, e.g. https://myvault'
+    extensions:
+      hostParameter: true
+      type: string
+      x-ms-skip-url-encoding: true
+    isConstant: false
+    isRequired: true
+    location: path
+    modelType:
+      $id: '13'
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    name:
+      fixed: false
+      raw: vault
+    serializedName: vault
+modelTypes:
+  - $id: '1'
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '2'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '3'
+          $type: PrimaryType
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '4'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '5'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelsName: Models
+name: AutoRestParameterizedCustomHostTestClient
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get a 200 to test a valid base uri
+        group:
+          fixed: false
+          raw: paths
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getEmpty
+        parameters:
+          - $id: '16'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: The key name with value 'key1'.
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $id: '17'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: keyName
+            serializedName: keyName
+          - $id: '18'
+            clientProperty:
+              $ref: '14'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: The subscription id with value 'test12'.
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $id: '19'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+          - $id: '20'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+              raw: v1
+            documentation:
+              fixed: false
+              raw: The key version. Default value 'v1'.
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '21'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: keyVersion
+            serializedName: keyVersion
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: paths_getEmpty
+        url: '/customuri/{subscriptionId}/{keyName}'
+    name:
+      fixed: false
+      raw: Paths
+    nameForProperty: Paths
+    typeName:
+      fixed: false
+properties:
+  - $id: '14'
+    collectionFormat: none
+    defaultValue:
+      fixed: false
+    documentation:
+      fixed: false
+      raw: The subscription id with value 'test12'.
+    isConstant: false
+    isReadOnly: false
+    isRequired: true
+    modelType:
+      $id: '15'
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    name:
+      fixed: false
+      raw: subscriptionId
+    realPath:
+      - subscriptionId
+    serializedName: subscriptionId
+  - $ref: '7'
