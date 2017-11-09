@@ -1,0 +1,2283 @@
+---
+apiVersion: 1.0.0
+baseUrl: 'http://localhost'
+documentation: Test Infrastructure for AutoRest
+enumTypes:
+  - $ref: '47'
+errorTypes:
+  - $ref: '1'
+headerTypes:
+  - $id: '6'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for responseExistingKey operation.
+    name:
+      fixed: false
+      raw: header-responseExistingKey-Headers
+    properties:
+      - $id: '7'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: 'response with header value "User-Agent": "overwrite"'
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '8'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: User-Agent
+        realPath:
+          - User-Agent
+        serializedName: User-Agent
+    serializedName: header-responseExistingKey-Headers
+  - $id: '9'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for responseProtectedKey operation.
+    name:
+      fixed: false
+      raw: header-responseProtectedKey-Headers
+    properties:
+      - $id: '10'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: 'response with header value "Content-Type": "text/html"'
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '11'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: Content-Type
+        realPath:
+          - Content-Type
+        serializedName: Content-Type
+    serializedName: header-responseProtectedKey-Headers
+  - $id: '12'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for responseInteger operation.
+    name:
+      fixed: false
+      raw: header-responseInteger-Headers
+    properties:
+      - $id: '13'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: 'response with header value "value": 1 or -2'
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '14'
+          $type: PrimaryType
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: header-responseInteger-Headers
+  - $id: '15'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for responseLong operation.
+    name:
+      fixed: false
+      raw: header-responseLong-Headers
+    properties:
+      - $id: '16'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: 'response with header value "value": 105 or -2'
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '17'
+          $type: PrimaryType
+          format: int64
+          knownPrimaryType: long
+          name:
+            fixed: false
+            raw: Long
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: header-responseLong-Headers
+  - $id: '18'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for responseFloat operation.
+    name:
+      fixed: false
+      raw: header-responseFloat-Headers
+    properties:
+      - $id: '19'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: 'response with header value "value": 0.07 or -3.0'
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '20'
+          $type: PrimaryType
+          format: float
+          knownPrimaryType: double
+          name:
+            fixed: false
+            raw: Double
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: header-responseFloat-Headers
+  - $id: '21'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for responseDouble operation.
+    name:
+      fixed: false
+      raw: header-responseDouble-Headers
+    properties:
+      - $id: '22'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: 'response with header value "value": 7e120 or -3.0'
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '23'
+          $type: PrimaryType
+          format: double
+          knownPrimaryType: double
+          name:
+            fixed: false
+            raw: Double
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: header-responseDouble-Headers
+  - $id: '24'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for responseBool operation.
+    name:
+      fixed: false
+      raw: header-responseBool-Headers
+    properties:
+      - $id: '25'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: 'response with header value "value": true or false'
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '26'
+          $type: PrimaryType
+          knownPrimaryType: boolean
+          name:
+            fixed: false
+            raw: Boolean
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: header-responseBool-Headers
+  - $id: '27'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for responseString operation.
+    name:
+      fixed: false
+      raw: header-responseString-Headers
+    properties:
+      - $id: '28'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: >-
+            response with header values "The quick brown fox jumps over the lazy
+            dog" or null or ""
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '29'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: header-responseString-Headers
+  - $id: '30'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for responseDate operation.
+    name:
+      fixed: false
+      raw: header-responseDate-Headers
+    properties:
+      - $id: '31'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: response with header values "2010-01-01" or "0001-01-01"
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '32'
+          $type: PrimaryType
+          format: date
+          knownPrimaryType: date
+          name:
+            fixed: false
+            raw: Date
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: header-responseDate-Headers
+  - $id: '33'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for responseDatetime operation.
+    name:
+      fixed: false
+      raw: header-responseDatetime-Headers
+    properties:
+      - $id: '34'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: >-
+            response with header values "2010-01-01T12:34:56Z" or
+            "0001-01-01T00:00:00Z"
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '35'
+          $type: PrimaryType
+          format: date-time
+          knownPrimaryType: dateTime
+          name:
+            fixed: false
+            raw: DateTime
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: header-responseDatetime-Headers
+  - $id: '36'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for responseDatetimeRfc1123 operation.
+    name:
+      fixed: false
+      raw: header-responseDatetimeRfc1123-Headers
+    properties:
+      - $id: '37'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: >-
+            response with header values "Wed, 01 Jan 2010 12:34:56 GMT" or "Mon,
+            01 Jan 0001 00:00:00 GMT"
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '38'
+          $type: PrimaryType
+          format: date-time-rfc1123
+          knownPrimaryType: dateTimeRfc1123
+          name:
+            fixed: false
+            raw: DateTimeRfc1123
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: header-responseDatetimeRfc1123-Headers
+  - $id: '39'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for responseDuration operation.
+    name:
+      fixed: false
+      raw: header-responseDuration-Headers
+    properties:
+      - $id: '40'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: response with header values "P123DT22H14M12.011S"
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '41'
+          $type: PrimaryType
+          format: duration
+          knownPrimaryType: timeSpan
+          name:
+            fixed: false
+            raw: TimeSpan
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: header-responseDuration-Headers
+  - $id: '42'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for responseByte operation.
+    name:
+      fixed: false
+      raw: header-responseByte-Headers
+    properties:
+      - $id: '43'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: response with header values "啊齄丂狛狜隣郎隣兀﨩"
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '44'
+          $type: PrimaryType
+          format: byte
+          knownPrimaryType: byteArray
+          name:
+            fixed: false
+            raw: ByteArray
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: header-responseByte-Headers
+  - $id: '45'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for responseEnum operation.
+    name:
+      fixed: false
+      raw: header-responseEnum-Headers
+    properties:
+      - $id: '46'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: response with header values "GREY" or null
+        extensions:
+          x-ms-enum:
+            modelAsString: false
+            name: GreyscaleColors
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '47'
+          $type: EnumType
+          modelAsExtensible: false
+          modelAsString: false
+          name:
+            fixed: false
+            raw: GreyscaleColors
+          underlyingType:
+            $id: '48'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          values:
+            - name: White
+              serializedName: White
+            - name: black
+              serializedName: black
+            - name: GREY
+              serializedName: GREY
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: header-responseEnum-Headers
+modelTypes:
+  - $id: '1'
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '2'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '3'
+          $type: PrimaryType
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '4'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '5'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelsName: Models
+name: AutoRestSwaggerBATHeaderService
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Send a post request with header value "User-Agent": "overwrite"'
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: paramExistingKey
+        parameters:
+          - $id: '49'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: 'Send a post request with header value "User-Agent": "overwrite"'
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '50'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: User-Agent
+            serializedName: User-Agent
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: header_paramExistingKey
+        url: /header/param/existingkey
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '6'
+          isNullable: true
+        deprecated: false
+        description: 'Get a response with header value "User-Agent": "overwrite"'
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: responseExistingKey
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '6'
+          isNullable: true
+        serializedName: header_responseExistingKey
+        url: /header/response/existingkey
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Send a post request with header value "Content-Type": "text/html"'
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: paramProtectedKey
+        parameters:
+          - $id: '51'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header value "Content-Type":
+                "text/html"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '52'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: Content-Type
+            serializedName: Content-Type
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: header_paramProtectedKey
+        url: /header/param/protectedkey
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '9'
+          isNullable: true
+        deprecated: false
+        description: 'Get a response with header value "Content-Type": "text/html"'
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: responseProtectedKey
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '9'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '9'
+          isNullable: true
+        serializedName: header_responseProtectedKey
+        url: /header/response/protectedkey
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a post request with header values "scenario": "positive",
+          "value": 1 or "scenario": "negative", "value": -2 
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: paramInteger
+        parameters:
+          - $id: '53'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "positive" or
+                "negative"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '54'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+          - $id: '55'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Send a post request with header values 1 or -2
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '56'
+              $type: PrimaryType
+              format: int32
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            name:
+              fixed: false
+              raw: value
+            serializedName: value
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: header_paramInteger
+        url: /header/param/prim/integer
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '12'
+          isNullable: true
+        deprecated: false
+        description: 'Get a response with header value "value": 1 or -2'
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: responseInteger
+        parameters:
+          - $id: '57'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "positive" or
+                "negative"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '58'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '12'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '12'
+          isNullable: true
+        serializedName: header_responseInteger
+        url: /header/response/prim/integer
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a post request with header values "scenario": "positive",
+          "value": 105 or "scenario": "negative", "value": -2 
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: paramLong
+        parameters:
+          - $id: '59'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "positive" or
+                "negative"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '60'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+          - $id: '61'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Send a post request with header values 105 or -2
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '62'
+              $type: PrimaryType
+              format: int64
+              knownPrimaryType: long
+              name:
+                fixed: false
+                raw: Long
+            name:
+              fixed: false
+              raw: value
+            serializedName: value
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: header_paramLong
+        url: /header/param/prim/long
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '15'
+          isNullable: true
+        deprecated: false
+        description: 'Get a response with header value "value": 105 or -2'
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: responseLong
+        parameters:
+          - $id: '63'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "positive" or
+                "negative"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '64'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '15'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '15'
+          isNullable: true
+        serializedName: header_responseLong
+        url: /header/response/prim/long
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a post request with header values "scenario": "positive",
+          "value": 0.07 or "scenario": "negative", "value": -3.0
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: paramFloat
+        parameters:
+          - $id: '65'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "positive" or
+                "negative"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '66'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+          - $id: '67'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Send a post request with header values 0.07 or -3.0
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '68'
+              $type: PrimaryType
+              format: float
+              knownPrimaryType: double
+              name:
+                fixed: false
+                raw: Double
+            name:
+              fixed: false
+              raw: value
+            serializedName: value
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: header_paramFloat
+        url: /header/param/prim/float
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '18'
+          isNullable: true
+        deprecated: false
+        description: 'Get a response with header value "value": 0.07 or -3.0'
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: responseFloat
+        parameters:
+          - $id: '69'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "positive" or
+                "negative"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '70'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '18'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '18'
+          isNullable: true
+        serializedName: header_responseFloat
+        url: /header/response/prim/float
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a post request with header values "scenario": "positive",
+          "value": 7e120 or "scenario": "negative", "value": -3.0
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: paramDouble
+        parameters:
+          - $id: '71'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "positive" or
+                "negative"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '72'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+          - $id: '73'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Send a post request with header values 7e120 or -3.0
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '74'
+              $type: PrimaryType
+              format: double
+              knownPrimaryType: double
+              name:
+                fixed: false
+                raw: Double
+            name:
+              fixed: false
+              raw: value
+            serializedName: value
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: header_paramDouble
+        url: /header/param/prim/double
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '21'
+          isNullable: true
+        deprecated: false
+        description: 'Get a response with header value "value": 7e120 or -3.0'
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: responseDouble
+        parameters:
+          - $id: '75'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "positive" or
+                "negative"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '76'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '21'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '21'
+          isNullable: true
+        serializedName: header_responseDouble
+        url: /header/response/prim/double
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a post request with header values "scenario": "true", "value":
+          true or "scenario": "false", "value": false
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: paramBool
+        parameters:
+          - $id: '77'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "true" or
+                "false"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '78'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+          - $id: '79'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Send a post request with header values true or false
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '80'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: value
+            serializedName: value
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: header_paramBool
+        url: /header/param/prim/bool
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '24'
+          isNullable: true
+        deprecated: false
+        description: 'Get a response with header value "value": true or false'
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: responseBool
+        parameters:
+          - $id: '81'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "true" or
+                "false"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '82'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '24'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '24'
+          isNullable: true
+        serializedName: header_responseBool
+        url: /header/response/prim/bool
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a post request with header values "scenario": "valid", "value":
+          "The quick brown fox jumps over the lazy dog" or "scenario": "null",
+          "value": null or "scenario": "empty", "value": ""
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: paramString
+        parameters:
+          - $id: '83'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "valid" or
+                "null" or "empty"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '84'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+          - $id: '85'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "The quick brown fox
+                jumps over the lazy dog" or null or ""
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $id: '86'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: value
+            serializedName: value
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: header_paramString
+        url: /header/param/prim/string
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '27'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get a response with header values "The quick brown fox jumps over the
+          lazy dog" or null or ""
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: responseString
+        parameters:
+          - $id: '87'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "valid" or
+                "null" or "empty"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '88'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '27'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '27'
+          isNullable: true
+        serializedName: header_responseString
+        url: /header/response/prim/string
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a post request with header values "scenario": "valid", "value":
+          "2010-01-01" or "scenario": "min", "value": "0001-01-01"
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: paramDate
+        parameters:
+          - $id: '89'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "valid" or
+                "min"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '90'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+          - $id: '91'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "2010-01-01" or
+                "0001-01-01"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '92'
+              $type: PrimaryType
+              format: date
+              knownPrimaryType: date
+              name:
+                fixed: false
+                raw: Date
+            name:
+              fixed: false
+              raw: value
+            serializedName: value
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: header_paramDate
+        url: /header/param/prim/date
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '30'
+          isNullable: true
+        deprecated: false
+        description: Get a response with header values "2010-01-01" or "0001-01-01"
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: responseDate
+        parameters:
+          - $id: '93'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "valid" or
+                "min"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '94'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '30'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '30'
+          isNullable: true
+        serializedName: header_responseDate
+        url: /header/response/prim/date
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a post request with header values "scenario": "valid", "value":
+          "2010-01-01T12:34:56Z" or "scenario": "min", "value":
+          "0001-01-01T00:00:00Z"
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: paramDatetime
+        parameters:
+          - $id: '95'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "valid" or
+                "min"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '96'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+          - $id: '97'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "2010-01-01T12:34:56Z" or
+                "0001-01-01T00:00:00Z"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '98'
+              $type: PrimaryType
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                fixed: false
+                raw: DateTime
+            name:
+              fixed: false
+              raw: value
+            serializedName: value
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: header_paramDatetime
+        url: /header/param/prim/datetime
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '33'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get a response with header values "2010-01-01T12:34:56Z" or
+          "0001-01-01T00:00:00Z"
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: responseDatetime
+        parameters:
+          - $id: '99'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "valid" or
+                "min"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '100'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '33'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '33'
+          isNullable: true
+        serializedName: header_responseDatetime
+        url: /header/response/prim/datetime
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a post request with header values "scenario": "valid", "value":
+          "Wed, 01 Jan 2010 12:34:56 GMT" or "scenario": "min", "value": "Mon,
+          01 Jan 0001 00:00:00 GMT"
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: paramDatetimeRfc1123
+        parameters:
+          - $id: '101'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "valid" or
+                "min"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '102'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+          - $id: '103'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "Wed, 01 Jan 2010
+                12:34:56 GMT" or "Mon, 01 Jan 0001 00:00:00 GMT"
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $id: '104'
+              $type: PrimaryType
+              format: date-time-rfc1123
+              knownPrimaryType: dateTimeRfc1123
+              name:
+                fixed: false
+                raw: DateTimeRfc1123
+            name:
+              fixed: false
+              raw: value
+            serializedName: value
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: header_paramDatetimeRfc1123
+        url: /header/param/prim/datetimerfc1123
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '36'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get a response with header values "Wed, 01 Jan 2010 12:34:56 GMT" or
+          "Mon, 01 Jan 0001 00:00:00 GMT"
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: responseDatetimeRfc1123
+        parameters:
+          - $id: '105'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "valid" or
+                "min"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '106'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '36'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '36'
+          isNullable: true
+        serializedName: header_responseDatetimeRfc1123
+        url: /header/response/prim/datetimerfc1123
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a post request with header values "scenario": "valid", "value":
+          "P123DT22H14M12.011S"
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: paramDuration
+        parameters:
+          - $id: '107'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: 'Send a post request with header values "scenario": "valid"'
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '108'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+          - $id: '109'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Send a post request with header values "P123DT22H14M12.011S"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '110'
+              $type: PrimaryType
+              format: duration
+              knownPrimaryType: timeSpan
+              name:
+                fixed: false
+                raw: TimeSpan
+            name:
+              fixed: false
+              raw: value
+            serializedName: value
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: header_paramDuration
+        url: /header/param/prim/duration
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '39'
+          isNullable: true
+        deprecated: false
+        description: Get a response with header values "P123DT22H14M12.011S"
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: responseDuration
+        parameters:
+          - $id: '111'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: 'Send a post request with header values "scenario": "valid"'
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '112'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '39'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '39'
+          isNullable: true
+        serializedName: header_responseDuration
+        url: /header/response/prim/duration
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a post request with header values "scenario": "valid", "value":
+          "啊齄丂狛狜隣郎隣兀﨩"
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: paramByte
+        parameters:
+          - $id: '113'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: 'Send a post request with header values "scenario": "valid"'
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '114'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+          - $id: '115'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Send a post request with header values "啊齄丂狛狜隣郎隣兀﨩"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '116'
+              $type: PrimaryType
+              format: byte
+              knownPrimaryType: byteArray
+              name:
+                fixed: false
+                raw: ByteArray
+            name:
+              fixed: false
+              raw: value
+            serializedName: value
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: header_paramByte
+        url: /header/param/prim/byte
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '42'
+          isNullable: true
+        deprecated: false
+        description: Get a response with header values "啊齄丂狛狜隣郎隣兀﨩"
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: responseByte
+        parameters:
+          - $id: '117'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: 'Send a post request with header values "scenario": "valid"'
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '118'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '42'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '42'
+          isNullable: true
+        serializedName: header_responseByte
+        url: /header/response/prim/byte
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a post request with header values "scenario": "valid", "value":
+          "GREY" or "scenario": "null", "value": null
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: paramEnum
+        parameters:
+          - $id: '119'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "valid" or
+                "null" or "empty"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '120'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+          - $id: '121'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: 'Send a post request with header values ''GREY'' '
+            extensions:
+              x-ms-enum:
+                modelAsString: false
+                name: GreyscaleColors
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $ref: '47'
+            name:
+              fixed: false
+              raw: value
+            serializedName: value
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: header_paramEnum
+        url: /header/param/prim/enum
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '45'
+          isNullable: true
+        deprecated: false
+        description: Get a response with header values "GREY" or null
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: responseEnum
+        parameters:
+          - $id: '122'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: >-
+                Send a post request with header values "scenario": "valid" or
+                "null" or "empty"
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $id: '123'
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: scenario
+            serializedName: scenario
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '45'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '45'
+          isNullable: true
+        serializedName: header_responseEnum
+        url: /header/response/prim/enum
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send x-ms-client-request-id = 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0 in
+          the header of the request
+        group:
+          fixed: false
+          raw: header
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: customRequestId
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: header_customRequestId
+        url: >-
+          /header/custom/x-ms-client-request-id/9C4D50EE-2D56-4CD3-8152-34347DC9F2B0
+    name:
+      fixed: false
+      raw: Header
+    nameForProperty: Header
+    typeName:
+      fixed: false

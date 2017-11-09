@@ -1,0 +1,4960 @@
+---
+apiVersion: 1.0.0
+baseUrl: 'http://localhost'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - $ref: '1'
+  - $ref: '6'
+headerTypes:
+  - $id: '18'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for head300 operation.
+    name:
+      fixed: false
+      raw: httpRedirects-head300-Headers
+    properties:
+      - $id: '19'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: The redirect location for this request
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '20'
+          $type: EnumType
+          modelAsExtensible: false
+          modelAsString: true
+          name:
+            fixed: false
+            raw: ''
+          underlyingType:
+            $id: '21'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          values:
+            - name: /http/success/head/200
+              serializedName: /http/success/head/200
+        name:
+          fixed: false
+          raw: Location
+        realPath:
+          - Location
+        serializedName: Location
+    serializedName: httpRedirects-head300-Headers
+  - $id: '22'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for get300 operation.
+    name:
+      fixed: false
+      raw: httpRedirects-get300-Headers
+    properties:
+      - $id: '23'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: The redirect location for this request
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '24'
+          $type: EnumType
+          modelAsExtensible: false
+          modelAsString: true
+          name:
+            fixed: false
+            raw: ''
+          underlyingType:
+            $id: '25'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          values:
+            - name: /http/success/get/200
+              serializedName: /http/success/get/200
+        name:
+          fixed: false
+          raw: Location
+        realPath:
+          - Location
+        serializedName: Location
+    serializedName: httpRedirects-get300-Headers
+  - $id: '26'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for head301 operation.
+    name:
+      fixed: false
+      raw: httpRedirects-head301-Headers
+    properties:
+      - $id: '27'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: The redirect location for this request
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '28'
+          $type: EnumType
+          modelAsExtensible: false
+          modelAsString: true
+          name:
+            fixed: false
+            raw: ''
+          underlyingType:
+            $id: '29'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          values:
+            - name: /http/success/head/200
+              serializedName: /http/success/head/200
+        name:
+          fixed: false
+          raw: Location
+        realPath:
+          - Location
+        serializedName: Location
+    serializedName: httpRedirects-head301-Headers
+  - $id: '30'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for get301 operation.
+    name:
+      fixed: false
+      raw: httpRedirects-get301-Headers
+    properties:
+      - $id: '31'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: The redirect location for this request
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '32'
+          $type: EnumType
+          modelAsExtensible: false
+          modelAsString: true
+          name:
+            fixed: false
+            raw: ''
+          underlyingType:
+            $id: '33'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          values:
+            - name: /http/success/get/200
+              serializedName: /http/success/get/200
+        name:
+          fixed: false
+          raw: Location
+        realPath:
+          - Location
+        serializedName: Location
+    serializedName: httpRedirects-get301-Headers
+  - $id: '34'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for put301 operation.
+    name:
+      fixed: false
+      raw: httpRedirects-put301-Headers
+    properties:
+      - $id: '35'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: The redirect location for this request
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '36'
+          $type: EnumType
+          modelAsExtensible: false
+          modelAsString: true
+          name:
+            fixed: false
+            raw: ''
+          underlyingType:
+            $id: '37'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          values:
+            - name: /http/failure/500
+              serializedName: /http/failure/500
+        name:
+          fixed: false
+          raw: Location
+        realPath:
+          - Location
+        serializedName: Location
+    serializedName: httpRedirects-put301-Headers
+  - $id: '38'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for head302 operation.
+    name:
+      fixed: false
+      raw: httpRedirects-head302-Headers
+    properties:
+      - $id: '39'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: The redirect location for this request
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '40'
+          $type: EnumType
+          modelAsExtensible: false
+          modelAsString: true
+          name:
+            fixed: false
+            raw: ''
+          underlyingType:
+            $id: '41'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          values:
+            - name: /http/success/head/200
+              serializedName: /http/success/head/200
+        name:
+          fixed: false
+          raw: Location
+        realPath:
+          - Location
+        serializedName: Location
+    serializedName: httpRedirects-head302-Headers
+  - $id: '42'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for get302 operation.
+    name:
+      fixed: false
+      raw: httpRedirects-get302-Headers
+    properties:
+      - $id: '43'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: The redirect location for this request
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '44'
+          $type: EnumType
+          modelAsExtensible: false
+          modelAsString: true
+          name:
+            fixed: false
+            raw: ''
+          underlyingType:
+            $id: '45'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          values:
+            - name: /http/success/get/200
+              serializedName: /http/success/get/200
+        name:
+          fixed: false
+          raw: Location
+        realPath:
+          - Location
+        serializedName: Location
+    serializedName: httpRedirects-get302-Headers
+  - $id: '46'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for patch302 operation.
+    name:
+      fixed: false
+      raw: httpRedirects-patch302-Headers
+    properties:
+      - $id: '47'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: The redirect location for this request
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '48'
+          $type: EnumType
+          modelAsExtensible: false
+          modelAsString: true
+          name:
+            fixed: false
+            raw: ''
+          underlyingType:
+            $id: '49'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          values:
+            - name: /http/failure/500
+              serializedName: /http/failure/500
+        name:
+          fixed: false
+          raw: Location
+        realPath:
+          - Location
+        serializedName: Location
+    serializedName: httpRedirects-patch302-Headers
+  - $id: '50'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for post303 operation.
+    name:
+      fixed: false
+      raw: httpRedirects-post303-Headers
+    properties:
+      - $id: '51'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: The redirect location for this request
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '52'
+          $type: EnumType
+          modelAsExtensible: false
+          modelAsString: true
+          name:
+            fixed: false
+            raw: ''
+          underlyingType:
+            $id: '53'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          values:
+            - name: /http/success/get/200
+              serializedName: /http/success/get/200
+        name:
+          fixed: false
+          raw: Location
+        realPath:
+          - Location
+        serializedName: Location
+    serializedName: httpRedirects-post303-Headers
+  - $id: '54'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for head307 operation.
+    name:
+      fixed: false
+      raw: httpRedirects-head307-Headers
+    properties:
+      - $id: '55'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: The redirect location for this request
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '56'
+          $type: EnumType
+          modelAsExtensible: false
+          modelAsString: true
+          name:
+            fixed: false
+            raw: ''
+          underlyingType:
+            $id: '57'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          values:
+            - name: /http/success/head/200
+              serializedName: /http/success/head/200
+        name:
+          fixed: false
+          raw: Location
+        realPath:
+          - Location
+        serializedName: Location
+    serializedName: httpRedirects-head307-Headers
+  - $id: '58'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for get307 operation.
+    name:
+      fixed: false
+      raw: httpRedirects-get307-Headers
+    properties:
+      - $id: '59'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: The redirect location for this request
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '60'
+          $type: EnumType
+          modelAsExtensible: false
+          modelAsString: true
+          name:
+            fixed: false
+            raw: ''
+          underlyingType:
+            $id: '61'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          values:
+            - name: /http/success/get/200
+              serializedName: /http/success/get/200
+        name:
+          fixed: false
+          raw: Location
+        realPath:
+          - Location
+        serializedName: Location
+    serializedName: httpRedirects-get307-Headers
+  - $id: '62'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for put307 operation.
+    name:
+      fixed: false
+      raw: HttpRedirects-put307-Headers
+    properties:
+      - $id: '63'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: The redirect location for this request
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '64'
+          $type: EnumType
+          modelAsExtensible: false
+          modelAsString: true
+          name:
+            fixed: false
+            raw: ''
+          underlyingType:
+            $id: '65'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          values:
+            - name: /http/success/put/200
+              serializedName: /http/success/put/200
+        name:
+          fixed: false
+          raw: Location
+        realPath:
+          - Location
+        serializedName: Location
+    serializedName: HttpRedirects-put307-Headers
+  - $id: '66'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for patch307 operation.
+    name:
+      fixed: false
+      raw: httpRedirects-patch307-Headers
+    properties:
+      - $id: '67'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: The redirect location for this request
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '68'
+          $type: EnumType
+          modelAsExtensible: false
+          modelAsString: true
+          name:
+            fixed: false
+            raw: ''
+          underlyingType:
+            $id: '69'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          values:
+            - name: /http/success/patch/200
+              serializedName: /http/success/patch/200
+        name:
+          fixed: false
+          raw: Location
+        realPath:
+          - Location
+        serializedName: Location
+    serializedName: httpRedirects-patch307-Headers
+  - $id: '70'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for post307 operation.
+    name:
+      fixed: false
+      raw: httpRedirects-post307-Headers
+    properties:
+      - $id: '71'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: The redirect location for this request
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '72'
+          $type: EnumType
+          modelAsExtensible: false
+          modelAsString: true
+          name:
+            fixed: false
+            raw: ''
+          underlyingType:
+            $id: '73'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          values:
+            - name: /http/success/post/200
+              serializedName: /http/success/post/200
+        name:
+          fixed: false
+          raw: Location
+        realPath:
+          - Location
+        serializedName: Location
+    serializedName: httpRedirects-post307-Headers
+  - $id: '74'
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Defines headers for delete307 operation.
+    name:
+      fixed: false
+      raw: httpRedirects-delete307-Headers
+    properties:
+      - $id: '75'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: The redirect location for this request
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '76'
+          $type: EnumType
+          modelAsExtensible: false
+          modelAsString: true
+          name:
+            fixed: false
+            raw: ''
+          underlyingType:
+            $id: '77'
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          values:
+            - name: /http/success/delete/200
+              serializedName: /http/success/delete/200
+        name:
+          fixed: false
+          raw: Location
+        realPath:
+          - Location
+        serializedName: Location
+    serializedName: httpRedirects-delete307-Headers
+modelTypes:
+  - $id: '1'
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '2'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '3'
+          $type: PrimaryType
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '4'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '5'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+  - $id: '6'
+    $type: CompositeType
+    containsConstantProperties: false
+    extensions:
+      x-ms-client-name:
+        name: MyException
+    name:
+      fixed: false
+      raw: A
+    properties:
+      - $id: '7'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '8'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: statusCode
+        realPath:
+          - statusCode
+        serializedName: statusCode
+    serializedName: A
+  - $id: '9'
+    $type: CompositeType
+    baseModelType:
+      $ref: '6'
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: B
+    properties:
+      - $id: '10'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '11'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: textStatusCode
+        realPath:
+          - textStatusCode
+        serializedName: textStatusCode
+    serializedName: B
+  - $id: '12'
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: C
+    properties:
+      - $id: '13'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '14'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: httpCode
+        realPath:
+          - httpCode
+        serializedName: httpCode
+    serializedName: C
+  - $id: '15'
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: D
+    properties:
+      - $id: '16'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '17'
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: httpStatusCode
+        realPath:
+          - httpStatusCode
+        serializedName: httpStatusCode
+    serializedName: D
+modelsName: Models
+name: AutoRestHttpInfrastructureTestService
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get empty error form server
+        group:
+          fixed: false
+          raw: httpFailure
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getEmptyError
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $id: '78'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            isNullable: true
+        returnType:
+          body:
+            $ref: '78'
+          isNullable: true
+        serializedName: httpFailure_getEmptyError
+        url: /http/failure/emptybody/error
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: Get empty error form server
+        group:
+          fixed: false
+          raw: httpFailure
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNoModelError
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $id: '79'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            isNullable: true
+        returnType:
+          body:
+            $ref: '79'
+          isNullable: true
+        serializedName: httpFailure_getNoModelError
+        url: /http/failure/nomodel/error
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: Get empty response from server
+        group:
+          fixed: false
+          raw: httpFailure
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNoModelEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $id: '80'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            isNullable: true
+        returnType:
+          body:
+            $ref: '80'
+          isNullable: true
+        serializedName: httpFailure_getNoModelEmpty
+        url: /http/failure/nomodel/empty
+    name:
+      fixed: false
+      raw: HttpFailure
+    nameForProperty: HttpFailure
+    typeName:
+      fixed: false
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Return 200 status code if successful
+        group:
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: head200
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpSuccess_head200
+        url: /http/success/200
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get 200 success
+        group:
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $id: '81'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            isNullable: true
+        returnType:
+          body:
+            $ref: '81'
+          isNullable: true
+        serializedName: httpSuccess_get200
+        url: /http/success/200
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put boolean value true returning 200 success
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: put200
+        parameters:
+          - $id: '82'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '83'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpSuccess_put200
+        url: /http/success/200
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Patch true Boolean value in request returning 200
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: patch
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: patch200
+        parameters:
+          - $id: '84'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '85'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpSuccess_patch200
+        url: /http/success/200
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Post bollean value true in request that returns a 200
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: post200
+        parameters:
+          - $id: '86'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '87'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpSuccess_post200
+        url: /http/success/200
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Delete simple boolean value true returns 200
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: delete
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: delete200
+        parameters:
+          - $id: '88'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '89'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpSuccess_delete200
+        url: /http/success/200
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put true Boolean value in request returns 201
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: put201
+        parameters:
+          - $id: '90'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '91'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Created:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpSuccess_put201
+        url: /http/success/201
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Post true Boolean value in request returns 201 (Created)
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: post201
+        parameters:
+          - $id: '92'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '93'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Created:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpSuccess_post201
+        url: /http/success/201
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put true Boolean value in request returns 202 (Accepted)
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: put202
+        parameters:
+          - $id: '94'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '95'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Accepted:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpSuccess_put202
+        url: /http/success/202
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Patch true Boolean value in request returns 202
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: patch
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: patch202
+        parameters:
+          - $id: '96'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '97'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Accepted:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpSuccess_patch202
+        url: /http/success/202
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Post true Boolean value in request returns 202 (Accepted)
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: post202
+        parameters:
+          - $id: '98'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '99'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Accepted:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpSuccess_post202
+        url: /http/success/202
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Delete true Boolean value in request returns 202 (accepted)
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: delete
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: delete202
+        parameters:
+          - $id: '100'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '101'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Accepted:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpSuccess_delete202
+        url: /http/success/202
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Return 204 status code if successful
+        group:
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: head204
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NoContent:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpSuccess_head204
+        url: /http/success/204
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put true Boolean value in request returns 204 (no content)
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: put204
+        parameters:
+          - $id: '102'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '103'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NoContent:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpSuccess_put204
+        url: /http/success/204
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Patch true Boolean value in request returns 204 (no content)
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: patch
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: patch204
+        parameters:
+          - $id: '104'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '105'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NoContent:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpSuccess_patch204
+        url: /http/success/204
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Post true Boolean value in request returns 204 (no content)
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: HttpSuccess
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: post204
+        parameters:
+          - $id: '106'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '107'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NoContent:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: HttpSuccess_post204
+        url: /http/success/204
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Delete true Boolean value in request returns 204 (no content)
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: delete
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: delete204
+        parameters:
+          - $id: '108'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '109'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NoContent:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpSuccess_delete204
+        url: /http/success/204
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Return 404 status code
+        group:
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: head404
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NoContent:
+            isNullable: true
+          NotFound:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpSuccess_head404
+        url: /http/success/404
+    name:
+      fixed: false
+      raw: HttpSuccess
+    nameForProperty: HttpSuccess
+    typeName:
+      fixed: false
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '18'
+          isNullable: true
+        deprecated: false
+        description: Return 300 status code and redirect to /http/success/200
+        group:
+          fixed: false
+          raw: httpRedirects
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: head300
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          MultipleChoices:
+            headers:
+              $ref: '18'
+            isNullable: true
+          OK:
+            headers:
+              $ref: '18'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '18'
+          isNullable: true
+        serializedName: httpRedirects_head300
+        url: /http/redirect/300
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '22'
+          isNullable: true
+        deprecated: false
+        description: Return 300 status code and redirect to /http/success/200
+        group:
+          fixed: false
+          raw: httpRedirects
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get300
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          MultipleChoices:
+            body:
+              $id: '110'
+              $type: SequenceType
+              elementType:
+                $id: '111'
+                $type: PrimaryType
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+            headers:
+              $ref: '22'
+            isNullable: true
+          OK:
+            headers:
+              $ref: '22'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '110'
+          headers:
+            $ref: '22'
+          isNullable: true
+        serializedName: httpRedirects_get300
+        url: /http/redirect/300
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '26'
+          isNullable: true
+        deprecated: false
+        description: Return 301 status code and redirect to /http/success/200
+        group:
+          fixed: false
+          raw: httpRedirects
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: head301
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          MovedPermanently:
+            headers:
+              $ref: '26'
+            isNullable: true
+          OK:
+            headers:
+              $ref: '26'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '26'
+          isNullable: true
+        serializedName: httpRedirects_head301
+        url: /http/redirect/301
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '30'
+          isNullable: true
+        deprecated: false
+        description: Return 301 status code and redirect to /http/success/200
+        group:
+          fixed: false
+          raw: httpRedirects
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get301
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          MovedPermanently:
+            headers:
+              $ref: '30'
+            isNullable: true
+          OK:
+            headers:
+              $ref: '30'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '30'
+          isNullable: true
+        serializedName: httpRedirects_get301
+        url: /http/redirect/301
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '34'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Put true Boolean value in request returns 301.  This request should
+          not be automatically redirected, but should return the received 301 to
+          the caller for evaluation
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpRedirects
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: put301
+        parameters:
+          - $id: '112'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '113'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          MovedPermanently:
+            headers:
+              $ref: '34'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '34'
+          isNullable: true
+        serializedName: httpRedirects_put301
+        url: /http/redirect/301
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '38'
+          isNullable: true
+        deprecated: false
+        description: Return 302 status code and redirect to /http/success/200
+        group:
+          fixed: false
+          raw: httpRedirects
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: head302
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '38'
+            isNullable: true
+          Redirect:
+            headers:
+              $ref: '38'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '38'
+          isNullable: true
+        serializedName: httpRedirects_head302
+        url: /http/redirect/302
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '42'
+          isNullable: true
+        deprecated: false
+        description: Return 302 status code and redirect to /http/success/200
+        group:
+          fixed: false
+          raw: httpRedirects
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get302
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '42'
+            isNullable: true
+          Redirect:
+            headers:
+              $ref: '42'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '42'
+          isNullable: true
+        serializedName: httpRedirects_get302
+        url: /http/redirect/302
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '46'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Patch true Boolean value in request returns 302.  This request should
+          not be automatically redirected, but should return the received 302 to
+          the caller for evaluation
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpRedirects
+        hidden: false
+        httpMethod: patch
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: patch302
+        parameters:
+          - $id: '114'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '115'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Redirect:
+            headers:
+              $ref: '46'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '46'
+          isNullable: true
+        serializedName: httpRedirects_patch302
+        url: /http/redirect/302
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '50'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Post true Boolean value in request returns 303.  This request should
+          be automatically redirected usign a get, ultimately returning a 200
+          status code
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpRedirects
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: post303
+        parameters:
+          - $id: '116'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '117'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '50'
+            isNullable: true
+          SeeOther:
+            headers:
+              $ref: '50'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '50'
+          isNullable: true
+        serializedName: httpRedirects_post303
+        url: /http/redirect/303
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '54'
+          isNullable: true
+        deprecated: false
+        description: 'Redirect with 307, resulting in a 200 success'
+        group:
+          fixed: false
+          raw: httpRedirects
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: head307
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '54'
+            isNullable: true
+          TemporaryRedirect:
+            headers:
+              $ref: '54'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '54'
+          isNullable: true
+        serializedName: httpRedirects_head307
+        url: /http/redirect/307
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '58'
+          isNullable: true
+        deprecated: false
+        description: 'Redirect get with 307, resulting in a 200 success'
+        group:
+          fixed: false
+          raw: httpRedirects
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get307
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '58'
+            isNullable: true
+          TemporaryRedirect:
+            headers:
+              $ref: '58'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '58'
+          isNullable: true
+        serializedName: httpRedirects_get307
+        url: /http/redirect/307
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '62'
+          isNullable: true
+        deprecated: false
+        description: 'Put redirected with 307, resulting in a 200 after redirect'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: HttpRedirects
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: put307
+        parameters:
+          - $id: '118'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '119'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '62'
+            isNullable: true
+          TemporaryRedirect:
+            headers:
+              $ref: '62'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '62'
+          isNullable: true
+        serializedName: HttpRedirects_put307
+        url: /http/redirect/307
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '66'
+          isNullable: true
+        deprecated: false
+        description: 'Patch redirected with 307, resulting in a 200 after redirect'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpRedirects
+        hidden: false
+        httpMethod: patch
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: patch307
+        parameters:
+          - $id: '120'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '121'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '66'
+            isNullable: true
+          TemporaryRedirect:
+            headers:
+              $ref: '66'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '66'
+          isNullable: true
+        serializedName: httpRedirects_patch307
+        url: /http/redirect/307
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '70'
+          isNullable: true
+        deprecated: false
+        description: 'Post redirected with 307, resulting in a 200 after redirect'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpRedirects
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: post307
+        parameters:
+          - $id: '122'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '123'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '70'
+            isNullable: true
+          TemporaryRedirect:
+            headers:
+              $ref: '70'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '70'
+          isNullable: true
+        serializedName: httpRedirects_post307
+        url: /http/redirect/307
+      - defaultResponse:
+          body:
+            $ref: '1'
+          headers:
+            $ref: '74'
+          isNullable: true
+        deprecated: false
+        description: 'Delete redirected with 307, resulting in a 200 after redirect'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpRedirects
+        hidden: false
+        httpMethod: delete
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: delete307
+        parameters:
+          - $id: '124'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '125'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            headers:
+              $ref: '74'
+            isNullable: true
+          TemporaryRedirect:
+            headers:
+              $ref: '74'
+            isNullable: true
+        returnType:
+          headers:
+            $ref: '74'
+          isNullable: true
+        serializedName: httpRedirects_delete307
+        url: /http/redirect/307
+    name:
+      fixed: false
+      raw: HttpRedirects
+    nameForProperty: HttpRedirects
+    typeName:
+      fixed: false
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 400 status code - should be represented in the client as an
+          error
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: head400
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_head400
+        url: /http/failure/client/400
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 400 status code - should be represented in the client as an
+          error
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get400
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_get400
+        url: /http/failure/client/400
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 400 status code - should be represented in the client as an
+          error
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: put400
+        parameters:
+          - $id: '126'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '127'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_put400
+        url: /http/failure/client/400
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 400 status code - should be represented in the client as an
+          error
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: patch
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: patch400
+        parameters:
+          - $id: '128'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '129'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_patch400
+        url: /http/failure/client/400
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 400 status code - should be represented in the client as an
+          error
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: post400
+        parameters:
+          - $id: '130'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '131'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_post400
+        url: /http/failure/client/400
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 400 status code - should be represented in the client as an
+          error
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: delete
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: delete400
+        parameters:
+          - $id: '132'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '133'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_delete400
+        url: /http/failure/client/400
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 401 status code - should be represented in the client as an
+          error
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: head401
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_head401
+        url: /http/failure/client/401
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 402 status code - should be represented in the client as an
+          error
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get402
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_get402
+        url: /http/failure/client/402
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 403 status code - should be represented in the client as an
+          error
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get403
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_get403
+        url: /http/failure/client/403
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 404 status code - should be represented in the client as an
+          error
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: put404
+        parameters:
+          - $id: '134'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '135'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_put404
+        url: /http/failure/client/404
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 405 status code - should be represented in the client as an
+          error
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: patch
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: patch405
+        parameters:
+          - $id: '136'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '137'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_patch405
+        url: /http/failure/client/405
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 406 status code - should be represented in the client as an
+          error
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: post406
+        parameters:
+          - $id: '138'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '139'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_post406
+        url: /http/failure/client/406
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 407 status code - should be represented in the client as an
+          error
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: delete
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: delete407
+        parameters:
+          - $id: '140'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '141'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_delete407
+        url: /http/failure/client/407
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 409 status code - should be represented in the client as an
+          error
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: put409
+        parameters:
+          - $id: '142'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '143'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_put409
+        url: /http/failure/client/409
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 410 status code - should be represented in the client as an
+          error
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: head410
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_head410
+        url: /http/failure/client/410
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 411 status code - should be represented in the client as an
+          error
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get411
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_get411
+        url: /http/failure/client/411
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 412 status code - should be represented in the client as an
+          error
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get412
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_get412
+        url: /http/failure/client/412
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 413 status code - should be represented in the client as an
+          error
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: put413
+        parameters:
+          - $id: '144'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '145'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_put413
+        url: /http/failure/client/413
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 414 status code - should be represented in the client as an
+          error
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: patch
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: patch414
+        parameters:
+          - $id: '146'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '147'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_patch414
+        url: /http/failure/client/414
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 415 status code - should be represented in the client as an
+          error
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: post415
+        parameters:
+          - $id: '148'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '149'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_post415
+        url: /http/failure/client/415
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 416 status code - should be represented in the client as an
+          error
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get416
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_get416
+        url: /http/failure/client/416
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 417 status code - should be represented in the client as an
+          error
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: delete
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: delete417
+        parameters:
+          - $id: '150'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '151'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_delete417
+        url: /http/failure/client/417
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 429 status code - should be represented in the client as an
+          error
+        group:
+          fixed: false
+          raw: httpClientFailure
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: head429
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpClientFailure_head429
+        url: /http/failure/client/429
+    name:
+      fixed: false
+      raw: HttpClientFailure
+    nameForProperty: HttpClientFailure
+    typeName:
+      fixed: false
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 501 status code - should be represented in the client as an
+          error
+        group:
+          fixed: false
+          raw: httpServerFailure
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: head501
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpServerFailure_head501
+        url: /http/failure/server/501
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 501 status code - should be represented in the client as an
+          error
+        group:
+          fixed: false
+          raw: httpServerFailure
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get501
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpServerFailure_get501
+        url: /http/failure/server/501
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 505 status code - should be represented in the client as an
+          error
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpServerFailure
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: post505
+        parameters:
+          - $id: '152'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '153'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpServerFailure_post505
+        url: /http/failure/server/505
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Return 505 status code - should be represented in the client as an
+          error
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpServerFailure
+        hidden: false
+        httpMethod: delete
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: delete505
+        parameters:
+          - $id: '154'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '155'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '1'
+          isNullable: true
+        serializedName: httpServerFailure_delete505
+        url: /http/failure/server/505
+    name:
+      fixed: false
+      raw: HttpServerFailure
+    nameForProperty: HttpServerFailure
+    typeName:
+      fixed: false
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Return 408 status code, then 200 after retry'
+        group:
+          fixed: false
+          raw: httpRetry
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: head408
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpRetry_head408
+        url: /http/retry/408
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Return 500 status code, then 200 after retry'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpRetry
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: put500
+        parameters:
+          - $id: '156'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '157'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpRetry_put500
+        url: /http/retry/500
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Return 500 status code, then 200 after retry'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpRetry
+        hidden: false
+        httpMethod: patch
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: patch500
+        parameters:
+          - $id: '158'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '159'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpRetry_patch500
+        url: /http/retry/500
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Return 502 status code, then 200 after retry'
+        group:
+          fixed: false
+          raw: httpRetry
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get502
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpRetry_get502
+        url: /http/retry/502
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Return 503 status code, then 200 after retry'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpRetry
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: post503
+        parameters:
+          - $id: '160'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '161'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpRetry_post503
+        url: /http/retry/503
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Return 503 status code, then 200 after retry'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpRetry
+        hidden: false
+        httpMethod: delete
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: delete503
+        parameters:
+          - $id: '162'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '163'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpRetry_delete503
+        url: /http/retry/503
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Return 504 status code, then 200 after retry'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpRetry
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: put504
+        parameters:
+          - $id: '164'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '165'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpRetry_put504
+        url: /http/retry/504
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Return 504 status code, then 200 after retry'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: httpRetry
+        hidden: false
+        httpMethod: patch
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: patch504
+        parameters:
+          - $id: '166'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Simple boolean value true
+            extensions:
+              x-ms-requestBody-name: booleanValue
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '167'
+              $type: PrimaryType
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: booleanValue
+            serializedName: booleanValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: httpRetry_patch504
+        url: /http/retry/504
+    name:
+      fixed: false
+      raw: HttpRetry
+    nameForProperty: HttpRetry
+    typeName:
+      fixed: false
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Send a 200 response with valid payload: {''statusCode'': ''200''}'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200Model204NoModelDefaultError200Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NoContent:
+            isNullable: true
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_get200Model204NoModelDefaultError200Valid
+        url: /http/payloads/200/A/204/none/default/Error/response/200/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Send a 204 response with no payload
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200Model204NoModelDefaultError204Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NoContent:
+            isNullable: true
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_get200Model204NoModelDefaultError204Valid
+        url: /http/payloads/200/A/204/none/default/Error/response/204/none
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Send a 201 response with valid payload: {''statusCode'': ''201''}'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200Model204NoModelDefaultError201Invalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NoContent:
+            isNullable: true
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_get200Model204NoModelDefaultError201Invalid
+        url: /http/payloads/200/A/204/none/default/Error/response/201/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Send a 202 response with no payload:'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200Model204NoModelDefaultError202None
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NoContent:
+            isNullable: true
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_get200Model204NoModelDefaultError202None
+        url: /http/payloads/200/A/204/none/default/Error/response/202/none
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a 400 response with valid error payload: {'status': 400,
+          'message': 'client error'}
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200Model204NoModelDefaultError400Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NoContent:
+            isNullable: true
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_get200Model204NoModelDefaultError400Valid
+        url: /http/payloads/200/A/204/none/default/Error/response/400/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Send a 200 response with valid payload: {''statusCode'': ''200''}'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200Model201ModelDefaultError200Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Created:
+            body:
+              $ref: '9'
+            isNullable: true
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_get200Model201ModelDefaultError200Valid
+        url: /http/payloads/200/A/201/B/default/Error/response/200/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a 201 response with valid payload: {'statusCode': '201',
+          'textStatusCode': 'Created'}
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200Model201ModelDefaultError201Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Created:
+            body:
+              $ref: '9'
+            isNullable: true
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_get200Model201ModelDefaultError201Valid
+        url: /http/payloads/200/A/201/B/default/Error/response/201/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a 400 response with valid payload: {'code': '400', 'message':
+          'client error'}
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200Model201ModelDefaultError400Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Created:
+            body:
+              $ref: '9'
+            isNullable: true
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_get200Model201ModelDefaultError400Valid
+        url: /http/payloads/200/A/201/B/default/Error/response/400/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Send a 200 response with valid payload: {''statusCode'': ''200''}'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200ModelA201ModelC404ModelDDefaultError200Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Created:
+            body:
+              $ref: '12'
+            isNullable: true
+          NotFound:
+            body:
+              $ref: '15'
+            isNullable: true
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $id: '168'
+            $type: PrimaryType
+            knownPrimaryType: object
+            name:
+              fixed: false
+              raw: Object
+          isNullable: true
+        serializedName: multipleResponses_get200ModelA201ModelC404ModelDDefaultError200Valid
+        url: /http/payloads/200/A/201/C/404/D/default/Error/response/200/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Send a 200 response with valid payload: {''httpCode'': ''201''}'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200ModelA201ModelC404ModelDDefaultError201Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Created:
+            body:
+              $ref: '12'
+            isNullable: true
+          NotFound:
+            body:
+              $ref: '15'
+            isNullable: true
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $id: '169'
+            $type: PrimaryType
+            knownPrimaryType: object
+            name:
+              fixed: false
+              raw: Object
+          isNullable: true
+        serializedName: multipleResponses_get200ModelA201ModelC404ModelDDefaultError201Valid
+        url: /http/payloads/200/A/201/C/404/D/default/Error/response/201/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Send a 200 response with valid payload: {''httpStatusCode'': ''404''}'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200ModelA201ModelC404ModelDDefaultError404Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Created:
+            body:
+              $ref: '12'
+            isNullable: true
+          NotFound:
+            body:
+              $ref: '15'
+            isNullable: true
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $id: '170'
+            $type: PrimaryType
+            knownPrimaryType: object
+            name:
+              fixed: false
+              raw: Object
+          isNullable: true
+        serializedName: multipleResponses_get200ModelA201ModelC404ModelDDefaultError404Valid
+        url: /http/payloads/200/A/201/C/404/D/default/Error/response/404/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a 400 response with valid payload: {'code': '400', 'message':
+          'client error'}
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200ModelA201ModelC404ModelDDefaultError400Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Created:
+            body:
+              $ref: '12'
+            isNullable: true
+          NotFound:
+            body:
+              $ref: '15'
+            isNullable: true
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $id: '171'
+            $type: PrimaryType
+            knownPrimaryType: object
+            name:
+              fixed: false
+              raw: Object
+          isNullable: true
+        serializedName: multipleResponses_get200ModelA201ModelC404ModelDDefaultError400Valid
+        url: /http/payloads/200/A/201/C/404/D/default/Error/response/400/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Send a 202 response with no payload
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get202None204NoneDefaultError202None
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Accepted:
+            isNullable: true
+          NoContent:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: multipleResponses_get202None204NoneDefaultError202None
+        url: /http/payloads/202/none/204/none/default/Error/response/202/none
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Send a 204 response with no payload
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get202None204NoneDefaultError204None
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Accepted:
+            isNullable: true
+          NoContent:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: multipleResponses_get202None204NoneDefaultError204None
+        url: /http/payloads/202/none/204/none/default/Error/response/204/none
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a 400 response with valid payload: {'code': '400', 'message':
+          'client error'}
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get202None204NoneDefaultError400Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Accepted:
+            isNullable: true
+          NoContent:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: multipleResponses_get202None204NoneDefaultError400Valid
+        url: /http/payloads/202/none/204/none/default/Error/response/400/valid
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: 'Send a 202 response with an unexpected payload {''property'': ''value''}'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get202None204NoneDefaultNone202Invalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Accepted:
+            isNullable: true
+          NoContent:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: multipleResponses_get202None204NoneDefaultNone202Invalid
+        url: /http/payloads/202/none/204/none/default/none/response/202/invalid
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: Send a 204 response with no payload
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get202None204NoneDefaultNone204None
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Accepted:
+            isNullable: true
+          NoContent:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: multipleResponses_get202None204NoneDefaultNone204None
+        url: /http/payloads/202/none/204/none/default/none/response/204/none
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: Send a 400 response with no payload
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get202None204NoneDefaultNone400None
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Accepted:
+            isNullable: true
+          NoContent:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: multipleResponses_get202None204NoneDefaultNone400None
+        url: /http/payloads/202/none/204/none/default/none/response/400/none
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: 'Send a 400 response with an unexpected payload {''property'': ''value''}'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get202None204NoneDefaultNone400Invalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          Accepted:
+            isNullable: true
+          NoContent:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: multipleResponses_get202None204NoneDefaultNone400Invalid
+        url: /http/payloads/202/none/204/none/default/none/response/400/invalid
+      - defaultResponse:
+          body:
+            $ref: '6'
+          isNullable: true
+        deprecated: false
+        description: 'Send a 200 response with valid payload: {''statusCode'': ''200''}'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDefaultModelA200Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_getDefaultModelA200Valid
+        url: /http/payloads/default/A/response/200/valid
+      - defaultResponse:
+          body:
+            $ref: '6'
+          isNullable: true
+        deprecated: false
+        description: Send a 200 response with no payload
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDefaultModelA200None
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_getDefaultModelA200None
+        url: /http/payloads/default/A/response/200/none
+      - defaultResponse:
+          body:
+            $ref: '6'
+          isNullable: true
+        deprecated: false
+        description: 'Send a 400 response with valid payload: {''statusCode'': ''400''}'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDefaultModelA400Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_getDefaultModelA400Valid
+        url: /http/payloads/default/A/response/400/valid
+      - defaultResponse:
+          body:
+            $ref: '6'
+          isNullable: true
+        deprecated: false
+        description: Send a 400 response with no payload
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDefaultModelA400None
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_getDefaultModelA400None
+        url: /http/payloads/default/A/response/400/none
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: 'Send a 200 response with invalid payload: {''statusCode'': ''200''}'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDefaultNone200Invalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          isNullable: true
+        serializedName: multipleResponses_getDefaultNone200Invalid
+        url: /http/payloads/default/none/response/200/invalid
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: Send a 200 response with no payload
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDefaultNone200None
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          isNullable: true
+        serializedName: multipleResponses_getDefaultNone200None
+        url: /http/payloads/default/none/response/200/none
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: 'Send a 400 response with valid payload: {''statusCode'': ''400''}'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDefaultNone400Invalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          isNullable: true
+        serializedName: multipleResponses_getDefaultNone400Invalid
+        url: /http/payloads/default/none/response/400/invalid
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: Send a 400 response with no payload
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDefaultNone400None
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType:
+          isNullable: true
+        serializedName: multipleResponses_getDefaultNone400None
+        url: /http/payloads/default/none/response/400/none
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a 200 response with no payload, when a payload is expected -
+          client should return a null object of thde type for model A
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200ModelA200None
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_get200ModelA200None
+        url: /http/payloads/200/A/response/200/none
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: 'Send a 200 response with payload {''statusCode'': ''200''}'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200ModelA200Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_get200ModelA200Valid
+        url: /http/payloads/200/A/response/200/valid
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: 'Send a 200 response with invalid payload {''statusCodeInvalid'': ''200''}'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200ModelA200Invalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_get200ModelA200Invalid
+        url: /http/payloads/200/A/response/200/invalid
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: >-
+          Send a 400 response with no payload client should treat as an http
+          error with no error model
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200ModelA400None
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_get200ModelA400None
+        url: /http/payloads/200/A/response/400/none
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: 'Send a 200 response with payload {''statusCode'': ''400''}'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200ModelA400Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_get200ModelA400Valid
+        url: /http/payloads/200/A/response/400/valid
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: 'Send a 200 response with invalid payload {''statusCodeInvalid'': ''400''}'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200ModelA400Invalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_get200ModelA400Invalid
+        url: /http/payloads/200/A/response/400/invalid
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: 'Send a 202 response with payload {''statusCode'': ''202''}'
+        group:
+          fixed: false
+          raw: multipleResponses
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: get200ModelA202Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: multipleResponses_get200ModelA202Valid
+        url: /http/payloads/200/A/response/202/valid
+    name:
+      fixed: false
+      raw: MultipleResponses
+    nameForProperty: MultipleResponses
+    typeName:
+      fixed: false

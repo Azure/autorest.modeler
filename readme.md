@@ -15,8 +15,29 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additio
 
 # AutoRest extension configuration
 
+## Run it as a standalone (good for testing)
+
+``` yaml $(standalone-modeler)
+pipeline:
+  standalone/imodeler1:
+    input: openapi-document/identity
+    output-artifact: code-model-v1
+    scope: standalone-modeler
+  standalone/commonmarker:
+    input: imodeler1
+    output-artifact: code-model-v1
+  standalone/cm/transform:
+    input: commonmarker
+    output-artifact: code-model-v1
+  standalone/cm/emitter:
+    input: transform
+    scope: scope-cm/emitter
+```
+
+## Run it before generator
+
 ``` yaml
-# pipeline configuration is part of generators which make use of this extension
+# pipeline configuration is part of generators which make use of this extension (modeler must run under generator's scope)
 
 # used by generators:
 scope-transform-string:
