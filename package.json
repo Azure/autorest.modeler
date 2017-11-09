@@ -9,6 +9,7 @@
     "build": "gulp build",
     "prepare": "gulp build",
     "publish-preview": "gulp publish-preview",
+    "regenerate": "gulp regenerate",
     "clean": "gulp clean",
     "nuke": "git clean -xdf"
   },
@@ -29,6 +30,7 @@
   "homepage": "https://github.com/Azure/autorest.modeler/blob/master/README.md",
   "devDependencies": {
     "@microsoft.azure/autorest.testserver": "2.3.1",
+    "autorest": "^2.0.4194",
     "coffee-script": "^1.11.1",
     "dotnet-sdk-2.0.0": "^1.4.4",
     "gulp": "^3.9.1",

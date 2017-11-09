@@ -19,12 +19,12 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additio
 
 ``` yaml $(standalone-modeler)
 pipeline:
-  standalone/modeler:
+  standalone/imodeler1:
     input: openapi-document/identity
     output-artifact: code-model-v1
     scope: standalone-modeler
   standalone/commonmarker:
-    input: modeler
+    input: imodeler1
     output-artifact: code-model-v1
   standalone/cm/transform:
     input: commonmarker
