@@ -99,21 +99,7 @@ namespace AutoRest.Modeler.Model
         /// </summary>
         public Dictionary<string, OperationResponse> Responses { get; set; }
 
-        /// <summary>
-        /// The transfer protocol for the operation. 
-        /// </summary>
-        public IList<TransferProtocolScheme> Schemes { get; set; }
-
         public bool Deprecated { get; set; }
-
-        /// <summary>
-        /// A declaration of which security schemes are applied for this operation. 
-        /// The list of values describes alternative security schemes that can be used 
-        /// (that is, there is a logical OR between the security requirements). 
-        /// This definition overrides any declared top-level security. To remove a 
-        /// top-level security declaration, an empty array can be used.
-        /// </summary>
-        public IList<Dictionary<string, List<string>>> Security { get; set; }
 
         private SwaggerParameter FindParameter(string name, IEnumerable<SwaggerParameter> operationParameters, IDictionary<string, SwaggerParameter> clientParameters)
         {

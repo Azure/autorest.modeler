@@ -19,7 +19,6 @@ namespace AutoRest.Modeler.Model
             Components = new Components();
             Paths = new Dictionary<string, Dictionary<string, Operation>>();
             CustomPaths = new Dictionary<string, Dictionary<string, Operation>>();
-            Security = new List<Dictionary<string, List<string>>>();
             Tags = new List<Tag>();
         }
 
@@ -36,16 +35,6 @@ namespace AutoRest.Modeler.Model
         public IList<Server> Servers { get; set; }
 
         /// <summary>
-        /// The base path on which the API is served, which is relative to the host.
-        /// </summary>
-        public string BasePath { get; set; }
-
-        /// <summary>
-        /// The transfer protocol of the API.
-        /// </summary>
-        public IList<TransferProtocolScheme> Schemes { get; set; }
-
-        /// <summary>
         /// Key is actual path and the value is serializationProperty of http operations and operation objects.
         /// </summary>
         public Dictionary<string, Dictionary<string, Operation>> Paths { get; set; }
@@ -57,14 +46,6 @@ namespace AutoRest.Modeler.Model
         public Dictionary<string, Dictionary<string, Operation>> CustomPaths { get; set; }
 
         public Components Components { get; set; }
-
-        /// <summary>
-        /// A declaration of which security schemes are applied for the API as a whole. 
-        /// The list of values describes alternative security schemes that can be used 
-        /// (that is, there is a logical OR between the security requirements). Individual 
-        /// operations can override this definition.
-        /// </summary>
-        public IList<Dictionary<string, List<string>>> Security { get; set; }
 
         /// <summary>
         /// A list of tags used by the specification with additional metadata. The order 

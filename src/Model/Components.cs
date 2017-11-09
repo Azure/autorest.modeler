@@ -13,7 +13,6 @@ namespace AutoRest.Modeler.Model
             Parameters = new Dictionary<string, SwaggerParameter>();
             RequestBodies = new Dictionary<string, RequestBody>();
             Responses = new Dictionary<string, OperationResponse>();
-            SecuritySchemes = new Dictionary<string, SecurityDefinition>();
         }
 
         public Dictionary<string, Schema> Schemas { get; set; }
@@ -23,8 +22,6 @@ namespace AutoRest.Modeler.Model
         public Dictionary<string, RequestBody> RequestBodies { get; set; }
 
         public Dictionary<string, OperationResponse> Responses { get; set; }
-
-        public Dictionary<string, SecurityDefinition> SecuritySchemes { get; set; }
 
     }
 }

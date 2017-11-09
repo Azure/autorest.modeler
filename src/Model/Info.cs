@@ -28,12 +28,6 @@ namespace AutoRest.Modeler.Model
             }
         }
 
-        public string TermsOfService { get; set; }
-
-        public Contact Contact { get; set; }
-
-        public License License { get; set; }
-
         public string Version { get; set; }
 
         [JsonProperty("x-ms-code-generation-settings")]
