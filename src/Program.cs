@@ -56,28 +56,11 @@ namespace AutoRest.Modeler
 
             var genericSerializer = new ModelSerializer<CodeModel>();
 
-            var serializerSettings =
-                new JsonSerializerSettings
+            var modelAsJson = JsonConvert.SerializeObject(codeModel, new JsonSerializerSettings
                 {
-                    Converters =
-                    {
-                        new DependencyInjectionJsonConverter<CompositeType>(),
-                        new DependencyInjectionJsonConverter<DictionaryType>(),
-                        new DependencyInjectionJsonConverter<SequenceType>(),
-                        new DependencyInjectionJsonConverter<PrimaryType>(),
-                        new DependencyInjectionJsonConverter<EnumType>(),
-                        new DependencyInjectionJsonConverter<Method>(),
-                        new DependencyInjectionJsonConverter<Parameter>(),
-                        new DependencyInjectionJsonConverter<Property>(),
-                        new DependencyInjectionJsonConverter<CodeModel>(),
-                        new StringEnumConverter {CamelCaseText = true}
-                    },
                     Formatting = Formatting.Indented,
-                    NullValueHandling = NullValueHandling.Ignore,
-                    DateParseHandling = DateParseHandling.None,
-                    ContractResolver = CodeModelContractResolver.Instance,
-                };
-            var modelAsJson = JsonConvert.SerializeObject(codeModel, CodeModelSettings.SerializerSettings);
+                    NullValueHandling = NullValueHandling.Ignore
+                });
 
             WriteFile("code-model-v1.yaml", modelAsJson, null);
 
