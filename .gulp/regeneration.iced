@@ -86,7 +86,6 @@ mappings = {
 swaggerDir = "node_modules/@microsoft.azure/autorest.testserver/swagger"
 
 task 'regenerate', '', (done) ->
-  mappings['AcceptanceTests/AzureResource'] = 'azure-resource-x.json'
   regenExpected {
     'inputBaseDir': swaggerDir,
     'mappings': mappings,
