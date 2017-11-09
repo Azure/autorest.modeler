@@ -20,7 +20,7 @@ regenExpected = (opts,done) ->
     ]
 
     for swaggerFile in swaggerFiles
-      args.push("--input-file=#{if !!opts.inputBaseDir then "#{opts.inputBaseDir}/#{swaggerFile}" else swaggerFile}")
+      args.push("--input-file=#{opts.inputBaseDir}/#{swaggerFile}")
 
     if (opts['override-info.version'])
       args.push("--override-info.version=#{opts['override-info.version']}")
@@ -37,7 +37,7 @@ regenExpected = (opts,done) ->
       instances--
       return done() if instances is 0
 
-mappings = {
+mappingsTestServer = {
   'azure-parameter-grouping'    : 'azure-parameter-grouping.json',
   'azure-report'                : 'azure-report.json',
   'azure-resource-x'            : 'azure-resource-x.json',
@@ -83,12 +83,31 @@ mappings = {
   'validation'                  : 'validation.json'
 }
 
-swaggerDir = "node_modules/@microsoft.azure/autorest.testserver/swagger"
+mappingsSpecs = {
+  'specs-compute'          : 'compute/resource-manager/Microsoft.Compute/2017-03-30/compute.json',
+  'specs-network'          : 'network/resource-manager/Microsoft.Network/2017-10-01/network.json',
+  'specs-web'              : 'web/resource-manager/Microsoft.Web/2016-08-01/WebApps.json',
+  'specs-mobileengagement' : 'mobileengagement/resource-manager/Microsoft.MobileEngagement/2014-12-01/mobile-engagement.json',
+  'specs-datalake-store'   : 'datalake-store/data-plane/Microsoft.DataLakeStore/2016-11-01/filesystem.json',
+  'specs-search'           : 'search/data-plane/Microsoft.Search/2016-09-01/searchindex.json',
+  'specs-batch'            : 'batch/data-plane/Microsoft.Batch/2017-09-01.6.0/BatchService.json'
+}
 
-task 'regenerate', '', (done) ->
+task 'regenerate-testserver', '', (done) ->
   regenExpected {
-    'inputBaseDir': swaggerDir,
-    'mappings': mappings,
+    'inputBaseDir': "node_modules/@microsoft.azure/autorest.testserver/swagger",
+    'mappings': mappingsTestServer,
     'outputDir': 'test/Expected'
   },done
   return null
+
+task 'regenerate-specs', '', (done) ->
+  regenExpected {
+    'inputBaseDir': "https://github.com/Azure/azure-rest-api-specs/blob/2df71489cc110ca9d3251bf7a4e685ab6616f379/specification",
+    'mappings': mappingsSpecs,
+    'outputDir': 'test/Expected'
+  },done
+  return null
+
+task 'regenerate', "regenerate expected code for tests", ['regenerate-testserver', 'regenerate-specs'], (done) ->
+  done();
