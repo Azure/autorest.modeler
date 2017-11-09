@@ -5,6 +5,8 @@ using AutoRest.Core;
 using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
 using Microsoft.Perks.JsonRPC;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace AutoRest.Modeler
 {
@@ -53,7 +55,29 @@ namespace AutoRest.Modeler
             var codeModel = modeler.Build(serviceDefinition);
 
             var genericSerializer = new ModelSerializer<CodeModel>();
-            var modelAsJson = genericSerializer.ToJson(codeModel);
+
+            var serializerSettings =
+                new JsonSerializerSettings
+                {
+                    Converters =
+                    {
+                        new DependencyInjectionJsonConverter<CompositeType>(),
+                        new DependencyInjectionJsonConverter<DictionaryType>(),
+                        new DependencyInjectionJsonConverter<SequenceType>(),
+                        new DependencyInjectionJsonConverter<PrimaryType>(),
+                        new DependencyInjectionJsonConverter<EnumType>(),
+                        new DependencyInjectionJsonConverter<Method>(),
+                        new DependencyInjectionJsonConverter<Parameter>(),
+                        new DependencyInjectionJsonConverter<Property>(),
+                        new DependencyInjectionJsonConverter<CodeModel>(),
+                        new StringEnumConverter {CamelCaseText = true}
+                    },
+                    Formatting = Formatting.Indented,
+                    NullValueHandling = NullValueHandling.Ignore,
+                    DateParseHandling = DateParseHandling.None,
+                    ContractResolver = CodeModelContractResolver.Instance,
+                };
+            var modelAsJson = JsonConvert.SerializeObject(codeModel, CodeModelSettings.SerializerSettings);
 
             WriteFile("code-model-v1.yaml", modelAsJson, null);
 
