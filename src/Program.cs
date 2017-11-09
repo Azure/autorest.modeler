@@ -54,12 +54,11 @@ namespace AutoRest.Modeler
             var modeler = new SwaggerModeler(settings, true == await GetValue<bool?>("generate-empty-classes"));
             var codeModel = modeler.Build(serviceDefinition);
 
-            var genericSerializer = new ModelSerializer<CodeModel>();
-
             var modelAsJson = JsonConvert.SerializeObject(codeModel, new JsonSerializerSettings
                 {
-                    Formatting = Formatting.Indented,
-                    NullValueHandling = NullValueHandling.Ignore
+                    Converters = { new StringEnumConverter { CamelCaseText = true } },
+                    NullValueHandling = NullValueHandling.Ignore,
+                    ContractResolver = CodeModelContractResolver.Instance
                 });
 
             WriteFile("code-model-v1.yaml", modelAsJson, null);

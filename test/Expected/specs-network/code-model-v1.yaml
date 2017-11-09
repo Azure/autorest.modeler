@@ -8,6 +8,10 @@ documentation: >-
   an end user and the Microsoft Azure Networks service.
 enumTypes:
   - $ref: '21'
+extensions:
+  security:
+    - azure_auth:
+        - user_impersonation
 modelTypes:
   - $id: '1'
     $type: CompositeType
