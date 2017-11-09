@@ -433,13 +433,6 @@ namespace AutoRest.Modeler
             }
             else
             {
-                if (_operation.GetProduces().IsNullOrEmpty())
-                {
-                    method.Responses[responseStatusCode] = new Response(New<PrimaryType>(KnownPrimaryType.Object), headerType);
-                    BuildMethodReturnTypeStack(New<PrimaryType>(KnownPrimaryType.Object), types);
-                    handled = true;
-                }
-
                 var unwrapedSchemaProperties =
                     _swaggerModeler.Resolver.Unwrap(response.Schema).Properties;
                 if (unwrapedSchemaProperties != null && unwrapedSchemaProperties.Any())

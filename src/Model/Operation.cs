@@ -100,51 +100,5 @@ namespace AutoRest.Modeler.Model
         public Dictionary<string, OperationResponse> Responses { get; set; }
 
         public bool Deprecated { get; set; }
-
-        private SwaggerParameter FindParameter(string name, IEnumerable<SwaggerParameter> operationParameters, IDictionary<string, SwaggerParameter> clientParameters)
-        {
-            if (Parameters != null)
-            {
-                foreach (var param in operationParameters)
-                {
-                    if (name.Equals(param.Name))
-                        return param;
-
-                    var pRef = FindReferencedParameter(param.Reference, clientParameters);
-
-                    if (pRef != null && name.Equals(pRef.Name))
-                    {
-                        return pRef;
-                    }
-                }
-            }
-            return null;
-        }
-
-        private OperationResponse FindResponse(string name, IDictionary<string, OperationResponse> responses)
-        {
-            OperationResponse response = null;
-            this.Responses.TryGetValue(name, out response);
-            return response;
-        }
-
-
-        private static SwaggerParameter FindReferencedParameter(string reference, IDictionary<string, SwaggerParameter> parameters)
-        {
-            if (reference != null && reference.StartsWith("#", StringComparison.Ordinal))
-            {
-                var parts = reference.Split('/');
-                if (parts.Length == 3 && parts[1].Equals("parameters"))
-                {
-                    SwaggerParameter p = null;
-                    if (parameters.TryGetValue(parts[2], out p))
-                    {
-                        return p;
-                    }
-                }
-            }
-
-            return null;
-        }
     }
 }
