@@ -5,8 +5,25 @@ codeGenExtensions:
   internalConstructors: true
 documentation: Creates an Azure Data Lake Store filesystem client.
 enumTypes:
-  - $ref: '51'
-  - $id: '79'
+  - &ref_2
+    $type: EnumType
+    modelAsExtensible: false
+    modelAsString: false
+    name:
+      fixed: false
+      raw: FileType
+    underlyingType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: FILE
+        serializedName: FILE
+      - name: DIRECTORY
+        serializedName: DIRECTORY
+  - &ref_7
     $type: EnumType
     modelAsExtensible: false
     modelAsString: false
@@ -14,7 +31,6 @@ enumTypes:
       fixed: false
       raw: ExpiryOptionType
     underlyingType:
-      $id: '80'
       $type: PrimaryType
       knownPrimaryType: string
       name:
@@ -29,7 +45,7 @@ enumTypes:
         serializedName: RelativeToCreationDate
       - name: Absolute
         serializedName: Absolute
-  - $id: '81'
+  - &ref_8
     $type: EnumType
     modelAsExtensible: false
     modelAsString: false
@@ -37,7 +53,6 @@ enumTypes:
       fixed: false
       raw: AppendModeType
     underlyingType:
-      $id: '82'
       $type: PrimaryType
       knownPrimaryType: string
       name:
@@ -46,7 +61,7 @@ enumTypes:
     values:
       - name: autocreate
         serializedName: autocreate
-  - $id: '83'
+  - &ref_9
     $type: EnumType
     modelAsExtensible: false
     modelAsString: false
@@ -54,7 +69,6 @@ enumTypes:
       fixed: false
       raw: SyncFlag
     underlyingType:
-      $id: '84'
       $type: PrimaryType
       knownPrimaryType: string
       name:
@@ -68,7 +82,89 @@ enumTypes:
       - name: CLOSE
         serializedName: CLOSE
 errorTypes:
-  - $ref: '77'
+  - &ref_6
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: Data Lake Store filesystem error containing a specific WebHDFS exception.
+    name:
+      fixed: false
+      raw: AdlsError
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: the object representing the actual WebHDFS exception being returned.
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType: &ref_5
+          $type: CompositeType
+          containsConstantProperties: false
+          documentation: >-
+            Data Lake Store filesystem exception based on the WebHDFS definition
+            for RemoteExceptions. This is a WebHDFS 'catch all' exception
+          name:
+            fixed: false
+            raw: AdlsRemoteException
+          polymorphicDiscriminator: exception
+          properties:
+            - collectionFormat: none
+              defaultValue:
+                fixed: false
+              documentation:
+                fixed: false
+                raw: >-
+                  the full class package name for the exception thrown, such as
+                  'java.lang.IllegalArgumentException'.
+              isConstant: false
+              isReadOnly: true
+              isRequired: false
+              modelType:
+                $type: PrimaryType
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: javaClassName
+              realPath:
+                - javaClassName
+              serializedName: javaClassName
+            - collectionFormat: none
+              defaultValue:
+                fixed: false
+              documentation:
+                fixed: false
+                raw: >-
+                  the message associated with the exception that was thrown,
+                  such as 'Invalid value for webhdfs parameter
+                  "permission":...'.
+              isConstant: false
+              isReadOnly: true
+              isRequired: false
+              modelType:
+                $type: PrimaryType
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: message
+              realPath:
+                - message
+              serializedName: message
+          serializedName: AdlsRemoteException
+        name:
+          fixed: false
+          raw: RemoteException
+        realPath:
+          - RemoteException
+        serializedName: RemoteException
+    serializedName: AdlsError
 extensions:
   x-ms-parameterized-host:
     hostTemplate: 'https://{accountName}.{adlsFileSystemDnsSuffix}'
@@ -89,9 +185,7 @@ extensions:
         x-ms-skip-url-encoding: true
       - $ref: '#/components/parameters/adlsFilesystemDnsSuffixInPath'
 hostParametersFront:
-  - $id: '85'
-    clientProperty:
-      $id: '86'
+  - clientProperty: &ref_17
       collectionFormat: none
       defaultValue:
         fixed: false
@@ -105,7 +199,6 @@ hostParametersFront:
       isReadOnly: false
       isRequired: true
       modelType:
-        $id: '87'
         $type: PrimaryType
         knownPrimaryType: string
         name:
@@ -131,7 +224,6 @@ hostParametersFront:
     isRequired: true
     location: path
     modelType:
-      $id: '88'
       $type: PrimaryType
       knownPrimaryType: string
       name:
@@ -141,8 +233,7 @@ hostParametersFront:
       fixed: false
       raw: adlsFileSystemDnsSuffix
     serializedName: adlsFileSystemDnsSuffix
-  - $id: '89'
-    collectionFormat: none
+  - collectionFormat: none
     defaultValue:
       fixed: false
     documentation:
@@ -156,7 +247,6 @@ hostParametersFront:
     isRequired: true
     location: path
     modelType:
-      $id: '90'
       $type: PrimaryType
       knownPrimaryType: string
       name:
@@ -167,7 +257,7 @@ hostParametersFront:
       raw: accountName
     serializedName: accountName
 modelTypes:
-  - $id: '1'
+  - &ref_11
     $type: CompositeType
     containsConstantProperties: false
     documentation: The result of the request or operation.
@@ -175,8 +265,7 @@ modelTypes:
       fixed: false
       raw: FileOperationResult
     properties:
-      - $id: '2'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -188,7 +277,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '3'
           $type: PrimaryType
           knownPrimaryType: boolean
           name:
@@ -201,7 +289,7 @@ modelTypes:
           - boolean
         serializedName: boolean
     serializedName: FileOperationResult
-  - $id: '4'
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: false
     documentation: Data Lake Store file or directory Access Control List information.
@@ -209,8 +297,7 @@ modelTypes:
       fixed: false
       raw: AclStatus
     properties:
-      - $id: '5'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -220,10 +307,8 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '6'
           $type: SequenceType
           elementType:
-            $id: '7'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -237,8 +322,7 @@ modelTypes:
         realPath:
           - entries
         serializedName: entries
-      - $id: '8'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -248,7 +332,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '9'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -260,8 +343,7 @@ modelTypes:
         realPath:
           - group
         serializedName: group
-      - $id: '10'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -271,7 +353,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '11'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -283,8 +364,7 @@ modelTypes:
         realPath:
           - owner
         serializedName: owner
-      - $id: '12'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -296,7 +376,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '13'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -309,8 +388,7 @@ modelTypes:
         realPath:
           - permission
         serializedName: permission
-      - $id: '14'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -320,7 +398,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '15'
           $type: PrimaryType
           knownPrimaryType: boolean
           name:
@@ -333,7 +410,7 @@ modelTypes:
           - stickyBit
         serializedName: stickyBit
     serializedName: AclStatus
-  - $id: '16'
+  - &ref_16
     $type: CompositeType
     containsConstantProperties: false
     documentation: Data Lake Store file or directory Access Control List information.
@@ -341,8 +418,7 @@ modelTypes:
       fixed: false
       raw: AclStatusResult
     properties:
-      - $id: '17'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -351,8 +427,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '4'
+        modelType: *ref_0
         name:
           fixed: false
           raw: AclStatus
@@ -360,7 +435,7 @@ modelTypes:
           - AclStatus
         serializedName: AclStatus
     serializedName: AclStatusResult
-  - $id: '18'
+  - &ref_1
     $type: CompositeType
     containsConstantProperties: false
     documentation: Data Lake Store content summary information
@@ -368,8 +443,7 @@ modelTypes:
       fixed: false
       raw: ContentSummary
     properties:
-      - $id: '19'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -379,7 +453,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '20'
           $type: PrimaryType
           format: int64
           knownPrimaryType: long
@@ -392,8 +465,7 @@ modelTypes:
         realPath:
           - directoryCount
         serializedName: directoryCount
-      - $id: '21'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -403,7 +475,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '22'
           $type: PrimaryType
           format: int64
           knownPrimaryType: long
@@ -416,8 +487,7 @@ modelTypes:
         realPath:
           - fileCount
         serializedName: fileCount
-      - $id: '23'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -427,7 +497,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '24'
           $type: PrimaryType
           format: int64
           knownPrimaryType: long
@@ -440,8 +509,7 @@ modelTypes:
         realPath:
           - length
         serializedName: length
-      - $id: '25'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -451,7 +519,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '26'
           $type: PrimaryType
           format: int64
           knownPrimaryType: long
@@ -465,7 +532,7 @@ modelTypes:
           - spaceConsumed
         serializedName: spaceConsumed
     serializedName: ContentSummary
-  - $id: '27'
+  - &ref_13
     $type: CompositeType
     containsConstantProperties: false
     documentation: Data Lake Store filesystem content summary information response.
@@ -473,8 +540,7 @@ modelTypes:
       fixed: false
       raw: ContentSummaryResult
     properties:
-      - $id: '28'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -483,8 +549,7 @@ modelTypes:
         isConstant: false
         isReadOnly: true
         isRequired: false
-        modelType:
-          $ref: '18'
+        modelType: *ref_1
         name:
           fixed: false
           raw: ContentSummary
@@ -492,7 +557,7 @@ modelTypes:
           - ContentSummary
         serializedName: ContentSummary
     serializedName: ContentSummaryResult
-  - $id: '29'
+  - &ref_3
     $type: CompositeType
     containsConstantProperties: false
     documentation: Data Lake Store file or directory information.
@@ -500,8 +565,7 @@ modelTypes:
       fixed: false
       raw: FileStatusProperties
     properties:
-      - $id: '30'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -511,7 +575,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '31'
           $type: PrimaryType
           format: int64
           knownPrimaryType: long
@@ -524,8 +587,7 @@ modelTypes:
         realPath:
           - accessTime
         serializedName: accessTime
-      - $id: '32'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -535,7 +597,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '33'
           $type: PrimaryType
           format: int64
           knownPrimaryType: long
@@ -548,8 +609,7 @@ modelTypes:
         realPath:
           - blockSize
         serializedName: blockSize
-      - $id: '34'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -559,7 +619,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '35'
           $type: PrimaryType
           format: int64
           knownPrimaryType: long
@@ -572,8 +631,7 @@ modelTypes:
         realPath:
           - childrenNum
         serializedName: childrenNum
-      - $id: '36'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -587,7 +645,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '37'
           $type: PrimaryType
           format: int64
           knownPrimaryType: long
@@ -600,8 +657,7 @@ modelTypes:
         realPath:
           - msExpirationTime
         serializedName: msExpirationTime
-      - $id: '38'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -611,7 +667,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '39'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -623,8 +678,7 @@ modelTypes:
         realPath:
           - group
         serializedName: group
-      - $id: '40'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -634,7 +688,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '41'
           $type: PrimaryType
           format: int64
           knownPrimaryType: long
@@ -647,8 +700,7 @@ modelTypes:
         realPath:
           - length
         serializedName: length
-      - $id: '42'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -658,7 +710,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '43'
           $type: PrimaryType
           format: int64
           knownPrimaryType: long
@@ -671,8 +722,7 @@ modelTypes:
         realPath:
           - modificationTime
         serializedName: modificationTime
-      - $id: '44'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -682,7 +732,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '45'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -694,8 +743,7 @@ modelTypes:
         realPath:
           - owner
         serializedName: owner
-      - $id: '46'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -705,7 +753,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '47'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -717,8 +764,7 @@ modelTypes:
         realPath:
           - pathSuffix
         serializedName: pathSuffix
-      - $id: '48'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -728,7 +774,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '49'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -740,8 +785,7 @@ modelTypes:
         realPath:
           - permission
         serializedName: permission
-      - $id: '50'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -754,34 +798,14 @@ modelTypes:
         isConstant: false
         isReadOnly: true
         isRequired: false
-        modelType:
-          $id: '51'
-          $type: EnumType
-          modelAsExtensible: false
-          modelAsString: false
-          name:
-            fixed: false
-            raw: FileType
-          underlyingType:
-            $id: '52'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
-          values:
-            - name: FILE
-              serializedName: FILE
-            - name: DIRECTORY
-              serializedName: DIRECTORY
+        modelType: *ref_2
         name:
           fixed: false
           raw: type
         realPath:
           - type
         serializedName: type
-      - $id: '53'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -791,7 +815,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '54'
           $type: PrimaryType
           knownPrimaryType: boolean
           name:
@@ -804,7 +827,7 @@ modelTypes:
           - aclBit
         serializedName: aclBit
     serializedName: FileStatusProperties
-  - $id: '55'
+  - &ref_4
     $type: CompositeType
     containsConstantProperties: false
     documentation: Data Lake Store file status list information.
@@ -812,8 +835,7 @@ modelTypes:
       fixed: false
       raw: FileStatuses
     properties:
-      - $id: '56'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -823,10 +845,8 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '57'
           $type: SequenceType
-          elementType:
-            $ref: '29'
+          elementType: *ref_3
           name:
             fixed: false
         name:
@@ -836,7 +856,7 @@ modelTypes:
           - FileStatus
         serializedName: FileStatus
     serializedName: FileStatuses
-  - $id: '58'
+  - &ref_12
     $type: CompositeType
     containsConstantProperties: false
     documentation: Data Lake Store filesystem file status list information response.
@@ -844,8 +864,7 @@ modelTypes:
       fixed: false
       raw: FileStatusesResult
     properties:
-      - $id: '59'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -854,8 +873,7 @@ modelTypes:
         isConstant: false
         isReadOnly: true
         isRequired: false
-        modelType:
-          $ref: '55'
+        modelType: *ref_4
         name:
           fixed: false
           raw: FileStatuses
@@ -863,7 +881,7 @@ modelTypes:
           - FileStatuses
         serializedName: FileStatuses
     serializedName: FileStatusesResult
-  - $id: '60'
+  - &ref_14
     $type: CompositeType
     containsConstantProperties: false
     documentation: Data Lake Store filesystem file status information response.
@@ -871,8 +889,7 @@ modelTypes:
       fixed: false
       raw: FileStatusResult
     properties:
-      - $id: '61'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -881,8 +898,7 @@ modelTypes:
         isConstant: false
         isReadOnly: true
         isRequired: false
-        modelType:
-          $ref: '29'
+        modelType: *ref_3
         name:
           fixed: false
           raw: FileStatus
@@ -890,71 +906,8 @@ modelTypes:
           - FileStatus
         serializedName: FileStatus
     serializedName: FileStatusResult
-  - $id: '62'
-    $type: CompositeType
-    baseModelType:
-      $id: '63'
-      $type: CompositeType
-      containsConstantProperties: false
-      documentation: >-
-        Data Lake Store filesystem exception based on the WebHDFS definition for
-        RemoteExceptions. This is a WebHDFS 'catch all' exception
-      name:
-        fixed: false
-        raw: AdlsRemoteException
-      polymorphicDiscriminator: exception
-      properties:
-        - $id: '64'
-          collectionFormat: none
-          defaultValue:
-            fixed: false
-          documentation:
-            fixed: false
-            raw: >-
-              the full class package name for the exception thrown, such as
-              'java.lang.IllegalArgumentException'.
-          isConstant: false
-          isReadOnly: true
-          isRequired: false
-          modelType:
-            $id: '65'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
-          name:
-            fixed: false
-            raw: javaClassName
-          realPath:
-            - javaClassName
-          serializedName: javaClassName
-        - $id: '66'
-          collectionFormat: none
-          defaultValue:
-            fixed: false
-          documentation:
-            fixed: false
-            raw: >-
-              the message associated with the exception that was thrown, such as
-              'Invalid value for webhdfs parameter "permission":...'.
-          isConstant: false
-          isReadOnly: true
-          isRequired: false
-          modelType:
-            $id: '67'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
-          name:
-            fixed: false
-            raw: message
-          realPath:
-            - message
-          serializedName: message
-      serializedName: AdlsRemoteException
+  - $type: CompositeType
+    baseModelType: *ref_5
     containsConstantProperties: false
     documentation: >-
       A WebHDFS exception thrown indicating that one more arguments is
@@ -966,10 +919,8 @@ modelTypes:
       fixed: false
       raw: AdlsIllegalArgumentException
     serializedName: IllegalArgumentException
-  - $id: '68'
-    $type: CompositeType
-    baseModelType:
-      $ref: '63'
+  - $type: CompositeType
+    baseModelType: *ref_5
     containsConstantProperties: false
     documentation: >-
       A WebHDFS exception thrown indicating that the requested operation is not
@@ -981,10 +932,8 @@ modelTypes:
       fixed: false
       raw: AdlsUnsupportedOperationException
     serializedName: UnsupportedOperationException
-  - $id: '69'
-    $type: CompositeType
-    baseModelType:
-      $ref: '63'
+  - $type: CompositeType
+    baseModelType: *ref_5
     containsConstantProperties: false
     documentation: >-
       A WebHDFS exception thrown indicating that access is denied. Thrown when a
@@ -995,10 +944,8 @@ modelTypes:
       fixed: false
       raw: AdlsSecurityException
     serializedName: SecurityException
-  - $id: '70'
-    $type: CompositeType
-    baseModelType:
-      $ref: '63'
+  - $type: CompositeType
+    baseModelType: *ref_5
     containsConstantProperties: false
     documentation: >-
       A WebHDFS exception thrown indicating there was an IO (read or write)
@@ -1009,10 +956,8 @@ modelTypes:
       fixed: false
       raw: AdlsIOException
     serializedName: IOException
-  - $id: '71'
-    $type: CompositeType
-    baseModelType:
-      $ref: '63'
+  - $type: CompositeType
+    baseModelType: *ref_5
     containsConstantProperties: false
     documentation: >-
       A WebHDFS exception thrown indicating the file or folder could not be
@@ -1023,10 +968,8 @@ modelTypes:
       fixed: false
       raw: AdlsFileNotFoundException
     serializedName: FileNotFoundException
-  - $id: '72'
-    $type: CompositeType
-    baseModelType:
-      $ref: '63'
+  - $type: CompositeType
+    baseModelType: *ref_5
     containsConstantProperties: false
     documentation: >-
       A WebHDFS exception thrown indicating the file or folder already exists.
@@ -1037,10 +980,8 @@ modelTypes:
       fixed: false
       raw: AdlsFileAlreadyExistsException
     serializedName: FileAlreadyExistsException
-  - $id: '73'
-    $type: CompositeType
-    baseModelType:
-      $ref: '63'
+  - $type: CompositeType
+    baseModelType: *ref_5
     containsConstantProperties: false
     documentation: >-
       A WebHDFS exception thrown indicating the append or read is from a bad
@@ -1052,10 +993,8 @@ modelTypes:
       fixed: false
       raw: AdlsBadOffsetException
     serializedName: BadOffsetException
-  - $id: '74'
-    $type: CompositeType
-    baseModelType:
-      $ref: '63'
+  - $type: CompositeType
+    baseModelType: *ref_5
     containsConstantProperties: false
     documentation: >-
       A WebHDFS exception thrown when an unexpected error occurs during an
@@ -1067,10 +1006,8 @@ modelTypes:
       fixed: false
       raw: AdlsRuntimeException
     serializedName: RuntimeException
-  - $id: '75'
-    $type: CompositeType
-    baseModelType:
-      $ref: '63'
+  - $type: CompositeType
+    baseModelType: *ref_5
     containsConstantProperties: false
     documentation: >-
       A WebHDFS exception thrown indicating that access is denied due to
@@ -1082,10 +1019,8 @@ modelTypes:
       fixed: false
       raw: AdlsAccessControlException
     serializedName: AccessControlException
-  - $id: '76'
-    $type: CompositeType
-    baseModelType:
-      $ref: '63'
+  - $type: CompositeType
+    baseModelType: *ref_5
     containsConstantProperties: false
     documentation: >-
       A WebHDFS exception thrown indicating that the request is being throttled.
@@ -1097,42 +1032,15 @@ modelTypes:
       fixed: false
       raw: AdlsThrottledException
     serializedName: ThrottledException
-  - $ref: '63'
-  - $id: '77'
-    $type: CompositeType
-    containsConstantProperties: false
-    documentation: Data Lake Store filesystem error containing a specific WebHDFS exception.
-    name:
-      fixed: false
-      raw: AdlsError
-    properties:
-      - $id: '78'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-          raw: the object representing the actual WebHDFS exception being returned.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $ref: '63'
-        name:
-          fixed: false
-          raw: RemoteException
-        realPath:
-          - RemoteException
-        serializedName: RemoteException
-    serializedName: AdlsError
+  - *ref_5
+  - *ref_6
 modelsName: Models
 name: DataLakeStoreFileSystemManagementClient
 namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: >-
@@ -1160,8 +1068,7 @@ operations:
           fixed: false
           raw: SetFileExpiry
         parameters:
-          - $id: '93'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1173,7 +1080,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '94'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1183,8 +1089,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '95'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1205,14 +1110,12 @@ operations:
             isConstant: false
             isRequired: true
             location: query
-            modelType:
-              $ref: '79'
+            modelType: *ref_7
             name:
               fixed: false
               raw: expiryOption
             serializedName: expiryOption
-          - $id: '96'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1224,7 +1127,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '97'
               $type: PrimaryType
               format: int64
               knownPrimaryType: long
@@ -1235,8 +1137,7 @@ operations:
               fixed: false
               raw: expireTime
             serializedName: expireTime
-          - $id: '98'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: SETEXPIRY
@@ -1247,7 +1148,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '99'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1257,9 +1157,28 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '100'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: &ref_10
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+              documentation:
+                fixed: false
+                raw: Client Api Version.
+              isConstant: false
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: api-version
+              realPath:
+                - api-version
+              serializedName: api-version
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1270,7 +1189,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '101'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1291,8 +1209,7 @@ operations:
         serializedName: FileSystem_SetFileExpiry
         url: '/WebHdfsExt/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: >-
@@ -1330,8 +1247,7 @@ operations:
           fixed: false
           raw: ConcurrentAppend
         parameters:
-          - $id: '102'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1343,7 +1259,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '103'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1353,8 +1268,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '104'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1366,7 +1280,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '105'
               $type: PrimaryType
               knownPrimaryType: stream
               name:
@@ -1376,8 +1289,7 @@ operations:
               fixed: false
               raw: streamContents
             serializedName: streamContents
-          - $id: '106'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1392,14 +1304,12 @@ operations:
             isConstant: false
             isRequired: false
             location: query
-            modelType:
-              $ref: '81'
+            modelType: *ref_8
             name:
               fixed: false
               raw: appendMode
             serializedName: appendMode
-          - $id: '107'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: CONCURRENTAPPEND
@@ -1410,7 +1320,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '108'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1420,8 +1329,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '109'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: chunked
@@ -1434,7 +1342,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '110'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1444,8 +1351,7 @@ operations:
               fixed: false
               raw: Transfer-Encoding
             serializedName: Transfer-Encoding
-          - $id: '111'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: DATA
@@ -1469,15 +1375,12 @@ operations:
             isConstant: false
             isRequired: false
             location: query
-            modelType:
-              $ref: '83'
+            modelType: *ref_9
             name:
               fixed: false
               raw: syncFlag
             serializedName: syncFlag
-          - $id: '112'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1488,7 +1391,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '113'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1509,8 +1411,7 @@ operations:
         serializedName: FileSystem_ConcurrentAppend
         url: '/WebHdfsExt/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: Checks if the specified access is available at the given path.
@@ -1534,8 +1435,7 @@ operations:
           fixed: false
           raw: CheckAccess
         parameters:
-          - $id: '114'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1547,7 +1447,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '115'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1557,8 +1456,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '116'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1570,7 +1468,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '117'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1580,8 +1477,7 @@ operations:
               fixed: false
               raw: fsaction
             serializedName: fsaction
-          - $id: '118'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: CHECKACCESS
@@ -1592,7 +1488,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '119'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1602,9 +1497,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '120'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1615,7 +1508,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '121'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1636,8 +1528,7 @@ operations:
         serializedName: FileSystem_CheckAccess
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: Creates a directory.
@@ -1663,8 +1554,7 @@ operations:
           fixed: false
           raw: Mkdirs
         parameters:
-          - $id: '122'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1676,7 +1566,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '123'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1686,8 +1575,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '124'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1699,7 +1587,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '125'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -1710,8 +1597,7 @@ operations:
               fixed: false
               raw: permission
             serializedName: permission
-          - $id: '126'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: MKDIRS
@@ -1722,7 +1608,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '127'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1732,9 +1617,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '128'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1745,7 +1628,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '129'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1760,18 +1642,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '1'
+            body: *ref_11
             isNullable: true
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_11
           isNullable: true
         serializedName: FileSystem_Mkdirs
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: >-
@@ -1799,8 +1678,7 @@ operations:
           fixed: false
           raw: Concat
         parameters:
-          - $id: '130'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1812,7 +1690,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '131'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1822,8 +1699,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '132'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -1836,10 +1712,8 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '133'
               $type: SequenceType
               elementType:
-                $id: '134'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -1851,8 +1725,7 @@ operations:
               fixed: false
               raw: sources
             serializedName: sources
-          - $id: '135'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: CONCAT
@@ -1863,7 +1736,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '136'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1873,9 +1745,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '137'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1886,7 +1756,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '138'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1907,8 +1776,7 @@ operations:
         serializedName: FileSystem_Concat
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: >-
@@ -1940,8 +1808,7 @@ operations:
           fixed: false
           raw: MsConcat
         parameters:
-          - $id: '139'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1953,7 +1820,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '140'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1963,8 +1829,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '141'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1982,7 +1847,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '142'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -1992,8 +1856,7 @@ operations:
               fixed: false
               raw: deleteSourceDirectory
             serializedName: deleteSourceDirectory
-          - $id: '143'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2008,7 +1871,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '144'
               $type: PrimaryType
               knownPrimaryType: stream
               name:
@@ -2018,8 +1880,7 @@ operations:
               fixed: false
               raw: streamContents
             serializedName: streamContents
-          - $id: '145'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: MSCONCAT
@@ -2030,7 +1891,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '146'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2040,9 +1900,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '147'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2053,7 +1911,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '148'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2074,8 +1931,7 @@ operations:
         serializedName: FileSystem_MsConcat
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: >-
@@ -2119,8 +1975,7 @@ operations:
           fixed: false
           raw: ListFileStatus
         parameters:
-          - $id: '149'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2132,7 +1987,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '150'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2142,8 +1996,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '151'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2153,7 +2006,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '152'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -2164,8 +2016,7 @@ operations:
               fixed: false
               raw: listSize
             serializedName: listSize
-          - $id: '153'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2179,7 +2030,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '154'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2189,8 +2039,7 @@ operations:
               fixed: false
               raw: listAfter
             serializedName: listAfter
-          - $id: '155'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2204,7 +2053,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '156'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2214,8 +2062,7 @@ operations:
               fixed: false
               raw: listBefore
             serializedName: listBefore
-          - $id: '157'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2228,7 +2075,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '158'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -2238,8 +2084,7 @@ operations:
               fixed: false
               raw: tooId
             serializedName: tooId
-          - $id: '159'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: LISTSTATUS
@@ -2250,7 +2095,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '160'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2260,9 +2104,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '161'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2273,7 +2115,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '162'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2288,18 +2129,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '58'
+            body: *ref_12
             isNullable: true
         returnType:
-          body:
-            $ref: '58'
+          body: *ref_12
           isNullable: true
         serializedName: FileSystem_ListFileStatus
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: Gets the file content summary object specified by the file path.
@@ -2328,8 +2166,7 @@ operations:
           fixed: false
           raw: GetContentSummary
         parameters:
-          - $id: '163'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2341,7 +2178,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '164'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2351,8 +2187,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '165'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: GETCONTENTSUMMARY
@@ -2363,7 +2198,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '166'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2373,9 +2207,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '167'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2386,7 +2218,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '168'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2401,18 +2232,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '27'
+            body: *ref_13
             isNullable: true
         returnType:
-          body:
-            $ref: '27'
+          body: *ref_13
           isNullable: true
         serializedName: FileSystem_GetContentSummary
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: Get the file status object specified by the file path.
@@ -2450,8 +2278,7 @@ operations:
           fixed: false
           raw: GetFileStatus
         parameters:
-          - $id: '169'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2463,7 +2290,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '170'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2473,8 +2299,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '171'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2487,7 +2312,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '172'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -2497,8 +2321,7 @@ operations:
               fixed: false
               raw: tooId
             serializedName: tooId
-          - $id: '173'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: GETFILESTATUS
@@ -2509,7 +2332,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '174'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2519,9 +2341,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '175'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2532,7 +2352,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '176'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2547,12 +2366,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '60'
+            body: *ref_14
             isNullable: true
         returnType:
-          body:
-            $ref: '60'
+          body: *ref_14
           isNullable: true
         serializedName: FileSystem_GetFileStatus
         url: '/webhdfs/v1/{path}'
@@ -2586,8 +2403,7 @@ operations:
           fixed: false
           raw: Open
         parameters:
-          - $id: '177'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2599,7 +2415,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '178'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2609,8 +2424,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '179'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2622,7 +2436,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '180'
               $type: PrimaryType
               format: int64
               knownPrimaryType: long
@@ -2633,8 +2446,7 @@ operations:
               fixed: false
               raw: length
             serializedName: length
-          - $id: '181'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2644,7 +2456,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '182'
               $type: PrimaryType
               format: int64
               knownPrimaryType: long
@@ -2655,8 +2466,7 @@ operations:
               fixed: false
               raw: offset
             serializedName: offset
-          - $id: '183'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2669,7 +2479,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '184'
               $type: PrimaryType
               format: uuid
               knownPrimaryType: uuid
@@ -2680,8 +2489,7 @@ operations:
               fixed: false
               raw: fileSessionId
             serializedName: fileSessionId
-          - $id: '185'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: 'true'
@@ -2696,7 +2504,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '186'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2706,8 +2513,7 @@ operations:
               fixed: false
               raw: read
             serializedName: read
-          - $id: '187'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: OPEN
@@ -2718,7 +2524,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '188'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2728,9 +2533,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '189'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2741,7 +2544,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '190'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2756,8 +2558,7 @@ operations:
           - application/octet-stream
         responses:
           OK:
-            body:
-              $id: '191'
+            body: &ref_15
               $type: PrimaryType
               knownPrimaryType: stream
               name:
@@ -2765,14 +2566,12 @@ operations:
                 raw: Stream
             isNullable: true
         returnType:
-          body:
-            $ref: '191'
+          body: *ref_15
           isNullable: true
         serializedName: FileSystem_Open
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: "Used for serial appends to the specified file.\_NOTE: The target must not contain data added by ConcurrentAppend. ConcurrentAppend and Append cannot be used interchangeably; once a target file has been modified using either of these append options, the other append option cannot be used on the target file."
@@ -2804,8 +2603,7 @@ operations:
           fixed: false
           raw: Append
         parameters:
-          - $id: '192'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2817,7 +2615,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '193'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2827,8 +2624,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '194'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2840,7 +2636,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '195'
               $type: PrimaryType
               knownPrimaryType: stream
               name:
@@ -2850,8 +2645,7 @@ operations:
               fixed: false
               raw: streamContents
             serializedName: streamContents
-          - $id: '196'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2863,7 +2657,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '197'
               $type: PrimaryType
               format: int64
               knownPrimaryType: long
@@ -2874,8 +2667,7 @@ operations:
               fixed: false
               raw: offset
             serializedName: offset
-          - $id: '198'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: CLOSE
@@ -2899,14 +2691,12 @@ operations:
             isConstant: false
             isRequired: false
             location: query
-            modelType:
-              $ref: '83'
+            modelType: *ref_9
             name:
               fixed: false
               raw: syncFlag
             serializedName: syncFlag
-          - $id: '199'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2919,7 +2709,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '200'
               $type: PrimaryType
               format: uuid
               knownPrimaryType: uuid
@@ -2930,8 +2719,7 @@ operations:
               fixed: false
               raw: leaseId
             serializedName: leaseId
-          - $id: '201'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2945,7 +2733,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '202'
               $type: PrimaryType
               format: uuid
               knownPrimaryType: uuid
@@ -2956,8 +2743,7 @@ operations:
               fixed: false
               raw: fileSessionId
             serializedName: fileSessionId
-          - $id: '203'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: 'true'
@@ -2972,7 +2758,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '204'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2982,8 +2767,7 @@ operations:
               fixed: false
               raw: append
             serializedName: append
-          - $id: '205'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: APPEND
@@ -2994,7 +2778,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '206'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3004,9 +2787,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '207'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -3017,7 +2798,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '208'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3038,8 +2818,7 @@ operations:
         serializedName: FileSystem_Append
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: >-
@@ -3073,8 +2852,7 @@ operations:
           fixed: false
           raw: Create
         parameters:
-          - $id: '209'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3086,7 +2864,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '210'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3096,8 +2873,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '211'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3112,7 +2888,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '212'
               $type: PrimaryType
               knownPrimaryType: stream
               name:
@@ -3122,8 +2897,7 @@ operations:
               fixed: false
               raw: streamContents
             serializedName: streamContents
-          - $id: '213'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3133,7 +2907,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '214'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -3143,8 +2916,7 @@ operations:
               fixed: false
               raw: overwrite
             serializedName: overwrite
-          - $id: '215'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: CLOSE
@@ -3167,14 +2939,12 @@ operations:
             isConstant: false
             isRequired: false
             location: query
-            modelType:
-              $ref: '83'
+            modelType: *ref_9
             name:
               fixed: false
               raw: syncFlag
             serializedName: syncFlag
-          - $id: '216'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3187,7 +2957,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '217'
               $type: PrimaryType
               format: uuid
               knownPrimaryType: uuid
@@ -3198,8 +2967,7 @@ operations:
               fixed: false
               raw: leaseId
             serializedName: leaseId
-          - $id: '218'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3212,7 +2980,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '219'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -3223,8 +2990,7 @@ operations:
               fixed: false
               raw: permission
             serializedName: permission
-          - $id: '220'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: 'true'
@@ -3239,7 +3005,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '221'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3249,8 +3014,7 @@ operations:
               fixed: false
               raw: write
             serializedName: write
-          - $id: '222'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: CREATE
@@ -3261,7 +3025,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '223'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3271,9 +3034,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '224'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -3284,7 +3045,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '225'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3305,8 +3065,7 @@ operations:
         serializedName: FileSystem_Create
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: Sets the Access Control List (ACL) for a file or folder.
@@ -3330,8 +3089,7 @@ operations:
           fixed: false
           raw: SetAcl
         parameters:
-          - $id: '226'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3343,7 +3101,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '227'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3353,8 +3110,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '228'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3366,7 +3122,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '229'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3376,8 +3131,7 @@ operations:
               fixed: false
               raw: aclspec
             serializedName: aclspec
-          - $id: '230'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: SETACL
@@ -3388,7 +3142,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '231'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3398,9 +3151,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '232'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -3411,7 +3162,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '233'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3432,8 +3182,7 @@ operations:
         serializedName: FileSystem_SetAcl
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: >-
@@ -3459,8 +3208,7 @@ operations:
           fixed: false
           raw: ModifyAclEntries
         parameters:
-          - $id: '234'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3472,7 +3220,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '235'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3482,8 +3229,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '236'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3495,7 +3241,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '237'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3505,8 +3250,7 @@ operations:
               fixed: false
               raw: aclspec
             serializedName: aclspec
-          - $id: '238'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: MODIFYACLENTRIES
@@ -3517,7 +3261,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '239'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3527,9 +3270,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '240'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -3540,7 +3281,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '241'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3561,8 +3301,7 @@ operations:
         serializedName: FileSystem_ModifyAclEntries
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: >-
@@ -3588,8 +3327,7 @@ operations:
           fixed: false
           raw: RemoveAclEntries
         parameters:
-          - $id: '242'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3601,7 +3339,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '243'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3611,8 +3348,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '244'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3624,7 +3360,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '245'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3634,8 +3369,7 @@ operations:
               fixed: false
               raw: aclspec
             serializedName: aclspec
-          - $id: '246'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: REMOVEACLENTRIES
@@ -3646,7 +3380,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '247'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3656,9 +3389,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '248'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -3669,7 +3400,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '249'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3690,8 +3420,7 @@ operations:
         serializedName: FileSystem_RemoveAclEntries
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: >-
@@ -3716,8 +3445,7 @@ operations:
           fixed: false
           raw: RemoveDefaultAcl
         parameters:
-          - $id: '250'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3729,7 +3457,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '251'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3739,8 +3466,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '252'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: REMOVEDEFAULTACL
@@ -3751,7 +3477,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '253'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3761,9 +3486,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '254'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -3774,7 +3497,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '255'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3795,8 +3517,7 @@ operations:
         serializedName: FileSystem_RemoveDefaultAcl
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: >-
@@ -3821,8 +3542,7 @@ operations:
           fixed: false
           raw: RemoveAcl
         parameters:
-          - $id: '256'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3834,7 +3554,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '257'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3844,8 +3563,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '258'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: REMOVEACL
@@ -3856,7 +3574,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '259'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3866,9 +3583,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '260'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -3879,7 +3594,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '261'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3900,8 +3614,7 @@ operations:
         serializedName: FileSystem_RemoveAcl
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: >-
@@ -3935,8 +3648,7 @@ operations:
           fixed: false
           raw: GetAclStatus
         parameters:
-          - $id: '262'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3948,7 +3660,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '263'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -3958,8 +3669,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '264'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3973,7 +3683,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '265'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -3983,8 +3692,7 @@ operations:
               fixed: false
               raw: tooId
             serializedName: tooId
-          - $id: '266'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: GETACLSTATUS
@@ -3995,7 +3703,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '267'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4005,9 +3712,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '268'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -4018,7 +3723,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '269'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4033,18 +3737,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '16'
+            body: *ref_16
             isNullable: true
         returnType:
-          body:
-            $ref: '16'
+          body: *ref_16
           isNullable: true
         serializedName: FileSystem_GetAclStatus
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: 'Deletes the requested file or directory, optionally recursively.'
@@ -4070,8 +3771,7 @@ operations:
           fixed: false
           raw: Delete
         parameters:
-          - $id: '270'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -4083,7 +3783,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '271'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4093,8 +3792,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '272'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -4104,7 +3802,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '273'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -4114,8 +3811,7 @@ operations:
               fixed: false
               raw: recursive
             serializedName: recursive
-          - $id: '274'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: DELETE
@@ -4126,7 +3822,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '275'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4136,9 +3831,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '276'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -4149,7 +3842,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '277'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4164,18 +3856,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '1'
+            body: *ref_11
             isNullable: true
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_11
           isNullable: true
         serializedName: FileSystem_Delete
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: Rename a file or directory.
@@ -4201,8 +3890,7 @@ operations:
           fixed: false
           raw: Rename
         parameters:
-          - $id: '278'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -4214,7 +3902,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '279'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4224,8 +3911,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '280'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -4235,7 +3921,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '281'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4245,8 +3930,7 @@ operations:
               fixed: false
               raw: destination
             serializedName: destination
-          - $id: '282'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: RENAME
@@ -4257,7 +3941,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '283'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4267,9 +3950,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '284'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -4280,7 +3961,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '285'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4295,18 +3975,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '1'
+            body: *ref_11
             isNullable: true
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_11
           isNullable: true
         serializedName: FileSystem_Rename
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: Sets the owner of a file or directory.
@@ -4331,8 +4008,7 @@ operations:
           fixed: false
           raw: SetOwner
         parameters:
-          - $id: '286'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -4344,7 +4020,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '287'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4354,8 +4029,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '288'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -4367,7 +4041,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '289'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4377,8 +4050,7 @@ operations:
               fixed: false
               raw: owner
             serializedName: owner
-          - $id: '290'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -4390,7 +4062,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '291'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4400,8 +4071,7 @@ operations:
               fixed: false
               raw: group
             serializedName: group
-          - $id: '292'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: SETOWNER
@@ -4412,7 +4082,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '293'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4422,9 +4091,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '294'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -4435,7 +4102,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '295'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4456,8 +4122,7 @@ operations:
         serializedName: FileSystem_SetOwner
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body:
-            $ref: '77'
+          body: *ref_6
           isNullable: true
         deprecated: false
         description: Sets the permission of the file or folder.
@@ -4481,8 +4146,7 @@ operations:
           fixed: false
           raw: SetPermission
         parameters:
-          - $id: '296'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -4494,7 +4158,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '297'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4504,8 +4167,7 @@ operations:
               fixed: false
               raw: path
             serializedName: path
-          - $id: '298'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -4517,7 +4179,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '299'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4527,8 +4188,7 @@ operations:
               fixed: false
               raw: permission
             serializedName: permission
-          - $id: '300'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: SETPERMISSION
@@ -4539,7 +4199,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '301'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4549,9 +4208,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - $id: '302'
-            clientProperty:
-              $ref: '91'
+          - clientProperty: *ref_10
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -4562,7 +4219,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '303'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -4589,27 +4245,5 @@ operations:
     typeName:
       fixed: false
 properties:
-  - $id: '91'
-    collectionFormat: none
-    defaultValue:
-      fixed: false
-    documentation:
-      fixed: false
-      raw: Client Api Version.
-    isConstant: false
-    isReadOnly: false
-    isRequired: true
-    modelType:
-      $id: '92'
-      $type: PrimaryType
-      knownPrimaryType: string
-      name:
-        fixed: false
-        raw: String
-    name:
-      fixed: false
-      raw: api-version
-    realPath:
-      - api-version
-    serializedName: api-version
-  - $ref: '86'
+  - *ref_10
+  - *ref_17

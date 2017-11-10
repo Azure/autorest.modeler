@@ -3,7 +3,55 @@ apiVersion: 1.0.0
 baseUrl: 'http://{accountName}{host}'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
-  - $ref: '1'
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
 extensions:
   x-ms-parameterized-host:
     hostTemplate: 'http://{accountName}{host}'
@@ -23,8 +71,7 @@ extensions:
       - $ref: '#/components/parameters/host'
     positionInOperation: last
 hostParametersBack:
-  - $id: '6'
-    collectionFormat: none
+  - collectionFormat: none
     defaultValue:
       fixed: false
     documentation:
@@ -38,7 +85,6 @@ hostParametersBack:
     isRequired: true
     location: path
     modelType:
-      $id: '7'
       $type: PrimaryType
       knownPrimaryType: string
       name:
@@ -48,9 +94,7 @@ hostParametersBack:
       fixed: false
       raw: accountName
     serializedName: accountName
-  - $id: '8'
-    clientProperty:
-      $id: '9'
+  - clientProperty: &ref_1
       collectionFormat: none
       defaultValue:
         fixed: false
@@ -64,7 +108,6 @@ hostParametersBack:
       isReadOnly: false
       isRequired: true
       modelType:
-        $id: '10'
         $type: PrimaryType
         knownPrimaryType: string
         name:
@@ -90,7 +133,6 @@ hostParametersBack:
     isRequired: true
     location: path
     modelType:
-      $id: '11'
       $type: PrimaryType
       knownPrimaryType: string
       name:
@@ -101,67 +143,14 @@ hostParametersBack:
       raw: host
     serializedName: host
 modelTypes:
-  - $id: '1'
-    $type: CompositeType
-    containsConstantProperties: false
-    name:
-      fixed: false
-      raw: Error
-    properties:
-      - $id: '2'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '3'
-          $type: PrimaryType
-          format: int32
-          knownPrimaryType: int
-          name:
-            fixed: false
-            raw: Int
-        name:
-          fixed: false
-          raw: status
-        realPath:
-          - status
-        serializedName: status
-      - $id: '4'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '5'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: message
-        realPath:
-          - message
-        serializedName: message
-    serializedName: Error
+  - *ref_0
 modelsName: Models
 name: AutoRestParameterizedHostTestClient
 namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get a 200 to test a valid base uri
@@ -191,4 +180,4 @@ operations:
     typeName:
       fixed: false
 properties:
-  - $ref: '9'
+  - *ref_1

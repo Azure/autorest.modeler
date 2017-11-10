@@ -3,10 +3,88 @@ apiVersion: 1.0.0
 baseUrl: 'http://localhost'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
-  - $ref: '1'
-  - $ref: '6'
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+  - &ref_1
+    $type: CompositeType
+    containsConstantProperties: false
+    extensions:
+      x-ms-client-name:
+        name: MyException
+    name:
+      fixed: false
+      raw: A
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: statusCode
+        realPath:
+          - statusCode
+        serializedName: statusCode
+    serializedName: A
 headerTypes:
-  - $id: '18'
+  - &ref_6
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for head300 operation.
@@ -14,8 +92,7 @@ headerTypes:
       fixed: false
       raw: httpRedirects-head300-Headers
     properties:
-      - $id: '19'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -25,7 +102,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '20'
           $type: EnumType
           modelAsExtensible: false
           modelAsString: true
@@ -33,7 +109,6 @@ headerTypes:
             fixed: false
             raw: ''
           underlyingType:
-            $id: '21'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -49,7 +124,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-head300-Headers
-  - $id: '22'
+  - &ref_7
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for get300 operation.
@@ -57,8 +132,7 @@ headerTypes:
       fixed: false
       raw: httpRedirects-get300-Headers
     properties:
-      - $id: '23'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -68,7 +142,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '24'
           $type: EnumType
           modelAsExtensible: false
           modelAsString: true
@@ -76,7 +149,6 @@ headerTypes:
             fixed: false
             raw: ''
           underlyingType:
-            $id: '25'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -92,7 +164,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-get300-Headers
-  - $id: '26'
+  - &ref_9
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for head301 operation.
@@ -100,8 +172,7 @@ headerTypes:
       fixed: false
       raw: httpRedirects-head301-Headers
     properties:
-      - $id: '27'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -111,7 +182,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '28'
           $type: EnumType
           modelAsExtensible: false
           modelAsString: true
@@ -119,7 +189,6 @@ headerTypes:
             fixed: false
             raw: ''
           underlyingType:
-            $id: '29'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -135,7 +204,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-head301-Headers
-  - $id: '30'
+  - &ref_10
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for get301 operation.
@@ -143,8 +212,7 @@ headerTypes:
       fixed: false
       raw: httpRedirects-get301-Headers
     properties:
-      - $id: '31'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -154,7 +222,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '32'
           $type: EnumType
           modelAsExtensible: false
           modelAsString: true
@@ -162,7 +229,6 @@ headerTypes:
             fixed: false
             raw: ''
           underlyingType:
-            $id: '33'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -178,7 +244,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-get301-Headers
-  - $id: '34'
+  - &ref_11
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for put301 operation.
@@ -186,8 +252,7 @@ headerTypes:
       fixed: false
       raw: httpRedirects-put301-Headers
     properties:
-      - $id: '35'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -197,7 +262,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '36'
           $type: EnumType
           modelAsExtensible: false
           modelAsString: true
@@ -205,7 +269,6 @@ headerTypes:
             fixed: false
             raw: ''
           underlyingType:
-            $id: '37'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -221,7 +284,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-put301-Headers
-  - $id: '38'
+  - &ref_12
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for head302 operation.
@@ -229,8 +292,7 @@ headerTypes:
       fixed: false
       raw: httpRedirects-head302-Headers
     properties:
-      - $id: '39'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -240,7 +302,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '40'
           $type: EnumType
           modelAsExtensible: false
           modelAsString: true
@@ -248,7 +309,6 @@ headerTypes:
             fixed: false
             raw: ''
           underlyingType:
-            $id: '41'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -264,7 +324,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-head302-Headers
-  - $id: '42'
+  - &ref_13
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for get302 operation.
@@ -272,8 +332,7 @@ headerTypes:
       fixed: false
       raw: httpRedirects-get302-Headers
     properties:
-      - $id: '43'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -283,7 +342,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '44'
           $type: EnumType
           modelAsExtensible: false
           modelAsString: true
@@ -291,7 +349,6 @@ headerTypes:
             fixed: false
             raw: ''
           underlyingType:
-            $id: '45'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -307,7 +364,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-get302-Headers
-  - $id: '46'
+  - &ref_14
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for patch302 operation.
@@ -315,8 +372,7 @@ headerTypes:
       fixed: false
       raw: httpRedirects-patch302-Headers
     properties:
-      - $id: '47'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -326,7 +382,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '48'
           $type: EnumType
           modelAsExtensible: false
           modelAsString: true
@@ -334,7 +389,6 @@ headerTypes:
             fixed: false
             raw: ''
           underlyingType:
-            $id: '49'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -350,7 +404,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-patch302-Headers
-  - $id: '50'
+  - &ref_15
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for post303 operation.
@@ -358,8 +412,7 @@ headerTypes:
       fixed: false
       raw: httpRedirects-post303-Headers
     properties:
-      - $id: '51'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -369,7 +422,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '52'
           $type: EnumType
           modelAsExtensible: false
           modelAsString: true
@@ -377,7 +429,6 @@ headerTypes:
             fixed: false
             raw: ''
           underlyingType:
-            $id: '53'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -393,7 +444,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-post303-Headers
-  - $id: '54'
+  - &ref_16
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for head307 operation.
@@ -401,8 +452,7 @@ headerTypes:
       fixed: false
       raw: httpRedirects-head307-Headers
     properties:
-      - $id: '55'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -412,7 +462,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '56'
           $type: EnumType
           modelAsExtensible: false
           modelAsString: true
@@ -420,7 +469,6 @@ headerTypes:
             fixed: false
             raw: ''
           underlyingType:
-            $id: '57'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -436,7 +484,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-head307-Headers
-  - $id: '58'
+  - &ref_17
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for get307 operation.
@@ -444,8 +492,7 @@ headerTypes:
       fixed: false
       raw: httpRedirects-get307-Headers
     properties:
-      - $id: '59'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -455,7 +502,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '60'
           $type: EnumType
           modelAsExtensible: false
           modelAsString: true
@@ -463,7 +509,6 @@ headerTypes:
             fixed: false
             raw: ''
           underlyingType:
-            $id: '61'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -479,7 +524,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-get307-Headers
-  - $id: '62'
+  - &ref_18
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for put307 operation.
@@ -487,8 +532,7 @@ headerTypes:
       fixed: false
       raw: HttpRedirects-put307-Headers
     properties:
-      - $id: '63'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -498,7 +542,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '64'
           $type: EnumType
           modelAsExtensible: false
           modelAsString: true
@@ -506,7 +549,6 @@ headerTypes:
             fixed: false
             raw: ''
           underlyingType:
-            $id: '65'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -522,7 +564,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: HttpRedirects-put307-Headers
-  - $id: '66'
+  - &ref_19
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for patch307 operation.
@@ -530,8 +572,7 @@ headerTypes:
       fixed: false
       raw: httpRedirects-patch307-Headers
     properties:
-      - $id: '67'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -541,7 +582,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '68'
           $type: EnumType
           modelAsExtensible: false
           modelAsString: true
@@ -549,7 +589,6 @@ headerTypes:
             fixed: false
             raw: ''
           underlyingType:
-            $id: '69'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -565,7 +604,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-patch307-Headers
-  - $id: '70'
+  - &ref_20
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for post307 operation.
@@ -573,8 +612,7 @@ headerTypes:
       fixed: false
       raw: httpRedirects-post307-Headers
     properties:
-      - $id: '71'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -584,7 +622,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '72'
           $type: EnumType
           modelAsExtensible: false
           modelAsString: true
@@ -592,7 +629,6 @@ headerTypes:
             fixed: false
             raw: ''
           underlyingType:
-            $id: '73'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -608,7 +644,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-post307-Headers
-  - $id: '74'
+  - &ref_21
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for delete307 operation.
@@ -616,8 +652,7 @@ headerTypes:
       fixed: false
       raw: httpRedirects-delete307-Headers
     properties:
-      - $id: '75'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -627,7 +662,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '76'
           $type: EnumType
           modelAsExtensible: false
           modelAsString: true
@@ -635,7 +669,6 @@ headerTypes:
             fixed: false
             raw: ''
           underlyingType:
-            $id: '77'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -652,103 +685,17 @@ headerTypes:
         serializedName: Location
     serializedName: httpRedirects-delete307-Headers
 modelTypes:
-  - $id: '1'
+  - *ref_0
+  - *ref_1
+  - &ref_22
     $type: CompositeType
-    containsConstantProperties: false
-    name:
-      fixed: false
-      raw: Error
-    properties:
-      - $id: '2'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '3'
-          $type: PrimaryType
-          format: int32
-          knownPrimaryType: int
-          name:
-            fixed: false
-            raw: Int
-        name:
-          fixed: false
-          raw: status
-        realPath:
-          - status
-        serializedName: status
-      - $id: '4'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '5'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: message
-        realPath:
-          - message
-        serializedName: message
-    serializedName: Error
-  - $id: '6'
-    $type: CompositeType
-    containsConstantProperties: false
-    extensions:
-      x-ms-client-name:
-        name: MyException
-    name:
-      fixed: false
-      raw: A
-    properties:
-      - $id: '7'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '8'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: statusCode
-        realPath:
-          - statusCode
-        serializedName: statusCode
-    serializedName: A
-  - $id: '9'
-    $type: CompositeType
-    baseModelType:
-      $ref: '6'
+    baseModelType: *ref_1
     containsConstantProperties: false
     name:
       fixed: false
       raw: B
     properties:
-      - $id: '10'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -757,7 +704,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '11'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -770,15 +716,14 @@ modelTypes:
           - textStatusCode
         serializedName: textStatusCode
     serializedName: B
-  - $id: '12'
+  - &ref_23
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: C
     properties:
-      - $id: '13'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -787,7 +732,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '14'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -800,15 +744,14 @@ modelTypes:
           - httpCode
         serializedName: httpCode
     serializedName: C
-  - $id: '15'
+  - &ref_24
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: D
     properties:
-      - $id: '16'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -817,7 +760,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '17'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -836,8 +778,7 @@ namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get empty error form server
@@ -855,8 +796,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '78'
+            body: &ref_2
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -864,8 +804,7 @@ operations:
                 raw: Boolean
             isNullable: true
         returnType:
-          body:
-            $ref: '78'
+          body: *ref_2
           isNullable: true
         serializedName: httpFailure_getEmptyError
         url: /http/failure/emptybody/error
@@ -887,8 +826,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '79'
+            body: &ref_3
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -896,8 +834,7 @@ operations:
                 raw: Boolean
             isNullable: true
         returnType:
-          body:
-            $ref: '79'
+          body: *ref_3
           isNullable: true
         serializedName: httpFailure_getNoModelError
         url: /http/failure/nomodel/error
@@ -919,8 +856,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '80'
+            body: &ref_4
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -928,8 +864,7 @@ operations:
                 raw: Boolean
             isNullable: true
         returnType:
-          body:
-            $ref: '80'
+          body: *ref_4
           isNullable: true
         serializedName: httpFailure_getNoModelEmpty
         url: /http/failure/nomodel/empty
@@ -941,8 +876,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Return 200 status code if successful
@@ -966,8 +900,7 @@ operations:
         serializedName: httpSuccess_head200
         url: /http/success/200
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get 200 success
@@ -985,8 +918,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '81'
+            body: &ref_5
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -994,14 +926,12 @@ operations:
                 raw: Boolean
             isNullable: true
         returnType:
-          body:
-            $ref: '81'
+          body: *ref_5
           isNullable: true
         serializedName: httpSuccess_get200
         url: /http/success/200
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put boolean value true returning 200 success
@@ -1017,8 +947,7 @@ operations:
           fixed: false
           raw: put200
         parameters:
-          - $id: '82'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1030,7 +959,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '83'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -1051,8 +979,7 @@ operations:
         serializedName: httpSuccess_put200
         url: /http/success/200
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Patch true Boolean value in request returning 200
@@ -1068,8 +995,7 @@ operations:
           fixed: false
           raw: patch200
         parameters:
-          - $id: '84'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1081,7 +1007,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '85'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -1102,8 +1027,7 @@ operations:
         serializedName: httpSuccess_patch200
         url: /http/success/200
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Post bollean value true in request that returns a 200
@@ -1119,8 +1043,7 @@ operations:
           fixed: false
           raw: post200
         parameters:
-          - $id: '86'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1132,7 +1055,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '87'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -1153,8 +1075,7 @@ operations:
         serializedName: httpSuccess_post200
         url: /http/success/200
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Delete simple boolean value true returns 200
@@ -1170,8 +1091,7 @@ operations:
           fixed: false
           raw: delete200
         parameters:
-          - $id: '88'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1183,7 +1103,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '89'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -1204,8 +1123,7 @@ operations:
         serializedName: httpSuccess_delete200
         url: /http/success/200
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put true Boolean value in request returns 201
@@ -1221,8 +1139,7 @@ operations:
           fixed: false
           raw: put201
         parameters:
-          - $id: '90'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1234,7 +1151,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '91'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -1255,8 +1171,7 @@ operations:
         serializedName: httpSuccess_put201
         url: /http/success/201
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Post true Boolean value in request returns 201 (Created)
@@ -1272,8 +1187,7 @@ operations:
           fixed: false
           raw: post201
         parameters:
-          - $id: '92'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1285,7 +1199,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '93'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -1306,8 +1219,7 @@ operations:
         serializedName: httpSuccess_post201
         url: /http/success/201
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put true Boolean value in request returns 202 (Accepted)
@@ -1323,8 +1235,7 @@ operations:
           fixed: false
           raw: put202
         parameters:
-          - $id: '94'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1336,7 +1247,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '95'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -1357,8 +1267,7 @@ operations:
         serializedName: httpSuccess_put202
         url: /http/success/202
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Patch true Boolean value in request returns 202
@@ -1374,8 +1283,7 @@ operations:
           fixed: false
           raw: patch202
         parameters:
-          - $id: '96'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1387,7 +1295,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '97'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -1408,8 +1315,7 @@ operations:
         serializedName: httpSuccess_patch202
         url: /http/success/202
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Post true Boolean value in request returns 202 (Accepted)
@@ -1425,8 +1331,7 @@ operations:
           fixed: false
           raw: post202
         parameters:
-          - $id: '98'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1438,7 +1343,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '99'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -1459,8 +1363,7 @@ operations:
         serializedName: httpSuccess_post202
         url: /http/success/202
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Delete true Boolean value in request returns 202 (accepted)
@@ -1476,8 +1379,7 @@ operations:
           fixed: false
           raw: delete202
         parameters:
-          - $id: '100'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1489,7 +1391,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '101'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -1510,8 +1411,7 @@ operations:
         serializedName: httpSuccess_delete202
         url: /http/success/202
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Return 204 status code if successful
@@ -1535,8 +1435,7 @@ operations:
         serializedName: httpSuccess_head204
         url: /http/success/204
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put true Boolean value in request returns 204 (no content)
@@ -1552,8 +1451,7 @@ operations:
           fixed: false
           raw: put204
         parameters:
-          - $id: '102'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1565,7 +1463,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '103'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -1586,8 +1483,7 @@ operations:
         serializedName: httpSuccess_put204
         url: /http/success/204
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Patch true Boolean value in request returns 204 (no content)
@@ -1603,8 +1499,7 @@ operations:
           fixed: false
           raw: patch204
         parameters:
-          - $id: '104'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1616,7 +1511,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '105'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -1637,8 +1531,7 @@ operations:
         serializedName: httpSuccess_patch204
         url: /http/success/204
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Post true Boolean value in request returns 204 (no content)
@@ -1654,8 +1547,7 @@ operations:
           fixed: false
           raw: post204
         parameters:
-          - $id: '106'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1667,7 +1559,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '107'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -1688,8 +1579,7 @@ operations:
         serializedName: HttpSuccess_post204
         url: /http/success/204
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Delete true Boolean value in request returns 204 (no content)
@@ -1705,8 +1595,7 @@ operations:
           fixed: false
           raw: delete204
         parameters:
-          - $id: '108'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1718,7 +1607,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '109'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -1739,8 +1627,7 @@ operations:
         serializedName: httpSuccess_delete204
         url: /http/success/204
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Return 404 status code
@@ -1773,10 +1660,8 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '18'
+          body: *ref_0
+          headers: *ref_6
           isNullable: true
         deprecated: false
         description: Return 300 status code and redirect to /http/success/200
@@ -1794,24 +1679,19 @@ operations:
           - application/json
         responses:
           MultipleChoices:
-            headers:
-              $ref: '18'
+            headers: *ref_6
             isNullable: true
           OK:
-            headers:
-              $ref: '18'
+            headers: *ref_6
             isNullable: true
         returnType:
-          headers:
-            $ref: '18'
+          headers: *ref_6
           isNullable: true
         serializedName: httpRedirects_head300
         url: /http/redirect/300
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '22'
+          body: *ref_0
+          headers: *ref_7
           isNullable: true
         deprecated: false
         description: Return 300 status code and redirect to /http/success/200
@@ -1829,11 +1709,9 @@ operations:
           - application/json
         responses:
           MultipleChoices:
-            body:
-              $id: '110'
+            body: &ref_8
               $type: SequenceType
               elementType:
-                $id: '111'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -1841,26 +1719,20 @@ operations:
                   raw: String
               name:
                 fixed: false
-            headers:
-              $ref: '22'
+            headers: *ref_7
             isNullable: true
           OK:
-            headers:
-              $ref: '22'
+            headers: *ref_7
             isNullable: true
         returnType:
-          body:
-            $ref: '110'
-          headers:
-            $ref: '22'
+          body: *ref_8
+          headers: *ref_7
           isNullable: true
         serializedName: httpRedirects_get300
         url: /http/redirect/300
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '26'
+          body: *ref_0
+          headers: *ref_9
           isNullable: true
         deprecated: false
         description: Return 301 status code and redirect to /http/success/200
@@ -1878,24 +1750,19 @@ operations:
           - application/json
         responses:
           MovedPermanently:
-            headers:
-              $ref: '26'
+            headers: *ref_9
             isNullable: true
           OK:
-            headers:
-              $ref: '26'
+            headers: *ref_9
             isNullable: true
         returnType:
-          headers:
-            $ref: '26'
+          headers: *ref_9
           isNullable: true
         serializedName: httpRedirects_head301
         url: /http/redirect/301
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '30'
+          body: *ref_0
+          headers: *ref_10
           isNullable: true
         deprecated: false
         description: Return 301 status code and redirect to /http/success/200
@@ -1913,24 +1780,19 @@ operations:
           - application/json
         responses:
           MovedPermanently:
-            headers:
-              $ref: '30'
+            headers: *ref_10
             isNullable: true
           OK:
-            headers:
-              $ref: '30'
+            headers: *ref_10
             isNullable: true
         returnType:
-          headers:
-            $ref: '30'
+          headers: *ref_10
           isNullable: true
         serializedName: httpRedirects_get301
         url: /http/redirect/301
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '34'
+          body: *ref_0
+          headers: *ref_11
           isNullable: true
         deprecated: false
         description: >-
@@ -1949,8 +1811,7 @@ operations:
           fixed: false
           raw: put301
         parameters:
-          - $id: '112'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1962,7 +1823,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '113'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -1977,20 +1837,16 @@ operations:
           - application/json
         responses:
           MovedPermanently:
-            headers:
-              $ref: '34'
+            headers: *ref_11
             isNullable: true
         returnType:
-          headers:
-            $ref: '34'
+          headers: *ref_11
           isNullable: true
         serializedName: httpRedirects_put301
         url: /http/redirect/301
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '38'
+          body: *ref_0
+          headers: *ref_12
           isNullable: true
         deprecated: false
         description: Return 302 status code and redirect to /http/success/200
@@ -2008,24 +1864,19 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '38'
+            headers: *ref_12
             isNullable: true
           Redirect:
-            headers:
-              $ref: '38'
+            headers: *ref_12
             isNullable: true
         returnType:
-          headers:
-            $ref: '38'
+          headers: *ref_12
           isNullable: true
         serializedName: httpRedirects_head302
         url: /http/redirect/302
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '42'
+          body: *ref_0
+          headers: *ref_13
           isNullable: true
         deprecated: false
         description: Return 302 status code and redirect to /http/success/200
@@ -2043,24 +1894,19 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '42'
+            headers: *ref_13
             isNullable: true
           Redirect:
-            headers:
-              $ref: '42'
+            headers: *ref_13
             isNullable: true
         returnType:
-          headers:
-            $ref: '42'
+          headers: *ref_13
           isNullable: true
         serializedName: httpRedirects_get302
         url: /http/redirect/302
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '46'
+          body: *ref_0
+          headers: *ref_14
           isNullable: true
         deprecated: false
         description: >-
@@ -2079,8 +1925,7 @@ operations:
           fixed: false
           raw: patch302
         parameters:
-          - $id: '114'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2092,7 +1937,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '115'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -2107,20 +1951,16 @@ operations:
           - application/json
         responses:
           Redirect:
-            headers:
-              $ref: '46'
+            headers: *ref_14
             isNullable: true
         returnType:
-          headers:
-            $ref: '46'
+          headers: *ref_14
           isNullable: true
         serializedName: httpRedirects_patch302
         url: /http/redirect/302
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '50'
+          body: *ref_0
+          headers: *ref_15
           isNullable: true
         deprecated: false
         description: >-
@@ -2139,8 +1979,7 @@ operations:
           fixed: false
           raw: post303
         parameters:
-          - $id: '116'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2152,7 +1991,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '117'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -2167,24 +2005,19 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '50'
+            headers: *ref_15
             isNullable: true
           SeeOther:
-            headers:
-              $ref: '50'
+            headers: *ref_15
             isNullable: true
         returnType:
-          headers:
-            $ref: '50'
+          headers: *ref_15
           isNullable: true
         serializedName: httpRedirects_post303
         url: /http/redirect/303
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '54'
+          body: *ref_0
+          headers: *ref_16
           isNullable: true
         deprecated: false
         description: 'Redirect with 307, resulting in a 200 success'
@@ -2202,24 +2035,19 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '54'
+            headers: *ref_16
             isNullable: true
           TemporaryRedirect:
-            headers:
-              $ref: '54'
+            headers: *ref_16
             isNullable: true
         returnType:
-          headers:
-            $ref: '54'
+          headers: *ref_16
           isNullable: true
         serializedName: httpRedirects_head307
         url: /http/redirect/307
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '58'
+          body: *ref_0
+          headers: *ref_17
           isNullable: true
         deprecated: false
         description: 'Redirect get with 307, resulting in a 200 success'
@@ -2237,24 +2065,19 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '58'
+            headers: *ref_17
             isNullable: true
           TemporaryRedirect:
-            headers:
-              $ref: '58'
+            headers: *ref_17
             isNullable: true
         returnType:
-          headers:
-            $ref: '58'
+          headers: *ref_17
           isNullable: true
         serializedName: httpRedirects_get307
         url: /http/redirect/307
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '62'
+          body: *ref_0
+          headers: *ref_18
           isNullable: true
         deprecated: false
         description: 'Put redirected with 307, resulting in a 200 after redirect'
@@ -2270,8 +2093,7 @@ operations:
           fixed: false
           raw: put307
         parameters:
-          - $id: '118'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2283,7 +2105,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '119'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -2298,24 +2119,19 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '62'
+            headers: *ref_18
             isNullable: true
           TemporaryRedirect:
-            headers:
-              $ref: '62'
+            headers: *ref_18
             isNullable: true
         returnType:
-          headers:
-            $ref: '62'
+          headers: *ref_18
           isNullable: true
         serializedName: HttpRedirects_put307
         url: /http/redirect/307
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '66'
+          body: *ref_0
+          headers: *ref_19
           isNullable: true
         deprecated: false
         description: 'Patch redirected with 307, resulting in a 200 after redirect'
@@ -2331,8 +2147,7 @@ operations:
           fixed: false
           raw: patch307
         parameters:
-          - $id: '120'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2344,7 +2159,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '121'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -2359,24 +2173,19 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '66'
+            headers: *ref_19
             isNullable: true
           TemporaryRedirect:
-            headers:
-              $ref: '66'
+            headers: *ref_19
             isNullable: true
         returnType:
-          headers:
-            $ref: '66'
+          headers: *ref_19
           isNullable: true
         serializedName: httpRedirects_patch307
         url: /http/redirect/307
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '70'
+          body: *ref_0
+          headers: *ref_20
           isNullable: true
         deprecated: false
         description: 'Post redirected with 307, resulting in a 200 after redirect'
@@ -2392,8 +2201,7 @@ operations:
           fixed: false
           raw: post307
         parameters:
-          - $id: '122'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2405,7 +2213,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '123'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -2420,24 +2227,19 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '70'
+            headers: *ref_20
             isNullable: true
           TemporaryRedirect:
-            headers:
-              $ref: '70'
+            headers: *ref_20
             isNullable: true
         returnType:
-          headers:
-            $ref: '70'
+          headers: *ref_20
           isNullable: true
         serializedName: httpRedirects_post307
         url: /http/redirect/307
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '74'
+          body: *ref_0
+          headers: *ref_21
           isNullable: true
         deprecated: false
         description: 'Delete redirected with 307, resulting in a 200 after redirect'
@@ -2453,8 +2255,7 @@ operations:
           fixed: false
           raw: delete307
         parameters:
-          - $id: '124'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2466,7 +2267,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '125'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -2481,16 +2281,13 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '74'
+            headers: *ref_21
             isNullable: true
           TemporaryRedirect:
-            headers:
-              $ref: '74'
+            headers: *ref_21
             isNullable: true
         returnType:
-          headers:
-            $ref: '74'
+          headers: *ref_21
           isNullable: true
         serializedName: httpRedirects_delete307
         url: /http/redirect/307
@@ -2502,8 +2299,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2522,14 +2318,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_head400
         url: /http/failure/client/400
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2548,14 +2342,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_get400
         url: /http/failure/client/400
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2573,8 +2365,7 @@ operations:
           fixed: false
           raw: put400
         parameters:
-          - $id: '126'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2586,7 +2377,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '127'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -2600,14 +2390,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_put400
         url: /http/failure/client/400
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2625,8 +2413,7 @@ operations:
           fixed: false
           raw: patch400
         parameters:
-          - $id: '128'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2638,7 +2425,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '129'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -2652,14 +2438,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_patch400
         url: /http/failure/client/400
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2677,8 +2461,7 @@ operations:
           fixed: false
           raw: post400
         parameters:
-          - $id: '130'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2690,7 +2473,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '131'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -2704,14 +2486,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_post400
         url: /http/failure/client/400
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2729,8 +2509,7 @@ operations:
           fixed: false
           raw: delete400
         parameters:
-          - $id: '132'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2742,7 +2521,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '133'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -2756,14 +2534,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_delete400
         url: /http/failure/client/400
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2782,14 +2558,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_head401
         url: /http/failure/client/401
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2808,14 +2582,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_get402
         url: /http/failure/client/402
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2834,14 +2606,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_get403
         url: /http/failure/client/403
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2859,8 +2629,7 @@ operations:
           fixed: false
           raw: put404
         parameters:
-          - $id: '134'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2872,7 +2641,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '135'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -2886,14 +2654,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_put404
         url: /http/failure/client/404
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2911,8 +2677,7 @@ operations:
           fixed: false
           raw: patch405
         parameters:
-          - $id: '136'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2924,7 +2689,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '137'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -2938,14 +2702,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_patch405
         url: /http/failure/client/405
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2963,8 +2725,7 @@ operations:
           fixed: false
           raw: post406
         parameters:
-          - $id: '138'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2976,7 +2737,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '139'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -2990,14 +2750,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_post406
         url: /http/failure/client/406
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3015,8 +2773,7 @@ operations:
           fixed: false
           raw: delete407
         parameters:
-          - $id: '140'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3028,7 +2785,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '141'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -3042,14 +2798,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_delete407
         url: /http/failure/client/407
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3067,8 +2821,7 @@ operations:
           fixed: false
           raw: put409
         parameters:
-          - $id: '142'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3080,7 +2833,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '143'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -3094,14 +2846,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_put409
         url: /http/failure/client/409
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3120,14 +2870,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_head410
         url: /http/failure/client/410
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3146,14 +2894,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_get411
         url: /http/failure/client/411
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3172,14 +2918,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_get412
         url: /http/failure/client/412
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3197,8 +2941,7 @@ operations:
           fixed: false
           raw: put413
         parameters:
-          - $id: '144'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3210,7 +2953,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '145'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -3224,14 +2966,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_put413
         url: /http/failure/client/413
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3249,8 +2989,7 @@ operations:
           fixed: false
           raw: patch414
         parameters:
-          - $id: '146'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3262,7 +3001,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '147'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -3276,14 +3014,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_patch414
         url: /http/failure/client/414
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3301,8 +3037,7 @@ operations:
           fixed: false
           raw: post415
         parameters:
-          - $id: '148'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3314,7 +3049,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '149'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -3328,14 +3062,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_post415
         url: /http/failure/client/415
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3354,14 +3086,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_get416
         url: /http/failure/client/416
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3379,8 +3109,7 @@ operations:
           fixed: false
           raw: delete417
         parameters:
-          - $id: '150'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3392,7 +3121,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '151'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -3406,14 +3134,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_delete417
         url: /http/failure/client/417
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3432,8 +3158,7 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpClientFailure_head429
         url: /http/failure/client/429
@@ -3445,8 +3170,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3465,14 +3189,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpServerFailure_head501
         url: /http/failure/server/501
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3491,14 +3213,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpServerFailure_get501
         url: /http/failure/server/501
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3516,8 +3236,7 @@ operations:
           fixed: false
           raw: post505
         parameters:
-          - $id: '152'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3529,7 +3248,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '153'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -3543,14 +3261,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpServerFailure_post505
         url: /http/failure/server/505
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3568,8 +3284,7 @@ operations:
           fixed: false
           raw: delete505
         parameters:
-          - $id: '154'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3581,7 +3296,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '155'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -3595,8 +3309,7 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         serializedName: httpServerFailure_delete505
         url: /http/failure/server/505
@@ -3608,8 +3321,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Return 408 status code, then 200 after retry'
@@ -3633,8 +3345,7 @@ operations:
         serializedName: httpRetry_head408
         url: /http/retry/408
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Return 500 status code, then 200 after retry'
@@ -3650,8 +3361,7 @@ operations:
           fixed: false
           raw: put500
         parameters:
-          - $id: '156'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3663,7 +3373,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '157'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -3684,8 +3393,7 @@ operations:
         serializedName: httpRetry_put500
         url: /http/retry/500
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Return 500 status code, then 200 after retry'
@@ -3701,8 +3409,7 @@ operations:
           fixed: false
           raw: patch500
         parameters:
-          - $id: '158'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3714,7 +3421,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '159'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -3735,8 +3441,7 @@ operations:
         serializedName: httpRetry_patch500
         url: /http/retry/500
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Return 502 status code, then 200 after retry'
@@ -3760,8 +3465,7 @@ operations:
         serializedName: httpRetry_get502
         url: /http/retry/502
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Return 503 status code, then 200 after retry'
@@ -3777,8 +3481,7 @@ operations:
           fixed: false
           raw: post503
         parameters:
-          - $id: '160'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3790,7 +3493,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '161'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -3811,8 +3513,7 @@ operations:
         serializedName: httpRetry_post503
         url: /http/retry/503
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Return 503 status code, then 200 after retry'
@@ -3828,8 +3529,7 @@ operations:
           fixed: false
           raw: delete503
         parameters:
-          - $id: '162'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3841,7 +3541,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '163'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -3862,8 +3561,7 @@ operations:
         serializedName: httpRetry_delete503
         url: /http/retry/503
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Return 504 status code, then 200 after retry'
@@ -3879,8 +3577,7 @@ operations:
           fixed: false
           raw: put504
         parameters:
-          - $id: '164'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3892,7 +3589,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '165'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -3913,8 +3609,7 @@ operations:
         serializedName: httpRetry_put504
         url: /http/retry/504
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Return 504 status code, then 200 after retry'
@@ -3930,8 +3625,7 @@ operations:
           fixed: false
           raw: patch504
         parameters:
-          - $id: '166'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3943,7 +3637,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '167'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -3971,8 +3664,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Send a 200 response with valid payload: {''statusCode'': ''200''}'
@@ -3992,18 +3684,15 @@ operations:
           NoContent:
             isNullable: true
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_get200Model204NoModelDefaultError200Valid
         url: /http/payloads/200/A/204/none/default/Error/response/200/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Send a 204 response with no payload
@@ -4023,18 +3712,15 @@ operations:
           NoContent:
             isNullable: true
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_get200Model204NoModelDefaultError204Valid
         url: /http/payloads/200/A/204/none/default/Error/response/204/none
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Send a 201 response with valid payload: {''statusCode'': ''201''}'
@@ -4054,18 +3740,15 @@ operations:
           NoContent:
             isNullable: true
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_get200Model204NoModelDefaultError201Invalid
         url: /http/payloads/200/A/204/none/default/Error/response/201/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Send a 202 response with no payload:'
@@ -4085,18 +3768,15 @@ operations:
           NoContent:
             isNullable: true
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_get200Model204NoModelDefaultError202None
         url: /http/payloads/200/A/204/none/default/Error/response/202/none
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -4118,18 +3798,15 @@ operations:
           NoContent:
             isNullable: true
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_get200Model204NoModelDefaultError400Valid
         url: /http/payloads/200/A/204/none/default/Error/response/400/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Send a 200 response with valid payload: {''statusCode'': ''200''}'
@@ -4147,22 +3824,18 @@ operations:
           - application/json
         responses:
           Created:
-            body:
-              $ref: '9'
+            body: *ref_22
             isNullable: true
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_get200Model201ModelDefaultError200Valid
         url: /http/payloads/200/A/201/B/default/Error/response/200/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -4182,22 +3855,18 @@ operations:
           - application/json
         responses:
           Created:
-            body:
-              $ref: '9'
+            body: *ref_22
             isNullable: true
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_get200Model201ModelDefaultError201Valid
         url: /http/payloads/200/A/201/B/default/Error/response/201/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -4217,22 +3886,18 @@ operations:
           - application/json
         responses:
           Created:
-            body:
-              $ref: '9'
+            body: *ref_22
             isNullable: true
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_get200Model201ModelDefaultError400Valid
         url: /http/payloads/200/A/201/B/default/Error/response/400/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Send a 200 response with valid payload: {''statusCode'': ''200''}'
@@ -4250,20 +3915,16 @@ operations:
           - application/json
         responses:
           Created:
-            body:
-              $ref: '12'
+            body: *ref_23
             isNullable: true
           NotFound:
-            body:
-              $ref: '15'
+            body: *ref_24
             isNullable: true
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
           body:
-            $id: '168'
             $type: PrimaryType
             knownPrimaryType: object
             name:
@@ -4273,8 +3934,7 @@ operations:
         serializedName: multipleResponses_get200ModelA201ModelC404ModelDDefaultError200Valid
         url: /http/payloads/200/A/201/C/404/D/default/Error/response/200/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Send a 200 response with valid payload: {''httpCode'': ''201''}'
@@ -4292,20 +3952,16 @@ operations:
           - application/json
         responses:
           Created:
-            body:
-              $ref: '12'
+            body: *ref_23
             isNullable: true
           NotFound:
-            body:
-              $ref: '15'
+            body: *ref_24
             isNullable: true
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
           body:
-            $id: '169'
             $type: PrimaryType
             knownPrimaryType: object
             name:
@@ -4315,8 +3971,7 @@ operations:
         serializedName: multipleResponses_get200ModelA201ModelC404ModelDDefaultError201Valid
         url: /http/payloads/200/A/201/C/404/D/default/Error/response/201/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Send a 200 response with valid payload: {''httpStatusCode'': ''404''}'
@@ -4334,20 +3989,16 @@ operations:
           - application/json
         responses:
           Created:
-            body:
-              $ref: '12'
+            body: *ref_23
             isNullable: true
           NotFound:
-            body:
-              $ref: '15'
+            body: *ref_24
             isNullable: true
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
           body:
-            $id: '170'
             $type: PrimaryType
             knownPrimaryType: object
             name:
@@ -4357,8 +4008,7 @@ operations:
         serializedName: multipleResponses_get200ModelA201ModelC404ModelDDefaultError404Valid
         url: /http/payloads/200/A/201/C/404/D/default/Error/response/404/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -4378,20 +4028,16 @@ operations:
           - application/json
         responses:
           Created:
-            body:
-              $ref: '12'
+            body: *ref_23
             isNullable: true
           NotFound:
-            body:
-              $ref: '15'
+            body: *ref_24
             isNullable: true
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
           body:
-            $id: '171'
             $type: PrimaryType
             knownPrimaryType: object
             name:
@@ -4401,8 +4047,7 @@ operations:
         serializedName: multipleResponses_get200ModelA201ModelC404ModelDDefaultError400Valid
         url: /http/payloads/200/A/201/C/404/D/default/Error/response/400/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Send a 202 response with no payload
@@ -4428,8 +4073,7 @@ operations:
         serializedName: multipleResponses_get202None204NoneDefaultError202None
         url: /http/payloads/202/none/204/none/default/Error/response/202/none
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Send a 204 response with no payload
@@ -4455,8 +4099,7 @@ operations:
         serializedName: multipleResponses_get202None204NoneDefaultError204None
         url: /http/payloads/202/none/204/none/default/Error/response/204/none
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -4584,8 +4227,7 @@ operations:
         serializedName: multipleResponses_get202None204NoneDefaultNone400Invalid
         url: /http/payloads/202/none/204/none/default/none/response/400/invalid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Send a 200 response with valid payload: {''statusCode'': ''200''}'
@@ -4602,14 +4244,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_getDefaultModelA200Valid
         url: /http/payloads/default/A/response/200/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Send a 200 response with no payload
@@ -4626,14 +4266,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_getDefaultModelA200None
         url: /http/payloads/default/A/response/200/none
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Send a 400 response with valid payload: {''statusCode'': ''400''}'
@@ -4650,14 +4288,12 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_getDefaultModelA400Valid
         url: /http/payloads/default/A/response/400/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Send a 400 response with no payload
@@ -4674,8 +4310,7 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_getDefaultModelA400None
         url: /http/payloads/default/A/response/400/none
@@ -4779,12 +4414,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_get200ModelA200None
         url: /http/payloads/200/A/response/200/none
@@ -4806,12 +4439,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_get200ModelA200Valid
         url: /http/payloads/200/A/response/200/valid
@@ -4833,12 +4464,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_get200ModelA200Invalid
         url: /http/payloads/200/A/response/200/invalid
@@ -4862,12 +4491,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_get200ModelA400None
         url: /http/payloads/200/A/response/400/none
@@ -4889,12 +4516,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_get200ModelA400Valid
         url: /http/payloads/200/A/response/400/valid
@@ -4916,12 +4541,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_get200ModelA400Invalid
         url: /http/payloads/200/A/response/400/invalid
@@ -4943,12 +4566,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '6'
+            body: *ref_1
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: multipleResponses_get200ModelA202Valid
         url: /http/payloads/200/A/response/202/valid

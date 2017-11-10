@@ -3,69 +3,14 @@ apiVersion: 1.0.0
 baseUrl: 'http://localhost'
 documentation: Test Infrastructure for AutoRest Swagger BAT
 errorTypes:
-  - $ref: '6'
-modelTypes:
-  - $id: '1'
-    $type: CompositeType
-    containsConstantProperties: false
-    name:
-      fixed: false
-      raw: Widget
-    properties:
-      - $id: '2'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '3'
-          $type: PrimaryType
-          knownPrimaryType: int
-          name:
-            fixed: false
-            raw: Int
-        name:
-          fixed: false
-          raw: integer
-        realPath:
-          - integer
-        serializedName: integer
-      - $id: '4'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '5'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: string
-        realPath:
-          - string
-        serializedName: string
-    serializedName: Widget
-  - $id: '6'
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: Error
     properties:
-      - $id: '7'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -74,7 +19,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '8'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -87,8 +31,7 @@ modelTypes:
         realPath:
           - status
         serializedName: status
-      - $id: '9'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -97,7 +40,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '10'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -110,14 +52,63 @@ modelTypes:
           - message
         serializedName: message
     serializedName: Error
+modelTypes:
+  - &ref_36
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: Widget
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: integer
+        realPath:
+          - integer
+        serializedName: integer
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: string
+        realPath:
+          - string
+        serializedName: string
+    serializedName: Widget
+  - *ref_0
 modelsName: Models
 name: AutoRestSwaggerBATdictionaryService
 namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get null dictionary value
@@ -135,14 +126,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '11'
+            body: &ref_1
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '12'
                 $type: PrimaryType
                 knownPrimaryType: int
                 name:
@@ -150,14 +139,12 @@ operations:
                   raw: Int
             isNullable: true
         returnType:
-          body:
-            $ref: '11'
+          body: *ref_1
           isNullable: true
         serializedName: dictionary_getNull
         url: /dictionary/null
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get empty dictionary value {}'
@@ -175,14 +162,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '13'
+            body: &ref_2
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '14'
                 $type: PrimaryType
                 knownPrimaryType: int
                 name:
@@ -190,14 +175,12 @@ operations:
                   raw: Int
             isNullable: true
         returnType:
-          body:
-            $ref: '13'
+          body: *ref_2
           isNullable: true
         serializedName: dictionary_getEmpty
         url: /dictionary/empty
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Set dictionary value empty {}'
@@ -213,8 +196,7 @@ operations:
           fixed: false
           raw: putEmpty
         parameters:
-          - $id: '15'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -225,13 +207,11 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '16'
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '17'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -252,8 +232,7 @@ operations:
         serializedName: dictionary_putEmpty
         url: /dictionary/empty
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get Dictionary with null value
@@ -271,14 +250,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '18'
+            body: &ref_3
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '19'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -286,14 +263,12 @@ operations:
                   raw: String
             isNullable: true
         returnType:
-          body:
-            $ref: '18'
+          body: *ref_3
           isNullable: true
         serializedName: dictionary_getNullValue
         url: /dictionary/nullvalue
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get Dictionary with null key
@@ -311,14 +286,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '20'
+            body: &ref_4
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '21'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -326,14 +299,12 @@ operations:
                   raw: String
             isNullable: true
         returnType:
-          body:
-            $ref: '20'
+          body: *ref_4
           isNullable: true
         serializedName: dictionary_getNullKey
         url: /dictionary/nullkey
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get Dictionary with key as empty string
@@ -351,14 +322,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '22'
+            body: &ref_5
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '23'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -366,14 +335,12 @@ operations:
                   raw: String
             isNullable: true
         returnType:
-          body:
-            $ref: '22'
+          body: *ref_5
           isNullable: true
         serializedName: dictionary_getEmptyStringKey
         url: /dictionary/keyemptystring
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get invalid Dictionary value
@@ -391,14 +358,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '24'
+            body: &ref_6
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '25'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -406,14 +371,12 @@ operations:
                   raw: String
             isNullable: true
         returnType:
-          body:
-            $ref: '24'
+          body: *ref_6
           isNullable: true
         serializedName: dictionary_getInvalid
         url: /dictionary/invalid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -433,14 +396,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '26'
+            body: &ref_7
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '27'
                 $type: PrimaryType
                 knownPrimaryType: boolean
                 name:
@@ -448,14 +409,12 @@ operations:
                   raw: Boolean
             isNullable: true
         returnType:
-          body:
-            $ref: '26'
+          body: *ref_7
           isNullable: true
         serializedName: dictionary_getBooleanTfft
         url: /dictionary/prim/boolean/tfft
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -473,8 +432,7 @@ operations:
           fixed: false
           raw: putBooleanTfft
         parameters:
-          - $id: '28'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -485,13 +443,11 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '29'
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '30'
                 $type: PrimaryType
                 knownPrimaryType: boolean
                 name:
@@ -512,8 +468,7 @@ operations:
         serializedName: dictionary_putBooleanTfft
         url: /dictionary/prim/boolean/tfft
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get boolean dictionary value {"0": true, "1": null, "2": false }'
@@ -531,14 +486,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '31'
+            body: &ref_8
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '32'
                 $type: PrimaryType
                 knownPrimaryType: boolean
                 name:
@@ -546,14 +499,12 @@ operations:
                   raw: Boolean
             isNullable: true
         returnType:
-          body:
-            $ref: '31'
+          body: *ref_8
           isNullable: true
         serializedName: dictionary_getBooleanInvalidNull
         url: /dictionary/prim/boolean/true.null.false
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get boolean dictionary value ''{"0": true, "1": "boolean", "2": false}'''
@@ -571,14 +522,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '33'
+            body: &ref_9
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '34'
                 $type: PrimaryType
                 knownPrimaryType: boolean
                 name:
@@ -586,14 +535,12 @@ operations:
                   raw: Boolean
             isNullable: true
         returnType:
-          body:
-            $ref: '33'
+          body: *ref_9
           isNullable: true
         serializedName: dictionary_getBooleanInvalidString
         url: /dictionary/prim/boolean/true.boolean.false
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get integer dictionary value {"0": 1, "1": -1, "2": 3, "3": 300}'
@@ -611,14 +558,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '35'
+            body: &ref_10
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '36'
                 $type: PrimaryType
                 knownPrimaryType: int
                 name:
@@ -626,14 +571,12 @@ operations:
                   raw: Int
             isNullable: true
         returnType:
-          body:
-            $ref: '35'
+          body: *ref_10
           isNullable: true
         serializedName: dictionary_getIntegerValid
         url: /dictionary/prim/integer/1.-1.3.300
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}'
@@ -649,8 +592,7 @@ operations:
           fixed: false
           raw: putIntegerValid
         parameters:
-          - $id: '37'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -661,13 +603,11 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '38'
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '39'
                 $type: PrimaryType
                 knownPrimaryType: int
                 name:
@@ -688,8 +628,7 @@ operations:
         serializedName: dictionary_putIntegerValid
         url: /dictionary/prim/integer/1.-1.3.300
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get integer dictionary value {"0": 1, "1": null, "2": 0}'
@@ -707,14 +646,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '40'
+            body: &ref_11
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '41'
                 $type: PrimaryType
                 knownPrimaryType: int
                 name:
@@ -722,14 +659,12 @@ operations:
                   raw: Int
             isNullable: true
         returnType:
-          body:
-            $ref: '40'
+          body: *ref_11
           isNullable: true
         serializedName: dictionary_getIntInvalidNull
         url: /dictionary/prim/integer/1.null.zero
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get integer dictionary value {"0": 1, "1": "integer", "2": 0}'
@@ -747,14 +682,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '42'
+            body: &ref_12
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '43'
                 $type: PrimaryType
                 knownPrimaryType: int
                 name:
@@ -762,14 +695,12 @@ operations:
                   raw: Int
             isNullable: true
         returnType:
-          body:
-            $ref: '42'
+          body: *ref_12
           isNullable: true
         serializedName: dictionary_getIntInvalidString
         url: /dictionary/prim/integer/1.integer.0
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get integer dictionary value {"0": 1, "1": -1, "2": 3, "3": 300}'
@@ -787,14 +718,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '44'
+            body: &ref_13
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '45'
                 $type: PrimaryType
                 format: int64
                 knownPrimaryType: long
@@ -803,14 +732,12 @@ operations:
                   raw: Long
             isNullable: true
         returnType:
-          body:
-            $ref: '44'
+          body: *ref_13
           isNullable: true
         serializedName: dictionary_getLongValid
         url: /dictionary/prim/long/1.-1.3.300
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}'
@@ -826,8 +753,7 @@ operations:
           fixed: false
           raw: putLongValid
         parameters:
-          - $id: '46'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -838,13 +764,11 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '47'
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '48'
                 $type: PrimaryType
                 format: int64
                 knownPrimaryType: long
@@ -866,8 +790,7 @@ operations:
         serializedName: dictionary_putLongValid
         url: /dictionary/prim/long/1.-1.3.300
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get long dictionary value {"0": 1, "1": null, "2": 0}'
@@ -885,14 +808,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '49'
+            body: &ref_14
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '50'
                 $type: PrimaryType
                 format: int64
                 knownPrimaryType: long
@@ -901,14 +822,12 @@ operations:
                   raw: Long
             isNullable: true
         returnType:
-          body:
-            $ref: '49'
+          body: *ref_14
           isNullable: true
         serializedName: dictionary_getLongInvalidNull
         url: /dictionary/prim/long/1.null.zero
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get long dictionary value {"0": 1, "1": "integer", "2": 0}'
@@ -926,14 +845,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '51'
+            body: &ref_15
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '52'
                 $type: PrimaryType
                 format: int64
                 knownPrimaryType: long
@@ -942,14 +859,12 @@ operations:
                   raw: Long
             isNullable: true
         returnType:
-          body:
-            $ref: '51'
+          body: *ref_15
           isNullable: true
         serializedName: dictionary_getLongInvalidString
         url: /dictionary/prim/long/1.integer.0
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get float dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}'
@@ -967,14 +882,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '53'
+            body: &ref_16
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '54'
                 $type: PrimaryType
                 format: float
                 knownPrimaryType: double
@@ -983,14 +896,12 @@ operations:
                   raw: Double
             isNullable: true
         returnType:
-          body:
-            $ref: '53'
+          body: *ref_16
           isNullable: true
         serializedName: dictionary_getFloatValid
         url: /dictionary/prim/float/0--0.01-1.2e20
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}'
@@ -1006,8 +917,7 @@ operations:
           fixed: false
           raw: putFloatValid
         parameters:
-          - $id: '55'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1018,13 +928,11 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '56'
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '57'
                 $type: PrimaryType
                 format: float
                 knownPrimaryType: double
@@ -1046,8 +954,7 @@ operations:
         serializedName: dictionary_putFloatValid
         url: /dictionary/prim/float/0--0.01-1.2e20
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get float dictionary value {"0": 0.0, "1": null, "2": 1.2e20}'
@@ -1065,14 +972,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '58'
+            body: &ref_17
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '59'
                 $type: PrimaryType
                 format: float
                 knownPrimaryType: double
@@ -1081,14 +986,12 @@ operations:
                   raw: Double
             isNullable: true
         returnType:
-          body:
-            $ref: '58'
+          body: *ref_17
           isNullable: true
         serializedName: dictionary_getFloatInvalidNull
         url: /dictionary/prim/float/0.0-null-1.2e20
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get boolean dictionary value {"0": 1.0, "1": "number", "2": 0.0}'
@@ -1106,14 +1009,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '60'
+            body: &ref_18
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '61'
                 $type: PrimaryType
                 format: float
                 knownPrimaryType: double
@@ -1122,14 +1023,12 @@ operations:
                   raw: Double
             isNullable: true
         returnType:
-          body:
-            $ref: '60'
+          body: *ref_18
           isNullable: true
         serializedName: dictionary_getFloatInvalidString
         url: /dictionary/prim/float/1.number.0
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get float dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}'
@@ -1147,14 +1046,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '62'
+            body: &ref_19
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '63'
                 $type: PrimaryType
                 format: double
                 knownPrimaryType: double
@@ -1163,14 +1060,12 @@ operations:
                   raw: Double
             isNullable: true
         returnType:
-          body:
-            $ref: '62'
+          body: *ref_19
           isNullable: true
         serializedName: dictionary_getDoubleValid
         url: /dictionary/prim/double/0--0.01-1.2e20
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}'
@@ -1186,8 +1081,7 @@ operations:
           fixed: false
           raw: putDoubleValid
         parameters:
-          - $id: '64'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1198,13 +1092,11 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '65'
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '66'
                 $type: PrimaryType
                 format: double
                 knownPrimaryType: double
@@ -1226,8 +1118,7 @@ operations:
         serializedName: dictionary_putDoubleValid
         url: /dictionary/prim/double/0--0.01-1.2e20
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get float dictionary value {"0": 0.0, "1": null, "2": 1.2e20}'
@@ -1245,14 +1136,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '67'
+            body: &ref_20
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '68'
                 $type: PrimaryType
                 format: double
                 knownPrimaryType: double
@@ -1261,14 +1150,12 @@ operations:
                   raw: Double
             isNullable: true
         returnType:
-          body:
-            $ref: '67'
+          body: *ref_20
           isNullable: true
         serializedName: dictionary_getDoubleInvalidNull
         url: /dictionary/prim/double/0.0-null-1.2e20
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get boolean dictionary value {"0": 1.0, "1": "number", "2": 0.0}'
@@ -1286,14 +1173,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '69'
+            body: &ref_21
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '70'
                 $type: PrimaryType
                 format: double
                 knownPrimaryType: double
@@ -1302,14 +1187,12 @@ operations:
                   raw: Double
             isNullable: true
         returnType:
-          body:
-            $ref: '69'
+          body: *ref_21
           isNullable: true
         serializedName: dictionary_getDoubleInvalidString
         url: /dictionary/prim/double/1.number.0
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get string dictionary value {"0": "foo1", "1": "foo2", "2": "foo3"}'
@@ -1327,14 +1210,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '71'
+            body: &ref_22
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '72'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -1342,14 +1223,12 @@ operations:
                   raw: String
             isNullable: true
         returnType:
-          body:
-            $ref: '71'
+          body: *ref_22
           isNullable: true
         serializedName: dictionary_getStringValid
         url: /dictionary/prim/string/foo1.foo2.foo3
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Set dictionary value {"0": "foo1", "1": "foo2", "2": "foo3"}'
@@ -1365,8 +1244,7 @@ operations:
           fixed: false
           raw: putStringValid
         parameters:
-          - $id: '73'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1377,13 +1255,11 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '74'
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '75'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -1404,8 +1280,7 @@ operations:
         serializedName: dictionary_putStringValid
         url: /dictionary/prim/string/foo1.foo2.foo3
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get string dictionary value {"0": "foo", "1": null, "2": "foo2"}'
@@ -1423,14 +1298,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '76'
+            body: &ref_23
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '77'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -1438,14 +1311,12 @@ operations:
                   raw: String
             isNullable: true
         returnType:
-          body:
-            $ref: '76'
+          body: *ref_23
           isNullable: true
         serializedName: dictionary_getStringWithNull
         url: /dictionary/prim/string/foo.null.foo2
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get string dictionary value {"0": "foo", "1": 123, "2": "foo2"}'
@@ -1463,14 +1334,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '78'
+            body: &ref_24
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '79'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -1478,14 +1347,12 @@ operations:
                   raw: String
             isNullable: true
         returnType:
-          body:
-            $ref: '78'
+          body: *ref_24
           isNullable: true
         serializedName: dictionary_getStringWithInvalid
         url: /dictionary/prim/string/foo.123.foo2
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1505,14 +1372,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '80'
+            body: &ref_25
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '81'
                 $type: PrimaryType
                 format: date
                 knownPrimaryType: date
@@ -1521,14 +1386,12 @@ operations:
                   raw: Date
             isNullable: true
         returnType:
-          body:
-            $ref: '80'
+          body: *ref_25
           isNullable: true
         serializedName: dictionary_getDateValid
         url: /dictionary/prim/date/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1546,8 +1409,7 @@ operations:
           fixed: false
           raw: putDateValid
         parameters:
-          - $id: '82'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1558,13 +1420,11 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '83'
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '84'
                 $type: PrimaryType
                 format: date
                 knownPrimaryType: date
@@ -1586,8 +1446,7 @@ operations:
         serializedName: dictionary_putDateValid
         url: /dictionary/prim/date/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1607,14 +1466,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '85'
+            body: &ref_26
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '86'
                 $type: PrimaryType
                 format: date
                 knownPrimaryType: date
@@ -1623,14 +1480,12 @@ operations:
                   raw: Date
             isNullable: true
         returnType:
-          body:
-            $ref: '85'
+          body: *ref_26
           isNullable: true
         serializedName: dictionary_getDateInvalidNull
         url: /dictionary/prim/date/invalidnull
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get date dictionary value {"0": "2011-03-22", "1": "date"}'
@@ -1648,14 +1503,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '87'
+            body: &ref_27
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '88'
                 $type: PrimaryType
                 format: date
                 knownPrimaryType: date
@@ -1664,14 +1517,12 @@ operations:
                   raw: Date
             isNullable: true
         returnType:
-          body:
-            $ref: '87'
+          body: *ref_27
           isNullable: true
         serializedName: dictionary_getDateInvalidChars
         url: /dictionary/prim/date/invalidchars
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1691,14 +1542,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '89'
+            body: &ref_28
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '90'
                 $type: PrimaryType
                 format: date-time
                 knownPrimaryType: dateTime
@@ -1707,14 +1556,12 @@ operations:
                   raw: DateTime
             isNullable: true
         returnType:
-          body:
-            $ref: '89'
+          body: *ref_28
           isNullable: true
         serializedName: dictionary_getDateTimeValid
         url: /dictionary/prim/date-time/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1732,8 +1579,7 @@ operations:
           fixed: false
           raw: putDateTimeValid
         parameters:
-          - $id: '91'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1744,13 +1590,11 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '92'
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '93'
                 $type: PrimaryType
                 format: date-time
                 knownPrimaryType: dateTime
@@ -1772,8 +1616,7 @@ operations:
         serializedName: dictionary_putDateTimeValid
         url: /dictionary/prim/date-time/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get date dictionary value {"0": "2000-12-01t00:00:01z", "1": null}'
@@ -1791,14 +1634,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '94'
+            body: &ref_29
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '95'
                 $type: PrimaryType
                 format: date-time
                 knownPrimaryType: dateTime
@@ -1807,14 +1648,12 @@ operations:
                   raw: DateTime
             isNullable: true
         returnType:
-          body:
-            $ref: '94'
+          body: *ref_29
           isNullable: true
         serializedName: dictionary_getDateTimeInvalidNull
         url: /dictionary/prim/date-time/invalidnull
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1834,14 +1673,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '96'
+            body: &ref_30
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '97'
                 $type: PrimaryType
                 format: date-time
                 knownPrimaryType: dateTime
@@ -1850,14 +1687,12 @@ operations:
                   raw: DateTime
             isNullable: true
         returnType:
-          body:
-            $ref: '96'
+          body: *ref_30
           isNullable: true
         serializedName: dictionary_getDateTimeInvalidChars
         url: /dictionary/prim/date-time/invalidchars
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1878,14 +1713,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '98'
+            body: &ref_31
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '99'
                 $type: PrimaryType
                 format: date-time-rfc1123
                 knownPrimaryType: dateTimeRfc1123
@@ -1894,14 +1727,12 @@ operations:
                   raw: DateTimeRfc1123
             isNullable: true
         returnType:
-          body:
-            $ref: '98'
+          body: *ref_31
           isNullable: true
         serializedName: dictionary_getDateTimeRfc1123Valid
         url: /dictionary/prim/date-time-rfc1123/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1919,8 +1750,7 @@ operations:
           fixed: false
           raw: putDateTimeRfc1123Valid
         parameters:
-          - $id: '100'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1931,13 +1761,11 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '101'
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '102'
                 $type: PrimaryType
                 format: date-time-rfc1123
                 knownPrimaryType: dateTimeRfc1123
@@ -1959,8 +1787,7 @@ operations:
         serializedName: dictionary_putDateTimeRfc1123Valid
         url: /dictionary/prim/date-time-rfc1123/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1980,14 +1807,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '103'
+            body: &ref_32
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '104'
                 $type: PrimaryType
                 format: duration
                 knownPrimaryType: timeSpan
@@ -1996,14 +1821,12 @@ operations:
                   raw: TimeSpan
             isNullable: true
         returnType:
-          body:
-            $ref: '103'
+          body: *ref_32
           isNullable: true
         serializedName: dictionary_getDurationValid
         url: /dictionary/prim/duration/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Set dictionary value  {"0": "P123DT22H14M12.011S", "1": "P5DT1H0M0S"}'
@@ -2019,8 +1842,7 @@ operations:
           fixed: false
           raw: putDurationValid
         parameters:
-          - $id: '105'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2031,13 +1853,11 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '106'
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '107'
                 $type: PrimaryType
                 format: duration
                 knownPrimaryType: timeSpan
@@ -2059,8 +1879,7 @@ operations:
         serializedName: dictionary_putDurationValid
         url: /dictionary/prim/duration/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2080,14 +1899,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '108'
+            body: &ref_33
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '109'
                 $type: PrimaryType
                 format: byte
                 knownPrimaryType: byteArray
@@ -2096,14 +1913,12 @@ operations:
                   raw: ByteArray
             isNullable: true
         returnType:
-          body:
-            $ref: '108'
+          body: *ref_33
           isNullable: true
         serializedName: dictionary_getByteValid
         url: /dictionary/prim/byte/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2121,8 +1936,7 @@ operations:
           fixed: false
           raw: putByteValid
         parameters:
-          - $id: '110'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2133,13 +1947,11 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '111'
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '112'
                 $type: PrimaryType
                 format: byte
                 knownPrimaryType: byteArray
@@ -2161,8 +1973,7 @@ operations:
         serializedName: dictionary_putByteValid
         url: /dictionary/prim/byte/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2182,14 +1993,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '113'
+            body: &ref_34
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '114'
                 $type: PrimaryType
                 format: byte
                 knownPrimaryType: byteArray
@@ -2198,14 +2007,12 @@ operations:
                   raw: ByteArray
             isNullable: true
         returnType:
-          body:
-            $ref: '113'
+          body: *ref_34
           isNullable: true
         serializedName: dictionary_getByteInvalidNull
         url: /dictionary/prim/byte/invalidnull
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2225,14 +2032,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '115'
+            body: &ref_35
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '116'
                 $type: PrimaryType
                 format: base64url
                 knownPrimaryType: base64Url
@@ -2241,14 +2046,12 @@ operations:
                   raw: Base64Url
             isNullable: true
         returnType:
-          body:
-            $ref: '115'
+          body: *ref_35
           isNullable: true
         serializedName: dictionary_getBase64Url
         url: /dictionary/prim/base64url/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get dictionary of complex type null value
@@ -2266,24 +2069,20 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '117'
+            body: &ref_37
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
-              valueType:
-                $ref: '1'
+              valueType: *ref_36
             isNullable: true
         returnType:
-          body:
-            $ref: '117'
+          body: *ref_37
           isNullable: true
         serializedName: dictionary_getComplexNull
         url: /dictionary/complex/null
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get empty dictionary of complex type {}'
@@ -2301,24 +2100,20 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '118'
+            body: &ref_38
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
-              valueType:
-                $ref: '1'
+              valueType: *ref_36
             isNullable: true
         returnType:
-          body:
-            $ref: '118'
+          body: *ref_38
           isNullable: true
         serializedName: dictionary_getComplexEmpty
         url: /dictionary/complex/empty
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2338,24 +2133,20 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '119'
+            body: &ref_39
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
-              valueType:
-                $ref: '1'
+              valueType: *ref_36
             isNullable: true
         returnType:
-          body:
-            $ref: '119'
+          body: *ref_39
           isNullable: true
         serializedName: dictionary_getComplexItemNull
         url: /dictionary/complex/itemnull
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2375,24 +2166,20 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '120'
+            body: &ref_40
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
-              valueType:
-                $ref: '1'
+              valueType: *ref_36
             isNullable: true
         returnType:
-          body:
-            $ref: '120'
+          body: *ref_40
           isNullable: true
         serializedName: dictionary_getComplexItemEmpty
         url: /dictionary/complex/itemempty
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2413,24 +2200,20 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '121'
+            body: &ref_41
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
-              valueType:
-                $ref: '1'
+              valueType: *ref_36
             isNullable: true
         returnType:
-          body:
-            $ref: '121'
+          body: *ref_41
           isNullable: true
         serializedName: dictionary_getComplexValid
         url: /dictionary/complex/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2449,8 +2232,7 @@ operations:
           fixed: false
           raw: putComplexValid
         parameters:
-          - $id: '122'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2461,13 +2243,11 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '123'
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
-              valueType:
-                $ref: '1'
+              valueType: *ref_36
             name:
               fixed: false
               raw: arrayBody
@@ -2483,8 +2263,7 @@ operations:
         serializedName: dictionary_putComplexValid
         url: /dictionary/complex/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get a null array
@@ -2502,17 +2281,14 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '124'
+            body: &ref_42
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '125'
                 $type: SequenceType
                 elementType:
-                  $id: '126'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2522,14 +2298,12 @@ operations:
                   fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '124'
+          body: *ref_42
           isNullable: true
         serializedName: dictionary_getArrayNull
         url: /dictionary/array/null
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get an empty dictionary {}'
@@ -2547,17 +2321,14 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '127'
+            body: &ref_43
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '128'
                 $type: SequenceType
                 elementType:
-                  $id: '129'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2567,14 +2338,12 @@ operations:
                   fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '127'
+          body: *ref_43
           isNullable: true
         serializedName: dictionary_getArrayEmpty
         url: /dictionary/array/empty
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2594,17 +2363,14 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '130'
+            body: &ref_44
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '131'
                 $type: SequenceType
                 elementType:
-                  $id: '132'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2614,14 +2380,12 @@ operations:
                   fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '130'
+          body: *ref_44
           isNullable: true
         serializedName: dictionary_getArrayItemNull
         url: /dictionary/array/itemnull
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2641,17 +2405,14 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '133'
+            body: &ref_45
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '134'
                 $type: SequenceType
                 elementType:
-                  $id: '135'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2661,14 +2422,12 @@ operations:
                   fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '133'
+          body: *ref_45
           isNullable: true
         serializedName: dictionary_getArrayItemEmpty
         url: /dictionary/array/itemempty
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2688,17 +2447,14 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '136'
+            body: &ref_46
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '137'
                 $type: SequenceType
                 elementType:
-                  $id: '138'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2708,14 +2464,12 @@ operations:
                   fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '136'
+          body: *ref_46
           isNullable: true
         serializedName: dictionary_getArrayValid
         url: /dictionary/array/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2733,8 +2487,7 @@ operations:
           fixed: false
           raw: putArrayValid
         parameters:
-          - $id: '139'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2745,16 +2498,13 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '140'
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '141'
                 $type: SequenceType
                 elementType:
-                  $id: '142'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2777,8 +2527,7 @@ operations:
         serializedName: dictionary_putArrayValid
         url: /dictionary/array/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get an dictionaries of dictionaries with value null
@@ -2796,20 +2545,17 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '143'
+            body: &ref_47
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '144'
                 $type: DictionaryType
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '145'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2817,14 +2563,12 @@ operations:
                     raw: String
             isNullable: true
         returnType:
-          body:
-            $ref: '143'
+          body: *ref_47
           isNullable: true
         serializedName: dictionary_getDictionaryNull
         url: /dictionary/dictionary/null
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2844,20 +2588,17 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '146'
+            body: &ref_48
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '147'
                 $type: DictionaryType
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '148'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2865,14 +2606,12 @@ operations:
                     raw: String
             isNullable: true
         returnType:
-          body:
-            $ref: '146'
+          body: *ref_48
           isNullable: true
         serializedName: dictionary_getDictionaryEmpty
         url: /dictionary/dictionary/empty
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2893,20 +2632,17 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '149'
+            body: &ref_49
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '150'
                 $type: DictionaryType
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '151'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2914,14 +2650,12 @@ operations:
                     raw: String
             isNullable: true
         returnType:
-          body:
-            $ref: '149'
+          body: *ref_49
           isNullable: true
         serializedName: dictionary_getDictionaryItemNull
         url: /dictionary/dictionary/itemnull
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2942,20 +2676,17 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '152'
+            body: &ref_50
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '153'
                 $type: DictionaryType
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '154'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2963,14 +2694,12 @@ operations:
                     raw: String
             isNullable: true
         returnType:
-          body:
-            $ref: '152'
+          body: *ref_50
           isNullable: true
         serializedName: dictionary_getDictionaryItemEmpty
         url: /dictionary/dictionary/itemempty
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2992,20 +2721,17 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '155'
+            body: &ref_51
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '156'
                 $type: DictionaryType
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '157'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -3013,14 +2739,12 @@ operations:
                     raw: String
             isNullable: true
         returnType:
-          body:
-            $ref: '155'
+          body: *ref_51
           isNullable: true
         serializedName: dictionary_getDictionaryValid
         url: /dictionary/dictionary/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3040,8 +2764,7 @@ operations:
           fixed: false
           raw: putDictionaryValid
         parameters:
-          - $id: '158'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3052,19 +2775,16 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '159'
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '160'
                 $type: DictionaryType
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '161'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:

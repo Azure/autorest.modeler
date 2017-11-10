@@ -3,7 +3,7 @@ apiVersion: 1.0.0
 baseUrl: 'http://localhost'
 documentation: Test Infrastructure for AutoRest Swagger BAT
 enumTypes:
-  - $id: '11'
+  - &ref_9
     $type: EnumType
     modelAsExtensible: false
     modelAsString: false
@@ -11,7 +11,6 @@ enumTypes:
       fixed: false
       raw: Colors
     underlyingType:
-      $id: '12'
       $type: PrimaryType
       knownPrimaryType: string
       name:
@@ -25,17 +24,14 @@ enumTypes:
       - name: blue_color
         serializedName: blue_color
 errorTypes:
-  - $ref: '1'
-modelTypes:
-  - $id: '1'
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: Error
     properties:
-      - $id: '2'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -44,7 +40,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -57,8 +52,7 @@ modelTypes:
         realPath:
           - status
         serializedName: status
-      - $id: '4'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -67,7 +61,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -80,15 +73,16 @@ modelTypes:
           - message
         serializedName: message
     serializedName: Error
-  - $id: '6'
+modelTypes:
+  - *ref_0
+  - &ref_10
     $type: CompositeType
     containsConstantProperties: true
     name:
       fixed: false
       raw: RefColorConstant
     properties:
-      - $id: '7'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
           raw: green-color
@@ -103,7 +97,6 @@ modelTypes:
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '8'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -115,8 +108,7 @@ modelTypes:
         realPath:
           - ColorConstant
         serializedName: ColorConstant
-      - $id: '9'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -126,7 +118,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '10'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -145,8 +136,7 @@ namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get null string value value
@@ -164,8 +154,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '13'
+            body: &ref_1
               $type: EnumType
               modelAsExtensible: false
               modelAsString: true
@@ -173,7 +162,6 @@ operations:
                 fixed: false
                 raw: ''
               underlyingType:
-                $id: '14'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -183,14 +171,12 @@ operations:
                 - {}
             isNullable: true
         returnType:
-          body:
-            $ref: '13'
+          body: *ref_1
           isNullable: true
         serializedName: string_getNull
         url: /string/null
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Set string value null
@@ -206,8 +192,7 @@ operations:
           fixed: false
           raw: putNull
         parameters:
-          - $id: '15'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -218,7 +203,6 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '16'
               $type: EnumType
               modelAsExtensible: false
               modelAsString: true
@@ -226,7 +210,6 @@ operations:
                 fixed: false
                 raw: ''
               underlyingType:
-                $id: '17'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -249,8 +232,7 @@ operations:
         serializedName: string_putNull
         url: /string/null
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get empty string value value ''
@@ -268,8 +250,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '18'
+            body: &ref_2
               $type: EnumType
               modelAsExtensible: false
               modelAsString: true
@@ -277,7 +258,6 @@ operations:
                 fixed: false
                 raw: ''
               underlyingType:
-                $id: '19'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -288,14 +268,12 @@ operations:
                   serializedName: ''
             isNullable: true
         returnType:
-          body:
-            $ref: '18'
+          body: *ref_2
           isNullable: true
         serializedName: string_getEmpty
         url: /string/empty
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Set string value empty ''
@@ -311,8 +289,7 @@ operations:
           fixed: false
           raw: putEmpty
         parameters:
-          - $id: '20'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: ''
@@ -324,7 +301,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '21'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -345,8 +321,7 @@ operations:
         serializedName: string_putEmpty
         url: /string/empty
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -366,8 +341,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '22'
+            body: &ref_3
               $type: EnumType
               modelAsExtensible: false
               modelAsString: true
@@ -375,7 +349,6 @@ operations:
                 fixed: false
                 raw: ''
               underlyingType:
-                $id: '23'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -388,14 +361,12 @@ operations:
                     啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€
             isNullable: true
         returnType:
-          body:
-            $ref: '22'
+          body: *ref_3
           isNullable: true
         serializedName: string_getMbcs
         url: /string/mbcs
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -413,8 +384,7 @@ operations:
           fixed: false
           raw: putMbcs
         parameters:
-          - $id: '24'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: >-
@@ -427,7 +397,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '25'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -448,8 +417,7 @@ operations:
         serializedName: string_putMbcs
         url: /string/mbcs
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -470,8 +438,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '26'
+            body: &ref_4
               $type: EnumType
               modelAsExtensible: false
               modelAsString: true
@@ -479,7 +446,6 @@ operations:
                 fixed: false
                 raw: ''
               underlyingType:
-                $id: '27'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -490,14 +456,12 @@ operations:
                   serializedName: '    Now is the time for all good men to come to the aid of their country    '
             isNullable: true
         returnType:
-          body:
-            $ref: '26'
+          body: *ref_4
           isNullable: true
         serializedName: string_getWhitespace
         url: /string/whitespace
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -516,8 +480,7 @@ operations:
           fixed: false
           raw: putWhitespace
         parameters:
-          - $id: '28'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: '    Now is the time for all good men to come to the aid of their country    '
@@ -529,7 +492,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '29'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -550,8 +512,7 @@ operations:
         serializedName: string_putWhitespace
         url: /string/whitespace
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get String value when no string value is sent in response payload
@@ -569,8 +530,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '30'
+            body: &ref_5
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -578,14 +538,12 @@ operations:
                 raw: String
             isNullable: true
         returnType:
-          body:
-            $ref: '30'
+          body: *ref_5
           isNullable: true
         serializedName: string_getNotProvided
         url: /string/notProvided
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get value that is base64 encoded
@@ -603,8 +561,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '31'
+            body: &ref_6
               $type: PrimaryType
               format: base64url
               knownPrimaryType: base64Url
@@ -613,14 +570,12 @@ operations:
                 raw: Base64Url
             isNullable: true
         returnType:
-          body:
-            $ref: '31'
+          body: *ref_6
           isNullable: true
         serializedName: string_getBase64Encoded
         url: /string/base64Encoding
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get value that is base64url encoded
@@ -638,8 +593,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '32'
+            body: &ref_7
               $type: PrimaryType
               format: base64url
               knownPrimaryType: base64Url
@@ -648,14 +602,12 @@ operations:
                 raw: Base64Url
             isNullable: true
         returnType:
-          body:
-            $ref: '32'
+          body: *ref_7
           isNullable: true
         serializedName: string_getBase64UrlEncoded
         url: /string/base64UrlEncoding
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put value that is base64url encoded
@@ -671,8 +623,7 @@ operations:
           fixed: false
           raw: putBase64UrlEncoded
         parameters:
-          - $id: '33'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -683,7 +634,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '34'
               $type: PrimaryType
               format: base64url
               knownPrimaryType: base64Url
@@ -705,8 +655,7 @@ operations:
         serializedName: string_putBase64UrlEncoded
         url: /string/base64UrlEncoding
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get null value that is expected to be base64url encoded
@@ -724,8 +673,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '35'
+            body: &ref_8
               $type: PrimaryType
               format: base64url
               knownPrimaryType: base64Url
@@ -734,8 +682,7 @@ operations:
                 raw: Base64Url
             isNullable: true
         returnType:
-          body:
-            $ref: '35'
+          body: *ref_8
           isNullable: true
         serializedName: string_getNullBase64UrlEncoded
         url: /string/nullBase64UrlEncoding
@@ -747,8 +694,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -768,18 +714,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '11'
+            body: *ref_9
             isNullable: true
         returnType:
-          body:
-            $ref: '11'
+          body: *ref_9
           isNullable: true
         serializedName: enum_getNotExpandable
         url: /string/enum/notExpandable
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -797,8 +740,7 @@ operations:
           fixed: false
           raw: putNotExpandable
         parameters:
-          - $id: '36'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -808,8 +750,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '11'
+            modelType: *ref_9
             name:
               fixed: false
               raw: stringBody
@@ -825,8 +766,7 @@ operations:
         serializedName: enum_putNotExpandable
         url: /string/enum/notExpandable
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -846,18 +786,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '11'
+            body: *ref_9
             isNullable: true
         returnType:
-          body:
-            $ref: '11'
+          body: *ref_9
           isNullable: true
         serializedName: enum_getReferenced
         url: /string/enum/Referenced
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -875,8 +812,7 @@ operations:
           fixed: false
           raw: putReferenced
         parameters:
-          - $id: '37'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -886,8 +822,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '11'
+            modelType: *ref_9
             name:
               fixed: false
               raw: enumStringBody
@@ -903,8 +838,7 @@ operations:
         serializedName: enum_putReferenced
         url: /string/enum/Referenced
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get value 'green-color' from the constant.
@@ -922,18 +856,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '6'
+            body: *ref_10
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_10
           isNullable: true
         serializedName: enum_getReferencedConstant
         url: /string/enum/ReferencedConstant
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Sends value 'green-color' from a constant
@@ -949,8 +880,7 @@ operations:
           fixed: false
           raw: putReferencedConstant
         parameters:
-          - $id: '38'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -960,8 +890,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '6'
+            modelType: *ref_10
             name:
               fixed: false
               raw: enumStringBody

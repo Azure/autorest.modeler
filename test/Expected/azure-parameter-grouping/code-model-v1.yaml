@@ -3,17 +3,14 @@ apiVersion: 1.0.0
 baseUrl: 'https://localhost'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
-  - $ref: '1'
-modelTypes:
-  - $id: '1'
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: Error
     properties:
-      - $id: '2'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -22,7 +19,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -35,8 +31,7 @@ modelTypes:
         realPath:
           - status
         serializedName: status
-      - $id: '4'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -45,7 +40,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -58,14 +52,15 @@ modelTypes:
           - message
         serializedName: message
     serializedName: Error
+modelTypes:
+  - *ref_0
 modelsName: Models
 name: AutoRestParameterGroupingTestService
 namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Post a bunch of required parameters grouped
@@ -81,8 +76,7 @@ operations:
           fixed: false
           raw: postRequired
         parameters:
-          - $id: '6'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -94,7 +88,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '7'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -105,8 +98,7 @@ operations:
               fixed: false
               raw: body
             serializedName: body
-          - $id: '8'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -117,7 +109,6 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '9'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -127,8 +118,7 @@ operations:
               fixed: false
               raw: customHeader
             serializedName: customHeader
-          - $id: '10'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: '30'
@@ -141,7 +131,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '11'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -152,8 +141,7 @@ operations:
               fixed: false
               raw: query
             serializedName: query
-          - $id: '12'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -166,7 +154,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '13'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -187,8 +174,7 @@ operations:
         serializedName: parameterGrouping_postRequired
         url: '/parameterGrouping/postRequired/{path}'
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Post a bunch of optional parameters grouped
@@ -202,8 +188,7 @@ operations:
           fixed: false
           raw: postOptional
         parameters:
-          - $id: '14'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -214,7 +199,6 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '15'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -224,8 +208,7 @@ operations:
               fixed: false
               raw: customHeader
             serializedName: customHeader
-          - $id: '16'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: '30'
@@ -238,7 +221,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '17'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -260,8 +242,7 @@ operations:
         serializedName: parameterGrouping_postOptional
         url: /parameterGrouping/postOptional
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Post parameters from multiple different parameter groups
@@ -275,8 +256,7 @@ operations:
           fixed: false
           raw: postMultiParamGroups
         parameters:
-          - $id: '18'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -288,7 +268,6 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '19'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -298,8 +277,7 @@ operations:
               fixed: false
               raw: header-one
             serializedName: header-one
-          - $id: '20'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: '30'
@@ -313,7 +291,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '21'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -324,8 +301,7 @@ operations:
               fixed: false
               raw: query-one
             serializedName: query-one
-          - $id: '22'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -337,7 +313,6 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '23'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -347,8 +322,7 @@ operations:
               fixed: false
               raw: header-two
             serializedName: header-two
-          - $id: '24'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: '30'
@@ -362,7 +336,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '25'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -384,8 +357,7 @@ operations:
         serializedName: parameterGrouping_postMultiParamGroups
         url: /parameterGrouping/postMultipleParameterGroups
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Post parameters with a shared parameter group object
@@ -399,8 +371,7 @@ operations:
           fixed: false
           raw: postSharedParameterGroupObject
         parameters:
-          - $id: '26'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -412,7 +383,6 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '27'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -422,8 +392,7 @@ operations:
               fixed: false
               raw: header-one
             serializedName: header-one
-          - $id: '28'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: '30'
@@ -437,7 +406,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '29'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int

@@ -3,7 +3,55 @@ apiVersion: 1.0.0
 baseUrl: '{vault}{secret}{dnsSuffix}'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
-  - $ref: '1'
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
 extensions:
   x-ms-parameterized-host:
     hostTemplate: '{vault}{secret}{dnsSuffix}'
@@ -35,9 +83,7 @@ extensions:
       - $ref: '#/components/parameters/dnsSuffix'
     useSchemePrefix: false
 hostParametersFront:
-  - $id: '6'
-    clientProperty:
-      $id: '7'
+  - clientProperty: &ref_2
       collectionFormat: none
       defaultValue:
         fixed: false
@@ -53,7 +99,6 @@ hostParametersFront:
       isReadOnly: false
       isRequired: true
       modelType:
-        $id: '8'
         $type: PrimaryType
         knownPrimaryType: string
         name:
@@ -81,7 +126,6 @@ hostParametersFront:
     isRequired: true
     location: path
     modelType:
-      $id: '9'
       $type: PrimaryType
       knownPrimaryType: string
       name:
@@ -91,8 +135,7 @@ hostParametersFront:
       fixed: false
       raw: dnsSuffix
     serializedName: dnsSuffix
-  - $id: '10'
-    collectionFormat: none
+  - collectionFormat: none
     defaultValue:
       fixed: false
     documentation:
@@ -106,7 +149,6 @@ hostParametersFront:
     isRequired: true
     location: path
     modelType:
-      $id: '11'
       $type: PrimaryType
       knownPrimaryType: string
       name:
@@ -116,8 +158,7 @@ hostParametersFront:
       fixed: false
       raw: secret
     serializedName: secret
-  - $id: '12'
-    collectionFormat: none
+  - collectionFormat: none
     defaultValue:
       fixed: false
     documentation:
@@ -131,7 +172,6 @@ hostParametersFront:
     isRequired: true
     location: path
     modelType:
-      $id: '13'
       $type: PrimaryType
       knownPrimaryType: string
       name:
@@ -142,67 +182,14 @@ hostParametersFront:
       raw: vault
     serializedName: vault
 modelTypes:
-  - $id: '1'
-    $type: CompositeType
-    containsConstantProperties: false
-    name:
-      fixed: false
-      raw: Error
-    properties:
-      - $id: '2'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '3'
-          $type: PrimaryType
-          format: int32
-          knownPrimaryType: int
-          name:
-            fixed: false
-            raw: Int
-        name:
-          fixed: false
-          raw: status
-        realPath:
-          - status
-        serializedName: status
-      - $id: '4'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '5'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: message
-        realPath:
-          - message
-        serializedName: message
-    serializedName: Error
+  - *ref_0
 modelsName: Models
 name: AutoRestParameterizedCustomHostTestClient
 namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get a 200 to test a valid base uri
@@ -216,8 +203,7 @@ operations:
           fixed: false
           raw: getEmpty
         parameters:
-          - $id: '16'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -227,7 +213,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '17'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -237,9 +222,28 @@ operations:
               fixed: false
               raw: keyName
             serializedName: keyName
-          - $id: '18'
-            clientProperty:
-              $ref: '14'
+          - clientProperty: &ref_1
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+              documentation:
+                fixed: false
+                raw: The subscription id with value 'test12'.
+              isConstant: false
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: subscriptionId
+              realPath:
+                - subscriptionId
+              serializedName: subscriptionId
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -250,7 +254,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '19'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -260,8 +263,7 @@ operations:
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
-          - $id: '20'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: v1
@@ -272,7 +274,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '21'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -299,27 +300,5 @@ operations:
     typeName:
       fixed: false
 properties:
-  - $id: '14'
-    collectionFormat: none
-    defaultValue:
-      fixed: false
-    documentation:
-      fixed: false
-      raw: The subscription id with value 'test12'.
-    isConstant: false
-    isReadOnly: false
-    isRequired: true
-    modelType:
-      $id: '15'
-      $type: PrimaryType
-      knownPrimaryType: string
-      name:
-        fixed: false
-        raw: String
-    name:
-      fixed: false
-      raw: subscriptionId
-    realPath:
-      - subscriptionId
-    serializedName: subscriptionId
-  - $ref: '7'
+  - *ref_1
+  - *ref_2

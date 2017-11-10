@@ -3,17 +3,14 @@ apiVersion: 1.0.0
 baseUrl: 'https://localhost'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
-  - $ref: '1'
-modelTypes:
-  - $id: '1'
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: Error
     properties:
-      - $id: '2'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -22,7 +19,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -35,8 +31,7 @@ modelTypes:
         realPath:
           - status
         serializedName: status
-      - $id: '4'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -45,7 +40,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -58,14 +52,15 @@ modelTypes:
           - message
         serializedName: message
     serializedName: Error
+modelTypes:
+  - *ref_0
 modelsName: Models
 name: AutoRestNumberTestService
 namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get null Number value
@@ -83,8 +78,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '6'
+            body: &ref_1
               $type: PrimaryType
               knownPrimaryType: double
               name:
@@ -92,14 +86,12 @@ operations:
                 raw: Double
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: number_getNull
         url: /number/null
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get invalid float Number value
@@ -117,8 +109,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '7'
+            body: &ref_2
               $type: PrimaryType
               format: float
               knownPrimaryType: double
@@ -127,14 +118,12 @@ operations:
                 raw: Double
             isNullable: true
         returnType:
-          body:
-            $ref: '7'
+          body: *ref_2
           isNullable: true
         serializedName: number_getInvalidFloat
         url: /number/invalidfloat
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get invalid double Number value
@@ -152,8 +141,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '8'
+            body: &ref_3
               $type: PrimaryType
               format: double
               knownPrimaryType: double
@@ -162,14 +150,12 @@ operations:
                 raw: Double
             isNullable: true
         returnType:
-          body:
-            $ref: '8'
+          body: *ref_3
           isNullable: true
         serializedName: number_getInvalidDouble
         url: /number/invaliddouble
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get invalid decimal Number value
@@ -187,8 +173,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '9'
+            body: &ref_4
               $type: PrimaryType
               format: decimal
               knownPrimaryType: decimal
@@ -197,14 +182,12 @@ operations:
                 raw: Decimal
             isNullable: true
         returnType:
-          body:
-            $ref: '9'
+          body: *ref_4
           isNullable: true
         serializedName: number_getInvalidDecimal
         url: /number/invaliddecimal
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put big float value 3.402823e+20
@@ -220,8 +203,7 @@ operations:
           fixed: false
           raw: putBigFloat
         parameters:
-          - $id: '10'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -232,7 +214,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '11'
               $type: PrimaryType
               format: float
               knownPrimaryType: double
@@ -254,8 +235,7 @@ operations:
         serializedName: number_putBigFloat
         url: /number/big/float/3.402823e+20
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get big float value 3.402823e+20
@@ -273,8 +253,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '12'
+            body: &ref_5
               $type: PrimaryType
               format: float
               knownPrimaryType: double
@@ -283,14 +262,12 @@ operations:
                 raw: Double
             isNullable: true
         returnType:
-          body:
-            $ref: '12'
+          body: *ref_5
           isNullable: true
         serializedName: number_getBigFloat
         url: /number/big/float/3.402823e+20
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put big double value 2.5976931e+101
@@ -306,8 +283,7 @@ operations:
           fixed: false
           raw: putBigDouble
         parameters:
-          - $id: '13'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -318,7 +294,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '14'
               $type: PrimaryType
               format: double
               knownPrimaryType: double
@@ -340,8 +315,7 @@ operations:
         serializedName: number_putBigDouble
         url: /number/big/double/2.5976931e+101
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get big double value 2.5976931e+101
@@ -359,8 +333,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '15'
+            body: &ref_6
               $type: PrimaryType
               format: double
               knownPrimaryType: double
@@ -369,14 +342,12 @@ operations:
                 raw: Double
             isNullable: true
         returnType:
-          body:
-            $ref: '15'
+          body: *ref_6
           isNullable: true
         serializedName: number_getBigDouble
         url: /number/big/double/2.5976931e+101
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put big double value 99999999.99
@@ -392,8 +363,7 @@ operations:
           fixed: false
           raw: putBigDoublePositiveDecimal
         parameters:
-          - $id: '16'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: '99999999.99'
@@ -405,7 +375,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '17'
               $type: PrimaryType
               format: double
               knownPrimaryType: double
@@ -427,8 +396,7 @@ operations:
         serializedName: number_putBigDoublePositiveDecimal
         url: /number/big/double/99999999.99
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get big double value 99999999.99
@@ -446,8 +414,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '18'
+            body: &ref_7
               $type: PrimaryType
               format: double
               knownPrimaryType: double
@@ -456,14 +423,12 @@ operations:
                 raw: Double
             isNullable: true
         returnType:
-          body:
-            $ref: '18'
+          body: *ref_7
           isNullable: true
         serializedName: number_getBigDoublePositiveDecimal
         url: /number/big/double/99999999.99
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put big double value -99999999.99
@@ -479,8 +444,7 @@ operations:
           fixed: false
           raw: putBigDoubleNegativeDecimal
         parameters:
-          - $id: '19'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: '-99999999.99'
@@ -492,7 +456,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '20'
               $type: PrimaryType
               format: double
               knownPrimaryType: double
@@ -514,8 +477,7 @@ operations:
         serializedName: number_putBigDoubleNegativeDecimal
         url: /number/big/double/-99999999.99
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get big double value -99999999.99
@@ -533,8 +495,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '21'
+            body: &ref_8
               $type: PrimaryType
               format: double
               knownPrimaryType: double
@@ -543,14 +504,12 @@ operations:
                 raw: Double
             isNullable: true
         returnType:
-          body:
-            $ref: '21'
+          body: *ref_8
           isNullable: true
         serializedName: number_getBigDoubleNegativeDecimal
         url: /number/big/double/-99999999.99
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put big decimal value 2.5976931e+101
@@ -566,8 +525,7 @@ operations:
           fixed: false
           raw: putBigDecimal
         parameters:
-          - $id: '22'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -578,7 +536,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '23'
               $type: PrimaryType
               format: decimal
               knownPrimaryType: decimal
@@ -600,8 +557,7 @@ operations:
         serializedName: number_putBigDecimal
         url: /number/big/decimal/2.5976931e+101
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get big decimal value 2.5976931e+101
@@ -619,8 +575,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '24'
+            body: &ref_9
               $type: PrimaryType
               format: decimal
               knownPrimaryType: decimal
@@ -629,14 +584,12 @@ operations:
                 raw: Decimal
             isNullable: true
         returnType:
-          body:
-            $ref: '24'
+          body: *ref_9
           isNullable: true
         serializedName: number_getBigDecimal
         url: /number/big/decimal/2.5976931e+101
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put big decimal value 99999999.99
@@ -652,8 +605,7 @@ operations:
           fixed: false
           raw: putBigDecimalPositiveDecimal
         parameters:
-          - $id: '25'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: '99999999.99'
@@ -665,7 +617,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '26'
               $type: PrimaryType
               format: decimal
               knownPrimaryType: decimal
@@ -687,8 +638,7 @@ operations:
         serializedName: number_putBigDecimalPositiveDecimal
         url: /number/big/decimal/99999999.99
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get big decimal value 99999999.99
@@ -706,8 +656,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '27'
+            body: &ref_10
               $type: PrimaryType
               format: decimal
               knownPrimaryType: decimal
@@ -716,14 +665,12 @@ operations:
                 raw: Decimal
             isNullable: true
         returnType:
-          body:
-            $ref: '27'
+          body: *ref_10
           isNullable: true
         serializedName: number_getBigDecimalPositiveDecimal
         url: /number/big/decimal/99999999.99
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put big decimal value -99999999.99
@@ -739,8 +686,7 @@ operations:
           fixed: false
           raw: putBigDecimalNegativeDecimal
         parameters:
-          - $id: '28'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: '-99999999.99'
@@ -752,7 +698,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '29'
               $type: PrimaryType
               format: decimal
               knownPrimaryType: decimal
@@ -774,8 +719,7 @@ operations:
         serializedName: number_putBigDecimalNegativeDecimal
         url: /number/big/decimal/-99999999.99
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get big decimal value -99999999.99
@@ -793,8 +737,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '30'
+            body: &ref_11
               $type: PrimaryType
               format: decimal
               knownPrimaryType: decimal
@@ -803,14 +746,12 @@ operations:
                 raw: Decimal
             isNullable: true
         returnType:
-          body:
-            $ref: '30'
+          body: *ref_11
           isNullable: true
         serializedName: number_getBigDecimalNegativeDecimal
         url: /number/big/decimal/-99999999.99
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put small float value 3.402823e-20
@@ -826,8 +767,7 @@ operations:
           fixed: false
           raw: putSmallFloat
         parameters:
-          - $id: '31'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -838,7 +778,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '32'
               $type: PrimaryType
               format: float
               knownPrimaryType: double
@@ -860,8 +799,7 @@ operations:
         serializedName: number_putSmallFloat
         url: /number/small/float/3.402823e-20
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get big double value 3.402823e-20
@@ -879,8 +817,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '33'
+            body: &ref_12
               $type: PrimaryType
               format: double
               knownPrimaryType: double
@@ -889,14 +826,12 @@ operations:
                 raw: Double
             isNullable: true
         returnType:
-          body:
-            $ref: '33'
+          body: *ref_12
           isNullable: true
         serializedName: number_getSmallFloat
         url: /number/small/float/3.402823e-20
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put small double value 2.5976931e-101
@@ -912,8 +847,7 @@ operations:
           fixed: false
           raw: putSmallDouble
         parameters:
-          - $id: '34'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -924,7 +858,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '35'
               $type: PrimaryType
               format: double
               knownPrimaryType: double
@@ -946,8 +879,7 @@ operations:
         serializedName: number_putSmallDouble
         url: /number/small/double/2.5976931e-101
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get big double value 2.5976931e-101
@@ -965,8 +897,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '36'
+            body: &ref_13
               $type: PrimaryType
               format: double
               knownPrimaryType: double
@@ -975,14 +906,12 @@ operations:
                 raw: Double
             isNullable: true
         returnType:
-          body:
-            $ref: '36'
+          body: *ref_13
           isNullable: true
         serializedName: number_getSmallDouble
         url: /number/small/double/2.5976931e-101
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put small decimal value 2.5976931e-101
@@ -998,8 +927,7 @@ operations:
           fixed: false
           raw: putSmallDecimal
         parameters:
-          - $id: '37'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1010,7 +938,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '38'
               $type: PrimaryType
               format: decimal
               knownPrimaryType: decimal
@@ -1032,8 +959,7 @@ operations:
         serializedName: number_putSmallDecimal
         url: /number/small/decimal/2.5976931e-101
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get small decimal value 2.5976931e-101
@@ -1051,8 +977,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '39'
+            body: &ref_14
               $type: PrimaryType
               format: decimal
               knownPrimaryType: decimal
@@ -1061,8 +986,7 @@ operations:
                 raw: Decimal
             isNullable: true
         returnType:
-          body:
-            $ref: '39'
+          body: *ref_14
           isNullable: true
         serializedName: number_getSmallDecimal
         url: /number/small/decimal/2.5976931e-101

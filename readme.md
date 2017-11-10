@@ -23,11 +23,8 @@ pipeline:
     input: openapi-document/identity
     output-artifact: code-model-v1
     scope: standalone-modeler
-  standalone/commonmarker:
-    input: imodeler1
-    output-artifact: code-model-v1
   standalone/cm/transform:
-    input: commonmarker
+    input: imodeler1
     output-artifact: code-model-v1
   standalone/cm/emitter:
     input: transform

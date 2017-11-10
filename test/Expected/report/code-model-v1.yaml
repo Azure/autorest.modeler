@@ -3,17 +3,14 @@ apiVersion: 1.0.0
 baseUrl: 'http://localhost'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
-  - $ref: '1'
-modelTypes:
-  - $id: '1'
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: Error
     properties:
-      - $id: '2'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -22,7 +19,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -35,8 +31,7 @@ modelTypes:
         realPath:
           - status
         serializedName: status
-      - $id: '4'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -45,7 +40,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -58,14 +52,15 @@ modelTypes:
           - message
         serializedName: message
     serializedName: Error
+modelTypes:
+  - *ref_0
 modelsName: Models
 name: AutoRestReportService
 namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get test coverage report
@@ -83,14 +78,12 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '6'
+            body: &ref_1
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '7'
                 $type: PrimaryType
                 knownPrimaryType: int
                 name:
@@ -98,8 +91,7 @@ operations:
                   raw: Int
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: getReport
         url: /report

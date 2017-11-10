@@ -3,282 +3,14 @@ apiVersion: 2014-04-01-preview
 baseUrl: 'http://localhost'
 documentation: Some cool documentation.
 errorTypes:
-  - $ref: '26'
-modelTypes:
-  - $id: '1'
-    $type: CompositeType
-    containsConstantProperties: false
-    documentation: The product documentation.
-    name:
-      fixed: false
-      raw: Product
-    properties:
-      - $id: '2'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-          raw: >-
-            Unique identifier representing a specific product for a given
-            latitude & longitude. For example, uberX in San Francisco will have
-            a different product_id than uberX in Los Angeles.
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '3'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: product_id
-        realPath:
-          - product_id
-        serializedName: product_id
-      - $id: '4'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-          raw: Description of product.
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '5'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: description
-        realPath:
-          - description
-        serializedName: description
-      - $id: '6'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-          raw: Display name of product.
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '7'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: display_name
-        realPath:
-          - display_name
-        serializedName: display_name
-      - $id: '8'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-          raw: '100'
-        documentation:
-          fixed: false
-          raw: 'Capacity of product. For example, 4 people.'
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '9'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: capacity
-        realPath:
-          - capacity
-        serializedName: capacity
-      - $id: '10'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-          raw: Image URL representing the product.
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '11'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: image
-        realPath:
-          - image
-        serializedName: image
-    serializedName: Product
-  - $id: '12'
-    $type: CompositeType
-    containsConstantProperties: false
-    name:
-      fixed: false
-      raw: CatalogDictionary
-    properties:
-      - $id: '13'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-          raw: Dictionary of products
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '14'
-          $type: DictionaryType
-          name:
-            fixed: false
-          supportsAdditionalProperties: false
-          valueType:
-            $ref: '1'
-        name:
-          fixed: false
-          raw: productDictionary
-        realPath:
-          - productDictionary
-        serializedName: productDictionary
-    serializedName: CatalogDictionary
-  - $id: '15'
-    $type: CompositeType
-    containsConstantProperties: false
-    name:
-      fixed: false
-      raw: CatalogArray
-    properties:
-      - $id: '16'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-          raw: Array of products
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '17'
-          $type: SequenceType
-          elementType:
-            $ref: '1'
-          name:
-            fixed: false
-        name:
-          fixed: false
-          raw: productArray
-        realPath:
-          - productArray
-        serializedName: productArray
-    serializedName: CatalogArray
-  - $id: '18'
-    $type: CompositeType
-    containsConstantProperties: false
-    name:
-      fixed: false
-      raw: CatalogArrayOfDictionary
-    properties:
-      - $id: '19'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-          raw: Array of dictionary of products
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '20'
-          $type: SequenceType
-          elementType:
-            $id: '21'
-            $type: DictionaryType
-            name:
-              fixed: false
-            supportsAdditionalProperties: false
-            valueType:
-              $ref: '1'
-          name:
-            fixed: false
-        name:
-          fixed: false
-          raw: productArrayOfDictionary
-        realPath:
-          - productArrayOfDictionary
-        serializedName: productArrayOfDictionary
-    serializedName: CatalogArrayOfDictionary
-  - $id: '22'
-    $type: CompositeType
-    containsConstantProperties: false
-    name:
-      fixed: false
-      raw: CatalogDictionaryOfArray
-    properties:
-      - $id: '23'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-          raw: Dictionary of Array of product
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '24'
-          $type: DictionaryType
-          name:
-            fixed: false
-          supportsAdditionalProperties: false
-          valueType:
-            $id: '25'
-            $type: SequenceType
-            elementType:
-              $ref: '1'
-            name:
-              fixed: false
-        name:
-          fixed: false
-          raw: productDictionaryOfArray
-        realPath:
-          - productDictionaryOfArray
-        serializedName: productDictionaryOfArray
-    serializedName: CatalogDictionaryOfArray
-  - $id: '26'
+  - &ref_1
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: Error
     properties:
-      - $id: '27'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -287,7 +19,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '28'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -300,8 +31,7 @@ modelTypes:
         realPath:
           - status
         serializedName: status
-      - $id: '29'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -310,7 +40,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '30'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -323,14 +52,256 @@ modelTypes:
           - message
         serializedName: message
     serializedName: Error
+modelTypes:
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    documentation: The product documentation.
+    name:
+      fixed: false
+      raw: Product
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: >-
+            Unique identifier representing a specific product for a given
+            latitude & longitude. For example, uberX in San Francisco will have
+            a different product_id than uberX in Los Angeles.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: product_id
+        realPath:
+          - product_id
+        serializedName: product_id
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: Description of product.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: description
+        realPath:
+          - description
+        serializedName: description
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: Display name of product.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: display_name
+        realPath:
+          - display_name
+        serializedName: display_name
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+          raw: '100'
+        documentation:
+          fixed: false
+          raw: 'Capacity of product. For example, 4 people.'
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: capacity
+        realPath:
+          - capacity
+        serializedName: capacity
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: Image URL representing the product.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: image
+        realPath:
+          - image
+        serializedName: image
+    serializedName: Product
+  - &ref_5
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: CatalogDictionary
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: Dictionary of products
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType: *ref_0
+        name:
+          fixed: false
+          raw: productDictionary
+        realPath:
+          - productDictionary
+        serializedName: productDictionary
+    serializedName: CatalogDictionary
+  - &ref_2
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: CatalogArray
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: Array of products
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: SequenceType
+          elementType: *ref_0
+          name:
+            fixed: false
+        name:
+          fixed: false
+          raw: productArray
+        realPath:
+          - productArray
+        serializedName: productArray
+    serializedName: CatalogArray
+  - &ref_6
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: CatalogArrayOfDictionary
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: Array of dictionary of products
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: SequenceType
+          elementType:
+            $type: DictionaryType
+            name:
+              fixed: false
+            supportsAdditionalProperties: false
+            valueType: *ref_0
+          name:
+            fixed: false
+        name:
+          fixed: false
+          raw: productArrayOfDictionary
+        realPath:
+          - productArrayOfDictionary
+        serializedName: productArrayOfDictionary
+    serializedName: CatalogArrayOfDictionary
+  - &ref_3
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: CatalogDictionaryOfArray
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: Dictionary of Array of product
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: SequenceType
+            elementType: *ref_0
+            name:
+              fixed: false
+        name:
+          fixed: false
+          raw: productDictionaryOfArray
+        realPath:
+          - productDictionaryOfArray
+        serializedName: productDictionaryOfArray
+    serializedName: CatalogDictionaryOfArray
+  - *ref_1
 modelsName: Models
 name: ComplexModelClient
 namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '26'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -348,9 +319,29 @@ operations:
           fixed: false
           raw: list
         parameters:
-          - $id: '35'
-            clientProperty:
-              $ref: '31'
+          - clientProperty: &ref_7
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+                raw: '123456'
+              documentation:
+                fixed: false
+                raw: Subscription ID.
+              isConstant: true
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: subscriptionId
+              realPath:
+                - subscriptionId
+              serializedName: subscriptionId
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -362,7 +353,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '36'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -372,8 +362,7 @@ operations:
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
-          - $id: '37'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -383,7 +372,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '38'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -393,9 +381,29 @@ operations:
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
-          - $id: '39'
-            clientProperty:
-              $ref: '33'
+          - clientProperty: &ref_4
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+                raw: 2014-04-01-preview
+              documentation:
+                fixed: false
+                raw: API ID.
+              isConstant: true
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: api-version
+              realPath:
+                - api-version
+              serializedName: api-version
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -407,7 +415,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '40'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -422,20 +429,17 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '15'
+            body: *ref_2
             isNullable: true
         returnType:
-          body:
-            $ref: '15'
+          body: *ref_2
           isNullable: true
         serializedName: list
         summary: Product Types
         url: >-
           /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/Microsoft.Cache/Redis
       - defaultResponse:
-          body:
-            $ref: '26'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Resets products.
@@ -451,8 +455,7 @@ operations:
           fixed: false
           raw: create
         parameters:
-          - $id: '41'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -462,7 +465,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '42'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -472,8 +474,7 @@ operations:
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
-          - $id: '43'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -483,7 +484,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '44'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -493,8 +493,7 @@ operations:
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
-          - $id: '45'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -505,15 +504,12 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '22'
+            modelType: *ref_3
             name:
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
-          - $id: '46'
-            clientProperty:
-              $ref: '33'
+          - clientProperty: *ref_4
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -525,7 +521,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '47'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -540,20 +535,17 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '12'
+            body: *ref_5
             isNullable: true
         returnType:
-          body:
-            $ref: '12'
+          body: *ref_5
           isNullable: true
         serializedName: create
         summary: Create products
         url: >-
           /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/Microsoft.Cache/Redis
       - defaultResponse:
-          body:
-            $ref: '26'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Resets products.
@@ -569,8 +561,7 @@ operations:
           fixed: false
           raw: update
         parameters:
-          - $id: '48'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -580,7 +571,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '49'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -590,8 +580,7 @@ operations:
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
-          - $id: '50'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -601,7 +590,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '51'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -611,8 +599,7 @@ operations:
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
-          - $id: '52'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -623,15 +610,12 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '18'
+            modelType: *ref_6
             name:
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
-          - $id: '53'
-            clientProperty:
-              $ref: '33'
+          - clientProperty: *ref_4
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -643,7 +627,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '54'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -658,12 +641,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '15'
+            body: *ref_2
             isNullable: true
         returnType:
-          body:
-            $ref: '15'
+          body: *ref_2
           isNullable: true
         serializedName: update
         summary: Update products
@@ -676,51 +657,5 @@ operations:
     typeName:
       fixed: false
 properties:
-  - $id: '31'
-    collectionFormat: none
-    defaultValue:
-      fixed: false
-      raw: '123456'
-    documentation:
-      fixed: false
-      raw: Subscription ID.
-    isConstant: true
-    isReadOnly: false
-    isRequired: true
-    modelType:
-      $id: '32'
-      $type: PrimaryType
-      knownPrimaryType: string
-      name:
-        fixed: false
-        raw: String
-    name:
-      fixed: false
-      raw: subscriptionId
-    realPath:
-      - subscriptionId
-    serializedName: subscriptionId
-  - $id: '33'
-    collectionFormat: none
-    defaultValue:
-      fixed: false
-      raw: 2014-04-01-preview
-    documentation:
-      fixed: false
-      raw: API ID.
-    isConstant: true
-    isReadOnly: false
-    isRequired: true
-    modelType:
-      $id: '34'
-      $type: PrimaryType
-      knownPrimaryType: string
-      name:
-        fixed: false
-        raw: String
-    name:
-      fixed: false
-      raw: api-version
-    realPath:
-      - api-version
-    serializedName: api-version
+  - *ref_7
+  - *ref_4

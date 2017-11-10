@@ -8,15 +8,13 @@ documentation: >-
   Client that can be used to query an Azure Search index and upload, merge, or
   delete documents.
 enumTypes:
-  - $id: '75'
-    $type: EnumType
+  - $type: EnumType
     modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: IndexActionType
     underlyingType:
-      $id: '76'
       $type: PrimaryType
       knownPrimaryType: string
       name:
@@ -31,10 +29,44 @@ enumTypes:
         serializedName: mergeOrUpload
       - name: delete
         serializedName: delete
-  - $ref: '44'
-  - $ref: '32'
+  - &ref_2
+    $type: EnumType
+    modelAsExtensible: false
+    modelAsString: false
+    name:
+      fixed: false
+      raw: SearchMode
+    underlyingType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: any
+        serializedName: any
+      - name: all
+        serializedName: all
+  - &ref_1
+    $type: EnumType
+    modelAsExtensible: false
+    modelAsString: false
+    name:
+      fixed: false
+      raw: QueryType
+    underlyingType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: simple
+        serializedName: simple
+      - name: full
+        serializedName: full
 modelTypes:
-  - $id: '1'
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: false
     documentation: Status of an indexing operation for a single document.
@@ -44,8 +76,7 @@ modelTypes:
       fixed: false
       raw: IndexingResult
     properties:
-      - $id: '2'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -55,7 +86,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '3'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -67,8 +97,7 @@ modelTypes:
         realPath:
           - key
         serializedName: key
-      - $id: '4'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -80,7 +109,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '5'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -92,8 +120,7 @@ modelTypes:
         realPath:
           - errorMessage
         serializedName: errorMessage
-      - $id: '6'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -107,7 +134,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '7'
           $type: PrimaryType
           knownPrimaryType: boolean
           name:
@@ -119,8 +145,7 @@ modelTypes:
         realPath:
           - status
         serializedName: status
-      - $id: '8'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -135,7 +160,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '9'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -149,8 +173,7 @@ modelTypes:
           - statusCode
         serializedName: statusCode
     serializedName: IndexingResult
-  - $id: '10'
-    $type: CompositeType
+  - $type: CompositeType
     containsConstantProperties: false
     documentation: >-
       Response containing the status of operations for all documents in the
@@ -159,8 +182,7 @@ modelTypes:
       fixed: false
       raw: DocumentIndexResult
     properties:
-      - $id: '11'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -174,10 +196,8 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '12'
           $type: SequenceType
-          elementType:
-            $ref: '1'
+          elementType: *ref_0
           name:
             fixed: false
         name:
@@ -187,8 +207,7 @@ modelTypes:
           - value
         serializedName: value
     serializedName: DocumentIndexResult
-  - $id: '13'
-    $type: CompositeType
+  - $type: CompositeType
     containsConstantProperties: false
     documentation: >-
       Parameters for filtering, sorting, faceting, paging, and other search
@@ -197,8 +216,7 @@ modelTypes:
       fixed: false
       raw: SearchParametersPayload
     properties:
-      - $id: '14'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -211,7 +229,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '15'
           $type: PrimaryType
           knownPrimaryType: boolean
           name:
@@ -223,8 +240,7 @@ modelTypes:
         realPath:
           - count
         serializedName: count
-      - $id: '16'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -237,10 +253,8 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '17'
           $type: SequenceType
           elementType:
-            $id: '18'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -254,8 +268,7 @@ modelTypes:
         realPath:
           - facets
         serializedName: facets
-      - $id: '19'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -265,7 +278,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '20'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -277,8 +289,7 @@ modelTypes:
         realPath:
           - filter
         serializedName: filter
-      - $id: '21'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -290,7 +301,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '22'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -302,8 +312,7 @@ modelTypes:
         realPath:
           - highlight
         serializedName: highlight
-      - $id: '23'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -315,7 +324,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '24'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -327,8 +335,7 @@ modelTypes:
         realPath:
           - highlightPostTag
         serializedName: highlightPostTag
-      - $id: '25'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -340,7 +347,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '26'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -352,8 +358,7 @@ modelTypes:
         realPath:
           - highlightPreTag
         serializedName: highlightPreTag
-      - $id: '27'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -368,7 +373,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '28'
           $type: PrimaryType
           format: double
           knownPrimaryType: double
@@ -381,8 +385,7 @@ modelTypes:
         realPath:
           - minimumCoverage
         serializedName: minimumCoverage
-      - $id: '29'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -402,7 +405,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '30'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -414,8 +416,7 @@ modelTypes:
         realPath:
           - orderby
         serializedName: orderby
-      - $id: '31'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -430,34 +431,14 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $id: '32'
-          $type: EnumType
-          modelAsExtensible: false
-          modelAsString: false
-          name:
-            fixed: false
-            raw: QueryType
-          underlyingType:
-            $id: '33'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
-          values:
-            - name: simple
-              serializedName: simple
-            - name: full
-              serializedName: full
+        modelType: *ref_1
         name:
           fixed: false
           raw: queryType
         realPath:
           - queryType
         serializedName: queryType
-      - $id: '34'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -472,10 +453,8 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '35'
           $type: SequenceType
           elementType:
-            $id: '36'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -489,8 +468,7 @@ modelTypes:
         realPath:
           - scoringParameters
         serializedName: scoringParameters
-      - $id: '37'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -502,7 +480,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '38'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -514,8 +491,7 @@ modelTypes:
         realPath:
           - scoringProfile
         serializedName: scoringProfile
-      - $id: '39'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -527,7 +503,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '40'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -539,8 +514,7 @@ modelTypes:
         realPath:
           - search
         serializedName: search
-      - $id: '41'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -552,7 +526,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '42'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -564,8 +537,7 @@ modelTypes:
         realPath:
           - searchFields
         serializedName: searchFields
-      - $id: '43'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -579,34 +551,14 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $id: '44'
-          $type: EnumType
-          modelAsExtensible: false
-          modelAsString: false
-          name:
-            fixed: false
-            raw: SearchMode
-          underlyingType:
-            $id: '45'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
-          values:
-            - name: any
-              serializedName: any
-            - name: all
-              serializedName: all
+        modelType: *ref_2
         name:
           fixed: false
           raw: searchMode
         realPath:
           - searchMode
         serializedName: searchMode
-      - $id: '46'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -618,7 +570,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '47'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -630,8 +581,7 @@ modelTypes:
         realPath:
           - select
         serializedName: select
-      - $id: '48'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -645,7 +595,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '49'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -658,8 +607,7 @@ modelTypes:
         realPath:
           - skip
         serializedName: skip
-      - $id: '50'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -675,7 +623,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '51'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -689,8 +636,7 @@ modelTypes:
           - top
         serializedName: top
     serializedName: SearchParametersPayload
-  - $id: '52'
-    $type: CompositeType
+  - $type: CompositeType
     containsConstantProperties: false
     documentation: >-
       Parameters for filtering, sorting, fuzzy matching, and other suggestions
@@ -699,8 +645,7 @@ modelTypes:
       fixed: false
       raw: SuggestParametersPayload
     properties:
-      - $id: '53'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -710,7 +655,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '54'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -722,8 +666,7 @@ modelTypes:
         realPath:
           - filter
         serializedName: filter
-      - $id: '55'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -739,7 +682,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '56'
           $type: PrimaryType
           knownPrimaryType: boolean
           name:
@@ -751,8 +693,7 @@ modelTypes:
         realPath:
           - fuzzy
         serializedName: fuzzy
-      - $id: '57'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -765,7 +706,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '58'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -777,8 +717,7 @@ modelTypes:
         realPath:
           - highlightPostTag
         serializedName: highlightPostTag
-      - $id: '59'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -791,7 +730,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '60'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -803,8 +741,7 @@ modelTypes:
         realPath:
           - highlightPreTag
         serializedName: highlightPreTag
-      - $id: '61'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -819,7 +756,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '62'
           $type: PrimaryType
           format: double
           knownPrimaryType: double
@@ -832,8 +768,7 @@ modelTypes:
         realPath:
           - minimumCoverage
         serializedName: minimumCoverage
-      - $id: '63'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -853,7 +788,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '64'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -865,8 +799,7 @@ modelTypes:
         realPath:
           - orderby
         serializedName: orderby
-      - $id: '65'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -876,7 +809,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '66'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -888,8 +820,7 @@ modelTypes:
         realPath:
           - search
         serializedName: search
-      - $id: '67'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -901,7 +832,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '68'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -913,8 +843,7 @@ modelTypes:
         realPath:
           - searchFields
         serializedName: searchFields
-      - $id: '69'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -926,7 +855,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '70'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -938,8 +866,7 @@ modelTypes:
         realPath:
           - select
         serializedName: select
-      - $id: '71'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -951,7 +878,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '72'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -963,8 +889,7 @@ modelTypes:
         realPath:
           - suggesterName
         serializedName: suggesterName
-      - $id: '73'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -976,7 +901,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '74'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -1012,8 +936,7 @@ operations:
           fixed: false
           raw: Count
         parameters:
-          - $id: '79'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1027,7 +950,6 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '80'
               $type: PrimaryType
               format: uuid
               knownPrimaryType: uuid
@@ -1038,9 +960,28 @@ operations:
               fixed: false
               raw: client-request-id
             serializedName: client-request-id
-          - $id: '81'
-            clientProperty:
-              $ref: '77'
+          - clientProperty: &ref_4
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+              documentation:
+                fixed: false
+                raw: Client Api Version.
+              isConstant: false
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: api-version
+              realPath:
+                - api-version
+              serializedName: api-version
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1051,7 +992,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '82'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1066,8 +1006,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '83'
+            body: &ref_3
               $type: PrimaryType
               format: int64
               knownPrimaryType: long
@@ -1076,8 +1015,7 @@ operations:
                 raw: Long
             isNullable: true
         returnType:
-          body:
-            $ref: '83'
+          body: *ref_3
           isNullable: true
         serializedName: DocumentsProxy_Count
         url: /docs/$count
@@ -1088,26 +1026,4 @@ operations:
     typeName:
       fixed: false
 properties:
-  - $id: '77'
-    collectionFormat: none
-    defaultValue:
-      fixed: false
-    documentation:
-      fixed: false
-      raw: Client Api Version.
-    isConstant: false
-    isReadOnly: false
-    isRequired: true
-    modelType:
-      $id: '78'
-      $type: PrimaryType
-      knownPrimaryType: string
-      name:
-        fixed: false
-        raw: String
-    name:
-      fixed: false
-      raw: api-version
-    realPath:
-      - api-version
-    serializedName: api-version
+  - *ref_4

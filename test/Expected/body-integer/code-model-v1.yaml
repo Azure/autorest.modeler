@@ -3,17 +3,14 @@ apiVersion: 1.0.0
 baseUrl: 'http://localhost'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
-  - $ref: '1'
-modelTypes:
-  - $id: '1'
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: Error
     properties:
-      - $id: '2'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -22,7 +19,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -35,8 +31,7 @@ modelTypes:
         realPath:
           - status
         serializedName: status
-      - $id: '4'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -45,7 +40,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -58,14 +52,15 @@ modelTypes:
           - message
         serializedName: message
     serializedName: Error
+modelTypes:
+  - *ref_0
 modelsName: Models
 name: AutoRestIntegerTestService
 namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get null Int value
@@ -83,8 +78,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '6'
+            body: &ref_1
               $type: PrimaryType
               knownPrimaryType: int
               name:
@@ -92,14 +86,12 @@ operations:
                 raw: Int
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: int_getNull
         url: /int/null
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get invalid Int value
@@ -117,8 +109,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '7'
+            body: &ref_2
               $type: PrimaryType
               knownPrimaryType: int
               name:
@@ -126,14 +117,12 @@ operations:
                 raw: Int
             isNullable: true
         returnType:
-          body:
-            $ref: '7'
+          body: *ref_2
           isNullable: true
         serializedName: int_getInvalid
         url: /int/invalid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get overflow Int32 value
@@ -151,8 +140,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '8'
+            body: &ref_3
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -161,14 +149,12 @@ operations:
                 raw: Int
             isNullable: true
         returnType:
-          body:
-            $ref: '8'
+          body: *ref_3
           isNullable: true
         serializedName: int_getOverflowInt32
         url: /int/overflowint32
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get underflow Int32 value
@@ -186,8 +172,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '9'
+            body: &ref_4
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -196,14 +181,12 @@ operations:
                 raw: Int
             isNullable: true
         returnType:
-          body:
-            $ref: '9'
+          body: *ref_4
           isNullable: true
         serializedName: int_getUnderflowInt32
         url: /int/underflowint32
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get overflow Int64 value
@@ -221,8 +204,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '10'
+            body: &ref_5
               $type: PrimaryType
               format: int64
               knownPrimaryType: long
@@ -231,14 +213,12 @@ operations:
                 raw: Long
             isNullable: true
         returnType:
-          body:
-            $ref: '10'
+          body: *ref_5
           isNullable: true
         serializedName: int_getOverflowInt64
         url: /int/overflowint64
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get underflow Int64 value
@@ -256,8 +236,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '11'
+            body: &ref_6
               $type: PrimaryType
               format: int64
               knownPrimaryType: long
@@ -266,14 +245,12 @@ operations:
                 raw: Long
             isNullable: true
         returnType:
-          body:
-            $ref: '11'
+          body: *ref_6
           isNullable: true
         serializedName: int_getUnderflowInt64
         url: /int/underflowint64
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put max int32 value
@@ -289,8 +266,7 @@ operations:
           fixed: false
           raw: putMax32
         parameters:
-          - $id: '12'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -301,7 +277,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '13'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -323,8 +298,7 @@ operations:
         serializedName: int_putMax32
         url: /int/max/32
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put max int64 value
@@ -340,8 +314,7 @@ operations:
           fixed: false
           raw: putMax64
         parameters:
-          - $id: '14'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -352,7 +325,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '15'
               $type: PrimaryType
               format: int64
               knownPrimaryType: long
@@ -374,8 +346,7 @@ operations:
         serializedName: int_putMax64
         url: /int/max/64
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put min int32 value
@@ -391,8 +362,7 @@ operations:
           fixed: false
           raw: putMin32
         parameters:
-          - $id: '16'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -403,7 +373,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '17'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -425,8 +394,7 @@ operations:
         serializedName: int_putMin32
         url: /int/min/32
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put min int64 value
@@ -442,8 +410,7 @@ operations:
           fixed: false
           raw: putMin64
         parameters:
-          - $id: '18'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -454,7 +421,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '19'
               $type: PrimaryType
               format: int64
               knownPrimaryType: long
@@ -476,8 +442,7 @@ operations:
         serializedName: int_putMin64
         url: /int/min/64
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get datetime encoded as Unix time value
@@ -495,8 +460,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '20'
+            body: &ref_7
               $type: PrimaryType
               format: unixtime
               knownPrimaryType: unixTime
@@ -505,14 +469,12 @@ operations:
                 raw: UnixTime
             isNullable: true
         returnType:
-          body:
-            $ref: '20'
+          body: *ref_7
           isNullable: true
         serializedName: int_getUnixTime
         url: /int/unixtime
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put datetime encoded as Unix time
@@ -528,8 +490,7 @@ operations:
           fixed: false
           raw: putUnixTimeDate
         parameters:
-          - $id: '21'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -540,7 +501,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '22'
               $type: PrimaryType
               format: unixtime
               knownPrimaryType: unixTime
@@ -562,8 +522,7 @@ operations:
         serializedName: int_putUnixTimeDate
         url: /int/unixtime
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get invalid Unix time value
@@ -581,8 +540,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '23'
+            body: &ref_8
               $type: PrimaryType
               format: unixtime
               knownPrimaryType: unixTime
@@ -591,14 +549,12 @@ operations:
                 raw: UnixTime
             isNullable: true
         returnType:
-          body:
-            $ref: '23'
+          body: *ref_8
           isNullable: true
         serializedName: int_getInvalidUnixTime
         url: /int/invalidunixtime
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get null Unix time value
@@ -616,8 +572,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '24'
+            body: &ref_9
               $type: PrimaryType
               format: unixtime
               knownPrimaryType: unixTime
@@ -626,8 +581,7 @@ operations:
                 raw: UnixTime
             isNullable: true
         returnType:
-          body:
-            $ref: '24'
+          body: *ref_9
           isNullable: true
         serializedName: int_getNullUnixTime
         url: /int/nullunixtime

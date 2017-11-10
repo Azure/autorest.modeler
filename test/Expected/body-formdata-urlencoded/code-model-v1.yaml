@@ -23,8 +23,7 @@ operations:
           fixed: false
           raw: updatePetWithForm
         parameters:
-          - $id: '1'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -34,7 +33,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '2'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -44,8 +42,7 @@ operations:
               fixed: false
               raw: petId
             serializedName: petId
-          - $id: '3'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -55,7 +52,6 @@ operations:
             isRequired: false
             location: formData
             modelType:
-              $id: '4'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -65,8 +61,7 @@ operations:
               fixed: false
               raw: name
             serializedName: name
-          - $id: '5'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -76,7 +71,6 @@ operations:
             isRequired: false
             location: formData
             modelType:
-              $id: '6'
               $type: PrimaryType
               knownPrimaryType: string
               name:

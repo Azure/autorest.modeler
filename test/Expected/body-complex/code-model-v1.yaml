@@ -3,19 +3,37 @@ apiVersion: '2016-02-29'
 baseUrl: 'http://localhost'
 documentation: Test Infrastructure for AutoRest
 enumTypes:
-  - $ref: '12'
+  - &ref_1
+    $type: EnumType
+    modelAsExtensible: false
+    modelAsString: true
+    name:
+      fixed: false
+      raw: CMYKColors
+    underlyingType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: cyan
+        serializedName: cyan
+      - name: Magenta
+        serializedName: Magenta
+      - name: YELLOW
+        serializedName: YELLOW
+      - name: blacK
+        serializedName: blacK
 errorTypes:
-  - $ref: '1'
-modelTypes:
-  - $id: '1'
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: Error
     properties:
-      - $id: '2'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -24,7 +42,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -37,8 +54,7 @@ modelTypes:
         realPath:
           - status
         serializedName: status
-      - $id: '4'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -47,7 +63,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -60,15 +75,16 @@ modelTypes:
           - message
         serializedName: message
     serializedName: Error
-  - $id: '6'
+modelTypes:
+  - *ref_0
+  - &ref_8
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: basic
     properties:
-      - $id: '7'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -78,7 +94,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '8'
           $type: PrimaryType
           knownPrimaryType: int
           name:
@@ -90,8 +105,7 @@ modelTypes:
         realPath:
           - id
         serializedName: id
-      - $id: '9'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -103,7 +117,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '10'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -115,8 +128,7 @@ modelTypes:
         realPath:
           - name
         serializedName: name
-      - $id: '11'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -128,30 +140,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $id: '12'
-          $type: EnumType
-          modelAsExtensible: false
-          modelAsString: true
-          name:
-            fixed: false
-            raw: CMYKColors
-          underlyingType:
-            $id: '13'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
-          values:
-            - name: cyan
-              serializedName: cyan
-            - name: Magenta
-              serializedName: Magenta
-            - name: YELLOW
-              serializedName: YELLOW
-            - name: blacK
-              serializedName: blacK
+        modelType: *ref_1
         name:
           fixed: false
           raw: color
@@ -159,15 +148,14 @@ modelTypes:
           - color
         serializedName: color
     serializedName: basic
-  - $id: '14'
+  - &ref_2
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: pet
     properties:
-      - $id: '15'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -176,7 +164,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '16'
           $type: PrimaryType
           knownPrimaryType: int
           name:
@@ -188,8 +175,7 @@ modelTypes:
         realPath:
           - id
         serializedName: id
-      - $id: '17'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -198,7 +184,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '18'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -211,17 +196,15 @@ modelTypes:
           - name
         serializedName: name
     serializedName: pet
-  - $id: '19'
+  - &ref_3
     $type: CompositeType
-    baseModelType:
-      $ref: '14'
+    baseModelType: *ref_2
     containsConstantProperties: false
     name:
       fixed: false
       raw: dog
     properties:
-      - $id: '20'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -230,7 +213,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '21'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -243,17 +225,15 @@ modelTypes:
           - food
         serializedName: food
     serializedName: dog
-  - $id: '22'
+  - &ref_4
     $type: CompositeType
-    baseModelType:
-      $ref: '14'
+    baseModelType: *ref_2
     containsConstantProperties: false
     name:
       fixed: false
       raw: cat
     properties:
-      - $id: '23'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -262,7 +242,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '24'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -274,8 +253,7 @@ modelTypes:
         realPath:
           - color
         serializedName: color
-      - $id: '25'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -284,10 +262,8 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '26'
           $type: SequenceType
-          elementType:
-            $ref: '19'
+          elementType: *ref_3
           name:
             fixed: false
         name:
@@ -297,17 +273,15 @@ modelTypes:
           - hates
         serializedName: hates
     serializedName: cat
-  - $id: '27'
+  - &ref_22
     $type: CompositeType
-    baseModelType:
-      $ref: '22'
+    baseModelType: *ref_4
     containsConstantProperties: false
     name:
       fixed: false
       raw: siamese
     properties:
-      - $id: '28'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -316,7 +290,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '29'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -329,7 +302,7 @@ modelTypes:
           - breed
         serializedName: breed
     serializedName: siamese
-  - $id: '30'
+  - &ref_5
     $type: CompositeType
     containsConstantProperties: false
     name:
@@ -337,8 +310,7 @@ modelTypes:
       raw: Fish
     polymorphicDiscriminator: fishtype
     properties:
-      - $id: '31'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -347,7 +319,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '32'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -359,8 +330,7 @@ modelTypes:
         realPath:
           - species
         serializedName: species
-      - $id: '33'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -369,7 +339,6 @@ modelTypes:
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '34'
           $type: PrimaryType
           format: float
           knownPrimaryType: double
@@ -382,8 +351,7 @@ modelTypes:
         realPath:
           - length
         serializedName: length
-      - $id: '35'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -392,10 +360,8 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '36'
           $type: SequenceType
-          elementType:
-            $ref: '30'
+          elementType: *ref_5
           name:
             fixed: false
         name:
@@ -405,17 +371,15 @@ modelTypes:
           - siblings
         serializedName: siblings
     serializedName: Fish
-  - $id: '37'
+  - &ref_6
     $type: CompositeType
-    baseModelType:
-      $ref: '30'
+    baseModelType: *ref_5
     containsConstantProperties: false
     name:
       fixed: false
       raw: salmon
     properties:
-      - $id: '38'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -424,7 +388,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '39'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -436,8 +399,7 @@ modelTypes:
         realPath:
           - location
         serializedName: location
-      - $id: '40'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -446,7 +408,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '41'
           $type: PrimaryType
           knownPrimaryType: boolean
           name:
@@ -459,17 +420,14 @@ modelTypes:
           - iswild
         serializedName: iswild
     serializedName: salmon
-  - $id: '42'
-    $type: CompositeType
-    baseModelType:
-      $ref: '37'
+  - $type: CompositeType
+    baseModelType: *ref_6
     containsConstantProperties: false
     name:
       fixed: false
       raw: smart_salmon
     properties:
-      - $id: '43'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -481,13 +439,11 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '44'
           $type: DictionaryType
           name:
             fixed: false
           supportsAdditionalProperties: true
           valueType:
-            $id: '45'
             $type: PrimaryType
             knownPrimaryType: object
             name:
@@ -496,8 +452,7 @@ modelTypes:
         name:
           fixed: false
           raw: additionalProperties
-      - $id: '46'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -506,7 +461,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '47'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -519,17 +473,15 @@ modelTypes:
           - college_degree
         serializedName: college_degree
     serializedName: smart_salmon
-  - $id: '48'
+  - &ref_7
     $type: CompositeType
-    baseModelType:
-      $ref: '30'
+    baseModelType: *ref_5
     containsConstantProperties: false
     name:
       fixed: false
       raw: shark
     properties:
-      - $id: '49'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -538,7 +490,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '50'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -551,8 +502,7 @@ modelTypes:
         realPath:
           - age
         serializedName: age
-      - $id: '51'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -561,7 +511,6 @@ modelTypes:
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '52'
           $type: PrimaryType
           format: date-time
           knownPrimaryType: dateTime
@@ -575,17 +524,14 @@ modelTypes:
           - birthday
         serializedName: birthday
     serializedName: shark
-  - $id: '53'
-    $type: CompositeType
-    baseModelType:
-      $ref: '48'
+  - $type: CompositeType
+    baseModelType: *ref_7
     containsConstantProperties: false
     name:
       fixed: false
       raw: sawshark
     properties:
-      - $id: '54'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -594,7 +540,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '55'
           $type: PrimaryType
           format: byte
           knownPrimaryType: byteArray
@@ -608,10 +553,8 @@ modelTypes:
           - picture
         serializedName: picture
     serializedName: sawshark
-  - $id: '56'
-    $type: CompositeType
-    baseModelType:
-      $ref: '48'
+  - $type: CompositeType
+    baseModelType: *ref_7
     containsConstantProperties: false
     extensions:
       x-ms-discriminator-value: goblin
@@ -619,8 +562,7 @@ modelTypes:
       fixed: false
       raw: goblinshark
     properties:
-      - $id: '57'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -629,7 +571,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '58'
           $type: PrimaryType
           knownPrimaryType: int
           name:
@@ -642,24 +583,21 @@ modelTypes:
           - jawsize
         serializedName: jawsize
     serializedName: goblin
-  - $id: '59'
-    $type: CompositeType
-    baseModelType:
-      $ref: '48'
+  - $type: CompositeType
+    baseModelType: *ref_7
     containsConstantProperties: false
     name:
       fixed: false
       raw: cookiecuttershark
     serializedName: cookiecuttershark
-  - $id: '60'
+  - &ref_9
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: int-wrapper
     properties:
-      - $id: '61'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -668,7 +606,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '62'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -681,8 +618,7 @@ modelTypes:
         realPath:
           - field1
         serializedName: field1
-      - $id: '63'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -691,7 +627,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '64'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -705,15 +640,14 @@ modelTypes:
           - field2
         serializedName: field2
     serializedName: int-wrapper
-  - $id: '65'
+  - &ref_10
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: long-wrapper
     properties:
-      - $id: '66'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -722,7 +656,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '67'
           $type: PrimaryType
           format: int64
           knownPrimaryType: long
@@ -735,8 +668,7 @@ modelTypes:
         realPath:
           - field1
         serializedName: field1
-      - $id: '68'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -745,7 +677,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '69'
           $type: PrimaryType
           format: int64
           knownPrimaryType: long
@@ -759,15 +690,14 @@ modelTypes:
           - field2
         serializedName: field2
     serializedName: long-wrapper
-  - $id: '70'
+  - &ref_11
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: float-wrapper
     properties:
-      - $id: '71'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -776,7 +706,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '72'
           $type: PrimaryType
           format: float
           knownPrimaryType: double
@@ -789,8 +718,7 @@ modelTypes:
         realPath:
           - field1
         serializedName: field1
-      - $id: '73'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -799,7 +727,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '74'
           $type: PrimaryType
           format: float
           knownPrimaryType: double
@@ -813,15 +740,14 @@ modelTypes:
           - field2
         serializedName: field2
     serializedName: float-wrapper
-  - $id: '75'
+  - &ref_12
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: double-wrapper
     properties:
-      - $id: '76'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -830,7 +756,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '77'
           $type: PrimaryType
           format: double
           knownPrimaryType: double
@@ -843,8 +768,7 @@ modelTypes:
         realPath:
           - field1
         serializedName: field1
-      - $id: '78'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -853,7 +777,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '79'
           $type: PrimaryType
           format: double
           knownPrimaryType: double
@@ -870,15 +793,14 @@ modelTypes:
         serializedName: >-
           field_56_zeros_after_the_dot_and_negative_zero_before_dot_and_this_is_a_long_field_name_on_purpose
     serializedName: double-wrapper
-  - $id: '80'
+  - &ref_13
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: boolean-wrapper
     properties:
-      - $id: '81'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -887,7 +809,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '82'
           $type: PrimaryType
           knownPrimaryType: boolean
           name:
@@ -899,8 +820,7 @@ modelTypes:
         realPath:
           - field_true
         serializedName: field_true
-      - $id: '83'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -909,7 +829,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '84'
           $type: PrimaryType
           knownPrimaryType: boolean
           name:
@@ -922,15 +841,14 @@ modelTypes:
           - field_false
         serializedName: field_false
     serializedName: boolean-wrapper
-  - $id: '85'
+  - &ref_14
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: string-wrapper
     properties:
-      - $id: '86'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -939,7 +857,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '87'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -951,8 +868,7 @@ modelTypes:
         realPath:
           - field
         serializedName: field
-      - $id: '88'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -961,7 +877,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '89'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -973,8 +888,7 @@ modelTypes:
         realPath:
           - empty
         serializedName: empty
-      - $id: '90'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -983,7 +897,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '91'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -996,15 +909,14 @@ modelTypes:
           - 'null'
         serializedName: 'null'
     serializedName: string-wrapper
-  - $id: '92'
+  - &ref_15
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: date-wrapper
     properties:
-      - $id: '93'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1013,7 +925,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '94'
           $type: PrimaryType
           format: date
           knownPrimaryType: date
@@ -1026,8 +937,7 @@ modelTypes:
         realPath:
           - field
         serializedName: field
-      - $id: '95'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1036,7 +946,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '96'
           $type: PrimaryType
           format: date
           knownPrimaryType: date
@@ -1050,15 +959,14 @@ modelTypes:
           - leap
         serializedName: leap
     serializedName: date-wrapper
-  - $id: '97'
+  - &ref_16
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: datetime-wrapper
     properties:
-      - $id: '98'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1067,7 +975,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '99'
           $type: PrimaryType
           format: date-time
           knownPrimaryType: dateTime
@@ -1080,8 +987,7 @@ modelTypes:
         realPath:
           - field
         serializedName: field
-      - $id: '100'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1090,7 +996,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '101'
           $type: PrimaryType
           format: date-time
           knownPrimaryType: dateTime
@@ -1104,15 +1009,14 @@ modelTypes:
           - now
         serializedName: now
     serializedName: datetime-wrapper
-  - $id: '102'
+  - &ref_17
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: datetimerfc1123-wrapper
     properties:
-      - $id: '103'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1121,7 +1025,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '104'
           $type: PrimaryType
           format: date-time-rfc1123
           knownPrimaryType: dateTimeRfc1123
@@ -1134,8 +1037,7 @@ modelTypes:
         realPath:
           - field
         serializedName: field
-      - $id: '105'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1144,7 +1046,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '106'
           $type: PrimaryType
           format: date-time-rfc1123
           knownPrimaryType: dateTimeRfc1123
@@ -1158,15 +1059,14 @@ modelTypes:
           - now
         serializedName: now
     serializedName: datetimerfc1123-wrapper
-  - $id: '107'
+  - &ref_18
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: duration-wrapper
     properties:
-      - $id: '108'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1175,7 +1075,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '109'
           $type: PrimaryType
           format: duration
           knownPrimaryType: timeSpan
@@ -1189,15 +1088,14 @@ modelTypes:
           - field
         serializedName: field
     serializedName: duration-wrapper
-  - $id: '110'
+  - &ref_19
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: byte-wrapper
     properties:
-      - $id: '111'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1206,7 +1104,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '112'
           $type: PrimaryType
           format: byte
           knownPrimaryType: byteArray
@@ -1220,15 +1117,14 @@ modelTypes:
           - field
         serializedName: field
     serializedName: byte-wrapper
-  - $id: '113'
+  - &ref_20
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: array-wrapper
     properties:
-      - $id: '114'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1237,10 +1133,8 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '115'
           $type: SequenceType
           elementType:
-            $id: '116'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -1255,15 +1149,14 @@ modelTypes:
           - array
         serializedName: array
     serializedName: array-wrapper
-  - $id: '117'
+  - &ref_21
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: dictionary-wrapper
     properties:
-      - $id: '118'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1272,13 +1165,11 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '119'
           $type: DictionaryType
           name:
             fixed: false
           supportsAdditionalProperties: false
           valueType:
-            $id: '120'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -1291,15 +1182,14 @@ modelTypes:
           - defaultProgram
         serializedName: defaultProgram
     serializedName: dictionary-wrapper
-  - $id: '121'
+  - &ref_23
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: readonly-obj
     properties:
-      - $id: '122'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1308,7 +1198,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '123'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -1320,8 +1209,7 @@ modelTypes:
         realPath:
           - id
         serializedName: id
-      - $id: '124'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1330,7 +1218,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '125'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -1350,8 +1237,7 @@ namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get complex type {id: 2, name: ''abc'', color: ''YELLOW''}'
@@ -1369,18 +1255,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '6'
+            body: *ref_8
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_8
           isNullable: true
         serializedName: basic_getValid
         url: /complex/basic/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Please put {id: 2, name: ''abc'', color: ''Magenta''}'
@@ -1396,8 +1279,7 @@ operations:
           fixed: false
           raw: putValid
         parameters:
-          - $id: '128'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1408,15 +1290,34 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '6'
+            modelType: *ref_8
             name:
               fixed: false
               raw: complexBody
             serializedName: complexBody
-          - $id: '129'
-            clientProperty:
-              $ref: '126'
+          - clientProperty: &ref_24
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+                raw: 2014-04-01-preview
+              documentation:
+                fixed: false
+                raw: API ID.
+              isConstant: true
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: api-version
+              realPath:
+                - api-version
+              serializedName: api-version
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1428,7 +1329,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '130'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1449,8 +1349,7 @@ operations:
         serializedName: basic_putValid
         url: /complex/basic/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get a basic complex type that is invalid for the local strong type
@@ -1468,18 +1367,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '6'
+            body: *ref_8
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_8
           isNullable: true
         serializedName: basic_getInvalid
         url: /complex/basic/invalid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get a basic complex type that is empty
@@ -1497,18 +1393,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '6'
+            body: *ref_8
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_8
           isNullable: true
         serializedName: basic_getEmpty
         url: /complex/basic/empty
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get a basic complex type whose properties are null
@@ -1526,18 +1419,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '6'
+            body: *ref_8
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_8
           isNullable: true
         serializedName: basic_getNull
         url: /complex/basic/null
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1557,12 +1447,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '6'
+            body: *ref_8
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_8
           isNullable: true
         serializedName: basic_getNotProvided
         url: /complex/basic/notprovided
@@ -1574,8 +1462,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types with integer properties
@@ -1593,18 +1480,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '60'
+            body: *ref_9
             isNullable: true
         returnType:
-          body:
-            $ref: '60'
+          body: *ref_9
           isNullable: true
         serializedName: primitive_getInt
         url: /complex/primitive/integer
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types with integer properties
@@ -1620,8 +1504,7 @@ operations:
           fixed: false
           raw: putInt
         parameters:
-          - $id: '131'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1632,8 +1515,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '60'
+            modelType: *ref_9
             name:
               fixed: false
               raw: complexBody
@@ -1649,8 +1531,7 @@ operations:
         serializedName: primitive_putInt
         url: /complex/primitive/integer
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types with long properties
@@ -1668,18 +1549,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '65'
+            body: *ref_10
             isNullable: true
         returnType:
-          body:
-            $ref: '65'
+          body: *ref_10
           isNullable: true
         serializedName: primitive_getLong
         url: /complex/primitive/long
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types with long properties
@@ -1695,8 +1573,7 @@ operations:
           fixed: false
           raw: putLong
         parameters:
-          - $id: '132'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1707,8 +1584,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '65'
+            modelType: *ref_10
             name:
               fixed: false
               raw: complexBody
@@ -1724,8 +1600,7 @@ operations:
         serializedName: primitive_putLong
         url: /complex/primitive/long
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types with float properties
@@ -1743,18 +1618,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '70'
+            body: *ref_11
             isNullable: true
         returnType:
-          body:
-            $ref: '70'
+          body: *ref_11
           isNullable: true
         serializedName: primitive_getFloat
         url: /complex/primitive/float
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types with float properties
@@ -1770,8 +1642,7 @@ operations:
           fixed: false
           raw: putFloat
         parameters:
-          - $id: '133'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1782,8 +1653,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '70'
+            modelType: *ref_11
             name:
               fixed: false
               raw: complexBody
@@ -1799,8 +1669,7 @@ operations:
         serializedName: primitive_putFloat
         url: /complex/primitive/float
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types with double properties
@@ -1818,18 +1687,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '75'
+            body: *ref_12
             isNullable: true
         returnType:
-          body:
-            $ref: '75'
+          body: *ref_12
           isNullable: true
         serializedName: primitive_getDouble
         url: /complex/primitive/double
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types with double properties
@@ -1845,8 +1711,7 @@ operations:
           fixed: false
           raw: putDouble
         parameters:
-          - $id: '134'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1859,8 +1724,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '75'
+            modelType: *ref_12
             name:
               fixed: false
               raw: complexBody
@@ -1876,8 +1740,7 @@ operations:
         serializedName: primitive_putDouble
         url: /complex/primitive/double
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types with bool properties
@@ -1895,18 +1758,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '80'
+            body: *ref_13
             isNullable: true
         returnType:
-          body:
-            $ref: '80'
+          body: *ref_13
           isNullable: true
         serializedName: primitive_getBool
         url: /complex/primitive/bool
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types with bool properties
@@ -1922,8 +1782,7 @@ operations:
           fixed: false
           raw: putBool
         parameters:
-          - $id: '135'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1934,8 +1793,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '80'
+            modelType: *ref_13
             name:
               fixed: false
               raw: complexBody
@@ -1951,8 +1809,7 @@ operations:
         serializedName: primitive_putBool
         url: /complex/primitive/bool
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types with string properties
@@ -1970,18 +1827,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '85'
+            body: *ref_14
             isNullable: true
         returnType:
-          body:
-            $ref: '85'
+          body: *ref_14
           isNullable: true
         serializedName: primitive_getString
         url: /complex/primitive/string
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types with string properties
@@ -1997,8 +1851,7 @@ operations:
           fixed: false
           raw: putString
         parameters:
-          - $id: '136'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2009,8 +1862,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '85'
+            modelType: *ref_14
             name:
               fixed: false
               raw: complexBody
@@ -2026,8 +1878,7 @@ operations:
         serializedName: primitive_putString
         url: /complex/primitive/string
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types with date properties
@@ -2045,18 +1896,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '92'
+            body: *ref_15
             isNullable: true
         returnType:
-          body:
-            $ref: '92'
+          body: *ref_15
           isNullable: true
         serializedName: primitive_getDate
         url: /complex/primitive/date
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types with date properties
@@ -2072,8 +1920,7 @@ operations:
           fixed: false
           raw: putDate
         parameters:
-          - $id: '137'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2084,8 +1931,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '92'
+            modelType: *ref_15
             name:
               fixed: false
               raw: complexBody
@@ -2101,8 +1947,7 @@ operations:
         serializedName: primitive_putDate
         url: /complex/primitive/date
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types with datetime properties
@@ -2120,18 +1965,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '97'
+            body: *ref_16
             isNullable: true
         returnType:
-          body:
-            $ref: '97'
+          body: *ref_16
           isNullable: true
         serializedName: primitive_getDateTime
         url: /complex/primitive/datetime
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types with datetime properties
@@ -2147,8 +1989,7 @@ operations:
           fixed: false
           raw: putDateTime
         parameters:
-          - $id: '138'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2161,8 +2002,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '97'
+            modelType: *ref_16
             name:
               fixed: false
               raw: complexBody
@@ -2178,8 +2018,7 @@ operations:
         serializedName: primitive_putDateTime
         url: /complex/primitive/datetime
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types with datetimeRfc1123 properties
@@ -2197,18 +2036,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '102'
+            body: *ref_17
             isNullable: true
         returnType:
-          body:
-            $ref: '102'
+          body: *ref_17
           isNullable: true
         serializedName: primitive_getDateTimeRfc1123
         url: /complex/primitive/datetimerfc1123
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types with datetimeRfc1123 properties
@@ -2224,8 +2060,7 @@ operations:
           fixed: false
           raw: putDateTimeRfc1123
         parameters:
-          - $id: '139'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2238,8 +2073,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '102'
+            modelType: *ref_17
             name:
               fixed: false
               raw: complexBody
@@ -2255,8 +2089,7 @@ operations:
         serializedName: primitive_putDateTimeRfc1123
         url: /complex/primitive/datetimerfc1123
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types with duration properties
@@ -2274,18 +2107,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '107'
+            body: *ref_18
             isNullable: true
         returnType:
-          body:
-            $ref: '107'
+          body: *ref_18
           isNullable: true
         serializedName: primitive_getDuration
         url: /complex/primitive/duration
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types with duration properties
@@ -2301,8 +2131,7 @@ operations:
           fixed: false
           raw: putDuration
         parameters:
-          - $id: '140'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2313,8 +2142,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '107'
+            modelType: *ref_18
             name:
               fixed: false
               raw: complexBody
@@ -2330,8 +2158,7 @@ operations:
         serializedName: primitive_putDuration
         url: /complex/primitive/duration
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types with byte properties
@@ -2349,18 +2176,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '110'
+            body: *ref_19
             isNullable: true
         returnType:
-          body:
-            $ref: '110'
+          body: *ref_19
           isNullable: true
         serializedName: primitive_getByte
         url: /complex/primitive/byte
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types with byte properties
@@ -2376,8 +2200,7 @@ operations:
           fixed: false
           raw: putByte
         parameters:
-          - $id: '141'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2390,8 +2213,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '110'
+            modelType: *ref_19
             name:
               fixed: false
               raw: complexBody
@@ -2414,8 +2236,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types with array property
@@ -2433,18 +2254,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '113'
+            body: *ref_20
             isNullable: true
         returnType:
-          body:
-            $ref: '113'
+          body: *ref_20
           isNullable: true
         serializedName: array_getValid
         url: /complex/array/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types with array property
@@ -2460,8 +2278,7 @@ operations:
           fixed: false
           raw: putValid
         parameters:
-          - $id: '142'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2474,8 +2291,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '113'
+            modelType: *ref_20
             name:
               fixed: false
               raw: complexBody
@@ -2491,8 +2307,7 @@ operations:
         serializedName: array_putValid
         url: /complex/array/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types with array property which is empty
@@ -2510,18 +2325,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '113'
+            body: *ref_20
             isNullable: true
         returnType:
-          body:
-            $ref: '113'
+          body: *ref_20
           isNullable: true
         serializedName: array_getEmpty
         url: /complex/array/empty
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types with array property which is empty
@@ -2537,8 +2349,7 @@ operations:
           fixed: false
           raw: putEmpty
         parameters:
-          - $id: '143'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2549,8 +2360,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '113'
+            modelType: *ref_20
             name:
               fixed: false
               raw: complexBody
@@ -2566,8 +2376,7 @@ operations:
         serializedName: array_putEmpty
         url: /complex/array/empty
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2587,12 +2396,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '113'
+            body: *ref_20
             isNullable: true
         returnType:
-          body:
-            $ref: '113'
+          body: *ref_20
           isNullable: true
         serializedName: array_getNotProvided
         url: /complex/array/notprovided
@@ -2604,8 +2411,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types with dictionary property
@@ -2623,18 +2429,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '117'
+            body: *ref_21
             isNullable: true
         returnType:
-          body:
-            $ref: '117'
+          body: *ref_21
           isNullable: true
         serializedName: dictionary_getValid
         url: /complex/dictionary/typed/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types with dictionary property
@@ -2650,8 +2453,7 @@ operations:
           fixed: false
           raw: putValid
         parameters:
-          - $id: '144'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2664,8 +2466,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '117'
+            modelType: *ref_21
             name:
               fixed: false
               raw: complexBody
@@ -2681,8 +2482,7 @@ operations:
         serializedName: dictionary_putValid
         url: /complex/dictionary/typed/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types with dictionary property which is empty
@@ -2700,18 +2500,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '117'
+            body: *ref_21
             isNullable: true
         returnType:
-          body:
-            $ref: '117'
+          body: *ref_21
           isNullable: true
         serializedName: dictionary_getEmpty
         url: /complex/dictionary/typed/empty
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types with dictionary property which is empty
@@ -2727,8 +2524,7 @@ operations:
           fixed: false
           raw: putEmpty
         parameters:
-          - $id: '145'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2739,8 +2535,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '117'
+            modelType: *ref_21
             name:
               fixed: false
               raw: complexBody
@@ -2756,8 +2551,7 @@ operations:
         serializedName: dictionary_putEmpty
         url: /complex/dictionary/typed/empty
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types with dictionary property which is null
@@ -2775,18 +2569,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '117'
+            body: *ref_21
             isNullable: true
         returnType:
-          body:
-            $ref: '117'
+          body: *ref_21
           isNullable: true
         serializedName: dictionary_getNull
         url: /complex/dictionary/typed/null
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2806,12 +2597,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '117'
+            body: *ref_21
             isNullable: true
         returnType:
-          body:
-            $ref: '117'
+          body: *ref_21
           isNullable: true
         serializedName: dictionary_getNotProvided
         url: /complex/dictionary/typed/notprovided
@@ -2823,8 +2612,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types that extend others
@@ -2842,18 +2630,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '27'
+            body: *ref_22
             isNullable: true
         returnType:
-          body:
-            $ref: '27'
+          body: *ref_22
           isNullable: true
         serializedName: inheritance_getValid
         url: /complex/inheritance/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types that extend others
@@ -2869,8 +2654,7 @@ operations:
           fixed: false
           raw: putValid
         parameters:
-          - $id: '146'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2885,8 +2669,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '27'
+            modelType: *ref_22
             name:
               fixed: false
               raw: complexBody
@@ -2909,8 +2692,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types that are polymorphic
@@ -2928,18 +2710,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '30'
+            body: *ref_5
             isNullable: true
         returnType:
-          body:
-            $ref: '30'
+          body: *ref_5
           isNullable: true
         serializedName: polymorphism_getValid
         url: /complex/polymorphism/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types that are polymorphic
@@ -2955,8 +2734,7 @@ operations:
           fixed: false
           raw: putValid
         parameters:
-          - $id: '147'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3000,8 +2778,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '30'
+            modelType: *ref_5
             name:
               fixed: false
               raw: complexBody
@@ -3017,8 +2794,7 @@ operations:
         serializedName: polymorphism_putValid
         url: /complex/polymorphism/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3038,18 +2814,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '37'
+            body: *ref_6
             isNullable: true
         returnType:
-          body:
-            $ref: '37'
+          body: *ref_6
           isNullable: true
         serializedName: polymorphism_getComplicated
         url: /complex/polymorphism/complicated
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3067,8 +2840,7 @@ operations:
           fixed: false
           raw: putComplicated
         parameters:
-          - $id: '148'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3078,8 +2850,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '37'
+            modelType: *ref_6
             name:
               fixed: false
               raw: complexBody
@@ -3095,8 +2866,7 @@ operations:
         serializedName: polymorphism_putComplicated
         url: /complex/polymorphism/complicated
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -3114,8 +2884,7 @@ operations:
           fixed: false
           raw: putValidMissingRequired
         parameters:
-          - $id: '149'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3154,8 +2923,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '30'
+            modelType: *ref_5
             name:
               fixed: false
               raw: complexBody
@@ -3178,8 +2946,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types that are polymorphic and have recursive references
@@ -3197,18 +2964,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '30'
+            body: *ref_5
             isNullable: true
         returnType:
-          body:
-            $ref: '30'
+          body: *ref_5
           isNullable: true
         serializedName: polymorphicrecursive_getValid
         url: /complex/polymorphicrecursive/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types that are polymorphic and have recursive references
@@ -3224,8 +2988,7 @@ operations:
           fixed: false
           raw: putValid
         parameters:
-          - $id: '150'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3289,8 +3052,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '30'
+            modelType: *ref_5
             name:
               fixed: false
               raw: complexBody
@@ -3313,8 +3075,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get complex types that have readonly properties
@@ -3332,18 +3093,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '121'
+            body: *ref_23
             isNullable: true
         returnType:
-          body:
-            $ref: '121'
+          body: *ref_23
           isNullable: true
         serializedName: readonlyproperty_getValid
         url: /complex/readonlyproperty/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put complex types that have readonly properties
@@ -3359,8 +3117,7 @@ operations:
           fixed: false
           raw: putValid
         parameters:
-          - $id: '151'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -3370,8 +3127,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '121'
+            modelType: *ref_23
             name:
               fixed: false
               raw: complexBody
@@ -3393,27 +3149,4 @@ operations:
     typeName:
       fixed: false
 properties:
-  - $id: '126'
-    collectionFormat: none
-    defaultValue:
-      fixed: false
-      raw: 2014-04-01-preview
-    documentation:
-      fixed: false
-      raw: API ID.
-    isConstant: true
-    isReadOnly: false
-    isRequired: true
-    modelType:
-      $id: '127'
-      $type: PrimaryType
-      knownPrimaryType: string
-      name:
-        fixed: false
-        raw: String
-    name:
-      fixed: false
-      raw: api-version
-    realPath:
-      - api-version
-    serializedName: api-version
+  - *ref_24

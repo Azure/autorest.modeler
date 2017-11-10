@@ -3,17 +3,14 @@ apiVersion: 1.0.0
 baseUrl: 'http://localhost'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
-  - $ref: '1'
-modelTypes:
-  - $id: '1'
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: Error
     properties:
-      - $id: '2'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -22,7 +19,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -35,8 +31,7 @@ modelTypes:
         realPath:
           - status
         serializedName: status
-      - $id: '4'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -45,7 +40,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -58,14 +52,15 @@ modelTypes:
           - message
         serializedName: message
     serializedName: Error
+modelTypes:
+  - *ref_0
 modelsName: Models
 name: AutoRestBoolTestService
 namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get true Boolean value
@@ -83,8 +78,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '6'
+            body: &ref_1
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -92,14 +86,12 @@ operations:
                 raw: Boolean
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: bool_getTrue
         url: /bool/true
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Set Boolean value true
@@ -115,8 +107,7 @@ operations:
           fixed: false
           raw: putTrue
         parameters:
-          - $id: '7'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: 'true'
@@ -128,7 +119,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '8'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -149,8 +139,7 @@ operations:
         serializedName: bool_putTrue
         url: /bool/true
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get false Boolean value
@@ -168,8 +157,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '9'
+            body: &ref_2
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -177,14 +165,12 @@ operations:
                 raw: Boolean
             isNullable: true
         returnType:
-          body:
-            $ref: '9'
+          body: *ref_2
           isNullable: true
         serializedName: bool_getFalse
         url: /bool/false
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Set Boolean value false
@@ -200,8 +186,7 @@ operations:
           fixed: false
           raw: putFalse
         parameters:
-          - $id: '10'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: 'false'
@@ -213,7 +198,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '11'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -234,8 +218,7 @@ operations:
         serializedName: bool_putFalse
         url: /bool/false
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get null Boolean value
@@ -253,8 +236,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '12'
+            body: &ref_3
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -262,14 +244,12 @@ operations:
                 raw: Boolean
             isNullable: true
         returnType:
-          body:
-            $ref: '12'
+          body: *ref_3
           isNullable: true
         serializedName: bool_getNull
         url: /bool/null
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get invalid Boolean value
@@ -287,8 +267,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '13'
+            body: &ref_4
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -296,8 +275,7 @@ operations:
                 raw: Boolean
             isNullable: true
         returnType:
-          body:
-            $ref: '13'
+          body: *ref_4
           isNullable: true
         serializedName: bool_getInvalid
         url: /bool/invalid

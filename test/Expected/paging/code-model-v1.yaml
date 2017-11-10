@@ -3,15 +3,14 @@ apiVersion: 1.0.0
 baseUrl: 'http://localhost'
 documentation: Long-running Operation for AutoRest
 modelTypes:
-  - $id: '1'
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: Product_properties
     properties:
-      - $id: '2'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -20,7 +19,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
           $type: PrimaryType
           knownPrimaryType: int
           name:
@@ -32,8 +30,7 @@ modelTypes:
         realPath:
           - id
         serializedName: id
-      - $id: '4'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -42,7 +39,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -55,15 +51,14 @@ modelTypes:
           - name
         serializedName: name
     serializedName: Product_properties
-  - $id: '6'
+  - &ref_1
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: Product
     properties:
-      - $id: '7'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -71,8 +66,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '1'
+        modelType: *ref_0
         name:
           fixed: false
           raw: properties
@@ -80,15 +74,14 @@ modelTypes:
           - properties
         serializedName: properties
     serializedName: Product
-  - $id: '8'
+  - &ref_2
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: ProductResult
     properties:
-      - $id: '9'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -97,10 +90,8 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '10'
           $type: SequenceType
-          elementType:
-            $ref: '6'
+          elementType: *ref_1
           name:
             fixed: false
         name:
@@ -109,8 +100,7 @@ modelTypes:
         realPath:
           - values
         serializedName: values
-      - $id: '11'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -119,7 +109,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '12'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -132,15 +121,14 @@ modelTypes:
           - nextLink
         serializedName: nextLink
     serializedName: ProductResult
-  - $id: '13'
+  - &ref_3
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: OdataProductResult
     properties:
-      - $id: '14'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -149,10 +137,8 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '15'
           $type: SequenceType
-          elementType:
-            $ref: '6'
+          elementType: *ref_1
           name:
             fixed: false
         name:
@@ -161,8 +147,7 @@ modelTypes:
         realPath:
           - values
         serializedName: values
-      - $id: '16'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -171,7 +156,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '17'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -184,15 +168,13 @@ modelTypes:
           - odata.nextLink
         serializedName: odata.nextLink
     serializedName: OdataProductResult
-  - $id: '18'
-    $type: CompositeType
+  - $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: OperationResult
     properties:
-      - $id: '19'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -202,7 +184,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '20'
           $type: EnumType
           modelAsExtensible: false
           modelAsString: true
@@ -210,7 +191,6 @@ modelTypes:
             fixed: false
             raw: ''
           underlyingType:
-            $id: '21'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -273,12 +253,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '8'
+            body: *ref_2
             isNullable: true
         returnType:
-          body:
-            $ref: '8'
+          body: *ref_2
           isNullable: true
         serializedName: Paging_getSinglePages
         url: /paging/single
@@ -300,8 +278,7 @@ operations:
           fixed: false
           raw: getMultiplePages
         parameters:
-          - $id: '22'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -310,7 +287,6 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '23'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -320,8 +296,7 @@ operations:
               fixed: false
               raw: client-request-id
             serializedName: client-request-id
-          - $id: '24'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -334,7 +309,6 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '25'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -345,8 +319,7 @@ operations:
               fixed: false
               raw: maxresults
             serializedName: maxresults
-          - $id: '26'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: '30'
@@ -362,7 +335,6 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '27'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -378,12 +350,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '8'
+            body: *ref_2
             isNullable: true
         returnType:
-          body:
-            $ref: '8'
+          body: *ref_2
           isNullable: true
         serializedName: Paging_getMultiplePages
         url: /paging/multiple
@@ -407,8 +377,7 @@ operations:
           fixed: false
           raw: getOdataMultiplePages
         parameters:
-          - $id: '28'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -417,7 +386,6 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '29'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -427,8 +395,7 @@ operations:
               fixed: false
               raw: client-request-id
             serializedName: client-request-id
-          - $id: '30'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -441,7 +408,6 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '31'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -452,8 +418,7 @@ operations:
               fixed: false
               raw: maxresults
             serializedName: maxresults
-          - $id: '32'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: '30'
@@ -469,7 +434,6 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '33'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -485,12 +449,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '13'
+            body: *ref_3
             isNullable: true
         returnType:
-          body:
-            $ref: '13'
+          body: *ref_3
           isNullable: true
         serializedName: Paging_getOdataMultiplePages
         url: /paging/multiple/odata
@@ -512,8 +474,7 @@ operations:
           fixed: false
           raw: getMultiplePagesWithOffset
         parameters:
-          - $id: '34'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -522,7 +483,6 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '35'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -532,8 +492,7 @@ operations:
               fixed: false
               raw: client-request-id
             serializedName: client-request-id
-          - $id: '36'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -546,7 +505,6 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '37'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -557,8 +515,7 @@ operations:
               fixed: false
               raw: maxresults
             serializedName: maxresults
-          - $id: '38'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -571,7 +528,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '39'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -582,8 +538,7 @@ operations:
               fixed: false
               raw: offset
             serializedName: offset
-          - $id: '40'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: '30'
@@ -599,7 +554,6 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '41'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -615,12 +569,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '8'
+            body: *ref_2
             isNullable: true
         returnType:
-          body:
-            $ref: '8'
+          body: *ref_2
           isNullable: true
         serializedName: Paging_getMultiplePagesWithOffset
         url: '/paging/multiple/withpath/{offset}'
@@ -648,12 +600,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '8'
+            body: *ref_2
             isNullable: true
         returnType:
-          body:
-            $ref: '8'
+          body: *ref_2
           isNullable: true
         serializedName: Paging_getMultiplePagesRetryFirst
         url: /paging/multiple/retryfirst
@@ -682,12 +632,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '8'
+            body: *ref_2
             isNullable: true
         returnType:
-          body:
-            $ref: '8'
+          body: *ref_2
           isNullable: true
         serializedName: Paging_getMultiplePagesRetrySecond
         url: /paging/multiple/retrysecond
@@ -713,12 +661,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '8'
+            body: *ref_2
             isNullable: true
         returnType:
-          body:
-            $ref: '8'
+          body: *ref_2
           isNullable: true
         serializedName: Paging_getSinglePagesFailure
         url: /paging/single/failure
@@ -744,12 +690,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '8'
+            body: *ref_2
             isNullable: true
         returnType:
-          body:
-            $ref: '8'
+          body: *ref_2
           isNullable: true
         serializedName: Paging_getMultiplePagesFailure
         url: /paging/multiple/failure
@@ -775,12 +719,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '8'
+            body: *ref_2
             isNullable: true
         returnType:
-          body:
-            $ref: '8'
+          body: *ref_2
           isNullable: true
         serializedName: Paging_getMultiplePagesFailureUri
         url: /paging/multiple/failureuri
@@ -803,8 +745,7 @@ operations:
           fixed: false
           raw: getMultiplePagesFragmentNextLink
         parameters:
-          - $id: '42'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -814,7 +755,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '43'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -824,8 +764,7 @@ operations:
               fixed: false
               raw: api_version
             serializedName: api_version
-          - $id: '44'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -835,7 +774,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '45'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -850,12 +788,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '13'
+            body: *ref_3
             isNullable: true
         returnType:
-          body:
-            $ref: '13'
+          body: *ref_3
           isNullable: true
         serializedName: Paging_getMultiplePagesFragmentNextLink
         url: '/paging/multiple/fragment/{tenant}'
@@ -880,8 +816,7 @@ operations:
           fixed: false
           raw: getMultiplePagesFragmentWithGroupingNextLink
         parameters:
-          - $id: '46'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -894,7 +829,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '47'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -904,8 +838,7 @@ operations:
               fixed: false
               raw: api_version
             serializedName: api_version
-          - $id: '48'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -918,7 +851,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '49'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -933,12 +865,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '13'
+            body: *ref_3
             isNullable: true
         returnType:
-          body:
-            $ref: '13'
+          body: *ref_3
           isNullable: true
         serializedName: Paging_getMultiplePagesFragmentWithGroupingNextLink
         url: '/paging/multiple/fragmentwithgrouping/{tenant}'
@@ -961,8 +891,7 @@ operations:
           fixed: false
           raw: nextFragment
         parameters:
-          - $id: '50'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -972,7 +901,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '51'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -982,8 +910,7 @@ operations:
               fixed: false
               raw: api_version
             serializedName: api_version
-          - $id: '52'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -993,7 +920,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '53'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1003,8 +929,7 @@ operations:
               fixed: false
               raw: tenant
             serializedName: tenant
-          - $id: '54'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1016,7 +941,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '55'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1031,12 +955,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '13'
+            body: *ref_3
             isNullable: true
         returnType:
-          body:
-            $ref: '13'
+          body: *ref_3
           isNullable: true
         serializedName: Paging_nextFragment
         url: '/paging/multiple/fragment/{tenant}/{nextLink}'
@@ -1059,8 +981,7 @@ operations:
           fixed: false
           raw: nextFragmentWithGrouping
         parameters:
-          - $id: '56'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1073,7 +994,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '57'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1083,8 +1003,7 @@ operations:
               fixed: false
               raw: api_version
             serializedName: api_version
-          - $id: '58'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1097,7 +1016,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '59'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1107,8 +1025,7 @@ operations:
               fixed: false
               raw: tenant
             serializedName: tenant
-          - $id: '60'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1120,7 +1037,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '61'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1135,12 +1051,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '13'
+            body: *ref_3
             isNullable: true
         returnType:
-          body:
-            $ref: '13'
+          body: *ref_3
           isNullable: true
         serializedName: Paging_nextFragmentWithGrouping
         url: '/paging/multiple/fragmentwithgrouping/{tenant}/{nextLink}'
