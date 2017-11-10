@@ -14,9 +14,9 @@ namespace AutoRest.Modeler
 {
     public static class CollectionFormatBuilder
     {
-        public static StringBuilder OnBuildMethodParameter(Method method,
+        public static void OnBuildMethodParameter(Method method,
             SwaggerParameter currentSwaggerParam,
-            StringBuilder paramNameBuilder)
+            string paramNameBuilder)
         {
             if (currentSwaggerParam == null)
             {
@@ -31,21 +31,15 @@ namespace AutoRest.Modeler
                 currentSwaggerParam.Style = ParameterStyle.Form;
             }
 
-            if (hasCollectionFormat)
+            if (hasCollectionFormat && currentSwaggerParam.In == ParameterLocation.Path)
             {
-                if (currentSwaggerParam.In == ParameterLocation.Path)
+                if (method?.Url == null)
                 {
-                    if (method == null || method.Url == null)
-                    {
-                       throw new ArgumentNullException("method"); 
-                    }
-
-                    method.Url = ((string)method.Url).Replace(
-                        string.Format(CultureInfo.InvariantCulture, "{0}", currentSwaggerParam.Name),
-                        string.Format(CultureInfo.InvariantCulture, "{0}", paramNameBuilder));
+                    throw new ArgumentNullException("method"); 
                 }
+
+                method.Url = method.Url.Replace(currentSwaggerParam.Name, paramNameBuilder);
             }
-            return paramNameBuilder;
         }
     }
 }

@@ -272,7 +272,7 @@ namespace AutoRest.Modeler
                     }
                 }
 
-                CollectionFormatBuilder.OnBuildMethodParameter(method, swaggerParameter, new StringBuilder(swaggerParameter.Name));
+                CollectionFormatBuilder.OnBuildMethodParameter(method, swaggerParameter, swaggerParameter.Name);
                 var parameter = ((ParameterBuilder)swaggerParameter.GetBuilder(_swaggerModeler)).Build();
                 method.Add(parameter);
             }

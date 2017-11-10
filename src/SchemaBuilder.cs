@@ -145,9 +145,7 @@ namespace AutoRest.Modeler
                         });
                         PopulateParameter(propertyObj, refSchema != null ? refSchema : property.Value);
                         var propertyCompositeType = propertyType as CompositeType;
-                        if (propertyObj.IsConstant ||
-                            (propertyCompositeType != null
-                                && propertyCompositeType.ContainsConstantProperties))
+                        if (propertyObj.IsConstant || true == propertyCompositeType?.ContainsConstantProperties)
                         {
                             objectType.ContainsConstantProperties = true;
                         }

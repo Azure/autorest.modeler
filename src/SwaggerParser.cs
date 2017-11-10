@@ -19,19 +19,11 @@ namespace AutoRest.Modeler
 {
     public static class SwaggerParser
     {
-        static string Normalize(string swaggerDocument)
-        {
-            
-            // normalize YAML to JSON since that's what we process
-            swaggerDocument = swaggerDocument.EnsureYamlIsJson();
-            return swaggerDocument;
-        }
-
         public static ServiceDefinition Parse(string swaggerDocument)
         {
             try
             {
-                swaggerDocument = Normalize(swaggerDocument);
+                swaggerDocument = swaggerDocument.EnsureYamlIsJson();
                 var settings = new JsonSerializerSettings
                 {
                     TypeNameHandling = TypeNameHandling.None,

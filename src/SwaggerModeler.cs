@@ -24,8 +24,6 @@ namespace AutoRest.Modeler
 {
     public class SwaggerModeler
     {
-        private const string BaseUriParameterName = "BaseUri";
-
         internal Dictionary<string, string> ExtendedTypes = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
         internal Dictionary<string, CompositeType> GeneratedTypes = new Dictionary<string, CompositeType>();
         internal Dictionary<Schema, CompositeType> GeneratingTypes = new Dictionary<Schema, CompositeType>();
@@ -95,7 +93,7 @@ namespace AutoRest.Modeler
                                 verb,
                                 path.Key));
                     }
-                    var methodName = GetMethodName(operation);
+                    var methodName = GetMethodNameFromOperationId(operation.OperationId);
                     var methodGroup = GetMethodGroup(operation);
 
                     if (verb.ToHttpMethod() != HttpMethod.Options)
@@ -356,21 +354,6 @@ namespace AutoRest.Modeler
 
             var parts = operation.OperationId.Split('_');
             return parts[0];
-        }
-
-        /// <summary>
-        /// Extracts method name from operation ID.
-        /// </summary>
-        /// <param name="operation">The swagger operation.</param>
-        /// <returns>Method name.</returns>
-        public static string GetMethodName(Operation operation)
-        {
-            if (operation == null)
-            {
-                throw new ArgumentNullException("operation");
-            }
-
-            return GetMethodNameFromOperationId(operation.OperationId);
         }
 
         public static string GetMethodNameFromOperationId(string operationId) => 

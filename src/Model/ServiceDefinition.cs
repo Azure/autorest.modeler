@@ -12,7 +12,7 @@ namespace AutoRest.Modeler.Model
     /// http://json.schemastore.org/swagger-2.0
     /// Swagger Object - https://github.com/wordnik/swagger-spec/blob/master/versions/2.0.md#swagger-object- 
     /// </summary>
-    public class ServiceDefinition : SpecObject
+    public class ServiceDefinition : SwaggerBase
     {
         public ServiceDefinition()
         {

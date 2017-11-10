@@ -263,9 +263,7 @@ namespace AutoRest.Modeler
         }
 
         private static bool IsSwaggerObjectConstant(SwaggerObject swaggerObject, bool isRequired)
-        {
-            return (swaggerObject.Enum != null && swaggerObject.Enum.Count == 1 && isRequired);
-        }
+            => swaggerObject.Enum != null && swaggerObject.Enum.Count == 1 && isRequired;
 
         public static void SetConstraints(Dictionary<Constraint, string> constraints, SwaggerObject swaggerObject)
         {
