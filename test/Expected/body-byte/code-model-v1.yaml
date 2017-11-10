@@ -3,17 +3,14 @@ apiVersion: 1.0.0
 baseUrl: 'http://localhost'
 documentation: Test Infrastructure for AutoRest Swagger BAT
 errorTypes:
-  - $ref: '1'
-modelTypes:
-  - $id: '1'
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: Error
     properties:
-      - $id: '2'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -22,7 +19,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -35,8 +31,7 @@ modelTypes:
         realPath:
           - status
         serializedName: status
-      - $id: '4'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -45,7 +40,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -58,14 +52,15 @@ modelTypes:
           - message
         serializedName: message
     serializedName: Error
+modelTypes:
+  - *ref_0
 modelsName: Models
 name: AutoRestSwaggerBATByteService
 namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get null byte value
@@ -83,8 +78,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '6'
+            body: &ref_1
               $type: PrimaryType
               format: byte
               knownPrimaryType: byteArray
@@ -93,14 +87,12 @@ operations:
                 raw: ByteArray
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_1
           isNullable: true
         serializedName: byte_getNull
         url: /byte/null
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get empty byte value ''
@@ -118,8 +110,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '7'
+            body: &ref_2
               $type: PrimaryType
               format: byte
               knownPrimaryType: byteArray
@@ -128,14 +119,12 @@ operations:
                 raw: ByteArray
             isNullable: true
         returnType:
-          body:
-            $ref: '7'
+          body: *ref_2
           isNullable: true
         serializedName: byte_getEmpty
         url: /byte/empty
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get non-ascii byte string hex(FF FE FD FC FB FA F9 F8 F7 F6)
@@ -153,8 +142,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '8'
+            body: &ref_3
               $type: PrimaryType
               format: byte
               knownPrimaryType: byteArray
@@ -163,14 +151,12 @@ operations:
                 raw: ByteArray
             isNullable: true
         returnType:
-          body:
-            $ref: '8'
+          body: *ref_3
           isNullable: true
         serializedName: byte_getNonAscii
         url: /byte/nonAscii
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put non-ascii byte string hex(FF FE FD FC FB FA F9 F8 F7 F6)
@@ -186,8 +172,7 @@ operations:
           fixed: false
           raw: putNonAscii
         parameters:
-          - $id: '9'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -201,7 +186,6 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '10'
               $type: PrimaryType
               format: byte
               knownPrimaryType: byteArray
@@ -223,8 +207,7 @@ operations:
         serializedName: byte_putNonAscii
         url: /byte/nonAscii
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get invalid byte value '':::SWAGGER::::'''
@@ -242,8 +225,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '11'
+            body: &ref_4
               $type: PrimaryType
               format: byte
               knownPrimaryType: byteArray
@@ -252,8 +234,7 @@ operations:
                 raw: ByteArray
             isNullable: true
         returnType:
-          body:
-            $ref: '11'
+          body: *ref_4
           isNullable: true
         serializedName: byte_getInvalid
         url: /byte/invalid

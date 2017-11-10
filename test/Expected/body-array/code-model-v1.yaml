@@ -3,69 +3,14 @@ apiVersion: 1.0.0
 baseUrl: 'http://localhost'
 documentation: Test Infrastructure for AutoRest Swagger BAT
 errorTypes:
-  - $ref: '6'
-modelTypes:
-  - $id: '1'
-    $type: CompositeType
-    containsConstantProperties: false
-    name:
-      fixed: false
-      raw: Product
-    properties:
-      - $id: '2'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '3'
-          $type: PrimaryType
-          knownPrimaryType: int
-          name:
-            fixed: false
-            raw: Int
-        name:
-          fixed: false
-          raw: integer
-        realPath:
-          - integer
-        serializedName: integer
-      - $id: '4'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '5'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: string
-        realPath:
-          - string
-        serializedName: string
-    serializedName: Product
-  - $id: '6'
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: Error
     properties:
-      - $id: '7'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -74,7 +19,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '8'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -87,8 +31,7 @@ modelTypes:
         realPath:
           - status
         serializedName: status
-      - $id: '9'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -97,7 +40,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '10'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -110,14 +52,63 @@ modelTypes:
           - message
         serializedName: message
     serializedName: Error
+modelTypes:
+  - &ref_35
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: Product
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: integer
+        realPath:
+          - integer
+        serializedName: integer
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: string
+        realPath:
+          - string
+        serializedName: string
+    serializedName: Product
+  - *ref_0
 modelsName: Models
 name: AutoRestSwaggerBATArrayService
 namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get null array value
@@ -135,11 +126,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '11'
+            body: &ref_1
               $type: SequenceType
               elementType:
-                $id: '12'
                 $type: PrimaryType
                 knownPrimaryType: int
                 name:
@@ -149,14 +138,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '11'
+          body: *ref_1
           isNullable: true
         serializedName: array_getNull
         url: /array/null
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get invalid array [1, 2, 3'
@@ -174,11 +161,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '13'
+            body: &ref_2
               $type: SequenceType
               elementType:
-                $id: '14'
                 $type: PrimaryType
                 knownPrimaryType: int
                 name:
@@ -188,14 +173,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '13'
+          body: *ref_2
           isNullable: true
         serializedName: array_getInvalid
         url: /array/invalid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get empty array value []'
@@ -213,11 +196,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '15'
+            body: &ref_3
               $type: SequenceType
               elementType:
-                $id: '16'
                 $type: PrimaryType
                 knownPrimaryType: int
                 name:
@@ -227,14 +208,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '15'
+          body: *ref_3
           isNullable: true
         serializedName: array_getEmpty
         url: /array/empty
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Set array value empty []'
@@ -250,8 +229,7 @@ operations:
           fixed: false
           raw: putEmpty
         parameters:
-          - $id: '17'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -262,10 +240,8 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '18'
               $type: SequenceType
               elementType:
-                $id: '19'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -288,8 +264,7 @@ operations:
         serializedName: array_putEmpty
         url: /array/empty
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get boolean array value [true, false, false, true]'
@@ -307,11 +282,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '20'
+            body: &ref_4
               $type: SequenceType
               elementType:
-                $id: '21'
                 $type: PrimaryType
                 knownPrimaryType: boolean
                 name:
@@ -321,14 +294,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '20'
+          body: *ref_4
           isNullable: true
         serializedName: array_getBooleanTfft
         url: /array/prim/boolean/tfft
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Set array value empty [true, false, false, true]'
@@ -344,8 +315,7 @@ operations:
           fixed: false
           raw: putBooleanTfft
         parameters:
-          - $id: '22'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -356,10 +326,8 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '23'
               $type: SequenceType
               elementType:
-                $id: '24'
                 $type: PrimaryType
                 knownPrimaryType: boolean
                 name:
@@ -382,8 +350,7 @@ operations:
         serializedName: array_putBooleanTfft
         url: /array/prim/boolean/tfft
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get boolean array value [true, null, false]'
@@ -401,11 +368,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '25'
+            body: &ref_5
               $type: SequenceType
               elementType:
-                $id: '26'
                 $type: PrimaryType
                 knownPrimaryType: boolean
                 name:
@@ -415,14 +380,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '25'
+          body: *ref_5
           isNullable: true
         serializedName: array_getBooleanInvalidNull
         url: /array/prim/boolean/true.null.false
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get boolean array value [true, ''boolean'', false]'
@@ -440,11 +403,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '27'
+            body: &ref_6
               $type: SequenceType
               elementType:
-                $id: '28'
                 $type: PrimaryType
                 knownPrimaryType: boolean
                 name:
@@ -454,14 +415,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '27'
+          body: *ref_6
           isNullable: true
         serializedName: array_getBooleanInvalidString
         url: /array/prim/boolean/true.boolean.false
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get integer array value [1, -1, 3, 300]'
@@ -479,11 +438,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '29'
+            body: &ref_7
               $type: SequenceType
               elementType:
-                $id: '30'
                 $type: PrimaryType
                 knownPrimaryType: int
                 name:
@@ -493,14 +450,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '29'
+          body: *ref_7
           isNullable: true
         serializedName: array_getIntegerValid
         url: /array/prim/integer/1.-1.3.300
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Set array value empty [1, -1, 3, 300]'
@@ -516,8 +471,7 @@ operations:
           fixed: false
           raw: putIntegerValid
         parameters:
-          - $id: '31'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -528,10 +482,8 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '32'
               $type: SequenceType
               elementType:
-                $id: '33'
                 $type: PrimaryType
                 knownPrimaryType: int
                 name:
@@ -554,8 +506,7 @@ operations:
         serializedName: array_putIntegerValid
         url: /array/prim/integer/1.-1.3.300
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get integer array value [1, null, 0]'
@@ -573,11 +524,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '34'
+            body: &ref_8
               $type: SequenceType
               elementType:
-                $id: '35'
                 $type: PrimaryType
                 knownPrimaryType: int
                 name:
@@ -587,14 +536,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '34'
+          body: *ref_8
           isNullable: true
         serializedName: array_getIntInvalidNull
         url: /array/prim/integer/1.null.zero
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get integer array value [1, ''integer'', 0]'
@@ -612,11 +559,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '36'
+            body: &ref_9
               $type: SequenceType
               elementType:
-                $id: '37'
                 $type: PrimaryType
                 knownPrimaryType: int
                 name:
@@ -626,14 +571,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '36'
+          body: *ref_9
           isNullable: true
         serializedName: array_getIntInvalidString
         url: /array/prim/integer/1.integer.0
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get integer array value [1, -1, 3, 300]'
@@ -651,11 +594,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '38'
+            body: &ref_10
               $type: SequenceType
               elementType:
-                $id: '39'
                 $type: PrimaryType
                 format: int64
                 knownPrimaryType: long
@@ -666,14 +607,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '38'
+          body: *ref_10
           isNullable: true
         serializedName: array_getLongValid
         url: /array/prim/long/1.-1.3.300
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Set array value empty [1, -1, 3, 300]'
@@ -689,8 +628,7 @@ operations:
           fixed: false
           raw: putLongValid
         parameters:
-          - $id: '40'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -701,10 +639,8 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '41'
               $type: SequenceType
               elementType:
-                $id: '42'
                 $type: PrimaryType
                 format: int64
                 knownPrimaryType: long
@@ -728,8 +664,7 @@ operations:
         serializedName: array_putLongValid
         url: /array/prim/long/1.-1.3.300
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get long array value [1, null, 0]'
@@ -747,11 +682,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '43'
+            body: &ref_11
               $type: SequenceType
               elementType:
-                $id: '44'
                 $type: PrimaryType
                 format: int64
                 knownPrimaryType: long
@@ -762,14 +695,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '43'
+          body: *ref_11
           isNullable: true
         serializedName: array_getLongInvalidNull
         url: /array/prim/long/1.null.zero
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get long array value [1, ''integer'', 0]'
@@ -787,11 +718,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '45'
+            body: &ref_12
               $type: SequenceType
               elementType:
-                $id: '46'
                 $type: PrimaryType
                 format: int64
                 knownPrimaryType: long
@@ -802,14 +731,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '45'
+          body: *ref_12
           isNullable: true
         serializedName: array_getLongInvalidString
         url: /array/prim/long/1.integer.0
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get float array value [0, -0.01, 1.2e20]'
@@ -827,11 +754,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '47'
+            body: &ref_13
               $type: SequenceType
               elementType:
-                $id: '48'
                 $type: PrimaryType
                 format: float
                 knownPrimaryType: double
@@ -842,14 +767,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '47'
+          body: *ref_13
           isNullable: true
         serializedName: array_getFloatValid
         url: /array/prim/float/0--0.01-1.2e20
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Set array value [0, -0.01, 1.2e20]'
@@ -865,8 +788,7 @@ operations:
           fixed: false
           raw: putFloatValid
         parameters:
-          - $id: '49'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -877,10 +799,8 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '50'
               $type: SequenceType
               elementType:
-                $id: '51'
                 $type: PrimaryType
                 format: float
                 knownPrimaryType: double
@@ -904,8 +824,7 @@ operations:
         serializedName: array_putFloatValid
         url: /array/prim/float/0--0.01-1.2e20
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get float array value [0.0, null, -1.2e20]'
@@ -923,11 +842,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '52'
+            body: &ref_14
               $type: SequenceType
               elementType:
-                $id: '53'
                 $type: PrimaryType
                 format: float
                 knownPrimaryType: double
@@ -938,14 +855,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '52'
+          body: *ref_14
           isNullable: true
         serializedName: array_getFloatInvalidNull
         url: /array/prim/float/0.0-null-1.2e20
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get boolean array value [1.0, ''number'', 0.0]'
@@ -963,11 +878,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '54'
+            body: &ref_15
               $type: SequenceType
               elementType:
-                $id: '55'
                 $type: PrimaryType
                 format: float
                 knownPrimaryType: double
@@ -978,14 +891,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '54'
+          body: *ref_15
           isNullable: true
         serializedName: array_getFloatInvalidString
         url: /array/prim/float/1.number.0
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get float array value [0, -0.01, 1.2e20]'
@@ -1003,11 +914,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '56'
+            body: &ref_16
               $type: SequenceType
               elementType:
-                $id: '57'
                 $type: PrimaryType
                 format: double
                 knownPrimaryType: double
@@ -1018,14 +927,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '56'
+          body: *ref_16
           isNullable: true
         serializedName: array_getDoubleValid
         url: /array/prim/double/0--0.01-1.2e20
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Set array value [0, -0.01, 1.2e20]'
@@ -1041,8 +948,7 @@ operations:
           fixed: false
           raw: putDoubleValid
         parameters:
-          - $id: '58'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -1053,10 +959,8 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '59'
               $type: SequenceType
               elementType:
-                $id: '60'
                 $type: PrimaryType
                 format: double
                 knownPrimaryType: double
@@ -1080,8 +984,7 @@ operations:
         serializedName: array_putDoubleValid
         url: /array/prim/double/0--0.01-1.2e20
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get float array value [0.0, null, -1.2e20]'
@@ -1099,11 +1002,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '61'
+            body: &ref_17
               $type: SequenceType
               elementType:
-                $id: '62'
                 $type: PrimaryType
                 format: double
                 knownPrimaryType: double
@@ -1114,14 +1015,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '61'
+          body: *ref_17
           isNullable: true
         serializedName: array_getDoubleInvalidNull
         url: /array/prim/double/0.0-null-1.2e20
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get boolean array value [1.0, ''number'', 0.0]'
@@ -1139,11 +1038,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '63'
+            body: &ref_18
               $type: SequenceType
               elementType:
-                $id: '64'
                 $type: PrimaryType
                 format: double
                 knownPrimaryType: double
@@ -1154,14 +1051,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '63'
+          body: *ref_18
           isNullable: true
         serializedName: array_getDoubleInvalidString
         url: /array/prim/double/1.number.0
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get string array value [''foo1'', ''foo2'', ''foo3'']'
@@ -1179,11 +1074,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '65'
+            body: &ref_19
               $type: SequenceType
               elementType:
-                $id: '66'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -1193,14 +1086,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '65'
+          body: *ref_19
           isNullable: true
         serializedName: array_getStringValid
         url: /array/prim/string/foo1.foo2.foo3
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Set array value [''foo1'', ''foo2'', ''foo3'']'
@@ -1216,8 +1107,7 @@ operations:
           fixed: false
           raw: putStringValid
         parameters:
-          - $id: '67'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -1228,10 +1118,8 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '68'
               $type: SequenceType
               elementType:
-                $id: '69'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -1254,8 +1142,7 @@ operations:
         serializedName: array_putStringValid
         url: /array/prim/string/foo1.foo2.foo3
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get string array value [''foo'', null, ''foo2'']'
@@ -1273,11 +1160,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '70'
+            body: &ref_20
               $type: SequenceType
               elementType:
-                $id: '71'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -1287,14 +1172,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '70'
+          body: *ref_20
           isNullable: true
         serializedName: array_getStringWithNull
         url: /array/prim/string/foo.null.foo2
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get string array value [''foo'', 123, ''foo2'']'
@@ -1312,11 +1195,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '72'
+            body: &ref_21
               $type: SequenceType
               elementType:
-                $id: '73'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -1326,14 +1207,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '72'
+          body: *ref_21
           isNullable: true
         serializedName: array_getStringWithInvalid
         url: /array/prim/string/foo.123.foo2
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1354,11 +1233,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '74'
+            body: &ref_22
               $type: SequenceType
               elementType:
-                $id: '75'
                 $type: PrimaryType
                 format: uuid
                 knownPrimaryType: uuid
@@ -1369,14 +1246,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '74'
+          body: *ref_22
           isNullable: true
         serializedName: array_getUuidValid
         url: /array/prim/uuid/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1395,8 +1270,7 @@ operations:
           fixed: false
           raw: putUuidValid
         parameters:
-          - $id: '76'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -1407,10 +1281,8 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '77'
               $type: SequenceType
               elementType:
-                $id: '78'
                 $type: PrimaryType
                 format: uuid
                 knownPrimaryType: uuid
@@ -1434,8 +1306,7 @@ operations:
         serializedName: array_putUuidValid
         url: /array/prim/uuid/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get uuid array value [''6dcc7237-45fe-45c4-8a6b-3a8a3f625652'', ''foo'']'
@@ -1453,11 +1324,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '79'
+            body: &ref_23
               $type: SequenceType
               elementType:
-                $id: '80'
                 $type: PrimaryType
                 format: uuid
                 knownPrimaryType: uuid
@@ -1468,14 +1337,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '79'
+          body: *ref_23
           isNullable: true
         serializedName: array_getUuidInvalidChars
         url: /array/prim/uuid/invalidchars
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get integer array value [''2000-12-01'', ''1980-01-02'', ''1492-10-12'']'
@@ -1493,11 +1360,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '81'
+            body: &ref_24
               $type: SequenceType
               elementType:
-                $id: '82'
                 $type: PrimaryType
                 format: date
                 knownPrimaryType: date
@@ -1508,14 +1373,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '81'
+          body: *ref_24
           isNullable: true
         serializedName: array_getDateValid
         url: /array/prim/date/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Set array value  [''2000-12-01'', ''1980-01-02'', ''1492-10-12'']'
@@ -1531,8 +1394,7 @@ operations:
           fixed: false
           raw: putDateValid
         parameters:
-          - $id: '83'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -1543,10 +1405,8 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '84'
               $type: SequenceType
               elementType:
-                $id: '85'
                 $type: PrimaryType
                 format: date
                 knownPrimaryType: date
@@ -1570,8 +1430,7 @@ operations:
         serializedName: array_putDateValid
         url: /array/prim/date/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get date array value [''2012-01-01'', null, ''1776-07-04'']'
@@ -1589,11 +1448,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '86'
+            body: &ref_25
               $type: SequenceType
               elementType:
-                $id: '87'
                 $type: PrimaryType
                 format: date
                 knownPrimaryType: date
@@ -1604,14 +1461,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '86'
+          body: *ref_25
           isNullable: true
         serializedName: array_getDateInvalidNull
         url: /array/prim/date/invalidnull
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get date array value [''2011-03-22'', ''date'']'
@@ -1629,11 +1484,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '88'
+            body: &ref_26
               $type: SequenceType
               elementType:
-                $id: '89'
                 $type: PrimaryType
                 format: date
                 knownPrimaryType: date
@@ -1644,14 +1497,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '88'
+          body: *ref_26
           isNullable: true
         serializedName: array_getDateInvalidChars
         url: /array/prim/date/invalidchars
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1671,11 +1522,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '90'
+            body: &ref_27
               $type: SequenceType
               elementType:
-                $id: '91'
                 $type: PrimaryType
                 format: date-time
                 knownPrimaryType: dateTime
@@ -1686,14 +1535,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '90'
+          body: *ref_27
           isNullable: true
         serializedName: array_getDateTimeValid
         url: /array/prim/date-time/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1711,8 +1558,7 @@ operations:
           fixed: false
           raw: putDateTimeValid
         parameters:
-          - $id: '92'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -1723,10 +1569,8 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '93'
               $type: SequenceType
               elementType:
-                $id: '94'
                 $type: PrimaryType
                 format: date-time
                 knownPrimaryType: dateTime
@@ -1750,8 +1594,7 @@ operations:
         serializedName: array_putDateTimeValid
         url: /array/prim/date-time/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get date array value [''2000-12-01t00:00:01z'', null]'
@@ -1769,11 +1612,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '95'
+            body: &ref_28
               $type: SequenceType
               elementType:
-                $id: '96'
                 $type: PrimaryType
                 format: date-time
                 knownPrimaryType: dateTime
@@ -1784,14 +1625,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '95'
+          body: *ref_28
           isNullable: true
         serializedName: array_getDateTimeInvalidNull
         url: /array/prim/date-time/invalidnull
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get date array value [''2000-12-01t00:00:01z'', ''date-time'']'
@@ -1809,11 +1648,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '97'
+            body: &ref_29
               $type: SequenceType
               elementType:
-                $id: '98'
                 $type: PrimaryType
                 format: date-time
                 knownPrimaryType: dateTime
@@ -1824,14 +1661,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '97'
+          body: *ref_29
           isNullable: true
         serializedName: array_getDateTimeInvalidChars
         url: /array/prim/date-time/invalidchars
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1851,11 +1686,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '99'
+            body: &ref_30
               $type: SequenceType
               elementType:
-                $id: '100'
                 $type: PrimaryType
                 format: date-time-rfc1123
                 knownPrimaryType: dateTimeRfc1123
@@ -1866,14 +1699,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '99'
+          body: *ref_30
           isNullable: true
         serializedName: array_getDateTimeRfc1123Valid
         url: /array/prim/date-time-rfc1123/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1891,8 +1722,7 @@ operations:
           fixed: false
           raw: putDateTimeRfc1123Valid
         parameters:
-          - $id: '101'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -1903,10 +1733,8 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '102'
               $type: SequenceType
               elementType:
-                $id: '103'
                 $type: PrimaryType
                 format: date-time-rfc1123
                 knownPrimaryType: dateTimeRfc1123
@@ -1930,8 +1758,7 @@ operations:
         serializedName: array_putDateTimeRfc1123Valid
         url: /array/prim/date-time-rfc1123/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get duration array value [''P123DT22H14M12.011S'', ''P5DT1H0M0S'']'
@@ -1949,11 +1776,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '104'
+            body: &ref_31
               $type: SequenceType
               elementType:
-                $id: '105'
                 $type: PrimaryType
                 format: duration
                 knownPrimaryType: timeSpan
@@ -1964,14 +1789,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '104'
+          body: *ref_31
           isNullable: true
         serializedName: array_getDurationValid
         url: /array/prim/duration/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Set array value  [''P123DT22H14M12.011S'', ''P5DT1H0M0S'']'
@@ -1987,8 +1810,7 @@ operations:
           fixed: false
           raw: putDurationValid
         parameters:
-          - $id: '106'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -1999,10 +1821,8 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '107'
               $type: SequenceType
               elementType:
-                $id: '108'
                 $type: PrimaryType
                 format: duration
                 knownPrimaryType: timeSpan
@@ -2026,8 +1846,7 @@ operations:
         serializedName: array_putDurationValid
         url: /array/prim/duration/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2047,11 +1866,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '109'
+            body: &ref_32
               $type: SequenceType
               elementType:
-                $id: '110'
                 $type: PrimaryType
                 format: byte
                 knownPrimaryType: byteArray
@@ -2062,14 +1879,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '109'
+          body: *ref_32
           isNullable: true
         serializedName: array_getByteValid
         url: /array/prim/byte/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2087,8 +1902,7 @@ operations:
           fixed: false
           raw: putByteValid
         parameters:
-          - $id: '111'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -2099,10 +1913,8 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '112'
               $type: SequenceType
               elementType:
-                $id: '113'
                 $type: PrimaryType
                 format: byte
                 knownPrimaryType: byteArray
@@ -2126,8 +1938,7 @@ operations:
         serializedName: array_putByteValid
         url: /array/prim/byte/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2147,11 +1958,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '114'
+            body: &ref_33
               $type: SequenceType
               elementType:
-                $id: '115'
                 $type: PrimaryType
                 format: byte
                 knownPrimaryType: byteArray
@@ -2162,14 +1971,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '114'
+          body: *ref_33
           isNullable: true
         serializedName: array_getByteInvalidNull
         url: /array/prim/byte/invalidnull
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2189,11 +1996,9 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '116'
+            body: &ref_34
               $type: SequenceType
               elementType:
-                $id: '117'
                 $type: PrimaryType
                 format: base64url
                 knownPrimaryType: base64Url
@@ -2204,14 +2009,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '116'
+          body: *ref_34
           isNullable: true
         serializedName: array_getBase64Url
         url: /array/prim/base64url/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get array of complex type null value
@@ -2229,23 +2032,19 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '118'
+            body: &ref_36
               $type: SequenceType
-              elementType:
-                $ref: '1'
+              elementType: *ref_35
               name:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '118'
+          body: *ref_36
           isNullable: true
         serializedName: array_getComplexNull
         url: /array/complex/null
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get empty array of complex type []'
@@ -2263,23 +2062,19 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '119'
+            body: &ref_37
               $type: SequenceType
-              elementType:
-                $ref: '1'
+              elementType: *ref_35
               name:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '119'
+          body: *ref_37
           isNullable: true
         serializedName: array_getComplexEmpty
         url: /array/complex/empty
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2299,23 +2094,19 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '120'
+            body: &ref_38
               $type: SequenceType
-              elementType:
-                $ref: '1'
+              elementType: *ref_35
               name:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '120'
+          body: *ref_38
           isNullable: true
         serializedName: array_getComplexItemNull
         url: /array/complex/itemnull
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2335,23 +2126,19 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '121'
+            body: &ref_39
               $type: SequenceType
-              elementType:
-                $ref: '1'
+              elementType: *ref_35
               name:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '121'
+          body: *ref_39
           isNullable: true
         serializedName: array_getComplexItemEmpty
         url: /array/complex/itemempty
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2371,23 +2158,19 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '122'
+            body: &ref_40
               $type: SequenceType
-              elementType:
-                $ref: '1'
+              elementType: *ref_35
               name:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '122'
+          body: *ref_40
           isNullable: true
         serializedName: array_getComplexValid
         url: /array/complex/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2405,8 +2188,7 @@ operations:
           fixed: false
           raw: putComplexValid
         parameters:
-          - $id: '123'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -2417,10 +2199,8 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '124'
               $type: SequenceType
-              elementType:
-                $ref: '1'
+              elementType: *ref_35
               name:
                 fixed: false
             name:
@@ -2438,8 +2218,7 @@ operations:
         serializedName: array_putComplexValid
         url: /array/complex/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get a null array
@@ -2457,14 +2236,11 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '125'
+            body: &ref_41
               $type: SequenceType
               elementType:
-                $id: '126'
                 $type: SequenceType
                 elementType:
-                  $id: '127'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2476,14 +2252,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '125'
+          body: *ref_41
           isNullable: true
         serializedName: array_getArrayNull
         url: /array/array/null
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get an empty array []'
@@ -2501,14 +2275,11 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '128'
+            body: &ref_42
               $type: SequenceType
               elementType:
-                $id: '129'
                 $type: SequenceType
                 elementType:
-                  $id: '130'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2520,14 +2291,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '128'
+          body: *ref_42
           isNullable: true
         serializedName: array_getArrayEmpty
         url: /array/array/empty
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2547,14 +2316,11 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '131'
+            body: &ref_43
               $type: SequenceType
               elementType:
-                $id: '132'
                 $type: SequenceType
                 elementType:
-                  $id: '133'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2566,14 +2332,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '131'
+          body: *ref_43
           isNullable: true
         serializedName: array_getArrayItemNull
         url: /array/array/itemnull
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2593,14 +2357,11 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '134'
+            body: &ref_44
               $type: SequenceType
               elementType:
-                $id: '135'
                 $type: SequenceType
                 elementType:
-                  $id: '136'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2612,14 +2373,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '134'
+          body: *ref_44
           isNullable: true
         serializedName: array_getArrayItemEmpty
         url: /array/array/itemempty
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2639,14 +2398,11 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '137'
+            body: &ref_45
               $type: SequenceType
               elementType:
-                $id: '138'
                 $type: SequenceType
                 elementType:
-                  $id: '139'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2658,14 +2414,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '137'
+          body: *ref_45
           isNullable: true
         serializedName: array_getArrayValid
         url: /array/array/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2683,8 +2437,7 @@ operations:
           fixed: false
           raw: putArrayValid
         parameters:
-          - $id: '140'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -2695,13 +2448,10 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '141'
               $type: SequenceType
               elementType:
-                $id: '142'
                 $type: SequenceType
                 elementType:
-                  $id: '143'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2726,8 +2476,7 @@ operations:
         serializedName: array_putArrayValid
         url: /array/array/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get an array of Dictionaries with value null
@@ -2745,17 +2494,14 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '144'
+            body: &ref_46
               $type: SequenceType
               elementType:
-                $id: '145'
                 $type: DictionaryType
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '146'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2765,14 +2511,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '144'
+          body: *ref_46
           isNullable: true
         serializedName: array_getDictionaryNull
         url: /array/dictionary/null
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Get an array of Dictionaries of type <string, string> with value []'
@@ -2790,17 +2534,14 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '147'
+            body: &ref_47
               $type: SequenceType
               elementType:
-                $id: '148'
                 $type: DictionaryType
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '149'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2810,14 +2551,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '147'
+          body: *ref_47
           isNullable: true
         serializedName: array_getDictionaryEmpty
         url: /array/dictionary/empty
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2838,17 +2577,14 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '150'
+            body: &ref_48
               $type: SequenceType
               elementType:
-                $id: '151'
                 $type: DictionaryType
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '152'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2858,14 +2594,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '150'
+          body: *ref_48
           isNullable: true
         serializedName: array_getDictionaryItemNull
         url: /array/dictionary/itemnull
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2886,17 +2620,14 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '153'
+            body: &ref_49
               $type: SequenceType
               elementType:
-                $id: '154'
                 $type: DictionaryType
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '155'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2906,14 +2637,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '153'
+          body: *ref_49
           isNullable: true
         serializedName: array_getDictionaryItemEmpty
         url: /array/dictionary/itemempty
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2934,17 +2663,14 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '156'
+            body: &ref_50
               $type: SequenceType
               elementType:
-                $id: '157'
                 $type: DictionaryType
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '158'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:
@@ -2954,14 +2680,12 @@ operations:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '156'
+          body: *ref_50
           isNullable: true
         serializedName: array_getDictionaryValid
         url: /array/dictionary/valid
       - defaultResponse:
-          body:
-            $ref: '6'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -2980,8 +2704,7 @@ operations:
           fixed: false
           raw: putDictionaryValid
         parameters:
-          - $id: '159'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -2992,16 +2715,13 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '160'
               $type: SequenceType
               elementType:
-                $id: '161'
                 $type: DictionaryType
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '162'
                   $type: PrimaryType
                   knownPrimaryType: string
                   name:

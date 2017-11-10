@@ -5,15 +5,14 @@ codeGenExtensions:
   ft: '2'
 documentation: Resource Flattening for AutoRest
 modelTypes:
-  - $id: '1'
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: AvailabilitySetUpdateParameters
     properties:
-      - $id: '2'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -23,13 +22,11 @@ modelTypes:
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '3'
           $type: DictionaryType
           name:
             fixed: false
           supportsAdditionalProperties: false
           valueType:
-            $id: '4'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -64,8 +61,7 @@ operations:
           fixed: false
           raw: Update
         parameters:
-          - $id: '5'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -75,7 +71,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '6'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -85,8 +80,7 @@ operations:
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
-          - $id: '7'
-            collectionFormat: none
+          - collectionFormat: none
             constraints:
               MaxLength: '80'
             defaultValue:
@@ -100,7 +94,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '8'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -110,8 +103,7 @@ operations:
               fixed: false
               raw: availabilitySetName
             serializedName: availabilitySetName
-          - $id: '9'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -122,8 +114,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '1'
+            modelType: *ref_0
             name:
               fixed: false
               raw: tags

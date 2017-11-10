@@ -3,17 +3,14 @@ apiVersion: 1.0.0
 baseUrl: 'http://localhost'
 documentation: Resource Flattening for AutoRest
 errorTypes:
-  - $ref: '1'
-modelTypes:
-  - $id: '1'
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: Error
     properties:
-      - $id: '2'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -22,7 +19,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -35,8 +31,7 @@ modelTypes:
         realPath:
           - status
         serializedName: status
-      - $id: '4'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -45,7 +40,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -57,8 +51,7 @@ modelTypes:
         realPath:
           - message
         serializedName: message
-      - $id: '6'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -68,8 +61,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '1'
+        modelType: *ref_0
         name:
           fixed: false
           raw: parentError
@@ -77,15 +69,16 @@ modelTypes:
           - parentError
         serializedName: parentError
     serializedName: Error
-  - $id: '7'
+modelTypes:
+  - *ref_0
+  - &ref_1
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: Resource
     properties:
-      - $id: '8'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -95,7 +88,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '9'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -107,8 +99,7 @@ modelTypes:
         realPath:
           - id
         serializedName: id
-      - $id: '10'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -118,7 +109,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '11'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -130,8 +120,7 @@ modelTypes:
         realPath:
           - type
         serializedName: type
-      - $id: '12'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -140,13 +129,11 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '13'
           $type: DictionaryType
           name:
             fixed: false
           supportsAdditionalProperties: false
           valueType:
-            $id: '14'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -158,8 +145,7 @@ modelTypes:
         realPath:
           - tags
         serializedName: tags
-      - $id: '15'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -169,7 +155,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '16'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -181,8 +166,7 @@ modelTypes:
         realPath:
           - location
         serializedName: location
-      - $id: '17'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -192,7 +176,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '18'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -205,7 +188,7 @@ modelTypes:
           - name
         serializedName: name
     serializedName: Resource
-  - $id: '19'
+  - &ref_2
     $type: CompositeType
     containsConstantProperties: false
     extensions:
@@ -214,8 +197,7 @@ modelTypes:
       fixed: false
       raw: FlattenedProduct_properties
     properties:
-      - $id: '20'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -224,7 +206,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '21'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -236,8 +217,7 @@ modelTypes:
         realPath:
           - p.name
         serializedName: p.name
-      - $id: '22'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -246,7 +226,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '23'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -258,8 +237,7 @@ modelTypes:
         realPath:
           - type
         serializedName: type
-      - $id: '24'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -268,7 +246,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '25'
           $type: EnumType
           modelAsExtensible: false
           modelAsString: true
@@ -276,7 +253,6 @@ modelTypes:
             fixed: false
             raw: ''
           underlyingType:
-            $id: '26'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -311,8 +287,7 @@ modelTypes:
         realPath:
           - provisioningStateValues
         serializedName: provisioningStateValues
-      - $id: '27'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -321,7 +296,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '28'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -334,10 +308,9 @@ modelTypes:
           - provisioningState
         serializedName: provisioningState
     serializedName: FlattenedProduct_properties
-  - $id: '29'
+  - &ref_3
     $type: CompositeType
-    baseModelType:
-      $ref: '7'
+    baseModelType: *ref_1
     containsConstantProperties: false
     documentation: Flattened product.
     externalDocsUrl: 'http://tempuri.org'
@@ -345,8 +318,7 @@ modelTypes:
       fixed: false
       raw: FlattenedProduct
     properties:
-      - $id: '30'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -356,8 +328,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '19'
+        modelType: *ref_2
         name:
           fixed: false
           raw: properties
@@ -365,15 +336,14 @@ modelTypes:
           - properties
         serializedName: properties
     serializedName: FlattenedProduct
-  - $id: '31'
+  - &ref_13
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: ResourceCollection
     properties:
-      - $id: '32'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -381,16 +351,14 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '29'
+        modelType: *ref_3
         name:
           fixed: false
           raw: productresource
         realPath:
           - productresource
         serializedName: productresource
-      - $id: '33'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -399,10 +367,8 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '34'
           $type: SequenceType
-          elementType:
-            $ref: '29'
+          elementType: *ref_3
           name:
             fixed: false
         name:
@@ -411,8 +377,7 @@ modelTypes:
         realPath:
           - arrayofresources
         serializedName: arrayofresources
-      - $id: '35'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -421,13 +386,11 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '36'
           $type: DictionaryType
           name:
             fixed: false
           supportsAdditionalProperties: false
-          valueType:
-            $ref: '29'
+          valueType: *ref_3
         name:
           fixed: false
           raw: dictionaryofresources
@@ -435,7 +398,7 @@ modelTypes:
           - dictionaryofresources
         serializedName: dictionaryofresources
     serializedName: ResourceCollection
-  - $id: '37'
+  - &ref_5
     $type: CompositeType
     containsConstantProperties: false
     documentation: The product documentation.
@@ -443,8 +406,7 @@ modelTypes:
       fixed: false
       raw: BaseProduct
     properties:
-      - $id: '38'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -459,7 +421,6 @@ modelTypes:
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '39'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -471,8 +432,7 @@ modelTypes:
         realPath:
           - base_product_id
         serializedName: base_product_id
-      - $id: '40'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -484,7 +444,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '41'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -497,10 +456,9 @@ modelTypes:
           - base_product_description
         serializedName: base_product_description
     serializedName: BaseProduct
-  - $id: '42'
+  - &ref_4
     $type: CompositeType
-    baseModelType:
-      $id: '45'
+    baseModelType: &ref_7
       $type: CompositeType
       containsConstantProperties: false
       documentation: The Generic URL.
@@ -508,8 +466,7 @@ modelTypes:
         fixed: false
         raw: GenericUrl
       properties:
-        - $id: '46'
-          collectionFormat: none
+        - collectionFormat: none
           defaultValue:
             fixed: false
           documentation:
@@ -519,7 +476,6 @@ modelTypes:
           isReadOnly: false
           isRequired: false
           modelType:
-            $id: '47'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -538,8 +494,7 @@ modelTypes:
       fixed: false
       raw: ProductUrl
     properties:
-      - $id: '43'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -549,7 +504,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '44'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -562,7 +516,7 @@ modelTypes:
           - '@odata.value'
         serializedName: '@odata.value'
     serializedName: ProductUrl
-  - $id: '48'
+  - &ref_6
     $type: CompositeType
     containsConstantProperties: true
     documentation: The product documentation.
@@ -570,8 +524,7 @@ modelTypes:
       fixed: false
       raw: SimpleProductProperties
     properties:
-      - $id: '49'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -581,7 +534,6 @@ modelTypes:
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '50'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -593,8 +545,7 @@ modelTypes:
         realPath:
           - max_product_display_name
         serializedName: max_product_display_name
-      - $id: '51'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
           raw: Large
@@ -607,7 +558,6 @@ modelTypes:
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '52'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -619,8 +569,7 @@ modelTypes:
         realPath:
           - max_product_capacity
         serializedName: max_product_capacity
-      - $id: '53'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -630,8 +579,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '42'
+        modelType: *ref_4
         name:
           fixed: false
           raw: max_product_image
@@ -639,18 +587,16 @@ modelTypes:
           - max_product_image
         serializedName: max_product_image
     serializedName: SimpleProductProperties
-  - $id: '54'
+  - &ref_14
     $type: CompositeType
-    baseModelType:
-      $ref: '37'
+    baseModelType: *ref_5
     containsConstantProperties: true
     documentation: The product documentation.
     name:
       fixed: false
       raw: SimpleProduct
     properties:
-      - $id: '55'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -660,8 +606,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '48'
+        modelType: *ref_6
         name:
           fixed: false
           raw: details
@@ -669,8 +614,8 @@ modelTypes:
           - details
         serializedName: details
     serializedName: SimpleProduct
-  - $ref: '45'
-  - $id: '56'
+  - *ref_7
+  - &ref_8
     $type: CompositeType
     containsConstantProperties: false
     documentation: The wrapped produc.
@@ -678,8 +623,7 @@ modelTypes:
       fixed: false
       raw: WrappedProduct
     properties:
-      - $id: '57'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -689,7 +633,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '58'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -702,7 +645,7 @@ modelTypes:
           - value
         serializedName: value
     serializedName: WrappedProduct
-  - $id: '59'
+  - &ref_10
     $type: CompositeType
     containsConstantProperties: false
     documentation: The wrapped produc.
@@ -710,8 +653,7 @@ modelTypes:
       fixed: false
       raw: ProductWrapper
     properties:
-      - $id: '60'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -721,8 +663,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '56'
+        modelType: *ref_8
         name:
           fixed: false
           raw: property
@@ -736,8 +677,7 @@ namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put External Resource as an Array
@@ -754,8 +694,7 @@ operations:
           fixed: false
           raw: putArray
         parameters:
-          - $id: '61'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -767,10 +706,8 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '62'
               $type: SequenceType
-              elementType:
-                $ref: '7'
+              elementType: *ref_1
               name:
                 fixed: false
             name:
@@ -788,8 +725,7 @@ operations:
         serializedName: putArray
         url: /model-flatten/array
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get External Resource as an Array
@@ -808,23 +744,19 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '63'
+            body: &ref_9
               $type: SequenceType
-              elementType:
-                $ref: '29'
+              elementType: *ref_3
               name:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '63'
+          body: *ref_9
           isNullable: true
         serializedName: getArray
         url: /model-flatten/array
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -844,8 +776,7 @@ operations:
           fixed: false
           raw: putWrappedArray
         parameters:
-          - $id: '64'
-            collectionFormat: csv
+          - collectionFormat: csv
             defaultValue:
               fixed: false
             documentation:
@@ -857,10 +788,8 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '65'
               $type: SequenceType
-              elementType:
-                $ref: '56'
+              elementType: *ref_8
               name:
                 fixed: false
             name:
@@ -878,8 +807,7 @@ operations:
         serializedName: putWrappedArray
         url: /model-flatten/wrappedarray
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -901,23 +829,19 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '66'
+            body: &ref_11
               $type: SequenceType
-              elementType:
-                $ref: '59'
+              elementType: *ref_10
               name:
                 fixed: false
             isNullable: true
         returnType:
-          body:
-            $ref: '66'
+          body: *ref_11
           isNullable: true
         serializedName: getWrappedArray
         url: /model-flatten/wrappedarray
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put External Resource as a Dictionary
@@ -934,8 +858,7 @@ operations:
           fixed: false
           raw: putDictionary
         parameters:
-          - $id: '67'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -947,13 +870,11 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '68'
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
-              valueType:
-                $ref: '29'
+              valueType: *ref_3
             name:
               fixed: false
               raw: ResourceDictionary
@@ -969,8 +890,7 @@ operations:
         serializedName: putDictionary
         url: /model-flatten/dictionary
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get External Resource as a Dictionary
@@ -989,24 +909,20 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '69'
+            body: &ref_12
               $type: DictionaryType
               name:
                 fixed: false
               supportsAdditionalProperties: false
-              valueType:
-                $ref: '29'
+              valueType: *ref_3
             isNullable: true
         returnType:
-          body:
-            $ref: '69'
+          body: *ref_12
           isNullable: true
         serializedName: getDictionary
         url: /model-flatten/dictionary
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put External Resource as a ResourceCollection
@@ -1023,8 +939,7 @@ operations:
           fixed: false
           raw: putResourceCollection
         parameters:
-          - $id: '70'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1035,8 +950,7 @@ operations:
             isConstant: false
             isRequired: false
             location: body
-            modelType:
-              $ref: '31'
+            modelType: *ref_13
             name:
               fixed: false
               raw: ResourceComplexObject
@@ -1052,8 +966,7 @@ operations:
         serializedName: putResourceCollection
         url: /model-flatten/resourcecollection
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get External Resource as a ResourceCollection
@@ -1072,18 +985,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '31'
+            body: *ref_13
             isNullable: true
         returnType:
-          body:
-            $ref: '31'
+          body: *ref_13
           isNullable: true
         serializedName: getResourceCollection
         url: /model-flatten/resourcecollection
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put Simple Product with client flattening true on the model
@@ -1100,8 +1010,7 @@ operations:
           fixed: false
           raw: putSimpleProduct
         parameters:
-          - $id: '71'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1112,8 +1021,7 @@ operations:
             isConstant: false
             isRequired: false
             location: body
-            modelType:
-              $ref: '54'
+            modelType: *ref_14
             name:
               fixed: false
               raw: SimpleBodyProduct
@@ -1123,18 +1031,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '54'
+            body: *ref_14
             isNullable: true
         returnType:
-          body:
-            $ref: '54'
+          body: *ref_14
           isNullable: true
         serializedName: putSimpleProduct
         url: /model-flatten/customFlattening
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1153,8 +1058,7 @@ operations:
           fixed: false
           raw: postFlattenedSimpleProduct
         parameters:
-          - $id: '72'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1166,8 +1070,7 @@ operations:
             isConstant: false
             isRequired: false
             location: body
-            modelType:
-              $ref: '54'
+            modelType: *ref_14
             name:
               fixed: false
               raw: SimpleBodyProduct
@@ -1177,18 +1080,15 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '54'
+            body: *ref_14
             isNullable: true
         returnType:
-          body:
-            $ref: '54'
+          body: *ref_14
           isNullable: true
         serializedName: postFlattenedSimpleProduct
         url: /model-flatten/customFlattening
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Put Simple Product with client flattening true on the model
@@ -1205,8 +1105,7 @@ operations:
           fixed: false
           raw: putSimpleProductWithGrouping
         parameters:
-          - $id: '73'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1220,14 +1119,12 @@ operations:
             isConstant: false
             isRequired: false
             location: body
-            modelType:
-              $ref: '54'
+            modelType: *ref_14
             name:
               fixed: false
               raw: SimpleBodyProduct
             serializedName: SimpleBodyProduct
-          - $id: '74'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1240,7 +1137,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '75'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1255,12 +1151,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '54'
+            body: *ref_14
             isNullable: true
         returnType:
-          body:
-            $ref: '54'
+          body: *ref_14
           isNullable: true
         serializedName: putSimpleProductWithGrouping
         url: '/model-flatten/customFlattening/parametergrouping/{name}/'

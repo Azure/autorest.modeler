@@ -2,22 +2,139 @@
 apiVersion: 2015-05-01-preview
 baseUrl: 'https://management.azure.com'
 enumTypes:
-  - $ref: '10'
-  - $ref: '16'
-  - $ref: '52'
-  - $ref: '59'
-  - $ref: '89'
-  - $ref: '98'
+  - &ref_0
+    $type: EnumType
+    modelAsExtensible: false
+    modelAsString: false
+    name:
+      fixed: false
+      raw: Reason
+    underlyingType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: AccountNameInvalid
+        serializedName: AccountNameInvalid
+      - name: AlreadyExists
+        serializedName: AlreadyExists
+  - &ref_1
+    $type: EnumType
+    modelAsExtensible: false
+    modelAsString: false
+    name:
+      fixed: false
+      raw: AccountType
+    underlyingType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: Standard_LRS
+        serializedName: Standard_LRS
+      - name: Standard_ZRS
+        serializedName: Standard_ZRS
+      - name: Standard_GRS
+        serializedName: Standard_GRS
+      - name: Standard_RAGRS
+        serializedName: Standard_RAGRS
+      - name: Premium_LRS
+        serializedName: Premium_LRS
+  - &ref_6
+    $type: EnumType
+    modelAsExtensible: false
+    modelAsString: false
+    name:
+      fixed: false
+      raw: ProvisioningState
+    underlyingType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: Creating
+        serializedName: Creating
+      - name: ResolvingDNS
+        serializedName: ResolvingDNS
+      - name: Succeeded
+        serializedName: Succeeded
+  - &ref_7
+    $type: EnumType
+    modelAsExtensible: false
+    modelAsString: false
+    name:
+      fixed: false
+      raw: AccountStatus
+    underlyingType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: Available
+        serializedName: Available
+      - name: Unavailable
+        serializedName: Unavailable
+  - &ref_13
+    $type: EnumType
+    modelAsExtensible: false
+    modelAsString: false
+    name:
+      fixed: false
+      raw: KeyName
+    underlyingType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: key1
+        serializedName: key1
+      - name: key2
+        serializedName: key2
+  - &ref_14
+    $type: EnumType
+    modelAsExtensible: false
+    modelAsString: false
+    name:
+      fixed: false
+      raw: UsageUnit
+    underlyingType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: Count
+        serializedName: Count
+      - name: Bytes
+        serializedName: Bytes
+      - name: Seconds
+        serializedName: Seconds
+      - name: Percent
+        serializedName: Percent
+      - name: CountsPerSecond
+        serializedName: CountsPerSecond
+      - name: BytesPerSecond
+        serializedName: BytesPerSecond
 modelTypes:
-  - $id: '1'
+  - &ref_17
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: StorageAccountCheckNameAvailabilityParameters
     properties:
-      - $id: '2'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -26,7 +143,6 @@ modelTypes:
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '3'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -38,8 +154,7 @@ modelTypes:
         realPath:
           - name
         serializedName: name
-      - $id: '4'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
           raw: Microsoft.Storage/storageAccounts
@@ -49,7 +164,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -62,7 +176,7 @@ modelTypes:
           - type
         serializedName: type
     serializedName: StorageAccountCheckNameAvailabilityParameters
-  - $id: '6'
+  - &ref_18
     $type: CompositeType
     containsConstantProperties: false
     documentation: The CheckNameAvailability operation response.
@@ -70,8 +184,7 @@ modelTypes:
       fixed: false
       raw: CheckNameAvailabilityResult
     properties:
-      - $id: '7'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -84,7 +197,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '8'
           $type: PrimaryType
           knownPrimaryType: boolean
           name:
@@ -96,8 +208,7 @@ modelTypes:
         realPath:
           - nameAvailable
         serializedName: nameAvailable
-      - $id: '9'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -111,34 +222,14 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $id: '10'
-          $type: EnumType
-          modelAsExtensible: false
-          modelAsString: false
-          name:
-            fixed: false
-            raw: Reason
-          underlyingType:
-            $id: '11'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
-          values:
-            - name: AccountNameInvalid
-              serializedName: AccountNameInvalid
-            - name: AlreadyExists
-              serializedName: AlreadyExists
+        modelType: *ref_0
         name:
           fixed: false
           raw: reason
         realPath:
           - reason
         serializedName: reason
-      - $id: '12'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -148,7 +239,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '13'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -161,15 +251,14 @@ modelTypes:
           - message
         serializedName: message
     serializedName: CheckNameAvailabilityResult
-  - $id: '14'
+  - &ref_2
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: StorageAccountPropertiesCreateParameters
     properties:
-      - $id: '15'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -181,32 +270,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $id: '16'
-          $type: EnumType
-          modelAsExtensible: false
-          modelAsString: false
-          name:
-            fixed: false
-            raw: AccountType
-          underlyingType:
-            $id: '17'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
-          values:
-            - name: Standard_LRS
-              serializedName: Standard_LRS
-            - name: Standard_ZRS
-              serializedName: Standard_ZRS
-            - name: Standard_GRS
-              serializedName: Standard_GRS
-            - name: Standard_RAGRS
-              serializedName: Standard_RAGRS
-            - name: Premium_LRS
-              serializedName: Premium_LRS
+        modelType: *ref_1
         name:
           fixed: false
           raw: accountType
@@ -214,10 +278,9 @@ modelTypes:
           - accountType
         serializedName: accountType
     serializedName: StorageAccountPropertiesCreateParameters
-  - $id: '18'
+  - &ref_19
     $type: CompositeType
-    baseModelType:
-      $id: '20'
+    baseModelType: &ref_9
       $type: CompositeType
       containsConstantProperties: false
       extensions:
@@ -226,8 +289,7 @@ modelTypes:
         fixed: false
         raw: Resource
       properties:
-        - $id: '21'
-          collectionFormat: none
+        - collectionFormat: none
           defaultValue:
             fixed: false
           documentation:
@@ -237,7 +299,6 @@ modelTypes:
           isReadOnly: true
           isRequired: false
           modelType:
-            $id: '22'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -249,8 +310,7 @@ modelTypes:
           realPath:
             - id
           serializedName: id
-        - $id: '23'
-          collectionFormat: none
+        - collectionFormat: none
           defaultValue:
             fixed: false
           documentation:
@@ -260,7 +320,6 @@ modelTypes:
           isReadOnly: true
           isRequired: false
           modelType:
-            $id: '24'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -272,8 +331,7 @@ modelTypes:
           realPath:
             - name
           serializedName: name
-        - $id: '25'
-          collectionFormat: none
+        - collectionFormat: none
           defaultValue:
             fixed: false
           documentation:
@@ -283,7 +341,6 @@ modelTypes:
           isReadOnly: true
           isRequired: false
           modelType:
-            $id: '26'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -295,8 +352,7 @@ modelTypes:
           realPath:
             - type
           serializedName: type
-        - $id: '27'
-          collectionFormat: none
+        - collectionFormat: none
           defaultValue:
             fixed: false
           documentation:
@@ -306,7 +362,6 @@ modelTypes:
           isReadOnly: false
           isRequired: true
           modelType:
-            $id: '28'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -318,8 +373,7 @@ modelTypes:
           realPath:
             - location
           serializedName: location
-        - $id: '29'
-          collectionFormat: none
+        - collectionFormat: none
           defaultValue:
             fixed: false
           documentation:
@@ -329,13 +383,11 @@ modelTypes:
           isReadOnly: false
           isRequired: false
           modelType:
-            $id: '30'
             $type: DictionaryType
             name:
               fixed: false
             supportsAdditionalProperties: false
             valueType:
-              $id: '31'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -354,8 +406,7 @@ modelTypes:
       fixed: false
       raw: StorageAccountCreateParameters
     properties:
-      - $id: '19'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -365,8 +416,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '14'
+        modelType: *ref_2
         name:
           fixed: false
           raw: properties
@@ -374,7 +424,7 @@ modelTypes:
           - properties
         serializedName: properties
     serializedName: StorageAccountCreateParameters
-  - $id: '32'
+  - &ref_4
     $type: CompositeType
     containsConstantProperties: false
     documentation: >-
@@ -384,8 +434,7 @@ modelTypes:
       fixed: false
       raw: Bar
     properties:
-      - $id: '33'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -394,8 +443,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $id: '34'
+        modelType: &ref_3
           $type: CompositeType
           containsConstantProperties: false
           documentation: >-
@@ -405,8 +453,7 @@ modelTypes:
             fixed: false
             raw: Endpoints
           properties:
-            - $id: '35'
-              collectionFormat: none
+            - collectionFormat: none
               defaultValue:
                 fixed: false
               documentation:
@@ -416,7 +463,6 @@ modelTypes:
               isReadOnly: false
               isRequired: false
               modelType:
-                $id: '36'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -428,8 +474,7 @@ modelTypes:
               realPath:
                 - blob
               serializedName: blob
-            - $id: '37'
-              collectionFormat: none
+            - collectionFormat: none
               defaultValue:
                 fixed: false
               documentation:
@@ -439,7 +484,6 @@ modelTypes:
               isReadOnly: false
               isRequired: false
               modelType:
-                $id: '38'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -451,8 +495,7 @@ modelTypes:
               realPath:
                 - queue
               serializedName: queue
-            - $id: '39'
-              collectionFormat: none
+            - collectionFormat: none
               defaultValue:
                 fixed: false
               documentation:
@@ -462,7 +505,6 @@ modelTypes:
               isReadOnly: false
               isRequired: false
               modelType:
-                $id: '40'
                 $type: PrimaryType
                 knownPrimaryType: string
                 name:
@@ -474,8 +516,7 @@ modelTypes:
               realPath:
                 - table
               serializedName: table
-            - $id: '41'
-              collectionFormat: none
+            - collectionFormat: none
               defaultValue:
                 fixed: false
               documentation:
@@ -484,16 +525,14 @@ modelTypes:
               isConstant: false
               isReadOnly: false
               isRequired: false
-              modelType:
-                $ref: '34'
+              modelType: *ref_3
               name:
                 fixed: false
                 raw: dummyEndPoint
               realPath:
                 - dummyEndPoint
               serializedName: dummyEndPoint
-            - $id: '42'
-              collectionFormat: none
+            - collectionFormat: none
               defaultValue:
                 fixed: false
               documentation:
@@ -502,8 +541,7 @@ modelTypes:
               isConstant: false
               isReadOnly: false
               isRequired: false
-              modelType:
-                $id: '43'
+              modelType: &ref_5
                 $type: CompositeType
                 containsConstantProperties: false
                 documentation: >-
@@ -513,8 +551,7 @@ modelTypes:
                   fixed: false
                   raw: Foo
                 properties:
-                  - $id: '44'
-                    collectionFormat: none
+                  - collectionFormat: none
                     defaultValue:
                       fixed: false
                     documentation:
@@ -523,8 +560,7 @@ modelTypes:
                     isConstant: false
                     isReadOnly: false
                     isRequired: false
-                    modelType:
-                      $ref: '32'
+                    modelType: *ref_4
                     name:
                       fixed: false
                       raw: Bar.Point
@@ -546,9 +582,9 @@ modelTypes:
           - RecursivePoint
         serializedName: RecursivePoint
     serializedName: Bar
-  - $ref: '43'
-  - $ref: '34'
-  - $id: '45'
+  - *ref_5
+  - *ref_3
+  - &ref_8
     $type: CompositeType
     containsConstantProperties: false
     documentation: >-
@@ -558,8 +594,7 @@ modelTypes:
       fixed: false
       raw: CustomDomain
     properties:
-      - $id: '46'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -569,7 +604,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '47'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -581,8 +615,7 @@ modelTypes:
         realPath:
           - name
         serializedName: name
-      - $id: '48'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -594,7 +627,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '49'
           $type: PrimaryType
           knownPrimaryType: boolean
           name:
@@ -607,15 +639,14 @@ modelTypes:
           - useSubDomain
         serializedName: useSubDomain
     serializedName: CustomDomain
-  - $id: '50'
+  - &ref_10
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: StorageAccountProperties
     properties:
-      - $id: '51'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -629,36 +660,14 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $id: '52'
-          $type: EnumType
-          modelAsExtensible: false
-          modelAsString: false
-          name:
-            fixed: false
-            raw: ProvisioningState
-          underlyingType:
-            $id: '53'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
-          values:
-            - name: Creating
-              serializedName: Creating
-            - name: ResolvingDNS
-              serializedName: ResolvingDNS
-            - name: Succeeded
-              serializedName: Succeeded
+        modelType: *ref_6
         name:
           fixed: false
           raw: provisioningState
         realPath:
           - provisioningState
         serializedName: provisioningState
-      - $id: '54'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -670,16 +679,14 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '16'
+        modelType: *ref_1
         name:
           fixed: false
           raw: accountType
         realPath:
           - accountType
         serializedName: accountType
-      - $id: '55'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -691,16 +698,14 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '34'
+        modelType: *ref_3
         name:
           fixed: false
           raw: primaryEndpoints
         realPath:
           - primaryEndpoints
         serializedName: primaryEndpoints
-      - $id: '56'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -710,7 +715,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '57'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -722,8 +726,7 @@ modelTypes:
         realPath:
           - primaryLocation
         serializedName: primaryLocation
-      - $id: '58'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -737,34 +740,14 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $id: '59'
-          $type: EnumType
-          modelAsExtensible: false
-          modelAsString: false
-          name:
-            fixed: false
-            raw: AccountStatus
-          underlyingType:
-            $id: '60'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
-          values:
-            - name: Available
-              serializedName: Available
-            - name: Unavailable
-              serializedName: Unavailable
+        modelType: *ref_7
         name:
           fixed: false
           raw: statusOfPrimary
         realPath:
           - statusOfPrimary
         serializedName: statusOfPrimary
-      - $id: '61'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -778,7 +761,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '62'
           $type: PrimaryType
           format: date-time
           knownPrimaryType: dateTime
@@ -791,8 +773,7 @@ modelTypes:
         realPath:
           - lastGeoFailoverTime
         serializedName: lastGeoFailoverTime
-      - $id: '63'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -805,7 +786,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '64'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -817,8 +797,7 @@ modelTypes:
         realPath:
           - secondaryLocation
         serializedName: secondaryLocation
-      - $id: '65'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -833,16 +812,14 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '59'
+        modelType: *ref_7
         name:
           fixed: false
           raw: statusOfSecondary
         realPath:
           - statusOfSecondary
         serializedName: statusOfSecondary
-      - $id: '66'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -852,7 +829,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '67'
           $type: PrimaryType
           format: date-time
           knownPrimaryType: dateTime
@@ -865,8 +841,7 @@ modelTypes:
         realPath:
           - creationTime
         serializedName: creationTime
-      - $id: '68'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -877,16 +852,14 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '45'
+        modelType: *ref_8
         name:
           fixed: false
           raw: customDomain
         realPath:
           - customDomain
         serializedName: customDomain
-      - $id: '69'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -898,8 +871,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '34'
+        modelType: *ref_3
         name:
           fixed: false
           raw: secondaryEndpoints
@@ -907,18 +879,16 @@ modelTypes:
           - secondaryEndpoints
         serializedName: secondaryEndpoints
     serializedName: StorageAccountProperties
-  - $id: '70'
+  - &ref_11
     $type: CompositeType
-    baseModelType:
-      $ref: '20'
+    baseModelType: *ref_9
     containsConstantProperties: false
     documentation: The storage account.
     name:
       fixed: false
       raw: StorageAccount
     properties:
-      - $id: '71'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -928,8 +898,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '50'
+        modelType: *ref_10
         name:
           fixed: false
           raw: properties
@@ -937,7 +906,7 @@ modelTypes:
           - properties
         serializedName: properties
     serializedName: StorageAccount
-  - $id: '72'
+  - &ref_24
     $type: CompositeType
     containsConstantProperties: false
     documentation: The access keys for the storage account.
@@ -945,8 +914,7 @@ modelTypes:
       fixed: false
       raw: StorageAccountKeys
     properties:
-      - $id: '73'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -956,7 +924,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '74'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -968,8 +935,7 @@ modelTypes:
         realPath:
           - key1
         serializedName: key1
-      - $id: '75'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -979,7 +945,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '76'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -992,7 +957,7 @@ modelTypes:
           - key2
         serializedName: key2
     serializedName: StorageAccountKeys
-  - $id: '77'
+  - &ref_25
     $type: CompositeType
     containsConstantProperties: false
     documentation: The list storage accounts operation response.
@@ -1000,8 +965,7 @@ modelTypes:
       fixed: false
       raw: StorageAccountListResult
     properties:
-      - $id: '78'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1011,10 +975,8 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '79'
           $type: SequenceType
-          elementType:
-            $ref: '70'
+          elementType: *ref_11
           name:
             fixed: false
         name:
@@ -1023,8 +985,7 @@ modelTypes:
         realPath:
           - value
         serializedName: value
-      - $id: '80'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1036,7 +997,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '81'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -1049,15 +1009,14 @@ modelTypes:
           - nextLink
         serializedName: nextLink
     serializedName: StorageAccountListResult
-  - $id: '82'
+  - &ref_12
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: StorageAccountPropertiesUpdateParameters
     properties:
-      - $id: '83'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1072,16 +1031,14 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '16'
+        modelType: *ref_1
         name:
           fixed: false
           raw: accountType
         realPath:
           - accountType
         serializedName: accountType
-      - $id: '84'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1094,8 +1051,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '45'
+        modelType: *ref_8
         name:
           fixed: false
           raw: customDomain
@@ -1103,18 +1059,16 @@ modelTypes:
           - customDomain
         serializedName: customDomain
     serializedName: StorageAccountPropertiesUpdateParameters
-  - $id: '85'
+  - &ref_23
     $type: CompositeType
-    baseModelType:
-      $ref: '20'
+    baseModelType: *ref_9
     containsConstantProperties: false
     documentation: The parameters to update on the account.
     name:
       fixed: false
       raw: StorageAccountUpdateParameters
     properties:
-      - $id: '86'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1124,8 +1078,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '82'
+        modelType: *ref_12
         name:
           fixed: false
           raw: properties
@@ -1133,15 +1086,14 @@ modelTypes:
           - properties
         serializedName: properties
     serializedName: StorageAccountUpdateParameters
-  - $id: '87'
+  - &ref_26
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: StorageAccountRegenerateKeyParameters
     properties:
-      - $id: '88'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1152,26 +1104,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $id: '89'
-          $type: EnumType
-          modelAsExtensible: false
-          modelAsString: false
-          name:
-            fixed: false
-            raw: KeyName
-          underlyingType:
-            $id: '90'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
-          values:
-            - name: key1
-              serializedName: key1
-            - name: key2
-              serializedName: key2
+        modelType: *ref_13
         name:
           fixed: false
           raw: keyName
@@ -1179,7 +1112,7 @@ modelTypes:
           - keyName
         serializedName: keyName
     serializedName: StorageAccountRegenerateKeyParameters
-  - $id: '91'
+  - &ref_15
     $type: CompositeType
     containsConstantProperties: false
     documentation: The Usage Names.
@@ -1187,8 +1120,7 @@ modelTypes:
       fixed: false
       raw: UsageName
     properties:
-      - $id: '92'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1198,7 +1130,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '93'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -1210,8 +1141,7 @@ modelTypes:
         realPath:
           - value
         serializedName: value
-      - $id: '94'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1221,7 +1151,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '95'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -1234,7 +1163,7 @@ modelTypes:
           - localizedValue
         serializedName: localizedValue
     serializedName: UsageName
-  - $id: '96'
+  - &ref_16
     $type: CompositeType
     containsConstantProperties: false
     documentation: Describes Storage Resource Usage.
@@ -1242,8 +1171,7 @@ modelTypes:
       fixed: false
       raw: Usage
     properties:
-      - $id: '97'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1255,42 +1183,14 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $id: '98'
-          $type: EnumType
-          modelAsExtensible: false
-          modelAsString: false
-          name:
-            fixed: false
-            raw: UsageUnit
-          underlyingType:
-            $id: '99'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
-          values:
-            - name: Count
-              serializedName: Count
-            - name: Bytes
-              serializedName: Bytes
-            - name: Seconds
-              serializedName: Seconds
-            - name: Percent
-              serializedName: Percent
-            - name: CountsPerSecond
-              serializedName: CountsPerSecond
-            - name: BytesPerSecond
-              serializedName: BytesPerSecond
+        modelType: *ref_14
         name:
           fixed: false
           raw: unit
         realPath:
           - unit
         serializedName: unit
-      - $id: '100'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1302,7 +1202,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '101'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -1315,8 +1214,7 @@ modelTypes:
         realPath:
           - currentValue
         serializedName: currentValue
-      - $id: '102'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1328,7 +1226,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '103'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -1341,8 +1238,7 @@ modelTypes:
         realPath:
           - limit
         serializedName: limit
-      - $id: '104'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1351,8 +1247,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '91'
+        modelType: *ref_15
         name:
           fixed: false
           raw: name
@@ -1360,7 +1255,7 @@ modelTypes:
           - name
         serializedName: name
     serializedName: Usage
-  - $id: '105'
+  - &ref_27
     $type: CompositeType
     containsConstantProperties: false
     documentation: The List Usages operation response.
@@ -1368,8 +1263,7 @@ modelTypes:
       fixed: false
       raw: UsageListResult
     properties:
-      - $id: '106'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1379,10 +1273,8 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '107'
           $type: SequenceType
-          elementType:
-            $ref: '96'
+          elementType: *ref_16
           name:
             fixed: false
         name:
@@ -1392,9 +1284,8 @@ modelTypes:
           - value
         serializedName: value
     serializedName: UsageListResult
-  - $ref: '20'
-  - $id: '108'
-    $type: CompositeType
+  - *ref_9
+  - $type: CompositeType
     containsConstantProperties: false
     extensions:
       x-ms-azure-resource: true
@@ -1402,8 +1293,7 @@ modelTypes:
       fixed: false
       raw: SubResource
     properties:
-      - $id: '109'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -1413,7 +1303,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '110'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -1447,8 +1336,7 @@ operations:
           fixed: false
           raw: CheckNameAvailability
         parameters:
-          - $id: '117'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1462,15 +1350,33 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '1'
+            modelType: *ref_17
             name:
               fixed: false
               raw: accountName
             serializedName: accountName
-          - $id: '118'
-            clientProperty:
-              $ref: '113'
+          - clientProperty: &ref_20
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+              documentation:
+                fixed: false
+                raw: Client Api Version.
+              isConstant: false
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: api-version
+              realPath:
+                - api-version
+              serializedName: api-version
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1481,7 +1387,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '119'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1491,9 +1396,31 @@ operations:
               fixed: false
               raw: api-version
             serializedName: api-version
-          - $id: '120'
-            clientProperty:
-              $ref: '111'
+          - clientProperty: &ref_21
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+              documentation:
+                fixed: false
+                raw: >-
+                  Gets subscription credentials which uniquely identify
+                  Microsoft Azure subscription. The subscription ID forms part
+                  of the URI for every service call.
+              isConstant: false
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: subscriptionId
+              realPath:
+                - subscriptionId
+              serializedName: subscriptionId
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1507,7 +1434,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '121'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1523,12 +1449,10 @@ operations:
           - text/json
         responses:
           OK:
-            body:
-              $ref: '6'
+            body: *ref_18
             isNullable: true
         returnType:
-          body:
-            $ref: '6'
+          body: *ref_18
           isNullable: true
         serializedName: StorageAccounts_CheckNameAvailability
         url: >-
@@ -1555,9 +1479,30 @@ operations:
           fixed: false
           raw: Create
         parameters:
-          - $id: '122'
-            clientProperty:
-              $ref: '115'
+          - clientProperty: &ref_22
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+              documentation:
+                fixed: false
+                raw: The name of the resource group within the user’s subscription.
+              extensions:
+                x-ms-parameter-location: method
+              isConstant: false
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: resourceGroupName
+              realPath:
+                - resourceGroupName
+              serializedName: resourceGroupName
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1570,7 +1515,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '123'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1580,8 +1524,7 @@ operations:
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
-          - $id: '124'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1594,7 +1537,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '125'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1604,8 +1546,7 @@ operations:
               fixed: false
               raw: accountName
             serializedName: accountName
-          - $id: '126'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1616,15 +1557,12 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '18'
+            modelType: *ref_19
             name:
               fixed: false
               raw: parameters
             serializedName: parameters
-          - $id: '127'
-            clientProperty:
-              $ref: '113'
+          - clientProperty: *ref_20
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1635,7 +1573,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '128'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1645,9 +1582,7 @@ operations:
               fixed: false
               raw: api-version
             serializedName: api-version
-          - $id: '129'
-            clientProperty:
-              $ref: '111'
+          - clientProperty: *ref_21
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1661,7 +1596,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '130'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1679,12 +1613,10 @@ operations:
           Accepted:
             isNullable: true
           OK:
-            body:
-              $ref: '70'
+            body: *ref_11
             isNullable: true
         returnType:
-          body:
-            $ref: '70'
+          body: *ref_11
           isNullable: true
         serializedName: StorageAccounts_Create
         url: >-
@@ -1703,9 +1635,7 @@ operations:
           fixed: false
           raw: Delete
         parameters:
-          - $id: '131'
-            clientProperty:
-              $ref: '115'
+          - clientProperty: *ref_22
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1718,7 +1648,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '132'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1728,8 +1657,7 @@ operations:
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
-          - $id: '133'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1742,7 +1670,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '134'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1752,9 +1679,7 @@ operations:
               fixed: false
               raw: accountName
             serializedName: accountName
-          - $id: '135'
-            clientProperty:
-              $ref: '113'
+          - clientProperty: *ref_20
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1765,7 +1690,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '136'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1775,9 +1699,7 @@ operations:
               fixed: false
               raw: api-version
             serializedName: api-version
-          - $id: '137'
-            clientProperty:
-              $ref: '111'
+          - clientProperty: *ref_21
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1791,7 +1713,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '138'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1831,9 +1752,7 @@ operations:
           fixed: false
           raw: GetProperties
         parameters:
-          - $id: '139'
-            clientProperty:
-              $ref: '115'
+          - clientProperty: *ref_22
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1846,7 +1765,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '140'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1856,8 +1774,7 @@ operations:
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
-          - $id: '141'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1870,7 +1787,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '142'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1880,9 +1796,7 @@ operations:
               fixed: false
               raw: accountName
             serializedName: accountName
-          - $id: '143'
-            clientProperty:
-              $ref: '113'
+          - clientProperty: *ref_20
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1893,7 +1807,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '144'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1903,9 +1816,7 @@ operations:
               fixed: false
               raw: api-version
             serializedName: api-version
-          - $id: '145'
-            clientProperty:
-              $ref: '111'
+          - clientProperty: *ref_21
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1919,7 +1830,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '146'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1935,12 +1845,10 @@ operations:
           - text/json
         responses:
           OK:
-            body:
-              $ref: '70'
+            body: *ref_11
             isNullable: true
         returnType:
-          body:
-            $ref: '70'
+          body: *ref_11
           isNullable: true
         serializedName: StorageAccounts_GetProperties
         url: >-
@@ -1971,9 +1879,7 @@ operations:
           fixed: false
           raw: Update
         parameters:
-          - $id: '147'
-            clientProperty:
-              $ref: '115'
+          - clientProperty: *ref_22
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1986,7 +1892,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '148'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1996,8 +1901,7 @@ operations:
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
-          - $id: '149'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2010,7 +1914,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '150'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2020,8 +1923,7 @@ operations:
               fixed: false
               raw: accountName
             serializedName: accountName
-          - $id: '151'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2034,15 +1936,12 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '85'
+            modelType: *ref_23
             name:
               fixed: false
               raw: parameters
             serializedName: parameters
-          - $id: '152'
-            clientProperty:
-              $ref: '113'
+          - clientProperty: *ref_20
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2053,7 +1952,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '153'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2063,9 +1961,7 @@ operations:
               fixed: false
               raw: api-version
             serializedName: api-version
-          - $id: '154'
-            clientProperty:
-              $ref: '111'
+          - clientProperty: *ref_21
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2079,7 +1975,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '155'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2095,12 +1990,10 @@ operations:
           - text/json
         responses:
           OK:
-            body:
-              $ref: '70'
+            body: *ref_11
             isNullable: true
         returnType:
-          body:
-            $ref: '70'
+          body: *ref_11
           isNullable: true
         serializedName: StorageAccounts_Update
         url: >-
@@ -2119,9 +2012,7 @@ operations:
           fixed: false
           raw: ListKeys
         parameters:
-          - $id: '156'
-            clientProperty:
-              $ref: '115'
+          - clientProperty: *ref_22
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2134,7 +2025,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '157'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2144,8 +2034,7 @@ operations:
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
-          - $id: '158'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2155,7 +2044,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '159'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2165,9 +2053,7 @@ operations:
               fixed: false
               raw: accountName
             serializedName: accountName
-          - $id: '160'
-            clientProperty:
-              $ref: '113'
+          - clientProperty: *ref_20
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2178,7 +2064,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '161'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2188,9 +2073,7 @@ operations:
               fixed: false
               raw: api-version
             serializedName: api-version
-          - $id: '162'
-            clientProperty:
-              $ref: '111'
+          - clientProperty: *ref_21
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2204,7 +2087,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '163'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2220,12 +2102,10 @@ operations:
           - text/json
         responses:
           OK:
-            body:
-              $ref: '72'
+            body: *ref_24
             isNullable: true
         returnType:
-          body:
-            $ref: '72'
+          body: *ref_24
           isNullable: true
         serializedName: StorageAccounts_ListKeys
         url: >-
@@ -2250,9 +2130,7 @@ operations:
           fixed: false
           raw: List
         parameters:
-          - $id: '164'
-            clientProperty:
-              $ref: '113'
+          - clientProperty: *ref_20
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2263,7 +2141,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '165'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2273,9 +2150,7 @@ operations:
               fixed: false
               raw: api-version
             serializedName: api-version
-          - $id: '166'
-            clientProperty:
-              $ref: '111'
+          - clientProperty: *ref_21
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2289,7 +2164,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '167'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2305,12 +2179,10 @@ operations:
           - text/json
         responses:
           OK:
-            body:
-              $ref: '77'
+            body: *ref_25
             isNullable: true
         returnType:
-          body:
-            $ref: '77'
+          body: *ref_25
           isNullable: true
         serializedName: StorageAccounts_List
         url: >-
@@ -2335,9 +2207,7 @@ operations:
           fixed: false
           raw: ListByResourceGroup
         parameters:
-          - $id: '168'
-            clientProperty:
-              $ref: '115'
+          - clientProperty: *ref_22
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2350,7 +2220,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '169'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2360,9 +2229,7 @@ operations:
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
-          - $id: '170'
-            clientProperty:
-              $ref: '113'
+          - clientProperty: *ref_20
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2373,7 +2240,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '171'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2383,9 +2249,7 @@ operations:
               fixed: false
               raw: api-version
             serializedName: api-version
-          - $id: '172'
-            clientProperty:
-              $ref: '111'
+          - clientProperty: *ref_21
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2399,7 +2263,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '173'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2415,12 +2278,10 @@ operations:
           - text/json
         responses:
           OK:
-            body:
-              $ref: '77'
+            body: *ref_25
             isNullable: true
         returnType:
-          body:
-            $ref: '77'
+          body: *ref_25
           isNullable: true
         serializedName: StorageAccounts_ListByResourceGroup
         url: >-
@@ -2441,9 +2302,7 @@ operations:
           fixed: false
           raw: RegenerateKey
         parameters:
-          - $id: '174'
-            clientProperty:
-              $ref: '115'
+          - clientProperty: *ref_22
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2456,7 +2315,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '175'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2466,8 +2324,7 @@ operations:
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
-          - $id: '176'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2480,7 +2337,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '177'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2490,8 +2346,7 @@ operations:
               fixed: false
               raw: accountName
             serializedName: accountName
-          - $id: '178'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2502,15 +2357,12 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType:
-              $ref: '87'
+            modelType: *ref_26
             name:
               fixed: false
               raw: regenerateKey
             serializedName: regenerateKey
-          - $id: '179'
-            clientProperty:
-              $ref: '113'
+          - clientProperty: *ref_20
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2521,7 +2373,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '180'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2531,9 +2382,7 @@ operations:
               fixed: false
               raw: api-version
             serializedName: api-version
-          - $id: '181'
-            clientProperty:
-              $ref: '111'
+          - clientProperty: *ref_21
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2547,7 +2396,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '182'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2563,12 +2411,10 @@ operations:
           - text/json
         responses:
           OK:
-            body:
-              $ref: '72'
+            body: *ref_24
             isNullable: true
         returnType:
-          body:
-            $ref: '72'
+          body: *ref_24
           isNullable: true
         serializedName: StorageAccounts_RegenerateKey
         url: >-
@@ -2596,9 +2442,7 @@ operations:
           fixed: false
           raw: List
         parameters:
-          - $id: '183'
-            clientProperty:
-              $ref: '113'
+          - clientProperty: *ref_20
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2609,7 +2453,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '184'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2619,9 +2462,7 @@ operations:
               fixed: false
               raw: api-version
             serializedName: api-version
-          - $id: '185'
-            clientProperty:
-              $ref: '111'
+          - clientProperty: *ref_21
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2635,7 +2476,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '186'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2651,12 +2491,10 @@ operations:
           - text/json
         responses:
           OK:
-            body:
-              $ref: '105'
+            body: *ref_27
             isNullable: true
         returnType:
-          body:
-            $ref: '105'
+          body: *ref_27
           isNullable: true
         serializedName: Usage_List
         url: '/subscriptions/{subscriptionId}/providers/Microsoft.Storage/usages'
@@ -2667,77 +2505,6 @@ operations:
     typeName:
       fixed: false
 properties:
-  - $id: '111'
-    collectionFormat: none
-    defaultValue:
-      fixed: false
-    documentation:
-      fixed: false
-      raw: >-
-        Gets subscription credentials which uniquely identify Microsoft Azure
-        subscription. The subscription ID forms part of the URI for every
-        service call.
-    isConstant: false
-    isReadOnly: false
-    isRequired: true
-    modelType:
-      $id: '112'
-      $type: PrimaryType
-      knownPrimaryType: string
-      name:
-        fixed: false
-        raw: String
-    name:
-      fixed: false
-      raw: subscriptionId
-    realPath:
-      - subscriptionId
-    serializedName: subscriptionId
-  - $id: '113'
-    collectionFormat: none
-    defaultValue:
-      fixed: false
-    documentation:
-      fixed: false
-      raw: Client Api Version.
-    isConstant: false
-    isReadOnly: false
-    isRequired: true
-    modelType:
-      $id: '114'
-      $type: PrimaryType
-      knownPrimaryType: string
-      name:
-        fixed: false
-        raw: String
-    name:
-      fixed: false
-      raw: api-version
-    realPath:
-      - api-version
-    serializedName: api-version
-  - $id: '115'
-    collectionFormat: none
-    defaultValue:
-      fixed: false
-    documentation:
-      fixed: false
-      raw: The name of the resource group within the user’s subscription.
-    extensions:
-      x-ms-parameter-location: method
-    isConstant: false
-    isReadOnly: false
-    isRequired: true
-    modelType:
-      $id: '116'
-      $type: PrimaryType
-      knownPrimaryType: string
-      name:
-        fixed: false
-        raw: String
-    name:
-      fixed: false
-      raw: resourceGroupName
-    realPath:
-      - resourceGroupName
-    serializedName: resourceGroupName
+  - *ref_21
+  - *ref_20
+  - *ref_22

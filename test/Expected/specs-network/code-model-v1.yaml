@@ -7,17 +7,35 @@ documentation: >-
   network resources. The API has entities that capture the relationship between
   an end user and the Microsoft Azure Networks service.
 enumTypes:
-  - $ref: '21'
+  - &ref_1
+    $type: EnumType
+    modelAsExtensible: false
+    modelAsString: true
+    name:
+      fixed: false
+      raw: NetworkOperationStatus
+    underlyingType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: InProgress
+        serializedName: InProgress
+      - name: Succeeded
+        serializedName: Succeeded
+      - name: Failed
+        serializedName: Failed
 modelTypes:
-  - $id: '1'
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: ErrorDetails
     properties:
-      - $id: '2'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -26,7 +44,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -38,8 +55,7 @@ modelTypes:
         realPath:
           - code
         serializedName: code
-      - $id: '4'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -48,7 +64,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -60,8 +75,7 @@ modelTypes:
         realPath:
           - target
         serializedName: target
-      - $id: '6'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -70,7 +84,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '7'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -83,15 +96,14 @@ modelTypes:
           - message
         serializedName: message
     serializedName: ErrorDetails
-  - $id: '8'
+  - &ref_2
     $type: CompositeType
     containsConstantProperties: false
     name:
       fixed: false
       raw: Error
     properties:
-      - $id: '9'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -100,7 +112,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '10'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -112,8 +123,7 @@ modelTypes:
         realPath:
           - code
         serializedName: code
-      - $id: '11'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -122,7 +132,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '12'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -134,8 +143,7 @@ modelTypes:
         realPath:
           - message
         serializedName: message
-      - $id: '13'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -144,7 +152,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '14'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -156,8 +163,7 @@ modelTypes:
         realPath:
           - target
         serializedName: target
-      - $id: '15'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -166,10 +172,8 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '16'
           $type: SequenceType
-          elementType:
-            $ref: '1'
+          elementType: *ref_0
           name:
             fixed: false
         name:
@@ -178,8 +182,7 @@ modelTypes:
         realPath:
           - details
         serializedName: details
-      - $id: '17'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -188,7 +191,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '18'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -201,8 +203,7 @@ modelTypes:
           - innerError
         serializedName: innerError
     serializedName: Error
-  - $id: '19'
-    $type: CompositeType
+  - $type: CompositeType
     containsConstantProperties: false
     documentation: >-
       The response body contains the status of the specified asynchronous
@@ -217,8 +218,7 @@ modelTypes:
       fixed: false
       raw: AzureAsyncOperationResult
     properties:
-      - $id: '20'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -233,36 +233,14 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $id: '21'
-          $type: EnumType
-          modelAsExtensible: false
-          modelAsString: true
-          name:
-            fixed: false
-            raw: NetworkOperationStatus
-          underlyingType:
-            $id: '22'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
-          values:
-            - name: InProgress
-              serializedName: InProgress
-            - name: Succeeded
-              serializedName: Succeeded
-            - name: Failed
-              serializedName: Failed
+        modelType: *ref_1
         name:
           fixed: false
           raw: status
         realPath:
           - status
         serializedName: status
-      - $id: '23'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -270,8 +248,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $ref: '8'
+        modelType: *ref_2
         name:
           fixed: false
           raw: error
@@ -279,8 +256,7 @@ modelTypes:
           - error
         serializedName: error
     serializedName: AzureAsyncOperationResult
-  - $id: '24'
-    $type: CompositeType
+  - $type: CompositeType
     containsConstantProperties: false
     documentation: Common resource representation.
     extensions:
@@ -289,8 +265,7 @@ modelTypes:
       fixed: false
       raw: Resource
     properties:
-      - $id: '25'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -300,7 +275,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '26'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -312,8 +286,7 @@ modelTypes:
         realPath:
           - id
         serializedName: id
-      - $id: '27'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -323,7 +296,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '28'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -335,8 +307,7 @@ modelTypes:
         realPath:
           - name
         serializedName: name
-      - $id: '29'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -346,7 +317,6 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '30'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -358,8 +328,7 @@ modelTypes:
         realPath:
           - type
         serializedName: type
-      - $id: '31'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -369,7 +338,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '32'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -381,8 +349,7 @@ modelTypes:
         realPath:
           - location
         serializedName: location
-      - $id: '33'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -392,13 +359,11 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '34'
           $type: DictionaryType
           name:
             fixed: false
           supportsAdditionalProperties: false
           valueType:
-            $id: '35'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -411,8 +376,7 @@ modelTypes:
           - tags
         serializedName: tags
     serializedName: Resource
-  - $id: '36'
-    $type: CompositeType
+  - $type: CompositeType
     containsConstantProperties: false
     documentation: Reference to another subresource.
     extensions:
@@ -421,8 +385,7 @@ modelTypes:
       fixed: false
       raw: SubResource
     properties:
-      - $id: '37'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -432,7 +395,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '38'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -445,16 +407,14 @@ modelTypes:
           - id
         serializedName: id
     serializedName: SubResource
-  - $id: '39'
-    $type: CompositeType
+  - $type: CompositeType
     containsConstantProperties: false
     documentation: Tags object for patch operations.
     name:
       fixed: false
       raw: TagsObject
     properties:
-      - $id: '40'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -464,13 +424,11 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '41'
           $type: DictionaryType
           name:
             fixed: false
           supportsAdditionalProperties: false
           valueType:
-            $id: '42'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -487,8 +445,7 @@ modelsName: Models
 name: NetworkManagementClient
 namespace: ''
 properties:
-  - $id: '43'
-    collectionFormat: none
+  - collectionFormat: none
     defaultValue:
       fixed: false
     documentation:
@@ -501,7 +458,6 @@ properties:
     isReadOnly: false
     isRequired: true
     modelType:
-      $id: '44'
       $type: PrimaryType
       knownPrimaryType: string
       name:
@@ -513,8 +469,7 @@ properties:
     realPath:
       - subscriptionId
     serializedName: subscriptionId
-  - $id: '45'
-    collectionFormat: none
+  - collectionFormat: none
     defaultValue:
       fixed: false
     documentation:
@@ -524,7 +479,6 @@ properties:
     isReadOnly: false
     isRequired: true
     modelType:
-      $id: '46'
       $type: PrimaryType
       knownPrimaryType: string
       name:

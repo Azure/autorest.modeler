@@ -3,11 +3,78 @@ apiVersion: 1.0.0
 baseUrl: 'http://localhost'
 documentation: Test Infrastructure for AutoRest
 enumTypes:
-  - $ref: '47'
+  - &ref_0
+    $type: EnumType
+    modelAsExtensible: false
+    modelAsString: false
+    name:
+      fixed: false
+      raw: GreyscaleColors
+    underlyingType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: White
+        serializedName: White
+      - name: black
+        serializedName: black
+      - name: GREY
+        serializedName: GREY
 errorTypes:
-  - $ref: '1'
+  - &ref_1
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
 headerTypes:
-  - $id: '6'
+  - &ref_2
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for responseExistingKey operation.
@@ -15,8 +82,7 @@ headerTypes:
       fixed: false
       raw: header-responseExistingKey-Headers
     properties:
-      - $id: '7'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -26,7 +92,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '8'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -39,7 +104,7 @@ headerTypes:
           - User-Agent
         serializedName: User-Agent
     serializedName: header-responseExistingKey-Headers
-  - $id: '9'
+  - &ref_3
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for responseProtectedKey operation.
@@ -47,8 +112,7 @@ headerTypes:
       fixed: false
       raw: header-responseProtectedKey-Headers
     properties:
-      - $id: '10'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -58,7 +122,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '11'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -71,7 +134,7 @@ headerTypes:
           - Content-Type
         serializedName: Content-Type
     serializedName: header-responseProtectedKey-Headers
-  - $id: '12'
+  - &ref_4
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for responseInteger operation.
@@ -79,8 +142,7 @@ headerTypes:
       fixed: false
       raw: header-responseInteger-Headers
     properties:
-      - $id: '13'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -90,7 +152,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '14'
           $type: PrimaryType
           format: int32
           knownPrimaryType: int
@@ -104,7 +165,7 @@ headerTypes:
           - value
         serializedName: value
     serializedName: header-responseInteger-Headers
-  - $id: '15'
+  - &ref_5
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for responseLong operation.
@@ -112,8 +173,7 @@ headerTypes:
       fixed: false
       raw: header-responseLong-Headers
     properties:
-      - $id: '16'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -123,7 +183,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '17'
           $type: PrimaryType
           format: int64
           knownPrimaryType: long
@@ -137,7 +196,7 @@ headerTypes:
           - value
         serializedName: value
     serializedName: header-responseLong-Headers
-  - $id: '18'
+  - &ref_6
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for responseFloat operation.
@@ -145,8 +204,7 @@ headerTypes:
       fixed: false
       raw: header-responseFloat-Headers
     properties:
-      - $id: '19'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -156,7 +214,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '20'
           $type: PrimaryType
           format: float
           knownPrimaryType: double
@@ -170,7 +227,7 @@ headerTypes:
           - value
         serializedName: value
     serializedName: header-responseFloat-Headers
-  - $id: '21'
+  - &ref_7
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for responseDouble operation.
@@ -178,8 +235,7 @@ headerTypes:
       fixed: false
       raw: header-responseDouble-Headers
     properties:
-      - $id: '22'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -189,7 +245,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '23'
           $type: PrimaryType
           format: double
           knownPrimaryType: double
@@ -203,7 +258,7 @@ headerTypes:
           - value
         serializedName: value
     serializedName: header-responseDouble-Headers
-  - $id: '24'
+  - &ref_8
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for responseBool operation.
@@ -211,8 +266,7 @@ headerTypes:
       fixed: false
       raw: header-responseBool-Headers
     properties:
-      - $id: '25'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -222,7 +276,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '26'
           $type: PrimaryType
           knownPrimaryType: boolean
           name:
@@ -235,7 +288,7 @@ headerTypes:
           - value
         serializedName: value
     serializedName: header-responseBool-Headers
-  - $id: '27'
+  - &ref_9
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for responseString operation.
@@ -243,8 +296,7 @@ headerTypes:
       fixed: false
       raw: header-responseString-Headers
     properties:
-      - $id: '28'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -256,7 +308,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '29'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -269,7 +320,7 @@ headerTypes:
           - value
         serializedName: value
     serializedName: header-responseString-Headers
-  - $id: '30'
+  - &ref_10
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for responseDate operation.
@@ -277,8 +328,7 @@ headerTypes:
       fixed: false
       raw: header-responseDate-Headers
     properties:
-      - $id: '31'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -288,7 +338,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '32'
           $type: PrimaryType
           format: date
           knownPrimaryType: date
@@ -302,7 +351,7 @@ headerTypes:
           - value
         serializedName: value
     serializedName: header-responseDate-Headers
-  - $id: '33'
+  - &ref_11
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for responseDatetime operation.
@@ -310,8 +359,7 @@ headerTypes:
       fixed: false
       raw: header-responseDatetime-Headers
     properties:
-      - $id: '34'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -323,7 +371,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '35'
           $type: PrimaryType
           format: date-time
           knownPrimaryType: dateTime
@@ -337,7 +384,7 @@ headerTypes:
           - value
         serializedName: value
     serializedName: header-responseDatetime-Headers
-  - $id: '36'
+  - &ref_12
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for responseDatetimeRfc1123 operation.
@@ -345,8 +392,7 @@ headerTypes:
       fixed: false
       raw: header-responseDatetimeRfc1123-Headers
     properties:
-      - $id: '37'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -358,7 +404,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '38'
           $type: PrimaryType
           format: date-time-rfc1123
           knownPrimaryType: dateTimeRfc1123
@@ -372,7 +417,7 @@ headerTypes:
           - value
         serializedName: value
     serializedName: header-responseDatetimeRfc1123-Headers
-  - $id: '39'
+  - &ref_13
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for responseDuration operation.
@@ -380,8 +425,7 @@ headerTypes:
       fixed: false
       raw: header-responseDuration-Headers
     properties:
-      - $id: '40'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -391,7 +435,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '41'
           $type: PrimaryType
           format: duration
           knownPrimaryType: timeSpan
@@ -405,7 +448,7 @@ headerTypes:
           - value
         serializedName: value
     serializedName: header-responseDuration-Headers
-  - $id: '42'
+  - &ref_14
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for responseByte operation.
@@ -413,8 +456,7 @@ headerTypes:
       fixed: false
       raw: header-responseByte-Headers
     properties:
-      - $id: '43'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -424,7 +466,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '44'
           $type: PrimaryType
           format: byte
           knownPrimaryType: byteArray
@@ -438,7 +479,7 @@ headerTypes:
           - value
         serializedName: value
     serializedName: header-responseByte-Headers
-  - $id: '45'
+  - &ref_15
     $type: CompositeType
     containsConstantProperties: false
     documentation: Defines headers for responseEnum operation.
@@ -446,8 +487,7 @@ headerTypes:
       fixed: false
       raw: header-responseEnum-Headers
     properties:
-      - $id: '46'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -460,28 +500,7 @@ headerTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $id: '47'
-          $type: EnumType
-          modelAsExtensible: false
-          modelAsString: false
-          name:
-            fixed: false
-            raw: GreyscaleColors
-          underlyingType:
-            $id: '48'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
-          values:
-            - name: White
-              serializedName: White
-            - name: black
-              serializedName: black
-            - name: GREY
-              serializedName: GREY
+        modelType: *ref_0
         name:
           fixed: false
           raw: value
@@ -490,67 +509,14 @@ headerTypes:
         serializedName: value
     serializedName: header-responseEnum-Headers
 modelTypes:
-  - $id: '1'
-    $type: CompositeType
-    containsConstantProperties: false
-    name:
-      fixed: false
-      raw: Error
-    properties:
-      - $id: '2'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '3'
-          $type: PrimaryType
-          format: int32
-          knownPrimaryType: int
-          name:
-            fixed: false
-            raw: Int
-        name:
-          fixed: false
-          raw: status
-        realPath:
-          - status
-        serializedName: status
-      - $id: '4'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '5'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: message
-        realPath:
-          - message
-        serializedName: message
-    serializedName: Error
+  - *ref_1
 modelsName: Models
 name: AutoRestSwaggerBATHeaderService
 namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Send a post request with header value "User-Agent": "overwrite"'
@@ -564,8 +530,7 @@ operations:
           fixed: false
           raw: paramExistingKey
         parameters:
-          - $id: '49'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -575,7 +540,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '50'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -596,10 +560,8 @@ operations:
         serializedName: header_paramExistingKey
         url: /header/param/existingkey
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '6'
+          body: *ref_1
+          headers: *ref_2
           isNullable: true
         deprecated: false
         description: 'Get a response with header value "User-Agent": "overwrite"'
@@ -617,18 +579,15 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '6'
+            headers: *ref_2
             isNullable: true
         returnType:
-          headers:
-            $ref: '6'
+          headers: *ref_2
           isNullable: true
         serializedName: header_responseExistingKey
         url: /header/response/existingkey
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Send a post request with header value "Content-Type": "text/html"'
@@ -642,8 +601,7 @@ operations:
           fixed: false
           raw: paramProtectedKey
         parameters:
-          - $id: '51'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -655,7 +613,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '52'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -676,10 +633,8 @@ operations:
         serializedName: header_paramProtectedKey
         url: /header/param/protectedkey
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '9'
+          body: *ref_1
+          headers: *ref_3
           isNullable: true
         deprecated: false
         description: 'Get a response with header value "Content-Type": "text/html"'
@@ -697,18 +652,15 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '9'
+            headers: *ref_3
             isNullable: true
         returnType:
-          headers:
-            $ref: '9'
+          headers: *ref_3
           isNullable: true
         serializedName: header_responseProtectedKey
         url: /header/response/protectedkey
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -724,8 +676,7 @@ operations:
           fixed: false
           raw: paramInteger
         parameters:
-          - $id: '53'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -737,7 +688,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '54'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -747,8 +697,7 @@ operations:
               fixed: false
               raw: scenario
             serializedName: scenario
-          - $id: '55'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -758,7 +707,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '56'
               $type: PrimaryType
               format: int32
               knownPrimaryType: int
@@ -780,10 +728,8 @@ operations:
         serializedName: header_paramInteger
         url: /header/param/prim/integer
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '12'
+          body: *ref_1
+          headers: *ref_4
           isNullable: true
         deprecated: false
         description: 'Get a response with header value "value": 1 or -2'
@@ -797,8 +743,7 @@ operations:
           fixed: false
           raw: responseInteger
         parameters:
-          - $id: '57'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -810,7 +755,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '58'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -825,18 +769,15 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '12'
+            headers: *ref_4
             isNullable: true
         returnType:
-          headers:
-            $ref: '12'
+          headers: *ref_4
           isNullable: true
         serializedName: header_responseInteger
         url: /header/response/prim/integer
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -852,8 +793,7 @@ operations:
           fixed: false
           raw: paramLong
         parameters:
-          - $id: '59'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -865,7 +805,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '60'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -875,8 +814,7 @@ operations:
               fixed: false
               raw: scenario
             serializedName: scenario
-          - $id: '61'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -886,7 +824,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '62'
               $type: PrimaryType
               format: int64
               knownPrimaryType: long
@@ -908,10 +845,8 @@ operations:
         serializedName: header_paramLong
         url: /header/param/prim/long
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '15'
+          body: *ref_1
+          headers: *ref_5
           isNullable: true
         deprecated: false
         description: 'Get a response with header value "value": 105 or -2'
@@ -925,8 +860,7 @@ operations:
           fixed: false
           raw: responseLong
         parameters:
-          - $id: '63'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -938,7 +872,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '64'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -953,18 +886,15 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '15'
+            headers: *ref_5
             isNullable: true
         returnType:
-          headers:
-            $ref: '15'
+          headers: *ref_5
           isNullable: true
         serializedName: header_responseLong
         url: /header/response/prim/long
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -980,8 +910,7 @@ operations:
           fixed: false
           raw: paramFloat
         parameters:
-          - $id: '65'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -993,7 +922,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '66'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1003,8 +931,7 @@ operations:
               fixed: false
               raw: scenario
             serializedName: scenario
-          - $id: '67'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1014,7 +941,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '68'
               $type: PrimaryType
               format: float
               knownPrimaryType: double
@@ -1036,10 +962,8 @@ operations:
         serializedName: header_paramFloat
         url: /header/param/prim/float
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '18'
+          body: *ref_1
+          headers: *ref_6
           isNullable: true
         deprecated: false
         description: 'Get a response with header value "value": 0.07 or -3.0'
@@ -1053,8 +977,7 @@ operations:
           fixed: false
           raw: responseFloat
         parameters:
-          - $id: '69'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1066,7 +989,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '70'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1081,18 +1003,15 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '18'
+            headers: *ref_6
             isNullable: true
         returnType:
-          headers:
-            $ref: '18'
+          headers: *ref_6
           isNullable: true
         serializedName: header_responseFloat
         url: /header/response/prim/float
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -1108,8 +1027,7 @@ operations:
           fixed: false
           raw: paramDouble
         parameters:
-          - $id: '71'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1121,7 +1039,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '72'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1131,8 +1048,7 @@ operations:
               fixed: false
               raw: scenario
             serializedName: scenario
-          - $id: '73'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1142,7 +1058,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '74'
               $type: PrimaryType
               format: double
               knownPrimaryType: double
@@ -1164,10 +1079,8 @@ operations:
         serializedName: header_paramDouble
         url: /header/param/prim/double
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '21'
+          body: *ref_1
+          headers: *ref_7
           isNullable: true
         deprecated: false
         description: 'Get a response with header value "value": 7e120 or -3.0'
@@ -1181,8 +1094,7 @@ operations:
           fixed: false
           raw: responseDouble
         parameters:
-          - $id: '75'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1194,7 +1106,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '76'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1209,18 +1120,15 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '21'
+            headers: *ref_7
             isNullable: true
         returnType:
-          headers:
-            $ref: '21'
+          headers: *ref_7
           isNullable: true
         serializedName: header_responseDouble
         url: /header/response/prim/double
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -1236,8 +1144,7 @@ operations:
           fixed: false
           raw: paramBool
         parameters:
-          - $id: '77'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1249,7 +1156,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '78'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1259,8 +1165,7 @@ operations:
               fixed: false
               raw: scenario
             serializedName: scenario
-          - $id: '79'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1270,7 +1175,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '80'
               $type: PrimaryType
               knownPrimaryType: boolean
               name:
@@ -1291,10 +1195,8 @@ operations:
         serializedName: header_paramBool
         url: /header/param/prim/bool
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '24'
+          body: *ref_1
+          headers: *ref_8
           isNullable: true
         deprecated: false
         description: 'Get a response with header value "value": true or false'
@@ -1308,8 +1210,7 @@ operations:
           fixed: false
           raw: responseBool
         parameters:
-          - $id: '81'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1321,7 +1222,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '82'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1336,18 +1236,15 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '24'
+            headers: *ref_8
             isNullable: true
         returnType:
-          headers:
-            $ref: '24'
+          headers: *ref_8
           isNullable: true
         serializedName: header_responseBool
         url: /header/response/prim/bool
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -1364,8 +1261,7 @@ operations:
           fixed: false
           raw: paramString
         parameters:
-          - $id: '83'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1377,7 +1273,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '84'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1387,8 +1282,7 @@ operations:
               fixed: false
               raw: scenario
             serializedName: scenario
-          - $id: '85'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1400,7 +1294,6 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '86'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1421,10 +1314,8 @@ operations:
         serializedName: header_paramString
         url: /header/param/prim/string
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '27'
+          body: *ref_1
+          headers: *ref_9
           isNullable: true
         deprecated: false
         description: >-
@@ -1440,8 +1331,7 @@ operations:
           fixed: false
           raw: responseString
         parameters:
-          - $id: '87'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1453,7 +1343,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '88'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1468,18 +1357,15 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '27'
+            headers: *ref_9
             isNullable: true
         returnType:
-          headers:
-            $ref: '27'
+          headers: *ref_9
           isNullable: true
         serializedName: header_responseString
         url: /header/response/prim/string
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -1495,8 +1381,7 @@ operations:
           fixed: false
           raw: paramDate
         parameters:
-          - $id: '89'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1508,7 +1393,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '90'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1518,8 +1402,7 @@ operations:
               fixed: false
               raw: scenario
             serializedName: scenario
-          - $id: '91'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1531,7 +1414,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '92'
               $type: PrimaryType
               format: date
               knownPrimaryType: date
@@ -1553,10 +1435,8 @@ operations:
         serializedName: header_paramDate
         url: /header/param/prim/date
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '30'
+          body: *ref_1
+          headers: *ref_10
           isNullable: true
         deprecated: false
         description: Get a response with header values "2010-01-01" or "0001-01-01"
@@ -1570,8 +1450,7 @@ operations:
           fixed: false
           raw: responseDate
         parameters:
-          - $id: '93'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1583,7 +1462,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '94'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1598,18 +1476,15 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '30'
+            headers: *ref_10
             isNullable: true
         returnType:
-          headers:
-            $ref: '30'
+          headers: *ref_10
           isNullable: true
         serializedName: header_responseDate
         url: /header/response/prim/date
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -1626,8 +1501,7 @@ operations:
           fixed: false
           raw: paramDatetime
         parameters:
-          - $id: '95'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1639,7 +1513,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '96'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1649,8 +1522,7 @@ operations:
               fixed: false
               raw: scenario
             serializedName: scenario
-          - $id: '97'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1662,7 +1534,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '98'
               $type: PrimaryType
               format: date-time
               knownPrimaryType: dateTime
@@ -1684,10 +1555,8 @@ operations:
         serializedName: header_paramDatetime
         url: /header/param/prim/datetime
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '33'
+          body: *ref_1
+          headers: *ref_11
           isNullable: true
         deprecated: false
         description: >-
@@ -1703,8 +1572,7 @@ operations:
           fixed: false
           raw: responseDatetime
         parameters:
-          - $id: '99'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1716,7 +1584,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '100'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1731,18 +1598,15 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '33'
+            headers: *ref_11
             isNullable: true
         returnType:
-          headers:
-            $ref: '33'
+          headers: *ref_11
           isNullable: true
         serializedName: header_responseDatetime
         url: /header/response/prim/datetime
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -1759,8 +1623,7 @@ operations:
           fixed: false
           raw: paramDatetimeRfc1123
         parameters:
-          - $id: '101'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1772,7 +1635,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '102'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1782,8 +1644,7 @@ operations:
               fixed: false
               raw: scenario
             serializedName: scenario
-          - $id: '103'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1795,7 +1656,6 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '104'
               $type: PrimaryType
               format: date-time-rfc1123
               knownPrimaryType: dateTimeRfc1123
@@ -1817,10 +1677,8 @@ operations:
         serializedName: header_paramDatetimeRfc1123
         url: /header/param/prim/datetimerfc1123
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '36'
+          body: *ref_1
+          headers: *ref_12
           isNullable: true
         deprecated: false
         description: >-
@@ -1836,8 +1694,7 @@ operations:
           fixed: false
           raw: responseDatetimeRfc1123
         parameters:
-          - $id: '105'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1849,7 +1706,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '106'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1864,18 +1720,15 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '36'
+            headers: *ref_12
             isNullable: true
         returnType:
-          headers:
-            $ref: '36'
+          headers: *ref_12
           isNullable: true
         serializedName: header_responseDatetimeRfc1123
         url: /header/response/prim/datetimerfc1123
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -1891,8 +1744,7 @@ operations:
           fixed: false
           raw: paramDuration
         parameters:
-          - $id: '107'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1902,7 +1754,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '108'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1912,8 +1763,7 @@ operations:
               fixed: false
               raw: scenario
             serializedName: scenario
-          - $id: '109'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1923,7 +1773,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '110'
               $type: PrimaryType
               format: duration
               knownPrimaryType: timeSpan
@@ -1945,10 +1794,8 @@ operations:
         serializedName: header_paramDuration
         url: /header/param/prim/duration
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '39'
+          body: *ref_1
+          headers: *ref_13
           isNullable: true
         deprecated: false
         description: Get a response with header values "P123DT22H14M12.011S"
@@ -1962,8 +1809,7 @@ operations:
           fixed: false
           raw: responseDuration
         parameters:
-          - $id: '111'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -1973,7 +1819,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '112'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -1988,18 +1833,15 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '39'
+            headers: *ref_13
             isNullable: true
         returnType:
-          headers:
-            $ref: '39'
+          headers: *ref_13
           isNullable: true
         serializedName: header_responseDuration
         url: /header/response/prim/duration
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -2015,8 +1857,7 @@ operations:
           fixed: false
           raw: paramByte
         parameters:
-          - $id: '113'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2026,7 +1867,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '114'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2036,8 +1876,7 @@ operations:
               fixed: false
               raw: scenario
             serializedName: scenario
-          - $id: '115'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2047,7 +1886,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '116'
               $type: PrimaryType
               format: byte
               knownPrimaryType: byteArray
@@ -2069,10 +1907,8 @@ operations:
         serializedName: header_paramByte
         url: /header/param/prim/byte
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '42'
+          body: *ref_1
+          headers: *ref_14
           isNullable: true
         deprecated: false
         description: Get a response with header values "啊齄丂狛狜隣郎隣兀﨩"
@@ -2086,8 +1922,7 @@ operations:
           fixed: false
           raw: responseByte
         parameters:
-          - $id: '117'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2097,7 +1932,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '118'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2112,18 +1946,15 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '42'
+            headers: *ref_14
             isNullable: true
         returnType:
-          headers:
-            $ref: '42'
+          headers: *ref_14
           isNullable: true
         serializedName: header_responseByte
         url: /header/response/prim/byte
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -2139,8 +1970,7 @@ operations:
           fixed: false
           raw: paramEnum
         parameters:
-          - $id: '119'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2152,7 +1982,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '120'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2162,8 +1991,7 @@ operations:
               fixed: false
               raw: scenario
             serializedName: scenario
-          - $id: '121'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2176,8 +2004,7 @@ operations:
             isConstant: false
             isRequired: false
             location: header
-            modelType:
-              $ref: '47'
+            modelType: *ref_0
             name:
               fixed: false
               raw: value
@@ -2193,10 +2020,8 @@ operations:
         serializedName: header_paramEnum
         url: /header/param/prim/enum
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '45'
+          body: *ref_1
+          headers: *ref_15
           isNullable: true
         deprecated: false
         description: Get a response with header values "GREY" or null
@@ -2210,8 +2035,7 @@ operations:
           fixed: false
           raw: responseEnum
         parameters:
-          - $id: '122'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -2223,7 +2047,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '123'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -2238,18 +2061,15 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '45'
+            headers: *ref_15
             isNullable: true
         returnType:
-          headers:
-            $ref: '45'
+          headers: *ref_15
           isNullable: true
         serializedName: header_responseEnum
         url: /header/response/prim/enum
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-

@@ -3,11 +3,94 @@ apiVersion: 1.0.0
 baseUrl: 'http://localhost'
 documentation: Test Infrastructure for AutoRest. No server backend exists for these tests.
 enumTypes:
-  - $ref: '26'
+  - &ref_2
+    $type: EnumType
+    modelAsExtensible: false
+    modelAsString: false
+    name:
+      fixed: false
+      raw: EnumConst
+    underlyingType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: constant_string_as_enum
+        serializedName: constant_string_as_enum
 errorTypes:
-  - $ref: '28'
+  - &ref_3
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: code
+        realPath:
+          - code
+        serializedName: code
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: fields
+        realPath:
+          - fields
+        serializedName: fields
+    serializedName: Error
 modelTypes:
-  - $id: '1'
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: true
     documentation: The product documentation.
@@ -15,8 +98,7 @@ modelTypes:
       fixed: false
       raw: ChildProduct
     properties:
-      - $id: '2'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
           raw: constant
@@ -27,7 +109,6 @@ modelTypes:
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '3'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -39,8 +120,7 @@ modelTypes:
         realPath:
           - constProperty
         serializedName: constProperty
-      - $id: '4'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -50,7 +130,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
           $type: PrimaryType
           knownPrimaryType: int
           name:
@@ -63,7 +142,7 @@ modelTypes:
           - count
         serializedName: count
     serializedName: ChildProduct
-  - $id: '6'
+  - &ref_1
     $type: CompositeType
     containsConstantProperties: true
     documentation: The product documentation.
@@ -71,8 +150,7 @@ modelTypes:
       fixed: false
       raw: ConstantProduct
     properties:
-      - $id: '7'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
           raw: constant
@@ -83,7 +161,6 @@ modelTypes:
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '8'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -95,8 +172,7 @@ modelTypes:
         realPath:
           - constProperty
         serializedName: constProperty
-      - $id: '9'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
           raw: constant2
@@ -107,7 +183,6 @@ modelTypes:
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '10'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -120,7 +195,7 @@ modelTypes:
           - constProperty2
         serializedName: constProperty2
     serializedName: ConstantProduct
-  - $id: '11'
+  - &ref_4
     $type: CompositeType
     containsConstantProperties: true
     documentation: The product documentation.
@@ -128,8 +203,7 @@ modelTypes:
       fixed: false
       raw: Product
     properties:
-      - $id: '12'
-        collectionFormat: none
+      - collectionFormat: none
         constraints:
           MaxItems: '6'
           MinItems: '0'
@@ -143,10 +217,8 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '13'
           $type: SequenceType
           elementType:
-            $id: '14'
             $type: PrimaryType
             knownPrimaryType: string
             name:
@@ -160,8 +232,7 @@ modelTypes:
         realPath:
           - display_names
         serializedName: display_names
-      - $id: '15'
-        collectionFormat: none
+      - collectionFormat: none
         constraints:
           ExclusiveMaximum: '100'
           ExclusiveMinimum: '0'
@@ -174,7 +245,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '16'
           $type: PrimaryType
           knownPrimaryType: int
           name:
@@ -186,8 +256,7 @@ modelTypes:
         realPath:
           - capacity
         serializedName: capacity
-      - $id: '17'
-        collectionFormat: none
+      - collectionFormat: none
         constraints:
           Pattern: 'http://\w+'
         defaultValue:
@@ -199,7 +268,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '18'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -211,8 +279,7 @@ modelTypes:
         realPath:
           - image
         serializedName: image
-      - $id: '19'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -220,16 +287,14 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: true
-        modelType:
-          $ref: '1'
+        modelType: *ref_0
         name:
           fixed: false
           raw: child
         realPath:
           - child
         serializedName: child
-      - $id: '20'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -237,16 +302,14 @@ modelTypes:
         isConstant: true
         isReadOnly: false
         isRequired: true
-        modelType:
-          $ref: '6'
+        modelType: *ref_1
         name:
           fixed: false
           raw: constChild
         realPath:
           - constChild
         serializedName: constChild
-      - $id: '21'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
           raw: '0'
@@ -257,7 +320,6 @@ modelTypes:
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '22'
           $type: PrimaryType
           knownPrimaryType: int
           name:
@@ -269,8 +331,7 @@ modelTypes:
         realPath:
           - constInt
         serializedName: constInt
-      - $id: '23'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
           raw: constant
@@ -281,7 +342,6 @@ modelTypes:
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '24'
           $type: PrimaryType
           knownPrimaryType: string
           name:
@@ -293,8 +353,7 @@ modelTypes:
         realPath:
           - constString
         serializedName: constString
-      - $id: '25'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         documentation:
@@ -307,24 +366,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $id: '26'
-          $type: EnumType
-          modelAsExtensible: false
-          modelAsString: false
-          name:
-            fixed: false
-            raw: EnumConst
-          underlyingType:
-            $id: '27'
-            $type: PrimaryType
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
-          values:
-            - name: constant_string_as_enum
-              serializedName: constant_string_as_enum
+        modelType: *ref_2
         name:
           fixed: false
           raw: constStringAsEnum
@@ -332,89 +374,14 @@ modelTypes:
           - constStringAsEnum
         serializedName: constStringAsEnum
     serializedName: Product
-  - $id: '28'
-    $type: CompositeType
-    containsConstantProperties: false
-    name:
-      fixed: false
-      raw: Error
-    properties:
-      - $id: '29'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '30'
-          $type: PrimaryType
-          format: int32
-          knownPrimaryType: int
-          name:
-            fixed: false
-            raw: Int
-        name:
-          fixed: false
-          raw: code
-        realPath:
-          - code
-        serializedName: code
-      - $id: '31'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '32'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: message
-        realPath:
-          - message
-        serializedName: message
-      - $id: '33'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '34'
-          $type: PrimaryType
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: fields
-        realPath:
-          - fields
-        serializedName: fields
-    serializedName: Error
+  - *ref_3
 modelsName: Models
 name: AutoRestValidationTest
 namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body:
-            $ref: '28'
+          body: *ref_3
           isNullable: true
         deprecated: false
         description: Validates input parameters on the method. See swagger for details.
@@ -428,9 +395,28 @@ operations:
           fixed: false
           raw: validationOfMethodParameters
         parameters:
-          - $id: '39'
-            clientProperty:
-              $ref: '35'
+          - clientProperty: &ref_5
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+              documentation:
+                fixed: false
+                raw: Subscription ID.
+              isConstant: false
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: subscriptionId
+              realPath:
+                - subscriptionId
+              serializedName: subscriptionId
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -441,7 +427,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '40'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -451,8 +436,7 @@ operations:
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
-          - $id: '41'
-            collectionFormat: none
+          - collectionFormat: none
             constraints:
               MaxLength: '10'
               MinLength: '3'
@@ -468,7 +452,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '42'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -478,8 +461,7 @@ operations:
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
-          - $id: '43'
-            collectionFormat: none
+          - collectionFormat: none
             constraints:
               InclusiveMaximum: '1000'
               InclusiveMinimum: '100'
@@ -493,7 +475,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '44'
               $type: PrimaryType
               knownPrimaryType: int
               name:
@@ -503,9 +484,30 @@ operations:
               fixed: false
               raw: id
             serializedName: id
-          - $id: '45'
-            clientProperty:
-              $ref: '37'
+          - clientProperty: &ref_6
+              collectionFormat: none
+              constraints:
+                Pattern: '\d{2}-\d{2}-\d{4}'
+              defaultValue:
+                fixed: false
+              documentation:
+                fixed: false
+                raw: 'Required string following pattern \d{2}-\d{2}-\d{4}'
+              isConstant: false
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: apiVersion
+              realPath:
+                - apiVersion
+              serializedName: apiVersion
             collectionFormat: none
             constraints:
               Pattern: '\d{2}-\d{2}-\d{4}'
@@ -518,7 +520,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '46'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -533,19 +534,16 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '11'
+            body: *ref_4
             isNullable: true
         returnType:
-          body:
-            $ref: '11'
+          body: *ref_4
           isNullable: true
         serializedName: validationOfMethodParameters
         summary: ''
         url: '/fakepath/{subscriptionId}/{resourceGroupName}/{id}'
       - defaultResponse:
-          body:
-            $ref: '28'
+          body: *ref_3
           isNullable: true
         deprecated: false
         description: Validates body parameters on the method. See swagger for details.
@@ -561,9 +559,7 @@ operations:
           fixed: false
           raw: validationOfBody
         parameters:
-          - $id: '47'
-            clientProperty:
-              $ref: '35'
+          - clientProperty: *ref_5
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -574,7 +570,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '48'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -584,8 +579,7 @@ operations:
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
-          - $id: '49'
-            collectionFormat: none
+          - collectionFormat: none
             constraints:
               MaxLength: '10'
               MinLength: '3'
@@ -601,7 +595,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '50'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -611,8 +604,7 @@ operations:
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
-          - $id: '51'
-            collectionFormat: none
+          - collectionFormat: none
             constraints:
               InclusiveMaximum: '1000'
               InclusiveMinimum: '100'
@@ -626,7 +618,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '52'
               $type: PrimaryType
               knownPrimaryType: int
               name:
@@ -636,8 +627,7 @@ operations:
               fixed: false
               raw: id
             serializedName: id
-          - $id: '53'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -647,15 +637,12 @@ operations:
             isConstant: false
             isRequired: false
             location: body
-            modelType:
-              $ref: '11'
+            modelType: *ref_4
             name:
               fixed: false
               raw: body
             serializedName: body
-          - $id: '54'
-            clientProperty:
-              $ref: '37'
+          - clientProperty: *ref_6
             collectionFormat: none
             constraints:
               Pattern: '\d{2}-\d{2}-\d{4}'
@@ -668,7 +655,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '55'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -683,12 +669,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '11'
+            body: *ref_4
             isNullable: true
         returnType:
-          body:
-            $ref: '11'
+          body: *ref_4
           isNullable: true
         serializedName: validationOfBody
         summary: ''
@@ -706,8 +690,7 @@ operations:
           fixed: false
           raw: getWithConstantInPath
         parameters:
-          - $id: '56'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: constant
@@ -717,7 +700,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '57'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -752,8 +734,7 @@ operations:
           fixed: false
           raw: postWithConstantInBody
         parameters:
-          - $id: '58'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: constant
@@ -763,7 +744,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '59'
               $type: PrimaryType
               knownPrimaryType: string
               name:
@@ -773,8 +753,7 @@ operations:
               fixed: false
               raw: constantParam
             serializedName: constantParam
-          - $id: '60'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             documentation:
@@ -784,8 +763,7 @@ operations:
             isConstant: false
             isRequired: false
             location: body
-            modelType:
-              $ref: '11'
+            modelType: *ref_4
             name:
               fixed: false
               raw: body
@@ -795,12 +773,10 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $ref: '11'
+            body: *ref_4
             isNullable: true
         returnType:
-          body:
-            $ref: '11'
+          body: *ref_4
           isNullable: true
         serializedName: postWithConstantInBody
         url: '/validation/constantsInPath/{constantParam}/value'
@@ -811,51 +787,5 @@ operations:
     typeName:
       fixed: false
 properties:
-  - $id: '35'
-    collectionFormat: none
-    defaultValue:
-      fixed: false
-    documentation:
-      fixed: false
-      raw: Subscription ID.
-    isConstant: false
-    isReadOnly: false
-    isRequired: true
-    modelType:
-      $id: '36'
-      $type: PrimaryType
-      knownPrimaryType: string
-      name:
-        fixed: false
-        raw: String
-    name:
-      fixed: false
-      raw: subscriptionId
-    realPath:
-      - subscriptionId
-    serializedName: subscriptionId
-  - $id: '37'
-    collectionFormat: none
-    constraints:
-      Pattern: '\d{2}-\d{2}-\d{4}'
-    defaultValue:
-      fixed: false
-    documentation:
-      fixed: false
-      raw: 'Required string following pattern \d{2}-\d{2}-\d{4}'
-    isConstant: false
-    isReadOnly: false
-    isRequired: true
-    modelType:
-      $id: '38'
-      $type: PrimaryType
-      knownPrimaryType: string
-      name:
-        fixed: false
-        raw: String
-    name:
-      fixed: false
-      raw: apiVersion
-    realPath:
-      - apiVersion
-    serializedName: apiVersion
+  - *ref_5
+  - *ref_6
