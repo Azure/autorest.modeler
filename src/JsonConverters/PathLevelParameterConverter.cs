@@ -18,9 +18,7 @@ namespace AutoRest.Modeler.JsonConverters
         }
 
         public override bool CanConvert(System.Type objectType)
-        {
-            return (objectType == typeof (Dictionary<string, Operation>));
-        }
+            => objectType == typeof (Dictionary<string, Operation>);
 
         /// <summary>
         /// To merge common parameters at the path level into the parameters at 

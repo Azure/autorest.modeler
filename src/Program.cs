@@ -5,6 +5,8 @@ using AutoRest.Core;
 using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
 using Microsoft.Perks.JsonRPC;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace AutoRest.Modeler
 {
@@ -33,6 +35,11 @@ namespace AutoRest.Modeler
 
         protected override async Task<bool> ProcessInternal()
         {
+            if (true == await this.GetValue<bool?>($"modeler.debugger"))
+            {
+                AutoRest.Core.Utilities.Debugger.Await();
+            }
+
             var settings = new Settings
             {
                 Namespace = await GetValue("namespace") ?? ""
@@ -52,8 +59,12 @@ namespace AutoRest.Modeler
             var modeler = new SwaggerModeler(settings, true == await GetValue<bool?>("generate-empty-classes"));
             var codeModel = modeler.Build(serviceDefinition);
 
-            var genericSerializer = new ModelSerializer<CodeModel>();
-            var modelAsJson = genericSerializer.ToJson(codeModel);
+            var modelAsJson = JsonConvert.SerializeObject(codeModel, new JsonSerializerSettings
+                {
+                    Converters = { new StringEnumConverter { CamelCaseText = true } },
+                    NullValueHandling = NullValueHandling.Ignore,
+                    ContractResolver = CodeModelContractResolver.Instance
+                });
 
             WriteFile("code-model-v1.yaml", modelAsJson, null);
 

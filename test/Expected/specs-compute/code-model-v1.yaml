@@ -41,6 +41,10 @@ enumTypes:
     values:
       - name: instanceView
         serializedName: instanceView
+extensions:
+  security:
+    - azure_auth:
+        - user_impersonation
 modelTypes:
   - $id: '1'
     $type: CompositeType

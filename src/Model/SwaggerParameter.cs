@@ -20,7 +20,6 @@ namespace AutoRest.Modeler.Model
 
         public bool? Explode { get; set; }
 
-        // TODO: remove
         public CollectionFormat CollectionFormat
         {
             get

@@ -89,7 +89,7 @@ namespace AutoRest.Modeler.Model
                 }
                 return result.ToArray();
             }
-            set => _parameters = value.Where(v => v.In != ParameterLocation.Body).ToList();
+            set => _parameters = value.ToList();
         } // TODO: not like this...
 
         public RequestBody RequestBody { get; set; }
@@ -99,66 +99,6 @@ namespace AutoRest.Modeler.Model
         /// </summary>
         public Dictionary<string, OperationResponse> Responses { get; set; }
 
-        /// <summary>
-        /// The transfer protocol for the operation. 
-        /// </summary>
-        public IList<TransferProtocolScheme> Schemes { get; set; }
-
         public bool Deprecated { get; set; }
-
-        /// <summary>
-        /// A declaration of which security schemes are applied for this operation. 
-        /// The list of values describes alternative security schemes that can be used 
-        /// (that is, there is a logical OR between the security requirements). 
-        /// This definition overrides any declared top-level security. To remove a 
-        /// top-level security declaration, an empty array can be used.
-        /// </summary>
-        public IList<Dictionary<string, List<string>>> Security { get; set; }
-
-        private SwaggerParameter FindParameter(string name, IEnumerable<SwaggerParameter> operationParameters, IDictionary<string, SwaggerParameter> clientParameters)
-        {
-            if (Parameters != null)
-            {
-                foreach (var param in operationParameters)
-                {
-                    if (name.Equals(param.Name))
-                        return param;
-
-                    var pRef = FindReferencedParameter(param.Reference, clientParameters);
-
-                    if (pRef != null && name.Equals(pRef.Name))
-                    {
-                        return pRef;
-                    }
-                }
-            }
-            return null;
-        }
-
-        private OperationResponse FindResponse(string name, IDictionary<string, OperationResponse> responses)
-        {
-            OperationResponse response = null;
-            this.Responses.TryGetValue(name, out response);
-            return response;
-        }
-
-
-        private static SwaggerParameter FindReferencedParameter(string reference, IDictionary<string, SwaggerParameter> parameters)
-        {
-            if (reference != null && reference.StartsWith("#", StringComparison.Ordinal))
-            {
-                var parts = reference.Split('/');
-                if (parts.Length == 3 && parts[1].Equals("parameters"))
-                {
-                    SwaggerParameter p = null;
-                    if (parameters.TryGetValue(parts[2], out p))
-                    {
-                        return p;
-                    }
-                }
-            }
-
-            return null;
-        }
     }
 }

@@ -227,7 +227,6 @@ namespace AutoRest.Modeler
             }
 
             parameter.Documentation = swaggerObject.Description;
-            // parameter.CollectionFormat = swaggerObject.CollectionFormat;
 
             // tag the paramter with all the extensions from the swagger object
             parameter.Extensions.AddRange(swaggerObject.Extensions);
@@ -264,9 +263,7 @@ namespace AutoRest.Modeler
         }
 
         private static bool IsSwaggerObjectConstant(SwaggerObject swaggerObject, bool isRequired)
-        {
-            return (swaggerObject.Enum != null && swaggerObject.Enum.Count == 1 && isRequired);
-        }
+            => swaggerObject.Enum != null && swaggerObject.Enum.Count == 1 && isRequired;
 
         public static void SetConstraints(Dictionary<Constraint, string> constraints, SwaggerObject swaggerObject)
         {

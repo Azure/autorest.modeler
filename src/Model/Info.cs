@@ -11,7 +11,7 @@ namespace AutoRest.Modeler.Model
     /// The metadata can be used by the clients if needed, and can be presented 
     /// in the Swagger-UI for convenience.
     /// </summary>
-    public class Info : SpecObject
+    public class Info : SwaggerBase
     {
         private string _description;
         public string Title { get; set; }
@@ -27,12 +27,6 @@ namespace AutoRest.Modeler.Model
                 }
             }
         }
-
-        public string TermsOfService { get; set; }
-
-        public Contact Contact { get; set; }
-
-        public License License { get; set; }
 
         public string Version { get; set; }
 

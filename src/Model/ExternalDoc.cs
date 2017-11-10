@@ -10,8 +10,6 @@ namespace AutoRest.Modeler.Model
     /// </summary>
     public class ExternalDoc
     {
-        private string _description;
-
         /// <summary>
         /// Url of external Swagger doc.
         /// </summary>
@@ -20,10 +18,6 @@ namespace AutoRest.Modeler.Model
         /// <summary>
         /// Description of external Swagger doc.
         /// </summary>
-        public string Description
-        {
-            get { return _description; }
-            set { _description = value.StripControlCharacters(); ; }
-        }
+        public string Description { get; set; }
     }
 }

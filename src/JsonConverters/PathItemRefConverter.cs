@@ -17,10 +17,7 @@ namespace AutoRest.Modeler.JsonConverters
         }
 
         public override bool CanConvert(System.Type objectType)
-        {
-            // Type of a path item object
-            return objectType == typeof (Dictionary<string, Operation>);
-        }
+            => objectType == typeof (Dictionary<string, Operation>);
 
         public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue,
             JsonSerializer serializer)

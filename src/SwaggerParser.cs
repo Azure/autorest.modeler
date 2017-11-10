@@ -19,19 +19,11 @@ namespace AutoRest.Modeler
 {
     public static class SwaggerParser
     {
-        static string Normalize(string swaggerDocument)
-        {
-            
-            // normalize YAML to JSON since that's what we process
-            swaggerDocument = swaggerDocument.EnsureYamlIsJson();
-            return swaggerDocument;
-        }
-
         public static ServiceDefinition Parse(string swaggerDocument)
         {
             try
             {
-                swaggerDocument = Normalize(swaggerDocument);
+                swaggerDocument = swaggerDocument.EnsureYamlIsJson();
                 var settings = new JsonSerializerSettings
                 {
                     TypeNameHandling = TypeNameHandling.None,
@@ -40,7 +32,6 @@ namespace AutoRest.Modeler
                 settings.Converters.Add(new ResponseRefConverter(swaggerDocument));
                 settings.Converters.Add(new PathItemRefConverter(swaggerDocument));
                 settings.Converters.Add(new PathLevelParameterConverter(swaggerDocument));
-                settings.Converters.Add(new SecurityDefinitionConverter());
                 var swaggerService = JsonConvert.DeserializeObject<ServiceDefinition>(swaggerDocument, settings);
 
                 // for parameterized host, will be made available via JsonRpc accessible state in the future

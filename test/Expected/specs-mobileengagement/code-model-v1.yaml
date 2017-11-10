@@ -41,6 +41,10 @@ enumTypes:
         serializedName: nativePushes
 errorTypes:
   - $ref: '6'
+extensions:
+  security:
+    - azure_auth:
+        - user_impersonation
 headerTypes:
   - $id: '517'
     $type: CompositeType
