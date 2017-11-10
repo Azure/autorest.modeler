@@ -35,6 +35,11 @@ namespace AutoRest.Modeler
 
         protected override async Task<bool> ProcessInternal()
         {
+            if (true == await this.GetValue<bool?>($"modeler.debugger"))
+            {
+                AutoRest.Core.Utilities.Debugger.Await();
+            }
+
             var settings = new Settings
             {
                 Namespace = await GetValue("namespace") ?? ""
