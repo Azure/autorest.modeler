@@ -23,6 +23,12 @@ scope-cm/emitter:
   is-object: true
   output-uri-expr: |
     "code-model-v1"
+
+scope-cm-yaml/emitter:
+  input-artifact: code-model-v1-yaml
+  is-object: true
+  output-uri-expr: |
+    "code-model-v1-yaml"
 ```
 
 ## Run it as a standalone (good for testing)
@@ -47,8 +53,8 @@ pipeline:
     input: transform
     output-artifact: code-model-v1-yaml
   standalone/cm-yaml/emitter:
-    input: jsonx2yaml
-    scope: scope-cm/emitter
+    input: cm/jsonx2yaml
+    scope: scope-cm-yaml/emitter
 ```
 
 ## Run it before generator

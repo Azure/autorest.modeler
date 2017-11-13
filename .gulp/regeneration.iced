@@ -16,6 +16,7 @@ regenExpected = (opts,done) ->
       "--standalone-modeler",
       "--clear-output-folder",
       "--output-artifact=code-model-v1.yaml",
+      "--output-artifact=code-model-v1-yaml.yaml",
       "--output-folder=#{opts.outputDir}/#{key}"
     ]
 
