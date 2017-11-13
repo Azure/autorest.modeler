@@ -15,6 +15,22 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additio
 
 # AutoRest extension configuration
 
+Emitter configuration:
+
+``` yaml
+scope-cm/emitter:
+  input-artifact: code-model-v1
+  is-object: true
+  output-uri-expr: |
+    "code-model-v1"
+
+scope-cm-yaml/emitter:
+  input-artifact: code-model-v1-yaml
+  is-object: true
+  output-uri-expr: |
+    "code-model-v1-yaml"
+```
+
 ## Run it as a standalone (good for testing)
 
 ``` yaml $(standalone-modeler)
@@ -32,6 +48,13 @@ pipeline:
   standalone/cm/emitter:
     input: transform
     scope: scope-cm/emitter
+
+  standalone/cm/jsonx2yaml:
+    input: transform
+    output-artifact: code-model-v1-yaml
+  standalone/cm-yaml/emitter:
+    input: cm/jsonx2yaml
+    scope: scope-cm-yaml/emitter
 ```
 
 ## Run it before generator

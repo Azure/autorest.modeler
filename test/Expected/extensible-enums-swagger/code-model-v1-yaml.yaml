@@ -1,0 +1,281 @@
+---
+apiVersion: '2016-07-07'
+baseUrl: 'https://localhost'
+documentation: PetStore
+enumTypes:
+  - &ref_0
+    $type: EnumType
+    modelAsExtensible: true
+    modelAsString: false
+    name:
+      fixed: false
+      raw: DaysOfWeekExtensibleEnum
+    underlyingType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: Monday
+        serializedName: Monday
+      - name: Tuesday
+        serializedName: Tuesday
+      - name: Wednesday
+        serializedName: Wednesday
+      - name: Thursday
+        serializedName: Thursday
+      - name: Friday
+        serializedName: Friday
+      - name: Saturday
+        serializedName: Saturday
+      - name: Sunday
+        serializedName: Sunday
+  - &ref_1
+    $type: EnumType
+    modelAsExtensible: true
+    modelAsString: false
+    name:
+      fixed: false
+      raw: IntEnum
+    underlyingType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - allowedValues:
+          - '1.1'
+          - '1.2'
+          - '1.3'
+        description: one
+        name: '1'
+        serializedName: '1'
+      - allowedValues:
+          - '2.1'
+          - '2.2'
+        description: two
+        name: '2'
+        serializedName: '2'
+      - allowedValues:
+          - '3.1'
+          - '3.3'
+        description: three
+        name: '3'
+        serializedName: '3'
+modelTypes:
+  - &ref_2
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: Pet
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: name
+        realPath:
+          - name
+        serializedName: name
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+          raw: Friday
+        documentation:
+          fixed: false
+          raw: Type of Pet
+        extensions:
+          x-ms-enum:
+            modelAsExtensible: true
+            name: DaysOfWeekExtensibleEnum
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType: *ref_0
+        name:
+          fixed: false
+          raw: DaysOfWeek
+        realPath:
+          - DaysOfWeek
+        serializedName: DaysOfWeek
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: ''
+        extensions:
+          x-ms-enum:
+            modelAsExtensible: true
+            name: IntEnum
+            values:
+              - allowedValues:
+                  - '1.1'
+                  - '1.2'
+                  - '1.3'
+                description: one
+                name: '1'
+                value: '1'
+              - allowedValues:
+                  - '2.1'
+                  - '2.2'
+                description: two
+                name: '2'
+                value: '2'
+              - allowedValues:
+                  - '3.1'
+                  - '3.3'
+                description: three
+                name: '3'
+                value: '3'
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType: *ref_1
+        name:
+          fixed: false
+          raw: IntEnum
+        realPath:
+          - IntEnum
+        serializedName: IntEnum
+    serializedName: Pet
+modelsName: Models
+name: PetStoreInc
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        group:
+          fixed: false
+          raw: Pet
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: GetByPetId
+        parameters:
+          - clientProperty: &ref_3
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+              documentation:
+                fixed: false
+                raw: Pet id
+              extensions:
+                x-ms-parameter-location: method
+              isConstant: false
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: petId
+              realPath:
+                - petId
+              serializedName: petId
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+              raw: Pet id
+            extensions:
+              x-ms-parameter-location: method
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $type: PrimaryType
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: petId
+            serializedName: petId
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: *ref_2
+            isNullable: true
+        returnType:
+          body: *ref_2
+          isNullable: true
+        serializedName: Pet_GetByPetId
+        url: '/extensibleenums/pet/{petId}'
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: Pet
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: AddPet
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: petParam
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType: *ref_2
+            name:
+              fixed: false
+              raw: petParam
+            serializedName: petParam
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: *ref_2
+            isNullable: true
+        returnType:
+          body: *ref_2
+          isNullable: true
+        serializedName: Pet_AddPet
+        url: /extensibleenums/pet/addPet
+    name:
+      fixed: false
+      raw: Pet
+    nameForProperty: Pet
+    typeName:
+      fixed: false
+properties:
+  - *ref_3

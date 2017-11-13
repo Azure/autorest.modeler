@@ -1,0 +1,496 @@
+---
+apiVersion: '2017-10-01'
+baseUrl: 'https://management.azure.com'
+documentation: >-
+  The Microsoft Azure Network management API provides a RESTful set of web
+  services that interact with Microsoft Azure Networks service to manage your
+  network resources. The API has entities that capture the relationship between
+  an end user and the Microsoft Azure Networks service.
+enumTypes:
+  - &ref_1
+    $type: EnumType
+    modelAsExtensible: false
+    modelAsString: true
+    name:
+      fixed: false
+      raw: NetworkOperationStatus
+    underlyingType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: InProgress
+        serializedName: InProgress
+      - name: Succeeded
+        serializedName: Succeeded
+      - name: Failed
+        serializedName: Failed
+extensions:
+  security:
+    - azure_auth:
+        - user_impersonation
+modelTypes:
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: ErrorDetails
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: code
+        realPath:
+          - code
+        serializedName: code
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: target
+        realPath:
+          - target
+        serializedName: target
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: ErrorDetails
+  - &ref_2
+    $type: CompositeType
+    containsConstantProperties: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: code
+        realPath:
+          - code
+        serializedName: code
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: target
+        realPath:
+          - target
+        serializedName: target
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: SequenceType
+          elementType: *ref_0
+          name:
+            fixed: false
+        name:
+          fixed: false
+          raw: details
+        realPath:
+          - details
+        serializedName: details
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: innerError
+        realPath:
+          - innerError
+        serializedName: innerError
+    serializedName: Error
+  - $type: CompositeType
+    containsConstantProperties: false
+    documentation: >-
+      The response body contains the status of the specified asynchronous
+      operation, indicating whether it has succeeded, is in progress, or has
+      failed. Note that this status is distinct from the HTTP status code
+      returned for the Get Operation Status operation itself. If the
+      asynchronous operation succeeded, the response body includes the HTTP
+      status code for the successful request. If the asynchronous operation
+      failed, the response body includes the HTTP status code for the failed
+      request and error information regarding the failure.
+    name:
+      fixed: false
+      raw: AzureAsyncOperationResult
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: >-
+            Status of the Azure async operation. Possible values are:
+            'InProgress', 'Succeeded', and 'Failed'.
+        extensions:
+          x-ms-enum:
+            modelAsString: true
+            name: NetworkOperationStatus
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType: *ref_1
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType: *ref_2
+        name:
+          fixed: false
+          raw: error
+        realPath:
+          - error
+        serializedName: error
+    serializedName: AzureAsyncOperationResult
+  - $type: CompositeType
+    containsConstantProperties: false
+    documentation: Common resource representation.
+    extensions:
+      x-ms-azure-resource: true
+    name:
+      fixed: false
+      raw: Resource
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: Resource ID.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: id
+        realPath:
+          - id
+        serializedName: id
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: Resource name.
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: name
+        realPath:
+          - name
+        serializedName: name
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: Resource type.
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: type
+        realPath:
+          - type
+        serializedName: type
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: Resource location.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: location
+        realPath:
+          - location
+        serializedName: location
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: Resource tags.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+        name:
+          fixed: false
+          raw: tags
+        realPath:
+          - tags
+        serializedName: tags
+    serializedName: Resource
+  - $type: CompositeType
+    containsConstantProperties: false
+    documentation: Reference to another subresource.
+    extensions:
+      x-ms-azure-resource: true
+    name:
+      fixed: false
+      raw: SubResource
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: Resource ID.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: id
+        realPath:
+          - id
+        serializedName: id
+    serializedName: SubResource
+  - $type: CompositeType
+    containsConstantProperties: false
+    documentation: Tags object for patch operations.
+    name:
+      fixed: false
+      raw: TagsObject
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        documentation:
+          fixed: false
+          raw: Resource tags.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+        name:
+          fixed: false
+          raw: tags
+        realPath:
+          - tags
+        serializedName: tags
+    serializedName: TagsObject
+modelsName: Models
+name: NetworkManagementClient
+namespace: ''
+properties:
+  - collectionFormat: none
+    defaultValue:
+      fixed: false
+    documentation:
+      fixed: false
+      raw: >-
+        The subscription credentials which uniquely identify the Microsoft Azure
+        subscription. The subscription ID forms part of the URI for every
+        service call.
+    isConstant: false
+    isReadOnly: false
+    isRequired: true
+    modelType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    name:
+      fixed: false
+      raw: subscriptionId
+    realPath:
+      - subscriptionId
+    serializedName: subscriptionId
+  - collectionFormat: none
+    defaultValue:
+      fixed: false
+    documentation:
+      fixed: false
+      raw: Client API version.
+    isConstant: false
+    isReadOnly: false
+    isRequired: true
+    modelType:
+      $type: PrimaryType
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    name:
+      fixed: false
+      raw: api-version
+    realPath:
+      - api-version
+    serializedName: api-version
