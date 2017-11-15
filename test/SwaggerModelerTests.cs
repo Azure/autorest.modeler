@@ -604,7 +604,7 @@ namespace AutoRest.Modeler.Tests
         [Fact]
         public void TestYamlParsing()
         {
-            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-simple-spec.json");
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-simple-spec.yaml");
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
