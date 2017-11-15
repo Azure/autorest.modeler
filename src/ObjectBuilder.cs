@@ -58,7 +58,7 @@ namespace AutoRest.Modeler
             var xMsEnum = SwaggerObject.Extensions.GetValue<JToken>(Core.Model.XmsExtensions.Enum.Name);
             if (xMsEnum != null && SwaggerObject.Enum == null)
             {
-                throw new InvalidOperationException($"Found 'x-ms-enum' with 'enum' on the same level. Please either add an 'enum' restriction or remove 'x-ms-enum'.");
+                throw new InvalidOperationException($"Found 'x-ms-enum' without 'enum' on the same level. Please either add an 'enum' restriction or remove 'x-ms-enum'.");
             }
             if (SwaggerObject.Enum != null && type.KnownPrimaryType == KnownPrimaryType.String && !(IsSwaggerObjectConstant(SwaggerObject, required)))
             {
