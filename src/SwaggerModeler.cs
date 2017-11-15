@@ -58,8 +58,7 @@ namespace AutoRest.Modeler
         public CodeModel Build(ServiceDefinition serviceDefinition)
         {
             ServiceDefinition = serviceDefinition;
-            
-            Logger.Instance.Log(Category.Debug, Resources.GeneratingClient);
+
             // Update settings
             UpdateSettings();
 
