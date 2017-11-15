@@ -194,70 +194,64 @@ namespace AutoRest.Modeler
 
         private void ProcessParameterizedHost()
         {
-            if (CodeModel.Extensions.TryGetValue("x-ms-parameterized-host", out var extensionObject))
+            var server = ServiceDefinition.Servers.FirstOrDefault();
+            if ((server?.Variables?.Count ?? 0) > 0)
             {
-                var hostExtension = extensionObject as JObject;
+                CodeModel.Extensions.Add("x-ms-parameterized-host", true); // TODO: generators look for presence of that extension
 
-                if (hostExtension != null)
+                var position = "first";
+
+                var hostExtension = server.Extensions.GetValue<JObject>("x-ms-parameterized-host");
+                if (hostExtension != null && hostExtension.TryGetValue("positionInOperation", out var textRaw))
                 {
-                    var hostTemplate = (string)hostExtension["hostTemplate"];
-                    var parametersJson = hostExtension["parameters"].ToString();
+                    position = textRaw.ToString();
+                }
 
-                    var position = "first";
+                var jsonSettings = new JsonSerializerSettings
+                {
+                    TypeNameHandling = TypeNameHandling.None,
+                    MetadataPropertyHandling = MetadataPropertyHandling.Ignore
+                };
 
-                    if (hostExtension.TryGetValue("positionInOperation", out var textRaw))
+                List<Parameter> hostParamList = new List<Parameter>();
+                foreach (var serverVar in server.Variables)
+                {
+                    var swaggerParameter = new SwaggerParameter
                     {
-                        var pat = "^(fir|la)st$";
-                        Regex r = new Regex(pat, RegexOptions.IgnoreCase);
-                        var text = textRaw.ToString();
-                        Match m = r.Match(text);
-                        if (!m.Success)
-                        {
-                            throw new InvalidOperationException(
-                                $"The value '{text}' provided for property 'positionInOperation' of extension 'x-ms-parameterized-host' is invalid. Valid values are: 'first, last'.");
-                        }
-                        position = text;
-                    }
+                        In = ParameterLocation.Path,
+                        Name = serverVar.Key,
+                        Description = serverVar.Value.Description,
+                        Schema = new Schema { Type = DataType.String, Default = serverVar.Value.Default, Enum = serverVar.Value.Enum },
+                        Extensions = serverVar.Value.Extensions,
+                        IsRequired = true
+                    };
+                    // Build parameter
+                    var parameterBuilder = new ParameterBuilder(swaggerParameter, this);
+                    var parameter = parameterBuilder.Build();
 
-                    if (!string.IsNullOrEmpty(parametersJson))
+                    // check to see if the parameter exists in properties, and needs to have its name normalized
+                    if (CodeModel.Properties.Any(p => p.SerializedName.EqualsIgnoreCase(parameter.SerializedName)))
                     {
-                        var jsonSettings = new JsonSerializerSettings
-                        {
-                            TypeNameHandling = TypeNameHandling.None,
-                            MetadataPropertyHandling = MetadataPropertyHandling.Ignore
-                        };
-
-                        var swaggerParams = JsonConvert.DeserializeObject<List<SwaggerParameter>>(parametersJson,
-                            jsonSettings);
-                        List<Parameter> hostParamList = new List<Parameter>();
-                        foreach (var swaggerParameter in swaggerParams)
-                        {
-                            // Build parameter
-                            var parameterBuilder = new ParameterBuilder(swaggerParameter, this);
-                            var parameter = parameterBuilder.Build();
-
-                            // check to see if the parameter exists in properties, and needs to have its name normalized
-                            if (CodeModel.Properties.Any(p => p.SerializedName.EqualsIgnoreCase(parameter.SerializedName)))
-                            {
-                                parameter.ClientProperty =
-                                    CodeModel.Properties.Single(
-                                        p => p.SerializedName.Equals(parameter.SerializedName));
-                            }
-                            parameter.Extensions["hostParameter"] = true;
-                            hostParamList.Add(parameter);
-                        }
-
-                        if (position.EqualsIgnoreCase("first"))
-                        {
-                            CodeModel.HostParametersFront = hostParamList.AsEnumerable().Reverse();
-                        }
-                        else
-                        {
-                            CodeModel.HostParametersBack = hostParamList;
-                        }
-
-                        CodeModel.BaseUrl = hostTemplate;
+                        parameter.ClientProperty =
+                            CodeModel.Properties.Single(
+                                p => p.SerializedName.Equals(parameter.SerializedName));
                     }
+                    parameter.Extensions["hostParameter"] = true;
+                    hostParamList.Add(parameter);
+                }
+
+                if (position.EqualsIgnoreCase("first"))
+                {
+                    CodeModel.HostParametersFront = hostParamList.AsEnumerable().Reverse();
+                }
+                else if (position.EqualsIgnoreCase("last"))
+                {
+                    CodeModel.HostParametersBack = hostParamList;
+                }
+                else
+                {
+                    throw new InvalidOperationException(
+                        $"The value '{position}' provided for property 'positionInOperation' of extension 'x-ms-parameterized-host' is invalid. Valid values are: 'first, last'.");
                 }
             }
         }

@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace AutoRest.Modeler.Model
 {
-    public class Server : SwaggerBase
+    public class ServerVariable : SwaggerBase
     {
-        public string Url { get; set; }
+        public IList<string> Enum { get; set; }
+        public string Default { get; set; }
         public string Description { get; set; }
-        public Dictionary<string, ServerVariable> Variables { get; set; }
     }
 }
