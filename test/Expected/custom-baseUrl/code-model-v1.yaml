@@ -5,34 +5,18 @@ documentation: Test Infrastructure for AutoRest
 errorTypes:
   - $ref: '1'
 extensions:
-  x-ms-parameterized-host:
-    hostTemplate: 'http://{accountName}{host}'
-    parameters:
-      - description: Account Name
-        in: path
-        name: accountName
-        required: true
-        schema:
-          description: Account Name
-          in: path
-          name: accountName
-          type: string
-          x-ms-skip-url-encoding: true
-        type: string
-        x-ms-skip-url-encoding: true
-      - $ref: '#/components/parameters/host'
-    positionInOperation: last
+  x-ms-parameterized-host: true
 hostParametersBack:
   - $id: '6'
     collectionFormat: none
     defaultValue:
       fixed: false
+      raw: ''
     documentation:
       fixed: false
       raw: Account Name
     extensions:
       hostParameter: true
-      type: string
       x-ms-skip-url-encoding: true
     isConstant: false
     isRequired: true
