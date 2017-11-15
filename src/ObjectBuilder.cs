@@ -56,19 +56,21 @@ namespace AutoRest.Modeler
             type.XmlProperties = (SwaggerObject as Schema)?.Xml;
             type.Format = SwaggerObject.Format;
             var xMsEnum = SwaggerObject.Extensions.GetValue<JToken>(Core.Model.XmsExtensions.Enum.Name);
-            if ((SwaggerObject.Enum != null || xMsEnum != null) && type.KnownPrimaryType == KnownPrimaryType.String && !(IsSwaggerObjectConstant(SwaggerObject, required)))
+            if (xMsEnum != null && SwaggerObject.Enum == null)
             {
+                throw new InvalidOperationException($"Found 'x-ms-enum' with 'enum' on the same level. Please either add an 'enum' restriction or remove 'x-ms-enum'.");
+            }
+            if (SwaggerObject.Enum != null && type.KnownPrimaryType == KnownPrimaryType.String && !(IsSwaggerObjectConstant(SwaggerObject, required)))
+            {
+                if (SwaggerObject.Enum.Count == 0)
+                {
+                    throw new InvalidOperationException($"Found an 'enum' with no values. Please remove this (unsatisfiable) restriction or add values.");
+                }
+
                 var enumType = New<EnumType>();
                 // Set the underlying type. This helps to determine whether the values in EnumValue are of type string, number, etc.
                 enumType.UnderlyingType = type;
-                if (SwaggerObject.Enum != null)
-                {
-                    if (SwaggerObject.Enum.Count == 0)
-                    {
-                        throw new InvalidOperationException($"Found an 'enum' with no values. Please remove this (unsatisfiable) restriction or add values.");
-                    }
-                    SwaggerObject.Enum.ForEach(v => enumType.Values.Add(new EnumValue { Name = v, SerializedName = v }));
-                }
+                SwaggerObject.Enum.ForEach(v => enumType.Values.Add(new EnumValue { Name = v, SerializedName = v }));
                 if (xMsEnum is JContainer enumObject)
                 {
                     var enumName = "" + enumObject["name"];
