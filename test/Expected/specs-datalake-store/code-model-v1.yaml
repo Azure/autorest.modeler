@@ -70,24 +70,7 @@ enumTypes:
 errorTypes:
   - $ref: '77'
 extensions:
-  x-ms-parameterized-host:
-    hostTemplate: 'https://{accountName}.{adlsFileSystemDnsSuffix}'
-    parameters:
-      - description: The Azure Data Lake Store account to execute filesystem operations on.
-        in: path
-        name: accountName
-        required: true
-        schema:
-          description: >-
-            The Azure Data Lake Store account to execute filesystem operations
-            on.
-          in: path
-          name: accountName
-          type: string
-          x-ms-skip-url-encoding: true
-        type: string
-        x-ms-skip-url-encoding: true
-      - $ref: '#/components/parameters/adlsFilesystemDnsSuffixInPath'
+  x-ms-parameterized-host: true
 hostParametersFront:
   - $id: '85'
     clientProperty:
@@ -145,12 +128,12 @@ hostParametersFront:
     collectionFormat: none
     defaultValue:
       fixed: false
+      raw: ''
     documentation:
       fixed: false
       raw: The Azure Data Lake Store account to execute filesystem operations on.
     extensions:
       hostParameter: true
-      type: string
       x-ms-skip-url-encoding: true
     isConstant: false
     isRequired: true

@@ -5,35 +5,7 @@ documentation: Test Infrastructure for AutoRest
 errorTypes:
   - $ref: '1'
 extensions:
-  x-ms-parameterized-host:
-    hostTemplate: '{vault}{secret}{dnsSuffix}'
-    parameters:
-      - description: 'The vault name, e.g. https://myvault'
-        in: path
-        name: vault
-        required: true
-        schema:
-          description: 'The vault name, e.g. https://myvault'
-          in: path
-          name: vault
-          type: string
-          x-ms-skip-url-encoding: true
-        type: string
-        x-ms-skip-url-encoding: true
-      - description: Secret value.
-        in: path
-        name: secret
-        required: true
-        schema:
-          description: Secret value.
-          in: path
-          name: secret
-          type: string
-          x-ms-skip-url-encoding: true
-        type: string
-        x-ms-skip-url-encoding: true
-      - $ref: '#/components/parameters/dnsSuffix'
-    useSchemePrefix: false
+  x-ms-parameterized-host: true
 hostParametersFront:
   - $id: '6'
     clientProperty:
@@ -95,12 +67,12 @@ hostParametersFront:
     collectionFormat: none
     defaultValue:
       fixed: false
+      raw: ''
     documentation:
       fixed: false
       raw: Secret value.
     extensions:
       hostParameter: true
-      type: string
       x-ms-skip-url-encoding: true
     isConstant: false
     isRequired: true
@@ -120,12 +92,12 @@ hostParametersFront:
     collectionFormat: none
     defaultValue:
       fixed: false
+      raw: ''
     documentation:
       fixed: false
       raw: 'The vault name, e.g. https://myvault'
     extensions:
       hostParameter: true
-      type: string
       x-ms-skip-url-encoding: true
     isConstant: false
     isRequired: true
