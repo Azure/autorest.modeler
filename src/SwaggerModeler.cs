@@ -77,6 +77,18 @@ namespace AutoRest.Modeler
                 CodeModel.Add(clientProperty);
             }
 
+            // Set base type
+            foreach (var typeName in GeneratedTypes.Keys)
+            {
+                var objectType = GeneratedTypes[typeName];
+                if (ExtendedTypes.ContainsKey(typeName))
+                {
+                    objectType.BaseModelType = GeneratedTypes[ExtendedTypes[typeName]];
+                }
+
+                CodeModel.Add(objectType);
+            }
+
             var  methods = new List<Method>();
             // Build methods
             foreach (var path in ServiceDefinition.Paths.Concat(ServiceDefinition.CustomPaths))
@@ -107,10 +119,13 @@ namespace AutoRest.Modeler
                         methods.Add(method);
 
                         // Add error models marked by x-ms-error-response
-                        method.Responses.Values.Where(resp=>resp.Extensions.ContainsKey("x-ms-error-response") && (bool)resp.Extensions["x-ms-error-response"] && resp.Body is CompositeType)
-                                                                           .Select(resp=>(CompositeType)resp.Body)
-                                                                           .ForEach(body=>CodeModel.AddError(body));
+                        var xmsErrorResponses = method.Responses.Values.Where(resp=>resp.Extensions.ContainsKey("x-ms-error-response") && (bool)resp.Extensions["x-ms-error-response"] && resp.Body is CompositeType)
+                                                                        .Select(resp=>(CompositeType)resp.Body);
 
+                        var polymorphicErrorResponses = xmsErrorResponses.Where(errModel=>!string.IsNullOrEmpty(errModel.PolymorphicDiscriminator) && ExtendedTypes.ContainsKey(errModel.Name)).Select(errModel=>errModel.Name);
+                        GeneratedTypes.Keys.Where(k=>polymorphicErrorResponses.Contains(GeneratedTypes[k].BaseModelType?.Name))
+                                           .ForEach(k=>CodeModel.AddError(GeneratedTypes[k]));
+                        
                         if (method.DefaultResponse.Body is CompositeType)
                         {
                             CodeModel.AddError((CompositeType)method.DefaultResponse.Body);
@@ -123,17 +138,6 @@ namespace AutoRest.Modeler
                 }
             }
             
-            // Set base type
-            foreach (var typeName in GeneratedTypes.Keys)
-            {
-                var objectType = GeneratedTypes[typeName];
-                if (ExtendedTypes.ContainsKey(typeName))
-                {
-                    objectType.BaseModelType = GeneratedTypes[ExtendedTypes[typeName]];
-                }
-
-                CodeModel.Add(objectType);
-            }
             CodeModel.AddRange(methods);
             
             // What operation returns it decides whether an object is to be modeled as a 
