@@ -104,8 +104,13 @@ namespace AutoRest.Modeler
                         }
                         var method = BuildMethod(verb.ToHttpMethod(), url, methodName, operation);
                         method.Group = methodGroup;
-                        
                         methods.Add(method);
+
+                        // Add error models marked by x-ms-error-response
+                        method.Responses.Values.Where(resp=>resp.Extensions.ContainsKey("x-ms-error-response") && (bool)resp.Extensions["x-ms-error-response"] && resp.Body is CompositeType)
+                                                                           .Select(resp=>(CompositeType)resp.Body)
+                                                                           .ForEach(body=>CodeModel.AddError(body));
+
                         if (method.DefaultResponse.Body is CompositeType)
                         {
                             CodeModel.AddError((CompositeType)method.DefaultResponse.Body);
@@ -117,7 +122,7 @@ namespace AutoRest.Modeler
                     }
                 }
             }
-
+            
             // Set base type
             foreach (var typeName in GeneratedTypes.Keys)
             {
@@ -131,6 +136,14 @@ namespace AutoRest.Modeler
             }
             CodeModel.AddRange(methods);
             
+            // What operation returns it decides whether an object is to be modeled as a 
+            // regular model class or an exception class
+            // Set base type
+            var errorResponses = 
+                ServiceDefinition.Paths.Values.SelectMany(pathObj=>pathObj.Values.SelectMany(opObj=>opObj.Responses.Values.Where(res=>res.Extensions?.ContainsKey("x-ms-error-response")==true && (bool)res.Extensions["x-ms-error-response"])));
+            var errorModels = errorResponses.Select(resp=>resp.Schema?.Reference).Where(modelRef=>!string.IsNullOrEmpty(modelRef)).Select(modelRef=>GeneratedTypes[modelRef]);
+            errorModels.ForEach(errorModel=>CodeModel.AddError(errorModel));
+
             // Build ContentType enum
             if (ContentTypeChoices.Count > 0)
             {
