@@ -124,12 +124,19 @@ namespace AutoRest.Modeler
 
                         // If marked error models have a polymorphic discriminator, include all models that allOf on them (at any level of inheritence)
                         var baseErrorResponses = xmsErrorResponses.Where(errModel=>!string.IsNullOrEmpty(errModel.PolymorphicDiscriminator) && ExtendedTypes.ContainsKey(errModel.Name))
-                                                                  .Select(errModel=>errModel.Name);
+                                                                  .Select(errModel=>errModel.Name).ToList();
+
+                        // Add the default error model if exists
+                        if (method.DefaultResponse.Body is CompositeType)
+                        {
+                            baseErrorResponses.Add(((CompositeType)method.DefaultResponse.Body).Name);
+                            CodeModel.AddError((CompositeType)method.DefaultResponse.Body);
+                        }
 
                         foreach(var k in GeneratedTypes.Keys)
                         {
                             var baseModelType = GeneratedTypes[k].BaseModelType;
-                            while(baseModelType != null && baseModelType is CompositeType && !baseErrorResponses.Contains(baseModelType.Name))
+                            while(baseModelType != null && baseModelType is CompositeType && !baseErrorResponses.Contains(k))
                             {
                                 if(baseErrorResponses.Contains(baseModelType.Name))
                                 {
@@ -139,14 +146,7 @@ namespace AutoRest.Modeler
                                 baseModelType = baseModelType.BaseModelType;
                             }
                         }
-
-                        GeneratedTypes.Keys.Where(k=>baseErrorResponses.Contains(GeneratedTypes[k].BaseModelType?.Name))
-                                           .ForEach(k=>CodeModel.AddError(GeneratedTypes[k]));
-                        
-                        if (method.DefaultResponse.Body is CompositeType)
-                        {
-                            CodeModel.AddError((CompositeType)method.DefaultResponse.Body);
-                        }
+               
                     }
                     else
                     {
