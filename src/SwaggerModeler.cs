@@ -122,8 +122,8 @@ namespace AutoRest.Modeler
                         var xmsErrorResponses = method.Responses.Values.Where(resp=>resp.Extensions.ContainsKey("x-ms-error-response") && (bool)resp.Extensions["x-ms-error-response"] && resp.Body is CompositeType)
                                                                         .Select(resp=>(CompositeType)resp.Body);
 
-                        var polymorphicErrorResponses = xmsErrorResponses.Where(errModel=>!string.IsNullOrEmpty(errModel.PolymorphicDiscriminator) && ExtendedTypes.ContainsKey(errModel.Name)).Select(errModel=>errModel.Name);
-                        GeneratedTypes.Keys.Where(k=>polymorphicErrorResponses.Contains(GeneratedTypes[k].BaseModelType?.Name))
+                        var baseErrorResponses = xmsErrorResponses.Where(errModel=>!string.IsNullOrEmpty(errModel.PolymorphicDiscriminator) && ExtendedTypes.ContainsKey(errModel.Name)).Select(errModel=>errModel.Name);
+                        GeneratedTypes.Keys.Where(k=>baseErrorResponses.Contains(GeneratedTypes[k].BaseModelType?.Name))
                                            .ForEach(k=>CodeModel.AddError(GeneratedTypes[k]));
                         
                         if (method.DefaultResponse.Body is CompositeType)
