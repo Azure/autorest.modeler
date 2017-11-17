@@ -121,6 +121,7 @@ namespace AutoRest.Modeler
                         // Add error models marked by x-ms-error-response
                         var xmsErrorResponses = method.Responses.Values.Where(resp=>resp.Extensions.ContainsKey("x-ms-error-response") && (bool)resp.Extensions["x-ms-error-response"] && resp.Body is CompositeType)
                                                                         .Select(resp=>(CompositeType)resp.Body);
+                        xmsErrorResponses.ForEach(errModel=>CodeModel.AddError(errModel));
 
                         // If marked error models have a polymorphic discriminator, include all models that allOf on them (at any level of inheritence)
                         var baseErrorResponses = xmsErrorResponses.Where(errModel=>!string.IsNullOrEmpty(errModel.PolymorphicDiscriminator) && ExtendedTypes.ContainsKey(errModel.Name))
