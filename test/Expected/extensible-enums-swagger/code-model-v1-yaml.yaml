@@ -5,6 +5,7 @@ documentation: PetStore
 enumTypes:
   - &ref_0
     $type: EnumType
+    deprecated: false
     modelAsExtensible: true
     modelAsString: false
     name:
@@ -12,6 +13,7 @@ enumTypes:
       raw: DaysOfWeekExtensibleEnum
     underlyingType:
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -33,6 +35,7 @@ enumTypes:
         serializedName: Sunday
   - &ref_1
     $type: EnumType
+    deprecated: false
     modelAsExtensible: true
     modelAsString: false
     name:
@@ -40,6 +43,7 @@ enumTypes:
       raw: IntEnum
     underlyingType:
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -68,6 +72,7 @@ modelTypes:
   - &ref_2
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Pet
@@ -75,6 +80,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -82,6 +88,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -96,6 +103,7 @@ modelTypes:
         defaultValue:
           fixed: false
           raw: Friday
+        deprecated: false
         documentation:
           fixed: false
           raw: Type of Pet
@@ -116,6 +124,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: ''
@@ -176,6 +185,7 @@ operations:
               collectionFormat: none
               defaultValue:
                 fixed: false
+              deprecated: false
               documentation:
                 fixed: false
                 raw: Pet id
@@ -186,6 +196,7 @@ operations:
               isRequired: true
               modelType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -199,6 +210,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Pet id
@@ -209,6 +221,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -247,6 +260,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:

@@ -8,6 +8,7 @@ headerTypes:
   - $id: '52'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for putNoHeaderInRetry operation.
     name:
       fixed: false
@@ -17,6 +18,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -28,6 +30,7 @@ headerTypes:
         modelType:
           $id: '54'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -42,6 +45,7 @@ headerTypes:
   - $id: '55'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for putAsyncRetrySucceeded operation.
     name:
       fixed: false
@@ -51,6 +55,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -62,6 +67,7 @@ headerTypes:
         modelType:
           $id: '57'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -76,6 +82,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -87,6 +94,7 @@ headerTypes:
         modelType:
           $id: '59'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -101,6 +109,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -112,6 +121,7 @@ headerTypes:
         modelType:
           $id: '61'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -127,6 +137,7 @@ headerTypes:
   - $id: '62'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for putAsyncNoRetrySucceeded operation.
     name:
       fixed: false
@@ -136,6 +147,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -147,6 +159,7 @@ headerTypes:
         modelType:
           $id: '64'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -161,6 +174,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -172,6 +186,7 @@ headerTypes:
         modelType:
           $id: '66'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -186,6 +201,7 @@ headerTypes:
   - $id: '67'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for putAsyncRetryFailed operation.
     name:
       fixed: false
@@ -195,6 +211,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -206,6 +223,7 @@ headerTypes:
         modelType:
           $id: '69'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -220,6 +238,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -231,6 +250,7 @@ headerTypes:
         modelType:
           $id: '71'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -245,6 +265,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -256,6 +277,7 @@ headerTypes:
         modelType:
           $id: '73'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -271,6 +293,7 @@ headerTypes:
   - $id: '74'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for putAsyncNoRetrycanceled operation.
     name:
       fixed: false
@@ -280,6 +303,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -291,6 +315,7 @@ headerTypes:
         modelType:
           $id: '76'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -305,6 +330,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -316,6 +342,7 @@ headerTypes:
         modelType:
           $id: '78'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -330,6 +357,7 @@ headerTypes:
   - $id: '79'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for putAsyncNoHeaderInRetry operation.
     name:
       fixed: false
@@ -339,6 +367,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -347,6 +376,7 @@ headerTypes:
         modelType:
           $id: '81'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -361,6 +391,7 @@ headerTypes:
   - $id: '82'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for deleteProvisioning202Accepted200Succeeded operation.
     name:
       fixed: false
@@ -370,6 +401,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -381,6 +413,7 @@ headerTypes:
         modelType:
           $id: '84'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -395,6 +428,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -406,6 +440,7 @@ headerTypes:
         modelType:
           $id: '86'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -421,6 +456,7 @@ headerTypes:
   - $id: '87'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for deleteProvisioning202DeletingFailed200 operation.
     name:
       fixed: false
@@ -430,6 +466,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -441,6 +478,7 @@ headerTypes:
         modelType:
           $id: '89'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -455,6 +493,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -466,6 +505,7 @@ headerTypes:
         modelType:
           $id: '91'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -481,6 +521,7 @@ headerTypes:
   - $id: '92'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for deleteProvisioning202Deletingcanceled200 operation.
     name:
       fixed: false
@@ -490,6 +531,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -501,6 +543,7 @@ headerTypes:
         modelType:
           $id: '94'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -515,6 +558,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -526,6 +570,7 @@ headerTypes:
         modelType:
           $id: '96'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -541,6 +586,7 @@ headerTypes:
   - $id: '97'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for delete202Retry200 operation.
     name:
       fixed: false
@@ -550,6 +596,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -561,6 +608,7 @@ headerTypes:
         modelType:
           $id: '99'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -575,6 +623,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -586,6 +635,7 @@ headerTypes:
         modelType:
           $id: '101'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -601,6 +651,7 @@ headerTypes:
   - $id: '102'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for delete202NoRetry204 operation.
     name:
       fixed: false
@@ -610,6 +661,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -621,6 +673,7 @@ headerTypes:
         modelType:
           $id: '104'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -635,6 +688,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -646,6 +700,7 @@ headerTypes:
         modelType:
           $id: '106'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -661,6 +716,7 @@ headerTypes:
   - $id: '107'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for deleteNoHeaderInRetry operation.
     name:
       fixed: false
@@ -670,6 +726,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -681,6 +738,7 @@ headerTypes:
         modelType:
           $id: '109'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -695,6 +753,7 @@ headerTypes:
   - $id: '110'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for deleteAsyncNoHeaderInRetry operation.
     name:
       fixed: false
@@ -704,6 +763,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -715,6 +775,7 @@ headerTypes:
         modelType:
           $id: '112'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -729,6 +790,7 @@ headerTypes:
   - $id: '113'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for deleteAsyncRetrySucceeded operation.
     name:
       fixed: false
@@ -738,6 +800,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -749,6 +812,7 @@ headerTypes:
         modelType:
           $id: '115'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -763,6 +827,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -774,6 +839,7 @@ headerTypes:
         modelType:
           $id: '117'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -788,6 +854,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -799,6 +866,7 @@ headerTypes:
         modelType:
           $id: '119'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -814,6 +882,7 @@ headerTypes:
   - $id: '120'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for deleteAsyncNoRetrySucceeded operation.
     name:
       fixed: false
@@ -823,6 +892,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -834,6 +904,7 @@ headerTypes:
         modelType:
           $id: '122'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -848,6 +919,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -859,6 +931,7 @@ headerTypes:
         modelType:
           $id: '124'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -873,6 +946,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -884,6 +958,7 @@ headerTypes:
         modelType:
           $id: '126'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -899,6 +974,7 @@ headerTypes:
   - $id: '127'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for deleteAsyncRetryFailed operation.
     name:
       fixed: false
@@ -908,6 +984,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -919,6 +996,7 @@ headerTypes:
         modelType:
           $id: '129'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -933,6 +1011,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -944,6 +1023,7 @@ headerTypes:
         modelType:
           $id: '131'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -958,6 +1038,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -969,6 +1050,7 @@ headerTypes:
         modelType:
           $id: '133'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -984,6 +1066,7 @@ headerTypes:
   - $id: '134'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for deleteAsyncRetrycanceled operation.
     name:
       fixed: false
@@ -993,6 +1076,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1004,6 +1088,7 @@ headerTypes:
         modelType:
           $id: '136'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1018,6 +1103,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1029,6 +1115,7 @@ headerTypes:
         modelType:
           $id: '138'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1043,6 +1130,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1054,6 +1142,7 @@ headerTypes:
         modelType:
           $id: '140'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -1069,6 +1158,7 @@ headerTypes:
   - $id: '141'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for post202Retry200 operation.
     name:
       fixed: false
@@ -1078,6 +1168,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1089,6 +1180,7 @@ headerTypes:
         modelType:
           $id: '143'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1103,6 +1195,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1114,6 +1207,7 @@ headerTypes:
         modelType:
           $id: '145'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -1129,6 +1223,7 @@ headerTypes:
   - $id: '146'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for post202NoRetry204 operation.
     name:
       fixed: false
@@ -1138,6 +1233,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1149,6 +1245,7 @@ headerTypes:
         modelType:
           $id: '148'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1163,6 +1260,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1174,6 +1272,7 @@ headerTypes:
         modelType:
           $id: '150'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -1189,6 +1288,7 @@ headerTypes:
   - $id: '151'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for postAsyncRetrySucceeded operation.
     name:
       fixed: false
@@ -1198,6 +1298,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1209,6 +1310,7 @@ headerTypes:
         modelType:
           $id: '153'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1223,6 +1325,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1234,6 +1337,7 @@ headerTypes:
         modelType:
           $id: '155'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1248,6 +1352,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1259,6 +1364,7 @@ headerTypes:
         modelType:
           $id: '157'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -1274,6 +1380,7 @@ headerTypes:
   - $id: '158'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for postAsyncNoRetrySucceeded operation.
     name:
       fixed: false
@@ -1283,6 +1390,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1294,6 +1402,7 @@ headerTypes:
         modelType:
           $id: '160'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1308,6 +1417,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1319,6 +1429,7 @@ headerTypes:
         modelType:
           $id: '162'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1333,6 +1444,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1344,6 +1456,7 @@ headerTypes:
         modelType:
           $id: '164'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -1359,6 +1472,7 @@ headerTypes:
   - $id: '165'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for postAsyncRetryFailed operation.
     name:
       fixed: false
@@ -1368,6 +1482,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1379,6 +1494,7 @@ headerTypes:
         modelType:
           $id: '167'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1393,6 +1509,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1404,6 +1521,7 @@ headerTypes:
         modelType:
           $id: '169'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1418,6 +1536,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1429,6 +1548,7 @@ headerTypes:
         modelType:
           $id: '171'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -1444,6 +1564,7 @@ headerTypes:
   - $id: '172'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for postAsyncRetrycanceled operation.
     name:
       fixed: false
@@ -1453,6 +1574,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1464,6 +1586,7 @@ headerTypes:
         modelType:
           $id: '174'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1478,6 +1601,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1489,6 +1613,7 @@ headerTypes:
         modelType:
           $id: '176'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1503,6 +1628,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1514,6 +1640,7 @@ headerTypes:
         modelType:
           $id: '178'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -1529,6 +1656,7 @@ headerTypes:
   - $id: '179'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for putAsyncRelativeRetrySucceeded operation.
     name:
       fixed: false
@@ -1538,6 +1666,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1549,6 +1678,7 @@ headerTypes:
         modelType:
           $id: '181'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1563,6 +1693,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1574,6 +1705,7 @@ headerTypes:
         modelType:
           $id: '183'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1588,6 +1720,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1599,6 +1732,7 @@ headerTypes:
         modelType:
           $id: '185'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -1614,6 +1748,7 @@ headerTypes:
   - $id: '186'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for deleteProvisioning202Accepted200Succeeded operation.
     name:
       fixed: false
@@ -1623,6 +1758,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1634,6 +1770,7 @@ headerTypes:
         modelType:
           $id: '188'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1648,6 +1785,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1659,6 +1797,7 @@ headerTypes:
         modelType:
           $id: '190'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -1674,6 +1813,7 @@ headerTypes:
   - $id: '191'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for delete202Retry200 operation.
     name:
       fixed: false
@@ -1683,6 +1823,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1694,6 +1835,7 @@ headerTypes:
         modelType:
           $id: '193'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1708,6 +1850,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1719,6 +1862,7 @@ headerTypes:
         modelType:
           $id: '195'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -1734,6 +1878,7 @@ headerTypes:
   - $id: '196'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for deleteAsyncRelativeRetrySucceeded operation.
     name:
       fixed: false
@@ -1743,6 +1888,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1754,6 +1900,7 @@ headerTypes:
         modelType:
           $id: '198'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1768,6 +1915,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1779,6 +1927,7 @@ headerTypes:
         modelType:
           $id: '200'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1793,6 +1942,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1804,6 +1954,7 @@ headerTypes:
         modelType:
           $id: '202'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -1819,6 +1970,7 @@ headerTypes:
   - $id: '203'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for post202Retry200 operation.
     name:
       fixed: false
@@ -1828,6 +1980,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1839,6 +1992,7 @@ headerTypes:
         modelType:
           $id: '205'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1853,6 +2007,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1864,6 +2019,7 @@ headerTypes:
         modelType:
           $id: '207'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -1879,6 +2035,7 @@ headerTypes:
   - $id: '208'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for postAsyncRelativeRetrySucceeded operation.
     name:
       fixed: false
@@ -1888,6 +2045,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1899,6 +2057,7 @@ headerTypes:
         modelType:
           $id: '210'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1913,6 +2072,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1924,6 +2084,7 @@ headerTypes:
         modelType:
           $id: '212'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1938,6 +2099,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1949,6 +2111,7 @@ headerTypes:
         modelType:
           $id: '214'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -1964,6 +2127,7 @@ headerTypes:
   - $id: '215'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for putAsyncRelativeRetry400 operation.
     name:
       fixed: false
@@ -1973,6 +2137,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -1984,6 +2149,7 @@ headerTypes:
         modelType:
           $id: '217'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -1998,6 +2164,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2009,6 +2176,7 @@ headerTypes:
         modelType:
           $id: '219'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2023,6 +2191,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2034,6 +2203,7 @@ headerTypes:
         modelType:
           $id: '221'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -2049,6 +2219,7 @@ headerTypes:
   - $id: '222'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for deleteNonRetry400 operation.
     name:
       fixed: false
@@ -2058,6 +2229,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2069,6 +2241,7 @@ headerTypes:
         modelType:
           $id: '224'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2083,6 +2256,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2094,6 +2268,7 @@ headerTypes:
         modelType:
           $id: '226'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -2109,6 +2284,7 @@ headerTypes:
   - $id: '227'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for delete202NonRetry400 operation.
     name:
       fixed: false
@@ -2118,6 +2294,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2129,6 +2306,7 @@ headerTypes:
         modelType:
           $id: '229'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2143,6 +2321,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2154,6 +2333,7 @@ headerTypes:
         modelType:
           $id: '231'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -2169,6 +2349,7 @@ headerTypes:
   - $id: '232'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for deleteAsyncRelativeRetry400 operation.
     name:
       fixed: false
@@ -2178,6 +2359,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2189,6 +2371,7 @@ headerTypes:
         modelType:
           $id: '234'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2203,6 +2386,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2214,6 +2398,7 @@ headerTypes:
         modelType:
           $id: '236'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2228,6 +2413,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2239,6 +2425,7 @@ headerTypes:
         modelType:
           $id: '238'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -2254,6 +2441,7 @@ headerTypes:
   - $id: '239'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for postNonRetry400 operation.
     name:
       fixed: false
@@ -2263,6 +2451,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2274,6 +2463,7 @@ headerTypes:
         modelType:
           $id: '241'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2288,6 +2478,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2299,6 +2490,7 @@ headerTypes:
         modelType:
           $id: '243'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -2314,6 +2506,7 @@ headerTypes:
   - $id: '244'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for post202NonRetry400 operation.
     name:
       fixed: false
@@ -2323,6 +2516,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2334,6 +2528,7 @@ headerTypes:
         modelType:
           $id: '246'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2348,6 +2543,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2359,6 +2555,7 @@ headerTypes:
         modelType:
           $id: '248'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -2374,6 +2571,7 @@ headerTypes:
   - $id: '249'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for postAsyncRelativeRetry400 operation.
     name:
       fixed: false
@@ -2383,6 +2581,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2394,6 +2593,7 @@ headerTypes:
         modelType:
           $id: '251'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2408,6 +2608,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2419,6 +2620,7 @@ headerTypes:
         modelType:
           $id: '253'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2433,6 +2635,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2444,6 +2647,7 @@ headerTypes:
         modelType:
           $id: '255'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -2459,6 +2663,7 @@ headerTypes:
   - $id: '256'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for putAsyncRelativeRetryNoStatus operation.
     name:
       fixed: false
@@ -2468,6 +2673,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2479,6 +2685,7 @@ headerTypes:
         modelType:
           $id: '258'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2493,6 +2700,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2504,6 +2712,7 @@ headerTypes:
         modelType:
           $id: '260'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2518,6 +2727,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2529,6 +2739,7 @@ headerTypes:
         modelType:
           $id: '262'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -2544,6 +2755,7 @@ headerTypes:
   - $id: '263'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for putAsyncRelativeRetryNoStatusPayload operation.
     name:
       fixed: false
@@ -2553,6 +2765,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2564,6 +2777,7 @@ headerTypes:
         modelType:
           $id: '265'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2578,6 +2792,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2589,6 +2804,7 @@ headerTypes:
         modelType:
           $id: '267'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2603,6 +2819,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2614,6 +2831,7 @@ headerTypes:
         modelType:
           $id: '269'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -2629,6 +2847,7 @@ headerTypes:
   - $id: '270'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for deleteAsyncRelativeRetryNoStatus operation.
     name:
       fixed: false
@@ -2638,6 +2857,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2649,6 +2869,7 @@ headerTypes:
         modelType:
           $id: '272'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2663,6 +2884,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2674,6 +2896,7 @@ headerTypes:
         modelType:
           $id: '274'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2688,6 +2911,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2699,6 +2923,7 @@ headerTypes:
         modelType:
           $id: '276'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -2714,6 +2939,7 @@ headerTypes:
   - $id: '277'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for post202NoLocation operation.
     name:
       fixed: false
@@ -2723,6 +2949,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: 'Location to poll for result status: will not be set'
@@ -2732,6 +2959,7 @@ headerTypes:
         modelType:
           $id: '279'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2746,6 +2974,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2757,6 +2986,7 @@ headerTypes:
         modelType:
           $id: '281'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -2772,6 +3002,7 @@ headerTypes:
   - $id: '282'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for postAsyncRelativeRetryNoPayload operation.
     name:
       fixed: false
@@ -2781,6 +3012,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2792,6 +3024,7 @@ headerTypes:
         modelType:
           $id: '284'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2806,6 +3039,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2817,6 +3051,7 @@ headerTypes:
         modelType:
           $id: '286'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2831,6 +3066,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2842,6 +3078,7 @@ headerTypes:
         modelType:
           $id: '288'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -2857,6 +3094,7 @@ headerTypes:
   - $id: '289'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for putAsyncRelativeRetryInvalidHeader operation.
     name:
       fixed: false
@@ -2866,6 +3104,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2877,6 +3116,7 @@ headerTypes:
         modelType:
           $id: '291'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2891,6 +3131,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2902,6 +3143,7 @@ headerTypes:
         modelType:
           $id: '293'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2916,6 +3158,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2927,6 +3170,7 @@ headerTypes:
         modelType:
           $id: '295'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -2942,6 +3186,7 @@ headerTypes:
   - $id: '296'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for putAsyncRelativeRetryInvalidJsonPolling operation.
     name:
       fixed: false
@@ -2951,6 +3196,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2962,6 +3208,7 @@ headerTypes:
         modelType:
           $id: '298'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -2976,6 +3223,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -2987,6 +3235,7 @@ headerTypes:
         modelType:
           $id: '300'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3001,6 +3250,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3012,6 +3262,7 @@ headerTypes:
         modelType:
           $id: '302'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -3027,6 +3278,7 @@ headerTypes:
   - $id: '303'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for delete202RetryInvalidHeader operation.
     name:
       fixed: false
@@ -3036,6 +3288,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: 'Location to poll for result status: will be set to /foo'
@@ -3045,6 +3298,7 @@ headerTypes:
         modelType:
           $id: '305'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3059,6 +3313,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3070,6 +3325,7 @@ headerTypes:
         modelType:
           $id: '307'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -3085,6 +3341,7 @@ headerTypes:
   - $id: '308'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for deleteAsyncRelativeRetryInvalidHeader operation.
     name:
       fixed: false
@@ -3094,6 +3351,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: 'Location to poll for result status: will be set to /foo'
@@ -3103,6 +3361,7 @@ headerTypes:
         modelType:
           $id: '310'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3117,6 +3376,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: 'Location to poll for result status: will be set to /foo'
@@ -3126,6 +3386,7 @@ headerTypes:
         modelType:
           $id: '312'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3140,6 +3401,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3151,6 +3413,7 @@ headerTypes:
         modelType:
           $id: '314'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -3166,6 +3429,7 @@ headerTypes:
   - $id: '315'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for deleteAsyncRelativeRetryInvalidJsonPolling operation.
     name:
       fixed: false
@@ -3175,6 +3439,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3186,6 +3451,7 @@ headerTypes:
         modelType:
           $id: '317'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3200,6 +3466,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3211,6 +3478,7 @@ headerTypes:
         modelType:
           $id: '319'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3225,6 +3493,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3236,6 +3505,7 @@ headerTypes:
         modelType:
           $id: '321'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -3251,6 +3521,7 @@ headerTypes:
   - $id: '322'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for post202RetryInvalidHeader operation.
     name:
       fixed: false
@@ -3260,6 +3531,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: 'Location to poll for result status: will be set to /foo'
@@ -3269,6 +3541,7 @@ headerTypes:
         modelType:
           $id: '324'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3283,6 +3556,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3294,6 +3568,7 @@ headerTypes:
         modelType:
           $id: '326'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -3309,6 +3584,7 @@ headerTypes:
   - $id: '327'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for postAsyncRelativeRetryInvalidHeader operation.
     name:
       fixed: false
@@ -3318,6 +3594,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: 'Location to poll for result status: will be set to foo'
@@ -3327,6 +3604,7 @@ headerTypes:
         modelType:
           $id: '329'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3341,6 +3619,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: 'Location to poll for result status: will be set to foo'
@@ -3350,6 +3629,7 @@ headerTypes:
         modelType:
           $id: '331'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3364,6 +3644,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3375,6 +3656,7 @@ headerTypes:
         modelType:
           $id: '333'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -3390,6 +3672,7 @@ headerTypes:
   - $id: '334'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for postAsyncRelativeRetryInvalidJsonPolling operation.
     name:
       fixed: false
@@ -3399,6 +3682,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3410,6 +3694,7 @@ headerTypes:
         modelType:
           $id: '336'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3424,6 +3709,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3435,6 +3721,7 @@ headerTypes:
         modelType:
           $id: '338'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3449,6 +3736,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3460,6 +3748,7 @@ headerTypes:
         modelType:
           $id: '340'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -3475,6 +3764,7 @@ headerTypes:
   - $id: '341'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for putAsyncRetrySucceeded operation.
     name:
       fixed: false
@@ -3484,6 +3774,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3495,6 +3786,7 @@ headerTypes:
         modelType:
           $id: '343'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3509,6 +3801,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3520,6 +3813,7 @@ headerTypes:
         modelType:
           $id: '345'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3534,6 +3828,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3545,6 +3840,7 @@ headerTypes:
         modelType:
           $id: '347'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -3560,6 +3856,7 @@ headerTypes:
   - $id: '348'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for post202Retry200 operation.
     name:
       fixed: false
@@ -3569,6 +3866,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3580,6 +3878,7 @@ headerTypes:
         modelType:
           $id: '350'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3594,6 +3893,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3605,6 +3905,7 @@ headerTypes:
         modelType:
           $id: '352'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -3620,6 +3921,7 @@ headerTypes:
   - $id: '353'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for postAsyncRetrySucceeded operation.
     name:
       fixed: false
@@ -3629,6 +3931,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3640,6 +3943,7 @@ headerTypes:
         modelType:
           $id: '355'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3654,6 +3958,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3665,6 +3970,7 @@ headerTypes:
         modelType:
           $id: '357'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3679,6 +3985,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -3690,6 +3997,7 @@ headerTypes:
         modelType:
           $id: '359'
           $type: PrimaryType
+          deprecated: false
           format: Int32
           knownPrimaryType: int
           name:
@@ -3706,6 +4014,7 @@ modelTypes:
   - $id: '1'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     extensions:
       x-ms-external: true
     name:
@@ -3716,6 +4025,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -3724,6 +4034,7 @@ modelTypes:
         modelType:
           $id: '3'
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -3739,6 +4050,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -3747,6 +4059,7 @@ modelTypes:
         modelType:
           $id: '5'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3761,6 +4074,7 @@ modelTypes:
   - $id: '6'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     extensions:
       x-ms-azure-resource: true
     name:
@@ -3771,6 +4085,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource Id
@@ -3780,6 +4095,7 @@ modelTypes:
         modelType:
           $id: '8'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3794,6 +4110,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource Type
@@ -3803,6 +4120,7 @@ modelTypes:
         modelType:
           $id: '10'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3817,6 +4135,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -3825,12 +4144,14 @@ modelTypes:
         modelType:
           $id: '12'
           $type: DictionaryType
+          deprecated: false
           name:
             fixed: false
           supportsAdditionalProperties: false
           valueType:
             $id: '13'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -3845,6 +4166,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource Location
@@ -3854,6 +4176,7 @@ modelTypes:
         modelType:
           $id: '15'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3868,6 +4191,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource Name
@@ -3877,6 +4201,7 @@ modelTypes:
         modelType:
           $id: '17'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3891,6 +4216,7 @@ modelTypes:
   - $id: '18'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Sku
@@ -3899,6 +4225,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -3907,6 +4234,7 @@ modelTypes:
         modelType:
           $id: '20'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3921,6 +4249,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -3929,6 +4258,7 @@ modelTypes:
         modelType:
           $id: '22'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3943,6 +4273,7 @@ modelTypes:
   - $id: '23'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     extensions:
       x-ms-client-flatten: true
     name:
@@ -3953,6 +4284,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -3961,6 +4293,7 @@ modelTypes:
         modelType:
           $id: '25'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -3975,6 +4308,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -3983,6 +4317,7 @@ modelTypes:
         modelType:
           $id: '27'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -3991,6 +4326,7 @@ modelTypes:
           underlyingType:
             $id: '28'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -4030,6 +4366,7 @@ modelTypes:
     baseModelType:
       $ref: '6'
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Product
@@ -4038,6 +4375,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         extensions:
@@ -4057,6 +4395,7 @@ modelTypes:
   - $id: '31'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     extensions:
       x-ms-client-flatten: true
     name:
@@ -4067,6 +4406,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -4075,6 +4415,7 @@ modelTypes:
         modelType:
           $id: '33'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -4089,6 +4430,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -4097,6 +4439,7 @@ modelTypes:
         modelType:
           $id: '35'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -4105,6 +4448,7 @@ modelTypes:
           underlyingType:
             $id: '36'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -4145,6 +4489,7 @@ modelTypes:
       $id: '39'
       $type: CompositeType
       containsConstantProperties: false
+      deprecated: false
       extensions:
         x-ms-azure-resource: true
       name:
@@ -4155,6 +4500,7 @@ modelTypes:
           collectionFormat: none
           defaultValue:
             fixed: false
+          deprecated: false
           documentation:
             fixed: false
             raw: Sub Resource Id
@@ -4164,6 +4510,7 @@ modelTypes:
           modelType:
             $id: '41'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -4176,6 +4523,7 @@ modelTypes:
           serializedName: id
       serializedName: SubResource
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: SubProduct
@@ -4184,6 +4532,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         extensions:
@@ -4204,6 +4553,7 @@ modelTypes:
   - $id: '42'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: OperationResult_error
@@ -4212,6 +4562,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The error code for an operation failure
@@ -4221,6 +4572,7 @@ modelTypes:
         modelType:
           $id: '44'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: int
           name:
             fixed: false
@@ -4235,6 +4587,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The detailed arror message
@@ -4244,6 +4597,7 @@ modelTypes:
         modelType:
           $id: '46'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -4258,6 +4612,7 @@ modelTypes:
   - $id: '47'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: OperationResult
@@ -4266,6 +4621,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The status of the request
@@ -4275,6 +4631,7 @@ modelTypes:
         modelType:
           $id: '49'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -4283,6 +4640,7 @@ modelTypes:
           underlyingType:
             $id: '50'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -4320,6 +4678,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -4364,6 +4723,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -4420,6 +4780,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -4474,6 +4835,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -4529,6 +4891,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -4588,6 +4951,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -4643,6 +5007,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -4702,6 +5067,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -4758,6 +5124,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -4819,6 +5186,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -4880,6 +5248,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -4941,6 +5310,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -5002,6 +5372,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -5062,6 +5433,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -5117,6 +5489,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: sku to put
@@ -5168,6 +5541,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Sku to put
@@ -5219,6 +5593,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Sub Product to put
@@ -5270,6 +5645,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Sub Product to put
@@ -5844,6 +6220,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -5900,6 +6277,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -5961,6 +6339,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -6026,6 +6405,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -6091,6 +6471,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -6148,6 +6529,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -6210,6 +6592,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -6271,6 +6654,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -6450,6 +6834,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -6507,6 +6892,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -6565,6 +6951,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -6622,6 +7009,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -6679,6 +7067,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -6739,6 +7128,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -6900,6 +7290,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -6955,6 +7346,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -7011,6 +7403,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -7064,6 +7457,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -7125,6 +7519,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -7186,6 +7581,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -7310,6 +7706,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -7367,6 +7764,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -7420,6 +7818,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -7478,6 +7877,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -7539,6 +7939,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -7706,6 +8107,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -7762,6 +8164,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -7819,6 +8222,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -7884,6 +8288,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -7944,6 +8349,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -8006,6 +8412,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put
@@ -8064,6 +8471,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product to put

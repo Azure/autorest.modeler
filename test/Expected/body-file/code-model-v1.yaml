@@ -8,6 +8,7 @@ modelTypes:
   - $id: '1'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -16,6 +17,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -24,6 +26,7 @@ modelTypes:
         modelType:
           $id: '3'
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -39,6 +42,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -47,6 +51,7 @@ modelTypes:
         modelType:
           $id: '5'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -87,6 +92,7 @@ operations:
             body:
               $id: '6'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: stream
               name:
                 fixed: false
@@ -122,6 +128,7 @@ operations:
             body:
               $id: '7'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: stream
               name:
                 fixed: false
@@ -157,6 +164,7 @@ operations:
             body:
               $id: '8'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: stream
               name:
                 fixed: false

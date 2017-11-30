@@ -12,6 +12,7 @@ hostParametersBack:
     defaultValue:
       fixed: false
       raw: ''
+    deprecated: false
     documentation:
       fixed: false
       raw: Account Name
@@ -24,6 +25,7 @@ hostParametersBack:
     modelType:
       $id: '7'
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -39,6 +41,7 @@ hostParametersBack:
       defaultValue:
         fixed: false
         raw: host
+      deprecated: false
       documentation:
         fixed: false
         raw: A string value that is used as a global part of the parameterized host
@@ -50,6 +53,7 @@ hostParametersBack:
       modelType:
         $id: '10'
         $type: PrimaryType
+        deprecated: false
         knownPrimaryType: string
         name:
           fixed: false
@@ -64,6 +68,7 @@ hostParametersBack:
     defaultValue:
       fixed: false
       raw: host
+    deprecated: false
     documentation:
       fixed: false
       raw: A string value that is used as a global part of the parameterized host
@@ -76,6 +81,7 @@ hostParametersBack:
     modelType:
       $id: '11'
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -88,6 +94,7 @@ modelTypes:
   - $id: '1'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -96,6 +103,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -104,6 +112,7 @@ modelTypes:
         modelType:
           $id: '3'
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -119,6 +128,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -127,6 +137,7 @@ modelTypes:
         modelType:
           $id: '5'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false

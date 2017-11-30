@@ -6,6 +6,7 @@ errorTypes:
   - &ref_0
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -13,6 +14,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -20,6 +22,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -34,6 +37,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -41,6 +45,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -59,6 +64,7 @@ hostParametersBack:
     defaultValue:
       fixed: false
       raw: ''
+    deprecated: false
     documentation:
       fixed: false
       raw: Account Name
@@ -70,6 +76,7 @@ hostParametersBack:
     location: path
     modelType:
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -83,6 +90,7 @@ hostParametersBack:
       defaultValue:
         fixed: false
         raw: host
+      deprecated: false
       documentation:
         fixed: false
         raw: A string value that is used as a global part of the parameterized host
@@ -93,6 +101,7 @@ hostParametersBack:
       isRequired: true
       modelType:
         $type: PrimaryType
+        deprecated: false
         knownPrimaryType: string
         name:
           fixed: false
@@ -107,6 +116,7 @@ hostParametersBack:
     defaultValue:
       fixed: false
       raw: host
+    deprecated: false
     documentation:
       fixed: false
       raw: A string value that is used as a global part of the parameterized host
@@ -118,6 +128,7 @@ hostParametersBack:
     location: path
     modelType:
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false

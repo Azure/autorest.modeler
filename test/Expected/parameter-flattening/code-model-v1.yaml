@@ -8,6 +8,7 @@ modelTypes:
   - $id: '1'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: AvailabilitySetUpdateParameters
@@ -16,6 +17,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: A description about the set of tags.
@@ -25,12 +27,14 @@ modelTypes:
         modelType:
           $id: '3'
           $type: DictionaryType
+          deprecated: false
           name:
             fixed: false
           supportsAdditionalProperties: false
           valueType:
             $id: '4'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -68,6 +72,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: The name of the resource group.
@@ -77,6 +82,7 @@ operations:
             modelType:
               $id: '6'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -91,6 +97,7 @@ operations:
               MaxLength: '80'
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: The name of the storage availability set.
@@ -102,6 +109,7 @@ operations:
             modelType:
               $id: '8'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -114,6 +122,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: The tags.

@@ -6,6 +6,7 @@ modelTypes:
   - $id: '1'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Product_properties
@@ -14,6 +15,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -22,6 +24,7 @@ modelTypes:
         modelType:
           $id: '3'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: int
           name:
             fixed: false
@@ -36,6 +39,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -44,6 +48,7 @@ modelTypes:
         modelType:
           $id: '5'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -58,6 +63,7 @@ modelTypes:
   - $id: '6'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Product
@@ -66,6 +72,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -83,6 +90,7 @@ modelTypes:
   - $id: '8'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: ProductResult
@@ -91,6 +99,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -99,6 +108,7 @@ modelTypes:
         modelType:
           $id: '10'
           $type: SequenceType
+          deprecated: false
           elementType:
             $ref: '6'
           name:
@@ -113,6 +123,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -121,6 +132,7 @@ modelTypes:
         modelType:
           $id: '12'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -135,6 +147,7 @@ modelTypes:
   - $id: '13'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: OdataProductResult
@@ -143,6 +156,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -151,6 +165,7 @@ modelTypes:
         modelType:
           $id: '15'
           $type: SequenceType
+          deprecated: false
           elementType:
             $ref: '6'
           name:
@@ -165,6 +180,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -173,6 +189,7 @@ modelTypes:
         modelType:
           $id: '17'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -187,6 +204,7 @@ modelTypes:
   - $id: '18'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: OperationResult
@@ -195,6 +213,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The status of the request
@@ -204,6 +223,7 @@ modelTypes:
         modelType:
           $id: '20'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -212,6 +232,7 @@ modelTypes:
           underlyingType:
             $id: '21'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -304,6 +325,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             isConstant: false
@@ -312,6 +334,7 @@ operations:
             modelType:
               $id: '23'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -324,6 +347,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Sets the maximum number of items to return in the response.
@@ -336,6 +360,7 @@ operations:
             modelType:
               $id: '25'
               $type: PrimaryType
+              deprecated: false
               format: int32
               knownPrimaryType: int
               name:
@@ -350,6 +375,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '30'
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -364,6 +390,7 @@ operations:
             modelType:
               $id: '27'
               $type: PrimaryType
+              deprecated: false
               format: int32
               knownPrimaryType: int
               name:
@@ -411,6 +438,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             isConstant: false
@@ -419,6 +447,7 @@ operations:
             modelType:
               $id: '29'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -431,6 +460,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Sets the maximum number of items to return in the response.
@@ -443,6 +473,7 @@ operations:
             modelType:
               $id: '31'
               $type: PrimaryType
+              deprecated: false
               format: int32
               knownPrimaryType: int
               name:
@@ -457,6 +488,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '30'
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -471,6 +503,7 @@ operations:
             modelType:
               $id: '33'
               $type: PrimaryType
+              deprecated: false
               format: int32
               knownPrimaryType: int
               name:
@@ -516,6 +549,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             isConstant: false
@@ -524,6 +558,7 @@ operations:
             modelType:
               $id: '35'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -536,6 +571,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Sets the maximum number of items to return in the response.
@@ -548,6 +584,7 @@ operations:
             modelType:
               $id: '37'
               $type: PrimaryType
+              deprecated: false
               format: int32
               knownPrimaryType: int
               name:
@@ -561,6 +598,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Offset of return value
@@ -573,6 +611,7 @@ operations:
             modelType:
               $id: '39'
               $type: PrimaryType
+              deprecated: false
               format: int32
               knownPrimaryType: int
               name:
@@ -587,6 +626,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '30'
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -601,6 +641,7 @@ operations:
             modelType:
               $id: '41'
               $type: PrimaryType
+              deprecated: false
               format: int32
               knownPrimaryType: int
               name:
@@ -807,6 +848,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Sets the api version to use.
@@ -816,6 +858,7 @@ operations:
             modelType:
               $id: '43'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -828,6 +871,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Sets the tenant to use.
@@ -837,6 +881,7 @@ operations:
             modelType:
               $id: '45'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -884,6 +929,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Sets the api version to use.
@@ -896,6 +942,7 @@ operations:
             modelType:
               $id: '47'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -908,6 +955,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Sets the tenant to use.
@@ -920,6 +968,7 @@ operations:
             modelType:
               $id: '49'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -965,6 +1014,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Sets the api version to use.
@@ -974,6 +1024,7 @@ operations:
             modelType:
               $id: '51'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -986,6 +1037,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Sets the tenant to use.
@@ -995,6 +1047,7 @@ operations:
             modelType:
               $id: '53'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1007,6 +1060,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Next link for list operation.
@@ -1018,6 +1072,7 @@ operations:
             modelType:
               $id: '55'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1063,6 +1118,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Sets the api version to use.
@@ -1075,6 +1131,7 @@ operations:
             modelType:
               $id: '57'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1087,6 +1144,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Sets the tenant to use.
@@ -1099,6 +1157,7 @@ operations:
             modelType:
               $id: '59'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1111,6 +1170,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Next link for list operation.
@@ -1122,6 +1182,7 @@ operations:
             modelType:
               $id: '61'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false

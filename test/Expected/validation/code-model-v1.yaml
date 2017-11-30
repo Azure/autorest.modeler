@@ -10,6 +10,7 @@ modelTypes:
   - $id: '1'
     $type: CompositeType
     containsConstantProperties: true
+    deprecated: false
     documentation: The product documentation.
     name:
       fixed: false
@@ -20,6 +21,7 @@ modelTypes:
         defaultValue:
           fixed: false
           raw: constant
+        deprecated: false
         documentation:
           fixed: false
           raw: Constant string
@@ -29,6 +31,7 @@ modelTypes:
         modelType:
           $id: '3'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -43,6 +46,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Count
@@ -52,6 +56,7 @@ modelTypes:
         modelType:
           $id: '5'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: int
           name:
             fixed: false
@@ -66,6 +71,7 @@ modelTypes:
   - $id: '6'
     $type: CompositeType
     containsConstantProperties: true
+    deprecated: false
     documentation: The product documentation.
     name:
       fixed: false
@@ -76,6 +82,7 @@ modelTypes:
         defaultValue:
           fixed: false
           raw: constant
+        deprecated: false
         documentation:
           fixed: false
           raw: Constant string
@@ -85,6 +92,7 @@ modelTypes:
         modelType:
           $id: '8'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -100,6 +108,7 @@ modelTypes:
         defaultValue:
           fixed: false
           raw: constant2
+        deprecated: false
         documentation:
           fixed: false
           raw: Constant string2
@@ -109,6 +118,7 @@ modelTypes:
         modelType:
           $id: '10'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -123,6 +133,7 @@ modelTypes:
   - $id: '11'
     $type: CompositeType
     containsConstantProperties: true
+    deprecated: false
     documentation: The product documentation.
     name:
       fixed: false
@@ -136,6 +147,7 @@ modelTypes:
           UniqueItems: 'true'
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Non required array of unique items from 0 to 6 elements.
@@ -145,9 +157,11 @@ modelTypes:
         modelType:
           $id: '13'
           $type: SequenceType
+          deprecated: false
           elementType:
             $id: '14'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -167,6 +181,7 @@ modelTypes:
           ExclusiveMinimum: '0'
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Non required int betwen 0 and 100 exclusive.
@@ -176,6 +191,7 @@ modelTypes:
         modelType:
           $id: '16'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: int
           name:
             fixed: false
@@ -192,6 +208,7 @@ modelTypes:
           Pattern: 'http://\w+'
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Image URL representing the product.
@@ -201,6 +218,7 @@ modelTypes:
         modelType:
           $id: '18'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -215,6 +233,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -232,6 +251,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: true
@@ -250,6 +270,7 @@ modelTypes:
         defaultValue:
           fixed: false
           raw: '0'
+        deprecated: false
         documentation:
           fixed: false
           raw: Constant int
@@ -259,6 +280,7 @@ modelTypes:
         modelType:
           $id: '22'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: int
           name:
             fixed: false
@@ -274,6 +296,7 @@ modelTypes:
         defaultValue:
           fixed: false
           raw: constant
+        deprecated: false
         documentation:
           fixed: false
           raw: Constant string
@@ -283,6 +306,7 @@ modelTypes:
         modelType:
           $id: '24'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -297,6 +321,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Constant string as Enum
@@ -310,6 +335,7 @@ modelTypes:
         modelType:
           $id: '26'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: false
           name:
@@ -318,6 +344,7 @@ modelTypes:
           underlyingType:
             $id: '27'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -335,6 +362,7 @@ modelTypes:
   - $id: '28'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -343,6 +371,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -351,6 +380,7 @@ modelTypes:
         modelType:
           $id: '30'
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -366,6 +396,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -374,6 +405,7 @@ modelTypes:
         modelType:
           $id: '32'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -388,6 +420,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -396,6 +429,7 @@ modelTypes:
         modelType:
           $id: '34'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -434,6 +468,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Subscription ID.
@@ -443,6 +478,7 @@ operations:
             modelType:
               $id: '40'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -459,6 +495,7 @@ operations:
               Pattern: '[a-zA-Z0-9]+'
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -470,6 +507,7 @@ operations:
             modelType:
               $id: '42'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -486,6 +524,7 @@ operations:
               MultipleOf: '10'
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Required int multiple of 10 from 100 to 1000.
@@ -495,6 +534,7 @@ operations:
             modelType:
               $id: '44'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: int
               name:
                 fixed: false
@@ -511,6 +551,7 @@ operations:
               Pattern: '\d{2}-\d{2}-\d{4}'
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: 'Required string following pattern \d{2}-\d{2}-\d{4}'
@@ -520,6 +561,7 @@ operations:
             modelType:
               $id: '46'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -567,6 +609,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Subscription ID.
@@ -576,6 +619,7 @@ operations:
             modelType:
               $id: '48'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -592,6 +636,7 @@ operations:
               Pattern: '[a-zA-Z0-9]+'
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -603,6 +648,7 @@ operations:
             modelType:
               $id: '50'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -619,6 +665,7 @@ operations:
               MultipleOf: '10'
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Required int multiple of 10 from 100 to 1000.
@@ -628,6 +675,7 @@ operations:
             modelType:
               $id: '52'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: int
               name:
                 fixed: false
@@ -640,6 +688,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -661,6 +710,7 @@ operations:
               Pattern: '\d{2}-\d{2}-\d{4}'
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: 'Required string following pattern \d{2}-\d{2}-\d{4}'
@@ -670,6 +720,7 @@ operations:
             modelType:
               $id: '55'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -711,6 +762,7 @@ operations:
             defaultValue:
               fixed: false
               raw: constant
+            deprecated: false
             documentation:
               fixed: false
             isConstant: true
@@ -719,6 +771,7 @@ operations:
             modelType:
               $id: '57'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -757,6 +810,7 @@ operations:
             defaultValue:
               fixed: false
               raw: constant
+            deprecated: false
             documentation:
               fixed: false
             isConstant: true
@@ -765,6 +819,7 @@ operations:
             modelType:
               $id: '59'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -777,6 +832,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -815,6 +871,7 @@ properties:
     collectionFormat: none
     defaultValue:
       fixed: false
+    deprecated: false
     documentation:
       fixed: false
       raw: Subscription ID.
@@ -824,6 +881,7 @@ properties:
     modelType:
       $id: '36'
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -840,6 +898,7 @@ properties:
       Pattern: '\d{2}-\d{2}-\d{4}'
     defaultValue:
       fixed: false
+    deprecated: false
     documentation:
       fixed: false
       raw: 'Required string following pattern \d{2}-\d{2}-\d{4}'
@@ -849,6 +908,7 @@ properties:
     modelType:
       $id: '38'
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
