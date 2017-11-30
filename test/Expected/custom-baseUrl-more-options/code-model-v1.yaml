@@ -14,6 +14,7 @@ hostParametersFront:
       defaultValue:
         fixed: false
         raw: host
+      deprecated: false
       documentation:
         fixed: false
         raw: >-
@@ -27,6 +28,7 @@ hostParametersFront:
       modelType:
         $id: '8'
         $type: PrimaryType
+        deprecated: false
         knownPrimaryType: string
         name:
           fixed: false
@@ -41,6 +43,7 @@ hostParametersFront:
     defaultValue:
       fixed: false
       raw: host
+    deprecated: false
     documentation:
       fixed: false
       raw: >-
@@ -55,6 +58,7 @@ hostParametersFront:
     modelType:
       $id: '9'
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -68,6 +72,7 @@ hostParametersFront:
     defaultValue:
       fixed: false
       raw: ''
+    deprecated: false
     documentation:
       fixed: false
       raw: Secret value.
@@ -80,6 +85,7 @@ hostParametersFront:
     modelType:
       $id: '11'
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -93,6 +99,7 @@ hostParametersFront:
     defaultValue:
       fixed: false
       raw: ''
+    deprecated: false
     documentation:
       fixed: false
       raw: 'The vault name, e.g. https://myvault'
@@ -105,6 +112,7 @@ hostParametersFront:
     modelType:
       $id: '13'
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -117,6 +125,7 @@ modelTypes:
   - $id: '1'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -125,6 +134,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -133,6 +143,7 @@ modelTypes:
         modelType:
           $id: '3'
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -148,6 +159,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -156,6 +168,7 @@ modelTypes:
         modelType:
           $id: '5'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -192,6 +205,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: The key name with value 'key1'.
@@ -201,6 +215,7 @@ operations:
             modelType:
               $id: '17'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -215,6 +230,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: The subscription id with value 'test12'.
@@ -224,6 +240,7 @@ operations:
             modelType:
               $id: '19'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -237,6 +254,7 @@ operations:
             defaultValue:
               fixed: false
               raw: v1
+            deprecated: false
             documentation:
               fixed: false
               raw: The key version. Default value 'v1'.
@@ -246,6 +264,7 @@ operations:
             modelType:
               $id: '21'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -275,6 +294,7 @@ properties:
     collectionFormat: none
     defaultValue:
       fixed: false
+    deprecated: false
     documentation:
       fixed: false
       raw: The subscription id with value 'test12'.
@@ -284,6 +304,7 @@ properties:
     modelType:
       $id: '15'
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false

@@ -5,6 +5,7 @@ documentation: Test Infrastructure for AutoRest Swagger BAT
 enumTypes:
   - $id: '11'
     $type: EnumType
+    deprecated: false
     modelAsExtensible: false
     modelAsString: false
     name:
@@ -13,6 +14,7 @@ enumTypes:
     underlyingType:
       $id: '12'
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -30,6 +32,7 @@ modelTypes:
   - $id: '1'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -38,6 +41,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -46,6 +50,7 @@ modelTypes:
         modelType:
           $id: '3'
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -61,6 +66,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -69,6 +75,7 @@ modelTypes:
         modelType:
           $id: '5'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -83,6 +90,7 @@ modelTypes:
   - $id: '6'
     $type: CompositeType
     containsConstantProperties: true
+    deprecated: false
     name:
       fixed: false
       raw: RefColorConstant
@@ -92,6 +100,7 @@ modelTypes:
         defaultValue:
           fixed: false
           raw: green-color
+        deprecated: false
         documentation:
           fixed: false
           raw: Referenced Color Constant Description.
@@ -105,6 +114,7 @@ modelTypes:
         modelType:
           $id: '8'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -119,6 +129,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Sample string.
@@ -128,6 +139,7 @@ modelTypes:
         modelType:
           $id: '10'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -167,6 +179,7 @@ operations:
             body:
               $id: '13'
               $type: EnumType
+              deprecated: false
               modelAsExtensible: false
               modelAsString: true
               name:
@@ -175,6 +188,7 @@ operations:
               underlyingType:
                 $id: '14'
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -210,6 +224,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -220,6 +235,7 @@ operations:
             modelType:
               $id: '16'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -261,6 +277,7 @@ operations:
             body:
               $id: '17'
               $type: EnumType
+              deprecated: false
               modelAsExtensible: false
               modelAsString: true
               name:
@@ -269,6 +286,7 @@ operations:
               underlyingType:
                 $id: '18'
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -305,6 +323,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -315,6 +334,7 @@ operations:
             modelType:
               $id: '20'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -358,6 +378,7 @@ operations:
             body:
               $id: '21'
               $type: EnumType
+              deprecated: false
               modelAsExtensible: false
               modelAsString: true
               name:
@@ -366,6 +387,7 @@ operations:
               underlyingType:
                 $id: '22'
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -406,6 +428,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -416,6 +439,7 @@ operations:
             modelType:
               $id: '24'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -460,6 +484,7 @@ operations:
             body:
               $id: '25'
               $type: EnumType
+              deprecated: false
               modelAsExtensible: false
               modelAsString: true
               name:
@@ -468,6 +493,7 @@ operations:
               underlyingType:
                 $id: '26'
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -507,6 +533,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -517,6 +544,7 @@ operations:
             modelType:
               $id: '28'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -558,6 +586,7 @@ operations:
             body:
               $id: '29'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -592,6 +621,7 @@ operations:
             body:
               $id: '30'
               $type: PrimaryType
+              deprecated: false
               format: base64url
               knownPrimaryType: base64Url
               name:
@@ -627,6 +657,7 @@ operations:
             body:
               $id: '31'
               $type: PrimaryType
+              deprecated: false
               format: base64url
               knownPrimaryType: base64Url
               name:
@@ -661,6 +692,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -671,6 +703,7 @@ operations:
             modelType:
               $id: '33'
               $type: PrimaryType
+              deprecated: false
               format: base64url
               knownPrimaryType: base64Url
               name:
@@ -713,6 +746,7 @@ operations:
             body:
               $id: '34'
               $type: PrimaryType
+              deprecated: false
               format: base64url
               knownPrimaryType: base64Url
               name:
@@ -787,6 +821,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -865,6 +900,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -939,6 +975,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:

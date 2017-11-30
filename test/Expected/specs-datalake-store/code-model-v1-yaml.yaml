@@ -7,6 +7,7 @@ documentation: Creates an Azure Data Lake Store filesystem client.
 enumTypes:
   - &ref_2
     $type: EnumType
+    deprecated: false
     modelAsExtensible: false
     modelAsString: false
     name:
@@ -14,6 +15,7 @@ enumTypes:
       raw: FileType
     underlyingType:
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -25,6 +27,7 @@ enumTypes:
         serializedName: DIRECTORY
   - &ref_7
     $type: EnumType
+    deprecated: false
     modelAsExtensible: false
     modelAsString: false
     name:
@@ -32,6 +35,7 @@ enumTypes:
       raw: ExpiryOptionType
     underlyingType:
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -47,6 +51,7 @@ enumTypes:
         serializedName: Absolute
   - &ref_8
     $type: EnumType
+    deprecated: false
     modelAsExtensible: false
     modelAsString: false
     name:
@@ -54,6 +59,7 @@ enumTypes:
       raw: AppendModeType
     underlyingType:
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -63,6 +69,7 @@ enumTypes:
         serializedName: autocreate
   - &ref_9
     $type: EnumType
+    deprecated: false
     modelAsExtensible: false
     modelAsString: false
     name:
@@ -70,6 +77,7 @@ enumTypes:
       raw: SyncFlag
     underlyingType:
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -85,6 +93,7 @@ errorTypes:
   - &ref_6
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Data Lake Store filesystem error containing a specific WebHDFS exception.
     name:
       fixed: false
@@ -93,6 +102,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the object representing the actual WebHDFS exception being returned.
@@ -102,6 +112,7 @@ errorTypes:
         modelType: &ref_5
           $type: CompositeType
           containsConstantProperties: false
+          deprecated: false
           documentation: >-
             Data Lake Store filesystem exception based on the WebHDFS definition
             for RemoteExceptions. This is a WebHDFS 'catch all' exception
@@ -113,6 +124,7 @@ errorTypes:
             - collectionFormat: none
               defaultValue:
                 fixed: false
+              deprecated: false
               documentation:
                 fixed: false
                 raw: >-
@@ -123,6 +135,7 @@ errorTypes:
               isRequired: false
               modelType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -136,6 +149,7 @@ errorTypes:
             - collectionFormat: none
               defaultValue:
                 fixed: false
+              deprecated: false
               documentation:
                 fixed: false
                 raw: >-
@@ -147,6 +161,7 @@ errorTypes:
               isRequired: false
               modelType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -173,6 +188,7 @@ hostParametersFront:
       defaultValue:
         fixed: false
         raw: azuredatalakestore.net
+      deprecated: false
       documentation:
         fixed: false
         raw: Gets the URI used as the base for all cloud service requests.
@@ -183,6 +199,7 @@ hostParametersFront:
       isRequired: true
       modelType:
         $type: PrimaryType
+        deprecated: false
         knownPrimaryType: string
         name:
           fixed: false
@@ -197,6 +214,7 @@ hostParametersFront:
     defaultValue:
       fixed: false
       raw: azuredatalakestore.net
+    deprecated: false
     documentation:
       fixed: false
       raw: Gets the URI used as the base for all cloud service requests.
@@ -208,6 +226,7 @@ hostParametersFront:
     location: path
     modelType:
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -220,6 +239,7 @@ hostParametersFront:
     defaultValue:
       fixed: false
       raw: ''
+    deprecated: false
     documentation:
       fixed: false
       raw: The Azure Data Lake Store account to execute filesystem operations on.
@@ -231,6 +251,7 @@ hostParametersFront:
     location: path
     modelType:
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -243,6 +264,7 @@ modelTypes:
   - &ref_11
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: The result of the request or operation.
     name:
       fixed: false
@@ -251,6 +273,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the result of the operation or request.
@@ -261,6 +284,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: boolean
           name:
             fixed: false
@@ -275,6 +299,7 @@ modelTypes:
   - &ref_0
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Data Lake Store file or directory Access Control List information.
     name:
       fixed: false
@@ -283,6 +308,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the list of ACLSpec entries on a file or directory.
@@ -291,8 +317,10 @@ modelTypes:
         isRequired: false
         modelType:
           $type: SequenceType
+          deprecated: false
           elementType:
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -308,6 +336,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: 'the group owner, an AAD Object ID.'
@@ -316,6 +345,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -329,6 +359,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: 'the user owner, an AAD Object ID.'
@@ -337,6 +368,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -350,6 +382,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -360,6 +393,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -374,6 +408,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the indicator of whether the sticky bit is on or off.
@@ -382,6 +417,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: boolean
           name:
             fixed: false
@@ -396,6 +432,7 @@ modelTypes:
   - &ref_16
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Data Lake Store file or directory Access Control List information.
     name:
       fixed: false
@@ -404,6 +441,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the AclStatus object for a given file or directory.
@@ -421,6 +459,7 @@ modelTypes:
   - &ref_1
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Data Lake Store content summary information
     name:
       fixed: false
@@ -429,6 +468,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the number of directories.
@@ -437,6 +477,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int64
           knownPrimaryType: long
           name:
@@ -451,6 +492,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the number of files.
@@ -459,6 +501,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int64
           knownPrimaryType: long
           name:
@@ -473,6 +516,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the number of bytes used by the content.
@@ -481,6 +525,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int64
           knownPrimaryType: long
           name:
@@ -495,6 +540,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the disk space consumed by the content.
@@ -503,6 +549,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int64
           knownPrimaryType: long
           name:
@@ -518,6 +565,7 @@ modelTypes:
   - &ref_13
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Data Lake Store filesystem content summary information response.
     name:
       fixed: false
@@ -526,6 +574,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the content summary for the specified path
@@ -543,6 +592,7 @@ modelTypes:
   - &ref_3
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Data Lake Store file or directory information.
     name:
       fixed: false
@@ -551,6 +601,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the last access time as ticks since the epoch.
@@ -559,6 +610,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int64
           knownPrimaryType: long
           name:
@@ -573,6 +625,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the block size for the file.
@@ -581,6 +634,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int64
           knownPrimaryType: long
           name:
@@ -595,6 +649,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the number of children in the directory.
@@ -603,6 +658,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int64
           knownPrimaryType: long
           name:
@@ -617,6 +673,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -629,6 +686,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int64
           knownPrimaryType: long
           name:
@@ -643,6 +701,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the group owner.
@@ -651,6 +710,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -664,6 +724,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the number of bytes in a file.
@@ -672,6 +733,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int64
           knownPrimaryType: long
           name:
@@ -686,6 +748,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the modification time as ticks since the epoch.
@@ -694,6 +757,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int64
           knownPrimaryType: long
           name:
@@ -708,6 +772,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the user who is the owner.
@@ -716,6 +781,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -729,6 +795,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the path suffix.
@@ -737,6 +804,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -750,6 +818,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the permission represented as an string.
@@ -758,6 +827,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -771,6 +841,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the type of the path object.
@@ -791,6 +862,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: 'flag to indicate if extended acls are enabled '
@@ -799,6 +871,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: boolean
           name:
             fixed: false
@@ -813,6 +886,7 @@ modelTypes:
   - &ref_4
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Data Lake Store file status list information.
     name:
       fixed: false
@@ -821,6 +895,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the object containing the list of properties of the files.
@@ -829,6 +904,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: SequenceType
+          deprecated: false
           elementType: *ref_3
           name:
             fixed: false
@@ -842,6 +918,7 @@ modelTypes:
   - &ref_12
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Data Lake Store filesystem file status list information response.
     name:
       fixed: false
@@ -850,6 +927,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the object representing the list of file statuses.
@@ -867,6 +945,7 @@ modelTypes:
   - &ref_14
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Data Lake Store filesystem file status information response.
     name:
       fixed: false
@@ -875,6 +954,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the file status object associated with the specified path.
@@ -892,6 +972,7 @@ modelTypes:
   - $type: CompositeType
     baseModelType: *ref_5
     containsConstantProperties: false
+    deprecated: false
     documentation: >-
       A WebHDFS exception thrown indicating that one more arguments is
       incorrect. Thrown when a 400 error response code is returned (bad
@@ -905,6 +986,7 @@ modelTypes:
   - $type: CompositeType
     baseModelType: *ref_5
     containsConstantProperties: false
+    deprecated: false
     documentation: >-
       A WebHDFS exception thrown indicating that the requested operation is not
       supported. Thrown when a 400 error response code is returned (bad
@@ -918,6 +1000,7 @@ modelTypes:
   - $type: CompositeType
     baseModelType: *ref_5
     containsConstantProperties: false
+    deprecated: false
     documentation: >-
       A WebHDFS exception thrown indicating that access is denied. Thrown when a
       401 error response code is returned (Unauthorized).
@@ -930,6 +1013,7 @@ modelTypes:
   - $type: CompositeType
     baseModelType: *ref_5
     containsConstantProperties: false
+    deprecated: false
     documentation: >-
       A WebHDFS exception thrown indicating there was an IO (read or write)
       error. Thrown when a 403 error response code is returned (forbidden).
@@ -942,6 +1026,7 @@ modelTypes:
   - $type: CompositeType
     baseModelType: *ref_5
     containsConstantProperties: false
+    deprecated: false
     documentation: >-
       A WebHDFS exception thrown indicating the file or folder could not be
       found. Thrown when a 404 error response code is returned (not found).
@@ -954,6 +1039,7 @@ modelTypes:
   - $type: CompositeType
     baseModelType: *ref_5
     containsConstantProperties: false
+    deprecated: false
     documentation: >-
       A WebHDFS exception thrown indicating the file or folder already exists.
       Thrown when a 403 error response code is returned (forbidden).
@@ -966,6 +1052,7 @@ modelTypes:
   - $type: CompositeType
     baseModelType: *ref_5
     containsConstantProperties: false
+    deprecated: false
     documentation: >-
       A WebHDFS exception thrown indicating the append or read is from a bad
       offset. Thrown when a 400 error response code is returned for append and
@@ -979,6 +1066,7 @@ modelTypes:
   - $type: CompositeType
     baseModelType: *ref_5
     containsConstantProperties: false
+    deprecated: false
     documentation: >-
       A WebHDFS exception thrown when an unexpected error occurs during an
       operation. Thrown when a 500 error response code is returned (Internal
@@ -992,6 +1080,7 @@ modelTypes:
   - $type: CompositeType
     baseModelType: *ref_5
     containsConstantProperties: false
+    deprecated: false
     documentation: >-
       A WebHDFS exception thrown indicating that access is denied due to
       insufficient permissions. Thrown when a 403 error response code is
@@ -1005,6 +1094,7 @@ modelTypes:
   - $type: CompositeType
     baseModelType: *ref_5
     containsConstantProperties: false
+    deprecated: false
     documentation: >-
       A WebHDFS exception thrown indicating that the request is being throttled.
       Reducing the number of requests or request size helps to mitigate this
@@ -1054,6 +1144,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1064,6 +1155,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1075,6 +1167,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1101,6 +1194,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1111,6 +1205,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: int64
               knownPrimaryType: long
               name:
@@ -1124,6 +1219,7 @@ operations:
             defaultValue:
               fixed: false
               raw: SETEXPIRY
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -1132,6 +1228,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1144,6 +1241,7 @@ operations:
               collectionFormat: none
               defaultValue:
                 fixed: false
+              deprecated: false
               documentation:
                 fixed: false
                 raw: Client Api Version.
@@ -1152,6 +1250,7 @@ operations:
               isRequired: true
               modelType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -1165,6 +1264,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -1173,6 +1273,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1233,6 +1334,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1243,6 +1345,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1254,6 +1357,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: The file contents to include when appending to the file.
@@ -1264,6 +1368,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: stream
               name:
                 fixed: false
@@ -1275,6 +1380,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1296,6 +1402,7 @@ operations:
             defaultValue:
               fixed: false
               raw: CONCURRENTAPPEND
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -1304,6 +1411,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1316,6 +1424,7 @@ operations:
             defaultValue:
               fixed: false
               raw: chunked
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1326,6 +1435,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1338,6 +1448,7 @@ operations:
             defaultValue:
               fixed: false
               raw: DATA
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1367,6 +1478,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -1375,6 +1487,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1421,6 +1534,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1431,6 +1545,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1442,6 +1557,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1452,6 +1568,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1464,6 +1581,7 @@ operations:
             defaultValue:
               fixed: false
               raw: CHECKACCESS
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -1472,6 +1590,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1484,6 +1603,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -1492,6 +1612,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1540,6 +1661,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1550,6 +1672,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1561,6 +1684,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1571,6 +1695,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: int32
               knownPrimaryType: int
               name:
@@ -1584,6 +1709,7 @@ operations:
             defaultValue:
               fixed: false
               raw: MKDIRS
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -1592,6 +1718,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1604,6 +1731,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -1612,6 +1740,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1664,6 +1793,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1674,6 +1804,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1685,6 +1816,7 @@ operations:
           - collectionFormat: csv
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1696,8 +1828,10 @@ operations:
             location: query
             modelType:
               $type: SequenceType
+              deprecated: false
               elementType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -1712,6 +1846,7 @@ operations:
             defaultValue:
               fixed: false
               raw: CONCAT
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -1720,6 +1855,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1732,6 +1868,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -1740,6 +1877,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1794,6 +1932,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1804,6 +1943,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1815,6 +1955,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1831,6 +1972,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1842,6 +1984,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1855,6 +1998,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: stream
               name:
                 fixed: false
@@ -1867,6 +2011,7 @@ operations:
             defaultValue:
               fixed: false
               raw: MSCONCAT
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -1875,6 +2020,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1887,6 +2033,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -1895,6 +2042,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1961,6 +2109,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1971,6 +2120,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1982,6 +2132,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Gets or sets the number of items to return. Optional.
@@ -1990,6 +2141,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: int32
               knownPrimaryType: int
               name:
@@ -2002,6 +2154,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2014,6 +2167,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2025,6 +2179,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2037,6 +2192,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2048,6 +2204,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2059,6 +2216,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -2071,6 +2229,7 @@ operations:
             defaultValue:
               fixed: false
               raw: LISTSTATUS
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -2079,6 +2238,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2091,6 +2251,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -2099,6 +2260,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2152,6 +2314,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2162,6 +2325,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2174,6 +2338,7 @@ operations:
             defaultValue:
               fixed: false
               raw: GETCONTENTSUMMARY
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -2182,6 +2347,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2194,6 +2360,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -2202,6 +2369,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2264,6 +2432,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2274,6 +2443,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2285,6 +2455,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2296,6 +2467,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -2308,6 +2480,7 @@ operations:
             defaultValue:
               fixed: false
               raw: GETFILESTATUS
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -2316,6 +2489,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2328,6 +2502,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -2336,6 +2511,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2389,6 +2565,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2399,6 +2576,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2410,6 +2588,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2420,6 +2599,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: int64
               knownPrimaryType: long
               name:
@@ -2432,6 +2612,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: The byte offset to start reading data from.
@@ -2440,6 +2621,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: int64
               knownPrimaryType: long
               name:
@@ -2452,6 +2634,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2463,6 +2646,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: uuid
               knownPrimaryType: uuid
               name:
@@ -2476,6 +2660,7 @@ operations:
             defaultValue:
               fixed: false
               raw: 'true'
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2488,6 +2673,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2500,6 +2686,7 @@ operations:
             defaultValue:
               fixed: false
               raw: OPEN
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -2508,6 +2695,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2520,6 +2708,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -2528,6 +2717,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2543,6 +2733,7 @@ operations:
           OK:
             body: &ref_15
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: stream
               name:
                 fixed: false
@@ -2589,6 +2780,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2599,6 +2791,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2610,6 +2803,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: The file contents to include when appending to the file.
@@ -2620,6 +2814,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: stream
               name:
                 fixed: false
@@ -2631,6 +2826,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2641,6 +2837,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: int64
               knownPrimaryType: long
               name:
@@ -2654,6 +2851,7 @@ operations:
             defaultValue:
               fixed: false
               raw: CLOSE
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2682,6 +2880,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2693,6 +2892,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: uuid
               knownPrimaryType: uuid
               name:
@@ -2705,6 +2905,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2717,6 +2918,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: uuid
               knownPrimaryType: uuid
               name:
@@ -2730,6 +2932,7 @@ operations:
             defaultValue:
               fixed: false
               raw: 'true'
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2742,6 +2945,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2754,6 +2958,7 @@ operations:
             defaultValue:
               fixed: false
               raw: APPEND
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -2762,6 +2967,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2774,6 +2980,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -2782,6 +2989,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2838,6 +3046,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2848,6 +3057,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2859,6 +3069,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2872,6 +3083,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: stream
               name:
                 fixed: false
@@ -2883,6 +3095,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: The indication of if the file should be overwritten.
@@ -2891,6 +3104,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -2903,6 +3117,7 @@ operations:
             defaultValue:
               fixed: false
               raw: CLOSE
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2930,6 +3145,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2941,6 +3157,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: uuid
               knownPrimaryType: uuid
               name:
@@ -2953,6 +3170,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2964,6 +3182,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: int32
               knownPrimaryType: int
               name:
@@ -2977,6 +3196,7 @@ operations:
             defaultValue:
               fixed: false
               raw: 'true'
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2989,6 +3209,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3001,6 +3222,7 @@ operations:
             defaultValue:
               fixed: false
               raw: CREATE
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -3009,6 +3231,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3021,6 +3244,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -3029,6 +3253,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3075,6 +3300,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -3085,6 +3311,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3096,6 +3323,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -3106,6 +3334,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3118,6 +3347,7 @@ operations:
             defaultValue:
               fixed: false
               raw: SETACL
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -3126,6 +3356,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3138,6 +3369,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -3146,6 +3378,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3194,6 +3427,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -3204,6 +3438,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3215,6 +3450,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -3225,6 +3461,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3237,6 +3474,7 @@ operations:
             defaultValue:
               fixed: false
               raw: MODIFYACLENTRIES
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -3245,6 +3483,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3257,6 +3496,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -3265,6 +3505,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3313,6 +3554,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -3323,6 +3565,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3334,6 +3577,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -3344,6 +3588,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3356,6 +3601,7 @@ operations:
             defaultValue:
               fixed: false
               raw: REMOVEACLENTRIES
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -3364,6 +3610,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3376,6 +3623,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -3384,6 +3632,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3431,6 +3680,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -3441,6 +3691,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3453,6 +3704,7 @@ operations:
             defaultValue:
               fixed: false
               raw: REMOVEDEFAULTACL
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -3461,6 +3713,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3473,6 +3726,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -3481,6 +3735,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3528,6 +3783,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -3538,6 +3794,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3550,6 +3807,7 @@ operations:
             defaultValue:
               fixed: false
               raw: REMOVEACL
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -3558,6 +3816,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3570,6 +3829,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -3578,6 +3838,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3634,6 +3895,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -3644,6 +3906,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3655,6 +3918,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -3667,6 +3931,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -3679,6 +3944,7 @@ operations:
             defaultValue:
               fixed: false
               raw: GETACLSTATUS
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -3687,6 +3953,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3699,6 +3966,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -3707,6 +3975,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3757,6 +4026,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -3767,6 +4037,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3778,6 +4049,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: The optional switch indicating if the delete should be recursive
@@ -3786,6 +4058,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -3798,6 +4071,7 @@ operations:
             defaultValue:
               fixed: false
               raw: DELETE
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -3806,6 +4080,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3818,6 +4093,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -3826,6 +4102,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3876,6 +4153,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -3886,6 +4164,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3897,6 +4176,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: The path to move/rename the file or folder to
@@ -3905,6 +4185,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3917,6 +4198,7 @@ operations:
             defaultValue:
               fixed: false
               raw: RENAME
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -3925,6 +4207,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3937,6 +4220,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -3945,6 +4229,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3994,6 +4279,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -4004,6 +4290,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -4015,6 +4302,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -4025,6 +4313,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -4036,6 +4325,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -4046,6 +4336,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -4058,6 +4349,7 @@ operations:
             defaultValue:
               fixed: false
               raw: SETOWNER
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -4066,6 +4358,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -4078,6 +4371,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -4086,6 +4380,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -4132,6 +4427,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -4142,6 +4438,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -4153,6 +4450,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -4163,6 +4461,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -4175,6 +4474,7 @@ operations:
             defaultValue:
               fixed: false
               raw: SETPERMISSION
+            deprecated: false
             documentation:
               fixed: false
               raw: The constant value for the operation.
@@ -4183,6 +4483,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -4195,6 +4496,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Client Api Version.
@@ -4203,6 +4505,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false

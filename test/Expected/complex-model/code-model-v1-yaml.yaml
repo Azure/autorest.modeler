@@ -6,6 +6,7 @@ errorTypes:
   - &ref_1
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -13,6 +14,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -20,6 +22,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -34,6 +37,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -41,6 +45,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -56,6 +61,7 @@ modelTypes:
   - &ref_0
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: The product documentation.
     name:
       fixed: false
@@ -64,6 +70,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -75,6 +82,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -88,6 +96,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Description of product.
@@ -96,6 +105,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -109,6 +119,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Display name of product.
@@ -117,6 +128,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -131,6 +143,7 @@ modelTypes:
         defaultValue:
           fixed: false
           raw: '100'
+        deprecated: false
         documentation:
           fixed: false
           raw: 'Capacity of product. For example, 4 people.'
@@ -139,6 +152,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -152,6 +166,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Image URL representing the product.
@@ -160,6 +175,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -174,6 +190,7 @@ modelTypes:
   - &ref_5
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: CatalogDictionary
@@ -181,6 +198,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Dictionary of products
@@ -189,6 +207,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: DictionaryType
+          deprecated: false
           name:
             fixed: false
           supportsAdditionalProperties: false
@@ -203,6 +222,7 @@ modelTypes:
   - &ref_2
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: CatalogArray
@@ -210,6 +230,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Array of products
@@ -218,6 +239,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: SequenceType
+          deprecated: false
           elementType: *ref_0
           name:
             fixed: false
@@ -231,6 +253,7 @@ modelTypes:
   - &ref_6
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: CatalogArrayOfDictionary
@@ -238,6 +261,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Array of dictionary of products
@@ -246,8 +270,10 @@ modelTypes:
         isRequired: false
         modelType:
           $type: SequenceType
+          deprecated: false
           elementType:
             $type: DictionaryType
+            deprecated: false
             name:
               fixed: false
             supportsAdditionalProperties: false
@@ -264,6 +290,7 @@ modelTypes:
   - &ref_3
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: CatalogDictionaryOfArray
@@ -271,6 +298,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Dictionary of Array of product
@@ -279,11 +307,13 @@ modelTypes:
         isRequired: false
         modelType:
           $type: DictionaryType
+          deprecated: false
           name:
             fixed: false
           supportsAdditionalProperties: false
           valueType:
             $type: SequenceType
+            deprecated: false
             elementType: *ref_0
             name:
               fixed: false
@@ -324,6 +354,7 @@ operations:
               defaultValue:
                 fixed: false
                 raw: '123456'
+              deprecated: false
               documentation:
                 fixed: false
                 raw: Subscription ID.
@@ -332,6 +363,7 @@ operations:
               isRequired: true
               modelType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -346,6 +378,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '123456'
+            deprecated: false
             documentation:
               fixed: false
               raw: Subscription ID.
@@ -354,6 +387,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -365,6 +399,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Resource Group ID.
@@ -373,6 +408,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -386,6 +422,7 @@ operations:
               defaultValue:
                 fixed: false
                 raw: 2014-04-01-preview
+              deprecated: false
               documentation:
                 fixed: false
                 raw: API ID.
@@ -394,6 +431,7 @@ operations:
               isRequired: true
               modelType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -408,6 +446,7 @@ operations:
             defaultValue:
               fixed: false
               raw: 2014-04-01-preview
+            deprecated: false
             documentation:
               fixed: false
               raw: API ID.
@@ -416,6 +455,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -458,6 +498,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Subscription ID.
@@ -466,6 +507,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -477,6 +519,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Resource Group ID.
@@ -485,6 +528,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -496,6 +540,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: body Parameter
@@ -514,6 +559,7 @@ operations:
             defaultValue:
               fixed: false
               raw: 2014-04-01-preview
+            deprecated: false
             documentation:
               fixed: false
               raw: API ID.
@@ -522,6 +568,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -564,6 +611,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Subscription ID.
@@ -572,6 +620,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -583,6 +632,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Resource Group ID.
@@ -591,6 +641,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -602,6 +653,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: body Parameter
@@ -620,6 +672,7 @@ operations:
             defaultValue:
               fixed: false
               raw: 2014-04-01-preview
+            deprecated: false
             documentation:
               fixed: false
               raw: API ID.
@@ -628,6 +681,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false

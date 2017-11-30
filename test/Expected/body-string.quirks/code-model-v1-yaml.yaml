@@ -5,6 +5,7 @@ documentation: Test Infrastructure for AutoRest Swagger BAT
 enumTypes:
   - &ref_9
     $type: EnumType
+    deprecated: false
     modelAsExtensible: false
     modelAsString: false
     name:
@@ -12,6 +13,7 @@ enumTypes:
       raw: Colors
     underlyingType:
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -27,6 +29,7 @@ errorTypes:
   - &ref_0
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -34,6 +37,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -41,6 +45,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -55,6 +60,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -62,6 +68,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -78,6 +85,7 @@ modelTypes:
   - &ref_10
     $type: CompositeType
     containsConstantProperties: true
+    deprecated: false
     name:
       fixed: false
       raw: RefColorConstant
@@ -86,6 +94,7 @@ modelTypes:
         defaultValue:
           fixed: false
           raw: green-color
+        deprecated: false
         documentation:
           fixed: false
           raw: Referenced Color Constant Description.
@@ -98,6 +107,7 @@ modelTypes:
         isRequired: true
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -111,6 +121,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Sample string.
@@ -119,6 +130,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -156,6 +168,7 @@ operations:
           OK:
             body: &ref_1
               $type: EnumType
+              deprecated: false
               modelAsExtensible: false
               modelAsString: true
               name:
@@ -163,6 +176,7 @@ operations:
                 raw: ''
               underlyingType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -195,6 +209,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -204,6 +219,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -243,6 +259,7 @@ operations:
           OK:
             body: &ref_2
               $type: EnumType
+              deprecated: false
               modelAsExtensible: false
               modelAsString: true
               name:
@@ -250,6 +267,7 @@ operations:
                 raw: ''
               underlyingType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -283,6 +301,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -292,6 +311,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -333,6 +353,7 @@ operations:
           OK:
             body: &ref_3
               $type: EnumType
+              deprecated: false
               modelAsExtensible: false
               modelAsString: true
               name:
@@ -340,6 +361,7 @@ operations:
                 raw: ''
               underlyingType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -377,6 +399,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -386,6 +409,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -428,6 +452,7 @@ operations:
           OK:
             body: &ref_4
               $type: EnumType
+              deprecated: false
               modelAsExtensible: false
               modelAsString: true
               name:
@@ -435,6 +460,7 @@ operations:
                 raw: ''
               underlyingType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -471,6 +497,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -480,6 +507,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -519,6 +547,7 @@ operations:
           OK:
             body: &ref_5
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -550,6 +579,7 @@ operations:
           OK:
             body: &ref_6
               $type: PrimaryType
+              deprecated: false
               format: base64url
               knownPrimaryType: base64Url
               name:
@@ -582,6 +612,7 @@ operations:
           OK:
             body: &ref_7
               $type: PrimaryType
+              deprecated: false
               format: base64url
               knownPrimaryType: base64Url
               name:
@@ -613,6 +644,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -622,6 +654,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: base64url
               knownPrimaryType: base64Url
               name:
@@ -662,6 +695,7 @@ operations:
           OK:
             body: &ref_8
               $type: PrimaryType
+              deprecated: false
               format: base64url
               knownPrimaryType: base64Url
               name:
@@ -730,6 +764,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -802,6 +837,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -870,6 +906,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:

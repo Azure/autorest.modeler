@@ -6,6 +6,7 @@ errorTypes:
   - &ref_0
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -13,6 +14,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -20,6 +22,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -34,6 +37,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -41,6 +45,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -77,6 +82,7 @@ operations:
           - collectionFormat: multi
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: a null array of string using the multi-array format
@@ -85,8 +91,10 @@ operations:
             location: query
             modelType:
               $type: SequenceType
+              deprecated: false
               elementType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -125,6 +133,7 @@ operations:
           - collectionFormat: multi
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: 'an empty array [] of string using the multi-array format'
@@ -133,8 +142,10 @@ operations:
             location: query
             modelType:
               $type: SequenceType
+              deprecated: false
               elementType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -175,6 +186,7 @@ operations:
           - collectionFormat: multi
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -185,8 +197,10 @@ operations:
             location: query
             modelType:
               $type: SequenceType
+              deprecated: false
               elementType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false

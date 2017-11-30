@@ -6,6 +6,7 @@ errorTypes:
   - &ref_0
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -13,6 +14,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -20,6 +22,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -34,6 +37,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -41,6 +45,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -56,6 +61,7 @@ modelTypes:
   - &ref_36
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Widget
@@ -63,6 +69,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -70,6 +77,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: int
           name:
             fixed: false
@@ -83,6 +91,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -90,6 +99,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -128,11 +138,13 @@ operations:
           OK:
             body: &ref_1
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: int
                 name:
                   fixed: false
@@ -164,11 +176,13 @@ operations:
           OK:
             body: &ref_2
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: int
                 name:
                   fixed: false
@@ -199,6 +213,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -208,11 +223,13 @@ operations:
             location: body
             modelType:
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -252,11 +269,13 @@ operations:
           OK:
             body: &ref_3
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -288,11 +307,13 @@ operations:
           OK:
             body: &ref_4
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -324,11 +345,13 @@ operations:
           OK:
             body: &ref_5
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -360,11 +383,13 @@ operations:
           OK:
             body: &ref_6
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -398,11 +423,13 @@ operations:
           OK:
             body: &ref_7
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: boolean
                 name:
                   fixed: false
@@ -435,6 +462,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -444,11 +472,13 @@ operations:
             location: body
             modelType:
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: boolean
                 name:
                   fixed: false
@@ -488,11 +518,13 @@ operations:
           OK:
             body: &ref_8
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: boolean
                 name:
                   fixed: false
@@ -524,11 +556,13 @@ operations:
           OK:
             body: &ref_9
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: boolean
                 name:
                   fixed: false
@@ -560,11 +594,13 @@ operations:
           OK:
             body: &ref_10
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: int
                 name:
                   fixed: false
@@ -595,6 +631,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -604,11 +641,13 @@ operations:
             location: body
             modelType:
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: int
                 name:
                   fixed: false
@@ -648,11 +687,13 @@ operations:
           OK:
             body: &ref_11
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: int
                 name:
                   fixed: false
@@ -684,11 +725,13 @@ operations:
           OK:
             body: &ref_12
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: int
                 name:
                   fixed: false
@@ -720,11 +763,13 @@ operations:
           OK:
             body: &ref_13
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: int64
                 knownPrimaryType: long
                 name:
@@ -756,6 +801,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -765,11 +811,13 @@ operations:
             location: body
             modelType:
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: int64
                 knownPrimaryType: long
                 name:
@@ -810,11 +858,13 @@ operations:
           OK:
             body: &ref_14
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: int64
                 knownPrimaryType: long
                 name:
@@ -847,11 +897,13 @@ operations:
           OK:
             body: &ref_15
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: int64
                 knownPrimaryType: long
                 name:
@@ -884,11 +936,13 @@ operations:
           OK:
             body: &ref_16
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: float
                 knownPrimaryType: double
                 name:
@@ -920,6 +974,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -929,11 +984,13 @@ operations:
             location: body
             modelType:
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: float
                 knownPrimaryType: double
                 name:
@@ -974,11 +1031,13 @@ operations:
           OK:
             body: &ref_17
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: float
                 knownPrimaryType: double
                 name:
@@ -1011,11 +1070,13 @@ operations:
           OK:
             body: &ref_18
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: float
                 knownPrimaryType: double
                 name:
@@ -1048,11 +1109,13 @@ operations:
           OK:
             body: &ref_19
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: double
                 knownPrimaryType: double
                 name:
@@ -1084,6 +1147,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -1093,11 +1157,13 @@ operations:
             location: body
             modelType:
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: double
                 knownPrimaryType: double
                 name:
@@ -1138,11 +1204,13 @@ operations:
           OK:
             body: &ref_20
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: double
                 knownPrimaryType: double
                 name:
@@ -1175,11 +1243,13 @@ operations:
           OK:
             body: &ref_21
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: double
                 knownPrimaryType: double
                 name:
@@ -1212,11 +1282,13 @@ operations:
           OK:
             body: &ref_22
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -1247,6 +1319,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -1256,11 +1329,13 @@ operations:
             location: body
             modelType:
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -1300,11 +1375,13 @@ operations:
           OK:
             body: &ref_23
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -1336,11 +1413,13 @@ operations:
           OK:
             body: &ref_24
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -1374,11 +1453,13 @@ operations:
           OK:
             body: &ref_25
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: date
                 knownPrimaryType: date
                 name:
@@ -1412,6 +1493,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -1421,11 +1503,13 @@ operations:
             location: body
             modelType:
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: date
                 knownPrimaryType: date
                 name:
@@ -1468,11 +1552,13 @@ operations:
           OK:
             body: &ref_26
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: date
                 knownPrimaryType: date
                 name:
@@ -1505,11 +1591,13 @@ operations:
           OK:
             body: &ref_27
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: date
                 knownPrimaryType: date
                 name:
@@ -1544,11 +1632,13 @@ operations:
           OK:
             body: &ref_28
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: date-time
                 knownPrimaryType: dateTime
                 name:
@@ -1582,6 +1672,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -1591,11 +1682,13 @@ operations:
             location: body
             modelType:
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: date-time
                 knownPrimaryType: dateTime
                 name:
@@ -1636,11 +1729,13 @@ operations:
           OK:
             body: &ref_29
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: date-time
                 knownPrimaryType: dateTime
                 name:
@@ -1675,11 +1770,13 @@ operations:
           OK:
             body: &ref_30
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: date-time
                 knownPrimaryType: dateTime
                 name:
@@ -1715,11 +1812,13 @@ operations:
           OK:
             body: &ref_31
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: date-time-rfc1123
                 knownPrimaryType: dateTimeRfc1123
                 name:
@@ -1753,6 +1852,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -1762,11 +1862,13 @@ operations:
             location: body
             modelType:
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: date-time-rfc1123
                 knownPrimaryType: dateTimeRfc1123
                 name:
@@ -1809,11 +1911,13 @@ operations:
           OK:
             body: &ref_32
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: duration
                 knownPrimaryType: timeSpan
                 name:
@@ -1845,6 +1949,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -1854,11 +1959,13 @@ operations:
             location: body
             modelType:
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: duration
                 knownPrimaryType: timeSpan
                 name:
@@ -1901,11 +2008,13 @@ operations:
           OK:
             body: &ref_33
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: byte
                 knownPrimaryType: byteArray
                 name:
@@ -1939,6 +2048,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -1948,11 +2058,13 @@ operations:
             location: body
             modelType:
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: byte
                 knownPrimaryType: byteArray
                 name:
@@ -1995,11 +2107,13 @@ operations:
           OK:
             body: &ref_34
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: byte
                 knownPrimaryType: byteArray
                 name:
@@ -2034,11 +2148,13 @@ operations:
           OK:
             body: &ref_35
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: PrimaryType
+                deprecated: false
                 format: base64url
                 knownPrimaryType: base64Url
                 name:
@@ -2071,6 +2187,7 @@ operations:
           OK:
             body: &ref_37
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
@@ -2102,6 +2219,7 @@ operations:
           OK:
             body: &ref_38
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
@@ -2135,6 +2253,7 @@ operations:
           OK:
             body: &ref_39
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
@@ -2168,6 +2287,7 @@ operations:
           OK:
             body: &ref_40
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
@@ -2202,6 +2322,7 @@ operations:
           OK:
             body: &ref_41
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
@@ -2235,6 +2356,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -2244,6 +2366,7 @@ operations:
             location: body
             modelType:
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
@@ -2283,13 +2406,16 @@ operations:
           OK:
             body: &ref_42
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: SequenceType
+                deprecated: false
                 elementType:
                   $type: PrimaryType
+                  deprecated: false
                   knownPrimaryType: string
                   name:
                     fixed: false
@@ -2323,13 +2449,16 @@ operations:
           OK:
             body: &ref_43
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: SequenceType
+                deprecated: false
                 elementType:
                   $type: PrimaryType
+                  deprecated: false
                   knownPrimaryType: string
                   name:
                     fixed: false
@@ -2365,13 +2494,16 @@ operations:
           OK:
             body: &ref_44
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: SequenceType
+                deprecated: false
                 elementType:
                   $type: PrimaryType
+                  deprecated: false
                   knownPrimaryType: string
                   name:
                     fixed: false
@@ -2407,13 +2539,16 @@ operations:
           OK:
             body: &ref_45
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: SequenceType
+                deprecated: false
                 elementType:
                   $type: PrimaryType
+                  deprecated: false
                   knownPrimaryType: string
                   name:
                     fixed: false
@@ -2449,13 +2584,16 @@ operations:
           OK:
             body: &ref_46
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: SequenceType
+                deprecated: false
                 elementType:
                   $type: PrimaryType
+                  deprecated: false
                   knownPrimaryType: string
                   name:
                     fixed: false
@@ -2490,6 +2628,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -2499,13 +2638,16 @@ operations:
             location: body
             modelType:
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: SequenceType
+                deprecated: false
                 elementType:
                   $type: PrimaryType
+                  deprecated: false
                   knownPrimaryType: string
                   name:
                     fixed: false
@@ -2547,16 +2689,19 @@ operations:
           OK:
             body: &ref_47
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: DictionaryType
+                deprecated: false
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
                   $type: PrimaryType
+                  deprecated: false
                   knownPrimaryType: string
                   name:
                     fixed: false
@@ -2590,16 +2735,19 @@ operations:
           OK:
             body: &ref_48
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: DictionaryType
+                deprecated: false
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
                   $type: PrimaryType
+                  deprecated: false
                   knownPrimaryType: string
                   name:
                     fixed: false
@@ -2634,16 +2782,19 @@ operations:
           OK:
             body: &ref_49
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: DictionaryType
+                deprecated: false
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
                   $type: PrimaryType
+                  deprecated: false
                   knownPrimaryType: string
                   name:
                     fixed: false
@@ -2678,16 +2829,19 @@ operations:
           OK:
             body: &ref_50
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: DictionaryType
+                deprecated: false
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
                   $type: PrimaryType
+                  deprecated: false
                   knownPrimaryType: string
                   name:
                     fixed: false
@@ -2723,16 +2877,19 @@ operations:
           OK:
             body: &ref_51
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: DictionaryType
+                deprecated: false
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
                   $type: PrimaryType
+                  deprecated: false
                   knownPrimaryType: string
                   name:
                     fixed: false
@@ -2767,6 +2924,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -2776,16 +2934,19 @@ operations:
             location: body
             modelType:
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
                 $type: DictionaryType
+                deprecated: false
                 name:
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
                   $type: PrimaryType
+                  deprecated: false
                   knownPrimaryType: string
                   name:
                     fixed: false

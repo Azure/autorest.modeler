@@ -210,30 +210,30 @@ namespace AutoRest.Modeler
             return type;
         }
 
-        public static void PopulateParameter(Property parameter, SwaggerObject swaggerObject)
+        public static void PopulateProperty(Property property, SwaggerObject swaggerObject)
         {
             if (swaggerObject == null)
             {
                 throw new ArgumentNullException("swaggerObject");
             }
-            if (parameter == null)
+            if (property == null)
             {
-                throw new ArgumentNullException("parameter");
+                throw new ArgumentNullException("property");
             }
-            parameter.DefaultValue = swaggerObject.Default;
+            property.DefaultValue = swaggerObject.Default;
 
-            if (IsSwaggerObjectConstant(swaggerObject, parameter.IsRequired))
+            if (IsSwaggerObjectConstant(swaggerObject, property.IsRequired))
             {
-                parameter.DefaultValue = swaggerObject.Enum[0];
-                parameter.IsConstant = true;
+                property.DefaultValue = swaggerObject.Enum[0];
+                property.IsConstant = true;
             }
 
-            parameter.Documentation = swaggerObject.Description;
+            property.Documentation = swaggerObject.Description;
 
             // tag the paramter with all the extensions from the swagger object
-            parameter.Extensions.AddRange(swaggerObject.Extensions);
+            property.Extensions.AddRange(swaggerObject.Extensions);
 
-            SetConstraints(parameter.Constraints, swaggerObject);
+            SetConstraints(property.Constraints, swaggerObject);
         }
 
         public static void PopulateParameter(IVariable parameter, SwaggerParameter swaggerObject)

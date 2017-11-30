@@ -5,6 +5,7 @@ documentation: Test Infrastructure for AutoRest Swagger BAT
 enumTypes:
   - $id: '11'
     $type: EnumType
+    deprecated: false
     modelAsExtensible: false
     modelAsString: false
     name:
@@ -13,6 +14,7 @@ enumTypes:
     underlyingType:
       $id: '12'
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -30,6 +32,7 @@ modelTypes:
   - $id: '1'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -38,6 +41,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -46,6 +50,7 @@ modelTypes:
         modelType:
           $id: '3'
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -61,6 +66,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -69,6 +75,7 @@ modelTypes:
         modelType:
           $id: '5'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -83,6 +90,7 @@ modelTypes:
   - $id: '6'
     $type: CompositeType
     containsConstantProperties: true
+    deprecated: false
     name:
       fixed: false
       raw: RefColorConstant
@@ -92,6 +100,7 @@ modelTypes:
         defaultValue:
           fixed: false
           raw: green-color
+        deprecated: false
         documentation:
           fixed: false
           raw: Referenced Color Constant Description.
@@ -105,6 +114,7 @@ modelTypes:
         modelType:
           $id: '8'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -119,6 +129,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Sample string.
@@ -128,6 +139,7 @@ modelTypes:
         modelType:
           $id: '10'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -167,6 +179,7 @@ operations:
             body:
               $id: '13'
               $type: EnumType
+              deprecated: false
               modelAsExtensible: false
               modelAsString: true
               name:
@@ -175,6 +188,7 @@ operations:
               underlyingType:
                 $id: '14'
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -210,6 +224,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -220,6 +235,7 @@ operations:
             modelType:
               $id: '16'
               $type: EnumType
+              deprecated: false
               modelAsExtensible: false
               modelAsString: true
               name:
@@ -228,6 +244,7 @@ operations:
               underlyingType:
                 $id: '17'
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -271,6 +288,7 @@ operations:
             body:
               $id: '18'
               $type: EnumType
+              deprecated: false
               modelAsExtensible: false
               modelAsString: true
               name:
@@ -279,6 +297,7 @@ operations:
               underlyingType:
                 $id: '19'
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -316,6 +335,7 @@ operations:
             defaultValue:
               fixed: false
               raw: ''
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -326,6 +346,7 @@ operations:
             modelType:
               $id: '21'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -369,6 +390,7 @@ operations:
             body:
               $id: '22'
               $type: EnumType
+              deprecated: false
               modelAsExtensible: false
               modelAsString: true
               name:
@@ -377,6 +399,7 @@ operations:
               underlyingType:
                 $id: '23'
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -419,6 +442,7 @@ operations:
               fixed: false
               raw: >-
                 啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -429,6 +453,7 @@ operations:
             modelType:
               $id: '25'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -473,6 +498,7 @@ operations:
             body:
               $id: '26'
               $type: EnumType
+              deprecated: false
               modelAsExtensible: false
               modelAsString: true
               name:
@@ -481,6 +507,7 @@ operations:
               underlyingType:
                 $id: '27'
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -521,6 +548,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '    Now is the time for all good men to come to the aid of their country    '
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -531,6 +559,7 @@ operations:
             modelType:
               $id: '29'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -572,6 +601,7 @@ operations:
             body:
               $id: '30'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -606,6 +636,7 @@ operations:
             body:
               $id: '31'
               $type: PrimaryType
+              deprecated: false
               format: base64url
               knownPrimaryType: base64Url
               name:
@@ -641,6 +672,7 @@ operations:
             body:
               $id: '32'
               $type: PrimaryType
+              deprecated: false
               format: base64url
               knownPrimaryType: base64Url
               name:
@@ -675,6 +707,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -685,6 +718,7 @@ operations:
             modelType:
               $id: '34'
               $type: PrimaryType
+              deprecated: false
               format: base64url
               knownPrimaryType: base64Url
               name:
@@ -727,6 +761,7 @@ operations:
             body:
               $id: '35'
               $type: PrimaryType
+              deprecated: false
               format: base64url
               knownPrimaryType: base64Url
               name:
@@ -801,6 +836,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -879,6 +915,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -953,6 +990,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:

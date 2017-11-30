@@ -8,6 +8,7 @@ modelTypes:
   - $id: '1'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -16,6 +17,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -24,6 +26,7 @@ modelTypes:
         modelType:
           $id: '3'
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -39,6 +42,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -47,6 +51,7 @@ modelTypes:
         modelType:
           $id: '5'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -83,6 +88,7 @@ operations:
             collectionFormat: multi
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: a null array of string using the multi-array format
@@ -92,9 +98,11 @@ operations:
             modelType:
               $id: '7'
               $type: SequenceType
+              deprecated: false
               elementType:
                 $id: '8'
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -135,6 +143,7 @@ operations:
             collectionFormat: multi
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: 'an empty array [] of string using the multi-array format'
@@ -144,9 +153,11 @@ operations:
             modelType:
               $id: '10'
               $type: SequenceType
+              deprecated: false
               elementType:
                 $id: '11'
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -189,6 +200,7 @@ operations:
             collectionFormat: multi
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -200,9 +212,11 @@ operations:
             modelType:
               $id: '13'
               $type: SequenceType
+              deprecated: false
               elementType:
                 $id: '14'
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false

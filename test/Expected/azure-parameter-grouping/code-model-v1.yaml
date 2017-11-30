@@ -8,6 +8,7 @@ modelTypes:
   - $id: '1'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -16,6 +17,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -24,6 +26,7 @@ modelTypes:
         modelType:
           $id: '3'
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -39,6 +42,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -47,6 +51,7 @@ modelTypes:
         modelType:
           $id: '5'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -85,6 +90,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -96,6 +102,7 @@ operations:
             modelType:
               $id: '7'
               $type: PrimaryType
+              deprecated: false
               format: int32
               knownPrimaryType: int
               name:
@@ -109,6 +116,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -119,6 +127,7 @@ operations:
             modelType:
               $id: '9'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -132,6 +141,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '30'
+            deprecated: false
             documentation:
               fixed: false
               raw: Query parameter with default
@@ -143,6 +153,7 @@ operations:
             modelType:
               $id: '11'
               $type: PrimaryType
+              deprecated: false
               format: int32
               knownPrimaryType: int
               name:
@@ -156,6 +167,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Path parameter
@@ -168,6 +180,7 @@ operations:
             modelType:
               $id: '13'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -206,6 +219,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -216,6 +230,7 @@ operations:
             modelType:
               $id: '15'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -229,6 +244,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '30'
+            deprecated: false
             documentation:
               fixed: false
               raw: Query parameter with default
@@ -240,6 +256,7 @@ operations:
             modelType:
               $id: '17'
               $type: PrimaryType
+              deprecated: false
               format: int32
               knownPrimaryType: int
               name:
@@ -279,6 +296,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -290,6 +308,7 @@ operations:
             modelType:
               $id: '19'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -303,6 +322,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '30'
+            deprecated: false
             documentation:
               fixed: false
               raw: Query parameter with default
@@ -315,6 +335,7 @@ operations:
             modelType:
               $id: '21'
               $type: PrimaryType
+              deprecated: false
               format: int32
               knownPrimaryType: int
               name:
@@ -328,6 +349,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -339,6 +361,7 @@ operations:
             modelType:
               $id: '23'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -352,6 +375,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '30'
+            deprecated: false
             documentation:
               fixed: false
               raw: Query parameter with default
@@ -364,6 +388,7 @@ operations:
             modelType:
               $id: '25'
               $type: PrimaryType
+              deprecated: false
               format: int32
               knownPrimaryType: int
               name:
@@ -403,6 +428,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -414,6 +440,7 @@ operations:
             modelType:
               $id: '27'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -427,6 +454,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '30'
+            deprecated: false
             documentation:
               fixed: false
               raw: Query parameter with default
@@ -439,6 +467,7 @@ operations:
             modelType:
               $id: '29'
               $type: PrimaryType
+              deprecated: false
               format: int32
               knownPrimaryType: int
               name:

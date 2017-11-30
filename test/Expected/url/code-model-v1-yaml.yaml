@@ -5,6 +5,7 @@ documentation: Test Infrastructure for AutoRest
 enumTypes:
   - &ref_1
     $type: EnumType
+    deprecated: false
     modelAsExtensible: false
     modelAsString: false
     name:
@@ -12,6 +13,7 @@ enumTypes:
       raw: UriColor
     underlyingType:
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -27,6 +29,7 @@ errorTypes:
   - &ref_0
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -34,6 +37,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -41,6 +45,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -55,6 +60,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -62,6 +68,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -99,6 +106,7 @@ operations:
             defaultValue:
               fixed: false
               raw: 'true'
+            deprecated: false
             documentation:
               fixed: false
               raw: true boolean value
@@ -107,6 +115,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -144,6 +153,7 @@ operations:
             defaultValue:
               fixed: false
               raw: 'false'
+            deprecated: false
             documentation:
               fixed: false
               raw: false boolean value
@@ -152,6 +162,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -189,6 +200,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '1000000'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''1000000'' integer value'
@@ -197,6 +209,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: int
               name:
                 fixed: false
@@ -234,6 +247,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '-1000000'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''-1000000'' integer value'
@@ -242,6 +256,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: int
               name:
                 fixed: false
@@ -279,6 +294,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '10000000000'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''10000000000'' 64 bit integer value'
@@ -287,6 +303,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: int64
               knownPrimaryType: long
               name:
@@ -325,6 +342,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '-10000000000'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''-10000000000'' 64 bit integer value'
@@ -333,6 +351,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: int64
               knownPrimaryType: long
               name:
@@ -371,6 +390,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '103400000000000000000'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''1.034E+20''numeric value'
@@ -379,6 +399,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: double
               name:
                 fixed: false
@@ -416,6 +437,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '-1.034e-20'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''-1.034E-20''numeric value'
@@ -424,6 +446,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: double
               name:
                 fixed: false
@@ -461,6 +484,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '9999999.999'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''9999999.999''numeric value'
@@ -469,6 +493,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: double
               knownPrimaryType: double
               name:
@@ -507,6 +532,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '-9999999.999'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''-9999999.999''numeric value'
@@ -515,6 +541,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: double
               knownPrimaryType: double
               name:
@@ -553,6 +580,7 @@ operations:
             defaultValue:
               fixed: false
               raw: 啊齄丂狛狜隣郎隣兀﨩
+            deprecated: false
             documentation:
               fixed: false
               raw: '''啊齄丂狛狜隣郎隣兀﨩''multi-byte string value'
@@ -561,6 +589,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -598,6 +627,7 @@ operations:
             defaultValue:
               fixed: false
               raw: 'begin!*''();:@ &=+$,/?#[]end'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''begin!*''();:@ &=+$,/?#[]end'' url encoded string value'
@@ -606,6 +636,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -644,6 +675,7 @@ operations:
             defaultValue:
               fixed: false
               raw: ''
+            deprecated: false
             documentation:
               fixed: false
               raw: ''''' string value'
@@ -652,6 +684,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -688,6 +721,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: null string value
@@ -696,6 +730,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -732,6 +767,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: send the value green
@@ -776,6 +812,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: send null should throw
@@ -818,6 +855,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: '''啊齄丂狛狜隣郎隣兀﨩'' multibyte value as utf-8 encoded byte array'
@@ -826,6 +864,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: byte
               knownPrimaryType: byteArray
               name:
@@ -864,6 +903,7 @@ operations:
             defaultValue:
               fixed: false
               raw: ''
+            deprecated: false
             documentation:
               fixed: false
               raw: ''''' as byte array'
@@ -872,6 +912,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: byte
               knownPrimaryType: byteArray
               name:
@@ -909,6 +950,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: null as byte array (should throw)
@@ -917,6 +959,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: byte
               knownPrimaryType: byteArray
               name:
@@ -955,6 +998,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '2012-01-01'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''2012-01-01'' as date'
@@ -963,6 +1007,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: date
               knownPrimaryType: date
               name:
@@ -1002,6 +1047,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: null as date (should throw)
@@ -1010,6 +1056,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: date
               knownPrimaryType: date
               name:
@@ -1048,6 +1095,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '2012-01-01T01:01:01Z'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''2012-01-01T01:01:01Z'' as date-time'
@@ -1056,6 +1104,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: date-time
               knownPrimaryType: dateTime
               name:
@@ -1095,6 +1144,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: null as date-time
@@ -1103,6 +1153,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: date-time
               knownPrimaryType: dateTime
               name:
@@ -1140,6 +1191,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: base64url encoded value
@@ -1148,6 +1200,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: base64url
               knownPrimaryType: base64Url
               name:
@@ -1187,6 +1240,7 @@ operations:
           - collectionFormat: csv
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1197,8 +1251,10 @@ operations:
             location: path
             modelType:
               $type: SequenceType
+              deprecated: false
               elementType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -1238,6 +1294,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Unix time encoded value
@@ -1246,6 +1303,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: unixtime
               knownPrimaryType: unixTime
               name:
@@ -1291,6 +1349,7 @@ operations:
             defaultValue:
               fixed: false
               raw: 'true'
+            deprecated: false
             documentation:
               fixed: false
               raw: true boolean value
@@ -1299,6 +1358,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1336,6 +1396,7 @@ operations:
             defaultValue:
               fixed: false
               raw: 'false'
+            deprecated: false
             documentation:
               fixed: false
               raw: false boolean value
@@ -1344,6 +1405,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1380,6 +1442,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: null boolean value
@@ -1388,6 +1451,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1425,6 +1489,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '1000000'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''1000000'' integer value'
@@ -1433,6 +1498,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: int
               name:
                 fixed: false
@@ -1470,6 +1536,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '-1000000'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''-1000000'' integer value'
@@ -1478,6 +1545,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: int
               name:
                 fixed: false
@@ -1514,6 +1582,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: null integer value
@@ -1522,6 +1591,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: int
               name:
                 fixed: false
@@ -1559,6 +1629,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '10000000000'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''10000000000'' 64 bit integer value'
@@ -1567,6 +1638,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: int64
               knownPrimaryType: long
               name:
@@ -1605,6 +1677,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '-10000000000'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''-10000000000'' 64 bit integer value'
@@ -1613,6 +1686,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: int64
               knownPrimaryType: long
               name:
@@ -1650,6 +1724,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: null 64 bit integer value
@@ -1658,6 +1733,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: int64
               knownPrimaryType: long
               name:
@@ -1696,6 +1772,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '103400000000000000000'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''1.034E+20''numeric value'
@@ -1704,6 +1781,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: double
               name:
                 fixed: false
@@ -1741,6 +1819,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '-1.034e-20'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''-1.034E-20''numeric value'
@@ -1749,6 +1828,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: double
               name:
                 fixed: false
@@ -1785,6 +1865,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: null numeric value
@@ -1793,6 +1874,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: double
               name:
                 fixed: false
@@ -1830,6 +1912,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '9999999.999'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''9999999.999''numeric value'
@@ -1838,6 +1921,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: double
               knownPrimaryType: double
               name:
@@ -1876,6 +1960,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '-9999999.999'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''-9999999.999''numeric value'
@@ -1884,6 +1969,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: double
               knownPrimaryType: double
               name:
@@ -1921,6 +2007,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: null numeric value
@@ -1929,6 +2016,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: double
               knownPrimaryType: double
               name:
@@ -1967,6 +2055,7 @@ operations:
             defaultValue:
               fixed: false
               raw: 啊齄丂狛狜隣郎隣兀﨩
+            deprecated: false
             documentation:
               fixed: false
               raw: '''啊齄丂狛狜隣郎隣兀﨩''multi-byte string value'
@@ -1975,6 +2064,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2012,6 +2102,7 @@ operations:
             defaultValue:
               fixed: false
               raw: 'begin!*''();:@ &=+$,/?#[]end'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''begin!*''();:@ &=+$,/?#[]end'' url encoded string value'
@@ -2020,6 +2111,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2058,6 +2150,7 @@ operations:
             defaultValue:
               fixed: false
               raw: ''
+            deprecated: false
             documentation:
               fixed: false
               raw: ''''' string value'
@@ -2066,6 +2159,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2102,6 +2196,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: null string value
@@ -2110,6 +2205,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2146,6 +2242,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: '''green color'' enum value'
@@ -2188,6 +2285,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: null string value
@@ -2230,6 +2328,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: '''啊齄丂狛狜隣郎隣兀﨩'' multibyte value as utf-8 encoded byte array'
@@ -2238,6 +2337,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: byte
               knownPrimaryType: byteArray
               name:
@@ -2276,6 +2376,7 @@ operations:
             defaultValue:
               fixed: false
               raw: ''
+            deprecated: false
             documentation:
               fixed: false
               raw: ''''' as byte array'
@@ -2284,6 +2385,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: byte
               knownPrimaryType: byteArray
               name:
@@ -2321,6 +2423,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: null as byte array (no query parameters in uri)
@@ -2329,6 +2432,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: byte
               knownPrimaryType: byteArray
               name:
@@ -2367,6 +2471,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '2012-01-01'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''2012-01-01'' as date'
@@ -2375,6 +2480,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: date
               knownPrimaryType: date
               name:
@@ -2412,6 +2518,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: null as date (no query parameters in uri)
@@ -2420,6 +2527,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: date
               knownPrimaryType: date
               name:
@@ -2458,6 +2566,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '2012-01-01T01:01:01Z'
+            deprecated: false
             documentation:
               fixed: false
               raw: '''2012-01-01T01:01:01Z'' as date-time'
@@ -2466,6 +2575,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: date-time
               knownPrimaryType: dateTime
               name:
@@ -2503,6 +2613,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: null as date-time (no query parameters)
@@ -2511,6 +2622,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: date-time
               knownPrimaryType: dateTime
               name:
@@ -2550,6 +2662,7 @@ operations:
           - collectionFormat: csv
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2560,8 +2673,10 @@ operations:
             location: query
             modelType:
               $type: SequenceType
+              deprecated: false
               elementType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -2600,6 +2715,7 @@ operations:
           - collectionFormat: csv
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: a null array of string using the csv-array format
@@ -2608,8 +2724,10 @@ operations:
             location: query
             modelType:
               $type: SequenceType
+              deprecated: false
               elementType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -2648,6 +2766,7 @@ operations:
           - collectionFormat: csv
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: 'an empty array [] of string using the csv-array format'
@@ -2656,8 +2775,10 @@ operations:
             location: query
             modelType:
               $type: SequenceType
+              deprecated: false
               elementType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -2698,6 +2819,7 @@ operations:
           - collectionFormat: ssv
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2708,8 +2830,10 @@ operations:
             location: query
             modelType:
               $type: SequenceType
+              deprecated: false
               elementType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -2750,6 +2874,7 @@ operations:
           - collectionFormat: tsv
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2760,8 +2885,10 @@ operations:
             location: query
             modelType:
               $type: SequenceType
+              deprecated: false
               elementType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -2802,6 +2929,7 @@ operations:
           - collectionFormat: pipes
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2812,8 +2940,10 @@ operations:
             location: query
             modelType:
               $type: SequenceType
+              deprecated: false
               elementType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -2865,6 +2995,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: should contain value 'localStringPath'
@@ -2873,6 +3004,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2884,6 +3016,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: should contain value 'localStringQuery'
@@ -2892,6 +3025,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2903,6 +3037,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: A string value 'pathItemStringPath' that appears in the path
@@ -2911,6 +3046,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2922,6 +3058,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2932,6 +3069,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2944,6 +3082,7 @@ operations:
               collectionFormat: none
               defaultValue:
                 fixed: false
+              deprecated: false
               documentation:
                 fixed: false
                 raw: A string value 'globalItemStringPath' that appears in the path
@@ -2952,6 +3091,7 @@ operations:
               isRequired: true
               modelType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -2965,6 +3105,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: A string value 'globalItemStringPath' that appears in the path
@@ -2973,6 +3114,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -2985,6 +3127,7 @@ operations:
               collectionFormat: none
               defaultValue:
                 fixed: false
+              deprecated: false
               documentation:
                 fixed: false
                 raw: should contain value null
@@ -2993,6 +3136,7 @@ operations:
               isRequired: false
               modelType:
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -3006,6 +3150,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: should contain value null
@@ -3014,6 +3159,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3056,6 +3202,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: should contain value 'localStringPath'
@@ -3064,6 +3211,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3075,6 +3223,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: should contain value 'localStringQuery'
@@ -3083,6 +3232,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3094,6 +3244,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: A string value 'pathItemStringPath' that appears in the path
@@ -3102,6 +3253,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3113,6 +3265,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -3123,6 +3276,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3135,6 +3289,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: A string value 'globalItemStringPath' that appears in the path
@@ -3143,6 +3298,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3155,6 +3311,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: should contain value null
@@ -3163,6 +3320,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3204,6 +3362,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: should contain value 'localStringPath'
@@ -3212,6 +3371,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3223,6 +3383,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: should contain null value
@@ -3231,6 +3392,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3242,6 +3404,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: A string value 'pathItemStringPath' that appears in the path
@@ -3250,6 +3413,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3261,6 +3425,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -3271,6 +3436,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3283,6 +3449,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: A string value 'globalItemStringPath' that appears in the path
@@ -3291,6 +3458,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3303,6 +3471,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: should contain value null
@@ -3311,6 +3480,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3353,6 +3523,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: should contain value 'localStringPath'
@@ -3361,6 +3532,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3372,6 +3544,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: should contain value null
@@ -3380,6 +3553,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3391,6 +3565,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: A string value 'pathItemStringPath' that appears in the path
@@ -3399,6 +3574,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3410,6 +3586,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: should contain value null
@@ -3418,6 +3595,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3430,6 +3608,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: A string value 'globalItemStringPath' that appears in the path
@@ -3438,6 +3617,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -3450,6 +3630,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: should contain value null
@@ -3458,6 +3639,7 @@ operations:
             location: query
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false

@@ -6,6 +6,7 @@ errorTypes:
   - &ref_0
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -13,6 +14,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -20,6 +22,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -34,6 +37,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -41,6 +45,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -54,6 +59,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         extensions:
@@ -74,6 +80,7 @@ modelTypes:
   - &ref_1
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Resource
@@ -81,6 +88,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource Id
@@ -89,6 +97,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -102,6 +111,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource Type
@@ -110,6 +120,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -123,6 +134,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -130,11 +142,13 @@ modelTypes:
         isRequired: false
         modelType:
           $type: DictionaryType
+          deprecated: false
           name:
             fixed: false
           supportsAdditionalProperties: false
           valueType:
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -148,6 +162,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource Location
@@ -156,6 +171,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -169,6 +185,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource Name
@@ -177,6 +194,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -191,6 +209,7 @@ modelTypes:
   - &ref_2
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     extensions:
       x-ms-client-flatten: true
     name:
@@ -200,6 +219,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -207,6 +227,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -220,6 +241,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -227,6 +249,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -240,6 +263,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -247,6 +271,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -254,6 +279,7 @@ modelTypes:
             raw: ''
           underlyingType:
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -290,6 +316,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -297,6 +324,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -312,6 +340,7 @@ modelTypes:
     $type: CompositeType
     baseModelType: *ref_1
     containsConstantProperties: false
+    deprecated: false
     documentation: Flattened product.
     externalDocsUrl: 'http://tempuri.org'
     name:
@@ -321,6 +350,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         extensions:
@@ -339,6 +369,7 @@ modelTypes:
   - &ref_13
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: ResourceCollection
@@ -346,6 +377,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -361,6 +393,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -368,6 +401,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: SequenceType
+          deprecated: false
           elementType: *ref_3
           name:
             fixed: false
@@ -380,6 +414,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -387,6 +422,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: DictionaryType
+          deprecated: false
           name:
             fixed: false
           supportsAdditionalProperties: false
@@ -401,6 +437,7 @@ modelTypes:
   - &ref_5
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: The product documentation.
     name:
       fixed: false
@@ -409,6 +446,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -422,6 +460,7 @@ modelTypes:
         isRequired: true
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -435,6 +474,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Description of product.
@@ -445,6 +485,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -461,6 +502,7 @@ modelTypes:
     baseModelType: &ref_7
       $type: CompositeType
       containsConstantProperties: false
+      deprecated: false
       documentation: The Generic URL.
       name:
         fixed: false
@@ -469,6 +511,7 @@ modelTypes:
         - collectionFormat: none
           defaultValue:
             fixed: false
+          deprecated: false
           documentation:
             fixed: false
             raw: Generic URL value.
@@ -477,6 +520,7 @@ modelTypes:
           isRequired: false
           modelType:
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -489,6 +533,7 @@ modelTypes:
           serializedName: generic_value
       serializedName: GenericUrl
     containsConstantProperties: false
+    deprecated: false
     documentation: The product URL.
     name:
       fixed: false
@@ -497,6 +542,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: URL value.
@@ -505,6 +551,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -519,6 +566,7 @@ modelTypes:
   - &ref_6
     $type: CompositeType
     containsConstantProperties: true
+    deprecated: false
     documentation: The product documentation.
     name:
       fixed: false
@@ -527,6 +575,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Display name of product.
@@ -535,6 +584,7 @@ modelTypes:
         isRequired: true
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -549,6 +599,7 @@ modelTypes:
         defaultValue:
           fixed: false
           raw: Large
+        deprecated: false
         documentation:
           fixed: false
           raw: 'Capacity of product. For example, 4 people.'
@@ -559,6 +610,7 @@ modelTypes:
         isRequired: true
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -572,6 +624,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         extensions:
@@ -591,6 +644,7 @@ modelTypes:
     $type: CompositeType
     baseModelType: *ref_5
     containsConstantProperties: true
+    deprecated: false
     documentation: The product documentation.
     name:
       fixed: false
@@ -599,6 +653,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         extensions:
@@ -618,6 +673,7 @@ modelTypes:
   - &ref_8
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: The wrapped produc.
     name:
       fixed: false
@@ -626,6 +682,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: the product value
@@ -634,6 +691,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -648,6 +706,7 @@ modelTypes:
   - &ref_10
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: The wrapped produc.
     name:
       fixed: false
@@ -656,6 +715,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         extensions:
@@ -697,6 +757,7 @@ operations:
           - collectionFormat: csv
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: External Resource as an Array to put
@@ -707,6 +768,7 @@ operations:
             location: body
             modelType:
               $type: SequenceType
+              deprecated: false
               elementType: *ref_1
               name:
                 fixed: false
@@ -746,6 +808,7 @@ operations:
           OK:
             body: &ref_9
               $type: SequenceType
+              deprecated: false
               elementType: *ref_3
               name:
                 fixed: false
@@ -779,6 +842,7 @@ operations:
           - collectionFormat: csv
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: External Resource as an Array to put
@@ -789,6 +853,7 @@ operations:
             location: body
             modelType:
               $type: SequenceType
+              deprecated: false
               elementType: *ref_8
               name:
                 fixed: false
@@ -831,6 +896,7 @@ operations:
           OK:
             body: &ref_11
               $type: SequenceType
+              deprecated: false
               elementType: *ref_10
               name:
                 fixed: false
@@ -861,6 +927,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: External Resource as a Dictionary to put
@@ -871,6 +938,7 @@ operations:
             location: body
             modelType:
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
@@ -911,6 +979,7 @@ operations:
           OK:
             body: &ref_12
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
@@ -942,6 +1011,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: External Resource as a ResourceCollection to put
@@ -1013,6 +1083,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple body product to put
@@ -1061,6 +1132,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple body product to post
@@ -1108,6 +1180,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple body product to put
@@ -1127,6 +1200,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Product name with value 'groupproduct'
@@ -1138,6 +1212,7 @@ operations:
             location: path
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false

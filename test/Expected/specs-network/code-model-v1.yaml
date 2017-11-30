@@ -16,6 +16,7 @@ modelTypes:
   - $id: '1'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: ErrorDetails
@@ -24,6 +25,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -32,6 +34,7 @@ modelTypes:
         modelType:
           $id: '3'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -46,6 +49,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -54,6 +58,7 @@ modelTypes:
         modelType:
           $id: '5'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -68,6 +73,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -76,6 +82,7 @@ modelTypes:
         modelType:
           $id: '7'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -90,6 +97,7 @@ modelTypes:
   - $id: '8'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -98,6 +106,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -106,6 +115,7 @@ modelTypes:
         modelType:
           $id: '10'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -120,6 +130,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -128,6 +139,7 @@ modelTypes:
         modelType:
           $id: '12'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -142,6 +154,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -150,6 +163,7 @@ modelTypes:
         modelType:
           $id: '14'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -164,6 +178,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -172,6 +187,7 @@ modelTypes:
         modelType:
           $id: '16'
           $type: SequenceType
+          deprecated: false
           elementType:
             $ref: '1'
           name:
@@ -186,6 +202,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -194,6 +211,7 @@ modelTypes:
         modelType:
           $id: '18'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -208,6 +226,7 @@ modelTypes:
   - $id: '19'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: >-
       The response body contains the status of the specified asynchronous
       operation, indicating whether it has succeeded, is in progress, or has
@@ -225,6 +244,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -240,6 +260,7 @@ modelTypes:
         modelType:
           $id: '21'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -248,6 +269,7 @@ modelTypes:
           underlyingType:
             $id: '22'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -269,6 +291,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -286,6 +309,7 @@ modelTypes:
   - $id: '24'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Common resource representation.
     extensions:
       x-ms-azure-resource: true
@@ -297,6 +321,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource ID.
@@ -306,6 +331,7 @@ modelTypes:
         modelType:
           $id: '26'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -320,6 +346,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource name.
@@ -329,6 +356,7 @@ modelTypes:
         modelType:
           $id: '28'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -343,6 +371,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource type.
@@ -352,6 +381,7 @@ modelTypes:
         modelType:
           $id: '30'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -366,6 +396,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource location.
@@ -375,6 +406,7 @@ modelTypes:
         modelType:
           $id: '32'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -389,6 +421,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource tags.
@@ -398,12 +431,14 @@ modelTypes:
         modelType:
           $id: '34'
           $type: DictionaryType
+          deprecated: false
           name:
             fixed: false
           supportsAdditionalProperties: false
           valueType:
             $id: '35'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -418,6 +453,7 @@ modelTypes:
   - $id: '36'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Reference to another subresource.
     extensions:
       x-ms-azure-resource: true
@@ -429,6 +465,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource ID.
@@ -438,6 +475,7 @@ modelTypes:
         modelType:
           $id: '38'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -452,6 +490,7 @@ modelTypes:
   - $id: '39'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Tags object for patch operations.
     name:
       fixed: false
@@ -461,6 +500,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource tags.
@@ -470,12 +510,14 @@ modelTypes:
         modelType:
           $id: '41'
           $type: DictionaryType
+          deprecated: false
           name:
             fixed: false
           supportsAdditionalProperties: false
           valueType:
             $id: '42'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -495,6 +537,7 @@ properties:
     collectionFormat: none
     defaultValue:
       fixed: false
+    deprecated: false
     documentation:
       fixed: false
       raw: >-
@@ -507,6 +550,7 @@ properties:
     modelType:
       $id: '44'
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -521,6 +565,7 @@ properties:
     collectionFormat: none
     defaultValue:
       fixed: false
+    deprecated: false
     documentation:
       fixed: false
       raw: Client API version.
@@ -530,6 +575,7 @@ properties:
     modelType:
       $id: '46'
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false

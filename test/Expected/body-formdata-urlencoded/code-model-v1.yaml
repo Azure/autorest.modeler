@@ -27,6 +27,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: ID of pet that needs to be updated
@@ -36,6 +37,7 @@ operations:
             modelType:
               $id: '2'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -48,6 +50,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Updated name of the pet
@@ -57,6 +60,7 @@ operations:
             modelType:
               $id: '4'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -69,6 +73,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Updated status of the pet
@@ -78,6 +83,7 @@ operations:
             modelType:
               $id: '6'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false

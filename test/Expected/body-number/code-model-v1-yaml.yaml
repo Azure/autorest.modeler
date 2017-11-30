@@ -6,6 +6,7 @@ errorTypes:
   - &ref_0
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -13,6 +14,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -20,6 +22,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -34,6 +37,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -41,6 +45,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -80,6 +85,7 @@ operations:
           OK:
             body: &ref_1
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: double
               name:
                 fixed: false
@@ -111,6 +117,7 @@ operations:
           OK:
             body: &ref_2
               $type: PrimaryType
+              deprecated: false
               format: float
               knownPrimaryType: double
               name:
@@ -143,6 +150,7 @@ operations:
           OK:
             body: &ref_3
               $type: PrimaryType
+              deprecated: false
               format: double
               knownPrimaryType: double
               name:
@@ -175,6 +183,7 @@ operations:
           OK:
             body: &ref_4
               $type: PrimaryType
+              deprecated: false
               format: decimal
               knownPrimaryType: decimal
               name:
@@ -206,6 +215,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -215,6 +225,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: float
               knownPrimaryType: double
               name:
@@ -255,6 +266,7 @@ operations:
           OK:
             body: &ref_5
               $type: PrimaryType
+              deprecated: false
               format: float
               knownPrimaryType: double
               name:
@@ -286,6 +298,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -295,6 +308,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: double
               knownPrimaryType: double
               name:
@@ -335,6 +349,7 @@ operations:
           OK:
             body: &ref_6
               $type: PrimaryType
+              deprecated: false
               format: double
               knownPrimaryType: double
               name:
@@ -367,6 +382,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '99999999.99'
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -376,6 +392,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: double
               knownPrimaryType: double
               name:
@@ -416,6 +433,7 @@ operations:
           OK:
             body: &ref_7
               $type: PrimaryType
+              deprecated: false
               format: double
               knownPrimaryType: double
               name:
@@ -448,6 +466,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '-99999999.99'
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -457,6 +476,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: double
               knownPrimaryType: double
               name:
@@ -497,6 +517,7 @@ operations:
           OK:
             body: &ref_8
               $type: PrimaryType
+              deprecated: false
               format: double
               knownPrimaryType: double
               name:
@@ -528,6 +549,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -537,6 +559,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: decimal
               knownPrimaryType: decimal
               name:
@@ -577,6 +600,7 @@ operations:
           OK:
             body: &ref_9
               $type: PrimaryType
+              deprecated: false
               format: decimal
               knownPrimaryType: decimal
               name:
@@ -609,6 +633,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '99999999.99'
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -618,6 +643,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: decimal
               knownPrimaryType: decimal
               name:
@@ -658,6 +684,7 @@ operations:
           OK:
             body: &ref_10
               $type: PrimaryType
+              deprecated: false
               format: decimal
               knownPrimaryType: decimal
               name:
@@ -690,6 +717,7 @@ operations:
             defaultValue:
               fixed: false
               raw: '-99999999.99'
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -699,6 +727,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: decimal
               knownPrimaryType: decimal
               name:
@@ -739,6 +768,7 @@ operations:
           OK:
             body: &ref_11
               $type: PrimaryType
+              deprecated: false
               format: decimal
               knownPrimaryType: decimal
               name:
@@ -770,6 +800,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -779,6 +810,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: float
               knownPrimaryType: double
               name:
@@ -819,6 +851,7 @@ operations:
           OK:
             body: &ref_12
               $type: PrimaryType
+              deprecated: false
               format: double
               knownPrimaryType: double
               name:
@@ -850,6 +883,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -859,6 +893,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: double
               knownPrimaryType: double
               name:
@@ -899,6 +934,7 @@ operations:
           OK:
             body: &ref_13
               $type: PrimaryType
+              deprecated: false
               format: double
               knownPrimaryType: double
               name:
@@ -930,6 +966,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
             extensions:
@@ -939,6 +976,7 @@ operations:
             location: body
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: decimal
               knownPrimaryType: decimal
               name:
@@ -979,6 +1017,7 @@ operations:
           OK:
             body: &ref_14
               $type: PrimaryType
+              deprecated: false
               format: decimal
               knownPrimaryType: decimal
               name:

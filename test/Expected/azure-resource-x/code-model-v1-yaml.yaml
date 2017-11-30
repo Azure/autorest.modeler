@@ -6,6 +6,7 @@ errorTypes:
   - &ref_0
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -13,6 +14,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -20,6 +22,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -34,6 +37,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -41,6 +45,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -57,6 +62,7 @@ modelTypes:
   - &ref_1
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Some resource
     extensions:
       x-ms-azure-resource: true
@@ -68,6 +74,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource Id
@@ -76,6 +83,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -89,6 +97,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource Type
@@ -97,6 +106,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -110,6 +120,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -117,11 +128,13 @@ modelTypes:
         isRequired: false
         modelType:
           $type: DictionaryType
+          deprecated: false
           name:
             fixed: false
           supportsAdditionalProperties: false
           valueType:
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -135,6 +148,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource Location
@@ -143,6 +157,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -156,6 +171,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: Resource Name
@@ -164,6 +180,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -178,6 +195,7 @@ modelTypes:
   - &ref_2
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: FlattenedResourceProperties
@@ -185,6 +203,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -192,6 +211,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -205,6 +225,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -212,6 +233,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -226,6 +248,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -233,6 +256,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -248,6 +272,7 @@ modelTypes:
     $type: CompositeType
     baseModelType: *ref_1
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: FlattenedProduct
@@ -255,6 +280,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         extensions:
@@ -273,6 +299,7 @@ modelTypes:
   - &ref_6
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: ResourceCollection
@@ -280,6 +307,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -295,6 +323,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -302,6 +331,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: SequenceType
+          deprecated: false
           elementType: *ref_3
           name:
             fixed: false
@@ -314,6 +344,7 @@ modelTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -321,6 +352,7 @@ modelTypes:
         isRequired: false
         modelType:
           $type: DictionaryType
+          deprecated: false
           name:
             fixed: false
           supportsAdditionalProperties: false
@@ -358,6 +390,7 @@ operations:
           - collectionFormat: csv
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: External Resource as an Array to put
@@ -368,6 +401,7 @@ operations:
             location: body
             modelType:
               $type: SequenceType
+              deprecated: false
               elementType: *ref_1
               name:
                 fixed: false
@@ -407,6 +441,7 @@ operations:
           OK:
             body: &ref_4
               $type: SequenceType
+              deprecated: false
               elementType: *ref_3
               name:
                 fixed: false
@@ -437,6 +472,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: External Resource as a Dictionary to put
@@ -447,6 +483,7 @@ operations:
             location: body
             modelType:
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
@@ -487,6 +524,7 @@ operations:
           OK:
             body: &ref_5
               $type: DictionaryType
+              deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
@@ -518,6 +556,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: External Resource as a ResourceCollection to put

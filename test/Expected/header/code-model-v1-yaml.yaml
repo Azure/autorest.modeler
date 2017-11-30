@@ -5,6 +5,7 @@ documentation: Test Infrastructure for AutoRest
 enumTypes:
   - &ref_0
     $type: EnumType
+    deprecated: false
     modelAsExtensible: false
     modelAsString: false
     name:
@@ -12,6 +13,7 @@ enumTypes:
       raw: GreyscaleColors
     underlyingType:
       $type: PrimaryType
+      deprecated: false
       knownPrimaryType: string
       name:
         fixed: false
@@ -27,6 +29,7 @@ errorTypes:
   - &ref_1
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -34,6 +37,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -41,6 +45,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -55,6 +60,7 @@ errorTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -62,6 +68,7 @@ errorTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -77,6 +84,7 @@ headerTypes:
   - &ref_2
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for responseExistingKey operation.
     name:
       fixed: false
@@ -85,6 +93,7 @@ headerTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: 'response with header value "User-Agent": "overwrite"'
@@ -93,6 +102,7 @@ headerTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -107,6 +117,7 @@ headerTypes:
   - &ref_3
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for responseProtectedKey operation.
     name:
       fixed: false
@@ -115,6 +126,7 @@ headerTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: 'response with header value "Content-Type": "text/html"'
@@ -123,6 +135,7 @@ headerTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -137,6 +150,7 @@ headerTypes:
   - &ref_4
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for responseInteger operation.
     name:
       fixed: false
@@ -145,6 +159,7 @@ headerTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: 'response with header value "value": 1 or -2'
@@ -153,6 +168,7 @@ headerTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -168,6 +184,7 @@ headerTypes:
   - &ref_5
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for responseLong operation.
     name:
       fixed: false
@@ -176,6 +193,7 @@ headerTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: 'response with header value "value": 105 or -2'
@@ -184,6 +202,7 @@ headerTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: int64
           knownPrimaryType: long
           name:
@@ -199,6 +218,7 @@ headerTypes:
   - &ref_6
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for responseFloat operation.
     name:
       fixed: false
@@ -207,6 +227,7 @@ headerTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: 'response with header value "value": 0.07 or -3.0'
@@ -215,6 +236,7 @@ headerTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: float
           knownPrimaryType: double
           name:
@@ -230,6 +252,7 @@ headerTypes:
   - &ref_7
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for responseDouble operation.
     name:
       fixed: false
@@ -238,6 +261,7 @@ headerTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: 'response with header value "value": 7e120 or -3.0'
@@ -246,6 +270,7 @@ headerTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: double
           knownPrimaryType: double
           name:
@@ -261,6 +286,7 @@ headerTypes:
   - &ref_8
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for responseBool operation.
     name:
       fixed: false
@@ -269,6 +295,7 @@ headerTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: 'response with header value "value": true or false'
@@ -277,6 +304,7 @@ headerTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: boolean
           name:
             fixed: false
@@ -291,6 +319,7 @@ headerTypes:
   - &ref_9
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for responseString operation.
     name:
       fixed: false
@@ -299,6 +328,7 @@ headerTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -309,6 +339,7 @@ headerTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -323,6 +354,7 @@ headerTypes:
   - &ref_10
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for responseDate operation.
     name:
       fixed: false
@@ -331,6 +363,7 @@ headerTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: response with header values "2010-01-01" or "0001-01-01"
@@ -339,6 +372,7 @@ headerTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: date
           knownPrimaryType: date
           name:
@@ -354,6 +388,7 @@ headerTypes:
   - &ref_11
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for responseDatetime operation.
     name:
       fixed: false
@@ -362,6 +397,7 @@ headerTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -372,6 +408,7 @@ headerTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: date-time
           knownPrimaryType: dateTime
           name:
@@ -387,6 +424,7 @@ headerTypes:
   - &ref_12
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for responseDatetimeRfc1123 operation.
     name:
       fixed: false
@@ -395,6 +433,7 @@ headerTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: >-
@@ -405,6 +444,7 @@ headerTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: date-time-rfc1123
           knownPrimaryType: dateTimeRfc1123
           name:
@@ -420,6 +460,7 @@ headerTypes:
   - &ref_13
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for responseDuration operation.
     name:
       fixed: false
@@ -428,6 +469,7 @@ headerTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: response with header values "P123DT22H14M12.011S"
@@ -436,6 +478,7 @@ headerTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: duration
           knownPrimaryType: timeSpan
           name:
@@ -451,6 +494,7 @@ headerTypes:
   - &ref_14
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for responseByte operation.
     name:
       fixed: false
@@ -459,6 +503,7 @@ headerTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: response with header values "啊齄丂狛狜隣郎隣兀﨩"
@@ -467,6 +512,7 @@ headerTypes:
         isRequired: false
         modelType:
           $type: PrimaryType
+          deprecated: false
           format: byte
           knownPrimaryType: byteArray
           name:
@@ -482,6 +528,7 @@ headerTypes:
   - &ref_15
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for responseEnum operation.
     name:
       fixed: false
@@ -490,6 +537,7 @@ headerTypes:
       - collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: response with header values "GREY" or null
@@ -533,6 +581,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: 'Send a post request with header value "User-Agent": "overwrite"'
@@ -541,6 +590,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -604,6 +654,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -614,6 +665,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -679,6 +731,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -689,6 +742,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -700,6 +754,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Send a post request with header values 1 or -2
@@ -708,6 +763,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: int32
               knownPrimaryType: int
               name:
@@ -746,6 +802,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -756,6 +813,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -796,6 +854,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -806,6 +865,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -817,6 +877,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Send a post request with header values 105 or -2
@@ -825,6 +886,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: int64
               knownPrimaryType: long
               name:
@@ -863,6 +925,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -873,6 +936,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -913,6 +977,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -923,6 +988,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -934,6 +1000,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Send a post request with header values 0.07 or -3.0
@@ -942,6 +1009,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: float
               knownPrimaryType: double
               name:
@@ -980,6 +1048,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -990,6 +1059,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1030,6 +1100,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1040,6 +1111,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1051,6 +1123,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Send a post request with header values 7e120 or -3.0
@@ -1059,6 +1132,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: double
               knownPrimaryType: double
               name:
@@ -1097,6 +1171,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1107,6 +1182,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1147,6 +1223,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1157,6 +1234,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1168,6 +1246,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Send a post request with header values true or false
@@ -1176,6 +1255,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1213,6 +1293,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1223,6 +1304,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1264,6 +1346,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1274,6 +1357,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1285,6 +1369,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1295,6 +1380,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1334,6 +1420,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1344,6 +1431,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1384,6 +1472,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1394,6 +1483,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1405,6 +1495,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1415,6 +1506,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: date
               knownPrimaryType: date
               name:
@@ -1453,6 +1545,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1463,6 +1556,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1504,6 +1598,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1514,6 +1609,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1525,6 +1621,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1535,6 +1632,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: date-time
               knownPrimaryType: dateTime
               name:
@@ -1575,6 +1673,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1585,6 +1684,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1626,6 +1726,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1636,6 +1737,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1647,6 +1749,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1657,6 +1760,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: date-time-rfc1123
               knownPrimaryType: dateTimeRfc1123
               name:
@@ -1697,6 +1801,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1707,6 +1812,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1747,6 +1853,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: 'Send a post request with header values "scenario": "valid"'
@@ -1755,6 +1862,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1766,6 +1874,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Send a post request with header values "P123DT22H14M12.011S"
@@ -1774,6 +1883,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: duration
               knownPrimaryType: timeSpan
               name:
@@ -1812,6 +1922,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: 'Send a post request with header values "scenario": "valid"'
@@ -1820,6 +1931,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1860,6 +1972,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: 'Send a post request with header values "scenario": "valid"'
@@ -1868,6 +1981,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1879,6 +1993,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Send a post request with header values "啊齄丂狛狜隣郎隣兀﨩"
@@ -1887,6 +2002,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               format: byte
               knownPrimaryType: byteArray
               name:
@@ -1925,6 +2041,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: 'Send a post request with header values "scenario": "valid"'
@@ -1933,6 +2050,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1973,6 +2091,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -1983,6 +2102,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false
@@ -1994,6 +2114,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: 'Send a post request with header values ''GREY'' '
@@ -2038,6 +2159,7 @@ operations:
           - collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: >-
@@ -2048,6 +2170,7 @@ operations:
             location: header
             modelType:
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: string
               name:
                 fixed: false

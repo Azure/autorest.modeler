@@ -9,6 +9,7 @@ headerTypes:
   - $id: '18'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for head300 operation.
     name:
       fixed: false
@@ -18,6 +19,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The redirect location for this request
@@ -27,6 +29,7 @@ headerTypes:
         modelType:
           $id: '20'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -35,6 +38,7 @@ headerTypes:
           underlyingType:
             $id: '21'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -52,6 +56,7 @@ headerTypes:
   - $id: '22'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for get300 operation.
     name:
       fixed: false
@@ -61,6 +66,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The redirect location for this request
@@ -70,6 +76,7 @@ headerTypes:
         modelType:
           $id: '24'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -78,6 +85,7 @@ headerTypes:
           underlyingType:
             $id: '25'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -95,6 +103,7 @@ headerTypes:
   - $id: '26'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for head301 operation.
     name:
       fixed: false
@@ -104,6 +113,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The redirect location for this request
@@ -113,6 +123,7 @@ headerTypes:
         modelType:
           $id: '28'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -121,6 +132,7 @@ headerTypes:
           underlyingType:
             $id: '29'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -138,6 +150,7 @@ headerTypes:
   - $id: '30'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for get301 operation.
     name:
       fixed: false
@@ -147,6 +160,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The redirect location for this request
@@ -156,6 +170,7 @@ headerTypes:
         modelType:
           $id: '32'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -164,6 +179,7 @@ headerTypes:
           underlyingType:
             $id: '33'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -181,6 +197,7 @@ headerTypes:
   - $id: '34'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for put301 operation.
     name:
       fixed: false
@@ -190,6 +207,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The redirect location for this request
@@ -199,6 +217,7 @@ headerTypes:
         modelType:
           $id: '36'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -207,6 +226,7 @@ headerTypes:
           underlyingType:
             $id: '37'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -224,6 +244,7 @@ headerTypes:
   - $id: '38'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for head302 operation.
     name:
       fixed: false
@@ -233,6 +254,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The redirect location for this request
@@ -242,6 +264,7 @@ headerTypes:
         modelType:
           $id: '40'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -250,6 +273,7 @@ headerTypes:
           underlyingType:
             $id: '41'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -267,6 +291,7 @@ headerTypes:
   - $id: '42'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for get302 operation.
     name:
       fixed: false
@@ -276,6 +301,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The redirect location for this request
@@ -285,6 +311,7 @@ headerTypes:
         modelType:
           $id: '44'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -293,6 +320,7 @@ headerTypes:
           underlyingType:
             $id: '45'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -310,6 +338,7 @@ headerTypes:
   - $id: '46'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for patch302 operation.
     name:
       fixed: false
@@ -319,6 +348,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The redirect location for this request
@@ -328,6 +358,7 @@ headerTypes:
         modelType:
           $id: '48'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -336,6 +367,7 @@ headerTypes:
           underlyingType:
             $id: '49'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -353,6 +385,7 @@ headerTypes:
   - $id: '50'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for post303 operation.
     name:
       fixed: false
@@ -362,6 +395,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The redirect location for this request
@@ -371,6 +405,7 @@ headerTypes:
         modelType:
           $id: '52'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -379,6 +414,7 @@ headerTypes:
           underlyingType:
             $id: '53'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -396,6 +432,7 @@ headerTypes:
   - $id: '54'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for head307 operation.
     name:
       fixed: false
@@ -405,6 +442,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The redirect location for this request
@@ -414,6 +452,7 @@ headerTypes:
         modelType:
           $id: '56'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -422,6 +461,7 @@ headerTypes:
           underlyingType:
             $id: '57'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -439,6 +479,7 @@ headerTypes:
   - $id: '58'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for get307 operation.
     name:
       fixed: false
@@ -448,6 +489,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The redirect location for this request
@@ -457,6 +499,7 @@ headerTypes:
         modelType:
           $id: '60'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -465,6 +508,7 @@ headerTypes:
           underlyingType:
             $id: '61'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -482,6 +526,7 @@ headerTypes:
   - $id: '62'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for put307 operation.
     name:
       fixed: false
@@ -491,6 +536,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The redirect location for this request
@@ -500,6 +546,7 @@ headerTypes:
         modelType:
           $id: '64'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -508,6 +555,7 @@ headerTypes:
           underlyingType:
             $id: '65'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -525,6 +573,7 @@ headerTypes:
   - $id: '66'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for patch307 operation.
     name:
       fixed: false
@@ -534,6 +583,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The redirect location for this request
@@ -543,6 +593,7 @@ headerTypes:
         modelType:
           $id: '68'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -551,6 +602,7 @@ headerTypes:
           underlyingType:
             $id: '69'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -568,6 +620,7 @@ headerTypes:
   - $id: '70'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for post307 operation.
     name:
       fixed: false
@@ -577,6 +630,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The redirect location for this request
@@ -586,6 +640,7 @@ headerTypes:
         modelType:
           $id: '72'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -594,6 +649,7 @@ headerTypes:
           underlyingType:
             $id: '73'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -611,6 +667,7 @@ headerTypes:
   - $id: '74'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     documentation: Defines headers for delete307 operation.
     name:
       fixed: false
@@ -620,6 +677,7 @@ headerTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
           raw: The redirect location for this request
@@ -629,6 +687,7 @@ headerTypes:
         modelType:
           $id: '76'
           $type: EnumType
+          deprecated: false
           modelAsExtensible: false
           modelAsString: true
           name:
@@ -637,6 +696,7 @@ headerTypes:
           underlyingType:
             $id: '77'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: string
             name:
               fixed: false
@@ -655,6 +715,7 @@ modelTypes:
   - $id: '1'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: Error
@@ -663,6 +724,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -671,6 +733,7 @@ modelTypes:
         modelType:
           $id: '3'
           $type: PrimaryType
+          deprecated: false
           format: int32
           knownPrimaryType: int
           name:
@@ -686,6 +749,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -694,6 +758,7 @@ modelTypes:
         modelType:
           $id: '5'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -708,6 +773,7 @@ modelTypes:
   - $id: '6'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     extensions:
       x-ms-client-name:
         name: MyException
@@ -719,6 +785,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -727,6 +794,7 @@ modelTypes:
         modelType:
           $id: '8'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -743,6 +811,7 @@ modelTypes:
     baseModelType:
       $ref: '6'
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: B
@@ -751,6 +820,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -759,6 +829,7 @@ modelTypes:
         modelType:
           $id: '11'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -773,6 +844,7 @@ modelTypes:
   - $id: '12'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: C
@@ -781,6 +853,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -789,6 +862,7 @@ modelTypes:
         modelType:
           $id: '14'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -803,6 +877,7 @@ modelTypes:
   - $id: '15'
     $type: CompositeType
     containsConstantProperties: false
+    deprecated: false
     name:
       fixed: false
       raw: D
@@ -811,6 +886,7 @@ modelTypes:
         collectionFormat: none
         defaultValue:
           fixed: false
+        deprecated: false
         documentation:
           fixed: false
         isConstant: false
@@ -819,6 +895,7 @@ modelTypes:
         modelType:
           $id: '17'
           $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
             fixed: false
@@ -858,6 +935,7 @@ operations:
             body:
               $id: '78'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -890,6 +968,7 @@ operations:
             body:
               $id: '79'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -922,6 +1001,7 @@ operations:
             body:
               $id: '80'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -988,6 +1068,7 @@ operations:
             body:
               $id: '81'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1021,6 +1102,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -1032,6 +1114,7 @@ operations:
             modelType:
               $id: '83'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1072,6 +1155,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -1083,6 +1167,7 @@ operations:
             modelType:
               $id: '85'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1123,6 +1208,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -1134,6 +1220,7 @@ operations:
             modelType:
               $id: '87'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1174,6 +1261,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -1185,6 +1273,7 @@ operations:
             modelType:
               $id: '89'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1225,6 +1314,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -1236,6 +1326,7 @@ operations:
             modelType:
               $id: '91'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1276,6 +1367,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -1287,6 +1379,7 @@ operations:
             modelType:
               $id: '93'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1327,6 +1420,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -1338,6 +1432,7 @@ operations:
             modelType:
               $id: '95'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1378,6 +1473,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -1389,6 +1485,7 @@ operations:
             modelType:
               $id: '97'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1429,6 +1526,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -1440,6 +1538,7 @@ operations:
             modelType:
               $id: '99'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1480,6 +1579,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -1491,6 +1591,7 @@ operations:
             modelType:
               $id: '101'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1556,6 +1657,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -1567,6 +1669,7 @@ operations:
             modelType:
               $id: '103'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1607,6 +1710,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -1618,6 +1722,7 @@ operations:
             modelType:
               $id: '105'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1658,6 +1763,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -1669,6 +1775,7 @@ operations:
             modelType:
               $id: '107'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1709,6 +1816,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -1720,6 +1828,7 @@ operations:
             modelType:
               $id: '109'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -1832,9 +1941,11 @@ operations:
             body:
               $id: '110'
               $type: SequenceType
+              deprecated: false
               elementType:
                 $id: '111'
                 $type: PrimaryType
+                deprecated: false
                 knownPrimaryType: string
                 name:
                   fixed: false
@@ -1953,6 +2064,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -1964,6 +2076,7 @@ operations:
             modelType:
               $id: '113'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -2083,6 +2196,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -2094,6 +2208,7 @@ operations:
             modelType:
               $id: '115'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -2143,6 +2258,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -2154,6 +2270,7 @@ operations:
             modelType:
               $id: '117'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -2274,6 +2391,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -2285,6 +2403,7 @@ operations:
             modelType:
               $id: '119'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -2335,6 +2454,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -2346,6 +2466,7 @@ operations:
             modelType:
               $id: '121'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -2396,6 +2517,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -2407,6 +2529,7 @@ operations:
             modelType:
               $id: '123'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -2457,6 +2580,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -2468,6 +2592,7 @@ operations:
             modelType:
               $id: '125'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -2577,6 +2702,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -2588,6 +2714,7 @@ operations:
             modelType:
               $id: '127'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -2629,6 +2756,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -2640,6 +2768,7 @@ operations:
             modelType:
               $id: '129'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -2681,6 +2810,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -2692,6 +2822,7 @@ operations:
             modelType:
               $id: '131'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -2733,6 +2864,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -2744,6 +2876,7 @@ operations:
             modelType:
               $id: '133'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -2863,6 +2996,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -2874,6 +3008,7 @@ operations:
             modelType:
               $id: '135'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -2915,6 +3050,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -2926,6 +3062,7 @@ operations:
             modelType:
               $id: '137'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -2967,6 +3104,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -2978,6 +3116,7 @@ operations:
             modelType:
               $id: '139'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -3019,6 +3158,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -3030,6 +3170,7 @@ operations:
             modelType:
               $id: '141'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -3071,6 +3212,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -3082,6 +3224,7 @@ operations:
             modelType:
               $id: '143'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -3201,6 +3344,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -3212,6 +3356,7 @@ operations:
             modelType:
               $id: '145'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -3253,6 +3398,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -3264,6 +3410,7 @@ operations:
             modelType:
               $id: '147'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -3305,6 +3452,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -3316,6 +3464,7 @@ operations:
             modelType:
               $id: '149'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -3383,6 +3532,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -3394,6 +3544,7 @@ operations:
             modelType:
               $id: '151'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -3520,6 +3671,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -3531,6 +3683,7 @@ operations:
             modelType:
               $id: '153'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -3572,6 +3725,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -3583,6 +3737,7 @@ operations:
             modelType:
               $id: '155'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -3654,6 +3809,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -3665,6 +3821,7 @@ operations:
             modelType:
               $id: '157'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -3705,6 +3862,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -3716,6 +3874,7 @@ operations:
             modelType:
               $id: '159'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -3781,6 +3940,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -3792,6 +3952,7 @@ operations:
             modelType:
               $id: '161'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -3832,6 +3993,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -3843,6 +4005,7 @@ operations:
             modelType:
               $id: '163'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -3883,6 +4046,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -3894,6 +4058,7 @@ operations:
             modelType:
               $id: '165'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -3934,6 +4099,7 @@ operations:
             collectionFormat: none
             defaultValue:
               fixed: false
+            deprecated: false
             documentation:
               fixed: false
               raw: Simple boolean value true
@@ -3945,6 +4111,7 @@ operations:
             modelType:
               $id: '167'
               $type: PrimaryType
+              deprecated: false
               knownPrimaryType: boolean
               name:
                 fixed: false
@@ -4265,6 +4432,7 @@ operations:
           body:
             $id: '168'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: object
             name:
               fixed: false
@@ -4307,6 +4475,7 @@ operations:
           body:
             $id: '169'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: object
             name:
               fixed: false
@@ -4349,6 +4518,7 @@ operations:
           body:
             $id: '170'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: object
             name:
               fixed: false
@@ -4393,6 +4563,7 @@ operations:
           body:
             $id: '171'
             $type: PrimaryType
+            deprecated: false
             knownPrimaryType: object
             name:
               fixed: false
