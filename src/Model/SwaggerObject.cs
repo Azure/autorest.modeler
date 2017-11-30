@@ -23,12 +23,12 @@ namespace AutoRest.Modeler.Model
         /// <summary>
         /// The type of the parameter.
         /// </summary>
-        public virtual DataType? Type { get; set; }
+        public DataType? Type { get; set; }
 
         /// <summary>
         /// The extending format for the previously mentioned type.
         /// </summary>
-        public virtual string Format { get; set; }
+        public string Format { get; set; }
 
         /// <summary>
         /// Returns the KnownFormat of the Format string (provided it matches a KnownFormat)
@@ -39,7 +39,7 @@ namespace AutoRest.Modeler.Model
         /// <summary>
         /// Describes the type of items in the array.
         /// </summary>
-        public virtual Schema Items { get; set; }
+        public Schema Items { get; set; }
 
         [JsonProperty(PropertyName = "$ref")]
         public string Reference { get; set; }
@@ -47,9 +47,9 @@ namespace AutoRest.Modeler.Model
         /// <summary>
         /// Describes the type of additional properties in the data type.
         /// </summary>
-        public virtual Schema AdditionalProperties { get; set; }
+        public Schema AdditionalProperties { get; set; }
 
-        public virtual string Description
+        public string Description
         {
             get { return _description; }
             set { _description = value.StripControlCharacters(); }
@@ -58,31 +58,33 @@ namespace AutoRest.Modeler.Model
         /// <summary>
         /// Sets a default value to the parameter.
         /// </summary>
-        public virtual string Default { get; set; }
+        public string Default { get; set; }
 
-        public virtual string MultipleOf { get; set; }
+        public bool Deprecated { get; set; }
 
-        public virtual string Maximum { get; set; }
+        public string MultipleOf { get; set; }
 
-        public virtual bool ExclusiveMaximum { get; set; }
+        public string Maximum { get; set; }
 
-        public virtual string Minimum { get; set; }
+        public bool ExclusiveMaximum { get; set; }
 
-        public virtual bool ExclusiveMinimum { get; set; }
+        public string Minimum { get; set; }
 
-        public virtual string MaxLength { get; set; }
+        public bool ExclusiveMinimum { get; set; }
 
-        public virtual string MinLength { get; set; }
+        public string MaxLength { get; set; }
 
-        public virtual string Pattern { get; set; }
+        public string MinLength { get; set; }
 
-        public virtual string MaxItems { get; set; }
+        public string Pattern { get; set; }
 
-        public virtual string MinItems { get; set; }
+        public string MaxItems { get; set; }
 
-        public virtual bool UniqueItems { get; set; }
+        public string MinItems { get; set; }
 
-        public virtual IList<string> Enum { get; set; }
+        public bool UniqueItems { get; set; }
+
+        public IList<string> Enum { get; set; }
 
         /// <summary>
         /// Returns the PrimaryType that the SwaggerObject maps to, given the Type and the KnownFormat.
