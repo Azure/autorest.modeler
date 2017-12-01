@@ -1,6 +1,6 @@
 ---
 apiVersion: '2016-09-01'
-baseUrl: ''
+baseUrl: 'http://localhost'
 codeGenExtensions:
   syncMethods: None
   useDateTimeOffset: true
