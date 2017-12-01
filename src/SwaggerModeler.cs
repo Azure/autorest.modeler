@@ -185,7 +185,11 @@ namespace AutoRest.Modeler
                 ? null                                                  // ...but that mocks with our multi-api-version treatment of inlining the api-version
                 : ServiceDefinition.Info.Version;
             CodeModel.Documentation = ServiceDefinition.Info.Description;
-            CodeModel.BaseUrl = ServiceDefinition.Servers[0].Url.TrimEnd('/');
+            CodeModel.BaseUrl = ServiceDefinition.Servers.FirstOrDefault()?.Url?.TrimEnd('/');
+            if (string.IsNullOrEmpty(CodeModel.BaseUrl))
+            {
+                CodeModel.BaseUrl = "http://localhost";
+            }
 
             // Copy extensions
             ServiceDefinition.Info?.CodeGenerationSettings?.Extensions.ForEach(extention => CodeModel.CodeGenExtensions.AddOrSet(extention.Key, extention.Value));
