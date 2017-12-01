@@ -1,6 +1,6 @@
 ---
 apiVersion: 1.0.0
-baseUrl: ''
+baseUrl: 'http://localhost'
 documentation: Test Infrastructure for AutoRest Swagger BAT
 modelsName: Models
 name: AutoRestSwaggerBATFormDataService
