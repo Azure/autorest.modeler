@@ -70,23 +70,24 @@ namespace AutoRest.Modeler.Tests
             Assert.Equal("https://management.azure.com", codeModel.BaseUrl);
             Assert.Equal("Some cool documentation.", codeModel.Documentation);
             //var allMethods = codeModel.Operations.SelectMany(each => each.Methods);
-            Assert.Equal(2, codeModel.Methods.Count);
-            Assert.Equal("List", codeModel.Methods[0].Name);
-            Assert.NotEmpty(codeModel.Methods[0].Description);
-            Assert.Equal(description, codeModel.Methods[0].Description);
-            Assert.NotEmpty(codeModel.Methods[0].Summary);
-            Assert.Equal(summary, codeModel.Methods[0].Summary);
-            Assert.Equal(HttpMethod.Get, codeModel.Methods[0].HttpMethod);
-            Assert.Equal(3, codeModel.Methods[0].Parameters.Count);
-            Assert.Equal("subscriptionId", codeModel.Methods[0].Parameters[0].Name);
-            Assert.NotNull(codeModel.Methods[0].Parameters[0].ClientProperty);
-            Assert.Equal("resourceGroupName", codeModel.Methods[0].Parameters[1].Name);
-            Assert.Equal("resourceGroupName", codeModel.Methods[0].Parameters[1].SerializedName);
-            Assert.Equal("Resource Group ID.", codeModel.Methods[0].Parameters[1].Documentation);
-            Assert.Equal(true, codeModel.Methods[0].Parameters[0].IsRequired);
-            Assert.Equal(ParameterLocation.Path, codeModel.Methods[0].Parameters[0].Location);
-            Assert.Equal("String", codeModel.Methods[0].Parameters[0].ModelType.Name);
-            Assert.Equal("Reset", codeModel.Methods[1].Name);
+            var methods = codeModel.Methods.ToList();
+            Assert.Equal(2, methods.Count);
+            Assert.Equal("List", methods[0].Name);
+            Assert.NotEmpty(methods[0].Description);
+            Assert.Equal(description, methods[0].Description);
+            Assert.NotEmpty(methods[0].Summary);
+            Assert.Equal(summary, methods[0].Summary);
+            Assert.Equal(HttpMethod.Get, methods[0].HttpMethod);
+            Assert.Equal(3, methods[0].Parameters.Count);
+            Assert.Equal("subscriptionId", methods[0].Parameters[0].Name);
+            Assert.NotNull(methods[0].Parameters[0].ClientProperty);
+            Assert.Equal("resourceGroupName", methods[0].Parameters[1].Name);
+            Assert.Equal("resourceGroupName", methods[0].Parameters[1].SerializedName);
+            Assert.Equal("Resource Group ID.", methods[0].Parameters[1].Documentation);
+            Assert.Equal(true, methods[0].Parameters[0].IsRequired);
+            Assert.Equal(ParameterLocation.Path, methods[0].Parameters[0].Location);
+            Assert.Equal("String", methods[0].Parameters[0].ModelType.Name);
+            Assert.Equal("Reset", methods[1].Name);
             Assert.Equal("Product", codeModel.ModelTypes.First(m => m.Name == "Product").Name);
             Assert.Equal("Product", codeModel.ModelTypes.First(m => m.Name == "Product").SerializedName);
             Assert.Equal("The product title.", codeModel.ModelTypes.First(m => m.Name == "Product").Summary);
@@ -97,13 +98,13 @@ namespace AutoRest.Modeler.Tests
             Assert.Equal("ProductId", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[0].Name);
             Assert.Equal("product_id",
                 codeModel.ModelTypes.First(m => m.Name == "Product").Properties[0].SerializedName);
-            Assert.Null(codeModel.Methods[1].ReturnType.Body);
-            Assert.Null(codeModel.Methods[1].Responses[HttpStatusCode.NoContent].Body);
-            Assert.Equal(3, codeModel.Methods[1].Parameters.Count);
-            Assert.Equal("subscriptionId", codeModel.Methods[1].Parameters[0].Name);
-            Assert.Null(codeModel.Methods[1].Parameters[0].ClientProperty);
-            Assert.Equal("resourceGroupName", codeModel.Methods[1].Parameters[1].Name);
-            Assert.Equal("apiVersion", codeModel.Methods[1].Parameters[2].Name);
+            Assert.Null(methods[1].ReturnType.Body);
+            Assert.Null(methods[1].Responses[HttpStatusCode.NoContent].Body);
+            Assert.Equal(3, methods[1].Parameters.Count);
+            Assert.Equal("subscriptionId", methods[1].Parameters[0].Name);
+            Assert.Null(methods[1].Parameters[0].ClientProperty);
+            Assert.Equal("resourceGroupName", methods[1].Parameters[1].Name);
+            Assert.Equal("apiVersion", methods[1].Parameters[2].Name);
 
             Assert.Equal("Capacity", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[3].Name);
             Assert.Equal("100", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[3].DefaultValue);
@@ -231,10 +232,11 @@ namespace AutoRest.Modeler.Tests
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
-            Assert.Equal("DeleteBlob", codeModel.Methods[4].Name);
-            Assert.True(codeModel.Methods[4].ReturnType.Body.IsPrimaryType(KnownPrimaryType.Object));
-            Assert.True(codeModel.Methods[4].Responses[HttpStatusCode.OK].Body.IsPrimaryType(KnownPrimaryType.Object));
-            Assert.Null(codeModel.Methods[4].Responses[HttpStatusCode.BadRequest].Body);
+            var methods = codeModel.Methods.ToList();
+            Assert.Equal("DeleteBlob", methods[4].Name);
+            Assert.True(methods[4].ReturnType.Body.IsPrimaryType(KnownPrimaryType.Object));
+            Assert.True(methods[4].Responses[HttpStatusCode.OK].Body.IsPrimaryType(KnownPrimaryType.Object));
+            Assert.Null(methods[4].Responses[HttpStatusCode.BadRequest].Body);
         }
 
         [Fact]
@@ -245,20 +247,21 @@ namespace AutoRest.Modeler.Tests
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
             Assert.NotNull(codeModel);
-            Assert.Equal("GetSameResponse", codeModel.Methods[0].Name);
-            Assert.Equal("IList<Pet>", CreateCSharpResponseType(codeModel.Methods[0].ReturnType));
-            Assert.Equal("IList<Pet>", CreateCSharpResponseType(codeModel.Methods[0].Responses[HttpStatusCode.OK]));
-            Assert.Equal("IList<Pet>", CreateCSharpResponseType(codeModel.Methods[0].Responses[HttpStatusCode.Accepted]));
+            var methods = codeModel.Methods.ToList();
+            Assert.Equal("GetSameResponse", methods[0].Name);
+            Assert.Equal("IList<Pet>", CreateCSharpResponseType(methods[0].ReturnType));
+            Assert.Equal("IList<Pet>", CreateCSharpResponseType(methods[0].Responses[HttpStatusCode.OK]));
+            Assert.Equal("IList<Pet>", CreateCSharpResponseType(methods[0].Responses[HttpStatusCode.Accepted]));
 
-            Assert.Equal("PostInheretedTypes", codeModel.Methods[1].Name);
-            Assert.Equal("Pet", CreateCSharpResponseType(codeModel.Methods[1].ReturnType));
-            Assert.Equal("Dog", CreateCSharpResponseType(codeModel.Methods[1].Responses[HttpStatusCode.OK]));
-            Assert.Equal("Cat", CreateCSharpResponseType(codeModel.Methods[1].Responses[HttpStatusCode.Accepted]));
+            Assert.Equal("PostInheretedTypes", methods[1].Name);
+            Assert.Equal("Pet", CreateCSharpResponseType(methods[1].ReturnType));
+            Assert.Equal("Dog", CreateCSharpResponseType(methods[1].Responses[HttpStatusCode.OK]));
+            Assert.Equal("Cat", CreateCSharpResponseType(methods[1].Responses[HttpStatusCode.Accepted]));
 
-            Assert.Equal("PatchDifferentStreamTypesNoContent", codeModel.Methods[6].Name);
-            Assert.Equal("VirtualMachineGetRemoteDesktopFileResponse", CreateCSharpResponseType(codeModel.Methods[6].ReturnType));
-            Assert.Equal("VirtualMachineGetRemoteDesktopFileResponse", CreateCSharpResponseType(codeModel.Methods[6].Responses[HttpStatusCode.OK]));
-            Assert.Null(codeModel.Methods[6].Responses[HttpStatusCode.NoContent].Body);
+            Assert.Equal("PatchDifferentStreamTypesNoContent", methods[6].Name);
+            Assert.Equal("VirtualMachineGetRemoteDesktopFileResponse", CreateCSharpResponseType(methods[6].ReturnType));
+            Assert.Equal("VirtualMachineGetRemoteDesktopFileResponse", CreateCSharpResponseType(methods[6].Responses[HttpStatusCode.OK]));
+            Assert.Null(methods[6].Responses[HttpStatusCode.NoContent].Body);
         }
 
         [Fact]
@@ -280,8 +283,9 @@ namespace AutoRest.Modeler.Tests
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
-            Assert.Equal(1, codeModel.Methods[0].Responses.Count);
-            Assert.NotNull(codeModel.Methods[0].Responses[HttpStatusCode.OK]);
+            var methods = codeModel.Methods.ToList();
+            Assert.Equal(1, methods[0].Responses.Count);
+            Assert.NotNull(methods[0].Responses[HttpStatusCode.OK]);
         }
 
         [Fact]
@@ -292,23 +296,24 @@ namespace AutoRest.Modeler.Tests
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
             Assert.NotNull(codeModel);
-            Assert.Equal("GetWithStreamFormData", codeModel.Methods[0].Name);
-            Assert.Equal("Stream", codeModel.Methods[0].Parameters[0].ModelType.Name);
-            Assert.Equal("Stream", CreateCSharpResponseType(codeModel.Methods[0].ReturnType));
-            Assert.Equal("Stream", CreateCSharpResponseType(codeModel.Methods[0].Responses[HttpStatusCode.OK]));
+            var methods = codeModel.Methods.ToList();
+            Assert.Equal("GetWithStreamFormData", methods[0].Name);
+            Assert.Equal("Stream", methods[0].Parameters[0].ModelType.Name);
+            Assert.Equal("Stream", CreateCSharpResponseType(methods[0].ReturnType));
+            Assert.Equal("Stream", CreateCSharpResponseType(methods[0].Responses[HttpStatusCode.OK]));
 
-            Assert.Equal("PostWithByteArrayFormData", codeModel.Methods[1].Name);
-            Assert.Equal("ByteArray", codeModel.Methods[1].Parameters[0].ModelType.Name);
-            Assert.Equal("ByteArray", CreateCSharpResponseType(codeModel.Methods[1].ReturnType));
-            Assert.Equal("ByteArray", CreateCSharpResponseType(codeModel.Methods[1].Responses[HttpStatusCode.OK]));
+            Assert.Equal("PostWithByteArrayFormData", methods[1].Name);
+            Assert.Equal("ByteArray", methods[1].Parameters[0].ModelType.Name);
+            Assert.Equal("ByteArray", CreateCSharpResponseType(methods[1].ReturnType));
+            Assert.Equal("ByteArray", CreateCSharpResponseType(methods[1].Responses[HttpStatusCode.OK]));
 
-            Assert.Equal("GetWithStream", codeModel.Methods[2].Name);
-            Assert.Equal("Stream", CreateCSharpResponseType(codeModel.Methods[2].ReturnType));
-            Assert.Equal("Stream", CreateCSharpResponseType(codeModel.Methods[2].Responses[HttpStatusCode.OK]));
+            Assert.Equal("GetWithStream", methods[2].Name);
+            Assert.Equal("Stream", CreateCSharpResponseType(methods[2].ReturnType));
+            Assert.Equal("Stream", CreateCSharpResponseType(methods[2].Responses[HttpStatusCode.OK]));
 
-            Assert.Equal("PostWithByteArray", codeModel.Methods[3].Name);
-            Assert.Equal("ByteArray", CreateCSharpResponseType(codeModel.Methods[3].ReturnType));
-            Assert.Equal("ByteArray", CreateCSharpResponseType(codeModel.Methods[3].Responses[HttpStatusCode.OK]));
+            Assert.Equal("PostWithByteArray", methods[3].Name);
+            Assert.Equal("ByteArray", CreateCSharpResponseType(methods[3].ReturnType));
+            Assert.Equal("ByteArray", CreateCSharpResponseType(methods[3].Responses[HttpStatusCode.OK]));
         }
 
         [Fact]
@@ -319,9 +324,10 @@ namespace AutoRest.Modeler.Tests
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
             Assert.NotNull(codeModel);
-            Assert.Equal(0, codeModel.Methods.Count(m => m.Group == null));
-            Assert.Equal(2, codeModel.Methods.Count(m => m.Group == "Widgets"));
-            Assert.Equal("List", codeModel.Methods[0].Name);
+            var methods = codeModel.Methods.ToList();
+            Assert.Equal(0, methods.Count(m => m.Group == null));
+            Assert.Equal(2, methods.Count(m => m.Group == "Widgets"));
+            Assert.Equal("List", methods[0].Name);
         }
 
         [Fact]
@@ -332,21 +338,22 @@ namespace AutoRest.Modeler.Tests
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
             Assert.NotNull(codeModel);
-            Assert.Equal("Int integer", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[0]));
-            Assert.Equal("Int int", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[1]));
-            Assert.Equal("Long long", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[2]));
-            Assert.Equal("Double number", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[3]));
-            Assert.Equal("Double float", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[4]));
-            Assert.Equal("Double double", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[5]));
-            Assert.Equal("Decimal decimal", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[6]));
-            Assert.Equal("String string", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[7]));
-            Assert.Equal("enum color", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[8]));
-            Assert.Equal("ByteArray byte", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[9]));
-            Assert.Equal("Boolean boolean", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[10]));
-            Assert.Equal("Date date", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[11]));
-            Assert.Equal("DateTime dateTime", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[12]));
-            Assert.Equal("Base64Url base64url", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[13]));
-            Assert.Equal("IList<String> array", CreateCSharpDeclarationString(codeModel.Methods[0].Parameters[14]));
+            var methods = codeModel.Methods.ToList();
+            Assert.Equal("Int integer", CreateCSharpDeclarationString(methods[0].Parameters[0]));
+            Assert.Equal("Int int", CreateCSharpDeclarationString(methods[0].Parameters[1]));
+            Assert.Equal("Long long", CreateCSharpDeclarationString(methods[0].Parameters[2]));
+            Assert.Equal("Double number", CreateCSharpDeclarationString(methods[0].Parameters[3]));
+            Assert.Equal("Double float", CreateCSharpDeclarationString(methods[0].Parameters[4]));
+            Assert.Equal("Double double", CreateCSharpDeclarationString(methods[0].Parameters[5]));
+            Assert.Equal("Decimal decimal", CreateCSharpDeclarationString(methods[0].Parameters[6]));
+            Assert.Equal("String string", CreateCSharpDeclarationString(methods[0].Parameters[7]));
+            Assert.Equal("enum color", CreateCSharpDeclarationString(methods[0].Parameters[8]));
+            Assert.Equal("ByteArray byte", CreateCSharpDeclarationString(methods[0].Parameters[9]));
+            Assert.Equal("Boolean boolean", CreateCSharpDeclarationString(methods[0].Parameters[10]));
+            Assert.Equal("Date date", CreateCSharpDeclarationString(methods[0].Parameters[11]));
+            Assert.Equal("DateTime dateTime", CreateCSharpDeclarationString(methods[0].Parameters[12]));
+            Assert.Equal("Base64Url base64url", CreateCSharpDeclarationString(methods[0].Parameters[13]));
+            Assert.Equal("IList<String> array", CreateCSharpDeclarationString(methods[0].Parameters[14]));
 
             var variableEnumInPath =
                 codeModel.Methods.First(m => m.Name == "List" && m.Group.IsNullOrEmpty())
@@ -445,40 +452,41 @@ namespace AutoRest.Modeler.Tests
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
-            Assert.Equal("resourceGroupName", codeModel.Methods[0].Parameters[1].Name);
-            Assert.Equal(true, codeModel.Methods[0].Parameters[1].IsRequired);
-            Assert.Equal(3, codeModel.Methods[0].Parameters[1].Constraints.Count);
-            Assert.Equal("10", codeModel.Methods[0].Parameters[1].Constraints[Constraint.MaxLength]);
-            Assert.Equal("3", codeModel.Methods[0].Parameters[1].Constraints[Constraint.MinLength]);
-            Assert.Equal("[a-zA-Z0-9]+", codeModel.Methods[0].Parameters[1].Constraints[Constraint.Pattern]);
-            Assert.False(codeModel.Methods[0].Parameters[1].Constraints.ContainsKey(Constraint.MultipleOf));
-            Assert.False(codeModel.Methods[0].Parameters[1].Constraints.ContainsKey(Constraint.ExclusiveMaximum));
-            Assert.False(codeModel.Methods[0].Parameters[1].Constraints.ContainsKey(Constraint.ExclusiveMinimum));
-            Assert.False(codeModel.Methods[0].Parameters[1].Constraints.ContainsKey(Constraint.InclusiveMinimum));
-            Assert.False(codeModel.Methods[0].Parameters[1].Constraints.ContainsKey(Constraint.InclusiveMaximum));
-            Assert.False(codeModel.Methods[0].Parameters[1].Constraints.ContainsKey(Constraint.MinItems));
-            Assert.False(codeModel.Methods[0].Parameters[1].Constraints.ContainsKey(Constraint.MaxItems));
-            Assert.False(codeModel.Methods[0].Parameters[1].Constraints.ContainsKey(Constraint.UniqueItems));
+            var methods = codeModel.Methods.ToList();
+            Assert.Equal("resourceGroupName", methods[0].Parameters[1].Name);
+            Assert.Equal(true, methods[0].Parameters[1].IsRequired);
+            Assert.Equal(3, methods[0].Parameters[1].Constraints.Count);
+            Assert.Equal("10", methods[0].Parameters[1].Constraints[Constraint.MaxLength]);
+            Assert.Equal("3", methods[0].Parameters[1].Constraints[Constraint.MinLength]);
+            Assert.Equal("[a-zA-Z0-9]+", methods[0].Parameters[1].Constraints[Constraint.Pattern]);
+            Assert.False(methods[0].Parameters[1].Constraints.ContainsKey(Constraint.MultipleOf));
+            Assert.False(methods[0].Parameters[1].Constraints.ContainsKey(Constraint.ExclusiveMaximum));
+            Assert.False(methods[0].Parameters[1].Constraints.ContainsKey(Constraint.ExclusiveMinimum));
+            Assert.False(methods[0].Parameters[1].Constraints.ContainsKey(Constraint.InclusiveMinimum));
+            Assert.False(methods[0].Parameters[1].Constraints.ContainsKey(Constraint.InclusiveMaximum));
+            Assert.False(methods[0].Parameters[1].Constraints.ContainsKey(Constraint.MinItems));
+            Assert.False(methods[0].Parameters[1].Constraints.ContainsKey(Constraint.MaxItems));
+            Assert.False(methods[0].Parameters[1].Constraints.ContainsKey(Constraint.UniqueItems));
 
 
-            Assert.Equal("id", codeModel.Methods[0].Parameters[2].Name);
-            Assert.Equal(3, codeModel.Methods[0].Parameters[2].Constraints.Count);
-            Assert.Equal("10", codeModel.Methods[0].Parameters[2].Constraints[Constraint.MultipleOf]);
-            Assert.Equal("100", codeModel.Methods[0].Parameters[2].Constraints[Constraint.InclusiveMinimum]);
-            Assert.Equal("1000", codeModel.Methods[0].Parameters[2].Constraints[Constraint.InclusiveMaximum]);
-            Assert.False(codeModel.Methods[0].Parameters[2].Constraints.ContainsKey(Constraint.ExclusiveMaximum));
-            Assert.False(codeModel.Methods[0].Parameters[2].Constraints.ContainsKey(Constraint.ExclusiveMinimum));
-            Assert.False(codeModel.Methods[0].Parameters[2].Constraints.ContainsKey(Constraint.MaxLength));
-            Assert.False(codeModel.Methods[0].Parameters[2].Constraints.ContainsKey(Constraint.MinLength));
-            Assert.False(codeModel.Methods[0].Parameters[2].Constraints.ContainsKey(Constraint.Pattern));
-            Assert.False(codeModel.Methods[0].Parameters[2].Constraints.ContainsKey(Constraint.MinItems));
-            Assert.False(codeModel.Methods[0].Parameters[2].Constraints.ContainsKey(Constraint.MaxItems));
-            Assert.False(codeModel.Methods[0].Parameters[2].Constraints.ContainsKey(Constraint.UniqueItems));
+            Assert.Equal("id", methods[0].Parameters[2].Name);
+            Assert.Equal(3, methods[0].Parameters[2].Constraints.Count);
+            Assert.Equal("10", methods[0].Parameters[2].Constraints[Constraint.MultipleOf]);
+            Assert.Equal("100", methods[0].Parameters[2].Constraints[Constraint.InclusiveMinimum]);
+            Assert.Equal("1000", methods[0].Parameters[2].Constraints[Constraint.InclusiveMaximum]);
+            Assert.False(methods[0].Parameters[2].Constraints.ContainsKey(Constraint.ExclusiveMaximum));
+            Assert.False(methods[0].Parameters[2].Constraints.ContainsKey(Constraint.ExclusiveMinimum));
+            Assert.False(methods[0].Parameters[2].Constraints.ContainsKey(Constraint.MaxLength));
+            Assert.False(methods[0].Parameters[2].Constraints.ContainsKey(Constraint.MinLength));
+            Assert.False(methods[0].Parameters[2].Constraints.ContainsKey(Constraint.Pattern));
+            Assert.False(methods[0].Parameters[2].Constraints.ContainsKey(Constraint.MinItems));
+            Assert.False(methods[0].Parameters[2].Constraints.ContainsKey(Constraint.MaxItems));
+            Assert.False(methods[0].Parameters[2].Constraints.ContainsKey(Constraint.UniqueItems));
 
-            Assert.Equal("apiVersion", codeModel.Methods[0].Parameters[3].Name);
-            Assert.NotNull(codeModel.Methods[0].Parameters[3].ClientProperty);
-            Assert.Equal(1, codeModel.Methods[0].Parameters[3].Constraints.Count);
-            Assert.Equal("\\d{2}-\\d{2}-\\d{4}", codeModel.Methods[0].Parameters[3].Constraints[Constraint.Pattern]);
+            Assert.Equal("apiVersion", methods[0].Parameters[3].Name);
+            Assert.NotNull(methods[0].Parameters[3].ClientProperty);
+            Assert.Equal(1, methods[0].Parameters[3].Constraints.Count);
+            Assert.Equal("\\d{2}-\\d{2}-\\d{4}", methods[0].Parameters[3].Constraints[Constraint.Pattern]);
 
             Assert.Equal("Product", codeModel.ModelTypes.First(m => m.Name == "Product").Name);
             Assert.Equal("DisplayNames", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[2].Name);
@@ -508,15 +516,16 @@ namespace AutoRest.Modeler.Tests
             var modeler = new SwaggerModeler();
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
-            Assert.Equal("myintconst", codeModel.Methods[0].Parameters[4].Name);
-            Assert.Equal(true, codeModel.Methods[0].Parameters[4].ModelType.IsPrimaryType(KnownPrimaryType.Int));
-            Assert.Equal(true, codeModel.Methods[0].Parameters[4].IsConstant);
-            Assert.Equal("0", codeModel.Methods[0].Parameters[4].DefaultValue);
+            var methods = codeModel.Methods.ToList();
+            Assert.Equal("myintconst", methods[0].Parameters[4].Name);
+            Assert.Equal(true, methods[0].Parameters[4].ModelType.IsPrimaryType(KnownPrimaryType.Int));
+            Assert.Equal(true, methods[0].Parameters[4].IsConstant);
+            Assert.Equal("0", methods[0].Parameters[4].DefaultValue);
 
-            Assert.Equal("mystrconst", codeModel.Methods[0].Parameters[5].Name);
-            Assert.Equal(true, codeModel.Methods[0].Parameters[5].ModelType.IsPrimaryType(KnownPrimaryType.String));
-            Assert.Equal(true, codeModel.Methods[0].Parameters[5].IsConstant);
-            Assert.Equal("constant", codeModel.Methods[0].Parameters[5].DefaultValue);
+            Assert.Equal("mystrconst", methods[0].Parameters[5].Name);
+            Assert.Equal(true, methods[0].Parameters[5].ModelType.IsPrimaryType(KnownPrimaryType.String));
+            Assert.Equal(true, methods[0].Parameters[5].IsConstant);
+            Assert.Equal("constant", methods[0].Parameters[5].DefaultValue);
 
             Assert.Equal("Myintconst", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[5].Name);
             Assert.Equal(true, codeModel.ModelTypes.First(m => m.Name == "Product").Properties[5].ModelType.IsPrimaryType(KnownPrimaryType.Int));
@@ -571,20 +580,21 @@ namespace AutoRest.Modeler.Tests
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
             Assert.NotNull(codeModel);
-            Assert.Equal(2, codeModel.Methods.Count);
-            Assert.Equal(2, codeModel.Methods[0].Responses.Count);
-            Assert.Equal("ListHeaders", codeModel.Methods[0].Responses[HttpStatusCode.OK].Headers.Name);
-            Assert.Equal(3, ((CompositeType)codeModel.Methods[0].Responses[HttpStatusCode.OK].Headers).Properties.Count);
-            Assert.Equal("ListHeaders", codeModel.Methods[0].Responses[HttpStatusCode.Created].Headers.Name);
-            Assert.Equal(3, ((CompositeType)codeModel.Methods[0].Responses[HttpStatusCode.Created].Headers).Properties.Count);
-            Assert.Equal("ListHeaders", codeModel.Methods[0].ReturnType.Headers.Name);
-            Assert.Equal(3, ((CompositeType)codeModel.Methods[0].ReturnType.Headers).Properties.Count);
+            var methods = codeModel.Methods.ToList();
+            Assert.Equal(2, methods.Count);
+            Assert.Equal(2, methods[0].Responses.Count);
+            Assert.Equal("ListHeaders", methods[0].Responses[HttpStatusCode.OK].Headers.Name);
+            Assert.Equal(3, ((CompositeType)methods[0].Responses[HttpStatusCode.OK].Headers).Properties.Count);
+            Assert.Equal("ListHeaders", methods[0].Responses[HttpStatusCode.Created].Headers.Name);
+            Assert.Equal(3, ((CompositeType)methods[0].Responses[HttpStatusCode.Created].Headers).Properties.Count);
+            Assert.Equal("ListHeaders", methods[0].ReturnType.Headers.Name);
+            Assert.Equal(3, ((CompositeType)methods[0].ReturnType.Headers).Properties.Count);
 
-            Assert.Equal(1, codeModel.Methods[1].Responses.Count);
-            Assert.Equal("CreateHeaders", codeModel.Methods[1].Responses[HttpStatusCode.OK].Headers.Name);
-            Assert.Equal(3, ((CompositeType)codeModel.Methods[1].Responses[HttpStatusCode.OK].Headers).Properties.Count);
-            Assert.Equal("CreateHeaders", codeModel.Methods[1].ReturnType.Headers.Name);
-            Assert.Equal(3, ((CompositeType)codeModel.Methods[1].ReturnType.Headers).Properties.Count);
+            Assert.Equal(1, methods[1].Responses.Count);
+            Assert.Equal("CreateHeaders", methods[1].Responses[HttpStatusCode.OK].Headers.Name);
+            Assert.Equal(3, ((CompositeType)methods[1].Responses[HttpStatusCode.OK].Headers).Properties.Count);
+            Assert.Equal("CreateHeaders", methods[1].ReturnType.Headers.Name);
+            Assert.Equal(3, ((CompositeType)methods[1].ReturnType.Headers).Properties.Count);
             Assert.True(codeModel.HeaderTypes.Any(c => c.Name == "ListHeaders"));
             Assert.True(codeModel.HeaderTypes.Any(c => c.Name == "CreateHeaders"));
         }
@@ -597,7 +607,7 @@ namespace AutoRest.Modeler.Tests
             var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
 
             Assert.NotNull(codeModel);
-            Assert.Equal(3, codeModel.Methods.Count);
+            Assert.Equal(3, codeModel.Methods.Count());
             Assert.True(codeModel.Methods.All(m => m.Url == "/values/foo"));
         }
 
