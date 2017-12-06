@@ -43,20 +43,23 @@ namespace AutoRest.Modeler.Model
                             Name = prop.Key,
                             IsRequired = schema.Required?.Contains(prop.Key) ?? false,
                             Schema = prop.Value,
-                            Extensions = schema.Extensions
+                            Extensions = schema.Extensions,
+                            Style = prop.Value?.Style
                         });
                 }
                 else // => in: body
                 {
+                    var schema = Content?.Values.FirstOrDefault()?.Schema;
                     var p = new SwaggerParameter
                     {
                         Description = Description,
                         In = ParameterLocation.Body,
                         Name = Extensions.GetValue<string>("x-ms-requestBody-name") ?? "body",
                         IsRequired = Required,
-                        Schema = Content?.Values.FirstOrDefault()?.Schema,
+                        Schema = schema,
                         Reference = Reference,
-                        Extensions = Extensions
+                        Extensions = Extensions,
+                        Style = schema?.Style
                     };
                     asParamCache = new [] { p };
                 }
