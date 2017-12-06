@@ -775,8 +775,7 @@ modelTypes:
     containsConstantProperties: false
     deprecated: false
     extensions:
-      x-ms-client-name:
-        name: MyException
+      x-ms-client-name: MyException
     name:
       fixed: false
       raw: A

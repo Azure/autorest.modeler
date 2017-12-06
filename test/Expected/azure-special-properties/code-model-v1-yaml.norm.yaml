@@ -3,9 +3,85 @@ apiVersion: 2015-07-01-preview
 baseUrl: 'http://localhost'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
-  - $ref: '1'
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: true
+    deprecated: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+          raw: '1'
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: true
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: constantId
+        realPath:
+          - constantId
+        serializedName: constantId
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
 headerTypes:
-  - $id: '13'
+  - &ref_3
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -14,8 +90,7 @@ headerTypes:
       fixed: false
       raw: header-customNamedRequestId-Headers
     properties:
-      - $id: '14'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         deprecated: false
@@ -26,7 +101,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '15'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
@@ -40,7 +114,7 @@ headerTypes:
           - foo-request-id
         serializedName: foo-request-id
     serializedName: header-customNamedRequestId-Headers
-  - $id: '16'
+  - &ref_4
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -49,8 +123,7 @@ headerTypes:
       fixed: false
       raw: header-customNamedRequestIdParamGrouping-Headers
     properties:
-      - $id: '17'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         deprecated: false
@@ -61,7 +134,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '18'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
@@ -75,7 +147,7 @@ headerTypes:
           - foo-request-id
         serializedName: foo-request-id
     serializedName: header-customNamedRequestIdParamGrouping-Headers
-  - $id: '19'
+  - &ref_5
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -84,8 +156,7 @@ headerTypes:
       fixed: false
       raw: header-customNamedRequestIdHead-Headers
     properties:
-      - $id: '20'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         deprecated: false
@@ -96,7 +167,6 @@ headerTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '21'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
@@ -111,101 +181,15 @@ headerTypes:
         serializedName: foo-request-id
     serializedName: header-customNamedRequestIdHead-Headers
 modelTypes:
-  - $id: '1'
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    extensions:
-      requiredProperties:
-        - constantId
-    name:
-      fixed: false
-      raw: Error
-    properties:
-      - $id: '2'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '3'
-          $type: PrimaryType
-          deprecated: false
-          format: int32
-          knownPrimaryType: int
-          name:
-            fixed: false
-            raw: Int
-        name:
-          fixed: false
-          raw: status
-        realPath:
-          - status
-        serializedName: status
-      - $id: '4'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '5'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: int
-          name:
-            fixed: false
-            raw: Int
-        name:
-          fixed: false
-          raw: constantId
-        realPath:
-          - constantId
-        serializedName: constantId
-      - $id: '6'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '7'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: message
-        realPath:
-          - message
-        serializedName: message
-    serializedName: Error
-  - $id: '8'
-    $type: CompositeType
+  - *ref_0
+  - $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
       fixed: false
       raw: OdataFilter
     properties:
-      - $id: '9'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         deprecated: false
@@ -215,7 +199,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '10'
           $type: PrimaryType
           deprecated: false
           format: int32
@@ -229,8 +212,7 @@ modelTypes:
         realPath:
           - id
         serializedName: id
-      - $id: '11'
-        collectionFormat: none
+      - collectionFormat: none
         defaultValue:
           fixed: false
         deprecated: false
@@ -240,7 +222,6 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '12'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
@@ -285,8 +266,7 @@ operations:
         serializedName: x-ms-client-request-id_Get
         url: /azurespecials/overwrite/x-ms-client-request-id/method/
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -302,8 +282,7 @@ operations:
           fixed: false
           raw: ParamGet
         parameters:
-          - $id: '26'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             deprecated: false
@@ -316,7 +295,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '27'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -345,8 +323,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -362,9 +339,32 @@ operations:
           fixed: false
           raw: postMethodGlobalValid
         parameters:
-          - $id: '28'
-            clientProperty:
-              $ref: '22'
+          - clientProperty: &ref_1
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+              deprecated: false
+              documentation:
+                fixed: false
+                raw: >-
+                  The subscription id, which appears in the path, always modeled
+                  in credentials. The value is always '1234-5678-9012-3456'
+              isConstant: false
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: subscriptionId
+              realPath:
+                - subscriptionId
+              serializedName: subscriptionId
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -378,7 +378,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '29'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -401,8 +400,7 @@ operations:
         url: >-
           /azurespecials/subscriptionId/method/string/none/path/global/1234-5678-9012-3456/{subscriptionId}
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -419,9 +417,7 @@ operations:
           fixed: false
           raw: postMethodGlobalNull
         parameters:
-          - $id: '30'
-            clientProperty:
-              $ref: '22'
+          - clientProperty: *ref_1
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -435,7 +431,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '31'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -458,8 +453,7 @@ operations:
         url: >-
           /azurespecials/subscriptionId/method/string/none/path/global/null/{subscriptionId}
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -475,9 +469,7 @@ operations:
           fixed: false
           raw: postMethodGlobalNotProvidedValid
         parameters:
-          - $id: '32'
-            clientProperty:
-              $ref: '22'
+          - clientProperty: *ref_1
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -491,7 +483,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '33'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -502,9 +493,32 @@ operations:
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
-          - $id: '34'
-            clientProperty:
-              $ref: '24'
+          - clientProperty: &ref_2
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+              deprecated: false
+              documentation:
+                fixed: false
+                raw: >-
+                  The api version, which appears in the query, the value is
+                  always '2015-07-01-preview'
+              isConstant: false
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: api-version
+              realPath:
+                - api-version
+              serializedName: api-version
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -518,7 +532,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '35'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -541,8 +554,7 @@ operations:
         url: >-
           /azurespecials/subscriptionId/method/string/none/path/globalNotProvided/1234-5678-9012-3456/{subscriptionId}
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -558,9 +570,7 @@ operations:
           fixed: false
           raw: postPathGlobalValid
         parameters:
-          - $id: '36'
-            clientProperty:
-              $ref: '22'
+          - clientProperty: *ref_1
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -574,7 +584,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '37'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -597,8 +606,7 @@ operations:
         url: >-
           /azurespecials/subscriptionId/path/string/none/path/global/1234-5678-9012-3456/{subscriptionId}
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -614,9 +622,7 @@ operations:
           fixed: false
           raw: postSwaggerGlobalValid
         parameters:
-          - $id: '38'
-            clientProperty:
-              $ref: '22'
+          - clientProperty: *ref_1
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -630,7 +636,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '39'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -660,8 +665,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -677,8 +681,7 @@ operations:
           fixed: false
           raw: postMethodLocalValid
         parameters:
-          - $id: '40'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             deprecated: false
@@ -691,7 +694,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '41'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -714,8 +716,7 @@ operations:
         url: >-
           /azurespecials/subscriptionId/method/string/none/path/local/1234-5678-9012-3456/{subscriptionId}
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -732,8 +733,7 @@ operations:
           fixed: false
           raw: postMethodLocalNull
         parameters:
-          - $id: '42'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             deprecated: false
@@ -746,7 +746,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '43'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -769,8 +768,7 @@ operations:
         url: >-
           /azurespecials/subscriptionId/method/string/none/path/local/null/{subscriptionId}
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -786,8 +784,7 @@ operations:
           fixed: false
           raw: postPathLocalValid
         parameters:
-          - $id: '44'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             deprecated: false
@@ -800,7 +797,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '45'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -823,8 +819,7 @@ operations:
         url: >-
           /azurespecials/subscriptionId/path/string/none/path/local/1234-5678-9012-3456/{subscriptionId}
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -840,8 +835,7 @@ operations:
           fixed: false
           raw: postSwaggerLocalValid
         parameters:
-          - $id: '46'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             deprecated: false
@@ -854,7 +848,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '47'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -884,8 +877,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: GET method with api-version modeled in global settings.
@@ -899,9 +891,7 @@ operations:
           fixed: false
           raw: getMethodGlobalValid
         parameters:
-          - $id: '48'
-            clientProperty:
-              $ref: '24'
+          - clientProperty: *ref_2
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -915,7 +905,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '49'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -938,8 +927,7 @@ operations:
         url: >-
           /azurespecials/apiVersion/method/string/none/query/global/2015-07-01-preview
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: GET method with api-version modeled in global settings.
@@ -953,9 +941,7 @@ operations:
           fixed: false
           raw: getMethodGlobalNotProvidedValid
         parameters:
-          - $id: '50'
-            clientProperty:
-              $ref: '24'
+          - clientProperty: *ref_2
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -969,7 +955,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '51'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -992,8 +977,7 @@ operations:
         url: >-
           /azurespecials/apiVersion/method/string/none/query/globalNotProvided/2015-07-01-preview
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: GET method with api-version modeled in global settings.
@@ -1007,9 +991,7 @@ operations:
           fixed: false
           raw: getPathGlobalValid
         parameters:
-          - $id: '52'
-            clientProperty:
-              $ref: '24'
+          - clientProperty: *ref_2
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1023,7 +1005,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '53'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1046,8 +1027,7 @@ operations:
         url: >-
           /azurespecials/apiVersion/path/string/none/query/global/2015-07-01-preview
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: GET method with api-version modeled in global settings.
@@ -1061,9 +1041,7 @@ operations:
           fixed: false
           raw: getSwaggerGlobalValid
         parameters:
-          - $id: '54'
-            clientProperty:
-              $ref: '24'
+          - clientProperty: *ref_2
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1077,7 +1055,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '55'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1107,8 +1084,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1124,8 +1100,7 @@ operations:
           fixed: false
           raw: getMethodLocalValid
         parameters:
-          - $id: '56'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: '2.0'
@@ -1137,7 +1112,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '57'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1159,8 +1133,7 @@ operations:
         serializedName: apiVersionLocal_getMethodLocalValid
         url: /azurespecials/apiVersion/method/string/none/query/local/2.0
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1176,8 +1149,7 @@ operations:
           fixed: false
           raw: getMethodLocalNull
         parameters:
-          - $id: '58'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             deprecated: false
@@ -1190,7 +1162,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '59'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1212,8 +1183,7 @@ operations:
         serializedName: apiVersionLocal_getMethodLocalNull
         url: /azurespecials/apiVersion/method/string/none/query/local/null
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1229,8 +1199,7 @@ operations:
           fixed: false
           raw: getPathLocalValid
         parameters:
-          - $id: '60'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: '2.0'
@@ -1242,7 +1211,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '61'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1264,8 +1232,7 @@ operations:
         serializedName: apiVersionLocal_getPathLocalValid
         url: /azurespecials/apiVersion/path/string/none/query/local/2.0
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1281,8 +1248,7 @@ operations:
           fixed: false
           raw: getSwaggerLocalValid
         parameters:
-          - $id: '62'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: '2.0'
@@ -1296,7 +1262,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '63'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1325,8 +1290,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1342,8 +1306,7 @@ operations:
           fixed: false
           raw: getMethodPathValid
         parameters:
-          - $id: '64'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             deprecated: false
@@ -1356,7 +1319,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '65'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1378,8 +1340,7 @@ operations:
         serializedName: skipUrlEncoding_getMethodPathValid
         url: '/azurespecials/skipUrlEncoding/method/path/valid/{unencodedPathParam}'
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1395,8 +1356,7 @@ operations:
           fixed: false
           raw: getPathPathValid
         parameters:
-          - $id: '66'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             deprecated: false
@@ -1409,7 +1369,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '67'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1431,8 +1390,7 @@ operations:
         serializedName: skipUrlEncoding_getPathPathValid
         url: '/azurespecials/skipUrlEncoding/path/path/valid/{unencodedPathParam}'
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1448,8 +1406,7 @@ operations:
           fixed: false
           raw: getSwaggerPathValid
         parameters:
-          - $id: '68'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: path1/path2/path3
@@ -1463,7 +1420,6 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '69'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1485,8 +1441,7 @@ operations:
         serializedName: skipUrlEncoding_getSwaggerPathValid
         url: '/azurespecials/skipUrlEncoding/swagger/path/valid/{unencodedPathParam}'
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1502,8 +1457,7 @@ operations:
           fixed: false
           raw: getMethodQueryValid
         parameters:
-          - $id: '70'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             deprecated: false
@@ -1518,7 +1472,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '71'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1540,8 +1493,7 @@ operations:
         serializedName: skipUrlEncoding_getMethodQueryValid
         url: /azurespecials/skipUrlEncoding/method/query/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Get method with unencoded query parameter with value null
@@ -1555,8 +1507,7 @@ operations:
           fixed: false
           raw: getMethodQueryNull
         parameters:
-          - $id: '72'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             deprecated: false
@@ -1569,7 +1520,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '73'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1591,8 +1541,7 @@ operations:
         serializedName: skipUrlEncoding_getMethodQueryNull
         url: /azurespecials/skipUrlEncoding/method/query/null
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1608,8 +1557,7 @@ operations:
           fixed: false
           raw: getPathQueryValid
         parameters:
-          - $id: '74'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             deprecated: false
@@ -1624,7 +1572,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '75'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1646,8 +1593,7 @@ operations:
         serializedName: skipUrlEncoding_getPathQueryValid
         url: /azurespecials/skipUrlEncoding/path/query/valid
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1663,8 +1609,7 @@ operations:
           fixed: false
           raw: getSwaggerQueryValid
         parameters:
-          - $id: '76'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
               raw: value1&q2=value2&q3=value3
@@ -1680,7 +1625,6 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '77'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1709,8 +1653,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: >-
@@ -1728,8 +1671,7 @@ operations:
           fixed: false
           raw: getWithFilter
         parameters:
-          - $id: '78'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             deprecated: false
@@ -1742,7 +1684,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '79'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1753,8 +1694,7 @@ operations:
               fixed: false
               raw: $filter
             serializedName: $filter
-          - $id: '80'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             deprecated: false
@@ -1765,7 +1705,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '81'
               $type: PrimaryType
               deprecated: false
               format: int32
@@ -1777,8 +1716,7 @@ operations:
               fixed: false
               raw: $top
             serializedName: $top
-          - $id: '82'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             deprecated: false
@@ -1789,7 +1727,6 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '83'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1818,10 +1755,8 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '13'
+          body: *ref_0
+          headers: *ref_3
           isNullable: true
         deprecated: false
         description: >-
@@ -1839,8 +1774,7 @@ operations:
           fixed: false
           raw: customNamedRequestId
         parameters:
-          - $id: '84'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             deprecated: false
@@ -1853,7 +1787,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '85'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1869,20 +1802,16 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '13'
+            headers: *ref_3
             isNullable: true
         returnType:
-          headers:
-            $ref: '13'
+          headers: *ref_3
           isNullable: true
         serializedName: header_customNamedRequestId
         url: /azurespecials/customNamedRequestId
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '16'
+          body: *ref_0
+          headers: *ref_4
           isNullable: true
         deprecated: false
         description: >-
@@ -1900,8 +1829,7 @@ operations:
           fixed: false
           raw: customNamedRequestIdParamGrouping
         parameters:
-          - $id: '86'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             deprecated: false
@@ -1915,7 +1843,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '87'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1931,20 +1858,16 @@ operations:
           - application/json
         responses:
           OK:
-            headers:
-              $ref: '16'
+            headers: *ref_4
             isNullable: true
         returnType:
-          headers:
-            $ref: '16'
+          headers: *ref_4
           isNullable: true
         serializedName: header_customNamedRequestIdParamGrouping
         url: /azurespecials/customNamedRequestIdParamGrouping
       - defaultResponse:
-          body:
-            $ref: '1'
-          headers:
-            $ref: '19'
+          body: *ref_0
+          headers: *ref_5
           isNullable: true
         deprecated: false
         description: >-
@@ -1962,8 +1885,7 @@ operations:
           fixed: false
           raw: customNamedRequestIdHead
         parameters:
-          - $id: '88'
-            collectionFormat: none
+          - collectionFormat: none
             defaultValue:
               fixed: false
             deprecated: false
@@ -1976,7 +1898,6 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '89'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
@@ -1992,16 +1913,13 @@ operations:
           - application/json
         responses:
           NotFound:
-            headers:
-              $ref: '19'
+            headers: *ref_5
             isNullable: true
           OK:
-            headers:
-              $ref: '19'
+            headers: *ref_5
             isNullable: true
         returnType:
-          headers:
-            $ref: '19'
+          headers: *ref_5
           isNullable: true
         serializedName: header_customNamedRequestIdHead
         url: /azurespecials/customNamedRequestIdHead
@@ -2012,57 +1930,5 @@ operations:
     typeName:
       fixed: false
 properties:
-  - $id: '22'
-    collectionFormat: none
-    defaultValue:
-      fixed: false
-    deprecated: false
-    documentation:
-      fixed: false
-      raw: >-
-        The subscription id, which appears in the path, always modeled in
-        credentials. The value is always '1234-5678-9012-3456'
-    isConstant: false
-    isReadOnly: false
-    isRequired: true
-    modelType:
-      $id: '23'
-      $type: PrimaryType
-      deprecated: false
-      knownPrimaryType: string
-      name:
-        fixed: false
-        raw: String
-    name:
-      fixed: false
-      raw: subscriptionId
-    realPath:
-      - subscriptionId
-    serializedName: subscriptionId
-  - $id: '24'
-    collectionFormat: none
-    defaultValue:
-      fixed: false
-    deprecated: false
-    documentation:
-      fixed: false
-      raw: >-
-        The api version, which appears in the query, the value is always
-        '2015-07-01-preview'
-    isConstant: false
-    isReadOnly: false
-    isRequired: true
-    modelType:
-      $id: '25'
-      $type: PrimaryType
-      deprecated: false
-      knownPrimaryType: string
-      name:
-        fixed: false
-        raw: String
-    name:
-      fixed: false
-      raw: api-version
-    realPath:
-      - api-version
-    serializedName: api-version
+  - *ref_1
+  - *ref_2
