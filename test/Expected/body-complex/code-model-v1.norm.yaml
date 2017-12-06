@@ -1,0 +1,3570 @@
+---
+apiVersion: '2016-02-29'
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+enumTypes:
+  - $ref: '12'
+errorTypes:
+  - $ref: '1'
+modelTypes:
+  - $id: '1'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '2'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '3'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '4'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '5'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+  - $id: '6'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: basic
+    properties:
+      - $id: '7'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: Basic Id
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '8'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: id
+        realPath:
+          - id
+        serializedName: id
+      - $id: '9'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: >-
+            Name property with a very long description that does not fit on a
+            single line and a line break.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '10'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: name
+        realPath:
+          - name
+        serializedName: name
+      - $id: '11'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-ms-enum:
+            modelAsString: true
+            name: CMYKColors
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '12'
+          $type: EnumType
+          deprecated: false
+          modelAsExtensible: false
+          modelAsString: true
+          name:
+            fixed: false
+            raw: CMYKColors
+          underlyingType:
+            $id: '13'
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          values:
+            - name: cyan
+              serializedName: cyan
+            - name: Magenta
+              serializedName: Magenta
+            - name: YELLOW
+              serializedName: YELLOW
+            - name: blacK
+              serializedName: blacK
+        name:
+          fixed: false
+          raw: color
+        realPath:
+          - color
+        serializedName: color
+    serializedName: basic
+  - $id: '14'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: pet
+    properties:
+      - $id: '15'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '16'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: id
+        realPath:
+          - id
+        serializedName: id
+      - $id: '17'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '18'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: name
+        realPath:
+          - name
+        serializedName: name
+    serializedName: pet
+  - $id: '19'
+    $type: CompositeType
+    baseModelType:
+      $ref: '14'
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: dog
+    properties:
+      - $id: '20'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '21'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: food
+        realPath:
+          - food
+        serializedName: food
+    serializedName: dog
+  - $id: '22'
+    $type: CompositeType
+    baseModelType:
+      $ref: '14'
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: cat
+    properties:
+      - $id: '23'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '24'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: color
+        realPath:
+          - color
+        serializedName: color
+      - $id: '25'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '26'
+          $type: SequenceType
+          deprecated: false
+          elementType:
+            $ref: '19'
+          name:
+            fixed: false
+        name:
+          fixed: false
+          raw: hates
+        realPath:
+          - hates
+        serializedName: hates
+    serializedName: cat
+  - $id: '27'
+    $type: CompositeType
+    baseModelType:
+      $ref: '22'
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: siamese
+    properties:
+      - $id: '28'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '29'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: breed
+        realPath:
+          - breed
+        serializedName: breed
+    serializedName: siamese
+  - $id: '30'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Fish
+    polymorphicDiscriminator: fishtype
+    properties:
+      - $id: '31'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '32'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: species
+        realPath:
+          - species
+        serializedName: species
+      - $id: '33'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $id: '34'
+          $type: PrimaryType
+          deprecated: false
+          format: float
+          knownPrimaryType: double
+          name:
+            fixed: false
+            raw: Double
+        name:
+          fixed: false
+          raw: length
+        realPath:
+          - length
+        serializedName: length
+      - $id: '35'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '36'
+          $type: SequenceType
+          deprecated: false
+          elementType:
+            $ref: '30'
+          name:
+            fixed: false
+        name:
+          fixed: false
+          raw: siblings
+        realPath:
+          - siblings
+        serializedName: siblings
+    serializedName: Fish
+  - $id: '37'
+    $type: CompositeType
+    baseModelType:
+      $ref: '30'
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: salmon
+    properties:
+      - $id: '38'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '39'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: location
+        realPath:
+          - location
+        serializedName: location
+      - $id: '40'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '41'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: boolean
+          name:
+            fixed: false
+            raw: Boolean
+        name:
+          fixed: false
+          raw: iswild
+        realPath:
+          - iswild
+        serializedName: iswild
+    serializedName: salmon
+  - $id: '42'
+    $type: CompositeType
+    baseModelType:
+      $ref: '37'
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: smart_salmon
+    properties:
+      - $id: '43'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: >-
+            Unmatched properties from the message are deserialized this
+            collection
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '44'
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: true
+          valueType:
+            $id: '45'
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: object
+            name:
+              fixed: false
+              raw: Object
+        name:
+          fixed: false
+          raw: additionalProperties
+      - $id: '46'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '47'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: college_degree
+        realPath:
+          - college_degree
+        serializedName: college_degree
+    serializedName: smart_salmon
+  - $id: '48'
+    $type: CompositeType
+    baseModelType:
+      $ref: '30'
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: shark
+    properties:
+      - $id: '49'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '50'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: age
+        realPath:
+          - age
+        serializedName: age
+      - $id: '51'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $id: '52'
+          $type: PrimaryType
+          deprecated: false
+          format: date-time
+          knownPrimaryType: dateTime
+          name:
+            fixed: false
+            raw: DateTime
+        name:
+          fixed: false
+          raw: birthday
+        realPath:
+          - birthday
+        serializedName: birthday
+    serializedName: shark
+  - $id: '53'
+    $type: CompositeType
+    baseModelType:
+      $ref: '48'
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: sawshark
+    properties:
+      - $id: '54'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '55'
+          $type: PrimaryType
+          deprecated: false
+          format: byte
+          knownPrimaryType: byteArray
+          name:
+            fixed: false
+            raw: ByteArray
+        name:
+          fixed: false
+          raw: picture
+        realPath:
+          - picture
+        serializedName: picture
+    serializedName: sawshark
+  - $id: '56'
+    $type: CompositeType
+    baseModelType:
+      $ref: '48'
+    containsConstantProperties: false
+    deprecated: false
+    extensions:
+      x-ms-discriminator-value: goblin
+    name:
+      fixed: false
+      raw: goblinshark
+    properties:
+      - $id: '57'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '58'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: jawsize
+        realPath:
+          - jawsize
+        serializedName: jawsize
+    serializedName: goblin
+  - $id: '59'
+    $type: CompositeType
+    baseModelType:
+      $ref: '48'
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: cookiecuttershark
+    serializedName: cookiecuttershark
+  - $id: '60'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: int-wrapper
+    properties:
+      - $id: '61'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '62'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: field1
+        realPath:
+          - field1
+        serializedName: field1
+      - $id: '63'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '64'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: field2
+        realPath:
+          - field2
+        serializedName: field2
+    serializedName: int-wrapper
+  - $id: '65'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: long-wrapper
+    properties:
+      - $id: '66'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '67'
+          $type: PrimaryType
+          deprecated: false
+          format: int64
+          knownPrimaryType: long
+          name:
+            fixed: false
+            raw: Long
+        name:
+          fixed: false
+          raw: field1
+        realPath:
+          - field1
+        serializedName: field1
+      - $id: '68'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '69'
+          $type: PrimaryType
+          deprecated: false
+          format: int64
+          knownPrimaryType: long
+          name:
+            fixed: false
+            raw: Long
+        name:
+          fixed: false
+          raw: field2
+        realPath:
+          - field2
+        serializedName: field2
+    serializedName: long-wrapper
+  - $id: '70'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: float-wrapper
+    properties:
+      - $id: '71'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '72'
+          $type: PrimaryType
+          deprecated: false
+          format: float
+          knownPrimaryType: double
+          name:
+            fixed: false
+            raw: Double
+        name:
+          fixed: false
+          raw: field1
+        realPath:
+          - field1
+        serializedName: field1
+      - $id: '73'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '74'
+          $type: PrimaryType
+          deprecated: false
+          format: float
+          knownPrimaryType: double
+          name:
+            fixed: false
+            raw: Double
+        name:
+          fixed: false
+          raw: field2
+        realPath:
+          - field2
+        serializedName: field2
+    serializedName: float-wrapper
+  - $id: '75'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: double-wrapper
+    properties:
+      - $id: '76'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '77'
+          $type: PrimaryType
+          deprecated: false
+          format: double
+          knownPrimaryType: double
+          name:
+            fixed: false
+            raw: Double
+        name:
+          fixed: false
+          raw: field1
+        realPath:
+          - field1
+        serializedName: field1
+      - $id: '78'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '79'
+          $type: PrimaryType
+          deprecated: false
+          format: double
+          knownPrimaryType: double
+          name:
+            fixed: false
+            raw: Double
+        name:
+          fixed: false
+          raw: >-
+            field_56_zeros_after_the_dot_and_negative_zero_before_dot_and_this_is_a_long_field_name_on_purpose
+        realPath:
+          - >-
+            field_56_zeros_after_the_dot_and_negative_zero_before_dot_and_this_is_a_long_field_name_on_purpose
+        serializedName: >-
+          field_56_zeros_after_the_dot_and_negative_zero_before_dot_and_this_is_a_long_field_name_on_purpose
+    serializedName: double-wrapper
+  - $id: '80'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: boolean-wrapper
+    properties:
+      - $id: '81'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '82'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: boolean
+          name:
+            fixed: false
+            raw: Boolean
+        name:
+          fixed: false
+          raw: field_true
+        realPath:
+          - field_true
+        serializedName: field_true
+      - $id: '83'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '84'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: boolean
+          name:
+            fixed: false
+            raw: Boolean
+        name:
+          fixed: false
+          raw: field_false
+        realPath:
+          - field_false
+        serializedName: field_false
+    serializedName: boolean-wrapper
+  - $id: '85'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: string-wrapper
+    properties:
+      - $id: '86'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '87'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: field
+        realPath:
+          - field
+        serializedName: field
+      - $id: '88'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '89'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: empty
+        realPath:
+          - empty
+        serializedName: empty
+      - $id: '90'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '91'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: 'null'
+        realPath:
+          - 'null'
+        serializedName: 'null'
+    serializedName: string-wrapper
+  - $id: '92'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: date-wrapper
+    properties:
+      - $id: '93'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '94'
+          $type: PrimaryType
+          deprecated: false
+          format: date
+          knownPrimaryType: date
+          name:
+            fixed: false
+            raw: Date
+        name:
+          fixed: false
+          raw: field
+        realPath:
+          - field
+        serializedName: field
+      - $id: '95'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '96'
+          $type: PrimaryType
+          deprecated: false
+          format: date
+          knownPrimaryType: date
+          name:
+            fixed: false
+            raw: Date
+        name:
+          fixed: false
+          raw: leap
+        realPath:
+          - leap
+        serializedName: leap
+    serializedName: date-wrapper
+  - $id: '97'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: datetime-wrapper
+    properties:
+      - $id: '98'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '99'
+          $type: PrimaryType
+          deprecated: false
+          format: date-time
+          knownPrimaryType: dateTime
+          name:
+            fixed: false
+            raw: DateTime
+        name:
+          fixed: false
+          raw: field
+        realPath:
+          - field
+        serializedName: field
+      - $id: '100'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '101'
+          $type: PrimaryType
+          deprecated: false
+          format: date-time
+          knownPrimaryType: dateTime
+          name:
+            fixed: false
+            raw: DateTime
+        name:
+          fixed: false
+          raw: now
+        realPath:
+          - now
+        serializedName: now
+    serializedName: datetime-wrapper
+  - $id: '102'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: datetimerfc1123-wrapper
+    properties:
+      - $id: '103'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '104'
+          $type: PrimaryType
+          deprecated: false
+          format: date-time-rfc1123
+          knownPrimaryType: dateTimeRfc1123
+          name:
+            fixed: false
+            raw: DateTimeRfc1123
+        name:
+          fixed: false
+          raw: field
+        realPath:
+          - field
+        serializedName: field
+      - $id: '105'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '106'
+          $type: PrimaryType
+          deprecated: false
+          format: date-time-rfc1123
+          knownPrimaryType: dateTimeRfc1123
+          name:
+            fixed: false
+            raw: DateTimeRfc1123
+        name:
+          fixed: false
+          raw: now
+        realPath:
+          - now
+        serializedName: now
+    serializedName: datetimerfc1123-wrapper
+  - $id: '107'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: duration-wrapper
+    properties:
+      - $id: '108'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '109'
+          $type: PrimaryType
+          deprecated: false
+          format: duration
+          knownPrimaryType: timeSpan
+          name:
+            fixed: false
+            raw: TimeSpan
+        name:
+          fixed: false
+          raw: field
+        realPath:
+          - field
+        serializedName: field
+    serializedName: duration-wrapper
+  - $id: '110'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: byte-wrapper
+    properties:
+      - $id: '111'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '112'
+          $type: PrimaryType
+          deprecated: false
+          format: byte
+          knownPrimaryType: byteArray
+          name:
+            fixed: false
+            raw: ByteArray
+        name:
+          fixed: false
+          raw: field
+        realPath:
+          - field
+        serializedName: field
+    serializedName: byte-wrapper
+  - $id: '113'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: array-wrapper
+    properties:
+      - $id: '114'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '115'
+          $type: SequenceType
+          deprecated: false
+          elementType:
+            $id: '116'
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          name:
+            fixed: false
+        name:
+          fixed: false
+          raw: array
+        realPath:
+          - array
+        serializedName: array
+    serializedName: array-wrapper
+  - $id: '117'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: dictionary-wrapper
+    properties:
+      - $id: '118'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '119'
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $id: '120'
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+        name:
+          fixed: false
+          raw: defaultProgram
+        realPath:
+          - defaultProgram
+        serializedName: defaultProgram
+    serializedName: dictionary-wrapper
+  - $id: '121'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: readonly-obj
+    properties:
+      - $id: '122'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $id: '123'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: id
+        realPath:
+          - id
+        serializedName: id
+      - $id: '124'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '125'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: size
+        realPath:
+          - size
+        serializedName: size
+    serializedName: readonly-obj
+modelsName: Models
+name: AutoRestComplexTestService
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Get complex type {id: 2, name: ''abc'', color: ''YELLOW''}'
+        group:
+          fixed: false
+          raw: basic
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: basic_getValid
+        url: /complex/basic/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: 'Please put {id: 2, name: ''abc'', color: ''Magenta''}'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: basic
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putValid
+        parameters:
+          - $id: '128'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: 'Please put {id: 2, name: ''abc'', color: ''Magenta''}'
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '6'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+          - $id: '129'
+            clientProperty:
+              $ref: '126'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+              raw: 2014-04-01-preview
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: API ID.
+            isConstant: true
+            isRequired: true
+            location: query
+            modelType:
+              $id: '130'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: basic_putValid
+        url: /complex/basic/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get a basic complex type that is invalid for the local strong type
+        group:
+          fixed: false
+          raw: basic
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getInvalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: basic_getInvalid
+        url: /complex/basic/invalid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get a basic complex type that is empty
+        group:
+          fixed: false
+          raw: basic
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: basic_getEmpty
+        url: /complex/basic/empty
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get a basic complex type whose properties are null
+        group:
+          fixed: false
+          raw: basic
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: basic_getNull
+        url: /complex/basic/null
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get a basic complex type while the server doesn't provide a response
+          payload
+        group:
+          fixed: false
+          raw: basic
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNotProvided
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: basic_getNotProvided
+        url: /complex/basic/notprovided
+    name:
+      fixed: false
+      raw: Basic
+    nameForProperty: Basic
+    typeName:
+      fixed: false
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types with integer properties
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getInt
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '60'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '60'
+          isNullable: true
+        serializedName: primitive_getInt
+        url: /complex/primitive/integer
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types with integer properties
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putInt
+        parameters:
+          - $id: '131'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Please put -1 and 2
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '60'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: primitive_putInt
+        url: /complex/primitive/integer
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types with long properties
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getLong
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '65'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '65'
+          isNullable: true
+        serializedName: primitive_getLong
+        url: /complex/primitive/long
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types with long properties
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putLong
+        parameters:
+          - $id: '132'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Please put 1099511627775 and -999511627788
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '65'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: primitive_putLong
+        url: /complex/primitive/long
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types with float properties
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getFloat
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '70'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '70'
+          isNullable: true
+        serializedName: primitive_getFloat
+        url: /complex/primitive/float
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types with float properties
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putFloat
+        parameters:
+          - $id: '133'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Please put 1.05 and -0.003
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '70'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: primitive_putFloat
+        url: /complex/primitive/float
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types with double properties
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDouble
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '75'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '75'
+          isNullable: true
+        serializedName: primitive_getDouble
+        url: /complex/primitive/double
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types with double properties
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDouble
+        parameters:
+          - $id: '134'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                Please put 3e-100 and
+                -0.000000000000000000000000000000000000000000000000000000005
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '75'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: primitive_putDouble
+        url: /complex/primitive/double
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types with bool properties
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getBool
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '80'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '80'
+          isNullable: true
+        serializedName: primitive_getBool
+        url: /complex/primitive/bool
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types with bool properties
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putBool
+        parameters:
+          - $id: '135'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Please put true and false
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '80'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: primitive_putBool
+        url: /complex/primitive/bool
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types with string properties
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getString
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '85'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '85'
+          isNullable: true
+        serializedName: primitive_getString
+        url: /complex/primitive/string
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types with string properties
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putString
+        parameters:
+          - $id: '136'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: 'Please put ''goodrequest'', '''', and null'
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '85'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: primitive_putString
+        url: /complex/primitive/string
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types with date properties
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDate
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '92'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '92'
+          isNullable: true
+        serializedName: primitive_getDate
+        url: /complex/primitive/date
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types with date properties
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDate
+        parameters:
+          - $id: '137'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Please put '0001-01-01' and '2016-02-29'
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '92'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: primitive_putDate
+        url: /complex/primitive/date
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types with datetime properties
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDateTime
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '97'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '97'
+          isNullable: true
+        serializedName: primitive_getDateTime
+        url: /complex/primitive/datetime
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types with datetime properties
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDateTime
+        parameters:
+          - $id: '138'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                Please put '0001-01-01T12:00:00-04:00' and
+                '2015-05-18T11:38:00-08:00'
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '97'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: primitive_putDateTime
+        url: /complex/primitive/datetime
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types with datetimeRfc1123 properties
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDateTimeRfc1123
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '102'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '102'
+          isNullable: true
+        serializedName: primitive_getDateTimeRfc1123
+        url: /complex/primitive/datetimerfc1123
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types with datetimeRfc1123 properties
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDateTimeRfc1123
+        parameters:
+          - $id: '139'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                Please put 'Mon, 01 Jan 0001 12:00:00 GMT' and 'Mon, 18 May 2015
+                11:38:00 GMT'
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '102'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: primitive_putDateTimeRfc1123
+        url: /complex/primitive/datetimerfc1123
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types with duration properties
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDuration
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '107'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '107'
+          isNullable: true
+        serializedName: primitive_getDuration
+        url: /complex/primitive/duration
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types with duration properties
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDuration
+        parameters:
+          - $id: '140'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Please put 'P123DT22H14M12.011S'
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '107'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: primitive_putDuration
+        url: /complex/primitive/duration
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types with byte properties
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getByte
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '110'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '110'
+          isNullable: true
+        serializedName: primitive_getByte
+        url: /complex/primitive/byte
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types with byte properties
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: primitive
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putByte
+        parameters:
+          - $id: '141'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                Please put non-ascii byte string hex(FF FE FD FC 00 FA F9 F8 F7
+                F6)
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '110'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: primitive_putByte
+        url: /complex/primitive/byte
+    name:
+      fixed: false
+      raw: Primitive
+    nameForProperty: Primitive
+    typeName:
+      fixed: false
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types with array property
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '113'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '113'
+          isNullable: true
+        serializedName: array_getValid
+        url: /complex/array/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types with array property
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putValid
+        parameters:
+          - $id: '142'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                Please put an array with 4 items: "1, 2, 3, 4", "", null,
+                "&S#$(*Y", "The quick brown fox jumps over the lazy dog"
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '113'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putValid
+        url: /complex/array/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types with array property which is empty
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '113'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '113'
+          isNullable: true
+        serializedName: array_getEmpty
+        url: /complex/array/empty
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types with array property which is empty
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putEmpty
+        parameters:
+          - $id: '143'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Please put an empty array
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '113'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putEmpty
+        url: /complex/array/empty
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get complex types with array property while server doesn't provide a
+          response payload
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNotProvided
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '113'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '113'
+          isNullable: true
+        serializedName: array_getNotProvided
+        url: /complex/array/notprovided
+    name:
+      fixed: false
+      raw: Array
+    nameForProperty: Array
+    typeName:
+      fixed: false
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types with dictionary property
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '117'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '117'
+          isNullable: true
+        serializedName: dictionary_getValid
+        url: /complex/dictionary/typed/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types with dictionary property
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putValid
+        parameters:
+          - $id: '144'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                Please put a dictionary with 5 key-value pairs: "txt":"notepad",
+                "bmp":"mspaint", "xls":"excel", "exe":"", "":null
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '117'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: dictionary_putValid
+        url: /complex/dictionary/typed/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types with dictionary property which is empty
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '117'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '117'
+          isNullable: true
+        serializedName: dictionary_getEmpty
+        url: /complex/dictionary/typed/empty
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types with dictionary property which is empty
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putEmpty
+        parameters:
+          - $id: '145'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Please put an empty dictionary
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '117'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: dictionary_putEmpty
+        url: /complex/dictionary/typed/empty
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types with dictionary property which is null
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '117'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '117'
+          isNullable: true
+        serializedName: dictionary_getNull
+        url: /complex/dictionary/typed/null
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get complex types with dictionary property while server doesn't
+          provide a response payload
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNotProvided
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '117'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '117'
+          isNullable: true
+        serializedName: dictionary_getNotProvided
+        url: /complex/dictionary/typed/notprovided
+    name:
+      fixed: false
+      raw: Dictionary
+    nameForProperty: Dictionary
+    typeName:
+      fixed: false
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types that extend others
+        group:
+          fixed: false
+          raw: inheritance
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '27'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '27'
+          isNullable: true
+        serializedName: inheritance_getValid
+        url: /complex/inheritance/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types that extend others
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: inheritance
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putValid
+        parameters:
+          - $id: '146'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                Please put a siamese with id=2, name="Siameee", color=green,
+                breed=persion, which hates 2 dogs, the 1st one named "Potato"
+                with id=1 and food="tomato", and the 2nd one named "Tomato" with
+                id=-1 and food="french fries".
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '27'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: inheritance_putValid
+        url: /complex/inheritance/valid
+    name:
+      fixed: false
+      raw: Inheritance
+    nameForProperty: Inheritance
+    typeName:
+      fixed: false
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types that are polymorphic
+        group:
+          fixed: false
+          raw: polymorphism
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '30'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '30'
+          isNullable: true
+        serializedName: polymorphism_getValid
+        url: /complex/polymorphism/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types that are polymorphic
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: polymorphism
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putValid
+        parameters:
+          - $id: '147'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: |-
+                Please put a salmon that looks like this:
+                {
+                        'fishtype':'Salmon',
+                        'location':'alaska',
+                        'iswild':true,
+                        'species':'king',
+                        'length':1.0,
+                        'siblings':[
+                          {
+                            'fishtype':'Shark',
+                            'age':6,
+                            'birthday': '2012-01-05T01:00:00Z',
+                            'length':20.0,
+                            'species':'predator',
+                          },
+                          {
+                            'fishtype':'Sawshark',
+                            'age':105,
+                            'birthday': '1900-01-05T01:00:00Z',
+                            'length':10.0,
+                            'picture': new Buffer([255, 255, 255, 255, 254]).toString('base64'),
+                            'species':'dangerous',
+                          },
+                          {
+                            'fishtype': 'goblin',
+                            'age': 1,
+                            'birthday': '2015-08-08T00:00:00Z',
+                            'length': 30.0,
+                            'species': 'scary',
+                            'jawsize': 5
+                          }
+                        ]
+                      };
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '30'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: polymorphism_putValid
+        url: /complex/polymorphism/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get complex types that are polymorphic, but not at the root of the
+          hierarchy; also have additional properties
+        group:
+          fixed: false
+          raw: polymorphism
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getComplicated
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '37'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '37'
+          isNullable: true
+        serializedName: polymorphism_getComplicated
+        url: /complex/polymorphism/complicated
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Put complex types that are polymorphic, but not at the root of the
+          hierarchy; also have additional properties
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: polymorphism
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putComplicated
+        parameters:
+          - $id: '148'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '37'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: polymorphism_putComplicated
+        url: /complex/polymorphism/complicated
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Put complex types that are polymorphic, attempting to omit required
+          'birthday' field - the request should not be allowed from the client
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: polymorphism
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putValidMissingRequired
+        parameters:
+          - $id: '149'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                Please attempt put a sawshark that looks like this, the client
+                should not allow this data to be sent:
+
+                {
+                    "fishtype": "sawshark",
+                    "species": "snaggle toothed",
+                    "length": 18.5,
+                    "age": 2,
+                    "birthday": "2013-06-01T01:00:00Z",
+                    "location": "alaska",
+                    "picture": base64(FF FF FF FF FE),
+                    "siblings": [
+                        {
+                            "fishtype": "shark",
+                            "species": "predator",
+                            "birthday": "2012-01-05T01:00:00Z",
+                            "length": 20,
+                            "age": 6
+                        },
+                        {
+                            "fishtype": "sawshark",
+                            "species": "dangerous",
+                            "picture": base64(FF FF FF FF FE),
+                            "length": 10,
+                            "age": 105
+                        }
+                    ]
+                }
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '30'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: polymorphism_putValidMissingRequired
+        url: /complex/polymorphism/missingrequired/invalid
+    name:
+      fixed: false
+      raw: Polymorphism
+    nameForProperty: Polymorphism
+    typeName:
+      fixed: false
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types that are polymorphic and have recursive references
+        group:
+          fixed: false
+          raw: polymorphicrecursive
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '30'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '30'
+          isNullable: true
+        serializedName: polymorphicrecursive_getValid
+        url: /complex/polymorphicrecursive/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types that are polymorphic and have recursive references
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: polymorphicrecursive
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putValid
+        parameters:
+          - $id: '150'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: |-
+                Please put a salmon that looks like this:
+                {
+                    "fishtype": "salmon",
+                    "species": "king",
+                    "length": 1,
+                    "age": 1,
+                    "location": "alaska",
+                    "iswild": true,
+                    "siblings": [
+                        {
+                            "fishtype": "shark",
+                            "species": "predator",
+                            "length": 20,
+                            "age": 6,
+                            "siblings": [
+                                {
+                                    "fishtype": "salmon",
+                                    "species": "coho",
+                                    "length": 2,
+                                    "age": 2,
+                                    "location": "atlantic",
+                                    "iswild": true,
+                                    "siblings": [
+                                        {
+                                            "fishtype": "shark",
+                                            "species": "predator",
+                                            "length": 20,
+                                            "age": 6
+                                        },
+                                        {
+                                            "fishtype": "sawshark",
+                                            "species": "dangerous",
+                                            "length": 10,
+                                            "age": 105
+                                        }
+                                    ]
+                                },
+                                {
+                                    "fishtype": "sawshark",
+                                    "species": "dangerous",
+                                    "length": 10,
+                                    "age": 105
+                                }
+                            ]
+                        },
+                        {
+                            "fishtype": "sawshark",
+                            "species": "dangerous",
+                            "length": 10,
+                            "age": 105
+                        }
+                    ]
+                }
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '30'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: polymorphicrecursive_putValid
+        url: /complex/polymorphicrecursive/valid
+    name:
+      fixed: false
+      raw: Polymorphicrecursive
+    nameForProperty: Polymorphicrecursive
+    typeName:
+      fixed: false
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get complex types that have readonly properties
+        group:
+          fixed: false
+          raw: readonlyproperty
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '121'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '121'
+          isNullable: true
+        serializedName: readonlyproperty_getValid
+        url: /complex/readonlyproperty/valid
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put complex types that have readonly properties
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: readonlyproperty
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putValid
+        parameters:
+          - $id: '151'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '121'
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: readonlyproperty_putValid
+        url: /complex/readonlyproperty/valid
+    name:
+      fixed: false
+      raw: Readonlyproperty
+    nameForProperty: Readonlyproperty
+    typeName:
+      fixed: false
+properties:
+  - $id: '126'
+    collectionFormat: none
+    defaultValue:
+      fixed: false
+      raw: 2014-04-01-preview
+    deprecated: false
+    documentation:
+      fixed: false
+      raw: API ID.
+    isConstant: true
+    isReadOnly: false
+    isRequired: true
+    modelType:
+      $id: '127'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    name:
+      fixed: false
+      raw: api-version
+    realPath:
+      - api-version
+    serializedName: api-version

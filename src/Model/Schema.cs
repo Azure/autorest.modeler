@@ -37,6 +37,8 @@ namespace AutoRest.Modeler.Model
 
         public object Example { get; set; }
 
+        public ParameterStyle? Style { get; set; } // for backwards compat. with 2.0 - properties can have "style" to encode things like form data collection format 
+
         /// <summary>
         /// The value of this property MUST be another schema which will provide 
         /// a base schema which the current schema will inherit from.  The

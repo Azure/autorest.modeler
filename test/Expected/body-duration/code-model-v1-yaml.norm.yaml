@@ -1,0 +1,221 @@
+---
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelTypes:
+  - *ref_0
+modelsName: Models
+name: AutoRestDurationTestService
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get null duration value
+        group:
+          fixed: false
+          raw: duration
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_1
+              $type: PrimaryType
+              deprecated: false
+              format: duration
+              knownPrimaryType: timeSpan
+              name:
+                fixed: false
+                raw: TimeSpan
+            isNullable: true
+        returnType:
+          body: *ref_1
+          isNullable: true
+        serializedName: duration_getNull
+        url: /duration/null
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Put a positive duration value
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: duration
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putPositiveDuration
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: durationBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              format: duration
+              knownPrimaryType: timeSpan
+              name:
+                fixed: false
+                raw: TimeSpan
+            name:
+              fixed: false
+              raw: durationBody
+            serializedName: durationBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: duration_putPositiveDuration
+        url: /duration/positiveduration
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get a positive duration value
+        group:
+          fixed: false
+          raw: duration
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getPositiveDuration
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_2
+              $type: PrimaryType
+              deprecated: false
+              format: duration
+              knownPrimaryType: timeSpan
+              name:
+                fixed: false
+                raw: TimeSpan
+            isNullable: true
+        returnType:
+          body: *ref_2
+          isNullable: true
+        serializedName: duration_getPositiveDuration
+        url: /duration/positiveduration
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get an invalid duration value
+        group:
+          fixed: false
+          raw: duration
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getInvalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_3
+              $type: PrimaryType
+              deprecated: false
+              format: duration
+              knownPrimaryType: timeSpan
+              name:
+                fixed: false
+                raw: TimeSpan
+            isNullable: true
+        returnType:
+          body: *ref_3
+          isNullable: true
+        serializedName: duration_getInvalid
+        url: /duration/invalid
+    name:
+      fixed: false
+      raw: Duration
+    nameForProperty: Duration
+    typeName:
+      fixed: false

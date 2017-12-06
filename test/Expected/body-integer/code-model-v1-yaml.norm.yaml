@@ -1,0 +1,617 @@
+---
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelTypes:
+  - *ref_0
+modelsName: Models
+name: AutoRestIntegerTestService
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get null Int value
+        group:
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_1
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            isNullable: true
+        returnType:
+          body: *ref_1
+          isNullable: true
+        serializedName: int_getNull
+        url: /int/null
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get invalid Int value
+        group:
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getInvalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_2
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            isNullable: true
+        returnType:
+          body: *ref_2
+          isNullable: true
+        serializedName: int_getInvalid
+        url: /int/invalid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get overflow Int32 value
+        group:
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getOverflowInt32
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_3
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            isNullable: true
+        returnType:
+          body: *ref_3
+          isNullable: true
+        serializedName: int_getOverflowInt32
+        url: /int/overflowint32
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get underflow Int32 value
+        group:
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getUnderflowInt32
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_4
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            isNullable: true
+        returnType:
+          body: *ref_4
+          isNullable: true
+        serializedName: int_getUnderflowInt32
+        url: /int/underflowint32
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get overflow Int64 value
+        group:
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getOverflowInt64
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_5
+              $type: PrimaryType
+              deprecated: false
+              format: int64
+              knownPrimaryType: long
+              name:
+                fixed: false
+                raw: Long
+            isNullable: true
+        returnType:
+          body: *ref_5
+          isNullable: true
+        serializedName: int_getOverflowInt64
+        url: /int/overflowint64
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get underflow Int64 value
+        group:
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getUnderflowInt64
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_6
+              $type: PrimaryType
+              deprecated: false
+              format: int64
+              knownPrimaryType: long
+              name:
+                fixed: false
+                raw: Long
+            isNullable: true
+        returnType:
+          body: *ref_6
+          isNullable: true
+        serializedName: int_getUnderflowInt64
+        url: /int/underflowint64
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Put max int32 value
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putMax32
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: intBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            name:
+              fixed: false
+              raw: intBody
+            serializedName: intBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: int_putMax32
+        url: /int/max/32
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Put max int64 value
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putMax64
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: intBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              format: int64
+              knownPrimaryType: long
+              name:
+                fixed: false
+                raw: Long
+            name:
+              fixed: false
+              raw: intBody
+            serializedName: intBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: int_putMax64
+        url: /int/max/64
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Put min int32 value
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putMin32
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: intBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            name:
+              fixed: false
+              raw: intBody
+            serializedName: intBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: int_putMin32
+        url: /int/min/32
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Put min int64 value
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putMin64
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: intBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              format: int64
+              knownPrimaryType: long
+              name:
+                fixed: false
+                raw: Long
+            name:
+              fixed: false
+              raw: intBody
+            serializedName: intBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: int_putMin64
+        url: /int/min/64
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get datetime encoded as Unix time value
+        group:
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getUnixTime
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_7
+              $type: PrimaryType
+              deprecated: false
+              format: unixtime
+              knownPrimaryType: unixTime
+              name:
+                fixed: false
+                raw: UnixTime
+            isNullable: true
+        returnType:
+          body: *ref_7
+          isNullable: true
+        serializedName: int_getUnixTime
+        url: /int/unixtime
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Put datetime encoded as Unix time
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putUnixTimeDate
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: intBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              format: unixtime
+              knownPrimaryType: unixTime
+              name:
+                fixed: false
+                raw: UnixTime
+            name:
+              fixed: false
+              raw: intBody
+            serializedName: intBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: int_putUnixTimeDate
+        url: /int/unixtime
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get invalid Unix time value
+        group:
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getInvalidUnixTime
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_8
+              $type: PrimaryType
+              deprecated: false
+              format: unixtime
+              knownPrimaryType: unixTime
+              name:
+                fixed: false
+                raw: UnixTime
+            isNullable: true
+        returnType:
+          body: *ref_8
+          isNullable: true
+        serializedName: int_getInvalidUnixTime
+        url: /int/invalidunixtime
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get null Unix time value
+        group:
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNullUnixTime
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_9
+              $type: PrimaryType
+              deprecated: false
+              format: unixtime
+              knownPrimaryType: unixTime
+              name:
+                fixed: false
+                raw: UnixTime
+            isNullable: true
+        returnType:
+          body: *ref_9
+          isNullable: true
+        serializedName: int_getNullUnixTime
+        url: /int/nullunixtime
+    name:
+      fixed: false
+      raw: Int
+    nameForProperty: Int
+    typeName:
+      fixed: false

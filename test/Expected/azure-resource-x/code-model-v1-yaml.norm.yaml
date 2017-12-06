@@ -1,0 +1,615 @@
+---
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Resource Flattening for AutoRest
+errorTypes:
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelTypes:
+  - *ref_0
+  - &ref_1
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    documentation: Some resource
+    extensions:
+      x-ms-azure-resource: true
+    externalDocsUrl: 'http://tempuri.org'
+    name:
+      fixed: false
+      raw: ResourceX
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: Resource Id
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: id
+        realPath:
+          - id
+        serializedName: id
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: Resource Type
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: type
+        realPath:
+          - type
+        serializedName: type
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+        name:
+          fixed: false
+          raw: tags
+        realPath:
+          - tags
+        serializedName: tags
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: Resource Location
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: location
+        realPath:
+          - location
+        serializedName: location
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: Resource Name
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: name
+        realPath:
+          - name
+        serializedName: name
+    serializedName: ResourceX
+  - &ref_2
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: FlattenedResourceProperties
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: pname
+        realPath:
+          - pname
+        serializedName: pname
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: lsize
+        realPath:
+          - lsize
+        serializedName: lsize
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: provisioningState
+        realPath:
+          - provisioningState
+        serializedName: provisioningState
+    serializedName: FlattenedResourceProperties
+  - &ref_3
+    $type: CompositeType
+    baseModelType: *ref_1
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: FlattenedProduct
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-ms-client-flatten: true
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType: *ref_2
+        name:
+          fixed: false
+          raw: properties
+        realPath:
+          - properties
+        serializedName: properties
+    serializedName: FlattenedProduct
+  - &ref_6
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: ResourceCollection
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType: *ref_3
+        name:
+          fixed: false
+          raw: productresource
+        realPath:
+          - productresource
+        serializedName: productresource
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: SequenceType
+          deprecated: false
+          elementType: *ref_3
+          name:
+            fixed: false
+        name:
+          fixed: false
+          raw: arrayofresources
+        realPath:
+          - arrayofresources
+        serializedName: arrayofresources
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType: *ref_3
+        name:
+          fixed: false
+          raw: dictionaryofresources
+        realPath:
+          - dictionaryofresources
+        serializedName: dictionaryofresources
+    serializedName: ResourceCollection
+modelsName: Models
+name: AutoRestResourceFlatteningTestService
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Put External Resource as an Array
+        extensions:
+          x-ms-requestBody-index: '0'
+        externalDocsUrl: 'http://tempuri.org'
+        group:
+          fixed: false
+          raw: ''
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putArray
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: External Resource as an Array to put
+            extensions:
+              x-ms-requestBody-name: ResourceArray
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType: *ref_1
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: ResourceArray
+            serializedName: ResourceArray
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: putArray
+        url: /azure/resource-flatten/array
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get External Resource as an Array
+        externalDocsUrl: 'http://tempuri.org'
+        group:
+          fixed: false
+          raw: ''
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getArray
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_4
+              $type: SequenceType
+              deprecated: false
+              elementType: *ref_3
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_4
+          isNullable: true
+        serializedName: getArray
+        url: /azure/resource-flatten/array
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Put External Resource as a Dictionary
+        extensions:
+          x-ms-requestBody-index: '0'
+        externalDocsUrl: 'http://tempuri.org'
+        group:
+          fixed: false
+          raw: ''
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDictionary
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: External Resource as a Dictionary to put
+            extensions:
+              x-ms-requestBody-name: ResourceDictionary
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType: *ref_3
+            name:
+              fixed: false
+              raw: ResourceDictionary
+            serializedName: ResourceDictionary
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: putDictionary
+        url: /azure/resource-flatten/dictionary
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get External Resource as a Dictionary
+        externalDocsUrl: 'http://tempuri.org'
+        group:
+          fixed: false
+          raw: ''
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDictionary
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_5
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType: *ref_3
+            isNullable: true
+        returnType:
+          body: *ref_5
+          isNullable: true
+        serializedName: getDictionary
+        url: /azure/resource-flatten/dictionary
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Put External Resource as a ResourceCollection
+        extensions:
+          x-ms-requestBody-index: '0'
+        externalDocsUrl: 'http://tempuri.org'
+        group:
+          fixed: false
+          raw: ''
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putResourceCollection
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: External Resource as a ResourceCollection to put
+            extensions:
+              x-ms-requestBody-name: ResourceComplexObject
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType: *ref_6
+            name:
+              fixed: false
+              raw: ResourceComplexObject
+            serializedName: ResourceComplexObject
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: putResourceCollection
+        url: /azure/resource-flatten/resourcecollection
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get External Resource as a ResourceCollection
+        externalDocsUrl: 'http://tempuri.org'
+        group:
+          fixed: false
+          raw: ''
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getResourceCollection
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: *ref_6
+            isNullable: true
+        returnType:
+          body: *ref_6
+          isNullable: true
+        serializedName: getResourceCollection
+        url: /azure/resource-flatten/resourcecollection
+    name:
+      fixed: false
+      raw: ''
+    nameForProperty: AutoRestResourceFlatteningTestService
+    typeName:
+      fixed: false

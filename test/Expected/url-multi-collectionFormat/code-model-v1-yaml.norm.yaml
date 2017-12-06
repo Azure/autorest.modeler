@@ -1,0 +1,229 @@
+---
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelTypes:
+  - *ref_0
+modelsName: Models
+name: AutoRestUrlMutliCollectionFormatTestService
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get a null array of string using the multi-array format
+        group:
+          fixed: false
+          raw: queries
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: ArrayStringMultiNull
+        parameters:
+          - collectionFormat: multi
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: a null array of string using the multi-array format
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayQuery
+            serializedName: arrayQuery
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: queries_ArrayStringMultiNull
+        url: /queries/array/multi/string/null
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get an empty array [] of string using the multi-array format'
+        group:
+          fixed: false
+          raw: queries
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: ArrayStringMultiEmpty
+        parameters:
+          - collectionFormat: multi
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: 'an empty array [] of string using the multi-array format'
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayQuery
+            serializedName: arrayQuery
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: queries_ArrayStringMultiEmpty
+        url: /queries/array/multi/string/empty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end' ,
+          null, ''] using the mult-array format
+        group:
+          fixed: false
+          raw: queries
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: ArrayStringMultiValid
+        parameters:
+          - collectionFormat: multi
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end'
+                , null, ''] using the mult-array format
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayQuery
+            serializedName: arrayQuery
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: queries_ArrayStringMultiValid
+        url: /queries/array/multi/string/valid
+    name:
+      fixed: false
+      raw: Queries
+    nameForProperty: Queries
+    typeName:
+      fixed: false

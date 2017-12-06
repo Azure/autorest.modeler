@@ -1,0 +1,715 @@
+---
+apiVersion: 2014-04-01-preview
+baseUrl: 'http://localhost:3000'
+documentation: Some cool documentation.
+errorTypes:
+  - &ref_1
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelTypes:
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    documentation: The product documentation.
+    name:
+      fixed: false
+      raw: Product
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: >-
+            Unique identifier representing a specific product for a given
+            latitude & longitude. For example, uberX in San Francisco will have
+            a different product_id than uberX in Los Angeles.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: product_id
+        realPath:
+          - product_id
+        serializedName: product_id
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: Description of product.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: description
+        realPath:
+          - description
+        serializedName: description
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: Display name of product.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: display_name
+        realPath:
+          - display_name
+        serializedName: display_name
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+          raw: '100'
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: 'Capacity of product. For example, 4 people.'
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: capacity
+        realPath:
+          - capacity
+        serializedName: capacity
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: Image URL representing the product.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: image
+        realPath:
+          - image
+        serializedName: image
+    serializedName: Product
+  - &ref_5
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: CatalogDictionary
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: Dictionary of products
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType: *ref_0
+        name:
+          fixed: false
+          raw: productDictionary
+        realPath:
+          - productDictionary
+        serializedName: productDictionary
+    serializedName: CatalogDictionary
+  - &ref_2
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: CatalogArray
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: Array of products
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: SequenceType
+          deprecated: false
+          elementType: *ref_0
+          name:
+            fixed: false
+        name:
+          fixed: false
+          raw: productArray
+        realPath:
+          - productArray
+        serializedName: productArray
+    serializedName: CatalogArray
+  - &ref_6
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: CatalogArrayOfDictionary
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: Array of dictionary of products
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: SequenceType
+          deprecated: false
+          elementType:
+            $type: DictionaryType
+            deprecated: false
+            name:
+              fixed: false
+            supportsAdditionalProperties: false
+            valueType: *ref_0
+          name:
+            fixed: false
+        name:
+          fixed: false
+          raw: productArrayOfDictionary
+        realPath:
+          - productArrayOfDictionary
+        serializedName: productArrayOfDictionary
+    serializedName: CatalogArrayOfDictionary
+  - &ref_3
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: CatalogDictionaryOfArray
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: Dictionary of Array of product
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: SequenceType
+            deprecated: false
+            elementType: *ref_0
+            name:
+              fixed: false
+        name:
+          fixed: false
+          raw: productDictionaryOfArray
+        realPath:
+          - productDictionaryOfArray
+        serializedName: productDictionaryOfArray
+    serializedName: CatalogDictionaryOfArray
+  - *ref_1
+modelsName: Models
+name: ComplexModelClient
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          body: *ref_1
+          isNullable: true
+        deprecated: false
+        description: >-
+          The Products endpoint returns information about the Uber products
+          offered at a given location. The response includes the display name
+          and other details about each product, and lists the products in the
+          proper display order.
+        group:
+          fixed: false
+          raw: ''
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: list
+        parameters:
+          - clientProperty: &ref_7
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+                raw: '123456'
+              deprecated: false
+              documentation:
+                fixed: false
+                raw: Subscription ID.
+              isConstant: true
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: subscriptionId
+              realPath:
+                - subscriptionId
+              serializedName: subscriptionId
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+              raw: '123456'
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Subscription ID.
+            isConstant: true
+            isRequired: true
+            location: path
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Resource Group ID.
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: resourceGroupName
+            serializedName: resourceGroupName
+          - clientProperty: &ref_4
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+                raw: 2014-04-01-preview
+              deprecated: false
+              documentation:
+                fixed: false
+                raw: API ID.
+              isConstant: true
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: api-version
+              realPath:
+                - api-version
+              serializedName: api-version
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+              raw: 2014-04-01-preview
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: API ID.
+            isConstant: true
+            isRequired: true
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: *ref_2
+            isNullable: true
+        returnType:
+          body: *ref_2
+          isNullable: true
+        serializedName: list
+        summary: Product Types
+        url: >-
+          /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/Microsoft.Cache/Redis
+      - defaultResponse:
+          body: *ref_1
+          isNullable: true
+        deprecated: false
+        description: Resets products.
+        extensions:
+          x-ms-requestBody-index: '2'
+        group:
+          fixed: false
+          raw: ''
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: create
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Subscription ID.
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Resource Group ID.
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: resourceGroupName
+            serializedName: resourceGroupName
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: body Parameter
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType: *ref_3
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+          - clientProperty: *ref_4
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+              raw: 2014-04-01-preview
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: API ID.
+            isConstant: true
+            isRequired: true
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: *ref_5
+            isNullable: true
+        returnType:
+          body: *ref_5
+          isNullable: true
+        serializedName: create
+        summary: Create products
+        url: >-
+          /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/Microsoft.Cache/Redis
+      - defaultResponse:
+          body: *ref_1
+          isNullable: true
+        deprecated: false
+        description: Resets products.
+        extensions:
+          x-ms-requestBody-index: '2'
+        group:
+          fixed: false
+          raw: ''
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: update
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Subscription ID.
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Resource Group ID.
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: resourceGroupName
+            serializedName: resourceGroupName
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: body Parameter
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType: *ref_6
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+          - clientProperty: *ref_4
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+              raw: 2014-04-01-preview
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: API ID.
+            isConstant: true
+            isRequired: true
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: *ref_2
+            isNullable: true
+        returnType:
+          body: *ref_2
+          isNullable: true
+        serializedName: update
+        summary: Update products
+        url: >-
+          /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/Microsoft.Cache/Redis
+    name:
+      fixed: false
+      raw: ''
+    nameForProperty: ComplexModelClient
+    typeName:
+      fixed: false
+properties:
+  - *ref_7
+  - *ref_4

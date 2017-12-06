@@ -1,0 +1,84 @@
+---
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+modelsName: Models
+name: AutoRestHeadExceptionTestService
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: Return 200 status code if successful
+        group:
+          fixed: false
+          raw: headException
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: head200
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: headException_head200
+        url: /http/success/200
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: Return 204 status code if successful
+        group:
+          fixed: false
+          raw: headException
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: head204
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NoContent:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: headException_head204
+        url: /http/success/204
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: Return 404 status code if successful
+        group:
+          fixed: false
+          raw: headException
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: head404
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NoContent:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: headException_head404
+        url: /http/success/404
+    name:
+      fixed: false
+      raw: HeadException
+    nameForProperty: HeadException
+    typeName:
+      fixed: false

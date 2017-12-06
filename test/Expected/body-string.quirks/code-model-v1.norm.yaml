@@ -1,0 +1,1007 @@
+---
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest Swagger BAT
+enumTypes:
+  - $id: '11'
+    $type: EnumType
+    deprecated: false
+    modelAsExtensible: false
+    modelAsString: false
+    name:
+      fixed: false
+      raw: Colors
+    underlyingType:
+      $id: '12'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: red color
+        serializedName: red color
+      - name: green-color
+        serializedName: green-color
+      - name: blue_color
+        serializedName: blue_color
+errorTypes:
+  - $ref: '1'
+modelTypes:
+  - $id: '1'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '2'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '3'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '4'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '5'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+  - $id: '6'
+    $type: CompositeType
+    containsConstantProperties: true
+    deprecated: false
+    name:
+      fixed: false
+      raw: RefColorConstant
+    properties:
+      - $id: '7'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+          raw: green-color
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: Referenced Color Constant Description.
+        extensions:
+          x-ms-enum:
+            modelAsString: false
+            name: ColorConstant
+        isConstant: true
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $id: '8'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: ColorConstant
+        realPath:
+          - ColorConstant
+        serializedName: ColorConstant
+      - $id: '9'
+        collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: Sample string.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '10'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: field1
+        realPath:
+          - field1
+        serializedName: field1
+    serializedName: RefColorConstant
+modelsName: Models
+name: AutoRestSwaggerBATService
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get null string value value
+        group:
+          fixed: false
+          raw: string
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $id: '13'
+              $type: EnumType
+              deprecated: false
+              modelAsExtensible: false
+              modelAsString: true
+              name:
+                fixed: false
+                raw: ''
+              underlyingType:
+                $id: '14'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              values:
+                - {}
+            isNullable: true
+        returnType:
+          body:
+            $ref: '13'
+          isNullable: true
+        serializedName: string_getNull
+        url: /string/null
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Set string value null
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: string
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putNull
+        parameters:
+          - $id: '15'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: stringBody
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $id: '16'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: stringBody
+            serializedName: stringBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: string_putNull
+        url: /string/null
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get empty string value value ''
+        group:
+          fixed: false
+          raw: string
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $id: '17'
+              $type: EnumType
+              deprecated: false
+              modelAsExtensible: false
+              modelAsString: true
+              name:
+                fixed: false
+                raw: ''
+              underlyingType:
+                $id: '18'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              values:
+                - name: ''
+                  serializedName: ''
+            isNullable: true
+        returnType:
+          body:
+            $ref: '17'
+          isNullable: true
+        serializedName: string_getEmpty
+        url: /string/empty
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Set string value empty ''
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: string
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putEmpty
+        parameters:
+          - $id: '19'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: stringBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '20'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: stringBody
+            serializedName: stringBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: string_putEmpty
+        url: /string/empty
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get mbcs string value
+          '啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€'
+        group:
+          fixed: false
+          raw: string
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getMbcs
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $id: '21'
+              $type: EnumType
+              deprecated: false
+              modelAsExtensible: false
+              modelAsString: true
+              name:
+                fixed: false
+                raw: ''
+              underlyingType:
+                $id: '22'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              values:
+                - name: >-
+                    啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€
+                  serializedName: >-
+                    啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€
+            isNullable: true
+        returnType:
+          body:
+            $ref: '21'
+          isNullable: true
+        serializedName: string_getMbcs
+        url: /string/mbcs
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Set string value mbcs
+          '啊齄丂狛狜隣郎隣兀﨩ˊ〞〡￤℡㈱‐ー﹡﹢﹫、〓ⅰⅹ⒈€㈠㈩ⅠⅫ！￣ぁんァヶΑ︴АЯаяāɡㄅㄩ─╋︵﹄︻︱︳︴ⅰⅹɑɡ〇〾⿻⺁䜣€'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: string
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putMbcs
+        parameters:
+          - $id: '23'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: stringBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '24'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: stringBody
+            serializedName: stringBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: string_putMbcs
+        url: /string/mbcs
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get string value with leading and trailing whitespace
+          '<tab><space><space>Now is the time for all good men to come to the
+          aid of their country<tab><space><space>'
+        group:
+          fixed: false
+          raw: string
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getWhitespace
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $id: '25'
+              $type: EnumType
+              deprecated: false
+              modelAsExtensible: false
+              modelAsString: true
+              name:
+                fixed: false
+                raw: ''
+              underlyingType:
+                $id: '26'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              values:
+                - name: '    Now is the time for all good men to come to the aid of their country    '
+                  serializedName: '    Now is the time for all good men to come to the aid of their country    '
+            isNullable: true
+        returnType:
+          body:
+            $ref: '25'
+          isNullable: true
+        serializedName: string_getWhitespace
+        url: /string/whitespace
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Set String value with leading and trailing whitespace
+          '<tab><space><space>Now is the time for all good men to come to the
+          aid of their country<tab><space><space>'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: string
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putWhitespace
+        parameters:
+          - $id: '27'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: stringBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '28'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: stringBody
+            serializedName: stringBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: string_putWhitespace
+        url: /string/whitespace
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get String value when no string value is sent in response payload
+        group:
+          fixed: false
+          raw: string
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNotProvided
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $id: '29'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            isNullable: true
+        returnType:
+          body:
+            $ref: '29'
+          isNullable: true
+        serializedName: string_getNotProvided
+        url: /string/notProvided
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get value that is base64 encoded
+        group:
+          fixed: false
+          raw: string
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getBase64Encoded
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $id: '30'
+              $type: PrimaryType
+              deprecated: false
+              format: base64url
+              knownPrimaryType: base64Url
+              name:
+                fixed: false
+                raw: Base64Url
+            isNullable: true
+        returnType:
+          body:
+            $ref: '30'
+          isNullable: true
+        serializedName: string_getBase64Encoded
+        url: /string/base64Encoding
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get value that is base64url encoded
+        group:
+          fixed: false
+          raw: string
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getBase64UrlEncoded
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $id: '31'
+              $type: PrimaryType
+              deprecated: false
+              format: base64url
+              knownPrimaryType: base64Url
+              name:
+                fixed: false
+                raw: Base64Url
+            isNullable: true
+        returnType:
+          body:
+            $ref: '31'
+          isNullable: true
+        serializedName: string_getBase64UrlEncoded
+        url: /string/base64UrlEncoding
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Put value that is base64url encoded
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: string
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putBase64UrlEncoded
+        parameters:
+          - $id: '32'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: stringBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '33'
+              $type: PrimaryType
+              deprecated: false
+              format: base64url
+              knownPrimaryType: base64Url
+              name:
+                fixed: false
+                raw: Base64Url
+            name:
+              fixed: false
+              raw: stringBody
+            serializedName: stringBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: string_putBase64UrlEncoded
+        url: /string/base64UrlEncoding
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get null value that is expected to be base64url encoded
+        group:
+          fixed: false
+          raw: string
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNullBase64UrlEncoded
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $id: '34'
+              $type: PrimaryType
+              deprecated: false
+              format: base64url
+              knownPrimaryType: base64Url
+              name:
+                fixed: false
+                raw: Base64Url
+            isNullable: true
+        returnType:
+          body:
+            $ref: '34'
+          isNullable: true
+        serializedName: string_getNullBase64UrlEncoded
+        url: /string/nullBase64UrlEncoding
+    name:
+      fixed: false
+      raw: String
+    nameForProperty: String
+    typeName:
+      fixed: false
+  - methods:
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get enum value 'red color' from enumeration of 'red color',
+          'green-color', 'blue_color'.
+        group:
+          fixed: false
+          raw: enum
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNotExpandable
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '11'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '11'
+          isNullable: true
+        serializedName: enum_getNotExpandable
+        url: /string/enum/notExpandable
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Sends value 'red color' from enumeration of 'red color',
+          'green-color', 'blue_color'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: enum
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putNotExpandable
+        parameters:
+          - $id: '35'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: stringBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '11'
+            name:
+              fixed: false
+              raw: stringBody
+            serializedName: stringBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: enum_putNotExpandable
+        url: /string/enum/notExpandable
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get enum value 'red color' from enumeration of 'red color',
+          'green-color', 'blue_color'.
+        group:
+          fixed: false
+          raw: enum
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getReferenced
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '11'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '11'
+          isNullable: true
+        serializedName: enum_getReferenced
+        url: /string/enum/Referenced
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Sends value 'red color' from enumeration of 'red color',
+          'green-color', 'blue_color'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: enum
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putReferenced
+        parameters:
+          - $id: '36'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: enumStringBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '11'
+            name:
+              fixed: false
+              raw: enumStringBody
+            serializedName: enumStringBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: enum_putReferenced
+        url: /string/enum/Referenced
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Get value 'green-color' from the constant.
+        group:
+          fixed: false
+          raw: enum
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getReferencedConstant
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body:
+              $ref: '6'
+            isNullable: true
+        returnType:
+          body:
+            $ref: '6'
+          isNullable: true
+        serializedName: enum_getReferencedConstant
+        url: /string/enum/ReferencedConstant
+      - defaultResponse:
+          body:
+            $ref: '1'
+          isNullable: true
+        deprecated: false
+        description: Sends value 'green-color' from a constant
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: enum
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putReferencedConstant
+        parameters:
+          - $id: '37'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: enumStringBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '6'
+            name:
+              fixed: false
+              raw: enumStringBody
+            serializedName: enumStringBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: enum_putReferencedConstant
+        url: /string/enum/ReferencedConstant
+    name:
+      fixed: false
+      raw: Enum
+    nameForProperty: Enum
+    typeName:
+      fixed: false

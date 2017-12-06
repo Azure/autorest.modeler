@@ -1,0 +1,300 @@
+---
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelTypes:
+  - *ref_0
+modelsName: Models
+name: AutoRestBoolTestService
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get true Boolean value
+        group:
+          fixed: false
+          raw: bool
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getTrue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_1
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            isNullable: true
+        returnType:
+          body: *ref_1
+          isNullable: true
+        serializedName: bool_getTrue
+        url: /bool/true
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Set Boolean value true
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: bool
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putTrue
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+              raw: 'true'
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: boolBody
+            isConstant: true
+            isRequired: true
+            location: body
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: boolBody
+            serializedName: boolBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: bool_putTrue
+        url: /bool/true
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get false Boolean value
+        group:
+          fixed: false
+          raw: bool
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getFalse
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_2
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            isNullable: true
+        returnType:
+          body: *ref_2
+          isNullable: true
+        serializedName: bool_getFalse
+        url: /bool/false
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Set Boolean value false
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: bool
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putFalse
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+              raw: 'false'
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: boolBody
+            isConstant: true
+            isRequired: true
+            location: body
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            name:
+              fixed: false
+              raw: boolBody
+            serializedName: boolBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: bool_putFalse
+        url: /bool/false
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get null Boolean value
+        group:
+          fixed: false
+          raw: bool
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_3
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            isNullable: true
+        returnType:
+          body: *ref_3
+          isNullable: true
+        serializedName: bool_getNull
+        url: /bool/null
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get invalid Boolean value
+        group:
+          fixed: false
+          raw: bool
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getInvalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_4
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: boolean
+              name:
+                fixed: false
+                raw: Boolean
+            isNullable: true
+        returnType:
+          body: *ref_4
+          isNullable: true
+        serializedName: bool_getInvalid
+        url: /bool/invalid
+    name:
+      fixed: false
+      raw: Bool
+    nameForProperty: Bool
+    typeName:
+      fixed: false
