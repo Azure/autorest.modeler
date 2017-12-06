@@ -1,6 +1,6 @@
 ---
 apiVersion: '2016-02-29'
-baseUrl: 'http://localhost'
+baseUrl: 'http://localhost:3000'
 documentation: Test Infrastructure for AutoRest
 enumTypes:
   - $ref: '12'

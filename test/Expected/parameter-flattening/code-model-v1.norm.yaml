@@ -1,6 +1,6 @@
 ---
 apiVersion: 1.0.0
-baseUrl: 'http://localhost'
+baseUrl: 'http://localhost:3000'
 codeGenExtensions:
   ft: '2'
 documentation: Resource Flattening for AutoRest

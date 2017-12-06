@@ -1,6 +1,6 @@
 ---
 apiVersion: '2016-07-07'
-baseUrl: 'https://localhost'
+baseUrl: 'http://localhost:3000'
 documentation: PetStore
 enumTypes:
   - $ref: '5'
@@ -103,6 +103,7 @@ modelTypes:
         extensions:
           x-ms-enum:
             modelAsExtensible: true
+            modelAsString: true
             name: IntEnum
             values:
               - allowedValues:
@@ -132,7 +133,7 @@ modelTypes:
           $type: EnumType
           deprecated: false
           modelAsExtensible: true
-          modelAsString: false
+          modelAsString: true
           name:
             fixed: false
             raw: IntEnum

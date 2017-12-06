@@ -1,6 +1,6 @@
 ---
 apiVersion: 1.0.0
-baseUrl: 'http://localhost'
+baseUrl: 'http://localhost:3000'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
   - $ref: '1'
@@ -83,20 +83,48 @@ operations:
         name:
           fixed: false
           raw: getReport
+        parameters:
+          - $id: '6'
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                If specified, qualifies the generated report further (e.g. '2.7'
+                vs '3.5' in for Python). The only effect is, that generators
+                that run all tests several times, can distinguish the generated
+                reports.
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '7'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: qualifier
+            serializedName: qualifier
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
         responses:
           OK:
             body:
-              $id: '6'
+              $id: '8'
               $type: DictionaryType
               deprecated: false
               name:
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '7'
+                $id: '9'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: int
@@ -106,7 +134,7 @@ operations:
             isNullable: true
         returnType:
           body:
-            $ref: '6'
+            $ref: '8'
           isNullable: true
         serializedName: getReport
         url: /report/azure

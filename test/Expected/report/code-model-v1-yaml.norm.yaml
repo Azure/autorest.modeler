@@ -1,6 +1,6 @@
 ---
 apiVersion: 1.0.0
-baseUrl: 'http://localhost'
+baseUrl: 'http://localhost:3000'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
   - &ref_0
@@ -78,6 +78,32 @@ operations:
         name:
           fixed: false
           raw: getReport
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                If specified, qualifies the generated report further (e.g. '2.7'
+                vs '3.5' in for Python). The only effect is, that generators
+                that run all tests several times, can distinguish the generated
+                reports.
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: qualifier
+            serializedName: qualifier
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json

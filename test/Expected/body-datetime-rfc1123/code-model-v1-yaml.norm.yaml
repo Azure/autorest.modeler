@@ -1,6 +1,6 @@
 ---
 apiVersion: 1.0.0
-baseUrl: 'https://localhost'
+baseUrl: 'http://localhost:3000'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
   - &ref_0
