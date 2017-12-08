@@ -35,22 +35,16 @@ namespace AutoRest.Modeler
 
         /// <summary>
         /// A schema represents a primitive type if it's not an object or it represents a dictionary
+        /// Notes: 
+        ///      'additionalProperties' on a type AND no defined 'properties', indicates that
+        ///      this type is a Dictionary. (and is handled by ObjectBuilder)
         /// </summary>
-        /// <param name="_schema"></param>
-        /// <returns></returns>
         public static bool IsPrimitiveType(this Schema _schema)
-        {
-            // Notes: 
-            //      'additionalProperties' on a type AND no defined 'properties', indicates that
-            //      this type is a Dictionary. (and is handled by ObjectBuilder)
-            return (_schema.Type != null && _schema.Type != DataType.Object || (_schema.AdditionalProperties != null && _schema.Properties.IsNullOrEmpty()));
-        }
+            => (_schema.Type != null && _schema.Type != DataType.Object || (_schema.AdditionalProperties != null && _schema.Properties.IsNullOrEmpty()));
 
         /// <summary>
         /// A schema represents a simple primary type if it's a stream, or an object with no properties
         /// </summary>
-        /// <param name="_schema"></param>
-        /// <returns></returns>
         public static KnownPrimaryType GetSimplePrimaryType(this Schema _schema, bool generateEmptyClasses)
         {
             // If object with file format treat as stream
@@ -75,8 +69,6 @@ namespace AutoRest.Modeler
         /// <summary>
         /// Determines if a constraint is supported for the SwaggerObject Type
         /// </summary>
-        /// <param name="constraintName"></param>
-        /// <returns></returns>
         public static bool IsConstraintSupported(this SwaggerObject swaggerObject, string constraintName)
         {
             switch (swaggerObject.Type)

@@ -272,9 +272,37 @@ namespace AutoRest.Modeler
                     }
                 }
 
-                CollectionFormatBuilder.OnBuildMethodParameter(method, swaggerParameter, swaggerParameter.Name);
+                OnBuildMethodParameter(method, swaggerParameter, swaggerParameter.Name);
                 var parameter = ((ParameterBuilder)swaggerParameter.GetBuilder(_swaggerModeler)).Build();
                 method.Add(parameter);
+            }
+        }
+
+        private static void OnBuildMethodParameter(Method method,
+            SwaggerParameter currentSwaggerParam,
+            string paramNameBuilder)
+        {
+            if (currentSwaggerParam == null)
+            {
+                throw new ArgumentNullException("currentSwaggerParam");
+            }
+
+            bool hasCollectionFormat = currentSwaggerParam.CollectionFormat != CollectionFormat.None;
+
+            if (currentSwaggerParam.Schema?.Type == DataType.Array && !hasCollectionFormat)
+            {
+                // If the parameter type is array default the collectionFormat to csv
+                currentSwaggerParam.Style = ParameterStyle.Form;
+            }
+
+            if (hasCollectionFormat && currentSwaggerParam.In == ParameterLocation.Path)
+            {
+                if (method?.Url == null)
+                {
+                    throw new ArgumentNullException("method"); 
+                }
+
+                method.Url = method.Url.Replace(currentSwaggerParam.Name, paramNameBuilder);
             }
         }
 
