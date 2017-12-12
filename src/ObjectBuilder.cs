@@ -84,10 +84,9 @@ namespace AutoRest.Modeler
                     {
                         enumType.ModelAsString = bool.Parse(enumObject["modelAsString"].ToString());
                     }
-                    if (enumObject["oldModelAsString"] != null)
-                    {
-                        enumType.OldModelAsString = bool.Parse(enumObject["oldModelAsString"].ToString());
-                    }
+                    
+                    enumType.OldModelAsString = (enumObject["oldModelAsString"] != null)? bool.Parse(enumObject["oldModelAsString"].ToString()) : false;
+                    
                     var valueOverrides = enumObject["values"] as JArray;
                     if (valueOverrides != null)
                     {
