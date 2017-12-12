@@ -5,7 +5,7 @@ enumTypes:
   - &ref_0
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -31,7 +31,7 @@ enumTypes:
   - &ref_5
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -67,7 +67,7 @@ enumTypes:
   - &ref_4
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
@@ -91,7 +91,7 @@ enumTypes:
   - &ref_9
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -111,7 +111,7 @@ enumTypes:
   - &ref_11
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -135,7 +135,7 @@ enumTypes:
   - &ref_14
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -173,7 +173,7 @@ enumTypes:
   - &ref_16
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -199,7 +199,7 @@ enumTypes:
   - &ref_17
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -219,7 +219,7 @@ enumTypes:
   - &ref_20
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
@@ -241,7 +241,7 @@ enumTypes:
   - &ref_22
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -263,7 +263,7 @@ enumTypes:
   - &ref_29
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -283,7 +283,7 @@ enumTypes:
   - &ref_30
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -303,7 +303,7 @@ enumTypes:
   - &ref_31
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -323,7 +323,7 @@ enumTypes:
   - &ref_32
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -345,7 +345,7 @@ enumTypes:
   - &ref_40
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -367,7 +367,7 @@ enumTypes:
   - &ref_43
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -393,7 +393,7 @@ enumTypes:
   - &ref_45
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -413,7 +413,7 @@ enumTypes:
   - &ref_47
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -439,7 +439,7 @@ enumTypes:
   - &ref_49
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
@@ -461,7 +461,7 @@ enumTypes:
   - &ref_69
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -483,7 +483,7 @@ enumTypes:
   - &ref_74
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -503,7 +503,7 @@ enumTypes:
   - &ref_75
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -529,7 +529,7 @@ enumTypes:
   - &ref_77
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -551,7 +551,7 @@ enumTypes:
   - &ref_93
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
@@ -593,7 +593,7 @@ enumTypes:
   - &ref_94
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -613,7 +613,7 @@ enumTypes:
   - &ref_96
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -639,7 +639,7 @@ enumTypes:
   - &ref_84
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -661,7 +661,7 @@ enumTypes:
   - &ref_108
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -681,7 +681,7 @@ enumTypes:
   - &ref_119
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -701,7 +701,7 @@ enumTypes:
   - &ref_120
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -723,7 +723,7 @@ enumTypes:
   - &ref_116
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -743,7 +743,7 @@ enumTypes:
   - &ref_136
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -765,7 +765,7 @@ enumTypes:
   - &ref_157
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -787,7 +787,7 @@ enumTypes:
   - &ref_158
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false

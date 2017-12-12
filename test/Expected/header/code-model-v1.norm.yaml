@@ -505,7 +505,7 @@ headerTypes:
           $id: '47'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false

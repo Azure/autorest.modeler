@@ -6,7 +6,7 @@ enumTypes:
   - &ref_9
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -169,7 +169,7 @@ operations:
             body: &ref_1
               $type: EnumType
               deprecated: false
-              modelAsExtensible: false
+              oldModelAsString: true
               modelAsString: true
               name:
                 fixed: false
@@ -220,7 +220,7 @@ operations:
             modelType:
               $type: EnumType
               deprecated: false
-              modelAsExtensible: false
+              oldModelAsString: true
               modelAsString: true
               name:
                 fixed: false
@@ -270,7 +270,7 @@ operations:
             body: &ref_2
               $type: EnumType
               deprecated: false
-              modelAsExtensible: false
+              oldModelAsString: true
               modelAsString: true
               name:
                 fixed: false
@@ -365,7 +365,7 @@ operations:
             body: &ref_3
               $type: EnumType
               deprecated: false
-              modelAsExtensible: false
+              oldModelAsString: true
               modelAsString: true
               name:
                 fixed: false
@@ -466,7 +466,7 @@ operations:
             body: &ref_4
               $type: EnumType
               deprecated: false
-              modelAsExtensible: false
+              oldModelAsString: true
               modelAsString: true
               name:
                 fixed: false

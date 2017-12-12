@@ -9,7 +9,7 @@ enumTypes:
   - $id: '79'
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -34,7 +34,7 @@ enumTypes:
   - $id: '81'
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -53,7 +53,7 @@ enumTypes:
   - $id: '83'
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -803,7 +803,7 @@ modelTypes:
           $id: '51'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false

@@ -70,7 +70,7 @@ modelTypes:
           $id: '3'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -436,7 +436,7 @@ modelTypes:
           $id: '28'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: true
           name:
             fixed: false
@@ -682,7 +682,7 @@ modelTypes:
           $id: '46'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -1226,7 +1226,7 @@ modelTypes:
           $id: '86'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -1511,7 +1511,7 @@ modelTypes:
           $id: '107'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -1626,7 +1626,7 @@ modelTypes:
           $id: '115'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -1739,7 +1739,7 @@ modelTypes:
           $id: '122'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -1938,7 +1938,7 @@ modelTypes:
           $id: '137'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -2170,7 +2170,7 @@ modelTypes:
           $id: '155'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: true
           name:
             fixed: false
@@ -2482,7 +2482,7 @@ modelTypes:
           $id: '180'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -3880,7 +3880,7 @@ modelTypes:
           $id: '288'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -3926,7 +3926,7 @@ modelTypes:
           $id: '291'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -3972,7 +3972,7 @@ modelTypes:
           $id: '294'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -4018,7 +4018,7 @@ modelTypes:
           $id: '297'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -4667,7 +4667,7 @@ modelTypes:
           $id: '345'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -4844,7 +4844,7 @@ modelTypes:
           $id: '358'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -5040,7 +5040,7 @@ modelTypes:
           $id: '372'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -5128,7 +5128,7 @@ modelTypes:
           $id: '378'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -5370,7 +5370,7 @@ modelTypes:
           $id: '394'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: true
           name:
             fixed: false
@@ -8979,7 +8979,7 @@ modelTypes:
           $id: '675'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -9621,7 +9621,7 @@ modelTypes:
           $id: '721'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -9739,7 +9739,7 @@ modelTypes:
           $id: '729'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -10469,7 +10469,7 @@ modelTypes:
           $id: '779'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -11928,7 +11928,7 @@ modelTypes:
           $id: '892'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -12889,7 +12889,7 @@ modelTypes:
           $id: '965'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: true
           name:
             fixed: false
@@ -13135,7 +13135,7 @@ modelTypes:
           $id: '982'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -13203,7 +13203,7 @@ modelTypes:
           $id: '987'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -13839,7 +13839,7 @@ modelTypes:
           $id: '1032'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -14737,7 +14737,7 @@ modelTypes:
           $id: '1099'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -15614,7 +15614,7 @@ modelTypes:
           $id: '1165'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -15720,7 +15720,7 @@ modelTypes:
           $id: '1173'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -17667,7 +17667,7 @@ modelTypes:
           $id: '1314'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -21021,7 +21021,7 @@ modelTypes:
           $id: '1566'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false
@@ -21411,7 +21411,7 @@ modelTypes:
           $id: '1594'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: false
           name:
             fixed: false

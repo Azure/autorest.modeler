@@ -49,7 +49,7 @@ modelTypes:
           raw: Type of Pet
         extensions:
           x-ms-enum:
-            modelAsExtensible: true
+            modelAsString: true
             name: DaysOfWeekExtensibleEnum
         isConstant: false
         isReadOnly: false
@@ -58,8 +58,7 @@ modelTypes:
           $id: '5'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: true
-          modelAsString: false
+          modelAsString: true
           name:
             fixed: false
             raw: DaysOfWeekExtensibleEnum
@@ -102,7 +101,6 @@ modelTypes:
           raw: ''
         extensions:
           x-ms-enum:
-            modelAsExtensible: true
             modelAsString: true
             name: IntEnum
             values:
@@ -132,7 +130,6 @@ modelTypes:
           $id: '8'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: true
           modelAsString: true
           name:
             fixed: false

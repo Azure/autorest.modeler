@@ -10,7 +10,7 @@ documentation: >-
 enumTypes:
   - $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -34,7 +34,7 @@ enumTypes:
   - &ref_2
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -54,7 +54,7 @@ enumTypes:
   - &ref_1
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false

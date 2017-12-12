@@ -6,7 +6,7 @@ enumTypes:
   - $id: '11'
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
+    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
@@ -180,7 +180,7 @@ operations:
               $id: '13'
               $type: EnumType
               deprecated: false
-              modelAsExtensible: false
+              oldModelAsString: true
               modelAsString: true
               name:
                 fixed: false
@@ -236,7 +236,7 @@ operations:
               $id: '16'
               $type: EnumType
               deprecated: false
-              modelAsExtensible: false
+              oldModelAsString: true
               modelAsString: true
               name:
                 fixed: false
@@ -289,7 +289,7 @@ operations:
               $id: '18'
               $type: EnumType
               deprecated: false
-              modelAsExtensible: false
+              oldModelAsString: true
               modelAsString: true
               name:
                 fixed: false
@@ -391,7 +391,7 @@ operations:
               $id: '22'
               $type: EnumType
               deprecated: false
-              modelAsExtensible: false
+              oldModelAsString: true
               modelAsString: true
               name:
                 fixed: false
@@ -499,7 +499,7 @@ operations:
               $id: '26'
               $type: EnumType
               deprecated: false
-              modelAsExtensible: false
+              oldModelAsString: true
               modelAsString: true
               name:
                 fixed: false

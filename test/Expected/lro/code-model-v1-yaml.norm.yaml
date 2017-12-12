@@ -4039,7 +4039,7 @@ modelTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: true
           name:
             fixed: false
@@ -4153,7 +4153,7 @@ modelTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: true
           name:
             fixed: false
@@ -4332,7 +4332,7 @@ modelTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
+          oldModelAsString: true
           modelAsString: true
           name:
             fixed: false
