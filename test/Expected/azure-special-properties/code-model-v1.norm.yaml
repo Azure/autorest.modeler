@@ -1,109 +1,125 @@
 ---
+$id: '1'
 apiVersion: 2015-07-01-preview
 baseUrl: 'http://localhost:3000'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
-  - $ref: '1'
+  - $ref: '2'
 headerTypes:
-  - $id: '13'
+  - $id: '36'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     documentation: Defines headers for customNamedRequestId operation.
     name:
+      $id: '43'
       fixed: false
       raw: header-customNamedRequestId-Headers
     properties:
-      - $id: '14'
+      - $id: '37'
         collectionFormat: none
         defaultValue:
+          $id: '38'
           fixed: false
         deprecated: false
         documentation:
+          $id: '39'
           fixed: false
           raw: Gets the foo-request-id.
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '15'
+          $id: '41'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '42'
             fixed: false
             raw: String
         name:
+          $id: '40'
           fixed: false
           raw: foo-request-id
         realPath:
           - foo-request-id
         serializedName: foo-request-id
     serializedName: header-customNamedRequestId-Headers
-  - $id: '16'
+  - $id: '44'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     documentation: Defines headers for customNamedRequestIdParamGrouping operation.
     name:
+      $id: '51'
       fixed: false
       raw: header-customNamedRequestIdParamGrouping-Headers
     properties:
-      - $id: '17'
+      - $id: '45'
         collectionFormat: none
         defaultValue:
+          $id: '46'
           fixed: false
         deprecated: false
         documentation:
+          $id: '47'
           fixed: false
           raw: Gets the foo-request-id.
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '18'
+          $id: '49'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '50'
             fixed: false
             raw: String
         name:
+          $id: '48'
           fixed: false
           raw: foo-request-id
         realPath:
           - foo-request-id
         serializedName: foo-request-id
     serializedName: header-customNamedRequestIdParamGrouping-Headers
-  - $id: '19'
+  - $id: '52'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     documentation: Defines headers for customNamedRequestIdHead operation.
     name:
+      $id: '59'
       fixed: false
       raw: header-customNamedRequestIdHead-Headers
     properties:
-      - $id: '20'
+      - $id: '53'
         collectionFormat: none
         defaultValue:
+          $id: '54'
           fixed: false
         deprecated: false
         documentation:
+          $id: '55'
           fixed: false
           raw: Gets the foo-request-id.
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '21'
+          $id: '57'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '58'
             fixed: false
             raw: String
         name:
+          $id: '56'
           fixed: false
           raw: foo-request-id
         realPath:
@@ -111,70 +127,23 @@ headerTypes:
         serializedName: foo-request-id
     serializedName: header-customNamedRequestIdHead-Headers
 modelTypes:
-  - $id: '1'
+  - $id: '2'
     $type: CompositeType
     containsConstantProperties: true
     deprecated: false
     name:
+      $id: '21'
       fixed: false
       raw: Error
     properties:
-      - $id: '2'
+      - $id: '3'
         collectionFormat: none
         defaultValue:
+          $id: '4'
           fixed: false
         deprecated: false
         documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '3'
-          $type: PrimaryType
-          deprecated: false
-          format: int32
-          knownPrimaryType: int
-          name:
-            fixed: false
-            raw: Int
-        name:
-          fixed: false
-          raw: status
-        realPath:
-          - status
-        serializedName: status
-      - $id: '4'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-          raw: '1'
-        deprecated: false
-        documentation:
-          fixed: false
-        isConstant: true
-        isReadOnly: false
-        isRequired: true
-        modelType:
           $id: '5'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: int
-          name:
-            fixed: false
-            raw: Int
-        name:
-          fixed: false
-          raw: constantId
-        realPath:
-          - constantId
-        serializedName: constantId
-      - $id: '6'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
           fixed: false
         isConstant: false
         isReadOnly: false
@@ -183,69 +152,138 @@ modelTypes:
           $id: '7'
           $type: PrimaryType
           deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '8'
+            fixed: false
+            raw: Int
+        name:
+          $id: '6'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '9'
+        collectionFormat: none
+        defaultValue:
+          $id: '10'
+          fixed: false
+          raw: '1'
+        deprecated: false
+        documentation:
+          $id: '11'
+          fixed: false
+        isConstant: true
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $id: '13'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            $id: '14'
+            fixed: false
+            raw: Int
+        name:
+          $id: '12'
+          fixed: false
+          raw: constantId
+        realPath:
+          - constantId
+        serializedName: constantId
+      - $id: '15'
+        collectionFormat: none
+        defaultValue:
+          $id: '16'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '17'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '19'
+          $type: PrimaryType
+          deprecated: false
           knownPrimaryType: string
           name:
+            $id: '20'
             fixed: false
             raw: String
         name:
+          $id: '18'
           fixed: false
           raw: message
         realPath:
           - message
         serializedName: message
     serializedName: Error
-  - $id: '8'
+  - $id: '22'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '35'
       fixed: false
       raw: OdataFilter
     properties:
-      - $id: '9'
+      - $id: '23'
         collectionFormat: none
         defaultValue:
+          $id: '24'
           fixed: false
         deprecated: false
         documentation:
+          $id: '25'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '10'
+          $id: '27'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
+            $id: '28'
             fixed: false
             raw: Int
         name:
+          $id: '26'
           fixed: false
           raw: id
         realPath:
           - id
         serializedName: id
-      - $id: '11'
+      - $id: '29'
         collectionFormat: none
         defaultValue:
+          $id: '30'
           fixed: false
         deprecated: false
         documentation:
+          $id: '31'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '12'
+          $id: '33'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '34'
             fixed: false
             raw: String
         name:
+          $id: '32'
           fixed: false
           raw: name
         realPath:
@@ -256,20 +294,25 @@ modelsName: Models
 name: AutoRestAzureSpecialParametersTestClient
 namespace: ''
 operations:
-  - methods:
-      - defaultResponse:
+  - $id: '72'
+    methods:
+      - $id: '73'
+        defaultResponse:
+          $id: '77'
           isNullable: true
         deprecated: false
         description: >-
           Get method that overwrites x-ms-client-request header with value
           9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
         group:
+          $id: '75'
           fixed: false
           raw: x-ms-client-request-id
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '74'
           fixed: false
           raw: Get
         requestContentType: application/json; charset=utf-8
@@ -277,35 +320,43 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '76'
             isNullable: true
         returnType:
+          $id: '78'
           isNullable: true
         serializedName: x-ms-client-request-id_Get
         url: /azurespecials/overwrite/x-ms-client-request-id/method/
-      - defaultResponse:
+      - $id: '79'
+        defaultResponse:
+          $id: '89'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get method that overwrites x-ms-client-request header with value
           9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
         group:
+          $id: '87'
           fixed: false
           raw: x-ms-client-request-id
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '86'
           fixed: false
           raw: ParamGet
         parameters:
-          - $id: '26'
+          - $id: '80'
             collectionFormat: none
             defaultValue:
+              $id: '81'
               fixed: false
             deprecated: false
             documentation:
+              $id: '82'
               fixed: false
               raw: >-
                 This should appear as a method parameter, use value
@@ -314,14 +365,16 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '27'
+              $id: '84'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '85'
                 fixed: false
                 raw: String
             name:
+              $id: '83'
               fixed: false
               raw: x-ms-client-request-id
             serializedName: x-ms-client-request-id
@@ -330,44 +383,55 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '88'
             isNullable: true
         returnType:
+          $id: '90'
           isNullable: true
         serializedName: x-ms-client-request-id_ParamGet
         url: /azurespecials/overwrite/x-ms-client-request-id/via-param/method/
     name:
+      $id: '91'
       fixed: false
       raw: XMsClientRequestId
     nameForProperty: XMsClientRequestId
     typeName:
+      $id: '92'
       fixed: false
-  - methods:
-      - defaultResponse:
+  - $id: '93'
+    methods:
+      - $id: '94'
+        defaultResponse:
+          $id: '104'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           POST method with subscriptionId modeled in credentials.  Set the
           credential subscriptionId to '1234-5678-9012-3456' to succeed
         group:
+          $id: '102'
           fixed: false
           raw: subscriptionInCredentials
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '101'
           fixed: false
           raw: postMethodGlobalValid
         parameters:
-          - $id: '28'
+          - $id: '95'
             clientProperty:
-              $ref: '22'
+              $ref: '60'
             collectionFormat: none
             defaultValue:
+              $id: '96'
               fixed: false
             deprecated: false
             documentation:
+              $id: '97'
               fixed: false
               raw: >-
                 The subscription id, which appears in the path, always modeled
@@ -376,14 +440,16 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '29'
+              $id: '99'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '100'
                 fixed: false
                 raw: String
             name:
+              $id: '98'
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
@@ -392,15 +458,19 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '103'
             isNullable: true
         returnType:
+          $id: '105'
           isNullable: true
         serializedName: subscriptionInCredentials_postMethodGlobalValid
         url: >-
           /azurespecials/subscriptionId/method/string/none/path/global/1234-5678-9012-3456/{subscriptionId}
-      - defaultResponse:
+      - $id: '106'
+        defaultResponse:
+          $id: '116'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -408,23 +478,27 @@ operations:
           credential subscriptionId to null, and client-side validation should
           prevent you from making this call
         group:
+          $id: '114'
           fixed: false
           raw: subscriptionInCredentials
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '113'
           fixed: false
           raw: postMethodGlobalNull
         parameters:
-          - $id: '30'
+          - $id: '107'
             clientProperty:
-              $ref: '22'
+              $ref: '60'
             collectionFormat: none
             defaultValue:
+              $id: '108'
               fixed: false
             deprecated: false
             documentation:
+              $id: '109'
               fixed: false
               raw: >-
                 The subscription id, which appears in the path, always modeled
@@ -433,14 +507,16 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '31'
+              $id: '111'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '112'
                 fixed: false
                 raw: String
             name:
+              $id: '110'
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
@@ -449,38 +525,46 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '115'
             isNullable: true
         returnType:
+          $id: '117'
           isNullable: true
         serializedName: subscriptionInCredentials_postMethodGlobalNull
         url: >-
           /azurespecials/subscriptionId/method/string/none/path/global/null/{subscriptionId}
-      - defaultResponse:
+      - $id: '118'
+        defaultResponse:
+          $id: '134'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           POST method with subscriptionId modeled in credentials.  Set the
           credential subscriptionId to '1234-5678-9012-3456' to succeed
         group:
+          $id: '132'
           fixed: false
           raw: subscriptionInCredentials
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '131'
           fixed: false
           raw: postMethodGlobalNotProvidedValid
         parameters:
-          - $id: '32'
+          - $id: '119'
             clientProperty:
-              $ref: '22'
+              $ref: '60'
             collectionFormat: none
             defaultValue:
+              $id: '120'
               fixed: false
             deprecated: false
             documentation:
+              $id: '121'
               fixed: false
               raw: >-
                 The subscription id, which appears in the path, always modeled
@@ -489,25 +573,29 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '33'
+              $id: '123'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '124'
                 fixed: false
                 raw: String
             name:
+              $id: '122'
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
-          - $id: '34'
+          - $id: '125'
             clientProperty:
-              $ref: '24'
+              $ref: '66'
             collectionFormat: none
             defaultValue:
+              $id: '126'
               fixed: false
             deprecated: false
             documentation:
+              $id: '127'
               fixed: false
               raw: >-
                 The api version, which appears in the query, the value is always
@@ -516,14 +604,16 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '35'
+              $id: '129'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '130'
                 fixed: false
                 raw: String
             name:
+              $id: '128'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -532,38 +622,46 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '133'
             isNullable: true
         returnType:
+          $id: '135'
           isNullable: true
         serializedName: subscriptionInCredentials_postMethodGlobalNotProvidedValid
         url: >-
           /azurespecials/subscriptionId/method/string/none/path/globalNotProvided/1234-5678-9012-3456/{subscriptionId}
-      - defaultResponse:
+      - $id: '136'
+        defaultResponse:
+          $id: '146'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           POST method with subscriptionId modeled in credentials.  Set the
           credential subscriptionId to '1234-5678-9012-3456' to succeed
         group:
+          $id: '144'
           fixed: false
           raw: subscriptionInCredentials
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '143'
           fixed: false
           raw: postPathGlobalValid
         parameters:
-          - $id: '36'
+          - $id: '137'
             clientProperty:
-              $ref: '22'
+              $ref: '60'
             collectionFormat: none
             defaultValue:
+              $id: '138'
               fixed: false
             deprecated: false
             documentation:
+              $id: '139'
               fixed: false
               raw: >-
                 The subscription id, which appears in the path, always modeled
@@ -572,14 +670,16 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '37'
+              $id: '141'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '142'
                 fixed: false
                 raw: String
             name:
+              $id: '140'
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
@@ -588,38 +688,46 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '145'
             isNullable: true
         returnType:
+          $id: '147'
           isNullable: true
         serializedName: subscriptionInCredentials_postPathGlobalValid
         url: >-
           /azurespecials/subscriptionId/path/string/none/path/global/1234-5678-9012-3456/{subscriptionId}
-      - defaultResponse:
+      - $id: '148'
+        defaultResponse:
+          $id: '158'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           POST method with subscriptionId modeled in credentials.  Set the
           credential subscriptionId to '1234-5678-9012-3456' to succeed
         group:
+          $id: '156'
           fixed: false
           raw: subscriptionInCredentials
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '155'
           fixed: false
           raw: postSwaggerGlobalValid
         parameters:
-          - $id: '38'
+          - $id: '149'
             clientProperty:
-              $ref: '22'
+              $ref: '60'
             collectionFormat: none
             defaultValue:
+              $id: '150'
               fixed: false
             deprecated: false
             documentation:
+              $id: '151'
               fixed: false
               raw: >-
                 The subscription id, which appears in the path, always modeled
@@ -628,14 +736,16 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '39'
+              $id: '153'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '154'
                 fixed: false
                 raw: String
             name:
+              $id: '152'
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
@@ -644,43 +754,54 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '157'
             isNullable: true
         returnType:
+          $id: '159'
           isNullable: true
         serializedName: subscriptionInCredentials_postSwaggerGlobalValid
         url: >-
           /azurespecials/subscriptionId/swagger/string/none/path/global/1234-5678-9012-3456/{subscriptionId}
     name:
+      $id: '160'
       fixed: false
       raw: SubscriptionInCredentials
     nameForProperty: SubscriptionInCredentials
     typeName:
+      $id: '161'
       fixed: false
-  - methods:
-      - defaultResponse:
+  - $id: '162'
+    methods:
+      - $id: '163'
+        defaultResponse:
+          $id: '173'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           POST method with subscriptionId modeled in the method.  pass in
           subscription id = '1234-5678-9012-3456' to succeed
         group:
+          $id: '171'
           fixed: false
           raw: subscriptionInMethod
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '170'
           fixed: false
           raw: postMethodLocalValid
         parameters:
-          - $id: '40'
+          - $id: '164'
             collectionFormat: none
             defaultValue:
+              $id: '165'
               fixed: false
             deprecated: false
             documentation:
+              $id: '166'
               fixed: false
               raw: >-
                 This should appear as a method parameter, use value
@@ -689,14 +810,16 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '41'
+              $id: '168'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '169'
                 fixed: false
                 raw: String
             name:
+              $id: '167'
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
@@ -705,15 +828,19 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '172'
             isNullable: true
         returnType:
+          $id: '174'
           isNullable: true
         serializedName: subscriptionInMethod_postMethodLocalValid
         url: >-
           /azurespecials/subscriptionId/method/string/none/path/local/1234-5678-9012-3456/{subscriptionId}
-      - defaultResponse:
+      - $id: '175'
+        defaultResponse:
+          $id: '185'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -721,21 +848,25 @@ operations:
           subscription id = null, client-side validation should prevent you from
           making this call
         group:
+          $id: '183'
           fixed: false
           raw: subscriptionInMethod
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '182'
           fixed: false
           raw: postMethodLocalNull
         parameters:
-          - $id: '42'
+          - $id: '176'
             collectionFormat: none
             defaultValue:
+              $id: '177'
               fixed: false
             deprecated: false
             documentation:
+              $id: '178'
               fixed: false
               raw: >-
                 This should appear as a method parameter, use value null,
@@ -744,14 +875,16 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '43'
+              $id: '180'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '181'
                 fixed: false
                 raw: String
             name:
+              $id: '179'
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
@@ -760,36 +893,44 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '184'
             isNullable: true
         returnType:
+          $id: '186'
           isNullable: true
         serializedName: subscriptionInMethod_postMethodLocalNull
         url: >-
           /azurespecials/subscriptionId/method/string/none/path/local/null/{subscriptionId}
-      - defaultResponse:
+      - $id: '187'
+        defaultResponse:
+          $id: '197'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           POST method with subscriptionId modeled in the method.  pass in
           subscription id = '1234-5678-9012-3456' to succeed
         group:
+          $id: '195'
           fixed: false
           raw: subscriptionInMethod
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '194'
           fixed: false
           raw: postPathLocalValid
         parameters:
-          - $id: '44'
+          - $id: '188'
             collectionFormat: none
             defaultValue:
+              $id: '189'
               fixed: false
             deprecated: false
             documentation:
+              $id: '190'
               fixed: false
               raw: >-
                 Should appear as a method parameter -use value
@@ -798,14 +939,16 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '45'
+              $id: '192'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '193'
                 fixed: false
                 raw: String
             name:
+              $id: '191'
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
@@ -814,36 +957,44 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '196'
             isNullable: true
         returnType:
+          $id: '198'
           isNullable: true
         serializedName: subscriptionInMethod_postPathLocalValid
         url: >-
           /azurespecials/subscriptionId/path/string/none/path/local/1234-5678-9012-3456/{subscriptionId}
-      - defaultResponse:
+      - $id: '199'
+        defaultResponse:
+          $id: '209'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           POST method with subscriptionId modeled in the method.  pass in
           subscription id = '1234-5678-9012-3456' to succeed
         group:
+          $id: '207'
           fixed: false
           raw: subscriptionInMethod
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '206'
           fixed: false
           raw: postSwaggerLocalValid
         parameters:
-          - $id: '46'
+          - $id: '200'
             collectionFormat: none
             defaultValue:
+              $id: '201'
               fixed: false
             deprecated: false
             documentation:
+              $id: '202'
               fixed: false
               raw: >-
                 The subscriptionId, which appears in the path, the value is
@@ -852,14 +1003,16 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '47'
+              $id: '204'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '205'
                 fixed: false
                 raw: String
             name:
+              $id: '203'
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
@@ -868,43 +1021,54 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '208'
             isNullable: true
         returnType:
+          $id: '210'
           isNullable: true
         serializedName: subscriptionInMethod_postSwaggerLocalValid
         url: >-
           /azurespecials/subscriptionId/swagger/string/none/path/local/1234-5678-9012-3456/{subscriptionId}
     name:
+      $id: '211'
       fixed: false
       raw: SubscriptionInMethod
     nameForProperty: SubscriptionInMethod
     typeName:
+      $id: '212'
       fixed: false
-  - methods:
-      - defaultResponse:
+  - $id: '213'
+    methods:
+      - $id: '214'
+        defaultResponse:
+          $id: '224'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: GET method with api-version modeled in global settings.
         group:
+          $id: '222'
           fixed: false
           raw: apiVersionDefault
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '221'
           fixed: false
           raw: getMethodGlobalValid
         parameters:
-          - $id: '48'
+          - $id: '215'
             clientProperty:
-              $ref: '24'
+              $ref: '66'
             collectionFormat: none
             defaultValue:
+              $id: '216'
               fixed: false
             deprecated: false
             documentation:
+              $id: '217'
               fixed: false
               raw: >-
                 The api version, which appears in the query, the value is always
@@ -913,14 +1077,16 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '49'
+              $id: '219'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '220'
                 fixed: false
                 raw: String
             name:
+              $id: '218'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -929,36 +1095,44 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '223'
             isNullable: true
         returnType:
+          $id: '225'
           isNullable: true
         serializedName: apiVersionDefault_getMethodGlobalValid
         url: >-
           /azurespecials/apiVersion/method/string/none/query/global/2015-07-01-preview
-      - defaultResponse:
+      - $id: '226'
+        defaultResponse:
+          $id: '236'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: GET method with api-version modeled in global settings.
         group:
+          $id: '234'
           fixed: false
           raw: apiVersionDefault
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '233'
           fixed: false
           raw: getMethodGlobalNotProvidedValid
         parameters:
-          - $id: '50'
+          - $id: '227'
             clientProperty:
-              $ref: '24'
+              $ref: '66'
             collectionFormat: none
             defaultValue:
+              $id: '228'
               fixed: false
             deprecated: false
             documentation:
+              $id: '229'
               fixed: false
               raw: >-
                 The api version, which appears in the query, the value is always
@@ -967,14 +1141,16 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '51'
+              $id: '231'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '232'
                 fixed: false
                 raw: String
             name:
+              $id: '230'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -983,36 +1159,44 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '235'
             isNullable: true
         returnType:
+          $id: '237'
           isNullable: true
         serializedName: apiVersionDefault_getMethodGlobalNotProvidedValid
         url: >-
           /azurespecials/apiVersion/method/string/none/query/globalNotProvided/2015-07-01-preview
-      - defaultResponse:
+      - $id: '238'
+        defaultResponse:
+          $id: '248'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: GET method with api-version modeled in global settings.
         group:
+          $id: '246'
           fixed: false
           raw: apiVersionDefault
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '245'
           fixed: false
           raw: getPathGlobalValid
         parameters:
-          - $id: '52'
+          - $id: '239'
             clientProperty:
-              $ref: '24'
+              $ref: '66'
             collectionFormat: none
             defaultValue:
+              $id: '240'
               fixed: false
             deprecated: false
             documentation:
+              $id: '241'
               fixed: false
               raw: >-
                 The api version, which appears in the query, the value is always
@@ -1021,14 +1205,16 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '53'
+              $id: '243'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '244'
                 fixed: false
                 raw: String
             name:
+              $id: '242'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -1037,36 +1223,44 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '247'
             isNullable: true
         returnType:
+          $id: '249'
           isNullable: true
         serializedName: apiVersionDefault_getPathGlobalValid
         url: >-
           /azurespecials/apiVersion/path/string/none/query/global/2015-07-01-preview
-      - defaultResponse:
+      - $id: '250'
+        defaultResponse:
+          $id: '260'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: GET method with api-version modeled in global settings.
         group:
+          $id: '258'
           fixed: false
           raw: apiVersionDefault
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '257'
           fixed: false
           raw: getSwaggerGlobalValid
         parameters:
-          - $id: '54'
+          - $id: '251'
             clientProperty:
-              $ref: '24'
+              $ref: '66'
             collectionFormat: none
             defaultValue:
+              $id: '252'
               fixed: false
             deprecated: false
             documentation:
+              $id: '253'
               fixed: false
               raw: >-
                 The api version, which appears in the query, the value is always
@@ -1075,14 +1269,16 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '55'
+              $id: '255'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '256'
                 fixed: false
                 raw: String
             name:
+              $id: '254'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -1091,58 +1287,71 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '259'
             isNullable: true
         returnType:
+          $id: '261'
           isNullable: true
         serializedName: apiVersionDefault_getSwaggerGlobalValid
         url: >-
           /azurespecials/apiVersion/swagger/string/none/query/global/2015-07-01-preview
     name:
+      $id: '262'
       fixed: false
       raw: ApiVersionDefault
     nameForProperty: ApiVersionDefault
     typeName:
+      $id: '263'
       fixed: false
-  - methods:
-      - defaultResponse:
+  - $id: '264'
+    methods:
+      - $id: '265'
+        defaultResponse:
+          $id: '275'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get method with api-version modeled in the method.  pass in
           api-version = '2.0' to succeed
         group:
+          $id: '273'
           fixed: false
           raw: apiVersionLocal
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '272'
           fixed: false
           raw: getMethodLocalValid
         parameters:
-          - $id: '56'
+          - $id: '266'
             collectionFormat: none
             defaultValue:
+              $id: '267'
               fixed: false
               raw: '2.0'
             deprecated: false
             documentation:
+              $id: '268'
               fixed: false
               raw: 'This should appear as a method parameter, use value ''2.0'''
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '57'
+              $id: '270'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '271'
                 fixed: false
                 raw: String
             name:
+              $id: '269'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -1151,35 +1360,43 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '274'
             isNullable: true
         returnType:
+          $id: '276'
           isNullable: true
         serializedName: apiVersionLocal_getMethodLocalValid
         url: /azurespecials/apiVersion/method/string/none/query/local/2.0
-      - defaultResponse:
+      - $id: '277'
+        defaultResponse:
+          $id: '287'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get method with api-version modeled in the method.  pass in
           api-version = null to succeed
         group:
+          $id: '285'
           fixed: false
           raw: apiVersionLocal
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '284'
           fixed: false
           raw: getMethodLocalNull
         parameters:
-          - $id: '58'
+          - $id: '278'
             collectionFormat: none
             defaultValue:
+              $id: '279'
               fixed: false
             deprecated: false
             documentation:
+              $id: '280'
               fixed: false
               raw: >-
                 This should appear as a method parameter, use value null, this
@@ -1188,14 +1405,16 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '59'
+              $id: '282'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '283'
                 fixed: false
                 raw: String
             name:
+              $id: '281'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -1204,50 +1423,60 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '286'
             isNullable: true
         returnType:
+          $id: '288'
           isNullable: true
         serializedName: apiVersionLocal_getMethodLocalNull
         url: /azurespecials/apiVersion/method/string/none/query/local/null
-      - defaultResponse:
+      - $id: '289'
+        defaultResponse:
+          $id: '299'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get method with api-version modeled in the method.  pass in
           api-version = '2.0' to succeed
         group:
+          $id: '297'
           fixed: false
           raw: apiVersionLocal
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '296'
           fixed: false
           raw: getPathLocalValid
         parameters:
-          - $id: '60'
+          - $id: '290'
             collectionFormat: none
             defaultValue:
+              $id: '291'
               fixed: false
               raw: '2.0'
             deprecated: false
             documentation:
+              $id: '292'
               fixed: false
               raw: 'This should appear as a method parameter, use value ''2.0'''
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '61'
+              $id: '294'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '295'
                 fixed: false
                 raw: String
             name:
+              $id: '293'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -1256,36 +1485,44 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '298'
             isNullable: true
         returnType:
+          $id: '300'
           isNullable: true
         serializedName: apiVersionLocal_getPathLocalValid
         url: /azurespecials/apiVersion/path/string/none/query/local/2.0
-      - defaultResponse:
+      - $id: '301'
+        defaultResponse:
+          $id: '311'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get method with api-version modeled in the method.  pass in
           api-version = '2.0' to succeed
         group:
+          $id: '309'
           fixed: false
           raw: apiVersionLocal
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '308'
           fixed: false
           raw: getSwaggerLocalValid
         parameters:
-          - $id: '62'
+          - $id: '302'
             collectionFormat: none
             defaultValue:
+              $id: '303'
               fixed: false
               raw: '2.0'
             deprecated: false
             documentation:
+              $id: '304'
               fixed: false
               raw: >-
                 The api version, which appears in the query, the value is always
@@ -1294,14 +1531,16 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '63'
+              $id: '306'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '307'
                 fixed: false
                 raw: String
             name:
+              $id: '305'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -1310,42 +1549,53 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '310'
             isNullable: true
         returnType:
+          $id: '312'
           isNullable: true
         serializedName: apiVersionLocal_getSwaggerLocalValid
         url: /azurespecials/apiVersion/swagger/string/none/query/local/2.0
     name:
+      $id: '313'
       fixed: false
       raw: ApiVersionLocal
     nameForProperty: ApiVersionLocal
     typeName:
+      $id: '314'
       fixed: false
-  - methods:
-      - defaultResponse:
+  - $id: '315'
+    methods:
+      - $id: '316'
+        defaultResponse:
+          $id: '326'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get method with unencoded path parameter with value
           'path1/path2/path3'
         group:
+          $id: '324'
           fixed: false
           raw: skipUrlEncoding
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '323'
           fixed: false
           raw: getMethodPathValid
         parameters:
-          - $id: '64'
+          - $id: '317'
             collectionFormat: none
             defaultValue:
+              $id: '318'
               fixed: false
             deprecated: false
             documentation:
+              $id: '319'
               fixed: false
               raw: Unencoded path parameter with value 'path1/path2/path3'
             extensions:
@@ -1354,14 +1604,16 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '65'
+              $id: '321'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '322'
                 fixed: false
                 raw: String
             name:
+              $id: '320'
               fixed: false
               raw: unencodedPathParam
             serializedName: unencodedPathParam
@@ -1370,35 +1622,43 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '325'
             isNullable: true
         returnType:
+          $id: '327'
           isNullable: true
         serializedName: skipUrlEncoding_getMethodPathValid
         url: '/azurespecials/skipUrlEncoding/method/path/valid/{unencodedPathParam}'
-      - defaultResponse:
+      - $id: '328'
+        defaultResponse:
+          $id: '338'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get method with unencoded path parameter with value
           'path1/path2/path3'
         group:
+          $id: '336'
           fixed: false
           raw: skipUrlEncoding
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '335'
           fixed: false
           raw: getPathPathValid
         parameters:
-          - $id: '66'
+          - $id: '329'
             collectionFormat: none
             defaultValue:
+              $id: '330'
               fixed: false
             deprecated: false
             documentation:
+              $id: '331'
               fixed: false
               raw: Unencoded path parameter with value 'path1/path2/path3'
             extensions:
@@ -1407,14 +1667,16 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '67'
+              $id: '333'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '334'
                 fixed: false
                 raw: String
             name:
+              $id: '332'
               fixed: false
               raw: unencodedPathParam
             serializedName: unencodedPathParam
@@ -1423,36 +1685,44 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '337'
             isNullable: true
         returnType:
+          $id: '339'
           isNullable: true
         serializedName: skipUrlEncoding_getPathPathValid
         url: '/azurespecials/skipUrlEncoding/path/path/valid/{unencodedPathParam}'
-      - defaultResponse:
+      - $id: '340'
+        defaultResponse:
+          $id: '350'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get method with unencoded path parameter with value
           'path1/path2/path3'
         group:
+          $id: '348'
           fixed: false
           raw: skipUrlEncoding
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '347'
           fixed: false
           raw: getSwaggerPathValid
         parameters:
-          - $id: '68'
+          - $id: '341'
             collectionFormat: none
             defaultValue:
+              $id: '342'
               fixed: false
               raw: path1/path2/path3
             deprecated: false
             documentation:
+              $id: '343'
               fixed: false
               raw: An unencoded path parameter with value 'path1/path2/path3'
             extensions:
@@ -1461,14 +1731,16 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '69'
+              $id: '345'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '346'
                 fixed: false
                 raw: String
             name:
+              $id: '344'
               fixed: false
               raw: unencodedPathParam
             serializedName: unencodedPathParam
@@ -1477,35 +1749,43 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '349'
             isNullable: true
         returnType:
+          $id: '351'
           isNullable: true
         serializedName: skipUrlEncoding_getSwaggerPathValid
         url: '/azurespecials/skipUrlEncoding/swagger/path/valid/{unencodedPathParam}'
-      - defaultResponse:
+      - $id: '352'
+        defaultResponse:
+          $id: '362'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get method with unencoded query parameter with value
           'value1&q2=value2&q3=value3'
         group:
+          $id: '360'
           fixed: false
           raw: skipUrlEncoding
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '359'
           fixed: false
           raw: getMethodQueryValid
         parameters:
-          - $id: '70'
+          - $id: '353'
             collectionFormat: none
             defaultValue:
+              $id: '354'
               fixed: false
             deprecated: false
             documentation:
+              $id: '355'
               fixed: false
               raw: >-
                 Unencoded query parameter with value
@@ -1516,14 +1796,16 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '71'
+              $id: '357'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '358'
                 fixed: false
                 raw: String
             name:
+              $id: '356'
               fixed: false
               raw: q1
             serializedName: q1
@@ -1532,33 +1814,41 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '361'
             isNullable: true
         returnType:
+          $id: '363'
           isNullable: true
         serializedName: skipUrlEncoding_getMethodQueryValid
         url: /azurespecials/skipUrlEncoding/method/query/valid
-      - defaultResponse:
+      - $id: '364'
+        defaultResponse:
+          $id: '374'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get method with unencoded query parameter with value null
         group:
+          $id: '372'
           fixed: false
           raw: skipUrlEncoding
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '371'
           fixed: false
           raw: getMethodQueryNull
         parameters:
-          - $id: '72'
+          - $id: '365'
             collectionFormat: none
             defaultValue:
+              $id: '366'
               fixed: false
             deprecated: false
             documentation:
+              $id: '367'
               fixed: false
               raw: Unencoded query parameter with value null
             extensions:
@@ -1567,14 +1857,16 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '73'
+              $id: '369'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '370'
                 fixed: false
                 raw: String
             name:
+              $id: '368'
               fixed: false
               raw: q1
             serializedName: q1
@@ -1583,35 +1875,43 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '373'
             isNullable: true
         returnType:
+          $id: '375'
           isNullable: true
         serializedName: skipUrlEncoding_getMethodQueryNull
         url: /azurespecials/skipUrlEncoding/method/query/null
-      - defaultResponse:
+      - $id: '376'
+        defaultResponse:
+          $id: '386'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get method with unencoded query parameter with value
           'value1&q2=value2&q3=value3'
         group:
+          $id: '384'
           fixed: false
           raw: skipUrlEncoding
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '383'
           fixed: false
           raw: getPathQueryValid
         parameters:
-          - $id: '74'
+          - $id: '377'
             collectionFormat: none
             defaultValue:
+              $id: '378'
               fixed: false
             deprecated: false
             documentation:
+              $id: '379'
               fixed: false
               raw: >-
                 Unencoded query parameter with value
@@ -1622,14 +1922,16 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '75'
+              $id: '381'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '382'
                 fixed: false
                 raw: String
             name:
+              $id: '380'
               fixed: false
               raw: q1
             serializedName: q1
@@ -1638,36 +1940,44 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '385'
             isNullable: true
         returnType:
+          $id: '387'
           isNullable: true
         serializedName: skipUrlEncoding_getPathQueryValid
         url: /azurespecials/skipUrlEncoding/path/query/valid
-      - defaultResponse:
+      - $id: '388'
+        defaultResponse:
+          $id: '398'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get method with unencoded query parameter with value
           'value1&q2=value2&q3=value3'
         group:
+          $id: '396'
           fixed: false
           raw: skipUrlEncoding
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '395'
           fixed: false
           raw: getSwaggerQueryValid
         parameters:
-          - $id: '76'
+          - $id: '389'
             collectionFormat: none
             defaultValue:
+              $id: '390'
               fixed: false
               raw: value1&q2=value2&q3=value3
             deprecated: false
             documentation:
+              $id: '391'
               fixed: false
               raw: >-
                 An unencoded query parameter with value
@@ -1678,14 +1988,16 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '77'
+              $id: '393'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '394'
                 fixed: false
                 raw: String
             name:
+              $id: '392'
               fixed: false
               raw: q1
             serializedName: q1
@@ -1694,21 +2006,28 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '397'
             isNullable: true
         returnType:
+          $id: '399'
           isNullable: true
         serializedName: skipUrlEncoding_getSwaggerQueryValid
         url: /azurespecials/skipUrlEncoding/swagger/query/valid
     name:
+      $id: '400'
       fixed: false
       raw: SkipUrlEncoding
     nameForProperty: SkipUrlEncoding
     typeName:
+      $id: '401'
       fixed: false
-  - methods:
-      - defaultResponse:
+  - $id: '402'
+    methods:
+      - $id: '403'
+        defaultResponse:
+          $id: '425'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -1717,21 +2036,25 @@ operations:
         extensions:
           x-ms-odata: '#/components/schemas/OdataFilter'
         group:
+          $id: '423'
           fixed: false
           raw: odata
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '422'
           fixed: false
           raw: getWithFilter
         parameters:
-          - $id: '78'
+          - $id: '404'
             collectionFormat: none
             defaultValue:
+              $id: '405'
               fixed: false
             deprecated: false
             documentation:
+              $id: '406'
               fixed: false
               raw: >-
                 The filter parameter with value '$filter=id gt 5 and name eq
@@ -1740,61 +2063,71 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '79'
+              $id: '408'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '409'
                 fixed: false
                 raw: String
             name:
+              $id: '407'
               fixed: false
               raw: $filter
             serializedName: $filter
-          - $id: '80'
+          - $id: '410'
             collectionFormat: none
             defaultValue:
+              $id: '411'
               fixed: false
             deprecated: false
             documentation:
+              $id: '412'
               fixed: false
               raw: The top parameter with value 10.
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '81'
+              $id: '414'
               $type: PrimaryType
               deprecated: false
               format: int32
               knownPrimaryType: int
               name:
+                $id: '415'
                 fixed: false
                 raw: Int
             name:
+              $id: '413'
               fixed: false
               raw: $top
             serializedName: $top
-          - $id: '82'
+          - $id: '416'
             collectionFormat: none
             defaultValue:
+              $id: '417'
               fixed: false
             deprecated: false
             documentation:
+              $id: '418'
               fixed: false
               raw: The orderby parameter with value id.
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '83'
+              $id: '420'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '421'
                 fixed: false
                 raw: String
             name:
+              $id: '419'
               fixed: false
               raw: $orderby
             serializedName: $orderby
@@ -1803,23 +2136,30 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '424'
             isNullable: true
         returnType:
+          $id: '426'
           isNullable: true
         serializedName: odata_getWithFilter
         url: /azurespecials/odata/filter
     name:
+      $id: '427'
       fixed: false
       raw: Odata
     nameForProperty: Odata
     typeName:
+      $id: '428'
       fixed: false
-  - methods:
-      - defaultResponse:
+  - $id: '429'
+    methods:
+      - $id: '430'
+        defaultResponse:
+          $id: '440'
           body:
-            $ref: '1'
+            $ref: '2'
           headers:
-            $ref: '13'
+            $ref: '36'
           isNullable: true
         deprecated: false
         description: >-
@@ -1828,21 +2168,25 @@ operations:
         extensions:
           x-ms-request-id: foo-request-id
         group:
+          $id: '438'
           fixed: false
           raw: header
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '437'
           fixed: false
           raw: customNamedRequestId
         parameters:
-          - $id: '84'
+          - $id: '431'
             collectionFormat: none
             defaultValue:
+              $id: '432'
               fixed: false
             deprecated: false
             documentation:
+              $id: '433'
               fixed: false
               raw: The fooRequestId
             extensions:
@@ -1851,14 +2195,16 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '85'
+              $id: '435'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '436'
                 fixed: false
                 raw: String
             name:
+              $id: '434'
               fixed: false
               raw: foo-client-request-id
             serializedName: foo-client-request-id
@@ -1867,20 +2213,24 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '439'
             headers:
-              $ref: '13'
+              $ref: '36'
             isNullable: true
         returnType:
+          $id: '441'
           headers:
-            $ref: '13'
+            $ref: '36'
           isNullable: true
         serializedName: header_customNamedRequestId
         url: /azurespecials/customNamedRequestId
-      - defaultResponse:
+      - $id: '442'
+        defaultResponse:
+          $id: '452'
           body:
-            $ref: '1'
+            $ref: '2'
           headers:
-            $ref: '16'
+            $ref: '44'
           isNullable: true
         deprecated: false
         description: >-
@@ -1889,21 +2239,25 @@ operations:
         extensions:
           x-ms-request-id: foo-request-id
         group:
+          $id: '450'
           fixed: false
           raw: header
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '449'
           fixed: false
           raw: customNamedRequestIdParamGrouping
         parameters:
-          - $id: '86'
+          - $id: '443'
             collectionFormat: none
             defaultValue:
+              $id: '444'
               fixed: false
             deprecated: false
             documentation:
+              $id: '445'
               fixed: false
               raw: The fooRequestId
             extensions:
@@ -1913,14 +2267,16 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '87'
+              $id: '447'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '448'
                 fixed: false
                 raw: String
             name:
+              $id: '446'
               fixed: false
               raw: foo-client-request-id
             serializedName: foo-client-request-id
@@ -1929,20 +2285,24 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '451'
             headers:
-              $ref: '16'
+              $ref: '44'
             isNullable: true
         returnType:
+          $id: '453'
           headers:
-            $ref: '16'
+            $ref: '44'
           isNullable: true
         serializedName: header_customNamedRequestIdParamGrouping
         url: /azurespecials/customNamedRequestIdParamGrouping
-      - defaultResponse:
+      - $id: '454'
+        defaultResponse:
+          $id: '465'
           body:
-            $ref: '1'
+            $ref: '2'
           headers:
-            $ref: '19'
+            $ref: '52'
           isNullable: true
         deprecated: false
         description: >-
@@ -1951,21 +2311,25 @@ operations:
         extensions:
           x-ms-request-id: foo-request-id
         group:
+          $id: '462'
           fixed: false
           raw: header
         hidden: false
         httpMethod: head
         isAbsoluteUrl: false
         name:
+          $id: '461'
           fixed: false
           raw: customNamedRequestIdHead
         parameters:
-          - $id: '88'
+          - $id: '455'
             collectionFormat: none
             defaultValue:
+              $id: '456'
               fixed: false
             deprecated: false
             documentation:
+              $id: '457'
               fixed: false
               raw: The fooRequestId
             extensions:
@@ -1974,14 +2338,16 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '89'
+              $id: '459'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '460'
                 fixed: false
                 raw: String
             name:
+              $id: '458'
               fixed: false
               raw: foo-client-request-id
             serializedName: foo-client-request-id
@@ -1990,32 +2356,39 @@ operations:
           - application/json
         responses:
           NotFound:
+            $id: '464'
             headers:
-              $ref: '19'
+              $ref: '52'
             isNullable: true
           OK:
+            $id: '463'
             headers:
-              $ref: '19'
+              $ref: '52'
             isNullable: true
         returnType:
+          $id: '466'
           headers:
-            $ref: '19'
+            $ref: '52'
           isNullable: true
         serializedName: header_customNamedRequestIdHead
         url: /azurespecials/customNamedRequestIdHead
     name:
+      $id: '467'
       fixed: false
       raw: Header
     nameForProperty: Header
     typeName:
+      $id: '468'
       fixed: false
 properties:
-  - $id: '22'
+  - $id: '60'
     collectionFormat: none
     defaultValue:
+      $id: '61'
       fixed: false
     deprecated: false
     documentation:
+      $id: '62'
       fixed: false
       raw: >-
         The subscription id, which appears in the path, always modeled in
@@ -2024,25 +2397,29 @@ properties:
     isReadOnly: false
     isRequired: true
     modelType:
-      $id: '23'
+      $id: '64'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
+        $id: '65'
         fixed: false
         raw: String
     name:
+      $id: '63'
       fixed: false
       raw: subscriptionId
     realPath:
       - subscriptionId
     serializedName: subscriptionId
-  - $id: '24'
+  - $id: '66'
     collectionFormat: none
     defaultValue:
+      $id: '67'
       fixed: false
     deprecated: false
     documentation:
+      $id: '68'
       fixed: false
       raw: >-
         The api version, which appears in the query, the value is always
@@ -2051,14 +2428,16 @@ properties:
     isReadOnly: false
     isRequired: true
     modelType:
-      $id: '25'
+      $id: '70'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
+        $id: '71'
         fixed: false
         raw: String
     name:
+      $id: '69'
       fixed: false
       raw: api-version
     realPath:

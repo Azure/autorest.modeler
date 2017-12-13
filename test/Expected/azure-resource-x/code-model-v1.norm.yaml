@@ -1,69 +1,79 @@
 ---
+$id: '1'
 apiVersion: 1.0.0
 baseUrl: 'http://localhost:3000'
 documentation: Resource Flattening for AutoRest
 errorTypes:
-  - $ref: '1'
+  - $ref: '2'
 modelTypes:
-  - $id: '1'
+  - $id: '2'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '15'
       fixed: false
       raw: Error
     properties:
-      - $id: '2'
+      - $id: '3'
         collectionFormat: none
         defaultValue:
+          $id: '4'
           fixed: false
         deprecated: false
         documentation:
+          $id: '5'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
+          $id: '7'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
+            $id: '8'
             fixed: false
             raw: Int
         name:
+          $id: '6'
           fixed: false
           raw: status
         realPath:
           - status
         serializedName: status
-      - $id: '4'
+      - $id: '9'
         collectionFormat: none
         defaultValue:
+          $id: '10'
           fixed: false
         deprecated: false
         documentation:
+          $id: '11'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
+          $id: '13'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '14'
             fixed: false
             raw: String
         name:
+          $id: '12'
           fixed: false
           raw: message
         realPath:
           - message
         serializedName: message
     serializedName: Error
-  - $id: '6'
+  - $id: '16'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -72,239 +82,277 @@ modelTypes:
       x-ms-azure-resource: true
     externalDocsUrl: 'http://tempuri.org'
     name:
+      $id: '49'
       fixed: false
       raw: ResourceX
     properties:
-      - $id: '7'
+      - $id: '17'
         collectionFormat: none
         defaultValue:
+          $id: '18'
           fixed: false
         deprecated: false
         documentation:
+          $id: '19'
           fixed: false
           raw: Resource Id
         isConstant: false
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '8'
+          $id: '21'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '22'
             fixed: false
             raw: String
         name:
+          $id: '20'
           fixed: false
           raw: id
         realPath:
           - id
         serializedName: id
-      - $id: '9'
+      - $id: '23'
         collectionFormat: none
         defaultValue:
+          $id: '24'
           fixed: false
         deprecated: false
         documentation:
+          $id: '25'
           fixed: false
           raw: Resource Type
         isConstant: false
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '10'
+          $id: '27'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '28'
             fixed: false
             raw: String
         name:
+          $id: '26'
           fixed: false
           raw: type
         realPath:
           - type
         serializedName: type
-      - $id: '11'
+      - $id: '29'
         collectionFormat: none
         defaultValue:
+          $id: '30'
           fixed: false
         deprecated: false
         documentation:
+          $id: '31'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '12'
+          $id: '33'
           $type: DictionaryType
           deprecated: false
           name:
+            $id: '36'
             fixed: false
           supportsAdditionalProperties: false
           valueType:
-            $id: '13'
+            $id: '34'
             $type: PrimaryType
             deprecated: false
             knownPrimaryType: string
             name:
+              $id: '35'
               fixed: false
               raw: String
         name:
+          $id: '32'
           fixed: false
           raw: tags
         realPath:
           - tags
         serializedName: tags
-      - $id: '14'
+      - $id: '37'
         collectionFormat: none
         defaultValue:
+          $id: '38'
           fixed: false
         deprecated: false
         documentation:
+          $id: '39'
           fixed: false
           raw: Resource Location
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '15'
+          $id: '41'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '42'
             fixed: false
             raw: String
         name:
+          $id: '40'
           fixed: false
           raw: location
         realPath:
           - location
         serializedName: location
-      - $id: '16'
+      - $id: '43'
         collectionFormat: none
         defaultValue:
+          $id: '44'
           fixed: false
         deprecated: false
         documentation:
+          $id: '45'
           fixed: false
           raw: Resource Name
         isConstant: false
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '17'
+          $id: '47'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '48'
             fixed: false
             raw: String
         name:
+          $id: '46'
           fixed: false
           raw: name
         realPath:
           - name
         serializedName: name
     serializedName: ResourceX
-  - $id: '18'
+  - $id: '50'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '69'
       fixed: false
       raw: FlattenedResourceProperties
     properties:
-      - $id: '19'
+      - $id: '51'
         collectionFormat: none
         defaultValue:
+          $id: '52'
           fixed: false
         deprecated: false
         documentation:
+          $id: '53'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '20'
+          $id: '55'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '56'
             fixed: false
             raw: String
         name:
+          $id: '54'
           fixed: false
           raw: pname
         realPath:
           - pname
         serializedName: pname
-      - $id: '21'
+      - $id: '57'
         collectionFormat: none
         defaultValue:
+          $id: '58'
           fixed: false
         deprecated: false
         documentation:
+          $id: '59'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '22'
+          $id: '61'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
+            $id: '62'
             fixed: false
             raw: Int
         name:
+          $id: '60'
           fixed: false
           raw: lsize
         realPath:
           - lsize
         serializedName: lsize
-      - $id: '23'
+      - $id: '63'
         collectionFormat: none
         defaultValue:
+          $id: '64'
           fixed: false
         deprecated: false
         documentation:
+          $id: '65'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '24'
+          $id: '67'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '68'
             fixed: false
             raw: String
         name:
+          $id: '66'
           fixed: false
           raw: provisioningState
         realPath:
           - provisioningState
         serializedName: provisioningState
     serializedName: FlattenedResourceProperties
-  - $id: '25'
+  - $id: '70'
     $type: CompositeType
     baseModelType:
-      $ref: '6'
+      $ref: '16'
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '75'
       fixed: false
       raw: FlattenedProduct
     properties:
-      - $id: '26'
+      - $id: '71'
         collectionFormat: none
         defaultValue:
+          $id: '72'
           fixed: false
         deprecated: false
         documentation:
+          $id: '73'
           fixed: false
         extensions:
           x-ms-client-flatten: true
@@ -312,84 +360,97 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $ref: '18'
+          $ref: '50'
         name:
+          $id: '74'
           fixed: false
           raw: properties
         realPath:
           - properties
         serializedName: properties
     serializedName: FlattenedProduct
-  - $id: '27'
+  - $id: '76'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '93'
       fixed: false
       raw: ResourceCollection
     properties:
-      - $id: '28'
+      - $id: '77'
         collectionFormat: none
         defaultValue:
+          $id: '78'
           fixed: false
         deprecated: false
         documentation:
+          $id: '79'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $ref: '25'
+          $ref: '70'
         name:
+          $id: '80'
           fixed: false
           raw: productresource
         realPath:
           - productresource
         serializedName: productresource
-      - $id: '29'
+      - $id: '81'
         collectionFormat: none
         defaultValue:
+          $id: '82'
           fixed: false
         deprecated: false
         documentation:
+          $id: '83'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '30'
+          $id: '85'
           $type: SequenceType
           deprecated: false
           elementType:
-            $ref: '25'
+            $ref: '70'
           name:
+            $id: '86'
             fixed: false
         name:
+          $id: '84'
           fixed: false
           raw: arrayofresources
         realPath:
           - arrayofresources
         serializedName: arrayofresources
-      - $id: '31'
+      - $id: '87'
         collectionFormat: none
         defaultValue:
+          $id: '88'
           fixed: false
         deprecated: false
         documentation:
+          $id: '89'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '32'
+          $id: '91'
           $type: DictionaryType
           deprecated: false
           name:
+            $id: '92'
             fixed: false
           supportsAdditionalProperties: false
           valueType:
-            $ref: '25'
+            $ref: '70'
         name:
+          $id: '90'
           fixed: false
           raw: dictionaryofresources
         realPath:
@@ -400,10 +461,13 @@ modelsName: Models
 name: AutoRestResourceFlatteningTestService
 namespace: ''
 operations:
-  - methods:
-      - defaultResponse:
+  - $id: '94'
+    methods:
+      - $id: '95'
+        defaultResponse:
+          $id: '105'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Put External Resource as an Array
@@ -411,21 +475,25 @@ operations:
           x-ms-requestBody-index: '0'
         externalDocsUrl: 'http://tempuri.org'
         group:
+          $id: '103'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '102'
           fixed: false
           raw: putArray
         parameters:
-          - $id: '33'
+          - $id: '96'
             collectionFormat: csv
             defaultValue:
+              $id: '97'
               fixed: false
             deprecated: false
             documentation:
+              $id: '98'
               fixed: false
               raw: External Resource as an Array to put
             extensions:
@@ -434,14 +502,16 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '34'
+              $id: '100'
               $type: SequenceType
               deprecated: false
               elementType:
-                $ref: '6'
+                $ref: '16'
               name:
+                $id: '101'
                 fixed: false
             name:
+              $id: '99'
               fixed: false
               raw: ResourceArray
             serializedName: ResourceArray
@@ -450,25 +520,31 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '104'
             isNullable: true
         returnType:
+          $id: '106'
           isNullable: true
         serializedName: putArray
         url: /azure/resource-flatten/array
-      - defaultResponse:
+      - $id: '107'
+        defaultResponse:
+          $id: '113'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get External Resource as an Array
         externalDocsUrl: 'http://tempuri.org'
         group:
+          $id: '109'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '108'
           fixed: false
           raw: getArray
         requestContentType: application/json; charset=utf-8
@@ -476,24 +552,29 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '110'
             body:
-              $id: '35'
+              $id: '111'
               $type: SequenceType
               deprecated: false
               elementType:
-                $ref: '25'
+                $ref: '70'
               name:
+                $id: '112'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '114'
           body:
-            $ref: '35'
+            $ref: '111'
           isNullable: true
         serializedName: getArray
         url: /azure/resource-flatten/array
-      - defaultResponse:
+      - $id: '115'
+        defaultResponse:
+          $id: '125'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Put External Resource as a Dictionary
@@ -501,21 +582,25 @@ operations:
           x-ms-requestBody-index: '0'
         externalDocsUrl: 'http://tempuri.org'
         group:
+          $id: '123'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '122'
           fixed: false
           raw: putDictionary
         parameters:
-          - $id: '36'
+          - $id: '116'
             collectionFormat: none
             defaultValue:
+              $id: '117'
               fixed: false
             deprecated: false
             documentation:
+              $id: '118'
               fixed: false
               raw: External Resource as a Dictionary to put
             extensions:
@@ -524,15 +609,17 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '37'
+              $id: '120'
               $type: DictionaryType
               deprecated: false
               name:
+                $id: '121'
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $ref: '25'
+                $ref: '70'
             name:
+              $id: '119'
               fixed: false
               raw: ResourceDictionary
             serializedName: ResourceDictionary
@@ -541,25 +628,31 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '124'
             isNullable: true
         returnType:
+          $id: '126'
           isNullable: true
         serializedName: putDictionary
         url: /azure/resource-flatten/dictionary
-      - defaultResponse:
+      - $id: '127'
+        defaultResponse:
+          $id: '133'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get External Resource as a Dictionary
         externalDocsUrl: 'http://tempuri.org'
         group:
+          $id: '129'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '128'
           fixed: false
           raw: getDictionary
         requestContentType: application/json; charset=utf-8
@@ -567,25 +660,30 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '130'
             body:
-              $id: '38'
+              $id: '131'
               $type: DictionaryType
               deprecated: false
               name:
+                $id: '132'
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $ref: '25'
+                $ref: '70'
             isNullable: true
         returnType:
+          $id: '134'
           body:
-            $ref: '38'
+            $ref: '131'
           isNullable: true
         serializedName: getDictionary
         url: /azure/resource-flatten/dictionary
-      - defaultResponse:
+      - $id: '135'
+        defaultResponse:
+          $id: '143'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Put External Resource as a ResourceCollection
@@ -593,21 +691,25 @@ operations:
           x-ms-requestBody-index: '0'
         externalDocsUrl: 'http://tempuri.org'
         group:
+          $id: '141'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '140'
           fixed: false
           raw: putResourceCollection
         parameters:
-          - $id: '39'
+          - $id: '136'
             collectionFormat: none
             defaultValue:
+              $id: '137'
               fixed: false
             deprecated: false
             documentation:
+              $id: '138'
               fixed: false
               raw: External Resource as a ResourceCollection to put
             extensions:
@@ -616,8 +718,9 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $ref: '27'
+              $ref: '76'
             name:
+              $id: '139'
               fixed: false
               raw: ResourceComplexObject
             serializedName: ResourceComplexObject
@@ -626,25 +729,31 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '142'
             isNullable: true
         returnType:
+          $id: '144'
           isNullable: true
         serializedName: putResourceCollection
         url: /azure/resource-flatten/resourcecollection
-      - defaultResponse:
+      - $id: '145'
+        defaultResponse:
+          $id: '149'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get External Resource as a ResourceCollection
         externalDocsUrl: 'http://tempuri.org'
         group:
+          $id: '147'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '146'
           fixed: false
           raw: getResourceCollection
         requestContentType: application/json; charset=utf-8
@@ -652,18 +761,22 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '148'
             body:
-              $ref: '27'
+              $ref: '76'
             isNullable: true
         returnType:
+          $id: '150'
           body:
-            $ref: '27'
+            $ref: '76'
           isNullable: true
         serializedName: getResourceCollection
         url: /azure/resource-flatten/resourcecollection
     name:
+      $id: '151'
       fixed: false
       raw: ''
     nameForProperty: AutoRestResourceFlatteningTestService
     typeName:
+      $id: '152'
       fixed: false

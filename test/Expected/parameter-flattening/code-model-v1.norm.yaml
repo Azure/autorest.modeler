@@ -1,45 +1,52 @@
 ---
+$id: '1'
 apiVersion: 1.0.0
 baseUrl: 'http://localhost:3000'
 codeGenExtensions:
   ft: '2'
 documentation: Resource Flattening for AutoRest
 modelTypes:
-  - $id: '1'
+  - $id: '2'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '11'
       fixed: false
       raw: AvailabilitySetUpdateParameters
     properties:
-      - $id: '2'
+      - $id: '3'
         collectionFormat: none
         defaultValue:
+          $id: '4'
           fixed: false
         deprecated: false
         documentation:
+          $id: '5'
           fixed: false
           raw: A description about the set of tags.
         isConstant: false
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '3'
+          $id: '7'
           $type: DictionaryType
           deprecated: false
           name:
+            $id: '10'
             fixed: false
           supportsAdditionalProperties: false
           valueType:
-            $id: '4'
+            $id: '8'
             $type: PrimaryType
             deprecated: false
             knownPrimaryType: string
             name:
+              $id: '9'
               fixed: false
               raw: String
         name:
+          $id: '6'
           fixed: false
           raw: tags
         realPath:
@@ -51,54 +58,65 @@ modelsName: Models
 name: AutoRestParameterFlattening
 namespace: ''
 operations:
-  - methods:
-      - defaultResponse:
+  - $id: '12'
+    methods:
+      - $id: '13'
+        defaultResponse:
+          $id: '33'
           isNullable: true
         deprecated: false
         description: Updates the tags for an availability set.
         extensions:
           x-ms-requestBody-index: '2'
         group:
+          $id: '31'
           fixed: false
           raw: AvailabilitySets
         hidden: false
         httpMethod: patch
         isAbsoluteUrl: false
         name:
+          $id: '30'
           fixed: false
           raw: Update
         parameters:
-          - $id: '5'
+          - $id: '14'
             collectionFormat: none
             defaultValue:
+              $id: '15'
               fixed: false
             deprecated: false
             documentation:
+              $id: '16'
               fixed: false
               raw: The name of the resource group.
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '6'
+              $id: '18'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '19'
                 fixed: false
                 raw: String
             name:
+              $id: '17'
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
-          - $id: '7'
+          - $id: '20'
             collectionFormat: none
             constraints:
               MaxLength: '80'
             defaultValue:
+              $id: '21'
               fixed: false
             deprecated: false
             documentation:
+              $id: '22'
               fixed: false
               raw: The name of the storage availability set.
             extensions:
@@ -107,23 +125,27 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '8'
+              $id: '24'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '25'
                 fixed: false
                 raw: String
             name:
+              $id: '23'
               fixed: false
               raw: availabilitySetName
             serializedName: availabilitySetName
-          - $id: '9'
+          - $id: '26'
             collectionFormat: none
             defaultValue:
+              $id: '27'
               fixed: false
             deprecated: false
             documentation:
+              $id: '28'
               fixed: false
               raw: The tags.
             extensions:
@@ -132,8 +154,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '1'
+              $ref: '2'
             name:
+              $id: '29'
               fixed: false
               raw: tags
             serializedName: tags
@@ -142,14 +165,18 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '32'
             isNullable: true
         returnType:
+          $id: '34'
           isNullable: true
         serializedName: AvailabilitySets_Update
         url: '/parameterFlattening/{resourceGroupName}/{availabilitySetName}'
     name:
+      $id: '35'
       fixed: false
       raw: AvailabilitySets
     nameForProperty: AvailabilitySets
     typeName:
+      $id: '36'
       fixed: false

@@ -1,50 +1,58 @@
 ---
+$id: '1'
 apiVersion: '2016-07-07'
 baseUrl: 'http://localhost:3000'
 documentation: PetStore
 enumTypes:
-  - $ref: '5'
-  - $ref: '8'
+  - $ref: '13'
+  - $ref: '28'
 modelTypes:
-  - $id: '1'
+  - $id: '2'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '35'
       fixed: false
       raw: Pet
     properties:
-      - $id: '2'
+      - $id: '3'
         collectionFormat: none
         defaultValue:
+          $id: '4'
           fixed: false
         deprecated: false
         documentation:
+          $id: '5'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
+          $id: '7'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '8'
             fixed: false
             raw: String
         name:
+          $id: '6'
           fixed: false
           raw: name
         realPath:
           - name
         serializedName: name
-      - $id: '4'
+      - $id: '9'
         collectionFormat: none
         defaultValue:
+          $id: '10'
           fixed: false
           raw: Friday
         deprecated: false
         documentation:
+          $id: '11'
           fixed: false
           raw: Type of Pet
         extensions:
@@ -55,49 +63,61 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
+          $id: '13'
           $type: EnumType
           deprecated: false
           modelAsExtensible: true
           modelAsString: false
           name:
+            $id: '23'
             fixed: false
             raw: DaysOfWeekExtensibleEnum
           underlyingType:
-            $id: '6'
+            $id: '21'
             $type: PrimaryType
             deprecated: false
             knownPrimaryType: string
             name:
+              $id: '22'
               fixed: false
               raw: String
           values:
-            - name: Monday
+            - $id: '14'
+              name: Monday
               serializedName: Monday
-            - name: Tuesday
+            - $id: '15'
+              name: Tuesday
               serializedName: Tuesday
-            - name: Wednesday
+            - $id: '16'
+              name: Wednesday
               serializedName: Wednesday
-            - name: Thursday
+            - $id: '17'
+              name: Thursday
               serializedName: Thursday
-            - name: Friday
+            - $id: '18'
+              name: Friday
               serializedName: Friday
-            - name: Saturday
+            - $id: '19'
+              name: Saturday
               serializedName: Saturday
-            - name: Sunday
+            - $id: '20'
+              name: Sunday
               serializedName: Sunday
         name:
+          $id: '12'
           fixed: false
           raw: DaysOfWeek
         realPath:
           - DaysOfWeek
         serializedName: DaysOfWeek
-      - $id: '7'
+      - $id: '24'
         collectionFormat: none
         defaultValue:
+          $id: '25'
           fixed: false
         deprecated: false
         documentation:
+          $id: '26'
           fixed: false
           raw: ''
         extensions:
@@ -129,43 +149,49 @@ modelTypes:
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '8'
+          $id: '28'
           $type: EnumType
           deprecated: false
           modelAsExtensible: true
           modelAsString: true
           name:
+            $id: '34'
             fixed: false
             raw: IntEnum
           underlyingType:
-            $id: '9'
+            $id: '32'
             $type: PrimaryType
             deprecated: false
             knownPrimaryType: string
             name:
+              $id: '33'
               fixed: false
               raw: String
           values:
-            - allowedValues:
+            - $id: '29'
+              allowedValues:
                 - '1.1'
                 - '1.2'
                 - '1.3'
               description: one
               name: '1'
               serializedName: '1'
-            - allowedValues:
+            - $id: '30'
+              allowedValues:
                 - '2.1'
                 - '2.2'
               description: two
               name: '2'
               serializedName: '2'
-            - allowedValues:
+            - $id: '31'
+              allowedValues:
                 - '3.1'
                 - '3.3'
               description: three
               name: '3'
               serializedName: '3'
         name:
+          $id: '27'
           fixed: false
           raw: IntEnum
         realPath:
@@ -176,28 +202,35 @@ modelsName: Models
 name: PetStoreInc
 namespace: ''
 operations:
-  - methods:
-      - defaultResponse:
+  - $id: '42'
+    methods:
+      - $id: '43'
+        defaultResponse:
+          $id: '53'
           isNullable: true
         deprecated: false
         group:
+          $id: '51'
           fixed: false
           raw: Pet
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '50'
           fixed: false
           raw: GetByPetId
         parameters:
-          - $id: '12'
+          - $id: '44'
             clientProperty:
-              $ref: '10'
+              $ref: '36'
             collectionFormat: none
             defaultValue:
+              $id: '45'
               fixed: false
             deprecated: false
             documentation:
+              $id: '46'
               fixed: false
               raw: Pet id
             extensions:
@@ -206,14 +239,16 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '13'
+              $id: '48'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '49'
                 fixed: false
                 raw: String
             name:
+              $id: '47'
               fixed: false
               raw: petId
             serializedName: petId
@@ -222,36 +257,44 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '52'
             body:
-              $ref: '1'
+              $ref: '2'
             isNullable: true
         returnType:
+          $id: '54'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         serializedName: Pet_GetByPetId
         url: '/extensibleenums/pet/{petId}'
-      - defaultResponse:
+      - $id: '55'
+        defaultResponse:
+          $id: '63'
           isNullable: true
         deprecated: false
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '61'
           fixed: false
           raw: Pet
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '60'
           fixed: false
           raw: AddPet
         parameters:
-          - $id: '14'
+          - $id: '56'
             collectionFormat: none
             defaultValue:
+              $id: '57'
               fixed: false
             deprecated: false
             documentation:
+              $id: '58'
               fixed: false
             extensions:
               x-ms-requestBody-name: petParam
@@ -259,8 +302,9 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $ref: '1'
+              $ref: '2'
             name:
+              $id: '59'
               fixed: false
               raw: petParam
             serializedName: petParam
@@ -269,28 +313,34 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '62'
             body:
-              $ref: '1'
+              $ref: '2'
             isNullable: true
         returnType:
+          $id: '64'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         serializedName: Pet_AddPet
         url: /extensibleenums/pet/addPet
     name:
+      $id: '65'
       fixed: false
       raw: Pet
     nameForProperty: Pet
     typeName:
+      $id: '66'
       fixed: false
 properties:
-  - $id: '10'
+  - $id: '36'
     collectionFormat: none
     defaultValue:
+      $id: '37'
       fixed: false
     deprecated: false
     documentation:
+      $id: '38'
       fixed: false
       raw: Pet id
     extensions:
@@ -299,14 +349,16 @@ properties:
     isReadOnly: false
     isRequired: true
     modelType:
-      $id: '11'
+      $id: '40'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
+        $id: '41'
         fixed: false
         raw: String
     name:
+      $id: '39'
       fixed: false
       raw: petId
     realPath:

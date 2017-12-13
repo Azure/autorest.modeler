@@ -754,7 +754,7 @@ headerTypes:
 modelTypes:
   - *ref_0
   - *ref_1
-  - &ref_22
+  - &ref_49
     $type: CompositeType
     baseModelType: *ref_1
     containsConstantProperties: false
@@ -786,7 +786,7 @@ modelTypes:
           - textStatusCode
         serializedName: textStatusCode
     serializedName: B
-  - &ref_23
+  - &ref_50
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -817,7 +817,7 @@ modelTypes:
           - httpCode
         serializedName: httpCode
     serializedName: C
-  - &ref_24
+  - &ref_51
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -2422,7 +2422,7 @@ operations:
     typeName:
       fixed: false
   - methods:
-      - defaultResponse:
+      - defaultResponse: &ref_22
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -2441,12 +2441,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_22
         serializedName: httpClientFailure_head400
         url: /http/failure/client/400
-      - defaultResponse:
+      - defaultResponse: &ref_23
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -2465,12 +2463,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_23
         serializedName: httpClientFailure_get400
         url: /http/failure/client/400
-      - defaultResponse:
+      - defaultResponse: &ref_24
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -2515,12 +2511,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_24
         serializedName: httpClientFailure_put400
         url: /http/failure/client/400
-      - defaultResponse:
+      - defaultResponse: &ref_25
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -2565,12 +2559,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_25
         serializedName: httpClientFailure_patch400
         url: /http/failure/client/400
-      - defaultResponse:
+      - defaultResponse: &ref_26
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -2615,12 +2607,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_26
         serializedName: httpClientFailure_post400
         url: /http/failure/client/400
-      - defaultResponse:
+      - defaultResponse: &ref_27
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -2665,12 +2655,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_27
         serializedName: httpClientFailure_delete400
         url: /http/failure/client/400
-      - defaultResponse:
+      - defaultResponse: &ref_28
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -2689,12 +2677,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_28
         serializedName: httpClientFailure_head401
         url: /http/failure/client/401
-      - defaultResponse:
+      - defaultResponse: &ref_29
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -2713,12 +2699,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_29
         serializedName: httpClientFailure_get402
         url: /http/failure/client/402
-      - defaultResponse:
+      - defaultResponse: &ref_30
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -2737,12 +2721,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_30
         serializedName: httpClientFailure_get403
         url: /http/failure/client/403
-      - defaultResponse:
+      - defaultResponse: &ref_31
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -2787,12 +2769,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_31
         serializedName: httpClientFailure_put404
         url: /http/failure/client/404
-      - defaultResponse:
+      - defaultResponse: &ref_32
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -2837,12 +2817,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_32
         serializedName: httpClientFailure_patch405
         url: /http/failure/client/405
-      - defaultResponse:
+      - defaultResponse: &ref_33
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -2887,12 +2865,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_33
         serializedName: httpClientFailure_post406
         url: /http/failure/client/406
-      - defaultResponse:
+      - defaultResponse: &ref_34
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -2937,12 +2913,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_34
         serializedName: httpClientFailure_delete407
         url: /http/failure/client/407
-      - defaultResponse:
+      - defaultResponse: &ref_35
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -2987,12 +2961,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_35
         serializedName: httpClientFailure_put409
         url: /http/failure/client/409
-      - defaultResponse:
+      - defaultResponse: &ref_36
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -3011,12 +2983,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_36
         serializedName: httpClientFailure_head410
         url: /http/failure/client/410
-      - defaultResponse:
+      - defaultResponse: &ref_37
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -3035,12 +3005,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_37
         serializedName: httpClientFailure_get411
         url: /http/failure/client/411
-      - defaultResponse:
+      - defaultResponse: &ref_38
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -3059,12 +3027,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_38
         serializedName: httpClientFailure_get412
         url: /http/failure/client/412
-      - defaultResponse:
+      - defaultResponse: &ref_39
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -3109,12 +3075,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_39
         serializedName: httpClientFailure_put413
         url: /http/failure/client/413
-      - defaultResponse:
+      - defaultResponse: &ref_40
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -3159,12 +3123,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_40
         serializedName: httpClientFailure_patch414
         url: /http/failure/client/414
-      - defaultResponse:
+      - defaultResponse: &ref_41
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -3209,12 +3171,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_41
         serializedName: httpClientFailure_post415
         url: /http/failure/client/415
-      - defaultResponse:
+      - defaultResponse: &ref_42
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -3233,12 +3193,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_42
         serializedName: httpClientFailure_get416
         url: /http/failure/client/416
-      - defaultResponse:
+      - defaultResponse: &ref_43
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -3283,12 +3241,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_43
         serializedName: httpClientFailure_delete417
         url: /http/failure/client/417
-      - defaultResponse:
+      - defaultResponse: &ref_44
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -3307,9 +3263,7 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_44
         serializedName: httpClientFailure_head429
         url: /http/failure/client/429
     name:
@@ -3319,7 +3273,7 @@ operations:
     typeName:
       fixed: false
   - methods:
-      - defaultResponse:
+      - defaultResponse: &ref_45
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -3338,12 +3292,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_45
         serializedName: httpServerFailure_head501
         url: /http/failure/server/501
-      - defaultResponse:
+      - defaultResponse: &ref_46
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -3362,12 +3314,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_46
         serializedName: httpServerFailure_get501
         url: /http/failure/server/501
-      - defaultResponse:
+      - defaultResponse: &ref_47
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -3412,12 +3362,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_47
         serializedName: httpServerFailure_post505
         url: /http/failure/server/505
-      - defaultResponse:
+      - defaultResponse: &ref_48
           body: *ref_0
           isNullable: true
         deprecated: false
@@ -3462,9 +3410,7 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_0
-          isNullable: true
+        returnType: *ref_48
         serializedName: httpServerFailure_delete505
         url: /http/failure/server/505
     name:
@@ -3990,7 +3936,7 @@ operations:
           - application/json
         responses:
           Created:
-            body: *ref_22
+            body: *ref_49
             isNullable: true
           OK:
             body: *ref_1
@@ -4021,7 +3967,7 @@ operations:
           - application/json
         responses:
           Created:
-            body: *ref_22
+            body: *ref_49
             isNullable: true
           OK:
             body: *ref_1
@@ -4052,7 +3998,7 @@ operations:
           - application/json
         responses:
           Created:
-            body: *ref_22
+            body: *ref_49
             isNullable: true
           OK:
             body: *ref_1
@@ -4081,10 +4027,10 @@ operations:
           - application/json
         responses:
           Created:
-            body: *ref_23
+            body: *ref_50
             isNullable: true
           NotFound:
-            body: *ref_24
+            body: *ref_51
             isNullable: true
           OK:
             body: *ref_1
@@ -4119,10 +4065,10 @@ operations:
           - application/json
         responses:
           Created:
-            body: *ref_23
+            body: *ref_50
             isNullable: true
           NotFound:
-            body: *ref_24
+            body: *ref_51
             isNullable: true
           OK:
             body: *ref_1
@@ -4157,10 +4103,10 @@ operations:
           - application/json
         responses:
           Created:
-            body: *ref_23
+            body: *ref_50
             isNullable: true
           NotFound:
-            body: *ref_24
+            body: *ref_51
             isNullable: true
           OK:
             body: *ref_1
@@ -4197,10 +4143,10 @@ operations:
           - application/json
         responses:
           Created:
-            body: *ref_23
+            body: *ref_50
             isNullable: true
           NotFound:
-            body: *ref_24
+            body: *ref_51
             isNullable: true
           OK:
             body: *ref_1
@@ -4396,7 +4342,7 @@ operations:
           isNullable: true
         serializedName: multipleResponses_get202None204NoneDefaultNone400Invalid
         url: /http/payloads/202/none/204/none/default/none/response/400/invalid
-      - defaultResponse:
+      - defaultResponse: &ref_52
           body: *ref_1
           isNullable: true
         deprecated: false
@@ -4413,12 +4359,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_1
-          isNullable: true
+        returnType: *ref_52
         serializedName: multipleResponses_getDefaultModelA200Valid
         url: /http/payloads/default/A/response/200/valid
-      - defaultResponse:
+      - defaultResponse: &ref_53
           body: *ref_1
           isNullable: true
         deprecated: false
@@ -4435,12 +4379,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_1
-          isNullable: true
+        returnType: *ref_53
         serializedName: multipleResponses_getDefaultModelA200None
         url: /http/payloads/default/A/response/200/none
-      - defaultResponse:
+      - defaultResponse: &ref_54
           body: *ref_1
           isNullable: true
         deprecated: false
@@ -4457,12 +4399,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_1
-          isNullable: true
+        returnType: *ref_54
         serializedName: multipleResponses_getDefaultModelA400Valid
         url: /http/payloads/default/A/response/400/valid
-      - defaultResponse:
+      - defaultResponse: &ref_55
           body: *ref_1
           isNullable: true
         deprecated: false
@@ -4479,12 +4419,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          body: *ref_1
-          isNullable: true
+        returnType: *ref_55
         serializedName: multipleResponses_getDefaultModelA400None
         url: /http/payloads/default/A/response/400/none
-      - defaultResponse:
+      - defaultResponse: &ref_56
           isNullable: true
         deprecated: false
         description: 'Send a 200 response with invalid payload: {''statusCode'': ''200''}'
@@ -4500,11 +4438,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          isNullable: true
+        returnType: *ref_56
         serializedName: multipleResponses_getDefaultNone200Invalid
         url: /http/payloads/default/none/response/200/invalid
-      - defaultResponse:
+      - defaultResponse: &ref_57
           isNullable: true
         deprecated: false
         description: Send a 200 response with no payload
@@ -4520,11 +4457,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          isNullable: true
+        returnType: *ref_57
         serializedName: multipleResponses_getDefaultNone200None
         url: /http/payloads/default/none/response/200/none
-      - defaultResponse:
+      - defaultResponse: &ref_58
           isNullable: true
         deprecated: false
         description: 'Send a 400 response with valid payload: {''statusCode'': ''400''}'
@@ -4540,11 +4476,10 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          isNullable: true
+        returnType: *ref_58
         serializedName: multipleResponses_getDefaultNone400Invalid
         url: /http/payloads/default/none/response/400/invalid
-      - defaultResponse:
+      - defaultResponse: &ref_59
           isNullable: true
         deprecated: false
         description: Send a 400 response with no payload
@@ -4560,8 +4495,7 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType:
-          isNullable: true
+        returnType: *ref_59
         serializedName: multipleResponses_getDefaultNone400None
         url: /http/payloads/default/none/response/400/none
       - defaultResponse:

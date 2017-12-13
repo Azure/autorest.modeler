@@ -1,119 +1,138 @@
 ---
+$id: '1'
 apiVersion: 1.0.0
 baseUrl: 'http://localhost:3000'
 documentation: Test Infrastructure for AutoRest Swagger BAT
 errorTypes:
-  - $ref: '6'
+  - $ref: '16'
 modelTypes:
-  - $id: '1'
+  - $id: '2'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '15'
       fixed: false
       raw: Product
     properties:
-      - $id: '2'
+      - $id: '3'
         collectionFormat: none
         defaultValue:
+          $id: '4'
           fixed: false
         deprecated: false
         documentation:
+          $id: '5'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
+          $id: '7'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: int
           name:
+            $id: '8'
             fixed: false
             raw: Int
         name:
+          $id: '6'
           fixed: false
           raw: integer
         realPath:
           - integer
         serializedName: integer
-      - $id: '4'
+      - $id: '9'
         collectionFormat: none
         defaultValue:
+          $id: '10'
           fixed: false
         deprecated: false
         documentation:
+          $id: '11'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
+          $id: '13'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '14'
             fixed: false
             raw: String
         name:
+          $id: '12'
           fixed: false
           raw: string
         realPath:
           - string
         serializedName: string
     serializedName: Product
-  - $id: '6'
+  - $id: '16'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '29'
       fixed: false
       raw: Error
     properties:
-      - $id: '7'
+      - $id: '17'
         collectionFormat: none
         defaultValue:
+          $id: '18'
           fixed: false
         deprecated: false
         documentation:
+          $id: '19'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '8'
+          $id: '21'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
+            $id: '22'
             fixed: false
             raw: Int
         name:
+          $id: '20'
           fixed: false
           raw: status
         realPath:
           - status
         serializedName: status
-      - $id: '9'
+      - $id: '23'
         collectionFormat: none
         defaultValue:
+          $id: '24'
           fixed: false
         deprecated: false
         documentation:
+          $id: '25'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '10'
+          $id: '27'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '28'
             fixed: false
             raw: String
         name:
+          $id: '26'
           fixed: false
           raw: message
         realPath:
@@ -124,20 +143,25 @@ modelsName: Models
 name: AutoRestSwaggerBATArrayService
 namespace: ''
 operations:
-  - methods:
-      - defaultResponse:
+  - $id: '30'
+    methods:
+      - $id: '31'
+        defaultResponse:
+          $id: '39'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: Get null array value
         group:
+          $id: '33'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '32'
           fixed: false
           raw: getNull
         requestContentType: application/json; charset=utf-8
@@ -145,40 +169,48 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '34'
             body:
-              $id: '11'
+              $id: '35'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '12'
+                $id: '36'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: int
                 name:
+                  $id: '37'
                   fixed: false
                   raw: Int
               name:
+                $id: '38'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '40'
           body:
-            $ref: '11'
+            $ref: '35'
           isNullable: true
         serializedName: array_getNull
         url: /array/null
-      - defaultResponse:
+      - $id: '41'
+        defaultResponse:
+          $id: '49'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get invalid array [1, 2, 3'
         group:
+          $id: '43'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '42'
           fixed: false
           raw: getInvalid
         requestContentType: application/json; charset=utf-8
@@ -186,651 +218,7 @@ operations:
           - application/json
         responses:
           OK:
-            body:
-              $id: '13'
-              $type: SequenceType
-              deprecated: false
-              elementType:
-                $id: '14'
-                $type: PrimaryType
-                deprecated: false
-                knownPrimaryType: int
-                name:
-                  fixed: false
-                  raw: Int
-              name:
-                fixed: false
-            isNullable: true
-        returnType:
-          body:
-            $ref: '13'
-          isNullable: true
-        serializedName: array_getInvalid
-        url: /array/invalid
-      - defaultResponse:
-          body:
-            $ref: '6'
-          isNullable: true
-        deprecated: false
-        description: 'Get empty array value []'
-        group:
-          fixed: false
-          raw: array
-        hidden: false
-        httpMethod: get
-        isAbsoluteUrl: false
-        name:
-          fixed: false
-          raw: getEmpty
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        responses:
-          OK:
-            body:
-              $id: '15'
-              $type: SequenceType
-              deprecated: false
-              elementType:
-                $id: '16'
-                $type: PrimaryType
-                deprecated: false
-                knownPrimaryType: int
-                name:
-                  fixed: false
-                  raw: Int
-              name:
-                fixed: false
-            isNullable: true
-        returnType:
-          body:
-            $ref: '15'
-          isNullable: true
-        serializedName: array_getEmpty
-        url: /array/empty
-      - defaultResponse:
-          body:
-            $ref: '6'
-          isNullable: true
-        deprecated: false
-        description: 'Set array value empty []'
-        extensions:
-          x-ms-requestBody-index: '0'
-        group:
-          fixed: false
-          raw: array
-        hidden: false
-        httpMethod: put
-        isAbsoluteUrl: false
-        name:
-          fixed: false
-          raw: putEmpty
-        parameters:
-          - $id: '17'
-            collectionFormat: csv
-            defaultValue:
-              fixed: false
-            deprecated: false
-            documentation:
-              fixed: false
-            extensions:
-              x-ms-requestBody-name: arrayBody
-            isConstant: false
-            isRequired: true
-            location: body
-            modelType:
-              $id: '18'
-              $type: SequenceType
-              deprecated: false
-              elementType:
-                $id: '19'
-                $type: PrimaryType
-                deprecated: false
-                knownPrimaryType: string
-                name:
-                  fixed: false
-                  raw: String
-              name:
-                fixed: false
-            name:
-              fixed: false
-              raw: arrayBody
-            serializedName: arrayBody
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        responses:
-          OK:
-            isNullable: true
-        returnType:
-          isNullable: true
-        serializedName: array_putEmpty
-        url: /array/empty
-      - defaultResponse:
-          body:
-            $ref: '6'
-          isNullable: true
-        deprecated: false
-        description: 'Get boolean array value [true, false, false, true]'
-        group:
-          fixed: false
-          raw: array
-        hidden: false
-        httpMethod: get
-        isAbsoluteUrl: false
-        name:
-          fixed: false
-          raw: getBooleanTfft
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        responses:
-          OK:
-            body:
-              $id: '20'
-              $type: SequenceType
-              deprecated: false
-              elementType:
-                $id: '21'
-                $type: PrimaryType
-                deprecated: false
-                knownPrimaryType: boolean
-                name:
-                  fixed: false
-                  raw: Boolean
-              name:
-                fixed: false
-            isNullable: true
-        returnType:
-          body:
-            $ref: '20'
-          isNullable: true
-        serializedName: array_getBooleanTfft
-        url: /array/prim/boolean/tfft
-      - defaultResponse:
-          body:
-            $ref: '6'
-          isNullable: true
-        deprecated: false
-        description: 'Set array value empty [true, false, false, true]'
-        extensions:
-          x-ms-requestBody-index: '0'
-        group:
-          fixed: false
-          raw: array
-        hidden: false
-        httpMethod: put
-        isAbsoluteUrl: false
-        name:
-          fixed: false
-          raw: putBooleanTfft
-        parameters:
-          - $id: '22'
-            collectionFormat: csv
-            defaultValue:
-              fixed: false
-            deprecated: false
-            documentation:
-              fixed: false
-            extensions:
-              x-ms-requestBody-name: arrayBody
-            isConstant: false
-            isRequired: true
-            location: body
-            modelType:
-              $id: '23'
-              $type: SequenceType
-              deprecated: false
-              elementType:
-                $id: '24'
-                $type: PrimaryType
-                deprecated: false
-                knownPrimaryType: boolean
-                name:
-                  fixed: false
-                  raw: Boolean
-              name:
-                fixed: false
-            name:
-              fixed: false
-              raw: arrayBody
-            serializedName: arrayBody
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        responses:
-          OK:
-            isNullable: true
-        returnType:
-          isNullable: true
-        serializedName: array_putBooleanTfft
-        url: /array/prim/boolean/tfft
-      - defaultResponse:
-          body:
-            $ref: '6'
-          isNullable: true
-        deprecated: false
-        description: 'Get boolean array value [true, null, false]'
-        group:
-          fixed: false
-          raw: array
-        hidden: false
-        httpMethod: get
-        isAbsoluteUrl: false
-        name:
-          fixed: false
-          raw: getBooleanInvalidNull
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        responses:
-          OK:
-            body:
-              $id: '25'
-              $type: SequenceType
-              deprecated: false
-              elementType:
-                $id: '26'
-                $type: PrimaryType
-                deprecated: false
-                knownPrimaryType: boolean
-                name:
-                  fixed: false
-                  raw: Boolean
-              name:
-                fixed: false
-            isNullable: true
-        returnType:
-          body:
-            $ref: '25'
-          isNullable: true
-        serializedName: array_getBooleanInvalidNull
-        url: /array/prim/boolean/true.null.false
-      - defaultResponse:
-          body:
-            $ref: '6'
-          isNullable: true
-        deprecated: false
-        description: 'Get boolean array value [true, ''boolean'', false]'
-        group:
-          fixed: false
-          raw: array
-        hidden: false
-        httpMethod: get
-        isAbsoluteUrl: false
-        name:
-          fixed: false
-          raw: getBooleanInvalidString
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        responses:
-          OK:
-            body:
-              $id: '27'
-              $type: SequenceType
-              deprecated: false
-              elementType:
-                $id: '28'
-                $type: PrimaryType
-                deprecated: false
-                knownPrimaryType: boolean
-                name:
-                  fixed: false
-                  raw: Boolean
-              name:
-                fixed: false
-            isNullable: true
-        returnType:
-          body:
-            $ref: '27'
-          isNullable: true
-        serializedName: array_getBooleanInvalidString
-        url: /array/prim/boolean/true.boolean.false
-      - defaultResponse:
-          body:
-            $ref: '6'
-          isNullable: true
-        deprecated: false
-        description: 'Get integer array value [1, -1, 3, 300]'
-        group:
-          fixed: false
-          raw: array
-        hidden: false
-        httpMethod: get
-        isAbsoluteUrl: false
-        name:
-          fixed: false
-          raw: getIntegerValid
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        responses:
-          OK:
-            body:
-              $id: '29'
-              $type: SequenceType
-              deprecated: false
-              elementType:
-                $id: '30'
-                $type: PrimaryType
-                deprecated: false
-                knownPrimaryType: int
-                name:
-                  fixed: false
-                  raw: Int
-              name:
-                fixed: false
-            isNullable: true
-        returnType:
-          body:
-            $ref: '29'
-          isNullable: true
-        serializedName: array_getIntegerValid
-        url: /array/prim/integer/1.-1.3.300
-      - defaultResponse:
-          body:
-            $ref: '6'
-          isNullable: true
-        deprecated: false
-        description: 'Set array value empty [1, -1, 3, 300]'
-        extensions:
-          x-ms-requestBody-index: '0'
-        group:
-          fixed: false
-          raw: array
-        hidden: false
-        httpMethod: put
-        isAbsoluteUrl: false
-        name:
-          fixed: false
-          raw: putIntegerValid
-        parameters:
-          - $id: '31'
-            collectionFormat: csv
-            defaultValue:
-              fixed: false
-            deprecated: false
-            documentation:
-              fixed: false
-            extensions:
-              x-ms-requestBody-name: arrayBody
-            isConstant: false
-            isRequired: true
-            location: body
-            modelType:
-              $id: '32'
-              $type: SequenceType
-              deprecated: false
-              elementType:
-                $id: '33'
-                $type: PrimaryType
-                deprecated: false
-                knownPrimaryType: int
-                name:
-                  fixed: false
-                  raw: Int
-              name:
-                fixed: false
-            name:
-              fixed: false
-              raw: arrayBody
-            serializedName: arrayBody
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        responses:
-          OK:
-            isNullable: true
-        returnType:
-          isNullable: true
-        serializedName: array_putIntegerValid
-        url: /array/prim/integer/1.-1.3.300
-      - defaultResponse:
-          body:
-            $ref: '6'
-          isNullable: true
-        deprecated: false
-        description: 'Get integer array value [1, null, 0]'
-        group:
-          fixed: false
-          raw: array
-        hidden: false
-        httpMethod: get
-        isAbsoluteUrl: false
-        name:
-          fixed: false
-          raw: getIntInvalidNull
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        responses:
-          OK:
-            body:
-              $id: '34'
-              $type: SequenceType
-              deprecated: false
-              elementType:
-                $id: '35'
-                $type: PrimaryType
-                deprecated: false
-                knownPrimaryType: int
-                name:
-                  fixed: false
-                  raw: Int
-              name:
-                fixed: false
-            isNullable: true
-        returnType:
-          body:
-            $ref: '34'
-          isNullable: true
-        serializedName: array_getIntInvalidNull
-        url: /array/prim/integer/1.null.zero
-      - defaultResponse:
-          body:
-            $ref: '6'
-          isNullable: true
-        deprecated: false
-        description: 'Get integer array value [1, ''integer'', 0]'
-        group:
-          fixed: false
-          raw: array
-        hidden: false
-        httpMethod: get
-        isAbsoluteUrl: false
-        name:
-          fixed: false
-          raw: getIntInvalidString
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        responses:
-          OK:
-            body:
-              $id: '36'
-              $type: SequenceType
-              deprecated: false
-              elementType:
-                $id: '37'
-                $type: PrimaryType
-                deprecated: false
-                knownPrimaryType: int
-                name:
-                  fixed: false
-                  raw: Int
-              name:
-                fixed: false
-            isNullable: true
-        returnType:
-          body:
-            $ref: '36'
-          isNullable: true
-        serializedName: array_getIntInvalidString
-        url: /array/prim/integer/1.integer.0
-      - defaultResponse:
-          body:
-            $ref: '6'
-          isNullable: true
-        deprecated: false
-        description: 'Get integer array value [1, -1, 3, 300]'
-        group:
-          fixed: false
-          raw: array
-        hidden: false
-        httpMethod: get
-        isAbsoluteUrl: false
-        name:
-          fixed: false
-          raw: getLongValid
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        responses:
-          OK:
-            body:
-              $id: '38'
-              $type: SequenceType
-              deprecated: false
-              elementType:
-                $id: '39'
-                $type: PrimaryType
-                deprecated: false
-                format: int64
-                knownPrimaryType: long
-                name:
-                  fixed: false
-                  raw: Long
-              name:
-                fixed: false
-            isNullable: true
-        returnType:
-          body:
-            $ref: '38'
-          isNullable: true
-        serializedName: array_getLongValid
-        url: /array/prim/long/1.-1.3.300
-      - defaultResponse:
-          body:
-            $ref: '6'
-          isNullable: true
-        deprecated: false
-        description: 'Set array value empty [1, -1, 3, 300]'
-        extensions:
-          x-ms-requestBody-index: '0'
-        group:
-          fixed: false
-          raw: array
-        hidden: false
-        httpMethod: put
-        isAbsoluteUrl: false
-        name:
-          fixed: false
-          raw: putLongValid
-        parameters:
-          - $id: '40'
-            collectionFormat: csv
-            defaultValue:
-              fixed: false
-            deprecated: false
-            documentation:
-              fixed: false
-            extensions:
-              x-ms-requestBody-name: arrayBody
-            isConstant: false
-            isRequired: true
-            location: body
-            modelType:
-              $id: '41'
-              $type: SequenceType
-              deprecated: false
-              elementType:
-                $id: '42'
-                $type: PrimaryType
-                deprecated: false
-                format: int64
-                knownPrimaryType: long
-                name:
-                  fixed: false
-                  raw: Long
-              name:
-                fixed: false
-            name:
-              fixed: false
-              raw: arrayBody
-            serializedName: arrayBody
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        responses:
-          OK:
-            isNullable: true
-        returnType:
-          isNullable: true
-        serializedName: array_putLongValid
-        url: /array/prim/long/1.-1.3.300
-      - defaultResponse:
-          body:
-            $ref: '6'
-          isNullable: true
-        deprecated: false
-        description: 'Get long array value [1, null, 0]'
-        group:
-          fixed: false
-          raw: array
-        hidden: false
-        httpMethod: get
-        isAbsoluteUrl: false
-        name:
-          fixed: false
-          raw: getLongInvalidNull
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        responses:
-          OK:
-            body:
-              $id: '43'
-              $type: SequenceType
-              deprecated: false
-              elementType:
-                $id: '44'
-                $type: PrimaryType
-                deprecated: false
-                format: int64
-                knownPrimaryType: long
-                name:
-                  fixed: false
-                  raw: Long
-              name:
-                fixed: false
-            isNullable: true
-        returnType:
-          body:
-            $ref: '43'
-          isNullable: true
-        serializedName: array_getLongInvalidNull
-        url: /array/prim/long/1.null.zero
-      - defaultResponse:
-          body:
-            $ref: '6'
-          isNullable: true
-        deprecated: false
-        description: 'Get long array value [1, ''integer'', 0]'
-        group:
-          fixed: false
-          raw: array
-        hidden: false
-        httpMethod: get
-        isAbsoluteUrl: false
-        name:
-          fixed: false
-          raw: getLongInvalidString
-        requestContentType: application/json; charset=utf-8
-        responseContentTypes:
-          - application/json
-        responses:
-          OK:
+            $id: '44'
             body:
               $id: '45'
               $type: SequenceType
@@ -839,33 +227,809 @@ operations:
                 $id: '46'
                 $type: PrimaryType
                 deprecated: false
-                format: int64
-                knownPrimaryType: long
+                knownPrimaryType: int
                 name:
+                  $id: '47'
                   fixed: false
-                  raw: Long
+                  raw: Int
               name:
+                $id: '48'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '50'
           body:
             $ref: '45'
           isNullable: true
-        serializedName: array_getLongInvalidString
-        url: /array/prim/long/1.integer.0
-      - defaultResponse:
+        serializedName: array_getInvalid
+        url: /array/invalid
+      - $id: '51'
+        defaultResponse:
+          $id: '59'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
-        description: 'Get float array value [0, -0.01, 1.2e20]'
+        description: 'Get empty array value []'
         group:
+          $id: '53'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '52'
+          fixed: false
+          raw: getEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '54'
+            body:
+              $id: '55'
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $id: '56'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  $id: '57'
+                  fixed: false
+                  raw: Int
+              name:
+                $id: '58'
+                fixed: false
+            isNullable: true
+        returnType:
+          $id: '60'
+          body:
+            $ref: '55'
+          isNullable: true
+        serializedName: array_getEmpty
+        url: /array/empty
+      - $id: '61'
+        defaultResponse:
+          $id: '73'
+          body:
+            $ref: '16'
+          isNullable: true
+        deprecated: false
+        description: 'Set array value empty []'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '71'
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '70'
+          fixed: false
+          raw: putEmpty
+        parameters:
+          - $id: '62'
+            collectionFormat: csv
+            defaultValue:
+              $id: '63'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '64'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '66'
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $id: '67'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  $id: '68'
+                  fixed: false
+                  raw: String
+              name:
+                $id: '69'
+                fixed: false
+            name:
+              $id: '65'
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '72'
+            isNullable: true
+        returnType:
+          $id: '74'
+          isNullable: true
+        serializedName: array_putEmpty
+        url: /array/empty
+      - $id: '75'
+        defaultResponse:
+          $id: '83'
+          body:
+            $ref: '16'
+          isNullable: true
+        deprecated: false
+        description: 'Get boolean array value [true, false, false, true]'
+        group:
+          $id: '77'
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '76'
+          fixed: false
+          raw: getBooleanTfft
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '78'
+            body:
+              $id: '79'
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $id: '80'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: boolean
+                name:
+                  $id: '81'
+                  fixed: false
+                  raw: Boolean
+              name:
+                $id: '82'
+                fixed: false
+            isNullable: true
+        returnType:
+          $id: '84'
+          body:
+            $ref: '79'
+          isNullable: true
+        serializedName: array_getBooleanTfft
+        url: /array/prim/boolean/tfft
+      - $id: '85'
+        defaultResponse:
+          $id: '97'
+          body:
+            $ref: '16'
+          isNullable: true
+        deprecated: false
+        description: 'Set array value empty [true, false, false, true]'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '95'
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '94'
+          fixed: false
+          raw: putBooleanTfft
+        parameters:
+          - $id: '86'
+            collectionFormat: csv
+            defaultValue:
+              $id: '87'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '88'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '90'
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $id: '91'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: boolean
+                name:
+                  $id: '92'
+                  fixed: false
+                  raw: Boolean
+              name:
+                $id: '93'
+                fixed: false
+            name:
+              $id: '89'
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '96'
+            isNullable: true
+        returnType:
+          $id: '98'
+          isNullable: true
+        serializedName: array_putBooleanTfft
+        url: /array/prim/boolean/tfft
+      - $id: '99'
+        defaultResponse:
+          $id: '107'
+          body:
+            $ref: '16'
+          isNullable: true
+        deprecated: false
+        description: 'Get boolean array value [true, null, false]'
+        group:
+          $id: '101'
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '100'
+          fixed: false
+          raw: getBooleanInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '102'
+            body:
+              $id: '103'
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $id: '104'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: boolean
+                name:
+                  $id: '105'
+                  fixed: false
+                  raw: Boolean
+              name:
+                $id: '106'
+                fixed: false
+            isNullable: true
+        returnType:
+          $id: '108'
+          body:
+            $ref: '103'
+          isNullable: true
+        serializedName: array_getBooleanInvalidNull
+        url: /array/prim/boolean/true.null.false
+      - $id: '109'
+        defaultResponse:
+          $id: '117'
+          body:
+            $ref: '16'
+          isNullable: true
+        deprecated: false
+        description: 'Get boolean array value [true, ''boolean'', false]'
+        group:
+          $id: '111'
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '110'
+          fixed: false
+          raw: getBooleanInvalidString
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '112'
+            body:
+              $id: '113'
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $id: '114'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: boolean
+                name:
+                  $id: '115'
+                  fixed: false
+                  raw: Boolean
+              name:
+                $id: '116'
+                fixed: false
+            isNullable: true
+        returnType:
+          $id: '118'
+          body:
+            $ref: '113'
+          isNullable: true
+        serializedName: array_getBooleanInvalidString
+        url: /array/prim/boolean/true.boolean.false
+      - $id: '119'
+        defaultResponse:
+          $id: '127'
+          body:
+            $ref: '16'
+          isNullable: true
+        deprecated: false
+        description: 'Get integer array value [1, -1, 3, 300]'
+        group:
+          $id: '121'
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '120'
+          fixed: false
+          raw: getIntegerValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '122'
+            body:
+              $id: '123'
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $id: '124'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  $id: '125'
+                  fixed: false
+                  raw: Int
+              name:
+                $id: '126'
+                fixed: false
+            isNullable: true
+        returnType:
+          $id: '128'
+          body:
+            $ref: '123'
+          isNullable: true
+        serializedName: array_getIntegerValid
+        url: /array/prim/integer/1.-1.3.300
+      - $id: '129'
+        defaultResponse:
+          $id: '141'
+          body:
+            $ref: '16'
+          isNullable: true
+        deprecated: false
+        description: 'Set array value empty [1, -1, 3, 300]'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '139'
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '138'
+          fixed: false
+          raw: putIntegerValid
+        parameters:
+          - $id: '130'
+            collectionFormat: csv
+            defaultValue:
+              $id: '131'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '132'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '134'
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $id: '135'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  $id: '136'
+                  fixed: false
+                  raw: Int
+              name:
+                $id: '137'
+                fixed: false
+            name:
+              $id: '133'
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '140'
+            isNullable: true
+        returnType:
+          $id: '142'
+          isNullable: true
+        serializedName: array_putIntegerValid
+        url: /array/prim/integer/1.-1.3.300
+      - $id: '143'
+        defaultResponse:
+          $id: '151'
+          body:
+            $ref: '16'
+          isNullable: true
+        deprecated: false
+        description: 'Get integer array value [1, null, 0]'
+        group:
+          $id: '145'
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '144'
+          fixed: false
+          raw: getIntInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '146'
+            body:
+              $id: '147'
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $id: '148'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  $id: '149'
+                  fixed: false
+                  raw: Int
+              name:
+                $id: '150'
+                fixed: false
+            isNullable: true
+        returnType:
+          $id: '152'
+          body:
+            $ref: '147'
+          isNullable: true
+        serializedName: array_getIntInvalidNull
+        url: /array/prim/integer/1.null.zero
+      - $id: '153'
+        defaultResponse:
+          $id: '161'
+          body:
+            $ref: '16'
+          isNullable: true
+        deprecated: false
+        description: 'Get integer array value [1, ''integer'', 0]'
+        group:
+          $id: '155'
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '154'
+          fixed: false
+          raw: getIntInvalidString
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '156'
+            body:
+              $id: '157'
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $id: '158'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  $id: '159'
+                  fixed: false
+                  raw: Int
+              name:
+                $id: '160'
+                fixed: false
+            isNullable: true
+        returnType:
+          $id: '162'
+          body:
+            $ref: '157'
+          isNullable: true
+        serializedName: array_getIntInvalidString
+        url: /array/prim/integer/1.integer.0
+      - $id: '163'
+        defaultResponse:
+          $id: '171'
+          body:
+            $ref: '16'
+          isNullable: true
+        deprecated: false
+        description: 'Get integer array value [1, -1, 3, 300]'
+        group:
+          $id: '165'
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '164'
+          fixed: false
+          raw: getLongValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '166'
+            body:
+              $id: '167'
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $id: '168'
+                $type: PrimaryType
+                deprecated: false
+                format: int64
+                knownPrimaryType: long
+                name:
+                  $id: '169'
+                  fixed: false
+                  raw: Long
+              name:
+                $id: '170'
+                fixed: false
+            isNullable: true
+        returnType:
+          $id: '172'
+          body:
+            $ref: '167'
+          isNullable: true
+        serializedName: array_getLongValid
+        url: /array/prim/long/1.-1.3.300
+      - $id: '173'
+        defaultResponse:
+          $id: '185'
+          body:
+            $ref: '16'
+          isNullable: true
+        deprecated: false
+        description: 'Set array value empty [1, -1, 3, 300]'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '183'
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '182'
+          fixed: false
+          raw: putLongValid
+        parameters:
+          - $id: '174'
+            collectionFormat: csv
+            defaultValue:
+              $id: '175'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '176'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '178'
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $id: '179'
+                $type: PrimaryType
+                deprecated: false
+                format: int64
+                knownPrimaryType: long
+                name:
+                  $id: '180'
+                  fixed: false
+                  raw: Long
+              name:
+                $id: '181'
+                fixed: false
+            name:
+              $id: '177'
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '184'
+            isNullable: true
+        returnType:
+          $id: '186'
+          isNullable: true
+        serializedName: array_putLongValid
+        url: /array/prim/long/1.-1.3.300
+      - $id: '187'
+        defaultResponse:
+          $id: '195'
+          body:
+            $ref: '16'
+          isNullable: true
+        deprecated: false
+        description: 'Get long array value [1, null, 0]'
+        group:
+          $id: '189'
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '188'
+          fixed: false
+          raw: getLongInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '190'
+            body:
+              $id: '191'
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $id: '192'
+                $type: PrimaryType
+                deprecated: false
+                format: int64
+                knownPrimaryType: long
+                name:
+                  $id: '193'
+                  fixed: false
+                  raw: Long
+              name:
+                $id: '194'
+                fixed: false
+            isNullable: true
+        returnType:
+          $id: '196'
+          body:
+            $ref: '191'
+          isNullable: true
+        serializedName: array_getLongInvalidNull
+        url: /array/prim/long/1.null.zero
+      - $id: '197'
+        defaultResponse:
+          $id: '205'
+          body:
+            $ref: '16'
+          isNullable: true
+        deprecated: false
+        description: 'Get long array value [1, ''integer'', 0]'
+        group:
+          $id: '199'
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '198'
+          fixed: false
+          raw: getLongInvalidString
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '200'
+            body:
+              $id: '201'
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $id: '202'
+                $type: PrimaryType
+                deprecated: false
+                format: int64
+                knownPrimaryType: long
+                name:
+                  $id: '203'
+                  fixed: false
+                  raw: Long
+              name:
+                $id: '204'
+                fixed: false
+            isNullable: true
+        returnType:
+          $id: '206'
+          body:
+            $ref: '201'
+          isNullable: true
+        serializedName: array_getLongInvalidString
+        url: /array/prim/long/1.integer.0
+      - $id: '207'
+        defaultResponse:
+          $id: '215'
+          body:
+            $ref: '16'
+          isNullable: true
+        deprecated: false
+        description: 'Get float array value [0, -0.01, 1.2e20]'
+        group:
+          $id: '209'
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '208'
           fixed: false
           raw: getFloatValid
         requestContentType: application/json; charset=utf-8
@@ -873,52 +1037,62 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '210'
             body:
-              $id: '47'
+              $id: '211'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '48'
+                $id: '212'
                 $type: PrimaryType
                 deprecated: false
                 format: float
                 knownPrimaryType: double
                 name:
+                  $id: '213'
                   fixed: false
                   raw: Double
               name:
+                $id: '214'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '216'
           body:
-            $ref: '47'
+            $ref: '211'
           isNullable: true
         serializedName: array_getFloatValid
         url: /array/prim/float/0--0.01-1.2e20
-      - defaultResponse:
+      - $id: '217'
+        defaultResponse:
+          $id: '229'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Set array value [0, -0.01, 1.2e20]'
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '227'
           fixed: false
           raw: array
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '226'
           fixed: false
           raw: putFloatValid
         parameters:
-          - $id: '49'
+          - $id: '218'
             collectionFormat: csv
             defaultValue:
+              $id: '219'
               fixed: false
             deprecated: false
             documentation:
+              $id: '220'
               fixed: false
             extensions:
               x-ms-requestBody-name: arrayBody
@@ -926,21 +1100,24 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '50'
+              $id: '222'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '51'
+                $id: '223'
                 $type: PrimaryType
                 deprecated: false
                 format: float
                 knownPrimaryType: double
                 name:
+                  $id: '224'
                   fixed: false
                   raw: Double
               name:
+                $id: '225'
                 fixed: false
             name:
+              $id: '221'
               fixed: false
               raw: arrayBody
             serializedName: arrayBody
@@ -949,24 +1126,30 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '228'
             isNullable: true
         returnType:
+          $id: '230'
           isNullable: true
         serializedName: array_putFloatValid
         url: /array/prim/float/0--0.01-1.2e20
-      - defaultResponse:
+      - $id: '231'
+        defaultResponse:
+          $id: '239'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get float array value [0.0, null, -1.2e20]'
         group:
+          $id: '233'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '232'
           fixed: false
           raw: getFloatInvalidNull
         requestContentType: application/json; charset=utf-8
@@ -974,41 +1157,49 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '234'
             body:
-              $id: '52'
+              $id: '235'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '53'
+                $id: '236'
                 $type: PrimaryType
                 deprecated: false
                 format: float
                 knownPrimaryType: double
                 name:
+                  $id: '237'
                   fixed: false
                   raw: Double
               name:
+                $id: '238'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '240'
           body:
-            $ref: '52'
+            $ref: '235'
           isNullable: true
         serializedName: array_getFloatInvalidNull
         url: /array/prim/float/0.0-null-1.2e20
-      - defaultResponse:
+      - $id: '241'
+        defaultResponse:
+          $id: '249'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get boolean array value [1.0, ''number'', 0.0]'
         group:
+          $id: '243'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '242'
           fixed: false
           raw: getFloatInvalidString
         requestContentType: application/json; charset=utf-8
@@ -1016,41 +1207,49 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '244'
             body:
-              $id: '54'
+              $id: '245'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '55'
+                $id: '246'
                 $type: PrimaryType
                 deprecated: false
                 format: float
                 knownPrimaryType: double
                 name:
+                  $id: '247'
                   fixed: false
                   raw: Double
               name:
+                $id: '248'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '250'
           body:
-            $ref: '54'
+            $ref: '245'
           isNullable: true
         serializedName: array_getFloatInvalidString
         url: /array/prim/float/1.number.0
-      - defaultResponse:
+      - $id: '251'
+        defaultResponse:
+          $id: '259'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get float array value [0, -0.01, 1.2e20]'
         group:
+          $id: '253'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '252'
           fixed: false
           raw: getDoubleValid
         requestContentType: application/json; charset=utf-8
@@ -1058,52 +1257,62 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '254'
             body:
-              $id: '56'
+              $id: '255'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '57'
+                $id: '256'
                 $type: PrimaryType
                 deprecated: false
                 format: double
                 knownPrimaryType: double
                 name:
+                  $id: '257'
                   fixed: false
                   raw: Double
               name:
+                $id: '258'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '260'
           body:
-            $ref: '56'
+            $ref: '255'
           isNullable: true
         serializedName: array_getDoubleValid
         url: /array/prim/double/0--0.01-1.2e20
-      - defaultResponse:
+      - $id: '261'
+        defaultResponse:
+          $id: '273'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Set array value [0, -0.01, 1.2e20]'
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '271'
           fixed: false
           raw: array
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '270'
           fixed: false
           raw: putDoubleValid
         parameters:
-          - $id: '58'
+          - $id: '262'
             collectionFormat: csv
             defaultValue:
+              $id: '263'
               fixed: false
             deprecated: false
             documentation:
+              $id: '264'
               fixed: false
             extensions:
               x-ms-requestBody-name: arrayBody
@@ -1111,21 +1320,24 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '59'
+              $id: '266'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '60'
+                $id: '267'
                 $type: PrimaryType
                 deprecated: false
                 format: double
                 knownPrimaryType: double
                 name:
+                  $id: '268'
                   fixed: false
                   raw: Double
               name:
+                $id: '269'
                 fixed: false
             name:
+              $id: '265'
               fixed: false
               raw: arrayBody
             serializedName: arrayBody
@@ -1134,24 +1346,30 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '272'
             isNullable: true
         returnType:
+          $id: '274'
           isNullable: true
         serializedName: array_putDoubleValid
         url: /array/prim/double/0--0.01-1.2e20
-      - defaultResponse:
+      - $id: '275'
+        defaultResponse:
+          $id: '283'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get float array value [0.0, null, -1.2e20]'
         group:
+          $id: '277'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '276'
           fixed: false
           raw: getDoubleInvalidNull
         requestContentType: application/json; charset=utf-8
@@ -1159,41 +1377,49 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '278'
             body:
-              $id: '61'
+              $id: '279'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '62'
+                $id: '280'
                 $type: PrimaryType
                 deprecated: false
                 format: double
                 knownPrimaryType: double
                 name:
+                  $id: '281'
                   fixed: false
                   raw: Double
               name:
+                $id: '282'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '284'
           body:
-            $ref: '61'
+            $ref: '279'
           isNullable: true
         serializedName: array_getDoubleInvalidNull
         url: /array/prim/double/0.0-null-1.2e20
-      - defaultResponse:
+      - $id: '285'
+        defaultResponse:
+          $id: '293'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get boolean array value [1.0, ''number'', 0.0]'
         group:
+          $id: '287'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '286'
           fixed: false
           raw: getDoubleInvalidString
         requestContentType: application/json; charset=utf-8
@@ -1201,41 +1427,49 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '288'
             body:
-              $id: '63'
+              $id: '289'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '64'
+                $id: '290'
                 $type: PrimaryType
                 deprecated: false
                 format: double
                 knownPrimaryType: double
                 name:
+                  $id: '291'
                   fixed: false
                   raw: Double
               name:
+                $id: '292'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '294'
           body:
-            $ref: '63'
+            $ref: '289'
           isNullable: true
         serializedName: array_getDoubleInvalidString
         url: /array/prim/double/1.number.0
-      - defaultResponse:
+      - $id: '295'
+        defaultResponse:
+          $id: '303'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get string array value [''foo1'', ''foo2'', ''foo3'']'
         group:
+          $id: '297'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '296'
           fixed: false
           raw: getStringValid
         requestContentType: application/json; charset=utf-8
@@ -1243,51 +1477,61 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '298'
             body:
-              $id: '65'
+              $id: '299'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '66'
+                $id: '300'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: string
                 name:
+                  $id: '301'
                   fixed: false
                   raw: String
               name:
+                $id: '302'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '304'
           body:
-            $ref: '65'
+            $ref: '299'
           isNullable: true
         serializedName: array_getStringValid
         url: /array/prim/string/foo1.foo2.foo3
-      - defaultResponse:
+      - $id: '305'
+        defaultResponse:
+          $id: '317'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Set array value [''foo1'', ''foo2'', ''foo3'']'
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '315'
           fixed: false
           raw: array
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '314'
           fixed: false
           raw: putStringValid
         parameters:
-          - $id: '67'
+          - $id: '306'
             collectionFormat: csv
             defaultValue:
+              $id: '307'
               fixed: false
             deprecated: false
             documentation:
+              $id: '308'
               fixed: false
             extensions:
               x-ms-requestBody-name: arrayBody
@@ -1295,20 +1539,23 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '68'
+              $id: '310'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '69'
+                $id: '311'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: string
                 name:
+                  $id: '312'
                   fixed: false
                   raw: String
               name:
+                $id: '313'
                 fixed: false
             name:
+              $id: '309'
               fixed: false
               raw: arrayBody
             serializedName: arrayBody
@@ -1317,24 +1564,30 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '316'
             isNullable: true
         returnType:
+          $id: '318'
           isNullable: true
         serializedName: array_putStringValid
         url: /array/prim/string/foo1.foo2.foo3
-      - defaultResponse:
+      - $id: '319'
+        defaultResponse:
+          $id: '327'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get string array value [''foo'', null, ''foo2'']'
         group:
+          $id: '321'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '320'
           fixed: false
           raw: getStringWithNull
         requestContentType: application/json; charset=utf-8
@@ -1342,40 +1595,48 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '322'
             body:
-              $id: '70'
+              $id: '323'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '71'
+                $id: '324'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: string
                 name:
+                  $id: '325'
                   fixed: false
                   raw: String
               name:
+                $id: '326'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '328'
           body:
-            $ref: '70'
+            $ref: '323'
           isNullable: true
         serializedName: array_getStringWithNull
         url: /array/prim/string/foo.null.foo2
-      - defaultResponse:
+      - $id: '329'
+        defaultResponse:
+          $id: '337'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get string array value [''foo'', 123, ''foo2'']'
         group:
+          $id: '331'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '330'
           fixed: false
           raw: getStringWithInvalid
         requestContentType: application/json; charset=utf-8
@@ -1383,30 +1644,36 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '332'
             body:
-              $id: '72'
+              $id: '333'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '73'
+                $id: '334'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: string
                 name:
+                  $id: '335'
                   fixed: false
                   raw: String
               name:
+                $id: '336'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '338'
           body:
-            $ref: '72'
+            $ref: '333'
           isNullable: true
         serializedName: array_getStringWithInvalid
         url: /array/prim/string/foo.123.foo2
-      - defaultResponse:
+      - $id: '339'
+        defaultResponse:
+          $id: '347'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
@@ -1414,12 +1681,14 @@ operations:
           'd1399005-30f7-40d6-8da6-dd7c89ad34db',
           'f42f6aa1-a5bc-4ddf-907e-5f915de43205']
         group:
+          $id: '341'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '340'
           fixed: false
           raw: getUuidValid
         requestContentType: application/json; charset=utf-8
@@ -1427,31 +1696,37 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '342'
             body:
-              $id: '74'
+              $id: '343'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '75'
+                $id: '344'
                 $type: PrimaryType
                 deprecated: false
                 format: uuid
                 knownPrimaryType: uuid
                 name:
+                  $id: '345'
                   fixed: false
                   raw: Uuid
               name:
+                $id: '346'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '348'
           body:
-            $ref: '74'
+            $ref: '343'
           isNullable: true
         serializedName: array_getUuidValid
         url: /array/prim/uuid/valid
-      - defaultResponse:
+      - $id: '349'
+        defaultResponse:
+          $id: '361'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
@@ -1461,21 +1736,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '359'
           fixed: false
           raw: array
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '358'
           fixed: false
           raw: putUuidValid
         parameters:
-          - $id: '76'
+          - $id: '350'
             collectionFormat: csv
             defaultValue:
+              $id: '351'
               fixed: false
             deprecated: false
             documentation:
+              $id: '352'
               fixed: false
             extensions:
               x-ms-requestBody-name: arrayBody
@@ -1483,21 +1762,24 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '77'
+              $id: '354'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '78'
+                $id: '355'
                 $type: PrimaryType
                 deprecated: false
                 format: uuid
                 knownPrimaryType: uuid
                 name:
+                  $id: '356'
                   fixed: false
                   raw: Uuid
               name:
+                $id: '357'
                 fixed: false
             name:
+              $id: '353'
               fixed: false
               raw: arrayBody
             serializedName: arrayBody
@@ -1506,24 +1788,30 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '360'
             isNullable: true
         returnType:
+          $id: '362'
           isNullable: true
         serializedName: array_putUuidValid
         url: /array/prim/uuid/valid
-      - defaultResponse:
+      - $id: '363'
+        defaultResponse:
+          $id: '371'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get uuid array value [''6dcc7237-45fe-45c4-8a6b-3a8a3f625652'', ''foo'']'
         group:
+          $id: '365'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '364'
           fixed: false
           raw: getUuidInvalidChars
         requestContentType: application/json; charset=utf-8
@@ -1531,41 +1819,49 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '366'
             body:
-              $id: '79'
+              $id: '367'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '80'
+                $id: '368'
                 $type: PrimaryType
                 deprecated: false
                 format: uuid
                 knownPrimaryType: uuid
                 name:
+                  $id: '369'
                   fixed: false
                   raw: Uuid
               name:
+                $id: '370'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '372'
           body:
-            $ref: '79'
+            $ref: '367'
           isNullable: true
         serializedName: array_getUuidInvalidChars
         url: /array/prim/uuid/invalidchars
-      - defaultResponse:
+      - $id: '373'
+        defaultResponse:
+          $id: '381'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get integer array value [''2000-12-01'', ''1980-01-02'', ''1492-10-12'']'
         group:
+          $id: '375'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '374'
           fixed: false
           raw: getDateValid
         requestContentType: application/json; charset=utf-8
@@ -1573,52 +1869,62 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '376'
             body:
-              $id: '81'
+              $id: '377'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '82'
+                $id: '378'
                 $type: PrimaryType
                 deprecated: false
                 format: date
                 knownPrimaryType: date
                 name:
+                  $id: '379'
                   fixed: false
                   raw: Date
               name:
+                $id: '380'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '382'
           body:
-            $ref: '81'
+            $ref: '377'
           isNullable: true
         serializedName: array_getDateValid
         url: /array/prim/date/valid
-      - defaultResponse:
+      - $id: '383'
+        defaultResponse:
+          $id: '395'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Set array value  [''2000-12-01'', ''1980-01-02'', ''1492-10-12'']'
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '393'
           fixed: false
           raw: array
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '392'
           fixed: false
           raw: putDateValid
         parameters:
-          - $id: '83'
+          - $id: '384'
             collectionFormat: csv
             defaultValue:
+              $id: '385'
               fixed: false
             deprecated: false
             documentation:
+              $id: '386'
               fixed: false
             extensions:
               x-ms-requestBody-name: arrayBody
@@ -1626,21 +1932,24 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '84'
+              $id: '388'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '85'
+                $id: '389'
                 $type: PrimaryType
                 deprecated: false
                 format: date
                 knownPrimaryType: date
                 name:
+                  $id: '390'
                   fixed: false
                   raw: Date
               name:
+                $id: '391'
                 fixed: false
             name:
+              $id: '387'
               fixed: false
               raw: arrayBody
             serializedName: arrayBody
@@ -1649,24 +1958,30 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '394'
             isNullable: true
         returnType:
+          $id: '396'
           isNullable: true
         serializedName: array_putDateValid
         url: /array/prim/date/valid
-      - defaultResponse:
+      - $id: '397'
+        defaultResponse:
+          $id: '405'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get date array value [''2012-01-01'', null, ''1776-07-04'']'
         group:
+          $id: '399'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '398'
           fixed: false
           raw: getDateInvalidNull
         requestContentType: application/json; charset=utf-8
@@ -1674,41 +1989,49 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '400'
             body:
-              $id: '86'
+              $id: '401'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '87'
+                $id: '402'
                 $type: PrimaryType
                 deprecated: false
                 format: date
                 knownPrimaryType: date
                 name:
+                  $id: '403'
                   fixed: false
                   raw: Date
               name:
+                $id: '404'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '406'
           body:
-            $ref: '86'
+            $ref: '401'
           isNullable: true
         serializedName: array_getDateInvalidNull
         url: /array/prim/date/invalidnull
-      - defaultResponse:
+      - $id: '407'
+        defaultResponse:
+          $id: '415'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get date array value [''2011-03-22'', ''date'']'
         group:
+          $id: '409'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '408'
           fixed: false
           raw: getDateInvalidChars
         requestContentType: application/json; charset=utf-8
@@ -1716,43 +2039,51 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '410'
             body:
-              $id: '88'
+              $id: '411'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '89'
+                $id: '412'
                 $type: PrimaryType
                 deprecated: false
                 format: date
                 knownPrimaryType: date
                 name:
+                  $id: '413'
                   fixed: false
                   raw: Date
               name:
+                $id: '414'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '416'
           body:
-            $ref: '88'
+            $ref: '411'
           isNullable: true
         serializedName: array_getDateInvalidChars
         url: /array/prim/date/invalidchars
-      - defaultResponse:
+      - $id: '417'
+        defaultResponse:
+          $id: '425'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
           Get date-time array value ['2000-12-01t00:00:01z',
           '1980-01-02T00:11:35+01:00', '1492-10-12T10:15:01-08:00']
         group:
+          $id: '419'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '418'
           fixed: false
           raw: getDateTimeValid
         requestContentType: application/json; charset=utf-8
@@ -1760,31 +2091,37 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '420'
             body:
-              $id: '90'
+              $id: '421'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '91'
+                $id: '422'
                 $type: PrimaryType
                 deprecated: false
                 format: date-time
                 knownPrimaryType: dateTime
                 name:
+                  $id: '423'
                   fixed: false
                   raw: DateTime
               name:
+                $id: '424'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '426'
           body:
-            $ref: '90'
+            $ref: '421'
           isNullable: true
         serializedName: array_getDateTimeValid
         url: /array/prim/date-time/valid
-      - defaultResponse:
+      - $id: '427'
+        defaultResponse:
+          $id: '439'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
@@ -1793,21 +2130,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '437'
           fixed: false
           raw: array
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '436'
           fixed: false
           raw: putDateTimeValid
         parameters:
-          - $id: '92'
+          - $id: '428'
             collectionFormat: csv
             defaultValue:
+              $id: '429'
               fixed: false
             deprecated: false
             documentation:
+              $id: '430'
               fixed: false
             extensions:
               x-ms-requestBody-name: arrayBody
@@ -1815,21 +2156,24 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '93'
+              $id: '432'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '94'
+                $id: '433'
                 $type: PrimaryType
                 deprecated: false
                 format: date-time
                 knownPrimaryType: dateTime
                 name:
+                  $id: '434'
                   fixed: false
                   raw: DateTime
               name:
+                $id: '435'
                 fixed: false
             name:
+              $id: '431'
               fixed: false
               raw: arrayBody
             serializedName: arrayBody
@@ -1838,24 +2182,30 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '438'
             isNullable: true
         returnType:
+          $id: '440'
           isNullable: true
         serializedName: array_putDateTimeValid
         url: /array/prim/date-time/valid
-      - defaultResponse:
+      - $id: '441'
+        defaultResponse:
+          $id: '449'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get date array value [''2000-12-01t00:00:01z'', null]'
         group:
+          $id: '443'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '442'
           fixed: false
           raw: getDateTimeInvalidNull
         requestContentType: application/json; charset=utf-8
@@ -1863,41 +2213,49 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '444'
             body:
-              $id: '95'
+              $id: '445'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '96'
+                $id: '446'
                 $type: PrimaryType
                 deprecated: false
                 format: date-time
                 knownPrimaryType: dateTime
                 name:
+                  $id: '447'
                   fixed: false
                   raw: DateTime
               name:
+                $id: '448'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '450'
           body:
-            $ref: '95'
+            $ref: '445'
           isNullable: true
         serializedName: array_getDateTimeInvalidNull
         url: /array/prim/date-time/invalidnull
-      - defaultResponse:
+      - $id: '451'
+        defaultResponse:
+          $id: '459'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get date array value [''2000-12-01t00:00:01z'', ''date-time'']'
         group:
+          $id: '453'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '452'
           fixed: false
           raw: getDateTimeInvalidChars
         requestContentType: application/json; charset=utf-8
@@ -1905,43 +2263,51 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '454'
             body:
-              $id: '97'
+              $id: '455'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '98'
+                $id: '456'
                 $type: PrimaryType
                 deprecated: false
                 format: date-time
                 knownPrimaryType: dateTime
                 name:
+                  $id: '457'
                   fixed: false
                   raw: DateTime
               name:
+                $id: '458'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '460'
           body:
-            $ref: '97'
+            $ref: '455'
           isNullable: true
         serializedName: array_getDateTimeInvalidChars
         url: /array/prim/date-time/invalidchars
-      - defaultResponse:
+      - $id: '461'
+        defaultResponse:
+          $id: '469'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
           Get date-time array value ['Fri, 01 Dec 2000 00:00:01 GMT', 'Wed, 02
           Jan 1980 00:11:35 GMT', 'Wed, 12 Oct 1492 10:15:01 GMT']
         group:
+          $id: '463'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '462'
           fixed: false
           raw: getDateTimeRfc1123Valid
         requestContentType: application/json; charset=utf-8
@@ -1949,31 +2315,37 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '464'
             body:
-              $id: '99'
+              $id: '465'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '100'
+                $id: '466'
                 $type: PrimaryType
                 deprecated: false
                 format: date-time-rfc1123
                 knownPrimaryType: dateTimeRfc1123
                 name:
+                  $id: '467'
                   fixed: false
                   raw: DateTimeRfc1123
               name:
+                $id: '468'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '470'
           body:
-            $ref: '99'
+            $ref: '465'
           isNullable: true
         serializedName: array_getDateTimeRfc1123Valid
         url: /array/prim/date-time-rfc1123/valid
-      - defaultResponse:
+      - $id: '471'
+        defaultResponse:
+          $id: '483'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
@@ -1982,21 +2354,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '481'
           fixed: false
           raw: array
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '480'
           fixed: false
           raw: putDateTimeRfc1123Valid
         parameters:
-          - $id: '101'
+          - $id: '472'
             collectionFormat: csv
             defaultValue:
+              $id: '473'
               fixed: false
             deprecated: false
             documentation:
+              $id: '474'
               fixed: false
             extensions:
               x-ms-requestBody-name: arrayBody
@@ -2004,21 +2380,24 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '102'
+              $id: '476'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '103'
+                $id: '477'
                 $type: PrimaryType
                 deprecated: false
                 format: date-time-rfc1123
                 knownPrimaryType: dateTimeRfc1123
                 name:
+                  $id: '478'
                   fixed: false
                   raw: DateTimeRfc1123
               name:
+                $id: '479'
                 fixed: false
             name:
+              $id: '475'
               fixed: false
               raw: arrayBody
             serializedName: arrayBody
@@ -2027,24 +2406,30 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '482'
             isNullable: true
         returnType:
+          $id: '484'
           isNullable: true
         serializedName: array_putDateTimeRfc1123Valid
         url: /array/prim/date-time-rfc1123/valid
-      - defaultResponse:
+      - $id: '485'
+        defaultResponse:
+          $id: '493'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get duration array value [''P123DT22H14M12.011S'', ''P5DT1H0M0S'']'
         group:
+          $id: '487'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '486'
           fixed: false
           raw: getDurationValid
         requestContentType: application/json; charset=utf-8
@@ -2052,52 +2437,62 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '488'
             body:
-              $id: '104'
+              $id: '489'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '105'
+                $id: '490'
                 $type: PrimaryType
                 deprecated: false
                 format: duration
                 knownPrimaryType: timeSpan
                 name:
+                  $id: '491'
                   fixed: false
                   raw: TimeSpan
               name:
+                $id: '492'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '494'
           body:
-            $ref: '104'
+            $ref: '489'
           isNullable: true
         serializedName: array_getDurationValid
         url: /array/prim/duration/valid
-      - defaultResponse:
+      - $id: '495'
+        defaultResponse:
+          $id: '507'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Set array value  [''P123DT22H14M12.011S'', ''P5DT1H0M0S'']'
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '505'
           fixed: false
           raw: array
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '504'
           fixed: false
           raw: putDurationValid
         parameters:
-          - $id: '106'
+          - $id: '496'
             collectionFormat: csv
             defaultValue:
+              $id: '497'
               fixed: false
             deprecated: false
             documentation:
+              $id: '498'
               fixed: false
             extensions:
               x-ms-requestBody-name: arrayBody
@@ -2105,21 +2500,24 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '107'
+              $id: '500'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '108'
+                $id: '501'
                 $type: PrimaryType
                 deprecated: false
                 format: duration
                 knownPrimaryType: timeSpan
                 name:
+                  $id: '502'
                   fixed: false
                   raw: TimeSpan
               name:
+                $id: '503'
                 fixed: false
             name:
+              $id: '499'
               fixed: false
               raw: arrayBody
             serializedName: arrayBody
@@ -2128,26 +2526,32 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '506'
             isNullable: true
         returnType:
+          $id: '508'
           isNullable: true
         serializedName: array_putDurationValid
         url: /array/prim/duration/valid
-      - defaultResponse:
+      - $id: '509'
+        defaultResponse:
+          $id: '517'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
           Get byte array value [hex(FF FF FF FA), hex(01 02 03), hex (25, 29,
           43)] with each item encoded in base64
         group:
+          $id: '511'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '510'
           fixed: false
           raw: getByteValid
         requestContentType: application/json; charset=utf-8
@@ -2155,31 +2559,37 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '512'
             body:
-              $id: '109'
+              $id: '513'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '110'
+                $id: '514'
                 $type: PrimaryType
                 deprecated: false
                 format: byte
                 knownPrimaryType: byteArray
                 name:
+                  $id: '515'
                   fixed: false
                   raw: ByteArray
               name:
+                $id: '516'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '518'
           body:
-            $ref: '109'
+            $ref: '513'
           isNullable: true
         serializedName: array_getByteValid
         url: /array/prim/byte/valid
-      - defaultResponse:
+      - $id: '519'
+        defaultResponse:
+          $id: '531'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
@@ -2188,21 +2598,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '529'
           fixed: false
           raw: array
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '528'
           fixed: false
           raw: putByteValid
         parameters:
-          - $id: '111'
+          - $id: '520'
             collectionFormat: csv
             defaultValue:
+              $id: '521'
               fixed: false
             deprecated: false
             documentation:
+              $id: '522'
               fixed: false
             extensions:
               x-ms-requestBody-name: arrayBody
@@ -2210,21 +2624,24 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '112'
+              $id: '524'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '113'
+                $id: '525'
                 $type: PrimaryType
                 deprecated: false
                 format: byte
                 knownPrimaryType: byteArray
                 name:
+                  $id: '526'
                   fixed: false
                   raw: ByteArray
               name:
+                $id: '527'
                 fixed: false
             name:
+              $id: '523'
               fixed: false
               raw: arrayBody
             serializedName: arrayBody
@@ -2233,26 +2650,32 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '530'
             isNullable: true
         returnType:
+          $id: '532'
           isNullable: true
         serializedName: array_putByteValid
         url: /array/prim/byte/valid
-      - defaultResponse:
+      - $id: '533'
+        defaultResponse:
+          $id: '541'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
           Get byte array value [hex(AB, AC, AD), null] with the first item
           base64 encoded
         group:
+          $id: '535'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '534'
           fixed: false
           raw: getByteInvalidNull
         requestContentType: application/json; charset=utf-8
@@ -2260,43 +2683,51 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '536'
             body:
-              $id: '114'
+              $id: '537'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '115'
+                $id: '538'
                 $type: PrimaryType
                 deprecated: false
                 format: byte
                 knownPrimaryType: byteArray
                 name:
+                  $id: '539'
                   fixed: false
                   raw: ByteArray
               name:
+                $id: '540'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '542'
           body:
-            $ref: '114'
+            $ref: '537'
           isNullable: true
         serializedName: array_getByteInvalidNull
         url: /array/prim/byte/invalidnull
-      - defaultResponse:
+      - $id: '543'
+        defaultResponse:
+          $id: '551'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
           Get array value ['a string that gets encoded with base64url', 'test
           string' 'Lorem ipsum'] with the items base64url encoded
         group:
+          $id: '545'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '544'
           fixed: false
           raw: getBase64Url
         requestContentType: application/json; charset=utf-8
@@ -2304,41 +2735,49 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '546'
             body:
-              $id: '116'
+              $id: '547'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '117'
+                $id: '548'
                 $type: PrimaryType
                 deprecated: false
                 format: base64url
                 knownPrimaryType: base64Url
                 name:
+                  $id: '549'
                   fixed: false
                   raw: Base64Url
               name:
+                $id: '550'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '552'
           body:
-            $ref: '116'
+            $ref: '547'
           isNullable: true
         serializedName: array_getBase64Url
         url: /array/prim/base64url/valid
-      - defaultResponse:
+      - $id: '553'
+        defaultResponse:
+          $id: '559'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: Get array of complex type null value
         group:
+          $id: '555'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '554'
           fixed: false
           raw: getComplexNull
         requestContentType: application/json; charset=utf-8
@@ -2346,34 +2785,41 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '556'
             body:
-              $id: '118'
+              $id: '557'
               $type: SequenceType
               deprecated: false
               elementType:
-                $ref: '1'
+                $ref: '2'
               name:
+                $id: '558'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '560'
           body:
-            $ref: '118'
+            $ref: '557'
           isNullable: true
         serializedName: array_getComplexNull
         url: /array/complex/null
-      - defaultResponse:
+      - $id: '561'
+        defaultResponse:
+          $id: '567'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get empty array of complex type []'
         group:
+          $id: '563'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '562'
           fixed: false
           raw: getComplexEmpty
         requestContentType: application/json; charset=utf-8
@@ -2381,36 +2827,43 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '564'
             body:
-              $id: '119'
+              $id: '565'
               $type: SequenceType
               deprecated: false
               elementType:
-                $ref: '1'
+                $ref: '2'
               name:
+                $id: '566'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '568'
           body:
-            $ref: '119'
+            $ref: '565'
           isNullable: true
         serializedName: array_getComplexEmpty
         url: /array/complex/empty
-      - defaultResponse:
+      - $id: '569'
+        defaultResponse:
+          $id: '575'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
           Get array of complex type with null item [{'integer': 1 'string':
           '2'}, null, {'integer': 5, 'string': '6'}]
         group:
+          $id: '571'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '570'
           fixed: false
           raw: getComplexItemNull
         requestContentType: application/json; charset=utf-8
@@ -2418,36 +2871,43 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '572'
             body:
-              $id: '120'
+              $id: '573'
               $type: SequenceType
               deprecated: false
               elementType:
-                $ref: '1'
+                $ref: '2'
               name:
+                $id: '574'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '576'
           body:
-            $ref: '120'
+            $ref: '573'
           isNullable: true
         serializedName: array_getComplexItemNull
         url: /array/complex/itemnull
-      - defaultResponse:
+      - $id: '577'
+        defaultResponse:
+          $id: '583'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
           Get array of complex type with empty item [{'integer': 1 'string':
           '2'}, {}, {'integer': 5, 'string': '6'}]
         group:
+          $id: '579'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '578'
           fixed: false
           raw: getComplexItemEmpty
         requestContentType: application/json; charset=utf-8
@@ -2455,36 +2915,43 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '580'
             body:
-              $id: '121'
+              $id: '581'
               $type: SequenceType
               deprecated: false
               elementType:
-                $ref: '1'
+                $ref: '2'
               name:
+                $id: '582'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '584'
           body:
-            $ref: '121'
+            $ref: '581'
           isNullable: true
         serializedName: array_getComplexItemEmpty
         url: /array/complex/itemempty
-      - defaultResponse:
+      - $id: '585'
+        defaultResponse:
+          $id: '591'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
           Get array of complex type with [{'integer': 1 'string': '2'},
           {'integer': 3, 'string': '4'}, {'integer': 5, 'string': '6'}]
         group:
+          $id: '587'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '586'
           fixed: false
           raw: getComplexValid
         requestContentType: application/json; charset=utf-8
@@ -2492,24 +2959,29 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '588'
             body:
-              $id: '122'
+              $id: '589'
               $type: SequenceType
               deprecated: false
               elementType:
-                $ref: '1'
+                $ref: '2'
               name:
+                $id: '590'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '592'
           body:
-            $ref: '122'
+            $ref: '589'
           isNullable: true
         serializedName: array_getComplexValid
         url: /array/complex/valid
-      - defaultResponse:
+      - $id: '593'
+        defaultResponse:
+          $id: '603'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
@@ -2518,21 +2990,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '601'
           fixed: false
           raw: array
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '600'
           fixed: false
           raw: putComplexValid
         parameters:
-          - $id: '123'
+          - $id: '594'
             collectionFormat: csv
             defaultValue:
+              $id: '595'
               fixed: false
             deprecated: false
             documentation:
+              $id: '596'
               fixed: false
             extensions:
               x-ms-requestBody-name: arrayBody
@@ -2540,14 +3016,16 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '124'
+              $id: '598'
               $type: SequenceType
               deprecated: false
               elementType:
-                $ref: '1'
+                $ref: '2'
               name:
+                $id: '599'
                 fixed: false
             name:
+              $id: '597'
               fixed: false
               raw: arrayBody
             serializedName: arrayBody
@@ -2556,24 +3034,30 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '602'
             isNullable: true
         returnType:
+          $id: '604'
           isNullable: true
         serializedName: array_putComplexValid
         url: /array/complex/valid
-      - defaultResponse:
+      - $id: '605'
+        defaultResponse:
+          $id: '615'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: Get a null array
         group:
+          $id: '607'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '606'
           fixed: false
           raw: getArrayNull
         requestContentType: application/json; charset=utf-8
@@ -2581,46 +3065,55 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '608'
             body:
-              $id: '125'
+              $id: '609'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '126'
+                $id: '610'
                 $type: SequenceType
                 deprecated: false
                 elementType:
-                  $id: '127'
+                  $id: '611'
                   $type: PrimaryType
                   deprecated: false
                   knownPrimaryType: string
                   name:
+                    $id: '612'
                     fixed: false
                     raw: String
                 name:
+                  $id: '613'
                   fixed: false
               name:
+                $id: '614'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '616'
           body:
-            $ref: '125'
+            $ref: '609'
           isNullable: true
         serializedName: array_getArrayNull
         url: /array/array/null
-      - defaultResponse:
+      - $id: '617'
+        defaultResponse:
+          $id: '627'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get an empty array []'
         group:
+          $id: '619'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '618'
           fixed: false
           raw: getArrayEmpty
         requestContentType: application/json; charset=utf-8
@@ -2628,48 +3121,57 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '620'
             body:
-              $id: '128'
+              $id: '621'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '129'
+                $id: '622'
                 $type: SequenceType
                 deprecated: false
                 elementType:
-                  $id: '130'
+                  $id: '623'
                   $type: PrimaryType
                   deprecated: false
                   knownPrimaryType: string
                   name:
+                    $id: '624'
                     fixed: false
                     raw: String
                 name:
+                  $id: '625'
                   fixed: false
               name:
+                $id: '626'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '628'
           body:
-            $ref: '128'
+            $ref: '621'
           isNullable: true
         serializedName: array_getArrayEmpty
         url: /array/array/empty
-      - defaultResponse:
+      - $id: '629'
+        defaultResponse:
+          $id: '639'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
           Get an array of array of strings [['1', '2', '3'], null, ['7', '8',
           '9']]
         group:
+          $id: '631'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '630'
           fixed: false
           raw: getArrayItemNull
         requestContentType: application/json; charset=utf-8
@@ -2677,48 +3179,57 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '632'
             body:
-              $id: '131'
+              $id: '633'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '132'
+                $id: '634'
                 $type: SequenceType
                 deprecated: false
                 elementType:
-                  $id: '133'
+                  $id: '635'
                   $type: PrimaryType
                   deprecated: false
                   knownPrimaryType: string
                   name:
+                    $id: '636'
                     fixed: false
                     raw: String
                 name:
+                  $id: '637'
                   fixed: false
               name:
+                $id: '638'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '640'
           body:
-            $ref: '131'
+            $ref: '633'
           isNullable: true
         serializedName: array_getArrayItemNull
         url: /array/array/itemnull
-      - defaultResponse:
+      - $id: '641'
+        defaultResponse:
+          $id: '651'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
           Get an array of array of strings [['1', '2', '3'], [], ['7', '8',
           '9']]
         group:
+          $id: '643'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '642'
           fixed: false
           raw: getArrayItemEmpty
         requestContentType: application/json; charset=utf-8
@@ -2726,48 +3237,57 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '644'
             body:
-              $id: '134'
+              $id: '645'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '135'
+                $id: '646'
                 $type: SequenceType
                 deprecated: false
                 elementType:
-                  $id: '136'
+                  $id: '647'
                   $type: PrimaryType
                   deprecated: false
                   knownPrimaryType: string
                   name:
+                    $id: '648'
                     fixed: false
                     raw: String
                 name:
+                  $id: '649'
                   fixed: false
               name:
+                $id: '650'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '652'
           body:
-            $ref: '134'
+            $ref: '645'
           isNullable: true
         serializedName: array_getArrayItemEmpty
         url: /array/array/itemempty
-      - defaultResponse:
+      - $id: '653'
+        defaultResponse:
+          $id: '663'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
           Get an array of array of strings [['1', '2', '3'], ['4', '5', '6'],
           ['7', '8', '9']]
         group:
+          $id: '655'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '654'
           fixed: false
           raw: getArrayValid
         requestContentType: application/json; charset=utf-8
@@ -2775,36 +3295,43 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '656'
             body:
-              $id: '137'
+              $id: '657'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '138'
+                $id: '658'
                 $type: SequenceType
                 deprecated: false
                 elementType:
-                  $id: '139'
+                  $id: '659'
                   $type: PrimaryType
                   deprecated: false
                   knownPrimaryType: string
                   name:
+                    $id: '660'
                     fixed: false
                     raw: String
                 name:
+                  $id: '661'
                   fixed: false
               name:
+                $id: '662'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '664'
           body:
-            $ref: '137'
+            $ref: '657'
           isNullable: true
         serializedName: array_getArrayValid
         url: /array/array/valid
-      - defaultResponse:
+      - $id: '665'
+        defaultResponse:
+          $id: '679'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
@@ -2813,21 +3340,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '677'
           fixed: false
           raw: array
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '676'
           fixed: false
           raw: putArrayValid
         parameters:
-          - $id: '140'
+          - $id: '666'
             collectionFormat: csv
             defaultValue:
+              $id: '667'
               fixed: false
             deprecated: false
             documentation:
+              $id: '668'
               fixed: false
             extensions:
               x-ms-requestBody-name: arrayBody
@@ -2835,26 +3366,30 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '141'
+              $id: '670'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '142'
+                $id: '671'
                 $type: SequenceType
                 deprecated: false
                 elementType:
-                  $id: '143'
+                  $id: '672'
                   $type: PrimaryType
                   deprecated: false
                   knownPrimaryType: string
                   name:
+                    $id: '673'
                     fixed: false
                     raw: String
                 name:
+                  $id: '674'
                   fixed: false
               name:
+                $id: '675'
                 fixed: false
             name:
+              $id: '669'
               fixed: false
               raw: arrayBody
             serializedName: arrayBody
@@ -2863,24 +3398,30 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '678'
             isNullable: true
         returnType:
+          $id: '680'
           isNullable: true
         serializedName: array_putArrayValid
         url: /array/array/valid
-      - defaultResponse:
+      - $id: '681'
+        defaultResponse:
+          $id: '691'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: Get an array of Dictionaries with value null
         group:
+          $id: '683'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '682'
           fixed: false
           raw: getDictionaryNull
         requestContentType: application/json; charset=utf-8
@@ -2888,47 +3429,56 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '684'
             body:
-              $id: '144'
+              $id: '685'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '145'
+                $id: '686'
                 $type: DictionaryType
                 deprecated: false
                 name:
+                  $id: '689'
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '146'
+                  $id: '687'
                   $type: PrimaryType
                   deprecated: false
                   knownPrimaryType: string
                   name:
+                    $id: '688'
                     fixed: false
                     raw: String
               name:
+                $id: '690'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '692'
           body:
-            $ref: '144'
+            $ref: '685'
           isNullable: true
         serializedName: array_getDictionaryNull
         url: /array/dictionary/null
-      - defaultResponse:
+      - $id: '693'
+        defaultResponse:
+          $id: '703'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: 'Get an array of Dictionaries of type <string, string> with value []'
         group:
+          $id: '695'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '694'
           fixed: false
           raw: getDictionaryEmpty
         requestContentType: application/json; charset=utf-8
@@ -2936,37 +3486,44 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '696'
             body:
-              $id: '147'
+              $id: '697'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '148'
+                $id: '698'
                 $type: DictionaryType
                 deprecated: false
                 name:
+                  $id: '701'
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '149'
+                  $id: '699'
                   $type: PrimaryType
                   deprecated: false
                   knownPrimaryType: string
                   name:
+                    $id: '700'
                     fixed: false
                     raw: String
               name:
+                $id: '702'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '704'
           body:
-            $ref: '147'
+            $ref: '697'
           isNullable: true
         serializedName: array_getDictionaryEmpty
         url: /array/dictionary/empty
-      - defaultResponse:
+      - $id: '705'
+        defaultResponse:
+          $id: '715'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
@@ -2974,12 +3531,14 @@ operations:
           [{'1': 'one', '2': 'two', '3': 'three'}, null, {'7': 'seven', '8':
           'eight', '9': 'nine'}]
         group:
+          $id: '707'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '706'
           fixed: false
           raw: getDictionaryItemNull
         requestContentType: application/json; charset=utf-8
@@ -2987,37 +3546,44 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '708'
             body:
-              $id: '150'
+              $id: '709'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '151'
+                $id: '710'
                 $type: DictionaryType
                 deprecated: false
                 name:
+                  $id: '713'
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '152'
+                  $id: '711'
                   $type: PrimaryType
                   deprecated: false
                   knownPrimaryType: string
                   name:
+                    $id: '712'
                     fixed: false
                     raw: String
               name:
+                $id: '714'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '716'
           body:
-            $ref: '150'
+            $ref: '709'
           isNullable: true
         serializedName: array_getDictionaryItemNull
         url: /array/dictionary/itemnull
-      - defaultResponse:
+      - $id: '717'
+        defaultResponse:
+          $id: '727'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
@@ -3025,12 +3591,14 @@ operations:
           [{'1': 'one', '2': 'two', '3': 'three'}, {}, {'7': 'seven', '8':
           'eight', '9': 'nine'}]
         group:
+          $id: '719'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '718'
           fixed: false
           raw: getDictionaryItemEmpty
         requestContentType: application/json; charset=utf-8
@@ -3038,37 +3606,44 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '720'
             body:
-              $id: '153'
+              $id: '721'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '154'
+                $id: '722'
                 $type: DictionaryType
                 deprecated: false
                 name:
+                  $id: '725'
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '155'
+                  $id: '723'
                   $type: PrimaryType
                   deprecated: false
                   knownPrimaryType: string
                   name:
+                    $id: '724'
                     fixed: false
                     raw: String
               name:
+                $id: '726'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '728'
           body:
-            $ref: '153'
+            $ref: '721'
           isNullable: true
         serializedName: array_getDictionaryItemEmpty
         url: /array/dictionary/itemempty
-      - defaultResponse:
+      - $id: '729'
+        defaultResponse:
+          $id: '739'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
@@ -3076,12 +3651,14 @@ operations:
           [{'1': 'one', '2': 'two', '3': 'three'}, {'4': 'four', '5': 'five',
           '6': 'six'}, {'7': 'seven', '8': 'eight', '9': 'nine'}]
         group:
+          $id: '731'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '730'
           fixed: false
           raw: getDictionaryValid
         requestContentType: application/json; charset=utf-8
@@ -3089,37 +3666,44 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '732'
             body:
-              $id: '156'
+              $id: '733'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '157'
+                $id: '734'
                 $type: DictionaryType
                 deprecated: false
                 name:
+                  $id: '737'
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '158'
+                  $id: '735'
                   $type: PrimaryType
                   deprecated: false
                   knownPrimaryType: string
                   name:
+                    $id: '736'
                     fixed: false
                     raw: String
               name:
+                $id: '738'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '740'
           body:
-            $ref: '156'
+            $ref: '733'
           isNullable: true
         serializedName: array_getDictionaryValid
         url: /array/dictionary/valid
-      - defaultResponse:
+      - $id: '741'
+        defaultResponse:
+          $id: '755'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
@@ -3129,21 +3713,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '753'
           fixed: false
           raw: array
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '752'
           fixed: false
           raw: putDictionaryValid
         parameters:
-          - $id: '159'
+          - $id: '742'
             collectionFormat: csv
             defaultValue:
+              $id: '743'
               fixed: false
             deprecated: false
             documentation:
+              $id: '744'
               fixed: false
             extensions:
               x-ms-requestBody-name: arrayBody
@@ -3151,27 +3739,31 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '160'
+              $id: '746'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '161'
+                $id: '747'
                 $type: DictionaryType
                 deprecated: false
                 name:
+                  $id: '750'
                   fixed: false
                 supportsAdditionalProperties: false
                 valueType:
-                  $id: '162'
+                  $id: '748'
                   $type: PrimaryType
                   deprecated: false
                   knownPrimaryType: string
                   name:
+                    $id: '749'
                     fixed: false
                     raw: String
               name:
+                $id: '751'
                 fixed: false
             name:
+              $id: '745'
               fixed: false
               raw: arrayBody
             serializedName: arrayBody
@@ -3180,14 +3772,18 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '754'
             isNullable: true
         returnType:
+          $id: '756'
           isNullable: true
         serializedName: array_putDictionaryValid
         url: /array/dictionary/valid
     name:
+      $id: '757'
       fixed: false
       raw: Array
     nameForProperty: Array
     typeName:
+      $id: '758'
       fixed: false

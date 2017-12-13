@@ -1,121 +1,140 @@
 ---
+$id: '1'
 apiVersion: 2014-04-01-preview
 baseUrl: 'https://management.azure.com'
 documentation: Some cool documentation.
 errorTypes:
-  - $ref: '6'
+  - $ref: '16'
 modelTypes:
-  - $id: '1'
+  - $id: '2'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '15'
       fixed: false
       raw: SampleResourceGroup
     properties:
-      - $id: '2'
+      - $id: '3'
         collectionFormat: none
         defaultValue:
+          $id: '4'
           fixed: false
         deprecated: false
         documentation:
+          $id: '5'
           fixed: false
           raw: resource group name 'testgroup101'
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
+          $id: '7'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '8'
             fixed: false
             raw: String
         name:
+          $id: '6'
           fixed: false
           raw: name
         realPath:
           - name
         serializedName: name
-      - $id: '4'
+      - $id: '9'
         collectionFormat: none
         defaultValue:
+          $id: '10'
           fixed: false
         deprecated: false
         documentation:
+          $id: '11'
           fixed: false
           raw: resource group location 'West US'
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
+          $id: '13'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '14'
             fixed: false
             raw: String
         name:
+          $id: '12'
           fixed: false
           raw: location
         realPath:
           - location
         serializedName: location
     serializedName: SampleResourceGroup
-  - $id: '6'
+  - $id: '16'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '29'
       fixed: false
       raw: Error
     properties:
-      - $id: '7'
+      - $id: '17'
         collectionFormat: none
         defaultValue:
+          $id: '18'
           fixed: false
         deprecated: false
         documentation:
+          $id: '19'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '8'
+          $id: '21'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
+            $id: '22'
             fixed: false
             raw: Int
         name:
+          $id: '20'
           fixed: false
           raw: code
         realPath:
           - code
         serializedName: code
-      - $id: '9'
+      - $id: '23'
         collectionFormat: none
         defaultValue:
+          $id: '24'
           fixed: false
         deprecated: false
         documentation:
+          $id: '25'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '10'
+          $id: '27'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '28'
             fixed: false
             raw: String
         name:
+          $id: '26'
           fixed: false
           raw: message
         realPath:
@@ -126,95 +145,112 @@ modelsName: Models
 name: MicrosoftAzureTestUrl
 namespace: ''
 operations:
-  - methods:
-      - defaultResponse:
+  - $id: '42'
+    methods:
+      - $id: '43'
+        defaultResponse:
+          $id: '65'
           body:
-            $ref: '6'
+            $ref: '16'
           isNullable: true
         deprecated: false
         description: >-
           Provides a resouce group with name 'testgroup101' and location 'West
           US'.
         group:
+          $id: '63'
           fixed: false
           raw: group
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '62'
           fixed: false
           raw: getSampleResourceGroup
         parameters:
-          - $id: '15'
+          - $id: '44'
             clientProperty:
-              $ref: '11'
+              $ref: '30'
             collectionFormat: none
             defaultValue:
+              $id: '45'
               fixed: false
             deprecated: false
             documentation:
+              $id: '46'
               fixed: false
               raw: Subscription Id.
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '16'
+              $id: '48'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '49'
                 fixed: false
                 raw: String
             name:
+              $id: '47'
               fixed: false
               raw: subscriptionId
             serializedName: subscriptionId
-          - $id: '17'
+          - $id: '50'
             collectionFormat: none
             defaultValue:
+              $id: '51'
               fixed: false
             deprecated: false
             documentation:
+              $id: '52'
               fixed: false
               raw: Resource Group name 'testgroup101'.
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '18'
+              $id: '54'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '55'
                 fixed: false
                 raw: String
             name:
+              $id: '53'
               fixed: false
               raw: resourceGroupName
             serializedName: resourceGroupName
-          - $id: '19'
+          - $id: '56'
             clientProperty:
-              $ref: '13'
+              $ref: '36'
             collectionFormat: none
             defaultValue:
+              $id: '57'
               fixed: false
             deprecated: false
             documentation:
+              $id: '58'
               fixed: false
               raw: API Version with value '2014-04-01-preview'.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '20'
+              $id: '60'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '61'
                 fixed: false
                 raw: String
             name:
+              $id: '59'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -223,67 +259,79 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '64'
             body:
-              $ref: '1'
+              $ref: '2'
             isNullable: true
         returnType:
+          $id: '66'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         serializedName: group_getSampleResourceGroup
         url: '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}'
     name:
+      $id: '67'
       fixed: false
       raw: Group
     nameForProperty: Group
     typeName:
+      $id: '68'
       fixed: false
 properties:
-  - $id: '11'
+  - $id: '30'
     collectionFormat: none
     defaultValue:
+      $id: '31'
       fixed: false
     deprecated: false
     documentation:
+      $id: '32'
       fixed: false
       raw: Subscription Id.
     isConstant: false
     isReadOnly: false
     isRequired: true
     modelType:
-      $id: '12'
+      $id: '34'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
+        $id: '35'
         fixed: false
         raw: String
     name:
+      $id: '33'
       fixed: false
       raw: subscriptionId
     realPath:
       - subscriptionId
     serializedName: subscriptionId
-  - $id: '13'
+  - $id: '36'
     collectionFormat: none
     defaultValue:
+      $id: '37'
       fixed: false
     deprecated: false
     documentation:
+      $id: '38'
       fixed: false
       raw: API Version with value '2014-04-01-preview'.
     isConstant: false
     isReadOnly: false
     isRequired: true
     modelType:
-      $id: '14'
+      $id: '40'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
+        $id: '41'
         fixed: false
         raw: String
     name:
+      $id: '39'
       fixed: false
       raw: api-version
     realPath:
