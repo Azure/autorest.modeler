@@ -1,4 +1,5 @@
 ---
+$id: '1'
 apiVersion: '2016-09-01'
 baseUrl: 'http://localhost'
 codeGenExtensions:
@@ -8,35 +9,41 @@ documentation: >-
   Client that can be used to query an Azure Search index and upload, merge, or
   delete documents.
 enumTypes:
-  - $id: '75'
+  - $id: '220'
     $type: EnumType
     deprecated: false
     oldModelAsString: true
     modelAsString: false
     name:
+      $id: '227'
       fixed: false
       raw: IndexActionType
     underlyingType:
-      $id: '76'
+      $id: '225'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
+        $id: '226'
         fixed: false
         raw: String
     values:
-      - name: upload
+      - $id: '221'
+        name: upload
         serializedName: upload
-      - name: merge
+      - $id: '222'
+        name: merge
         serializedName: merge
-      - name: mergeOrUpload
+      - $id: '223'
+        name: mergeOrUpload
         serializedName: mergeOrUpload
-      - name: delete
+      - $id: '224'
+        name: delete
         serializedName: delete
-  - $ref: '44'
-  - $ref: '32'
+  - $ref: '127'
+  - $ref: '91'
 modelTypes:
-  - $id: '1'
+  - $id: '2'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -44,40 +51,47 @@ modelTypes:
     extensions:
       x-ms-external: true
     name:
+      $id: '27'
       fixed: false
       raw: IndexingResult
     properties:
-      - $id: '2'
+      - $id: '3'
         collectionFormat: none
         defaultValue:
+          $id: '4'
           fixed: false
         deprecated: false
         documentation:
+          $id: '5'
           fixed: false
           raw: The key of a document that was in the indexing request.
         isConstant: false
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '3'
+          $id: '7'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '8'
             fixed: false
             raw: String
         name:
+          $id: '6'
           fixed: false
           raw: key
         realPath:
           - key
         serializedName: key
-      - $id: '4'
+      - $id: '9'
         collectionFormat: none
         defaultValue:
+          $id: '10'
           fixed: false
         deprecated: false
         documentation:
+          $id: '11'
           fixed: false
           raw: >-
             The error message explaining why the indexing operation failed for
@@ -86,25 +100,29 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '5'
+          $id: '13'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '14'
             fixed: false
             raw: String
         name:
+          $id: '12'
           fixed: false
           raw: errorMessage
         realPath:
           - errorMessage
         serializedName: errorMessage
-      - $id: '6'
+      - $id: '15'
         collectionFormat: none
         defaultValue:
+          $id: '16'
           fixed: false
         deprecated: false
         documentation:
+          $id: '17'
           fixed: false
           raw: >-
             A value indicating whether the indexing operation succeeded for the
@@ -115,25 +133,29 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '7'
+          $id: '19'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: boolean
           name:
+            $id: '20'
             fixed: false
             raw: Boolean
         name:
+          $id: '18'
           fixed: false
           raw: status
         realPath:
           - status
         serializedName: status
-      - $id: '8'
+      - $id: '21'
         collectionFormat: none
         defaultValue:
+          $id: '22'
           fixed: false
         deprecated: false
         documentation:
+          $id: '23'
           fixed: false
           raw: >-
             The status code of the indexing operation. Possible values include:
@@ -145,22 +167,24 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '9'
+          $id: '25'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
+            $id: '26'
             fixed: false
             raw: Int
         name:
+          $id: '24'
           fixed: false
           raw: statusCode
         realPath:
           - statusCode
         serializedName: statusCode
     serializedName: IndexingResult
-  - $id: '10'
+  - $id: '28'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -168,15 +192,18 @@ modelTypes:
       Response containing the status of operations for all documents in the
       indexing request.
     name:
+      $id: '35'
       fixed: false
       raw: DocumentIndexResult
     properties:
-      - $id: '11'
+      - $id: '29'
         collectionFormat: none
         defaultValue:
+          $id: '30'
           fixed: false
         deprecated: false
         documentation:
+          $id: '31'
           fixed: false
           raw: >-
             The list of status information for each document in the indexing
@@ -187,21 +214,23 @@ modelTypes:
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '12'
+          $id: '33'
           $type: SequenceType
           deprecated: false
           elementType:
-            $ref: '1'
+            $ref: '2'
           name:
+            $id: '34'
             fixed: false
         name:
+          $id: '32'
           fixed: false
           raw: value
         realPath:
           - value
         serializedName: value
     serializedName: DocumentIndexResult
-  - $id: '13'
+  - $id: '36'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -209,15 +238,18 @@ modelTypes:
       Parameters for filtering, sorting, faceting, paging, and other search
       query behaviors.
     name:
+      $id: '151'
       fixed: false
       raw: SearchParametersPayload
     properties:
-      - $id: '14'
+      - $id: '37'
         collectionFormat: none
         defaultValue:
+          $id: '38'
           fixed: false
         deprecated: false
         documentation:
+          $id: '39'
           fixed: false
           raw: >-
             A value that specifies whether to fetch the total count of results.
@@ -227,25 +259,29 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '15'
+          $id: '41'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: boolean
           name:
+            $id: '42'
             fixed: false
             raw: Boolean
         name:
+          $id: '40'
           fixed: false
           raw: count
         realPath:
           - count
         serializedName: count
-      - $id: '16'
+      - $id: '43'
         collectionFormat: none
         defaultValue:
+          $id: '44'
           fixed: false
         deprecated: false
         documentation:
+          $id: '45'
           fixed: false
           raw: >-
             The list of facet expressions to apply to the search query. Each
@@ -255,56 +291,65 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '17'
+          $id: '47'
           $type: SequenceType
           deprecated: false
           elementType:
-            $id: '18'
+            $id: '48'
             $type: PrimaryType
             deprecated: false
             knownPrimaryType: string
             name:
+              $id: '49'
               fixed: false
               raw: String
           name:
+            $id: '50'
             fixed: false
         name:
+          $id: '46'
           fixed: false
           raw: facets
         realPath:
           - facets
         serializedName: facets
-      - $id: '19'
+      - $id: '51'
         collectionFormat: none
         defaultValue:
+          $id: '52'
           fixed: false
         deprecated: false
         documentation:
+          $id: '53'
           fixed: false
           raw: The OData $filter expression to apply to the search query.
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '20'
+          $id: '55'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '56'
             fixed: false
             raw: String
         name:
+          $id: '54'
           fixed: false
           raw: filter
         realPath:
           - filter
         serializedName: filter
-      - $id: '21'
+      - $id: '57'
         collectionFormat: none
         defaultValue:
+          $id: '58'
           fixed: false
         deprecated: false
         documentation:
+          $id: '59'
           fixed: false
           raw: >-
             The comma-separated list of field names to use for hit highlights.
@@ -313,25 +358,29 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '22'
+          $id: '61'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '62'
             fixed: false
             raw: String
         name:
+          $id: '60'
           fixed: false
           raw: highlight
         realPath:
           - highlight
         serializedName: highlight
-      - $id: '23'
+      - $id: '63'
         collectionFormat: none
         defaultValue:
+          $id: '64'
           fixed: false
         deprecated: false
         documentation:
+          $id: '65'
           fixed: false
           raw: >-
             A string tag that is appended to hit highlights. Must be set with
@@ -340,25 +389,29 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '24'
+          $id: '67'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '68'
             fixed: false
             raw: String
         name:
+          $id: '66'
           fixed: false
           raw: highlightPostTag
         realPath:
           - highlightPostTag
         serializedName: highlightPostTag
-      - $id: '25'
+      - $id: '69'
         collectionFormat: none
         defaultValue:
+          $id: '70'
           fixed: false
         deprecated: false
         documentation:
+          $id: '71'
           fixed: false
           raw: >-
             A string tag that is prepended to hit highlights. Must be set with
@@ -367,25 +420,29 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '26'
+          $id: '73'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '74'
             fixed: false
             raw: String
         name:
+          $id: '72'
           fixed: false
           raw: highlightPreTag
         realPath:
           - highlightPreTag
         serializedName: highlightPreTag
-      - $id: '27'
+      - $id: '75'
         collectionFormat: none
         defaultValue:
+          $id: '76'
           fixed: false
         deprecated: false
         documentation:
+          $id: '77'
           fixed: false
           raw: >-
             A number between 0 and 100 indicating the percentage of the index
@@ -397,26 +454,30 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '28'
+          $id: '79'
           $type: PrimaryType
           deprecated: false
           format: double
           knownPrimaryType: double
           name:
+            $id: '80'
             fixed: false
             raw: Double
         name:
+          $id: '78'
           fixed: false
           raw: minimumCoverage
         realPath:
           - minimumCoverage
         serializedName: minimumCoverage
-      - $id: '29'
+      - $id: '81'
         collectionFormat: none
         defaultValue:
+          $id: '82'
           fixed: false
         deprecated: false
         documentation:
+          $id: '83'
           fixed: false
           raw: >-
             The comma-separated list of OData $orderby expressions by which to
@@ -433,25 +494,29 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '30'
+          $id: '85'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '86'
             fixed: false
             raw: String
         name:
+          $id: '84'
           fixed: false
           raw: orderby
         realPath:
           - orderby
         serializedName: orderby
-      - $id: '31'
+      - $id: '87'
         collectionFormat: none
         defaultValue:
+          $id: '88'
           fixed: false
         deprecated: false
         documentation:
+          $id: '89'
           fixed: false
           raw: >-
             Gets or sets a value that specifies the syntax of the search query.
@@ -464,39 +529,46 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '32'
+          $id: '91'
           $type: EnumType
           deprecated: false
           oldModelAsString: true
           modelAsString: false
           name:
+            $id: '96'
             fixed: false
             raw: QueryType
           underlyingType:
-            $id: '33'
+            $id: '94'
             $type: PrimaryType
             deprecated: false
             knownPrimaryType: string
             name:
+              $id: '95'
               fixed: false
               raw: String
           values:
-            - name: simple
+            - $id: '92'
+              name: simple
               serializedName: simple
-            - name: full
+            - $id: '93'
+              name: full
               serializedName: full
         name:
+          $id: '90'
           fixed: false
           raw: queryType
         realPath:
           - queryType
         serializedName: queryType
-      - $id: '34'
+      - $id: '97'
         collectionFormat: none
         defaultValue:
+          $id: '98'
           fixed: false
         deprecated: false
         documentation:
+          $id: '99'
           fixed: false
           raw: >-
             The list of parameter values to be used in scoring functions (for
@@ -508,31 +580,36 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '35'
+          $id: '101'
           $type: SequenceType
           deprecated: false
           elementType:
-            $id: '36'
+            $id: '102'
             $type: PrimaryType
             deprecated: false
             knownPrimaryType: string
             name:
+              $id: '103'
               fixed: false
               raw: String
           name:
+            $id: '104'
             fixed: false
         name:
+          $id: '100'
           fixed: false
           raw: scoringParameters
         realPath:
           - scoringParameters
         serializedName: scoringParameters
-      - $id: '37'
+      - $id: '105'
         collectionFormat: none
         defaultValue:
+          $id: '106'
           fixed: false
         deprecated: false
         documentation:
+          $id: '107'
           fixed: false
           raw: >-
             The name of a scoring profile to evaluate match scores for matching
@@ -541,25 +618,29 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '38'
+          $id: '109'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '110'
             fixed: false
             raw: String
         name:
+          $id: '108'
           fixed: false
           raw: scoringProfile
         realPath:
           - scoringProfile
         serializedName: scoringProfile
-      - $id: '39'
+      - $id: '111'
         collectionFormat: none
         defaultValue:
+          $id: '112'
           fixed: false
         deprecated: false
         documentation:
+          $id: '113'
           fixed: false
           raw: >-
             A full-text search query expression; Use null or "*" to match all
@@ -568,25 +649,29 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '40'
+          $id: '115'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '116'
             fixed: false
             raw: String
         name:
+          $id: '114'
           fixed: false
           raw: search
         realPath:
           - search
         serializedName: search
-      - $id: '41'
+      - $id: '117'
         collectionFormat: none
         defaultValue:
+          $id: '118'
           fixed: false
         deprecated: false
         documentation:
+          $id: '119'
           fixed: false
           raw: >-
             The comma-separated list of field names to include in the full-text
@@ -595,25 +680,29 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '42'
+          $id: '121'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '122'
             fixed: false
             raw: String
         name:
+          $id: '120'
           fixed: false
           raw: searchFields
         realPath:
           - searchFields
         serializedName: searchFields
-      - $id: '43'
+      - $id: '123'
         collectionFormat: none
         defaultValue:
+          $id: '124'
           fixed: false
         deprecated: false
         documentation:
+          $id: '125'
           fixed: false
           raw: >-
             A value that specifies whether any or all of the search terms must
@@ -625,39 +714,46 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '44'
+          $id: '127'
           $type: EnumType
           deprecated: false
           oldModelAsString: true
           modelAsString: false
           name:
+            $id: '132'
             fixed: false
             raw: SearchMode
           underlyingType:
-            $id: '45'
+            $id: '130'
             $type: PrimaryType
             deprecated: false
             knownPrimaryType: string
             name:
+              $id: '131'
               fixed: false
               raw: String
           values:
-            - name: any
+            - $id: '128'
+              name: any
               serializedName: any
-            - name: all
+            - $id: '129'
+              name: all
               serializedName: all
         name:
+          $id: '126'
           fixed: false
           raw: searchMode
         realPath:
           - searchMode
         serializedName: searchMode
-      - $id: '46'
+      - $id: '133'
         collectionFormat: none
         defaultValue:
+          $id: '134'
           fixed: false
         deprecated: false
         documentation:
+          $id: '135'
           fixed: false
           raw: >-
             The comma-separated list of fields to retrieve. If unspecified, all
@@ -666,25 +762,29 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '47'
+          $id: '137'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '138'
             fixed: false
             raw: String
         name:
+          $id: '136'
           fixed: false
           raw: select
         realPath:
           - select
         serializedName: select
-      - $id: '48'
+      - $id: '139'
         collectionFormat: none
         defaultValue:
+          $id: '140'
           fixed: false
         deprecated: false
         documentation:
+          $id: '141'
           fixed: false
           raw: >-
             The number of search results to skip. This value cannot be greater
@@ -695,26 +795,30 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '49'
+          $id: '143'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
+            $id: '144'
             fixed: false
             raw: Int
         name:
+          $id: '142'
           fixed: false
           raw: skip
         realPath:
           - skip
         serializedName: skip
-      - $id: '50'
+      - $id: '145'
         collectionFormat: none
         defaultValue:
+          $id: '146'
           fixed: false
         deprecated: false
         documentation:
+          $id: '147'
           fixed: false
           raw: >-
             The number of search results to retrieve. This can be used in
@@ -727,22 +831,24 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '51'
+          $id: '149'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
+            $id: '150'
             fixed: false
             raw: Int
         name:
+          $id: '148'
           fixed: false
           raw: top
         realPath:
           - top
         serializedName: top
     serializedName: SearchParametersPayload
-  - $id: '52'
+  - $id: '152'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -750,40 +856,47 @@ modelTypes:
       Parameters for filtering, sorting, fuzzy matching, and other suggestions
       query behaviors.
     name:
+      $id: '219'
       fixed: false
       raw: SuggestParametersPayload
     properties:
-      - $id: '53'
+      - $id: '153'
         collectionFormat: none
         defaultValue:
+          $id: '154'
           fixed: false
         deprecated: false
         documentation:
+          $id: '155'
           fixed: false
           raw: The OData $filter expression to apply to the suggestions query.
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '54'
+          $id: '157'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '158'
             fixed: false
             raw: String
         name:
+          $id: '156'
           fixed: false
           raw: filter
         realPath:
           - filter
         serializedName: filter
-      - $id: '55'
+      - $id: '159'
         collectionFormat: none
         defaultValue:
+          $id: '160'
           fixed: false
         deprecated: false
         documentation:
+          $id: '161'
           fixed: false
           raw: >-
             A value indicating whether to use fuzzy matching for the suggestion
@@ -796,25 +909,29 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '56'
+          $id: '163'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: boolean
           name:
+            $id: '164'
             fixed: false
             raw: Boolean
         name:
+          $id: '162'
           fixed: false
           raw: fuzzy
         realPath:
           - fuzzy
         serializedName: fuzzy
-      - $id: '57'
+      - $id: '165'
         collectionFormat: none
         defaultValue:
+          $id: '166'
           fixed: false
         deprecated: false
         documentation:
+          $id: '167'
           fixed: false
           raw: >-
             A string tag that is appended to hit highlights. Must be set with
@@ -824,25 +941,29 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '58'
+          $id: '169'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '170'
             fixed: false
             raw: String
         name:
+          $id: '168'
           fixed: false
           raw: highlightPostTag
         realPath:
           - highlightPostTag
         serializedName: highlightPostTag
-      - $id: '59'
+      - $id: '171'
         collectionFormat: none
         defaultValue:
+          $id: '172'
           fixed: false
         deprecated: false
         documentation:
+          $id: '173'
           fixed: false
           raw: >-
             A string tag that is prepended to hit highlights. Must be set with
@@ -852,25 +973,29 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '60'
+          $id: '175'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '176'
             fixed: false
             raw: String
         name:
+          $id: '174'
           fixed: false
           raw: highlightPreTag
         realPath:
           - highlightPreTag
         serializedName: highlightPreTag
-      - $id: '61'
+      - $id: '177'
         collectionFormat: none
         defaultValue:
+          $id: '178'
           fixed: false
         deprecated: false
         documentation:
+          $id: '179'
           fixed: false
           raw: >-
             A number between 0 and 100 indicating the percentage of the index
@@ -882,26 +1007,30 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '62'
+          $id: '181'
           $type: PrimaryType
           deprecated: false
           format: double
           knownPrimaryType: double
           name:
+            $id: '182'
             fixed: false
             raw: Double
         name:
+          $id: '180'
           fixed: false
           raw: minimumCoverage
         realPath:
           - minimumCoverage
         serializedName: minimumCoverage
-      - $id: '63'
+      - $id: '183'
         collectionFormat: none
         defaultValue:
+          $id: '184'
           fixed: false
         deprecated: false
         documentation:
+          $id: '185'
           fixed: false
           raw: >-
             The comma-separated list of OData $orderby expressions by which to
@@ -918,50 +1047,58 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '64'
+          $id: '187'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '188'
             fixed: false
             raw: String
         name:
+          $id: '186'
           fixed: false
           raw: orderby
         realPath:
           - orderby
         serializedName: orderby
-      - $id: '65'
+      - $id: '189'
         collectionFormat: none
         defaultValue:
+          $id: '190'
           fixed: false
         deprecated: false
         documentation:
+          $id: '191'
           fixed: false
           raw: The search text on which to base suggestions.
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '66'
+          $id: '193'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '194'
             fixed: false
             raw: String
         name:
+          $id: '192'
           fixed: false
           raw: search
         realPath:
           - search
         serializedName: search
-      - $id: '67'
+      - $id: '195'
         collectionFormat: none
         defaultValue:
+          $id: '196'
           fixed: false
         deprecated: false
         documentation:
+          $id: '197'
           fixed: false
           raw: >-
             The comma-separated list of field names to consider when querying
@@ -970,25 +1107,29 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '68'
+          $id: '199'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '200'
             fixed: false
             raw: String
         name:
+          $id: '198'
           fixed: false
           raw: searchFields
         realPath:
           - searchFields
         serializedName: searchFields
-      - $id: '69'
+      - $id: '201'
         collectionFormat: none
         defaultValue:
+          $id: '202'
           fixed: false
         deprecated: false
         documentation:
+          $id: '203'
           fixed: false
           raw: >-
             The comma-separated list of fields to retrieve. If unspecified, all
@@ -997,25 +1138,29 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '70'
+          $id: '205'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '206'
             fixed: false
             raw: String
         name:
+          $id: '204'
           fixed: false
           raw: select
         realPath:
           - select
         serializedName: select
-      - $id: '71'
+      - $id: '207'
         collectionFormat: none
         defaultValue:
+          $id: '208'
           fixed: false
         deprecated: false
         documentation:
+          $id: '209'
           fixed: false
           raw: >-
             The name of the suggester as specified in the suggesters collection
@@ -1024,25 +1169,29 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '72'
+          $id: '211'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '212'
             fixed: false
             raw: String
         name:
+          $id: '210'
           fixed: false
           raw: suggesterName
         realPath:
           - suggesterName
         serializedName: suggesterName
-      - $id: '73'
+      - $id: '213'
         collectionFormat: none
         defaultValue:
+          $id: '214'
           fixed: false
         deprecated: false
         documentation:
+          $id: '215'
           fixed: false
           raw: >-
             The number of suggestions to retrieve. This must be a value between
@@ -1051,15 +1200,17 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '74'
+          $id: '217'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
+            $id: '218'
             fixed: false
             raw: Int
         name:
+          $id: '216'
           fixed: false
           raw: top
         realPath:
@@ -1070,8 +1221,11 @@ modelsName: Models
 name: SearchIndexClient
 namespace: ''
 operations:
-  - methods:
-      - defaultResponse:
+  - $id: '234'
+    methods:
+      - $id: '235'
+        defaultResponse:
+          $id: '253'
           isNullable: true
         deprecated: false
         description: Queries the number of documents in the Azure Search index.
@@ -1079,21 +1233,25 @@ operations:
           x-ms-request-id: request-id
         externalDocsUrl: 'https://docs.microsoft.com/rest/api/searchservice/Count-Documents'
         group:
+          $id: '249'
           fixed: false
           raw: DocumentsProxy
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '248'
           fixed: false
           raw: Count
         parameters:
-          - $id: '79'
+          - $id: '236'
             collectionFormat: none
             defaultValue:
+              $id: '237'
               fixed: false
             deprecated: false
             documentation:
+              $id: '238'
               fixed: false
               raw: The tracking ID sent with the request to help with debugging.
             extensions:
@@ -1104,40 +1262,46 @@ operations:
             isRequired: false
             location: header
             modelType:
-              $id: '80'
+              $id: '240'
               $type: PrimaryType
               deprecated: false
               format: uuid
               knownPrimaryType: uuid
               name:
+                $id: '241'
                 fixed: false
                 raw: Uuid
             name:
+              $id: '239'
               fixed: false
               raw: client-request-id
             serializedName: client-request-id
-          - $id: '81'
+          - $id: '242'
             clientProperty:
-              $ref: '77'
+              $ref: '228'
             collectionFormat: none
             defaultValue:
+              $id: '243'
               fixed: false
             deprecated: false
             documentation:
+              $id: '244'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '82'
+              $id: '246'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '247'
                 fixed: false
                 raw: String
             name:
+              $id: '245'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -1146,49 +1310,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '250'
             body:
-              $id: '83'
+              $id: '251'
               $type: PrimaryType
               deprecated: false
               format: int64
               knownPrimaryType: long
               name:
+                $id: '252'
                 fixed: false
                 raw: Long
             isNullable: true
         returnType:
+          $id: '254'
           body:
-            $ref: '83'
+            $ref: '251'
           isNullable: true
         serializedName: DocumentsProxy_Count
         url: /docs/$count
     name:
+      $id: '255'
       fixed: false
       raw: DocumentsProxy
     nameForProperty: DocumentsProxy
     typeName:
+      $id: '256'
       fixed: false
 properties:
-  - $id: '77'
+  - $id: '228'
     collectionFormat: none
     defaultValue:
+      $id: '229'
       fixed: false
     deprecated: false
     documentation:
+      $id: '230'
       fixed: false
       raw: Client Api Version.
     isConstant: false
     isReadOnly: false
     isRequired: true
     modelType:
-      $id: '78'
+      $id: '232'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
+        $id: '233'
         fixed: false
         raw: String
     name:
+      $id: '231'
       fixed: false
       raw: api-version
     realPath:

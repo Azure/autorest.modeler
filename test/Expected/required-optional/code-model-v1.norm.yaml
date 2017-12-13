@@ -1,385 +1,444 @@
 ---
+$id: '1'
 apiVersion: 1.0.0
 baseUrl: 'http://localhost:3000'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
-  - $ref: '1'
+  - $ref: '2'
 modelTypes:
-  - $id: '1'
+  - $id: '2'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '15'
       fixed: false
       raw: Error
     properties:
-      - $id: '2'
+      - $id: '3'
         collectionFormat: none
         defaultValue:
+          $id: '4'
           fixed: false
         deprecated: false
         documentation:
+          $id: '5'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
+          $id: '7'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
+            $id: '8'
             fixed: false
             raw: Int
         name:
+          $id: '6'
           fixed: false
           raw: status
         realPath:
           - status
         serializedName: status
-      - $id: '4'
+      - $id: '9'
         collectionFormat: none
         defaultValue:
+          $id: '10'
           fixed: false
         deprecated: false
         documentation:
+          $id: '11'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
+          $id: '13'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '14'
             fixed: false
             raw: String
         name:
+          $id: '12'
           fixed: false
           raw: message
         realPath:
           - message
         serializedName: message
     serializedName: Error
-  - $id: '6'
+  - $id: '16'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '23'
       fixed: false
       raw: int-wrapper
     properties:
-      - $id: '7'
+      - $id: '17'
         collectionFormat: none
         defaultValue:
+          $id: '18'
           fixed: false
         deprecated: false
         documentation:
+          $id: '19'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '8'
+          $id: '21'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
+            $id: '22'
             fixed: false
             raw: Int
         name:
+          $id: '20'
           fixed: false
           raw: value
         realPath:
           - value
         serializedName: value
     serializedName: int-wrapper
-  - $id: '9'
+  - $id: '24'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '31'
       fixed: false
       raw: int-optional-wrapper
     properties:
-      - $id: '10'
+      - $id: '25'
         collectionFormat: none
         defaultValue:
+          $id: '26'
           fixed: false
         deprecated: false
         documentation:
+          $id: '27'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '11'
+          $id: '29'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
+            $id: '30'
             fixed: false
             raw: Int
         name:
+          $id: '28'
           fixed: false
           raw: value
         realPath:
           - value
         serializedName: value
     serializedName: int-optional-wrapper
-  - $id: '12'
+  - $id: '32'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '39'
       fixed: false
       raw: string-wrapper
     properties:
-      - $id: '13'
+      - $id: '33'
         collectionFormat: none
         defaultValue:
+          $id: '34'
           fixed: false
         deprecated: false
         documentation:
+          $id: '35'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '14'
+          $id: '37'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '38'
             fixed: false
             raw: String
         name:
+          $id: '36'
           fixed: false
           raw: value
         realPath:
           - value
         serializedName: value
     serializedName: string-wrapper
-  - $id: '15'
+  - $id: '40'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '47'
       fixed: false
       raw: string-optional-wrapper
     properties:
-      - $id: '16'
+      - $id: '41'
         collectionFormat: none
         defaultValue:
+          $id: '42'
           fixed: false
         deprecated: false
         documentation:
+          $id: '43'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '17'
+          $id: '45'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '46'
             fixed: false
             raw: String
         name:
+          $id: '44'
           fixed: false
           raw: value
         realPath:
           - value
         serializedName: value
     serializedName: string-optional-wrapper
-  - $id: '18'
+  - $id: '48'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '57'
       fixed: false
       raw: array-wrapper
     properties:
-      - $id: '19'
+      - $id: '49'
         collectionFormat: none
         defaultValue:
+          $id: '50'
           fixed: false
         deprecated: false
         documentation:
+          $id: '51'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '20'
+          $id: '53'
           $type: SequenceType
           deprecated: false
           elementType:
-            $id: '21'
+            $id: '54'
             $type: PrimaryType
             deprecated: false
             knownPrimaryType: string
             name:
+              $id: '55'
               fixed: false
               raw: String
           name:
+            $id: '56'
             fixed: false
         name:
+          $id: '52'
           fixed: false
           raw: value
         realPath:
           - value
         serializedName: value
     serializedName: array-wrapper
-  - $id: '22'
+  - $id: '58'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '67'
       fixed: false
       raw: array-optional-wrapper
     properties:
-      - $id: '23'
+      - $id: '59'
         collectionFormat: none
         defaultValue:
+          $id: '60'
           fixed: false
         deprecated: false
         documentation:
+          $id: '61'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '24'
+          $id: '63'
           $type: SequenceType
           deprecated: false
           elementType:
-            $id: '25'
+            $id: '64'
             $type: PrimaryType
             deprecated: false
             knownPrimaryType: string
             name:
+              $id: '65'
               fixed: false
               raw: String
           name:
+            $id: '66'
             fixed: false
         name:
+          $id: '62'
           fixed: false
           raw: value
         realPath:
           - value
         serializedName: value
     serializedName: array-optional-wrapper
-  - $id: '26'
+  - $id: '68'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '81'
       fixed: false
       raw: product
     properties:
-      - $id: '27'
+      - $id: '69'
         collectionFormat: none
         defaultValue:
+          $id: '70'
           fixed: false
         deprecated: false
         documentation:
+          $id: '71'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '28'
+          $id: '73'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: int
           name:
+            $id: '74'
             fixed: false
             raw: Int
         name:
+          $id: '72'
           fixed: false
           raw: id
         realPath:
           - id
         serializedName: id
-      - $id: '29'
+      - $id: '75'
         collectionFormat: none
         defaultValue:
+          $id: '76'
           fixed: false
         deprecated: false
         documentation:
+          $id: '77'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '30'
+          $id: '79'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '80'
             fixed: false
             raw: String
         name:
+          $id: '78'
           fixed: false
           raw: name
         realPath:
           - name
         serializedName: name
     serializedName: product
-  - $id: '31'
+  - $id: '82'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '87'
       fixed: false
       raw: class-wrapper
     properties:
-      - $id: '32'
+      - $id: '83'
         collectionFormat: none
         defaultValue:
+          $id: '84'
           fixed: false
         deprecated: false
         documentation:
+          $id: '85'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: true
         modelType:
-          $ref: '26'
+          $ref: '68'
         name:
+          $id: '86'
           fixed: false
           raw: value
         realPath:
           - value
         serializedName: value
     serializedName: class-wrapper
-  - $id: '33'
+  - $id: '88'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '93'
       fixed: false
       raw: class-optional-wrapper
     properties:
-      - $id: '34'
+      - $id: '89'
         collectionFormat: none
         defaultValue:
+          $id: '90'
           fixed: false
         deprecated: false
         documentation:
+          $id: '91'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $ref: '26'
+          $ref: '68'
         name:
+          $id: '92'
           fixed: false
           raw: value
         realPath:
@@ -390,42 +449,51 @@ modelsName: Models
 name: AutoRestRequiredOptionalTestService
 namespace: ''
 operations:
-  - methods:
-      - defaultResponse:
+  - $id: '112'
+    methods:
+      - $id: '113'
+        defaultResponse:
+          $id: '122'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Test implicitly required path parameter
         group:
+          $id: '121'
           fixed: false
           raw: implicit
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '120'
           fixed: false
           raw: getRequiredPath
         parameters:
-          - $id: '41'
+          - $id: '114'
             collectionFormat: none
             defaultValue:
+              $id: '115'
               fixed: false
             deprecated: false
             documentation:
+              $id: '116'
               fixed: false
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '42'
+              $id: '118'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '119'
                 fixed: false
                 raw: String
             name:
+              $id: '117'
               fixed: false
               raw: pathParameter
             serializedName: pathParameter
@@ -433,46 +501,52 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
-          isNullable: true
+          $ref: '122'
         serializedName: implicit_getRequiredPath
         url: '/reqopt/implicit/required/path/{pathParameter}'
-      - defaultResponse:
+      - $id: '123'
+        defaultResponse:
+          $id: '133'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Test implicitly optional query parameter
         group:
+          $id: '131'
           fixed: false
           raw: implicit
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '130'
           fixed: false
           raw: putOptionalQuery
         parameters:
-          - $id: '43'
+          - $id: '124'
             collectionFormat: none
             defaultValue:
+              $id: '125'
               fixed: false
             deprecated: false
             documentation:
+              $id: '126'
               fixed: false
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '44'
+              $id: '128'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '129'
                 fixed: false
                 raw: String
             name:
+              $id: '127'
               fixed: false
               raw: queryParameter
             serializedName: queryParameter
@@ -481,46 +555,56 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '132'
             isNullable: true
         returnType:
+          $id: '134'
           isNullable: true
         serializedName: implicit_putOptionalQuery
         url: /reqopt/implicit/optional/query
-      - defaultResponse:
+      - $id: '135'
+        defaultResponse:
+          $id: '145'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Test implicitly optional header parameter
         group:
+          $id: '143'
           fixed: false
           raw: implicit
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '142'
           fixed: false
           raw: putOptionalHeader
         parameters:
-          - $id: '45'
+          - $id: '136'
             collectionFormat: none
             defaultValue:
+              $id: '137'
               fixed: false
             deprecated: false
             documentation:
+              $id: '138'
               fixed: false
             isConstant: false
             isRequired: false
             location: header
             modelType:
-              $id: '46'
+              $id: '140'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '141'
                 fixed: false
                 raw: String
             name:
+              $id: '139'
               fixed: false
               raw: queryParameter
             serializedName: queryParameter
@@ -529,35 +613,43 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '144'
             isNullable: true
         returnType:
+          $id: '146'
           isNullable: true
         serializedName: implicit_putOptionalHeader
         url: /reqopt/implicit/optional/header
-      - defaultResponse:
+      - $id: '147'
+        defaultResponse:
+          $id: '157'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Test implicitly optional body parameter
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '155'
           fixed: false
           raw: implicit
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '154'
           fixed: false
           raw: putOptionalBody
         parameters:
-          - $id: '47'
+          - $id: '148'
             collectionFormat: none
             defaultValue:
+              $id: '149'
               fixed: false
             deprecated: false
             documentation:
+              $id: '150'
               fixed: false
             extensions:
               x-ms-requestBody-name: bodyParameter
@@ -565,14 +657,16 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '48'
+              $id: '152'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '153'
                 fixed: false
                 raw: String
             name:
+              $id: '151'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -581,49 +675,59 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '156'
             isNullable: true
         returnType:
+          $id: '158'
           isNullable: true
         serializedName: implicit_putOptionalBody
         url: /reqopt/implicit/optional/body
-      - defaultResponse:
+      - $id: '159'
+        defaultResponse:
+          $id: '168'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Test implicitly required path parameter
         group:
+          $id: '167'
           fixed: false
           raw: implicit
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '166'
           fixed: false
           raw: getRequiredGlobalPath
         parameters:
-          - $id: '49'
+          - $id: '160'
             clientProperty:
-              $ref: '35'
+              $ref: '94'
             collectionFormat: none
             defaultValue:
+              $id: '161'
               fixed: false
             deprecated: false
             documentation:
+              $id: '162'
               fixed: false
               raw: number of items to skip
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '50'
+              $id: '164'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '165'
                 fixed: false
                 raw: String
             name:
+              $id: '163'
               fixed: false
               raw: required-global-path
             serializedName: required-global-path
@@ -631,49 +735,55 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
-          isNullable: true
+          $ref: '168'
         serializedName: implicit_getRequiredGlobalPath
         url: '/reqopt/global/required/path/{required-global-path}'
-      - defaultResponse:
+      - $id: '169'
+        defaultResponse:
+          $id: '178'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Test implicitly required query parameter
         group:
+          $id: '177'
           fixed: false
           raw: implicit
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '176'
           fixed: false
           raw: getRequiredGlobalQuery
         parameters:
-          - $id: '51'
+          - $id: '170'
             clientProperty:
-              $ref: '37'
+              $ref: '100'
             collectionFormat: none
             defaultValue:
+              $id: '171'
               fixed: false
             deprecated: false
             documentation:
+              $id: '172'
               fixed: false
               raw: number of items to skip
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '52'
+              $id: '174'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '175'
                 fixed: false
                 raw: String
             name:
+              $id: '173'
               fixed: false
               raw: required-global-query
             serializedName: required-global-query
@@ -681,50 +791,56 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
-          isNullable: true
+          $ref: '178'
         serializedName: implicit_getRequiredGlobalQuery
         url: /reqopt/global/required/query
-      - defaultResponse:
+      - $id: '179'
+        defaultResponse:
+          $id: '188'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Test implicitly optional query parameter
         group:
+          $id: '187'
           fixed: false
           raw: implicit
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '186'
           fixed: false
           raw: getOptionalGlobalQuery
         parameters:
-          - $id: '53'
+          - $id: '180'
             clientProperty:
-              $ref: '39'
+              $ref: '106'
             collectionFormat: none
             defaultValue:
+              $id: '181'
               fixed: false
             deprecated: false
             documentation:
+              $id: '182'
               fixed: false
               raw: number of items to skip
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '54'
+              $id: '184'
               $type: PrimaryType
               deprecated: false
               format: int32
               knownPrimaryType: int
               name:
+                $id: '185'
                 fixed: false
                 raw: Int
             name:
+              $id: '183'
               fixed: false
               raw: optional-global-query
             serializedName: optional-global-query
@@ -732,21 +848,24 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
-          isNullable: true
+          $ref: '188'
         serializedName: implicit_getOptionalGlobalQuery
         url: /reqopt/global/optional/query
     name:
+      $id: '189'
       fixed: false
       raw: Implicit
     nameForProperty: Implicit
     typeName:
+      $id: '190'
       fixed: false
-  - methods:
-      - defaultResponse:
+  - $id: '191'
+    methods:
+      - $id: '192'
+        defaultResponse:
+          $id: '201'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -755,21 +874,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '200'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '199'
           fixed: false
           raw: postRequiredIntegerParameter
         parameters:
-          - $id: '55'
+          - $id: '193'
             collectionFormat: none
             defaultValue:
+              $id: '194'
               fixed: false
             deprecated: false
             documentation:
+              $id: '195'
               fixed: false
             extensions:
               x-ms-requestBody-name: bodyParameter
@@ -777,14 +900,16 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '56'
+              $id: '197'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: int
               name:
+                $id: '198'
                 fixed: false
                 raw: Int
             name:
+              $id: '196'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -792,35 +917,39 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
-          isNullable: true
+          $ref: '201'
         serializedName: explicit_postRequiredIntegerParameter
         url: /reqopt/requied/integer/parameter
-      - defaultResponse:
+      - $id: '202'
+        defaultResponse:
+          $id: '212'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Test explicitly optional integer. Please put null.
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '210'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '209'
           fixed: false
           raw: postOptionalIntegerParameter
         parameters:
-          - $id: '57'
+          - $id: '203'
             collectionFormat: none
             defaultValue:
+              $id: '204'
               fixed: false
             deprecated: false
             documentation:
+              $id: '205'
               fixed: false
             extensions:
               x-ms-requestBody-name: bodyParameter
@@ -828,14 +957,16 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '58'
+              $id: '207'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: int
               name:
+                $id: '208'
                 fixed: false
                 raw: Int
             name:
+              $id: '206'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -844,14 +975,18 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '211'
             isNullable: true
         returnType:
+          $id: '213'
           isNullable: true
         serializedName: explicit_postOptionalIntegerParameter
         url: /reqopt/optional/integer/parameter
-      - defaultResponse:
+      - $id: '214'
+        defaultResponse:
+          $id: '221'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -861,21 +996,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '220'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '219'
           fixed: false
           raw: postRequiredIntegerProperty
         parameters:
-          - $id: '59'
+          - $id: '215'
             collectionFormat: none
             defaultValue:
+              $id: '216'
               fixed: false
             deprecated: false
             documentation:
+              $id: '217'
               fixed: false
             extensions:
               x-ms-requestBody-name: bodyParameter
@@ -883,8 +1022,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '6'
+              $ref: '16'
             name:
+              $id: '218'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -892,14 +1032,14 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
-          isNullable: true
+          $ref: '221'
         serializedName: explicit_postRequiredIntegerProperty
         url: /reqopt/requied/integer/property
-      - defaultResponse:
+      - $id: '222'
+        defaultResponse:
+          $id: '230'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -908,21 +1048,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '228'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '227'
           fixed: false
           raw: postOptionalIntegerProperty
         parameters:
-          - $id: '60'
+          - $id: '223'
             collectionFormat: none
             defaultValue:
+              $id: '224'
               fixed: false
             deprecated: false
             documentation:
+              $id: '225'
               fixed: false
             extensions:
               x-ms-requestBody-name: bodyParameter
@@ -930,8 +1074,9 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $ref: '9'
+              $ref: '24'
             name:
+              $id: '226'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -940,14 +1085,18 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '229'
             isNullable: true
         returnType:
+          $id: '231'
           isNullable: true
         serializedName: explicit_postOptionalIntegerProperty
         url: /reqopt/optional/integer/property
-      - defaultResponse:
+      - $id: '232'
+        defaultResponse:
+          $id: '241'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -955,34 +1104,40 @@ operations:
           'headerParameter' => null and the client library should throw before
           the request is sent.
         group:
+          $id: '240'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '239'
           fixed: false
           raw: postRequiredIntegerHeader
         parameters:
-          - $id: '61'
+          - $id: '233'
             collectionFormat: none
             defaultValue:
+              $id: '234'
               fixed: false
             deprecated: false
             documentation:
+              $id: '235'
               fixed: false
             isConstant: false
             isRequired: true
             location: header
             modelType:
-              $id: '62'
+              $id: '237'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: int
               name:
+                $id: '238'
                 fixed: false
                 raw: Int
             name:
+              $id: '236'
               fixed: false
               raw: headerParameter
             serializedName: headerParameter
@@ -990,48 +1145,54 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
-          isNullable: true
+          $ref: '241'
         serializedName: explicit_postRequiredIntegerHeader
         url: /reqopt/requied/integer/header
-      - defaultResponse:
+      - $id: '242'
+        defaultResponse:
+          $id: '252'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Test explicitly optional integer. Please put a header
           'headerParameter' => null.
         group:
+          $id: '250'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '249'
           fixed: false
           raw: postOptionalIntegerHeader
         parameters:
-          - $id: '63'
+          - $id: '243'
             collectionFormat: none
             defaultValue:
+              $id: '244'
               fixed: false
             deprecated: false
             documentation:
+              $id: '245'
               fixed: false
             isConstant: false
             isRequired: false
             location: header
             modelType:
-              $id: '64'
+              $id: '247'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: int
               name:
+                $id: '248'
                 fixed: false
                 raw: Int
             name:
+              $id: '246'
               fixed: false
               raw: headerParameter
             serializedName: headerParameter
@@ -1040,14 +1201,18 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '251'
             isNullable: true
         returnType:
+          $id: '253'
           isNullable: true
         serializedName: explicit_postOptionalIntegerHeader
         url: /reqopt/optional/integer/header
-      - defaultResponse:
+      - $id: '254'
+        defaultResponse:
+          $id: '263'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -1056,21 +1221,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '262'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '261'
           fixed: false
           raw: postRequiredStringParameter
         parameters:
-          - $id: '65'
+          - $id: '255'
             collectionFormat: none
             defaultValue:
+              $id: '256'
               fixed: false
             deprecated: false
             documentation:
+              $id: '257'
               fixed: false
             extensions:
               x-ms-requestBody-name: bodyParameter
@@ -1078,14 +1247,16 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '66'
+              $id: '259'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '260'
                 fixed: false
                 raw: String
             name:
+              $id: '258'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -1093,35 +1264,39 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
-          isNullable: true
+          $ref: '263'
         serializedName: explicit_postRequiredStringParameter
         url: /reqopt/requied/string/parameter
-      - defaultResponse:
+      - $id: '264'
+        defaultResponse:
+          $id: '274'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Test explicitly optional string. Please put null.
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '272'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '271'
           fixed: false
           raw: postOptionalStringParameter
         parameters:
-          - $id: '67'
+          - $id: '265'
             collectionFormat: none
             defaultValue:
+              $id: '266'
               fixed: false
             deprecated: false
             documentation:
+              $id: '267'
               fixed: false
             extensions:
               x-ms-requestBody-name: bodyParameter
@@ -1129,14 +1304,16 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '68'
+              $id: '269'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '270'
                 fixed: false
                 raw: String
             name:
+              $id: '268'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -1145,14 +1322,18 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '273'
             isNullable: true
         returnType:
+          $id: '275'
           isNullable: true
         serializedName: explicit_postOptionalStringParameter
         url: /reqopt/optional/string/parameter
-      - defaultResponse:
+      - $id: '276'
+        defaultResponse:
+          $id: '283'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -1162,21 +1343,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '282'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '281'
           fixed: false
           raw: postRequiredStringProperty
         parameters:
-          - $id: '69'
+          - $id: '277'
             collectionFormat: none
             defaultValue:
+              $id: '278'
               fixed: false
             deprecated: false
             documentation:
+              $id: '279'
               fixed: false
             extensions:
               x-ms-requestBody-name: bodyParameter
@@ -1184,8 +1369,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '12'
+              $ref: '32'
             name:
+              $id: '280'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -1193,14 +1379,14 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
-          isNullable: true
+          $ref: '283'
         serializedName: explicit_postRequiredStringProperty
         url: /reqopt/requied/string/property
-      - defaultResponse:
+      - $id: '284'
+        defaultResponse:
+          $id: '292'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -1209,21 +1395,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '290'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '289'
           fixed: false
           raw: postOptionalStringProperty
         parameters:
-          - $id: '70'
+          - $id: '285'
             collectionFormat: none
             defaultValue:
+              $id: '286'
               fixed: false
             deprecated: false
             documentation:
+              $id: '287'
               fixed: false
             extensions:
               x-ms-requestBody-name: bodyParameter
@@ -1231,8 +1421,9 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $ref: '15'
+              $ref: '40'
             name:
+              $id: '288'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -1241,14 +1432,18 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '291'
             isNullable: true
         returnType:
+          $id: '293'
           isNullable: true
         serializedName: explicit_postOptionalStringProperty
         url: /reqopt/optional/string/property
-      - defaultResponse:
+      - $id: '294'
+        defaultResponse:
+          $id: '303'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -1256,34 +1451,40 @@ operations:
           => null and the client library should throw before the request is
           sent.
         group:
+          $id: '302'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '301'
           fixed: false
           raw: postRequiredStringHeader
         parameters:
-          - $id: '71'
+          - $id: '295'
             collectionFormat: none
             defaultValue:
+              $id: '296'
               fixed: false
             deprecated: false
             documentation:
+              $id: '297'
               fixed: false
             isConstant: false
             isRequired: true
             location: header
             modelType:
-              $id: '72'
+              $id: '299'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '300'
                 fixed: false
                 raw: String
             name:
+              $id: '298'
               fixed: false
               raw: headerParameter
             serializedName: headerParameter
@@ -1291,48 +1492,54 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
-          isNullable: true
+          $ref: '303'
         serializedName: explicit_postRequiredStringHeader
         url: /reqopt/requied/string/header
-      - defaultResponse:
+      - $id: '304'
+        defaultResponse:
+          $id: '314'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Test explicitly optional string. Please put a header 'headerParameter'
           => null.
         group:
+          $id: '312'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '311'
           fixed: false
           raw: postOptionalStringHeader
         parameters:
-          - $id: '73'
+          - $id: '305'
             collectionFormat: none
             defaultValue:
+              $id: '306'
               fixed: false
             deprecated: false
             documentation:
+              $id: '307'
               fixed: false
             isConstant: false
             isRequired: false
             location: header
             modelType:
-              $id: '74'
+              $id: '309'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '310'
                 fixed: false
                 raw: String
             name:
+              $id: '308'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -1341,14 +1548,18 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '313'
             isNullable: true
         returnType:
+          $id: '315'
           isNullable: true
         serializedName: explicit_postOptionalStringHeader
         url: /reqopt/optional/string/header
-      - defaultResponse:
+      - $id: '316'
+        defaultResponse:
+          $id: '323'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -1357,21 +1568,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '322'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '321'
           fixed: false
           raw: postRequiredClassParameter
         parameters:
-          - $id: '75'
+          - $id: '317'
             collectionFormat: none
             defaultValue:
+              $id: '318'
               fixed: false
             deprecated: false
             documentation:
+              $id: '319'
               fixed: false
             extensions:
               x-ms-requestBody-name: bodyParameter
@@ -1379,8 +1594,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '26'
+              $ref: '68'
             name:
+              $id: '320'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -1388,35 +1604,39 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
-          isNullable: true
+          $ref: '323'
         serializedName: explicit_postRequiredClassParameter
         url: /reqopt/requied/class/parameter
-      - defaultResponse:
+      - $id: '324'
+        defaultResponse:
+          $id: '332'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Test explicitly optional complex object. Please put null.
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '330'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '329'
           fixed: false
           raw: postOptionalClassParameter
         parameters:
-          - $id: '76'
+          - $id: '325'
             collectionFormat: none
             defaultValue:
+              $id: '326'
               fixed: false
             deprecated: false
             documentation:
+              $id: '327'
               fixed: false
             extensions:
               x-ms-requestBody-name: bodyParameter
@@ -1424,8 +1644,9 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $ref: '26'
+              $ref: '68'
             name:
+              $id: '328'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -1434,14 +1655,18 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '331'
             isNullable: true
         returnType:
+          $id: '333'
           isNullable: true
         serializedName: explicit_postOptionalClassParameter
         url: /reqopt/optional/class/parameter
-      - defaultResponse:
+      - $id: '334'
+        defaultResponse:
+          $id: '341'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -1451,21 +1676,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '340'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '339'
           fixed: false
           raw: postRequiredClassProperty
         parameters:
-          - $id: '77'
+          - $id: '335'
             collectionFormat: none
             defaultValue:
+              $id: '336'
               fixed: false
             deprecated: false
             documentation:
+              $id: '337'
               fixed: false
             extensions:
               x-ms-requestBody-name: bodyParameter
@@ -1473,8 +1702,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '31'
+              $ref: '82'
             name:
+              $id: '338'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -1482,14 +1712,14 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
-          isNullable: true
+          $ref: '341'
         serializedName: explicit_postRequiredClassProperty
         url: /reqopt/requied/class/property
-      - defaultResponse:
+      - $id: '342'
+        defaultResponse:
+          $id: '350'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -1498,21 +1728,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '348'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '347'
           fixed: false
           raw: postOptionalClassProperty
         parameters:
-          - $id: '78'
+          - $id: '343'
             collectionFormat: none
             defaultValue:
+              $id: '344'
               fixed: false
             deprecated: false
             documentation:
+              $id: '345'
               fixed: false
             extensions:
               x-ms-requestBody-name: bodyParameter
@@ -1520,8 +1754,9 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $ref: '33'
+              $ref: '88'
             name:
+              $id: '346'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -1530,14 +1765,18 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '349'
             isNullable: true
         returnType:
+          $id: '351'
           isNullable: true
         serializedName: explicit_postOptionalClassProperty
         url: /reqopt/optional/class/property
-      - defaultResponse:
+      - $id: '352'
+        defaultResponse:
+          $id: '363'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -1546,21 +1785,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '362'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '361'
           fixed: false
           raw: postRequiredArrayParameter
         parameters:
-          - $id: '79'
+          - $id: '353'
             collectionFormat: csv
             defaultValue:
+              $id: '354'
               fixed: false
             deprecated: false
             documentation:
+              $id: '355'
               fixed: false
             extensions:
               x-ms-requestBody-name: bodyParameter
@@ -1568,20 +1811,23 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '80'
+              $id: '357'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '81'
+                $id: '358'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: string
                 name:
+                  $id: '359'
                   fixed: false
                   raw: String
               name:
+                $id: '360'
                 fixed: false
             name:
+              $id: '356'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -1589,35 +1835,39 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
-          isNullable: true
+          $ref: '363'
         serializedName: explicit_postRequiredArrayParameter
         url: /reqopt/requied/array/parameter
-      - defaultResponse:
+      - $id: '364'
+        defaultResponse:
+          $id: '376'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Test explicitly optional array. Please put null.
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '374'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '373'
           fixed: false
           raw: postOptionalArrayParameter
         parameters:
-          - $id: '82'
+          - $id: '365'
             collectionFormat: csv
             defaultValue:
+              $id: '366'
               fixed: false
             deprecated: false
             documentation:
+              $id: '367'
               fixed: false
             extensions:
               x-ms-requestBody-name: bodyParameter
@@ -1625,20 +1875,23 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '83'
+              $id: '369'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '84'
+                $id: '370'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: string
                 name:
+                  $id: '371'
                   fixed: false
                   raw: String
               name:
+                $id: '372'
                 fixed: false
             name:
+              $id: '368'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -1647,14 +1900,18 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '375'
             isNullable: true
         returnType:
+          $id: '377'
           isNullable: true
         serializedName: explicit_postOptionalArrayParameter
         url: /reqopt/optional/array/parameter
-      - defaultResponse:
+      - $id: '378'
+        defaultResponse:
+          $id: '385'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -1664,21 +1921,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '384'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '383'
           fixed: false
           raw: postRequiredArrayProperty
         parameters:
-          - $id: '85'
+          - $id: '379'
             collectionFormat: none
             defaultValue:
+              $id: '380'
               fixed: false
             deprecated: false
             documentation:
+              $id: '381'
               fixed: false
             extensions:
               x-ms-requestBody-name: bodyParameter
@@ -1686,8 +1947,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '18'
+              $ref: '48'
             name:
+              $id: '382'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -1695,14 +1957,14 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
-          isNullable: true
+          $ref: '385'
         serializedName: explicit_postRequiredArrayProperty
         url: /reqopt/requied/array/property
-      - defaultResponse:
+      - $id: '386'
+        defaultResponse:
+          $id: '394'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -1711,21 +1973,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '392'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '391'
           fixed: false
           raw: postOptionalArrayProperty
         parameters:
-          - $id: '86'
+          - $id: '387'
             collectionFormat: none
             defaultValue:
+              $id: '388'
               fixed: false
             deprecated: false
             documentation:
+              $id: '389'
               fixed: false
             extensions:
               x-ms-requestBody-name: bodyParameter
@@ -1733,8 +1999,9 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $ref: '22'
+              $ref: '58'
             name:
+              $id: '390'
               fixed: false
               raw: bodyParameter
             serializedName: bodyParameter
@@ -1743,14 +2010,18 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '393'
             isNullable: true
         returnType:
+          $id: '395'
           isNullable: true
         serializedName: explicit_postOptionalArrayProperty
         url: /reqopt/optional/array/property
-      - defaultResponse:
+      - $id: '396'
+        defaultResponse:
+          $id: '407'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -1758,40 +2029,47 @@ operations:
           => null and the client library should throw before the request is
           sent.
         group:
+          $id: '406'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '405'
           fixed: false
           raw: postRequiredArrayHeader
         parameters:
-          - $id: '87'
+          - $id: '397'
             collectionFormat: csv
             defaultValue:
+              $id: '398'
               fixed: false
             deprecated: false
             documentation:
+              $id: '399'
               fixed: false
             isConstant: false
             isRequired: true
             location: header
             modelType:
-              $id: '88'
+              $id: '401'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '89'
+                $id: '402'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: string
                 name:
+                  $id: '403'
                   fixed: false
                   raw: String
               name:
+                $id: '404'
                 fixed: false
             name:
+              $id: '400'
               fixed: false
               raw: headerParameter
             serializedName: headerParameter
@@ -1799,54 +2077,61 @@ operations:
         responseContentTypes:
           - application/json
         returnType:
-          body:
-            $ref: '1'
-          isNullable: true
+          $ref: '407'
         serializedName: explicit_postRequiredArrayHeader
         url: /reqopt/requied/array/header
-      - defaultResponse:
+      - $id: '408'
+        defaultResponse:
+          $id: '420'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Test explicitly optional integer. Please put a header
           'headerParameter' => null.
         group:
+          $id: '418'
           fixed: false
           raw: explicit
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '417'
           fixed: false
           raw: postOptionalArrayHeader
         parameters:
-          - $id: '90'
+          - $id: '409'
             collectionFormat: csv
             defaultValue:
+              $id: '410'
               fixed: false
             deprecated: false
             documentation:
+              $id: '411'
               fixed: false
             isConstant: false
             isRequired: false
             location: header
             modelType:
-              $id: '91'
+              $id: '413'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '92'
+                $id: '414'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: string
                 name:
+                  $id: '415'
                   fixed: false
                   raw: String
               name:
+                $id: '416'
                 fixed: false
             name:
+              $id: '412'
               fixed: false
               raw: headerParameter
             serializedName: headerParameter
@@ -1855,89 +2140,105 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '419'
             isNullable: true
         returnType:
+          $id: '421'
           isNullable: true
         serializedName: explicit_postOptionalArrayHeader
         url: /reqopt/optional/array/header
     name:
+      $id: '422'
       fixed: false
       raw: Explicit
     nameForProperty: Explicit
     typeName:
+      $id: '423'
       fixed: false
 properties:
-  - $id: '35'
+  - $id: '94'
     collectionFormat: none
     defaultValue:
+      $id: '95'
       fixed: false
     deprecated: false
     documentation:
+      $id: '96'
       fixed: false
       raw: number of items to skip
     isConstant: false
     isReadOnly: false
     isRequired: true
     modelType:
-      $id: '36'
+      $id: '98'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
+        $id: '99'
         fixed: false
         raw: String
     name:
+      $id: '97'
       fixed: false
       raw: required-global-path
     realPath:
       - required-global-path
     serializedName: required-global-path
-  - $id: '37'
+  - $id: '100'
     collectionFormat: none
     defaultValue:
+      $id: '101'
       fixed: false
     deprecated: false
     documentation:
+      $id: '102'
       fixed: false
       raw: number of items to skip
     isConstant: false
     isReadOnly: false
     isRequired: true
     modelType:
-      $id: '38'
+      $id: '104'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
+        $id: '105'
         fixed: false
         raw: String
     name:
+      $id: '103'
       fixed: false
       raw: required-global-query
     realPath:
       - required-global-query
     serializedName: required-global-query
-  - $id: '39'
+  - $id: '106'
     collectionFormat: none
     defaultValue:
+      $id: '107'
       fixed: false
     deprecated: false
     documentation:
+      $id: '108'
       fixed: false
       raw: number of items to skip
     isConstant: false
     isReadOnly: false
     isRequired: false
     modelType:
-      $id: '40'
+      $id: '110'
       $type: PrimaryType
       deprecated: false
       format: int32
       knownPrimaryType: int
       name:
+        $id: '111'
         fixed: false
         raw: Int
     name:
+      $id: '109'
       fixed: false
       raw: optional-global-query
     realPath:

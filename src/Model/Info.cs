@@ -31,6 +31,6 @@ namespace AutoRest.Modeler.Model
         public string Version { get; set; }
 
         [JsonProperty("x-ms-code-generation-settings")]
-        public CodeGenerationSettings CodeGenerationSettings { get; set; }
+        public SwaggerBase CodeGenerationSettings { get; set; }
     }
 }

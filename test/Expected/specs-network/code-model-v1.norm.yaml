@@ -1,4 +1,5 @@
 ---
+$id: '1'
 apiVersion: '2017-10-01'
 baseUrl: 'https://management.azure.com'
 documentation: >-
@@ -7,74 +8,29 @@ documentation: >-
   network resources. The API has entities that capture the relationship between
   an end user and the Microsoft Azure Networks service.
 enumTypes:
-  - $ref: '21'
+  - $ref: '59'
 extensions:
   security:
     - azure_auth:
         - user_impersonation
 modelTypes:
-  - $id: '1'
+  - $id: '2'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '21'
       fixed: false
       raw: ErrorDetails
     properties:
-      - $id: '2'
+      - $id: '3'
         collectionFormat: none
         defaultValue:
+          $id: '4'
           fixed: false
         deprecated: false
         documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '3'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: code
-        realPath:
-          - code
-        serializedName: code
-      - $id: '4'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
           $id: '5'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: target
-        realPath:
-          - target
-        serializedName: target
-      - $id: '6'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
           fixed: false
         isConstant: false
         isReadOnly: false
@@ -85,90 +41,39 @@ modelTypes:
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '8'
             fixed: false
             raw: String
         name:
-          fixed: false
-          raw: message
-        realPath:
-          - message
-        serializedName: message
-    serializedName: ErrorDetails
-  - $id: '8'
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    name:
-      fixed: false
-      raw: Error
-    properties:
-      - $id: '9'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '10'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
+          $id: '6'
           fixed: false
           raw: code
         realPath:
           - code
         serializedName: code
-      - $id: '11'
+      - $id: '9'
         collectionFormat: none
         defaultValue:
+          $id: '10'
           fixed: false
         deprecated: false
         documentation:
+          $id: '11'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
+          $id: '13'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '14'
+            fixed: false
+            raw: String
+        name:
           $id: '12'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: message
-        realPath:
-          - message
-        serializedName: message
-      - $id: '13'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '14'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
           fixed: false
           raw: target
         realPath:
@@ -177,53 +82,183 @@ modelTypes:
       - $id: '15'
         collectionFormat: none
         defaultValue:
+          $id: '16'
           fixed: false
         deprecated: false
         documentation:
+          $id: '17'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '16'
+          $id: '19'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '20'
+            fixed: false
+            raw: String
+        name:
+          $id: '18'
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: ErrorDetails
+  - $id: '22'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '53'
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '23'
+        collectionFormat: none
+        defaultValue:
+          $id: '24'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '25'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '27'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '28'
+            fixed: false
+            raw: String
+        name:
+          $id: '26'
+          fixed: false
+          raw: code
+        realPath:
+          - code
+        serializedName: code
+      - $id: '29'
+        collectionFormat: none
+        defaultValue:
+          $id: '30'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '31'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '33'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '34'
+            fixed: false
+            raw: String
+        name:
+          $id: '32'
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+      - $id: '35'
+        collectionFormat: none
+        defaultValue:
+          $id: '36'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '37'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '39'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '40'
+            fixed: false
+            raw: String
+        name:
+          $id: '38'
+          fixed: false
+          raw: target
+        realPath:
+          - target
+        serializedName: target
+      - $id: '41'
+        collectionFormat: none
+        defaultValue:
+          $id: '42'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '43'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '45'
           $type: SequenceType
           deprecated: false
           elementType:
-            $ref: '1'
+            $ref: '2'
           name:
+            $id: '46'
             fixed: false
         name:
+          $id: '44'
           fixed: false
           raw: details
         realPath:
           - details
         serializedName: details
-      - $id: '17'
+      - $id: '47'
         collectionFormat: none
         defaultValue:
+          $id: '48'
           fixed: false
         deprecated: false
         documentation:
+          $id: '49'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '18'
+          $id: '51'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '52'
             fixed: false
             raw: String
         name:
+          $id: '50'
           fixed: false
           raw: innerError
         realPath:
           - innerError
         serializedName: innerError
     serializedName: Error
-  - $id: '19'
+  - $id: '54'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -237,15 +272,18 @@ modelTypes:
       failed, the response body includes the HTTP status code for the failed
       request and error information regarding the failure.
     name:
+      $id: '70'
       fixed: false
       raw: AzureAsyncOperationResult
     properties:
-      - $id: '20'
+      - $id: '55'
         collectionFormat: none
         defaultValue:
+          $id: '56'
           fixed: false
         deprecated: false
         documentation:
+          $id: '57'
           fixed: false
           raw: >-
             Status of the Azure async operation. Possible values are:
@@ -258,55 +296,64 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '21'
+          $id: '59'
           $type: EnumType
           deprecated: false
           oldModelAsString: true
           modelAsString: true
           name:
+            $id: '65'
             fixed: false
             raw: NetworkOperationStatus
           underlyingType:
-            $id: '22'
+            $id: '63'
             $type: PrimaryType
             deprecated: false
             knownPrimaryType: string
             name:
+              $id: '64'
               fixed: false
               raw: String
           values:
-            - name: InProgress
+            - $id: '60'
+              name: InProgress
               serializedName: InProgress
-            - name: Succeeded
+            - $id: '61'
+              name: Succeeded
               serializedName: Succeeded
-            - name: Failed
+            - $id: '62'
+              name: Failed
               serializedName: Failed
         name:
+          $id: '58'
           fixed: false
           raw: status
         realPath:
           - status
         serializedName: status
-      - $id: '23'
+      - $id: '66'
         collectionFormat: none
         defaultValue:
+          $id: '67'
           fixed: false
         deprecated: false
         documentation:
+          $id: '68'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $ref: '8'
+          $ref: '22'
         name:
+          $id: '69'
           fixed: false
           raw: error
         realPath:
           - error
         serializedName: error
     serializedName: AzureAsyncOperationResult
-  - $id: '24'
+  - $id: '71'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -314,143 +361,165 @@ modelTypes:
     extensions:
       x-ms-azure-resource: true
     name:
+      $id: '104'
       fixed: false
       raw: Resource
     properties:
-      - $id: '25'
+      - $id: '72'
         collectionFormat: none
         defaultValue:
+          $id: '73'
           fixed: false
         deprecated: false
         documentation:
+          $id: '74'
           fixed: false
           raw: Resource ID.
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '26'
+          $id: '76'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '77'
             fixed: false
             raw: String
         name:
+          $id: '75'
           fixed: false
           raw: id
         realPath:
           - id
         serializedName: id
-      - $id: '27'
+      - $id: '78'
         collectionFormat: none
         defaultValue:
+          $id: '79'
           fixed: false
         deprecated: false
         documentation:
+          $id: '80'
           fixed: false
           raw: Resource name.
         isConstant: false
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '28'
+          $id: '82'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '83'
             fixed: false
             raw: String
         name:
+          $id: '81'
           fixed: false
           raw: name
         realPath:
           - name
         serializedName: name
-      - $id: '29'
+      - $id: '84'
         collectionFormat: none
         defaultValue:
+          $id: '85'
           fixed: false
         deprecated: false
         documentation:
+          $id: '86'
           fixed: false
           raw: Resource type.
         isConstant: false
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '30'
+          $id: '88'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '89'
             fixed: false
             raw: String
         name:
+          $id: '87'
           fixed: false
           raw: type
         realPath:
           - type
         serializedName: type
-      - $id: '31'
+      - $id: '90'
         collectionFormat: none
         defaultValue:
+          $id: '91'
           fixed: false
         deprecated: false
         documentation:
+          $id: '92'
           fixed: false
           raw: Resource location.
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '32'
+          $id: '94'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '95'
             fixed: false
             raw: String
         name:
+          $id: '93'
           fixed: false
           raw: location
         realPath:
           - location
         serializedName: location
-      - $id: '33'
+      - $id: '96'
         collectionFormat: none
         defaultValue:
+          $id: '97'
           fixed: false
         deprecated: false
         documentation:
+          $id: '98'
           fixed: false
           raw: Resource tags.
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '34'
+          $id: '100'
           $type: DictionaryType
           deprecated: false
           name:
+            $id: '103'
             fixed: false
           supportsAdditionalProperties: false
           valueType:
-            $id: '35'
+            $id: '101'
             $type: PrimaryType
             deprecated: false
             knownPrimaryType: string
             name:
+              $id: '102'
               fixed: false
               raw: String
         name:
+          $id: '99'
           fixed: false
           raw: tags
         realPath:
           - tags
         serializedName: tags
     serializedName: Resource
-  - $id: '36'
+  - $id: '105'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -458,71 +527,82 @@ modelTypes:
     extensions:
       x-ms-azure-resource: true
     name:
+      $id: '112'
       fixed: false
       raw: SubResource
     properties:
-      - $id: '37'
+      - $id: '106'
         collectionFormat: none
         defaultValue:
+          $id: '107'
           fixed: false
         deprecated: false
         documentation:
+          $id: '108'
           fixed: false
           raw: Resource ID.
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '38'
+          $id: '110'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '111'
             fixed: false
             raw: String
         name:
+          $id: '109'
           fixed: false
           raw: id
         realPath:
           - id
         serializedName: id
     serializedName: SubResource
-  - $id: '39'
+  - $id: '113'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     documentation: Tags object for patch operations.
     name:
+      $id: '122'
       fixed: false
       raw: TagsObject
     properties:
-      - $id: '40'
+      - $id: '114'
         collectionFormat: none
         defaultValue:
+          $id: '115'
           fixed: false
         deprecated: false
         documentation:
+          $id: '116'
           fixed: false
           raw: Resource tags.
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '41'
+          $id: '118'
           $type: DictionaryType
           deprecated: false
           name:
+            $id: '121'
             fixed: false
           supportsAdditionalProperties: false
           valueType:
-            $id: '42'
+            $id: '119'
             $type: PrimaryType
             deprecated: false
             knownPrimaryType: string
             name:
+              $id: '120'
               fixed: false
               raw: String
         name:
+          $id: '117'
           fixed: false
           raw: tags
         realPath:
@@ -533,12 +613,14 @@ modelsName: Models
 name: NetworkManagementClient
 namespace: ''
 properties:
-  - $id: '43'
+  - $id: '123'
     collectionFormat: none
     defaultValue:
+      $id: '124'
       fixed: false
     deprecated: false
     documentation:
+      $id: '125'
       fixed: false
       raw: >-
         The subscription credentials which uniquely identify the Microsoft Azure
@@ -548,39 +630,45 @@ properties:
     isReadOnly: false
     isRequired: true
     modelType:
-      $id: '44'
+      $id: '127'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
+        $id: '128'
         fixed: false
         raw: String
     name:
+      $id: '126'
       fixed: false
       raw: subscriptionId
     realPath:
       - subscriptionId
     serializedName: subscriptionId
-  - $id: '45'
+  - $id: '129'
     collectionFormat: none
     defaultValue:
+      $id: '130'
       fixed: false
     deprecated: false
     documentation:
+      $id: '131'
       fixed: false
       raw: Client API version.
     isConstant: false
     isReadOnly: false
     isRequired: true
     modelType:
-      $id: '46'
+      $id: '133'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
+        $id: '134'
         fixed: false
         raw: String
     name:
+      $id: '132'
       fixed: false
       raw: api-version
     realPath:
