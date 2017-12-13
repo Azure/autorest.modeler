@@ -70,14 +70,16 @@ namespace AutoRest.Modeler.Model
             return result;
         }
 
-        [JsonIgnore]
-        IList<SwaggerParameter> _parameters;
+        [JsonProperty(PropertyName = "parameters")]
+        private IList<SwaggerParameter> _parameters;
+
+
         /// <summary>
         /// A list of parameters that are applicable for this operation. 
         /// If a parameter is already defined at the Path Item, the 
         /// new definition will override it, but can never remove it.
         /// </summary>
-        [JsonProperty(PropertyName = "parameters")]
+        [JsonIgnore]
         public SwaggerParameter[] Parameters
         {
             get
@@ -89,8 +91,7 @@ namespace AutoRest.Modeler.Model
                 }
                 return result.ToArray();
             }
-            set => _parameters = value.ToList();
-        } // TODO: not like this...
+        }
 
         public RequestBody RequestBody { get; set; }
 

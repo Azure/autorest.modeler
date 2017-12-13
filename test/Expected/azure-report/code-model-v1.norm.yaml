@@ -1,62 +1,72 @@
 ---
+$id: '1'
 apiVersion: 1.0.0
 baseUrl: 'http://localhost:3000'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
-  - $ref: '1'
+  - $ref: '2'
 modelTypes:
-  - $id: '1'
+  - $id: '2'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '15'
       fixed: false
       raw: Error
     properties:
-      - $id: '2'
+      - $id: '3'
         collectionFormat: none
         defaultValue:
+          $id: '4'
           fixed: false
         deprecated: false
         documentation:
+          $id: '5'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
+          $id: '7'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
+            $id: '8'
             fixed: false
             raw: Int
         name:
+          $id: '6'
           fixed: false
           raw: status
         realPath:
           - status
         serializedName: status
-      - $id: '4'
+      - $id: '9'
         collectionFormat: none
         defaultValue:
+          $id: '10'
           fixed: false
         deprecated: false
         documentation:
+          $id: '11'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
+          $id: '13'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '14'
             fixed: false
             raw: String
         name:
+          $id: '12'
           fixed: false
           raw: message
         realPath:
@@ -67,29 +77,36 @@ modelsName: Models
 name: AutoRestReportServiceForAzure
 namespace: ''
 operations:
-  - methods:
-      - defaultResponse:
+  - $id: '16'
+    methods:
+      - $id: '17'
+        defaultResponse:
+          $id: '31'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get test coverage report
         group:
+          $id: '25'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '24'
           fixed: false
           raw: getReport
         parameters:
-          - $id: '6'
+          - $id: '18'
             collectionFormat: none
             defaultValue:
+              $id: '19'
               fixed: false
             deprecated: false
             documentation:
+              $id: '20'
               fixed: false
               raw: >-
                 If specified, qualifies the generated report further (e.g. '2.7'
@@ -100,14 +117,16 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '7'
+              $id: '22'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '23'
                 fixed: false
                 raw: String
             name:
+              $id: '21'
               fixed: false
               raw: qualifier
             serializedName: qualifier
@@ -116,31 +135,37 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '26'
             body:
-              $id: '8'
+              $id: '27'
               $type: DictionaryType
               deprecated: false
               name:
+                $id: '30'
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $id: '9'
+                $id: '28'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: int
                 name:
+                  $id: '29'
                   fixed: false
                   raw: Int
             isNullable: true
         returnType:
+          $id: '32'
           body:
-            $ref: '8'
+            $ref: '27'
           isNullable: true
         serializedName: getReport
         url: /report/azure
     name:
+      $id: '33'
       fixed: false
       raw: ''
     nameForProperty: AutoRestReportServiceForAzure
     typeName:
+      $id: '34'
       fixed: false

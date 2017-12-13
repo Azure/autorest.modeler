@@ -60,11 +60,12 @@ namespace AutoRest.Modeler
             var codeModel = modeler.Build(serviceDefinition);
 
             var modelAsJson = JsonConvert.SerializeObject(codeModel, new JsonSerializerSettings
-                {
-                    Converters = { new StringEnumConverter { CamelCaseText = true } },
-                    NullValueHandling = NullValueHandling.Ignore,
-                    ContractResolver = CodeModelContractResolver.Instance
-                });
+            {
+                Converters = { new StringEnumConverter { CamelCaseText = true } },
+                NullValueHandling = NullValueHandling.Ignore,
+                ContractResolver = CodeModelContractResolver.Instance,
+                PreserveReferencesHandling = PreserveReferencesHandling.Objects
+            });
 
             WriteFile("code-model-v1.yaml", modelAsJson, null);
 

@@ -1,62 +1,72 @@
 ---
+$id: '1'
 apiVersion: 1.0.0
 baseUrl: 'http://localhost:3000'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
-  - $ref: '1'
+  - $ref: '2'
 modelTypes:
-  - $id: '1'
+  - $id: '2'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '15'
       fixed: false
       raw: Error
     properties:
-      - $id: '2'
+      - $id: '3'
         collectionFormat: none
         defaultValue:
+          $id: '4'
           fixed: false
         deprecated: false
         documentation:
+          $id: '5'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
+          $id: '7'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
+            $id: '8'
             fixed: false
             raw: Int
         name:
+          $id: '6'
           fixed: false
           raw: status
         realPath:
           - status
         serializedName: status
-      - $id: '4'
+      - $id: '9'
         collectionFormat: none
         defaultValue:
+          $id: '10'
           fixed: false
         deprecated: false
         documentation:
+          $id: '11'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
+          $id: '13'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '14'
             fixed: false
             raw: String
         name:
+          $id: '12'
           fixed: false
           raw: message
         realPath:
@@ -67,20 +77,25 @@ modelsName: Models
 name: AutoRestDurationTestService
 namespace: ''
 operations:
-  - methods:
-      - defaultResponse:
+  - $id: '16'
+    methods:
+      - $id: '17'
+        defaultResponse:
+          $id: '23'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get null duration value
         group:
+          $id: '19'
           fixed: false
           raw: duration
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '18'
           fixed: false
           raw: getNull
         requestContentType: application/json; charset=utf-8
@@ -88,46 +103,55 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '20'
             body:
-              $id: '6'
+              $id: '21'
               $type: PrimaryType
               deprecated: false
               format: duration
               knownPrimaryType: timeSpan
               name:
+                $id: '22'
                 fixed: false
                 raw: TimeSpan
             isNullable: true
         returnType:
+          $id: '24'
           body:
-            $ref: '6'
+            $ref: '21'
           isNullable: true
         serializedName: duration_getNull
         url: /duration/null
-      - defaultResponse:
+      - $id: '25'
+        defaultResponse:
+          $id: '35'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Put a positive duration value
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '33'
           fixed: false
           raw: duration
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '32'
           fixed: false
           raw: putPositiveDuration
         parameters:
-          - $id: '7'
+          - $id: '26'
             collectionFormat: none
             defaultValue:
+              $id: '27'
               fixed: false
             deprecated: false
             documentation:
+              $id: '28'
               fixed: false
             extensions:
               x-ms-requestBody-name: durationBody
@@ -135,15 +159,17 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '8'
+              $id: '30'
               $type: PrimaryType
               deprecated: false
               format: duration
               knownPrimaryType: timeSpan
               name:
+                $id: '31'
                 fixed: false
                 raw: TimeSpan
             name:
+              $id: '29'
               fixed: false
               raw: durationBody
             serializedName: durationBody
@@ -152,24 +178,30 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '34'
             isNullable: true
         returnType:
+          $id: '36'
           isNullable: true
         serializedName: duration_putPositiveDuration
         url: /duration/positiveduration
-      - defaultResponse:
+      - $id: '37'
+        defaultResponse:
+          $id: '43'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get a positive duration value
         group:
+          $id: '39'
           fixed: false
           raw: duration
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '38'
           fixed: false
           raw: getPositiveDuration
         requestContentType: application/json; charset=utf-8
@@ -177,35 +209,42 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '40'
             body:
-              $id: '9'
+              $id: '41'
               $type: PrimaryType
               deprecated: false
               format: duration
               knownPrimaryType: timeSpan
               name:
+                $id: '42'
                 fixed: false
                 raw: TimeSpan
             isNullable: true
         returnType:
+          $id: '44'
           body:
-            $ref: '9'
+            $ref: '41'
           isNullable: true
         serializedName: duration_getPositiveDuration
         url: /duration/positiveduration
-      - defaultResponse:
+      - $id: '45'
+        defaultResponse:
+          $id: '51'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get an invalid duration value
         group:
+          $id: '47'
           fixed: false
           raw: duration
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '46'
           fixed: false
           raw: getInvalid
         requestContentType: application/json; charset=utf-8
@@ -213,25 +252,30 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '48'
             body:
-              $id: '10'
+              $id: '49'
               $type: PrimaryType
               deprecated: false
               format: duration
               knownPrimaryType: timeSpan
               name:
+                $id: '50'
                 fixed: false
                 raw: TimeSpan
             isNullable: true
         returnType:
+          $id: '52'
           body:
-            $ref: '10'
+            $ref: '49'
           isNullable: true
         serializedName: duration_getInvalid
         url: /duration/invalid
     name:
+      $id: '53'
       fixed: false
       raw: Duration
     nameForProperty: Duration
     typeName:
+      $id: '54'
       fixed: false

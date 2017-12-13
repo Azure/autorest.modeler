@@ -1,385 +1,85 @@
 ---
+$id: '1'
 apiVersion: 1.0.0
 baseUrl: 'http://localhost:3000'
 documentation: Resource Flattening for AutoRest
 errorTypes:
-  - $ref: '1'
+  - $ref: '2'
 modelTypes:
-  - $id: '1'
+  - $id: '2'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '19'
       fixed: false
       raw: Error
     properties:
-      - $id: '2'
+      - $id: '3'
         collectionFormat: none
         defaultValue:
+          $id: '4'
           fixed: false
         deprecated: false
         documentation:
+          $id: '5'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
+          $id: '7'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
+            $id: '8'
             fixed: false
             raw: Int
         name:
+          $id: '6'
           fixed: false
           raw: status
         realPath:
           - status
         serializedName: status
-      - $id: '4'
+      - $id: '9'
         collectionFormat: none
         defaultValue:
+          $id: '10'
           fixed: false
         deprecated: false
         documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '5'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: message
-        realPath:
-          - message
-        serializedName: message
-      - $id: '6'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-        extensions:
-          x-ms-client-flatten: true
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $ref: '1'
-        name:
-          fixed: false
-          raw: parentError
-        realPath:
-          - parentError
-        serializedName: parentError
-    serializedName: Error
-  - $id: '7'
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    name:
-      fixed: false
-      raw: Resource
-    properties:
-      - $id: '8'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: Resource Id
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '9'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: id
-        realPath:
-          - id
-        serializedName: id
-      - $id: '10'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: Resource Type
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
           $id: '11'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: type
-        realPath:
-          - type
-        serializedName: type
-      - $id: '12'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
           $id: '13'
-          $type: DictionaryType
+          $type: PrimaryType
           deprecated: false
+          knownPrimaryType: string
           name:
-            fixed: false
-          supportsAdditionalProperties: false
-          valueType:
             $id: '14'
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
+            fixed: false
+            raw: String
         name:
+          $id: '12'
           fixed: false
-          raw: tags
+          raw: message
         realPath:
-          - tags
-        serializedName: tags
+          - message
+        serializedName: message
       - $id: '15'
         collectionFormat: none
         defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: Resource Location
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
           $id: '16'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: location
-        realPath:
-          - location
-        serializedName: location
-      - $id: '17'
-        collectionFormat: none
-        defaultValue:
           fixed: false
         deprecated: false
         documentation:
-          fixed: false
-          raw: Resource Name
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '18'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: name
-        realPath:
-          - name
-        serializedName: name
-    serializedName: Resource
-  - $id: '19'
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    extensions:
-      x-ms-client-flatten: true
-    name:
-      fixed: false
-      raw: FlattenedProduct_properties
-    properties:
-      - $id: '20'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '21'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: p.name
-        realPath:
-          - p.name
-        serializedName: p.name
-      - $id: '22'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '23'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: type
-        realPath:
-          - type
-        serializedName: type
-      - $id: '24'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '25'
-          $type: EnumType
-          deprecated: false
-          modelAsExtensible: false
-          modelAsString: true
-          name:
-            fixed: false
-            raw: ''
-          underlyingType:
-            $id: '26'
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
-          values:
-            - name: Succeeded
-              serializedName: Succeeded
-            - name: Failed
-              serializedName: Failed
-            - name: canceled
-              serializedName: canceled
-            - name: Accepted
-              serializedName: Accepted
-            - name: Creating
-              serializedName: Creating
-            - name: Created
-              serializedName: Created
-            - name: Updating
-              serializedName: Updating
-            - name: Updated
-              serializedName: Updated
-            - name: Deleting
-              serializedName: Deleting
-            - name: Deleted
-              serializedName: Deleted
-            - name: OK
-              serializedName: OK
-        name:
-          fixed: false
-          raw: provisioningStateValues
-        realPath:
-          - provisioningStateValues
-        serializedName: provisioningStateValues
-      - $id: '27'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '28'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: provisioningState
-        realPath:
-          - provisioningState
-        serializedName: provisioningState
-    serializedName: FlattenedProduct_properties
-  - $id: '29'
-    $type: CompositeType
-    baseModelType:
-      $ref: '7'
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Flattened product.
-    externalDocsUrl: 'http://tempuri.org'
-    name:
-      fixed: false
-      raw: FlattenedProduct
-    properties:
-      - $id: '30'
-        collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
+          $id: '17'
           fixed: false
         extensions:
           x-ms-client-flatten: true
@@ -387,105 +87,488 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $ref: '19'
+          $ref: '2'
         name:
+          $id: '18'
+          fixed: false
+          raw: parentError
+        realPath:
+          - parentError
+        serializedName: parentError
+    serializedName: Error
+  - $id: '20'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '53'
+      fixed: false
+      raw: Resource
+    properties:
+      - $id: '21'
+        collectionFormat: none
+        defaultValue:
+          $id: '22'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '23'
+          fixed: false
+          raw: Resource Id
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $id: '25'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '26'
+            fixed: false
+            raw: String
+        name:
+          $id: '24'
+          fixed: false
+          raw: id
+        realPath:
+          - id
+        serializedName: id
+      - $id: '27'
+        collectionFormat: none
+        defaultValue:
+          $id: '28'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '29'
+          fixed: false
+          raw: Resource Type
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $id: '31'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '32'
+            fixed: false
+            raw: String
+        name:
+          $id: '30'
+          fixed: false
+          raw: type
+        realPath:
+          - type
+        serializedName: type
+      - $id: '33'
+        collectionFormat: none
+        defaultValue:
+          $id: '34'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '35'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '37'
+          $type: DictionaryType
+          deprecated: false
+          name:
+            $id: '40'
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $id: '38'
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: string
+            name:
+              $id: '39'
+              fixed: false
+              raw: String
+        name:
+          $id: '36'
+          fixed: false
+          raw: tags
+        realPath:
+          - tags
+        serializedName: tags
+      - $id: '41'
+        collectionFormat: none
+        defaultValue:
+          $id: '42'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '43'
+          fixed: false
+          raw: Resource Location
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '45'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '46'
+            fixed: false
+            raw: String
+        name:
+          $id: '44'
+          fixed: false
+          raw: location
+        realPath:
+          - location
+        serializedName: location
+      - $id: '47'
+        collectionFormat: none
+        defaultValue:
+          $id: '48'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '49'
+          fixed: false
+          raw: Resource Name
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $id: '51'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '52'
+            fixed: false
+            raw: String
+        name:
+          $id: '50'
+          fixed: false
+          raw: name
+        realPath:
+          - name
+        serializedName: name
+    serializedName: Resource
+  - $id: '54'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    extensions:
+      x-ms-client-flatten: true
+    name:
+      $id: '92'
+      fixed: false
+      raw: FlattenedProduct_properties
+    properties:
+      - $id: '55'
+        collectionFormat: none
+        defaultValue:
+          $id: '56'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '57'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '59'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '60'
+            fixed: false
+            raw: String
+        name:
+          $id: '58'
+          fixed: false
+          raw: p.name
+        realPath:
+          - p.name
+        serializedName: p.name
+      - $id: '61'
+        collectionFormat: none
+        defaultValue:
+          $id: '62'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '63'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '65'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '66'
+            fixed: false
+            raw: String
+        name:
+          $id: '64'
+          fixed: false
+          raw: type
+        realPath:
+          - type
+        serializedName: type
+      - $id: '67'
+        collectionFormat: none
+        defaultValue:
+          $id: '68'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '69'
+          fixed: false
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $id: '71'
+          $type: EnumType
+          deprecated: false
+          modelAsExtensible: false
+          modelAsString: true
+          name:
+            $id: '85'
+            fixed: false
+            raw: ''
+          underlyingType:
+            $id: '83'
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: string
+            name:
+              $id: '84'
+              fixed: false
+              raw: String
+          values:
+            - $id: '72'
+              name: Succeeded
+              serializedName: Succeeded
+            - $id: '73'
+              name: Failed
+              serializedName: Failed
+            - $id: '74'
+              name: canceled
+              serializedName: canceled
+            - $id: '75'
+              name: Accepted
+              serializedName: Accepted
+            - $id: '76'
+              name: Creating
+              serializedName: Creating
+            - $id: '77'
+              name: Created
+              serializedName: Created
+            - $id: '78'
+              name: Updating
+              serializedName: Updating
+            - $id: '79'
+              name: Updated
+              serializedName: Updated
+            - $id: '80'
+              name: Deleting
+              serializedName: Deleting
+            - $id: '81'
+              name: Deleted
+              serializedName: Deleted
+            - $id: '82'
+              name: OK
+              serializedName: OK
+        name:
+          $id: '70'
+          fixed: false
+          raw: provisioningStateValues
+        realPath:
+          - provisioningStateValues
+        serializedName: provisioningStateValues
+      - $id: '86'
+        collectionFormat: none
+        defaultValue:
+          $id: '87'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '88'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '90'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '91'
+            fixed: false
+            raw: String
+        name:
+          $id: '89'
+          fixed: false
+          raw: provisioningState
+        realPath:
+          - provisioningState
+        serializedName: provisioningState
+    serializedName: FlattenedProduct_properties
+  - $id: '93'
+    $type: CompositeType
+    baseModelType:
+      $ref: '20'
+    containsConstantProperties: false
+    deprecated: false
+    documentation: Flattened product.
+    externalDocsUrl: 'http://tempuri.org'
+    name:
+      $id: '98'
+      fixed: false
+      raw: FlattenedProduct
+    properties:
+      - $id: '94'
+        collectionFormat: none
+        defaultValue:
+          $id: '95'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '96'
+          fixed: false
+        extensions:
+          x-ms-client-flatten: true
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $ref: '54'
+        name:
+          $id: '97'
           fixed: false
           raw: properties
         realPath:
           - properties
         serializedName: properties
     serializedName: FlattenedProduct
-  - $id: '31'
+  - $id: '99'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '116'
       fixed: false
       raw: ResourceCollection
     properties:
-      - $id: '32'
+      - $id: '100'
         collectionFormat: none
         defaultValue:
+          $id: '101'
           fixed: false
         deprecated: false
         documentation:
+          $id: '102'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $ref: '29'
+          $ref: '93'
         name:
+          $id: '103'
           fixed: false
           raw: productresource
         realPath:
           - productresource
         serializedName: productresource
-      - $id: '33'
+      - $id: '104'
         collectionFormat: none
         defaultValue:
+          $id: '105'
           fixed: false
         deprecated: false
         documentation:
+          $id: '106'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '34'
+          $id: '108'
           $type: SequenceType
           deprecated: false
           elementType:
-            $ref: '29'
+            $ref: '93'
           name:
+            $id: '109'
             fixed: false
         name:
+          $id: '107'
           fixed: false
           raw: arrayofresources
         realPath:
           - arrayofresources
         serializedName: arrayofresources
-      - $id: '35'
+      - $id: '110'
         collectionFormat: none
         defaultValue:
+          $id: '111'
           fixed: false
         deprecated: false
         documentation:
+          $id: '112'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '36'
+          $id: '114'
           $type: DictionaryType
           deprecated: false
           name:
+            $id: '115'
             fixed: false
           supportsAdditionalProperties: false
           valueType:
-            $ref: '29'
+            $ref: '93'
         name:
+          $id: '113'
           fixed: false
           raw: dictionaryofresources
         realPath:
           - dictionaryofresources
         serializedName: dictionaryofresources
     serializedName: ResourceCollection
-  - $id: '37'
+  - $id: '117'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     documentation: The product documentation.
     name:
+      $id: '130'
       fixed: false
       raw: BaseProduct
     properties:
-      - $id: '38'
+      - $id: '118'
         collectionFormat: none
         defaultValue:
+          $id: '119'
           fixed: false
         deprecated: false
         documentation:
+          $id: '120'
           fixed: false
           raw: >-
             Unique identifier representing a specific product for a given
@@ -497,25 +580,29 @@ modelTypes:
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '39'
+          $id: '122'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '123'
             fixed: false
             raw: String
         name:
+          $id: '121'
           fixed: false
           raw: base_product_id
         realPath:
           - base_product_id
         serializedName: base_product_id
-      - $id: '40'
+      - $id: '124'
         collectionFormat: none
         defaultValue:
+          $id: '125'
           fixed: false
         deprecated: false
         documentation:
+          $id: '126'
           fixed: false
           raw: Description of product.
         extensions:
@@ -524,52 +611,59 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '41'
+          $id: '128'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '129'
             fixed: false
             raw: String
         name:
+          $id: '127'
           fixed: false
           raw: base_product_description
         realPath:
           - base_product_description
         serializedName: base_product_description
     serializedName: BaseProduct
-  - $id: '42'
+  - $id: '131'
     $type: CompositeType
     baseModelType:
-      $id: '45'
+      $id: '138'
       $type: CompositeType
       containsConstantProperties: false
       deprecated: false
       documentation: The Generic URL.
       name:
+        $id: '145'
         fixed: false
         raw: GenericUrl
       properties:
-        - $id: '46'
+        - $id: '139'
           collectionFormat: none
           defaultValue:
+            $id: '140'
             fixed: false
           deprecated: false
           documentation:
+            $id: '141'
             fixed: false
             raw: Generic URL value.
           isConstant: false
           isReadOnly: false
           isRequired: false
           modelType:
-            $id: '47'
+            $id: '143'
             $type: PrimaryType
             deprecated: false
             knownPrimaryType: string
             name:
+              $id: '144'
               fixed: false
               raw: String
           name:
+            $id: '142'
             fixed: false
             raw: generic_value
           realPath:
@@ -580,76 +674,88 @@ modelTypes:
     deprecated: false
     documentation: The product URL.
     name:
+      $id: '146'
       fixed: false
       raw: ProductUrl
     properties:
-      - $id: '43'
+      - $id: '132'
         collectionFormat: none
         defaultValue:
+          $id: '133'
           fixed: false
         deprecated: false
         documentation:
+          $id: '134'
           fixed: false
           raw: URL value.
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '44'
+          $id: '136'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '137'
             fixed: false
             raw: String
         name:
+          $id: '135'
           fixed: false
           raw: '@odata.value'
         realPath:
           - '@odata.value'
         serializedName: '@odata.value'
     serializedName: ProductUrl
-  - $id: '48'
+  - $id: '147'
     $type: CompositeType
     containsConstantProperties: true
     deprecated: false
     documentation: The product documentation.
     name:
+      $id: '164'
       fixed: false
       raw: SimpleProductProperties
     properties:
-      - $id: '49'
+      - $id: '148'
         collectionFormat: none
         defaultValue:
+          $id: '149'
           fixed: false
         deprecated: false
         documentation:
+          $id: '150'
           fixed: false
           raw: Display name of product.
         isConstant: false
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '50'
+          $id: '152'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '153'
             fixed: false
             raw: String
         name:
+          $id: '151'
           fixed: false
           raw: max_product_display_name
         realPath:
           - max_product_display_name
         serializedName: max_product_display_name
-      - $id: '51'
+      - $id: '154'
         collectionFormat: none
         defaultValue:
+          $id: '155'
           fixed: false
           raw: Large
         deprecated: false
         documentation:
+          $id: '156'
           fixed: false
           raw: 'Capacity of product. For example, 4 people.'
         extensions:
@@ -658,25 +764,29 @@ modelTypes:
         isReadOnly: false
         isRequired: true
         modelType:
-          $id: '52'
+          $id: '158'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '159'
             fixed: false
             raw: String
         name:
+          $id: '157'
           fixed: false
           raw: max_product_capacity
         realPath:
           - max_product_capacity
         serializedName: max_product_capacity
-      - $id: '53'
+      - $id: '160'
         collectionFormat: none
         defaultValue:
+          $id: '161'
           fixed: false
         deprecated: false
         documentation:
+          $id: '162'
           fixed: false
         extensions:
           x-ms-client-flatten: true
@@ -684,31 +794,35 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $ref: '42'
+          $ref: '131'
         name:
+          $id: '163'
           fixed: false
           raw: max_product_image
         realPath:
           - max_product_image
         serializedName: max_product_image
     serializedName: SimpleProductProperties
-  - $id: '54'
+  - $id: '165'
     $type: CompositeType
     baseModelType:
-      $ref: '37'
+      $ref: '117'
     containsConstantProperties: true
     deprecated: false
     documentation: The product documentation.
     name:
+      $id: '170'
       fixed: false
       raw: SimpleProduct
     properties:
-      - $id: '55'
+      - $id: '166'
         collectionFormat: none
         defaultValue:
+          $id: '167'
           fixed: false
         deprecated: false
         documentation:
+          $id: '168'
           fixed: false
         extensions:
           x-ms-client-flatten: true
@@ -716,65 +830,74 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $ref: '48'
+          $ref: '147'
         name:
+          $id: '169'
           fixed: false
           raw: details
         realPath:
           - details
         serializedName: details
     serializedName: SimpleProduct
-  - $ref: '45'
-  - $id: '56'
+  - $ref: '138'
+  - $id: '171'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     documentation: The wrapped produc.
     name:
+      $id: '178'
       fixed: false
       raw: WrappedProduct
     properties:
-      - $id: '57'
+      - $id: '172'
         collectionFormat: none
         defaultValue:
+          $id: '173'
           fixed: false
         deprecated: false
         documentation:
+          $id: '174'
           fixed: false
           raw: the product value
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '58'
+          $id: '176'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '177'
             fixed: false
             raw: String
         name:
+          $id: '175'
           fixed: false
           raw: value
         realPath:
           - value
         serializedName: value
     serializedName: WrappedProduct
-  - $id: '59'
+  - $id: '179'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     documentation: The wrapped produc.
     name:
+      $id: '184'
       fixed: false
       raw: ProductWrapper
     properties:
-      - $id: '60'
+      - $id: '180'
         collectionFormat: none
         defaultValue:
+          $id: '181'
           fixed: false
         deprecated: false
         documentation:
+          $id: '182'
           fixed: false
         extensions:
           x-ms-client-flatten: true
@@ -782,8 +905,9 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $ref: '56'
+          $ref: '171'
         name:
+          $id: '183'
           fixed: false
           raw: property
         realPath:
@@ -794,10 +918,13 @@ modelsName: Models
 name: AutoRestResourceFlatteningTestService
 namespace: ''
 operations:
-  - methods:
-      - defaultResponse:
+  - $id: '185'
+    methods:
+      - $id: '186'
+        defaultResponse:
+          $id: '196'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Put External Resource as an Array
@@ -805,21 +932,25 @@ operations:
           x-ms-requestBody-index: '0'
         externalDocsUrl: 'http://tempuri.org'
         group:
+          $id: '194'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '193'
           fixed: false
           raw: putArray
         parameters:
-          - $id: '61'
+          - $id: '187'
             collectionFormat: csv
             defaultValue:
+              $id: '188'
               fixed: false
             deprecated: false
             documentation:
+              $id: '189'
               fixed: false
               raw: External Resource as an Array to put
             extensions:
@@ -828,14 +959,16 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '62'
+              $id: '191'
               $type: SequenceType
               deprecated: false
               elementType:
-                $ref: '7'
+                $ref: '20'
               name:
+                $id: '192'
                 fixed: false
             name:
+              $id: '190'
               fixed: false
               raw: ResourceArray
             serializedName: ResourceArray
@@ -844,25 +977,31 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '195'
             isNullable: true
         returnType:
+          $id: '197'
           isNullable: true
         serializedName: putArray
         url: /model-flatten/array
-      - defaultResponse:
+      - $id: '198'
+        defaultResponse:
+          $id: '204'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get External Resource as an Array
         externalDocsUrl: 'http://tempuri.org'
         group:
+          $id: '200'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '199'
           fixed: false
           raw: getArray
         requestContentType: application/json; charset=utf-8
@@ -870,24 +1009,29 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '201'
             body:
-              $id: '63'
+              $id: '202'
               $type: SequenceType
               deprecated: false
               elementType:
-                $ref: '29'
+                $ref: '93'
               name:
+                $id: '203'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '205'
           body:
-            $ref: '63'
+            $ref: '202'
           isNullable: true
         serializedName: getArray
         url: /model-flatten/array
-      - defaultResponse:
+      - $id: '206'
+        defaultResponse:
+          $id: '216'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -898,21 +1042,25 @@ operations:
           x-ms-requestBody-index: '0'
         externalDocsUrl: 'http://tempuri.org'
         group:
+          $id: '214'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '213'
           fixed: false
           raw: putWrappedArray
         parameters:
-          - $id: '64'
+          - $id: '207'
             collectionFormat: csv
             defaultValue:
+              $id: '208'
               fixed: false
             deprecated: false
             documentation:
+              $id: '209'
               fixed: false
               raw: External Resource as an Array to put
             extensions:
@@ -921,14 +1069,16 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '65'
+              $id: '211'
               $type: SequenceType
               deprecated: false
               elementType:
-                $ref: '56'
+                $ref: '171'
               name:
+                $id: '212'
                 fixed: false
             name:
+              $id: '210'
               fixed: false
               raw: ResourceArray
             serializedName: ResourceArray
@@ -937,14 +1087,18 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '215'
             isNullable: true
         returnType:
+          $id: '217'
           isNullable: true
         serializedName: putWrappedArray
         url: /model-flatten/wrappedarray
-      - defaultResponse:
+      - $id: '218'
+        defaultResponse:
+          $id: '224'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -953,12 +1107,14 @@ operations:
           array
         externalDocsUrl: 'http://tempuri.org'
         group:
+          $id: '220'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '219'
           fixed: false
           raw: getWrappedArray
         requestContentType: application/json; charset=utf-8
@@ -966,24 +1122,29 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '221'
             body:
-              $id: '66'
+              $id: '222'
               $type: SequenceType
               deprecated: false
               elementType:
-                $ref: '59'
+                $ref: '179'
               name:
+                $id: '223'
                 fixed: false
             isNullable: true
         returnType:
+          $id: '225'
           body:
-            $ref: '66'
+            $ref: '222'
           isNullable: true
         serializedName: getWrappedArray
         url: /model-flatten/wrappedarray
-      - defaultResponse:
+      - $id: '226'
+        defaultResponse:
+          $id: '236'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Put External Resource as a Dictionary
@@ -991,21 +1152,25 @@ operations:
           x-ms-requestBody-index: '0'
         externalDocsUrl: 'http://tempuri.org'
         group:
+          $id: '234'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '233'
           fixed: false
           raw: putDictionary
         parameters:
-          - $id: '67'
+          - $id: '227'
             collectionFormat: none
             defaultValue:
+              $id: '228'
               fixed: false
             deprecated: false
             documentation:
+              $id: '229'
               fixed: false
               raw: External Resource as a Dictionary to put
             extensions:
@@ -1014,15 +1179,17 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '68'
+              $id: '231'
               $type: DictionaryType
               deprecated: false
               name:
+                $id: '232'
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $ref: '29'
+                $ref: '93'
             name:
+              $id: '230'
               fixed: false
               raw: ResourceDictionary
             serializedName: ResourceDictionary
@@ -1031,25 +1198,31 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '235'
             isNullable: true
         returnType:
+          $id: '237'
           isNullable: true
         serializedName: putDictionary
         url: /model-flatten/dictionary
-      - defaultResponse:
+      - $id: '238'
+        defaultResponse:
+          $id: '244'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get External Resource as a Dictionary
         externalDocsUrl: 'http://tempuri.org'
         group:
+          $id: '240'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '239'
           fixed: false
           raw: getDictionary
         requestContentType: application/json; charset=utf-8
@@ -1057,25 +1230,30 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '241'
             body:
-              $id: '69'
+              $id: '242'
               $type: DictionaryType
               deprecated: false
               name:
+                $id: '243'
                 fixed: false
               supportsAdditionalProperties: false
               valueType:
-                $ref: '29'
+                $ref: '93'
             isNullable: true
         returnType:
+          $id: '245'
           body:
-            $ref: '69'
+            $ref: '242'
           isNullable: true
         serializedName: getDictionary
         url: /model-flatten/dictionary
-      - defaultResponse:
+      - $id: '246'
+        defaultResponse:
+          $id: '254'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Put External Resource as a ResourceCollection
@@ -1083,21 +1261,25 @@ operations:
           x-ms-requestBody-index: '0'
         externalDocsUrl: 'http://tempuri.org'
         group:
+          $id: '252'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '251'
           fixed: false
           raw: putResourceCollection
         parameters:
-          - $id: '70'
+          - $id: '247'
             collectionFormat: none
             defaultValue:
+              $id: '248'
               fixed: false
             deprecated: false
             documentation:
+              $id: '249'
               fixed: false
               raw: External Resource as a ResourceCollection to put
             extensions:
@@ -1106,8 +1288,9 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $ref: '31'
+              $ref: '99'
             name:
+              $id: '250'
               fixed: false
               raw: ResourceComplexObject
             serializedName: ResourceComplexObject
@@ -1116,25 +1299,31 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '253'
             isNullable: true
         returnType:
+          $id: '255'
           isNullable: true
         serializedName: putResourceCollection
         url: /model-flatten/resourcecollection
-      - defaultResponse:
+      - $id: '256'
+        defaultResponse:
+          $id: '260'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get External Resource as a ResourceCollection
         externalDocsUrl: 'http://tempuri.org'
         group:
+          $id: '258'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '257'
           fixed: false
           raw: getResourceCollection
         requestContentType: application/json; charset=utf-8
@@ -1142,18 +1331,22 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '259'
             body:
-              $ref: '31'
+              $ref: '99'
             isNullable: true
         returnType:
+          $id: '261'
           body:
-            $ref: '31'
+            $ref: '99'
           isNullable: true
         serializedName: getResourceCollection
         url: /model-flatten/resourcecollection
-      - defaultResponse:
+      - $id: '262'
+        defaultResponse:
+          $id: '270'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Put Simple Product with client flattening true on the model
@@ -1161,21 +1354,25 @@ operations:
           x-ms-requestBody-index: '0'
         externalDocsUrl: 'http://tempuri.org'
         group:
+          $id: '268'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '267'
           fixed: false
           raw: putSimpleProduct
         parameters:
-          - $id: '71'
+          - $id: '263'
             collectionFormat: none
             defaultValue:
+              $id: '264'
               fixed: false
             deprecated: false
             documentation:
+              $id: '265'
               fixed: false
               raw: Simple body product to put
             extensions:
@@ -1184,8 +1381,9 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $ref: '54'
+              $ref: '165'
             name:
+              $id: '266'
               fixed: false
               raw: SimpleBodyProduct
             serializedName: SimpleBodyProduct
@@ -1194,18 +1392,22 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '269'
             body:
-              $ref: '54'
+              $ref: '165'
             isNullable: true
         returnType:
+          $id: '271'
           body:
-            $ref: '54'
+            $ref: '165'
           isNullable: true
         serializedName: putSimpleProduct
         url: /model-flatten/customFlattening
-      - defaultResponse:
+      - $id: '272'
+        defaultResponse:
+          $id: '280'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -1215,21 +1417,25 @@ operations:
           x-ms-requestBody-index: '0'
         externalDocsUrl: 'http://tempuri.org'
         group:
+          $id: '278'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
+          $id: '277'
           fixed: false
           raw: postFlattenedSimpleProduct
         parameters:
-          - $id: '72'
+          - $id: '273'
             collectionFormat: none
             defaultValue:
+              $id: '274'
               fixed: false
             deprecated: false
             documentation:
+              $id: '275'
               fixed: false
               raw: Simple body product to post
             extensions:
@@ -1239,8 +1445,9 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $ref: '54'
+              $ref: '165'
             name:
+              $id: '276'
               fixed: false
               raw: SimpleBodyProduct
             serializedName: SimpleBodyProduct
@@ -1249,18 +1456,22 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '279'
             body:
-              $ref: '54'
+              $ref: '165'
             isNullable: true
         returnType:
+          $id: '281'
           body:
-            $ref: '54'
+            $ref: '165'
           isNullable: true
         serializedName: postFlattenedSimpleProduct
         url: /model-flatten/customFlattening
-      - defaultResponse:
+      - $id: '282'
+        defaultResponse:
+          $id: '296'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Put Simple Product with client flattening true on the model
@@ -1268,21 +1479,25 @@ operations:
           x-ms-requestBody-index: '0'
         externalDocsUrl: 'http://tempuri.org'
         group:
+          $id: '294'
           fixed: false
           raw: ''
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '293'
           fixed: false
           raw: putSimpleProductWithGrouping
         parameters:
-          - $id: '73'
+          - $id: '283'
             collectionFormat: none
             defaultValue:
+              $id: '284'
               fixed: false
             deprecated: false
             documentation:
+              $id: '285'
               fixed: false
               raw: Simple body product to put
             extensions:
@@ -1294,17 +1509,20 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $ref: '54'
+              $ref: '165'
             name:
+              $id: '286'
               fixed: false
               raw: SimpleBodyProduct
             serializedName: SimpleBodyProduct
-          - $id: '74'
+          - $id: '287'
             collectionFormat: none
             defaultValue:
+              $id: '288'
               fixed: false
             deprecated: false
             documentation:
+              $id: '289'
               fixed: false
               raw: Product name with value 'groupproduct'
             extensions:
@@ -1314,14 +1532,16 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '75'
+              $id: '291'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '292'
                 fixed: false
                 raw: String
             name:
+              $id: '290'
               fixed: false
               raw: name
             serializedName: name
@@ -1330,18 +1550,22 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '295'
             body:
-              $ref: '54'
+              $ref: '165'
             isNullable: true
         returnType:
+          $id: '297'
           body:
-            $ref: '54'
+            $ref: '165'
           isNullable: true
         serializedName: putSimpleProductWithGrouping
         url: '/model-flatten/customFlattening/parametergrouping/{name}/'
     name:
+      $id: '298'
       fixed: false
       raw: ''
     nameForProperty: AutoRestResourceFlatteningTestService
     typeName:
+      $id: '299'
       fixed: false

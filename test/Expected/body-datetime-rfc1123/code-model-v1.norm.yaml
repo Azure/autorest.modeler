@@ -1,62 +1,72 @@
 ---
+$id: '1'
 apiVersion: 1.0.0
 baseUrl: 'http://localhost:3000'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
-  - $ref: '1'
+  - $ref: '2'
 modelTypes:
-  - $id: '1'
+  - $id: '2'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '15'
       fixed: false
       raw: Error
     properties:
-      - $id: '2'
+      - $id: '3'
         collectionFormat: none
         defaultValue:
+          $id: '4'
           fixed: false
         deprecated: false
         documentation:
+          $id: '5'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
+          $id: '7'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
+            $id: '8'
             fixed: false
             raw: Int
         name:
+          $id: '6'
           fixed: false
           raw: status
         realPath:
           - status
         serializedName: status
-      - $id: '4'
+      - $id: '9'
         collectionFormat: none
         defaultValue:
+          $id: '10'
           fixed: false
         deprecated: false
         documentation:
+          $id: '11'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
+          $id: '13'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '14'
             fixed: false
             raw: String
         name:
+          $id: '12'
           fixed: false
           raw: message
         realPath:
@@ -67,20 +77,25 @@ modelsName: Models
 name: AutoRestRFC1123DateTimeTestService
 namespace: ''
 operations:
-  - methods:
-      - defaultResponse:
+  - $id: '16'
+    methods:
+      - $id: '17'
+        defaultResponse:
+          $id: '23'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get null datetime value
         group:
+          $id: '19'
           fixed: false
           raw: datetimerfc1123
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '18'
           fixed: false
           raw: getNull
         requestContentType: application/json; charset=utf-8
@@ -88,35 +103,42 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '20'
             body:
-              $id: '6'
+              $id: '21'
               $type: PrimaryType
               deprecated: false
               format: date-time-rfc1123
               knownPrimaryType: dateTimeRfc1123
               name:
+                $id: '22'
                 fixed: false
                 raw: DateTimeRfc1123
             isNullable: true
         returnType:
+          $id: '24'
           body:
-            $ref: '6'
+            $ref: '21'
           isNullable: true
         serializedName: datetimerfc1123_getNull
         url: /datetimerfc1123/null
-      - defaultResponse:
+      - $id: '25'
+        defaultResponse:
+          $id: '31'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get invalid datetime value
         group:
+          $id: '27'
           fixed: false
           raw: datetimerfc1123
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '26'
           fixed: false
           raw: getInvalid
         requestContentType: application/json; charset=utf-8
@@ -124,35 +146,42 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '28'
             body:
-              $id: '7'
+              $id: '29'
               $type: PrimaryType
               deprecated: false
               format: date-time-rfc1123
               knownPrimaryType: dateTimeRfc1123
               name:
+                $id: '30'
                 fixed: false
                 raw: DateTimeRfc1123
             isNullable: true
         returnType:
+          $id: '32'
           body:
-            $ref: '7'
+            $ref: '29'
           isNullable: true
         serializedName: datetimerfc1123_getInvalid
         url: /datetimerfc1123/invalid
-      - defaultResponse:
+      - $id: '33'
+        defaultResponse:
+          $id: '39'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get overflow datetime value
         group:
+          $id: '35'
           fixed: false
           raw: datetimerfc1123
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '34'
           fixed: false
           raw: getOverflow
         requestContentType: application/json; charset=utf-8
@@ -160,35 +189,42 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '36'
             body:
-              $id: '8'
+              $id: '37'
               $type: PrimaryType
               deprecated: false
               format: date-time-rfc1123
               knownPrimaryType: dateTimeRfc1123
               name:
+                $id: '38'
                 fixed: false
                 raw: DateTimeRfc1123
             isNullable: true
         returnType:
+          $id: '40'
           body:
-            $ref: '8'
+            $ref: '37'
           isNullable: true
         serializedName: datetimerfc1123_getOverflow
         url: /datetimerfc1123/overflow
-      - defaultResponse:
+      - $id: '41'
+        defaultResponse:
+          $id: '47'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get underflow datetime value
         group:
+          $id: '43'
           fixed: false
           raw: datetimerfc1123
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '42'
           fixed: false
           raw: getUnderflow
         requestContentType: application/json; charset=utf-8
@@ -196,46 +232,55 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '44'
             body:
-              $id: '9'
+              $id: '45'
               $type: PrimaryType
               deprecated: false
               format: date-time-rfc1123
               knownPrimaryType: dateTimeRfc1123
               name:
+                $id: '46'
                 fixed: false
                 raw: DateTimeRfc1123
             isNullable: true
         returnType:
+          $id: '48'
           body:
-            $ref: '9'
+            $ref: '45'
           isNullable: true
         serializedName: datetimerfc1123_getUnderflow
         url: /datetimerfc1123/underflow
-      - defaultResponse:
+      - $id: '49'
+        defaultResponse:
+          $id: '59'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: 'Put max datetime value Fri, 31 Dec 9999 23:59:59 GMT'
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '57'
           fixed: false
           raw: datetimerfc1123
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '56'
           fixed: false
           raw: putUtcMaxDateTime
         parameters:
-          - $id: '10'
+          - $id: '50'
             collectionFormat: none
             defaultValue:
+              $id: '51'
               fixed: false
             deprecated: false
             documentation:
+              $id: '52'
               fixed: false
             extensions:
               x-ms-requestBody-name: datetimeBody
@@ -243,15 +288,17 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '11'
+              $id: '54'
               $type: PrimaryType
               deprecated: false
               format: date-time-rfc1123
               knownPrimaryType: dateTimeRfc1123
               name:
+                $id: '55'
                 fixed: false
                 raw: DateTimeRfc1123
             name:
+              $id: '53'
               fixed: false
               raw: datetimeBody
             serializedName: datetimeBody
@@ -260,24 +307,30 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '58'
             isNullable: true
         returnType:
+          $id: '60'
           isNullable: true
         serializedName: datetimerfc1123_putUtcMaxDateTime
         url: /datetimerfc1123/max
-      - defaultResponse:
+      - $id: '61'
+        defaultResponse:
+          $id: '67'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: 'Get max datetime value fri, 31 dec 9999 23:59:59 gmt'
         group:
+          $id: '63'
           fixed: false
           raw: datetimerfc1123
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '62'
           fixed: false
           raw: getUtcLowercaseMaxDateTime
         requestContentType: application/json; charset=utf-8
@@ -285,35 +338,42 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '64'
             body:
-              $id: '12'
+              $id: '65'
               $type: PrimaryType
               deprecated: false
               format: date-time-rfc1123
               knownPrimaryType: dateTimeRfc1123
               name:
+                $id: '66'
                 fixed: false
                 raw: DateTimeRfc1123
             isNullable: true
         returnType:
+          $id: '68'
           body:
-            $ref: '12'
+            $ref: '65'
           isNullable: true
         serializedName: datetimerfc1123_getUtcLowercaseMaxDateTime
         url: /datetimerfc1123/max/lowercase
-      - defaultResponse:
+      - $id: '69'
+        defaultResponse:
+          $id: '75'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: 'Get max datetime value FRI, 31 DEC 9999 23:59:59 GMT'
         group:
+          $id: '71'
           fixed: false
           raw: datetimerfc1123
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '70'
           fixed: false
           raw: getUtcUppercaseMaxDateTime
         requestContentType: application/json; charset=utf-8
@@ -321,46 +381,55 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '72'
             body:
-              $id: '13'
+              $id: '73'
               $type: PrimaryType
               deprecated: false
               format: date-time-rfc1123
               knownPrimaryType: dateTimeRfc1123
               name:
+                $id: '74'
                 fixed: false
                 raw: DateTimeRfc1123
             isNullable: true
         returnType:
+          $id: '76'
           body:
-            $ref: '13'
+            $ref: '73'
           isNullable: true
         serializedName: datetimerfc1123_getUtcUppercaseMaxDateTime
         url: /datetimerfc1123/max/uppercase
-      - defaultResponse:
+      - $id: '77'
+        defaultResponse:
+          $id: '87'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: 'Put min datetime value Mon, 1 Jan 0001 00:00:00 GMT'
         extensions:
           x-ms-requestBody-index: '0'
         group:
+          $id: '85'
           fixed: false
           raw: datetimerfc1123
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+          $id: '84'
           fixed: false
           raw: putUtcMinDateTime
         parameters:
-          - $id: '14'
+          - $id: '78'
             collectionFormat: none
             defaultValue:
+              $id: '79'
               fixed: false
             deprecated: false
             documentation:
+              $id: '80'
               fixed: false
             extensions:
               x-ms-requestBody-name: datetimeBody
@@ -368,15 +437,17 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '15'
+              $id: '82'
               $type: PrimaryType
               deprecated: false
               format: date-time-rfc1123
               knownPrimaryType: dateTimeRfc1123
               name:
+                $id: '83'
                 fixed: false
                 raw: DateTimeRfc1123
             name:
+              $id: '81'
               fixed: false
               raw: datetimeBody
             serializedName: datetimeBody
@@ -385,24 +456,30 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '86'
             isNullable: true
         returnType:
+          $id: '88'
           isNullable: true
         serializedName: datetimerfc1123_putUtcMinDateTime
         url: /datetimerfc1123/min
-      - defaultResponse:
+      - $id: '89'
+        defaultResponse:
+          $id: '95'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: 'Get min datetime value Mon, 1 Jan 0001 00:00:00 GMT'
         group:
+          $id: '91'
           fixed: false
           raw: datetimerfc1123
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '90'
           fixed: false
           raw: getUtcMinDateTime
         requestContentType: application/json; charset=utf-8
@@ -410,25 +487,30 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '92'
             body:
-              $id: '16'
+              $id: '93'
               $type: PrimaryType
               deprecated: false
               format: date-time-rfc1123
               knownPrimaryType: dateTimeRfc1123
               name:
+                $id: '94'
                 fixed: false
                 raw: DateTimeRfc1123
             isNullable: true
         returnType:
+          $id: '96'
           body:
-            $ref: '16'
+            $ref: '93'
           isNullable: true
         serializedName: datetimerfc1123_getUtcMinDateTime
         url: /datetimerfc1123/min
     name:
+      $id: '97'
       fixed: false
       raw: Datetimerfc1123
     nameForProperty: Datetimerfc1123
     typeName:
+      $id: '98'
       fixed: false

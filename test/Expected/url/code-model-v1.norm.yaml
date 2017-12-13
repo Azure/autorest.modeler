@@ -1,86 +1,101 @@
 ---
+$id: '1'
 apiVersion: 1.0.0
 baseUrl: 'http://localhost:3000'
 documentation: Test Infrastructure for AutoRest
 enumTypes:
-  - $id: '6'
+  - $id: '16'
     $type: EnumType
     deprecated: false
     modelAsExtensible: false
     modelAsString: false
     name:
+      $id: '22'
       fixed: false
       raw: UriColor
     underlyingType:
-      $id: '7'
+      $id: '20'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
+        $id: '21'
         fixed: false
         raw: String
     values:
-      - name: red color
+      - $id: '17'
+        name: red color
         serializedName: red color
-      - name: green color
+      - $id: '18'
+        name: green color
         serializedName: green color
-      - name: blue color
+      - $id: '19'
+        name: blue color
         serializedName: blue color
 errorTypes:
-  - $ref: '1'
+  - $ref: '2'
 modelTypes:
-  - $id: '1'
+  - $id: '2'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
+      $id: '15'
       fixed: false
       raw: Error
     properties:
-      - $id: '2'
+      - $id: '3'
         collectionFormat: none
         defaultValue:
+          $id: '4'
           fixed: false
         deprecated: false
         documentation:
+          $id: '5'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '3'
+          $id: '7'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
+            $id: '8'
             fixed: false
             raw: Int
         name:
+          $id: '6'
           fixed: false
           raw: status
         realPath:
           - status
         serializedName: status
-      - $id: '4'
+      - $id: '9'
         collectionFormat: none
         defaultValue:
+          $id: '10'
           fixed: false
         deprecated: false
         documentation:
+          $id: '11'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '5'
+          $id: '13'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
+            $id: '14'
             fixed: false
             raw: String
         name:
+          $id: '12'
           fixed: false
           raw: message
         realPath:
@@ -91,44 +106,53 @@ modelsName: Models
 name: AutoRestUrlTestService
 namespace: ''
 operations:
-  - methods:
-      - defaultResponse:
+  - $id: '35'
+    methods:
+      - $id: '36'
+        defaultResponse:
+          $id: '46'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get true Boolean value on path
         group:
+          $id: '44'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '43'
           fixed: false
           raw: getBooleanTrue
         parameters:
-          - $id: '12'
+          - $id: '37'
             collectionFormat: none
             defaultValue:
+              $id: '38'
               fixed: false
               raw: 'true'
             deprecated: false
             documentation:
+              $id: '39'
               fixed: false
               raw: true boolean value
             isConstant: true
             isRequired: true
             location: path
             modelType:
-              $id: '13'
+              $id: '41'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: boolean
               name:
+                $id: '42'
                 fixed: false
                 raw: Boolean
             name:
+              $id: '40'
               fixed: false
               raw: boolPath
             serializedName: boolPath
@@ -137,48 +161,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '45'
             isNullable: true
         returnType:
+          $id: '47'
           isNullable: true
         serializedName: paths_getBooleanTrue
         url: '/paths/bool/true/{boolPath}'
-      - defaultResponse:
+      - $id: '48'
+        defaultResponse:
+          $id: '58'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get false Boolean value on path
         group:
+          $id: '56'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '55'
           fixed: false
           raw: getBooleanFalse
         parameters:
-          - $id: '14'
+          - $id: '49'
             collectionFormat: none
             defaultValue:
+              $id: '50'
               fixed: false
               raw: 'false'
             deprecated: false
             documentation:
+              $id: '51'
               fixed: false
               raw: false boolean value
             isConstant: true
             isRequired: true
             location: path
             modelType:
-              $id: '15'
+              $id: '53'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: boolean
               name:
+                $id: '54'
                 fixed: false
                 raw: Boolean
             name:
+              $id: '52'
               fixed: false
               raw: boolPath
             serializedName: boolPath
@@ -187,48 +221,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '57'
             isNullable: true
         returnType:
+          $id: '59'
           isNullable: true
         serializedName: paths_getBooleanFalse
         url: '/paths/bool/false/{boolPath}'
-      - defaultResponse:
+      - $id: '60'
+        defaultResponse:
+          $id: '70'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '1000000' integer value
         group:
+          $id: '68'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '67'
           fixed: false
           raw: getIntOneMillion
         parameters:
-          - $id: '16'
+          - $id: '61'
             collectionFormat: none
             defaultValue:
+              $id: '62'
               fixed: false
               raw: '1000000'
             deprecated: false
             documentation:
+              $id: '63'
               fixed: false
               raw: '''1000000'' integer value'
             isConstant: true
             isRequired: true
             location: path
             modelType:
-              $id: '17'
+              $id: '65'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: int
               name:
+                $id: '66'
                 fixed: false
                 raw: Int
             name:
+              $id: '64'
               fixed: false
               raw: intPath
             serializedName: intPath
@@ -237,48 +281,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '69'
             isNullable: true
         returnType:
+          $id: '71'
           isNullable: true
         serializedName: paths_getIntOneMillion
         url: '/paths/int/1000000/{intPath}'
-      - defaultResponse:
+      - $id: '72'
+        defaultResponse:
+          $id: '82'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '-1000000' integer value
         group:
+          $id: '80'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '79'
           fixed: false
           raw: getIntNegativeOneMillion
         parameters:
-          - $id: '18'
+          - $id: '73'
             collectionFormat: none
             defaultValue:
+              $id: '74'
               fixed: false
               raw: '-1000000'
             deprecated: false
             documentation:
+              $id: '75'
               fixed: false
               raw: '''-1000000'' integer value'
             isConstant: true
             isRequired: true
             location: path
             modelType:
-              $id: '19'
+              $id: '77'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: int
               name:
+                $id: '78'
                 fixed: false
                 raw: Int
             name:
+              $id: '76'
               fixed: false
               raw: intPath
             serializedName: intPath
@@ -287,49 +341,59 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '81'
             isNullable: true
         returnType:
+          $id: '83'
           isNullable: true
         serializedName: paths_getIntNegativeOneMillion
         url: '/paths/int/-1000000/{intPath}'
-      - defaultResponse:
+      - $id: '84'
+        defaultResponse:
+          $id: '94'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '10000000000' 64 bit integer value
         group:
+          $id: '92'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '91'
           fixed: false
           raw: getTenBillion
         parameters:
-          - $id: '20'
+          - $id: '85'
             collectionFormat: none
             defaultValue:
+              $id: '86'
               fixed: false
               raw: '10000000000'
             deprecated: false
             documentation:
+              $id: '87'
               fixed: false
               raw: '''10000000000'' 64 bit integer value'
             isConstant: true
             isRequired: true
             location: path
             modelType:
-              $id: '21'
+              $id: '89'
               $type: PrimaryType
               deprecated: false
               format: int64
               knownPrimaryType: long
               name:
+                $id: '90'
                 fixed: false
                 raw: Long
             name:
+              $id: '88'
               fixed: false
               raw: longPath
             serializedName: longPath
@@ -338,49 +402,59 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '93'
             isNullable: true
         returnType:
+          $id: '95'
           isNullable: true
         serializedName: paths_getTenBillion
         url: '/paths/long/10000000000/{longPath}'
-      - defaultResponse:
+      - $id: '96'
+        defaultResponse:
+          $id: '106'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '-10000000000' 64 bit integer value
         group:
+          $id: '104'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '103'
           fixed: false
           raw: getNegativeTenBillion
         parameters:
-          - $id: '22'
+          - $id: '97'
             collectionFormat: none
             defaultValue:
+              $id: '98'
               fixed: false
               raw: '-10000000000'
             deprecated: false
             documentation:
+              $id: '99'
               fixed: false
               raw: '''-10000000000'' 64 bit integer value'
             isConstant: true
             isRequired: true
             location: path
             modelType:
-              $id: '23'
+              $id: '101'
               $type: PrimaryType
               deprecated: false
               format: int64
               knownPrimaryType: long
               name:
+                $id: '102'
                 fixed: false
                 raw: Long
             name:
+              $id: '100'
               fixed: false
               raw: longPath
             serializedName: longPath
@@ -389,48 +463,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '105'
             isNullable: true
         returnType:
+          $id: '107'
           isNullable: true
         serializedName: paths_getNegativeTenBillion
         url: '/paths/long/-10000000000/{longPath}'
-      - defaultResponse:
+      - $id: '108'
+        defaultResponse:
+          $id: '118'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '1.034E+20' numeric value
         group:
+          $id: '116'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '115'
           fixed: false
           raw: floatScientificPositive
         parameters:
-          - $id: '24'
+          - $id: '109'
             collectionFormat: none
             defaultValue:
+              $id: '110'
               fixed: false
               raw: '103400000000000000000'
             deprecated: false
             documentation:
+              $id: '111'
               fixed: false
               raw: '''1.034E+20''numeric value'
             isConstant: true
             isRequired: true
             location: path
             modelType:
-              $id: '25'
+              $id: '113'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: double
               name:
+                $id: '114'
                 fixed: false
                 raw: Double
             name:
+              $id: '112'
               fixed: false
               raw: floatPath
             serializedName: floatPath
@@ -439,48 +523,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '117'
             isNullable: true
         returnType:
+          $id: '119'
           isNullable: true
         serializedName: paths_floatScientificPositive
         url: '/paths/float/1.034E+20/{floatPath}'
-      - defaultResponse:
+      - $id: '120'
+        defaultResponse:
+          $id: '130'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '-1.034E-20' numeric value
         group:
+          $id: '128'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '127'
           fixed: false
           raw: floatScientificNegative
         parameters:
-          - $id: '26'
+          - $id: '121'
             collectionFormat: none
             defaultValue:
+              $id: '122'
               fixed: false
               raw: '-1.034e-20'
             deprecated: false
             documentation:
+              $id: '123'
               fixed: false
               raw: '''-1.034E-20''numeric value'
             isConstant: true
             isRequired: true
             location: path
             modelType:
-              $id: '27'
+              $id: '125'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: double
               name:
+                $id: '126'
                 fixed: false
                 raw: Double
             name:
+              $id: '124'
               fixed: false
               raw: floatPath
             serializedName: floatPath
@@ -489,49 +583,59 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '129'
             isNullable: true
         returnType:
+          $id: '131'
           isNullable: true
         serializedName: paths_floatScientificNegative
         url: '/paths/float/-1.034E-20/{floatPath}'
-      - defaultResponse:
+      - $id: '132'
+        defaultResponse:
+          $id: '142'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '9999999.999' numeric value
         group:
+          $id: '140'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '139'
           fixed: false
           raw: doubleDecimalPositive
         parameters:
-          - $id: '28'
+          - $id: '133'
             collectionFormat: none
             defaultValue:
+              $id: '134'
               fixed: false
               raw: '9999999.999'
             deprecated: false
             documentation:
+              $id: '135'
               fixed: false
               raw: '''9999999.999''numeric value'
             isConstant: true
             isRequired: true
             location: path
             modelType:
-              $id: '29'
+              $id: '137'
               $type: PrimaryType
               deprecated: false
               format: double
               knownPrimaryType: double
               name:
+                $id: '138'
                 fixed: false
                 raw: Double
             name:
+              $id: '136'
               fixed: false
               raw: doublePath
             serializedName: doublePath
@@ -540,49 +644,59 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '141'
             isNullable: true
         returnType:
+          $id: '143'
           isNullable: true
         serializedName: paths_doubleDecimalPositive
         url: '/paths/double/9999999.999/{doublePath}'
-      - defaultResponse:
+      - $id: '144'
+        defaultResponse:
+          $id: '154'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '-9999999.999' numeric value
         group:
+          $id: '152'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '151'
           fixed: false
           raw: doubleDecimalNegative
         parameters:
-          - $id: '30'
+          - $id: '145'
             collectionFormat: none
             defaultValue:
+              $id: '146'
               fixed: false
               raw: '-9999999.999'
             deprecated: false
             documentation:
+              $id: '147'
               fixed: false
               raw: '''-9999999.999''numeric value'
             isConstant: true
             isRequired: true
             location: path
             modelType:
-              $id: '31'
+              $id: '149'
               $type: PrimaryType
               deprecated: false
               format: double
               knownPrimaryType: double
               name:
+                $id: '150'
                 fixed: false
                 raw: Double
             name:
+              $id: '148'
               fixed: false
               raw: doublePath
             serializedName: doublePath
@@ -591,48 +705,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '153'
             isNullable: true
         returnType:
+          $id: '155'
           isNullable: true
         serializedName: paths_doubleDecimalNegative
         url: '/paths/double/-9999999.999/{doublePath}'
-      - defaultResponse:
+      - $id: '156'
+        defaultResponse:
+          $id: '166'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '啊齄丂狛狜隣郎隣兀﨩' multi-byte string value
         group:
+          $id: '164'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '163'
           fixed: false
           raw: stringUnicode
         parameters:
-          - $id: '32'
+          - $id: '157'
             collectionFormat: none
             defaultValue:
+              $id: '158'
               fixed: false
               raw: 啊齄丂狛狜隣郎隣兀﨩
             deprecated: false
             documentation:
+              $id: '159'
               fixed: false
               raw: '''啊齄丂狛狜隣郎隣兀﨩''multi-byte string value'
             isConstant: true
             isRequired: true
             location: path
             modelType:
-              $id: '33'
+              $id: '161'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '162'
                 fixed: false
                 raw: String
             name:
+              $id: '160'
               fixed: false
               raw: stringPath
             serializedName: stringPath
@@ -641,48 +765,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '165'
             isNullable: true
         returnType:
+          $id: '167'
           isNullable: true
         serializedName: paths_stringUnicode
         url: '/paths/string/unicode/{stringPath}'
-      - defaultResponse:
+      - $id: '168'
+        defaultResponse:
+          $id: '178'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: 'Get ''begin!*''();:@ &=+$,/?#[]end'
         group:
+          $id: '176'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '175'
           fixed: false
           raw: stringUrlEncoded
         parameters:
-          - $id: '34'
+          - $id: '169'
             collectionFormat: none
             defaultValue:
+              $id: '170'
               fixed: false
               raw: 'begin!*''();:@ &=+$,/?#[]end'
             deprecated: false
             documentation:
+              $id: '171'
               fixed: false
               raw: '''begin!*''();:@ &=+$,/?#[]end'' url encoded string value'
             isConstant: true
             isRequired: true
             location: path
             modelType:
-              $id: '35'
+              $id: '173'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '174'
                 fixed: false
                 raw: String
             name:
+              $id: '172'
               fixed: false
               raw: stringPath
             serializedName: stringPath
@@ -691,49 +825,59 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '177'
             isNullable: true
         returnType:
+          $id: '179'
           isNullable: true
         serializedName: paths_stringUrlEncoded
         url: >-
           /paths/string/begin%21%2A%27%28%29%3B%3A%40%20%26%3D%2B%24%2C%2F%3F%23%5B%5Dend/{stringPath}
-      - defaultResponse:
+      - $id: '180'
+        defaultResponse:
+          $id: '190'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get ''
         group:
+          $id: '188'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '187'
           fixed: false
           raw: stringEmpty
         parameters:
-          - $id: '36'
+          - $id: '181'
             collectionFormat: none
             defaultValue:
+              $id: '182'
               fixed: false
               raw: ''
             deprecated: false
             documentation:
+              $id: '183'
               fixed: false
               raw: ''''' string value'
             isConstant: true
             isRequired: true
             location: path
             modelType:
-              $id: '37'
+              $id: '185'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '186'
                 fixed: false
                 raw: String
             name:
+              $id: '184'
               fixed: false
               raw: stringPath
             serializedName: stringPath
@@ -742,47 +886,57 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '189'
             isNullable: true
         returnType:
+          $id: '191'
           isNullable: true
         serializedName: paths_stringEmpty
         url: '/paths/string/empty/{stringPath}'
-      - defaultResponse:
+      - $id: '192'
+        defaultResponse:
+          $id: '202'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get null (should throw)
         group:
+          $id: '200'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '199'
           fixed: false
           raw: stringNull
         parameters:
-          - $id: '38'
+          - $id: '193'
             collectionFormat: none
             defaultValue:
+              $id: '194'
               fixed: false
             deprecated: false
             documentation:
+              $id: '195'
               fixed: false
               raw: null string value
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '39'
+              $id: '197'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '198'
                 fixed: false
                 raw: String
             name:
+              $id: '196'
               fixed: false
               raw: stringPath
             serializedName: stringPath
@@ -791,33 +945,41 @@ operations:
           - application/json
         responses:
           BadRequest:
+            $id: '201'
             isNullable: true
         returnType:
+          $id: '203'
           isNullable: true
         serializedName: paths_stringNull
         url: '/paths/string/null/{stringPath}'
-      - defaultResponse:
+      - $id: '204'
+        defaultResponse:
+          $id: '212'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get using uri with 'green color' in path parameter
         group:
+          $id: '210'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '209'
           fixed: false
           raw: enumValid
         parameters:
-          - $id: '40'
+          - $id: '205'
             collectionFormat: none
             defaultValue:
+              $id: '206'
               fixed: false
             deprecated: false
             documentation:
+              $id: '207'
               fixed: false
               raw: send the value green
             extensions:
@@ -827,8 +989,9 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $ref: '6'
+              $ref: '16'
             name:
+              $id: '208'
               fixed: false
               raw: enumPath
             serializedName: enumPath
@@ -837,35 +1000,43 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '211'
             isNullable: true
         returnType:
+          $id: '213'
           isNullable: true
         serializedName: paths_enumValid
         url: '/paths/enum/green%20color/{enumPath}'
-      - defaultResponse:
+      - $id: '214'
+        defaultResponse:
+          $id: '222'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get null (should throw on the client before the request is sent on
           wire)
         group:
+          $id: '220'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '219'
           fixed: false
           raw: enumNull
         parameters:
-          - $id: '41'
+          - $id: '215'
             collectionFormat: none
             defaultValue:
+              $id: '216'
               fixed: false
             deprecated: false
             documentation:
+              $id: '217'
               fixed: false
               raw: send null should throw
             extensions:
@@ -875,8 +1046,9 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $ref: '6'
+              $ref: '16'
             name:
+              $id: '218'
               fixed: false
               raw: enumPath
             serializedName: enumPath
@@ -885,48 +1057,58 @@ operations:
           - application/json
         responses:
           BadRequest:
+            $id: '221'
             isNullable: true
         returnType:
+          $id: '223'
           isNullable: true
         serializedName: paths_enumNull
         url: '/paths/string/null/{enumPath}'
-      - defaultResponse:
+      - $id: '224'
+        defaultResponse:
+          $id: '234'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '啊齄丂狛狜隣郎隣兀﨩' multibyte value as utf-8 encoded byte array
         group:
+          $id: '232'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '231'
           fixed: false
           raw: byteMultiByte
         parameters:
-          - $id: '42'
+          - $id: '225'
             collectionFormat: none
             defaultValue:
+              $id: '226'
               fixed: false
             deprecated: false
             documentation:
+              $id: '227'
               fixed: false
               raw: '''啊齄丂狛狜隣郎隣兀﨩'' multibyte value as utf-8 encoded byte array'
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '43'
+              $id: '229'
               $type: PrimaryType
               deprecated: false
               format: byte
               knownPrimaryType: byteArray
               name:
+                $id: '230'
                 fixed: false
                 raw: ByteArray
             name:
+              $id: '228'
               fixed: false
               raw: bytePath
             serializedName: bytePath
@@ -935,49 +1117,59 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '233'
             isNullable: true
         returnType:
+          $id: '235'
           isNullable: true
         serializedName: paths_byteMultiByte
         url: '/paths/byte/multibyte/{bytePath}'
-      - defaultResponse:
+      - $id: '236'
+        defaultResponse:
+          $id: '246'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '' as byte array
         group:
+          $id: '244'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '243'
           fixed: false
           raw: byteEmpty
         parameters:
-          - $id: '44'
+          - $id: '237'
             collectionFormat: none
             defaultValue:
+              $id: '238'
               fixed: false
               raw: ''
             deprecated: false
             documentation:
+              $id: '239'
               fixed: false
               raw: ''''' as byte array'
             isConstant: true
             isRequired: true
             location: path
             modelType:
-              $id: '45'
+              $id: '241'
               $type: PrimaryType
               deprecated: false
               format: byte
               knownPrimaryType: byteArray
               name:
+                $id: '242'
                 fixed: false
                 raw: ByteArray
             name:
+              $id: '240'
               fixed: false
               raw: bytePath
             serializedName: bytePath
@@ -986,48 +1178,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '245'
             isNullable: true
         returnType:
+          $id: '247'
           isNullable: true
         serializedName: paths_byteEmpty
         url: '/paths/byte/empty/{bytePath}'
-      - defaultResponse:
+      - $id: '248'
+        defaultResponse:
+          $id: '258'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get null as byte array (should throw)
         group:
+          $id: '256'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '255'
           fixed: false
           raw: byteNull
         parameters:
-          - $id: '46'
+          - $id: '249'
             collectionFormat: none
             defaultValue:
+              $id: '250'
               fixed: false
             deprecated: false
             documentation:
+              $id: '251'
               fixed: false
               raw: null as byte array (should throw)
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '47'
+              $id: '253'
               $type: PrimaryType
               deprecated: false
               format: byte
               knownPrimaryType: byteArray
               name:
+                $id: '254'
                 fixed: false
                 raw: ByteArray
             name:
+              $id: '252'
               fixed: false
               raw: bytePath
             serializedName: bytePath
@@ -1036,49 +1238,59 @@ operations:
           - application/json
         responses:
           BadRequest:
+            $id: '257'
             isNullable: true
         returnType:
+          $id: '259'
           isNullable: true
         serializedName: paths_byteNull
         url: '/paths/byte/null/{bytePath}'
-      - defaultResponse:
+      - $id: '260'
+        defaultResponse:
+          $id: '270'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '2012-01-01' as date
         group:
+          $id: '268'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '267'
           fixed: false
           raw: DateValid
         parameters:
-          - $id: '48'
+          - $id: '261'
             collectionFormat: none
             defaultValue:
+              $id: '262'
               fixed: false
               raw: '2012-01-01'
             deprecated: false
             documentation:
+              $id: '263'
               fixed: false
               raw: '''2012-01-01'' as date'
             isConstant: true
             isRequired: true
             location: path
             modelType:
-              $id: '49'
+              $id: '265'
               $type: PrimaryType
               deprecated: false
               format: date
               knownPrimaryType: date
               name:
+                $id: '266'
                 fixed: false
                 raw: Date
             name:
+              $id: '264'
               fixed: false
               raw: datePath
             serializedName: datePath
@@ -1087,50 +1299,60 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '269'
             isNullable: true
         returnType:
+          $id: '271'
           isNullable: true
         serializedName: paths_DateValid
         url: '/paths/date/2012-01-01/{datePath}'
-      - defaultResponse:
+      - $id: '272'
+        defaultResponse:
+          $id: '282'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get null as date - this should throw or be unusable on the client
           side, depending on date representation
         group:
+          $id: '280'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '279'
           fixed: false
           raw: DateNull
         parameters:
-          - $id: '50'
+          - $id: '273'
             collectionFormat: none
             defaultValue:
+              $id: '274'
               fixed: false
             deprecated: false
             documentation:
+              $id: '275'
               fixed: false
               raw: null as date (should throw)
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '51'
+              $id: '277'
               $type: PrimaryType
               deprecated: false
               format: date
               knownPrimaryType: date
               name:
+                $id: '278'
                 fixed: false
                 raw: Date
             name:
+              $id: '276'
               fixed: false
               raw: datePath
             serializedName: datePath
@@ -1139,49 +1361,59 @@ operations:
           - application/json
         responses:
           BadRequest:
+            $id: '281'
             isNullable: true
         returnType:
+          $id: '283'
           isNullable: true
         serializedName: paths_DateNull
         url: '/paths/date/null/{datePath}'
-      - defaultResponse:
+      - $id: '284'
+        defaultResponse:
+          $id: '294'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: 'Get ''2012-01-01T01:01:01Z'' as date-time'
         group:
+          $id: '292'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '291'
           fixed: false
           raw: DateTimeValid
         parameters:
-          - $id: '52'
+          - $id: '285'
             collectionFormat: none
             defaultValue:
+              $id: '286'
               fixed: false
               raw: '2012-01-01T01:01:01Z'
             deprecated: false
             documentation:
+              $id: '287'
               fixed: false
               raw: '''2012-01-01T01:01:01Z'' as date-time'
             isConstant: true
             isRequired: true
             location: path
             modelType:
-              $id: '53'
+              $id: '289'
               $type: PrimaryType
               deprecated: false
               format: date-time
               knownPrimaryType: dateTime
               name:
+                $id: '290'
                 fixed: false
                 raw: DateTime
             name:
+              $id: '288'
               fixed: false
               raw: dateTimePath
             serializedName: dateTimePath
@@ -1190,50 +1422,60 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '293'
             isNullable: true
         returnType:
+          $id: '295'
           isNullable: true
         serializedName: paths_DateTimeValid
         url: '/paths/datetime/2012-01-01T01%3A01%3A01Z/{dateTimePath}'
-      - defaultResponse:
+      - $id: '296'
+        defaultResponse:
+          $id: '306'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get null as date-time, should be disallowed or throw depending on
           representation of date-time
         group:
+          $id: '304'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '303'
           fixed: false
           raw: DateTimeNull
         parameters:
-          - $id: '54'
+          - $id: '297'
             collectionFormat: none
             defaultValue:
+              $id: '298'
               fixed: false
             deprecated: false
             documentation:
+              $id: '299'
               fixed: false
               raw: null as date-time
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '55'
+              $id: '301'
               $type: PrimaryType
               deprecated: false
               format: date-time
               knownPrimaryType: dateTime
               name:
+                $id: '302'
                 fixed: false
                 raw: DateTime
             name:
+              $id: '300'
               fixed: false
               raw: dateTimePath
             serializedName: dateTimePath
@@ -1242,48 +1484,58 @@ operations:
           - application/json
         responses:
           BadRequest:
+            $id: '305'
             isNullable: true
         returnType:
+          $id: '307'
           isNullable: true
         serializedName: paths_DateTimeNull
         url: '/paths/datetime/null/{dateTimePath}'
-      - defaultResponse:
+      - $id: '308'
+        defaultResponse:
+          $id: '318'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get 'lorem' encoded value as 'bG9yZW0' (base64url)
         group:
+          $id: '316'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '315'
           fixed: false
           raw: base64Url
         parameters:
-          - $id: '56'
+          - $id: '309'
             collectionFormat: none
             defaultValue:
+              $id: '310'
               fixed: false
             deprecated: false
             documentation:
+              $id: '311'
               fixed: false
               raw: base64url encoded value
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '57'
+              $id: '313'
               $type: PrimaryType
               deprecated: false
               format: base64url
               knownPrimaryType: base64Url
               name:
+                $id: '314'
                 fixed: false
                 raw: Base64Url
             name:
+              $id: '312'
               fixed: false
               raw: base64UrlPath
             serializedName: base64UrlPath
@@ -1292,35 +1544,43 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '317'
             isNullable: true
         returnType:
+          $id: '319'
           isNullable: true
         serializedName: paths_base64Url
         url: '/paths/string/bG9yZW0/{base64UrlPath}'
-      - defaultResponse:
+      - $id: '320'
+        defaultResponse:
+          $id: '332'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get an array of string ['ArrayPath1', 'begin!*'();:@ &=+$,/?#[]end' ,
           null, ''] using the csv-array format
         group:
+          $id: '330'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '329'
           fixed: false
           raw: ArrayCsvInPath
         parameters:
-          - $id: '58'
+          - $id: '321'
             collectionFormat: csv
             defaultValue:
+              $id: '322'
               fixed: false
             deprecated: false
             documentation:
+              $id: '323'
               fixed: false
               raw: >-
                 an array of string ['ArrayPath1', 'begin!*'();:@ &=+$,/?#[]end'
@@ -1329,20 +1589,23 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '59'
+              $id: '325'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '60'
+                $id: '326'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: string
                 name:
+                  $id: '327'
                   fixed: false
                   raw: String
               name:
+                $id: '328'
                 fixed: false
             name:
+              $id: '324'
               fixed: false
               raw: arrayPath
             serializedName: arrayPath
@@ -1351,49 +1614,59 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '331'
             isNullable: true
         returnType:
+          $id: '333'
           isNullable: true
         serializedName: paths_ArrayCsvInPath
         url: >-
           /paths/array/ArrayPath1%2cbegin%21%2A%27%28%29%3B%3A%40%20%26%3D%2B%24%2C%2F%3F%23%5B%5Dend%2c%2c/{arrayPath}
-      - defaultResponse:
+      - $id: '334'
+        defaultResponse:
+          $id: '344'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get the date 2016-04-13 encoded value as '1460505600' (Unix time)
         group:
+          $id: '342'
           fixed: false
           raw: paths
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '341'
           fixed: false
           raw: unixTimeUrl
         parameters:
-          - $id: '61'
+          - $id: '335'
             collectionFormat: none
             defaultValue:
+              $id: '336'
               fixed: false
             deprecated: false
             documentation:
+              $id: '337'
               fixed: false
               raw: Unix time encoded value
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '62'
+              $id: '339'
               $type: PrimaryType
               deprecated: false
               format: unixtime
               knownPrimaryType: unixTime
               name:
+                $id: '340'
                 fixed: false
                 raw: UnixTime
             name:
+              $id: '338'
               fixed: false
               raw: unixTimeUrlPath
             serializedName: unixTimeUrlPath
@@ -1402,55 +1675,68 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '343'
             isNullable: true
         returnType:
+          $id: '345'
           isNullable: true
         serializedName: paths_unixTimeUrl
         url: '/paths/int/1460505600/{unixTimeUrlPath}'
     name:
+      $id: '346'
       fixed: false
       raw: Paths
     nameForProperty: Paths
     typeName:
+      $id: '347'
       fixed: false
-  - methods:
-      - defaultResponse:
+  - $id: '348'
+    methods:
+      - $id: '349'
+        defaultResponse:
+          $id: '359'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get true Boolean value on path
         group:
+          $id: '357'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '356'
           fixed: false
           raw: getBooleanTrue
         parameters:
-          - $id: '63'
+          - $id: '350'
             collectionFormat: none
             defaultValue:
+              $id: '351'
               fixed: false
               raw: 'true'
             deprecated: false
             documentation:
+              $id: '352'
               fixed: false
               raw: true boolean value
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '64'
+              $id: '354'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: boolean
               name:
+                $id: '355'
                 fixed: false
                 raw: Boolean
             name:
+              $id: '353'
               fixed: false
               raw: boolQuery
             serializedName: boolQuery
@@ -1459,48 +1745,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '358'
             isNullable: true
         returnType:
+          $id: '360'
           isNullable: true
         serializedName: queries_getBooleanTrue
         url: /queries/bool/true
-      - defaultResponse:
+      - $id: '361'
+        defaultResponse:
+          $id: '371'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get false Boolean value on path
         group:
+          $id: '369'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '368'
           fixed: false
           raw: getBooleanFalse
         parameters:
-          - $id: '65'
+          - $id: '362'
             collectionFormat: none
             defaultValue:
+              $id: '363'
               fixed: false
               raw: 'false'
             deprecated: false
             documentation:
+              $id: '364'
               fixed: false
               raw: false boolean value
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '66'
+              $id: '366'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: boolean
               name:
+                $id: '367'
                 fixed: false
                 raw: Boolean
             name:
+              $id: '365'
               fixed: false
               raw: boolQuery
             serializedName: boolQuery
@@ -1509,47 +1805,57 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '370'
             isNullable: true
         returnType:
+          $id: '372'
           isNullable: true
         serializedName: queries_getBooleanFalse
         url: /queries/bool/false
-      - defaultResponse:
+      - $id: '373'
+        defaultResponse:
+          $id: '383'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get null Boolean value on query (query string should be absent)
         group:
+          $id: '381'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '380'
           fixed: false
           raw: getBooleanNull
         parameters:
-          - $id: '67'
+          - $id: '374'
             collectionFormat: none
             defaultValue:
+              $id: '375'
               fixed: false
             deprecated: false
             documentation:
+              $id: '376'
               fixed: false
               raw: null boolean value
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '68'
+              $id: '378'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: boolean
               name:
+                $id: '379'
                 fixed: false
                 raw: Boolean
             name:
+              $id: '377'
               fixed: false
               raw: boolQuery
             serializedName: boolQuery
@@ -1558,48 +1864,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '382'
             isNullable: true
         returnType:
+          $id: '384'
           isNullable: true
         serializedName: queries_getBooleanNull
         url: /queries/bool/null
-      - defaultResponse:
+      - $id: '385'
+        defaultResponse:
+          $id: '395'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '1000000' integer value
         group:
+          $id: '393'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '392'
           fixed: false
           raw: getIntOneMillion
         parameters:
-          - $id: '69'
+          - $id: '386'
             collectionFormat: none
             defaultValue:
+              $id: '387'
               fixed: false
               raw: '1000000'
             deprecated: false
             documentation:
+              $id: '388'
               fixed: false
               raw: '''1000000'' integer value'
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '70'
+              $id: '390'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: int
               name:
+                $id: '391'
                 fixed: false
                 raw: Int
             name:
+              $id: '389'
               fixed: false
               raw: intQuery
             serializedName: intQuery
@@ -1608,48 +1924,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '394'
             isNullable: true
         returnType:
+          $id: '396'
           isNullable: true
         serializedName: queries_getIntOneMillion
         url: /queries/int/1000000
-      - defaultResponse:
+      - $id: '397'
+        defaultResponse:
+          $id: '407'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '-1000000' integer value
         group:
+          $id: '405'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '404'
           fixed: false
           raw: getIntNegativeOneMillion
         parameters:
-          - $id: '71'
+          - $id: '398'
             collectionFormat: none
             defaultValue:
+              $id: '399'
               fixed: false
               raw: '-1000000'
             deprecated: false
             documentation:
+              $id: '400'
               fixed: false
               raw: '''-1000000'' integer value'
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '72'
+              $id: '402'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: int
               name:
+                $id: '403'
                 fixed: false
                 raw: Int
             name:
+              $id: '401'
               fixed: false
               raw: intQuery
             serializedName: intQuery
@@ -1658,47 +1984,57 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '406'
             isNullable: true
         returnType:
+          $id: '408'
           isNullable: true
         serializedName: queries_getIntNegativeOneMillion
         url: /queries/int/-1000000
-      - defaultResponse:
+      - $id: '409'
+        defaultResponse:
+          $id: '419'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get null integer value (no query parameter)
         group:
+          $id: '417'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '416'
           fixed: false
           raw: getIntNull
         parameters:
-          - $id: '73'
+          - $id: '410'
             collectionFormat: none
             defaultValue:
+              $id: '411'
               fixed: false
             deprecated: false
             documentation:
+              $id: '412'
               fixed: false
               raw: null integer value
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '74'
+              $id: '414'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: int
               name:
+                $id: '415'
                 fixed: false
                 raw: Int
             name:
+              $id: '413'
               fixed: false
               raw: intQuery
             serializedName: intQuery
@@ -1707,49 +2043,59 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '418'
             isNullable: true
         returnType:
+          $id: '420'
           isNullable: true
         serializedName: queries_getIntNull
         url: /queries/int/null
-      - defaultResponse:
+      - $id: '421'
+        defaultResponse:
+          $id: '431'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '10000000000' 64 bit integer value
         group:
+          $id: '429'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '428'
           fixed: false
           raw: getTenBillion
         parameters:
-          - $id: '75'
+          - $id: '422'
             collectionFormat: none
             defaultValue:
+              $id: '423'
               fixed: false
               raw: '10000000000'
             deprecated: false
             documentation:
+              $id: '424'
               fixed: false
               raw: '''10000000000'' 64 bit integer value'
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '76'
+              $id: '426'
               $type: PrimaryType
               deprecated: false
               format: int64
               knownPrimaryType: long
               name:
+                $id: '427'
                 fixed: false
                 raw: Long
             name:
+              $id: '425'
               fixed: false
               raw: longQuery
             serializedName: longQuery
@@ -1758,49 +2104,59 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '430'
             isNullable: true
         returnType:
+          $id: '432'
           isNullable: true
         serializedName: queries_getTenBillion
         url: /queries/long/10000000000
-      - defaultResponse:
+      - $id: '433'
+        defaultResponse:
+          $id: '443'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '-10000000000' 64 bit integer value
         group:
+          $id: '441'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '440'
           fixed: false
           raw: getNegativeTenBillion
         parameters:
-          - $id: '77'
+          - $id: '434'
             collectionFormat: none
             defaultValue:
+              $id: '435'
               fixed: false
               raw: '-10000000000'
             deprecated: false
             documentation:
+              $id: '436'
               fixed: false
               raw: '''-10000000000'' 64 bit integer value'
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '78'
+              $id: '438'
               $type: PrimaryType
               deprecated: false
               format: int64
               knownPrimaryType: long
               name:
+                $id: '439'
                 fixed: false
                 raw: Long
             name:
+              $id: '437'
               fixed: false
               raw: longQuery
             serializedName: longQuery
@@ -1809,48 +2165,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '442'
             isNullable: true
         returnType:
+          $id: '444'
           isNullable: true
         serializedName: queries_getNegativeTenBillion
         url: /queries/long/-10000000000
-      - defaultResponse:
+      - $id: '445'
+        defaultResponse:
+          $id: '455'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get 'null 64 bit integer value (no query param in uri)
         group:
+          $id: '453'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '452'
           fixed: false
           raw: getLongNull
         parameters:
-          - $id: '79'
+          - $id: '446'
             collectionFormat: none
             defaultValue:
+              $id: '447'
               fixed: false
             deprecated: false
             documentation:
+              $id: '448'
               fixed: false
               raw: null 64 bit integer value
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '80'
+              $id: '450'
               $type: PrimaryType
               deprecated: false
               format: int64
               knownPrimaryType: long
               name:
+                $id: '451'
                 fixed: false
                 raw: Long
             name:
+              $id: '449'
               fixed: false
               raw: longQuery
             serializedName: longQuery
@@ -1859,48 +2225,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '454'
             isNullable: true
         returnType:
+          $id: '456'
           isNullable: true
         serializedName: queries_getLongNull
         url: /queries/long/null
-      - defaultResponse:
+      - $id: '457'
+        defaultResponse:
+          $id: '467'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '1.034E+20' numeric value
         group:
+          $id: '465'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '464'
           fixed: false
           raw: floatScientificPositive
         parameters:
-          - $id: '81'
+          - $id: '458'
             collectionFormat: none
             defaultValue:
+              $id: '459'
               fixed: false
               raw: '103400000000000000000'
             deprecated: false
             documentation:
+              $id: '460'
               fixed: false
               raw: '''1.034E+20''numeric value'
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '82'
+              $id: '462'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: double
               name:
+                $id: '463'
                 fixed: false
                 raw: Double
             name:
+              $id: '461'
               fixed: false
               raw: floatQuery
             serializedName: floatQuery
@@ -1909,48 +2285,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '466'
             isNullable: true
         returnType:
+          $id: '468'
           isNullable: true
         serializedName: queries_floatScientificPositive
         url: /queries/float/1.034E+20
-      - defaultResponse:
+      - $id: '469'
+        defaultResponse:
+          $id: '479'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '-1.034E-20' numeric value
         group:
+          $id: '477'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '476'
           fixed: false
           raw: floatScientificNegative
         parameters:
-          - $id: '83'
+          - $id: '470'
             collectionFormat: none
             defaultValue:
+              $id: '471'
               fixed: false
               raw: '-1.034e-20'
             deprecated: false
             documentation:
+              $id: '472'
               fixed: false
               raw: '''-1.034E-20''numeric value'
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '84'
+              $id: '474'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: double
               name:
+                $id: '475'
                 fixed: false
                 raw: Double
             name:
+              $id: '473'
               fixed: false
               raw: floatQuery
             serializedName: floatQuery
@@ -1959,47 +2345,57 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '478'
             isNullable: true
         returnType:
+          $id: '480'
           isNullable: true
         serializedName: queries_floatScientificNegative
         url: /queries/float/-1.034E-20
-      - defaultResponse:
+      - $id: '481'
+        defaultResponse:
+          $id: '491'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get null numeric value (no query parameter)
         group:
+          $id: '489'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '488'
           fixed: false
           raw: floatNull
         parameters:
-          - $id: '85'
+          - $id: '482'
             collectionFormat: none
             defaultValue:
+              $id: '483'
               fixed: false
             deprecated: false
             documentation:
+              $id: '484'
               fixed: false
               raw: null numeric value
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '86'
+              $id: '486'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: double
               name:
+                $id: '487'
                 fixed: false
                 raw: Double
             name:
+              $id: '485'
               fixed: false
               raw: floatQuery
             serializedName: floatQuery
@@ -2008,49 +2404,59 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '490'
             isNullable: true
         returnType:
+          $id: '492'
           isNullable: true
         serializedName: queries_floatNull
         url: /queries/float/null
-      - defaultResponse:
+      - $id: '493'
+        defaultResponse:
+          $id: '503'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '9999999.999' numeric value
         group:
+          $id: '501'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '500'
           fixed: false
           raw: doubleDecimalPositive
         parameters:
-          - $id: '87'
+          - $id: '494'
             collectionFormat: none
             defaultValue:
+              $id: '495'
               fixed: false
               raw: '9999999.999'
             deprecated: false
             documentation:
+              $id: '496'
               fixed: false
               raw: '''9999999.999''numeric value'
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '88'
+              $id: '498'
               $type: PrimaryType
               deprecated: false
               format: double
               knownPrimaryType: double
               name:
+                $id: '499'
                 fixed: false
                 raw: Double
             name:
+              $id: '497'
               fixed: false
               raw: doubleQuery
             serializedName: doubleQuery
@@ -2059,49 +2465,59 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '502'
             isNullable: true
         returnType:
+          $id: '504'
           isNullable: true
         serializedName: queries_doubleDecimalPositive
         url: /queries/double/9999999.999
-      - defaultResponse:
+      - $id: '505'
+        defaultResponse:
+          $id: '515'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '-9999999.999' numeric value
         group:
+          $id: '513'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '512'
           fixed: false
           raw: doubleDecimalNegative
         parameters:
-          - $id: '89'
+          - $id: '506'
             collectionFormat: none
             defaultValue:
+              $id: '507'
               fixed: false
               raw: '-9999999.999'
             deprecated: false
             documentation:
+              $id: '508'
               fixed: false
               raw: '''-9999999.999''numeric value'
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '90'
+              $id: '510'
               $type: PrimaryType
               deprecated: false
               format: double
               knownPrimaryType: double
               name:
+                $id: '511'
                 fixed: false
                 raw: Double
             name:
+              $id: '509'
               fixed: false
               raw: doubleQuery
             serializedName: doubleQuery
@@ -2110,48 +2526,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '514'
             isNullable: true
         returnType:
+          $id: '516'
           isNullable: true
         serializedName: queries_doubleDecimalNegative
         url: /queries/double/-9999999.999
-      - defaultResponse:
+      - $id: '517'
+        defaultResponse:
+          $id: '527'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get null numeric value (no query parameter)
         group:
+          $id: '525'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '524'
           fixed: false
           raw: doubleNull
         parameters:
-          - $id: '91'
+          - $id: '518'
             collectionFormat: none
             defaultValue:
+              $id: '519'
               fixed: false
             deprecated: false
             documentation:
+              $id: '520'
               fixed: false
               raw: null numeric value
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '92'
+              $id: '522'
               $type: PrimaryType
               deprecated: false
               format: double
               knownPrimaryType: double
               name:
+                $id: '523'
                 fixed: false
                 raw: Double
             name:
+              $id: '521'
               fixed: false
               raw: doubleQuery
             serializedName: doubleQuery
@@ -2160,48 +2586,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '526'
             isNullable: true
         returnType:
+          $id: '528'
           isNullable: true
         serializedName: queries_doubleNull
         url: /queries/double/null
-      - defaultResponse:
+      - $id: '529'
+        defaultResponse:
+          $id: '539'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '啊齄丂狛狜隣郎隣兀﨩' multi-byte string value
         group:
+          $id: '537'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '536'
           fixed: false
           raw: stringUnicode
         parameters:
-          - $id: '93'
+          - $id: '530'
             collectionFormat: none
             defaultValue:
+              $id: '531'
               fixed: false
               raw: 啊齄丂狛狜隣郎隣兀﨩
             deprecated: false
             documentation:
+              $id: '532'
               fixed: false
               raw: '''啊齄丂狛狜隣郎隣兀﨩''multi-byte string value'
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '94'
+              $id: '534'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '535'
                 fixed: false
                 raw: String
             name:
+              $id: '533'
               fixed: false
               raw: stringQuery
             serializedName: stringQuery
@@ -2210,48 +2646,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '538'
             isNullable: true
         returnType:
+          $id: '540'
           isNullable: true
         serializedName: queries_stringUnicode
         url: /queries/string/unicode/
-      - defaultResponse:
+      - $id: '541'
+        defaultResponse:
+          $id: '551'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: 'Get ''begin!*''();:@ &=+$,/?#[]end'
         group:
+          $id: '549'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '548'
           fixed: false
           raw: stringUrlEncoded
         parameters:
-          - $id: '95'
+          - $id: '542'
             collectionFormat: none
             defaultValue:
+              $id: '543'
               fixed: false
               raw: 'begin!*''();:@ &=+$,/?#[]end'
             deprecated: false
             documentation:
+              $id: '544'
               fixed: false
               raw: '''begin!*''();:@ &=+$,/?#[]end'' url encoded string value'
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '96'
+              $id: '546'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '547'
                 fixed: false
                 raw: String
             name:
+              $id: '545'
               fixed: false
               raw: stringQuery
             serializedName: stringQuery
@@ -2260,49 +2706,59 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '550'
             isNullable: true
         returnType:
+          $id: '552'
           isNullable: true
         serializedName: queries_stringUrlEncoded
         url: >-
           /queries/string/begin%21%2A%27%28%29%3B%3A%40%20%26%3D%2B%24%2C%2F%3F%23%5B%5Dend
-      - defaultResponse:
+      - $id: '553'
+        defaultResponse:
+          $id: '563'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get ''
         group:
+          $id: '561'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '560'
           fixed: false
           raw: stringEmpty
         parameters:
-          - $id: '97'
+          - $id: '554'
             collectionFormat: none
             defaultValue:
+              $id: '555'
               fixed: false
               raw: ''
             deprecated: false
             documentation:
+              $id: '556'
               fixed: false
               raw: ''''' string value'
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '98'
+              $id: '558'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '559'
                 fixed: false
                 raw: String
             name:
+              $id: '557'
               fixed: false
               raw: stringQuery
             serializedName: stringQuery
@@ -2311,47 +2767,57 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '562'
             isNullable: true
         returnType:
+          $id: '564'
           isNullable: true
         serializedName: queries_stringEmpty
         url: /queries/string/empty
-      - defaultResponse:
+      - $id: '565'
+        defaultResponse:
+          $id: '575'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get null (no query parameter in url)
         group:
+          $id: '573'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '572'
           fixed: false
           raw: stringNull
         parameters:
-          - $id: '99'
+          - $id: '566'
             collectionFormat: none
             defaultValue:
+              $id: '567'
               fixed: false
             deprecated: false
             documentation:
+              $id: '568'
               fixed: false
               raw: null string value
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '100'
+              $id: '570'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '571'
                 fixed: false
                 raw: String
             name:
+              $id: '569'
               fixed: false
               raw: stringQuery
             serializedName: stringQuery
@@ -2360,33 +2826,41 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '574'
             isNullable: true
         returnType:
+          $id: '576'
           isNullable: true
         serializedName: queries_stringNull
         url: /queries/string/null
-      - defaultResponse:
+      - $id: '577'
+        defaultResponse:
+          $id: '585'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get using uri with query parameter 'green color'
         group:
+          $id: '583'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '582'
           fixed: false
           raw: enumValid
         parameters:
-          - $id: '101'
+          - $id: '578'
             collectionFormat: none
             defaultValue:
+              $id: '579'
               fixed: false
             deprecated: false
             documentation:
+              $id: '580'
               fixed: false
               raw: '''green color'' enum value'
             extensions:
@@ -2396,8 +2870,9 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $ref: '6'
+              $ref: '16'
             name:
+              $id: '581'
               fixed: false
               raw: enumQuery
             serializedName: enumQuery
@@ -2406,33 +2881,41 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '584'
             isNullable: true
         returnType:
+          $id: '586'
           isNullable: true
         serializedName: queries_enumValid
         url: /queries/enum/green%20color
-      - defaultResponse:
+      - $id: '587'
+        defaultResponse:
+          $id: '595'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get null (no query parameter in url)
         group:
+          $id: '593'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '592'
           fixed: false
           raw: enumNull
         parameters:
-          - $id: '102'
+          - $id: '588'
             collectionFormat: none
             defaultValue:
+              $id: '589'
               fixed: false
             deprecated: false
             documentation:
+              $id: '590'
               fixed: false
               raw: null string value
             extensions:
@@ -2442,8 +2925,9 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $ref: '6'
+              $ref: '16'
             name:
+              $id: '591'
               fixed: false
               raw: enumQuery
             serializedName: enumQuery
@@ -2452,48 +2936,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '594'
             isNullable: true
         returnType:
+          $id: '596'
           isNullable: true
         serializedName: queries_enumNull
         url: /queries/enum/null
-      - defaultResponse:
+      - $id: '597'
+        defaultResponse:
+          $id: '607'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '啊齄丂狛狜隣郎隣兀﨩' multibyte value as utf-8 encoded byte array
         group:
+          $id: '605'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '604'
           fixed: false
           raw: byteMultiByte
         parameters:
-          - $id: '103'
+          - $id: '598'
             collectionFormat: none
             defaultValue:
+              $id: '599'
               fixed: false
             deprecated: false
             documentation:
+              $id: '600'
               fixed: false
               raw: '''啊齄丂狛狜隣郎隣兀﨩'' multibyte value as utf-8 encoded byte array'
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '104'
+              $id: '602'
               $type: PrimaryType
               deprecated: false
               format: byte
               knownPrimaryType: byteArray
               name:
+                $id: '603'
                 fixed: false
                 raw: ByteArray
             name:
+              $id: '601'
               fixed: false
               raw: byteQuery
             serializedName: byteQuery
@@ -2502,49 +2996,59 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '606'
             isNullable: true
         returnType:
+          $id: '608'
           isNullable: true
         serializedName: queries_byteMultiByte
         url: /queries/byte/multibyte
-      - defaultResponse:
+      - $id: '609'
+        defaultResponse:
+          $id: '619'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '' as byte array
         group:
+          $id: '617'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '616'
           fixed: false
           raw: byteEmpty
         parameters:
-          - $id: '105'
+          - $id: '610'
             collectionFormat: none
             defaultValue:
+              $id: '611'
               fixed: false
               raw: ''
             deprecated: false
             documentation:
+              $id: '612'
               fixed: false
               raw: ''''' as byte array'
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '106'
+              $id: '614'
               $type: PrimaryType
               deprecated: false
               format: byte
               knownPrimaryType: byteArray
               name:
+                $id: '615'
                 fixed: false
                 raw: ByteArray
             name:
+              $id: '613'
               fixed: false
               raw: byteQuery
             serializedName: byteQuery
@@ -2553,48 +3057,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '618'
             isNullable: true
         returnType:
+          $id: '620'
           isNullable: true
         serializedName: queries_byteEmpty
         url: /queries/byte/empty
-      - defaultResponse:
+      - $id: '621'
+        defaultResponse:
+          $id: '631'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get null as byte array (no query parameters in uri)
         group:
+          $id: '629'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '628'
           fixed: false
           raw: byteNull
         parameters:
-          - $id: '107'
+          - $id: '622'
             collectionFormat: none
             defaultValue:
+              $id: '623'
               fixed: false
             deprecated: false
             documentation:
+              $id: '624'
               fixed: false
               raw: null as byte array (no query parameters in uri)
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '108'
+              $id: '626'
               $type: PrimaryType
               deprecated: false
               format: byte
               knownPrimaryType: byteArray
               name:
+                $id: '627'
                 fixed: false
                 raw: ByteArray
             name:
+              $id: '625'
               fixed: false
               raw: byteQuery
             serializedName: byteQuery
@@ -2603,49 +3117,59 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '630'
             isNullable: true
         returnType:
+          $id: '632'
           isNullable: true
         serializedName: queries_byteNull
         url: /queries/byte/null
-      - defaultResponse:
+      - $id: '633'
+        defaultResponse:
+          $id: '643'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get '2012-01-01' as date
         group:
+          $id: '641'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '640'
           fixed: false
           raw: DateValid
         parameters:
-          - $id: '109'
+          - $id: '634'
             collectionFormat: none
             defaultValue:
+              $id: '635'
               fixed: false
               raw: '2012-01-01'
             deprecated: false
             documentation:
+              $id: '636'
               fixed: false
               raw: '''2012-01-01'' as date'
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '110'
+              $id: '638'
               $type: PrimaryType
               deprecated: false
               format: date
               knownPrimaryType: date
               name:
+                $id: '639'
                 fixed: false
                 raw: Date
             name:
+              $id: '637'
               fixed: false
               raw: dateQuery
             serializedName: dateQuery
@@ -2654,48 +3178,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '642'
             isNullable: true
         returnType:
+          $id: '644'
           isNullable: true
         serializedName: queries_DateValid
         url: /queries/date/2012-01-01
-      - defaultResponse:
+      - $id: '645'
+        defaultResponse:
+          $id: '655'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get null as date - this should result in no query parameters in uri
         group:
+          $id: '653'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '652'
           fixed: false
           raw: DateNull
         parameters:
-          - $id: '111'
+          - $id: '646'
             collectionFormat: none
             defaultValue:
+              $id: '647'
               fixed: false
             deprecated: false
             documentation:
+              $id: '648'
               fixed: false
               raw: null as date (no query parameters in uri)
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '112'
+              $id: '650'
               $type: PrimaryType
               deprecated: false
               format: date
               knownPrimaryType: date
               name:
+                $id: '651'
                 fixed: false
                 raw: Date
             name:
+              $id: '649'
               fixed: false
               raw: dateQuery
             serializedName: dateQuery
@@ -2704,49 +3238,59 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '654'
             isNullable: true
         returnType:
+          $id: '656'
           isNullable: true
         serializedName: queries_DateNull
         url: /queries/date/null
-      - defaultResponse:
+      - $id: '657'
+        defaultResponse:
+          $id: '667'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: 'Get ''2012-01-01T01:01:01Z'' as date-time'
         group:
+          $id: '665'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '664'
           fixed: false
           raw: DateTimeValid
         parameters:
-          - $id: '113'
+          - $id: '658'
             collectionFormat: none
             defaultValue:
+              $id: '659'
               fixed: false
               raw: '2012-01-01T01:01:01Z'
             deprecated: false
             documentation:
+              $id: '660'
               fixed: false
               raw: '''2012-01-01T01:01:01Z'' as date-time'
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '114'
+              $id: '662'
               $type: PrimaryType
               deprecated: false
               format: date-time
               knownPrimaryType: dateTime
               name:
+                $id: '663'
                 fixed: false
                 raw: DateTime
             name:
+              $id: '661'
               fixed: false
               raw: dateTimeQuery
             serializedName: dateTimeQuery
@@ -2755,48 +3299,58 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '666'
             isNullable: true
         returnType:
+          $id: '668'
           isNullable: true
         serializedName: queries_DateTimeValid
         url: /queries/datetime/2012-01-01T01%3A01%3A01Z
-      - defaultResponse:
+      - $id: '669'
+        defaultResponse:
+          $id: '679'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: 'Get null as date-time, should result in no query parameters in uri'
         group:
+          $id: '677'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '676'
           fixed: false
           raw: DateTimeNull
         parameters:
-          - $id: '115'
+          - $id: '670'
             collectionFormat: none
             defaultValue:
+              $id: '671'
               fixed: false
             deprecated: false
             documentation:
+              $id: '672'
               fixed: false
               raw: null as date-time (no query parameters)
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '116'
+              $id: '674'
               $type: PrimaryType
               deprecated: false
               format: date-time
               knownPrimaryType: dateTime
               name:
+                $id: '675'
                 fixed: false
                 raw: DateTime
             name:
+              $id: '673'
               fixed: false
               raw: dateTimeQuery
             serializedName: dateTimeQuery
@@ -2805,35 +3359,43 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '678'
             isNullable: true
         returnType:
+          $id: '680'
           isNullable: true
         serializedName: queries_DateTimeNull
         url: /queries/datetime/null
-      - defaultResponse:
+      - $id: '681'
+        defaultResponse:
+          $id: '693'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end' ,
           null, ''] using the csv-array format
         group:
+          $id: '691'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '690'
           fixed: false
           raw: ArrayStringCsvValid
         parameters:
-          - $id: '117'
+          - $id: '682'
             collectionFormat: csv
             defaultValue:
+              $id: '683'
               fixed: false
             deprecated: false
             documentation:
+              $id: '684'
               fixed: false
               raw: >-
                 an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end'
@@ -2842,20 +3404,23 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '118'
+              $id: '686'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '119'
+                $id: '687'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: string
                 name:
+                  $id: '688'
                   fixed: false
                   raw: String
               name:
+                $id: '689'
                 fixed: false
             name:
+              $id: '685'
               fixed: false
               raw: arrayQuery
             serializedName: arrayQuery
@@ -2864,53 +3429,64 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '692'
             isNullable: true
         returnType:
+          $id: '694'
           isNullable: true
         serializedName: queries_ArrayStringCsvValid
         url: /queries/array/csv/string/valid
-      - defaultResponse:
+      - $id: '695'
+        defaultResponse:
+          $id: '707'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: Get a null array of string using the csv-array format
         group:
+          $id: '705'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '704'
           fixed: false
           raw: ArrayStringCsvNull
         parameters:
-          - $id: '120'
+          - $id: '696'
             collectionFormat: csv
             defaultValue:
+              $id: '697'
               fixed: false
             deprecated: false
             documentation:
+              $id: '698'
               fixed: false
               raw: a null array of string using the csv-array format
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '121'
+              $id: '700'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '122'
+                $id: '701'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: string
                 name:
+                  $id: '702'
                   fixed: false
                   raw: String
               name:
+                $id: '703'
                 fixed: false
             name:
+              $id: '699'
               fixed: false
               raw: arrayQuery
             serializedName: arrayQuery
@@ -2919,53 +3495,64 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '706'
             isNullable: true
         returnType:
+          $id: '708'
           isNullable: true
         serializedName: queries_ArrayStringCsvNull
         url: /queries/array/csv/string/null
-      - defaultResponse:
+      - $id: '709'
+        defaultResponse:
+          $id: '721'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: 'Get an empty array [] of string using the csv-array format'
         group:
+          $id: '719'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '718'
           fixed: false
           raw: ArrayStringCsvEmpty
         parameters:
-          - $id: '123'
+          - $id: '710'
             collectionFormat: csv
             defaultValue:
+              $id: '711'
               fixed: false
             deprecated: false
             documentation:
+              $id: '712'
               fixed: false
               raw: 'an empty array [] of string using the csv-array format'
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '124'
+              $id: '714'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '125'
+                $id: '715'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: string
                 name:
+                  $id: '716'
                   fixed: false
                   raw: String
               name:
+                $id: '717'
                 fixed: false
             name:
+              $id: '713'
               fixed: false
               raw: arrayQuery
             serializedName: arrayQuery
@@ -2974,35 +3561,43 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '720'
             isNullable: true
         returnType:
+          $id: '722'
           isNullable: true
         serializedName: queries_ArrayStringCsvEmpty
         url: /queries/array/csv/string/empty
-      - defaultResponse:
+      - $id: '723'
+        defaultResponse:
+          $id: '735'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end' ,
           null, ''] using the ssv-array format
         group:
+          $id: '733'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '732'
           fixed: false
           raw: ArrayStringSsvValid
         parameters:
-          - $id: '126'
+          - $id: '724'
             collectionFormat: ssv
             defaultValue:
+              $id: '725'
               fixed: false
             deprecated: false
             documentation:
+              $id: '726'
               fixed: false
               raw: >-
                 an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end'
@@ -3011,20 +3606,23 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '127'
+              $id: '728'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '128'
+                $id: '729'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: string
                 name:
+                  $id: '730'
                   fixed: false
                   raw: String
               name:
+                $id: '731'
                 fixed: false
             name:
+              $id: '727'
               fixed: false
               raw: arrayQuery
             serializedName: arrayQuery
@@ -3033,35 +3631,43 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '734'
             isNullable: true
         returnType:
+          $id: '736'
           isNullable: true
         serializedName: queries_ArrayStringSsvValid
         url: /queries/array/ssv/string/valid
-      - defaultResponse:
+      - $id: '737'
+        defaultResponse:
+          $id: '749'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end' ,
           null, ''] using the tsv-array format
         group:
+          $id: '747'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '746'
           fixed: false
           raw: ArrayStringTsvValid
         parameters:
-          - $id: '129'
+          - $id: '738'
             collectionFormat: tsv
             defaultValue:
+              $id: '739'
               fixed: false
             deprecated: false
             documentation:
+              $id: '740'
               fixed: false
               raw: >-
                 an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end'
@@ -3070,20 +3676,23 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '130'
+              $id: '742'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '131'
+                $id: '743'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: string
                 name:
+                  $id: '744'
                   fixed: false
                   raw: String
               name:
+                $id: '745'
                 fixed: false
             name:
+              $id: '741'
               fixed: false
               raw: arrayQuery
             serializedName: arrayQuery
@@ -3092,35 +3701,43 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '748'
             isNullable: true
         returnType:
+          $id: '750'
           isNullable: true
         serializedName: queries_ArrayStringTsvValid
         url: /queries/array/tsv/string/valid
-      - defaultResponse:
+      - $id: '751'
+        defaultResponse:
+          $id: '763'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
           Get an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end' ,
           null, ''] using the pipes-array format
         group:
+          $id: '761'
           fixed: false
           raw: queries
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '760'
           fixed: false
           raw: ArrayStringPipesValid
         parameters:
-          - $id: '132'
+          - $id: '752'
             collectionFormat: pipes
             defaultValue:
+              $id: '753'
               fixed: false
             deprecated: false
             documentation:
+              $id: '754'
               fixed: false
               raw: >-
                 an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end'
@@ -3129,20 +3746,23 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '133'
+              $id: '756'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '134'
+                $id: '757'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: string
                 name:
+                  $id: '758'
                   fixed: false
                   raw: String
               name:
+                $id: '759'
                 fixed: false
             name:
+              $id: '755'
               fixed: false
               raw: arrayQuery
             serializedName: arrayQuery
@@ -3151,21 +3771,28 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '762'
             isNullable: true
         returnType:
+          $id: '764'
           isNullable: true
         serializedName: queries_ArrayStringPipesValid
         url: /queries/array/pipes/string/valid
     name:
+      $id: '765'
       fixed: false
       raw: Queries
     nameForProperty: Queries
     typeName:
+      $id: '766'
       fixed: false
-  - methods:
-      - defaultResponse:
+  - $id: '767'
+    methods:
+      - $id: '768'
+        defaultResponse:
+          $id: '808'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -3176,90 +3803,106 @@ operations:
           pathItemStringQuery='pathItemStringQuery',
           localStringQuery='localStringQuery'
         group:
+          $id: '806'
           fixed: false
           raw: pathItems
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '805'
           fixed: false
           raw: getAllWithValues
         parameters:
-          - $id: '135'
+          - $id: '769'
             collectionFormat: none
             defaultValue:
+              $id: '770'
               fixed: false
             deprecated: false
             documentation:
+              $id: '771'
               fixed: false
               raw: should contain value 'localStringPath'
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '136'
+              $id: '773'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '774'
                 fixed: false
                 raw: String
             name:
+              $id: '772'
               fixed: false
               raw: localStringPath
             serializedName: localStringPath
-          - $id: '137'
+          - $id: '775'
             collectionFormat: none
             defaultValue:
+              $id: '776'
               fixed: false
             deprecated: false
             documentation:
+              $id: '777'
               fixed: false
               raw: should contain value 'localStringQuery'
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '138'
+              $id: '779'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '780'
                 fixed: false
                 raw: String
             name:
+              $id: '778'
               fixed: false
               raw: localStringQuery
             serializedName: localStringQuery
-          - $id: '139'
+          - $id: '781'
             collectionFormat: none
             defaultValue:
+              $id: '782'
               fixed: false
             deprecated: false
             documentation:
+              $id: '783'
               fixed: false
               raw: A string value 'pathItemStringPath' that appears in the path
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '140'
+              $id: '785'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '786'
                 fixed: false
                 raw: String
             name:
+              $id: '784'
               fixed: false
               raw: pathItemStringPath
             serializedName: pathItemStringPath
-          - $id: '141'
+          - $id: '787'
             collectionFormat: none
             defaultValue:
+              $id: '788'
               fixed: false
             deprecated: false
             documentation:
+              $id: '789'
               fixed: false
               raw: >-
                 A string value 'pathItemStringQuery' that appears as a query
@@ -3268,64 +3911,74 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '142'
+              $id: '791'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '792'
                 fixed: false
                 raw: String
             name:
+              $id: '790'
               fixed: false
               raw: pathItemStringQuery
             serializedName: pathItemStringQuery
-          - $id: '143'
+          - $id: '793'
             clientProperty:
-              $ref: '8'
+              $ref: '23'
             collectionFormat: none
             defaultValue:
+              $id: '794'
               fixed: false
             deprecated: false
             documentation:
+              $id: '795'
               fixed: false
               raw: A string value 'globalItemStringPath' that appears in the path
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '144'
+              $id: '797'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '798'
                 fixed: false
                 raw: String
             name:
+              $id: '796'
               fixed: false
               raw: globalStringPath
             serializedName: globalStringPath
-          - $id: '145'
+          - $id: '799'
             clientProperty:
-              $ref: '10'
+              $ref: '29'
             collectionFormat: none
             defaultValue:
+              $id: '800'
               fixed: false
             deprecated: false
             documentation:
+              $id: '801'
               fixed: false
               raw: should contain value null
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '146'
+              $id: '803'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '804'
                 fixed: false
                 raw: String
             name:
+              $id: '802'
               fixed: false
               raw: globalStringQuery
             serializedName: globalStringQuery
@@ -3334,15 +3987,19 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '807'
             isNullable: true
         returnType:
+          $id: '809'
           isNullable: true
         serializedName: pathItems_getAllWithValues
         url: >-
           /pathitem/nullable/globalStringPath/{globalStringPath}/pathItemStringPath/{pathItemStringPath}/localStringPath/{localStringPath}/globalStringQuery/pathItemStringQuery/localStringQuery
-      - defaultResponse:
+      - $id: '810'
+        defaultResponse:
+          $id: '850'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -3352,90 +4009,106 @@ operations:
           pathItemStringQuery='pathItemStringQuery',
           localStringQuery='localStringQuery'
         group:
+          $id: '848'
           fixed: false
           raw: pathItems
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '847'
           fixed: false
           raw: getGlobalQueryNull
         parameters:
-          - $id: '147'
+          - $id: '811'
             collectionFormat: none
             defaultValue:
+              $id: '812'
               fixed: false
             deprecated: false
             documentation:
+              $id: '813'
               fixed: false
               raw: should contain value 'localStringPath'
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '148'
+              $id: '815'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '816'
                 fixed: false
                 raw: String
             name:
+              $id: '814'
               fixed: false
               raw: localStringPath
             serializedName: localStringPath
-          - $id: '149'
+          - $id: '817'
             collectionFormat: none
             defaultValue:
+              $id: '818'
               fixed: false
             deprecated: false
             documentation:
+              $id: '819'
               fixed: false
               raw: should contain value 'localStringQuery'
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '150'
+              $id: '821'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '822'
                 fixed: false
                 raw: String
             name:
+              $id: '820'
               fixed: false
               raw: localStringQuery
             serializedName: localStringQuery
-          - $id: '151'
+          - $id: '823'
             collectionFormat: none
             defaultValue:
+              $id: '824'
               fixed: false
             deprecated: false
             documentation:
+              $id: '825'
               fixed: false
               raw: A string value 'pathItemStringPath' that appears in the path
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '152'
+              $id: '827'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '828'
                 fixed: false
                 raw: String
             name:
+              $id: '826'
               fixed: false
               raw: pathItemStringPath
             serializedName: pathItemStringPath
-          - $id: '153'
+          - $id: '829'
             collectionFormat: none
             defaultValue:
+              $id: '830'
               fixed: false
             deprecated: false
             documentation:
+              $id: '831'
               fixed: false
               raw: >-
                 A string value 'pathItemStringQuery' that appears as a query
@@ -3444,64 +4117,74 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '154'
+              $id: '833'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '834'
                 fixed: false
                 raw: String
             name:
+              $id: '832'
               fixed: false
               raw: pathItemStringQuery
             serializedName: pathItemStringQuery
-          - $id: '155'
+          - $id: '835'
             clientProperty:
-              $ref: '8'
+              $ref: '23'
             collectionFormat: none
             defaultValue:
+              $id: '836'
               fixed: false
             deprecated: false
             documentation:
+              $id: '837'
               fixed: false
               raw: A string value 'globalItemStringPath' that appears in the path
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '156'
+              $id: '839'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '840'
                 fixed: false
                 raw: String
             name:
+              $id: '838'
               fixed: false
               raw: globalStringPath
             serializedName: globalStringPath
-          - $id: '157'
+          - $id: '841'
             clientProperty:
-              $ref: '10'
+              $ref: '29'
             collectionFormat: none
             defaultValue:
+              $id: '842'
               fixed: false
             deprecated: false
             documentation:
+              $id: '843'
               fixed: false
               raw: should contain value null
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '158'
+              $id: '845'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '846'
                 fixed: false
                 raw: String
             name:
+              $id: '844'
               fixed: false
               raw: globalStringQuery
             serializedName: globalStringQuery
@@ -3510,15 +4193,19 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '849'
             isNullable: true
         returnType:
+          $id: '851'
           isNullable: true
         serializedName: pathItems_getGlobalQueryNull
         url: >-
           /pathitem/nullable/globalStringPath/{globalStringPath}/pathItemStringPath/{pathItemStringPath}/localStringPath/{localStringPath}/null/pathItemStringQuery/localStringQuery
-      - defaultResponse:
+      - $id: '852'
+        defaultResponse:
+          $id: '892'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -3527,90 +4214,106 @@ operations:
           localStringPath='localStringPath', globalStringQuery=null,
           pathItemStringQuery='pathItemStringQuery', localStringQuery=null
         group:
+          $id: '890'
           fixed: false
           raw: pathItems
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '889'
           fixed: false
           raw: getGlobalAndLocalQueryNull
         parameters:
-          - $id: '159'
+          - $id: '853'
             collectionFormat: none
             defaultValue:
+              $id: '854'
               fixed: false
             deprecated: false
             documentation:
+              $id: '855'
               fixed: false
               raw: should contain value 'localStringPath'
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '160'
+              $id: '857'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '858'
                 fixed: false
                 raw: String
             name:
+              $id: '856'
               fixed: false
               raw: localStringPath
             serializedName: localStringPath
-          - $id: '161'
+          - $id: '859'
             collectionFormat: none
             defaultValue:
+              $id: '860'
               fixed: false
             deprecated: false
             documentation:
+              $id: '861'
               fixed: false
               raw: should contain null value
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '162'
+              $id: '863'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '864'
                 fixed: false
                 raw: String
             name:
+              $id: '862'
               fixed: false
               raw: localStringQuery
             serializedName: localStringQuery
-          - $id: '163'
+          - $id: '865'
             collectionFormat: none
             defaultValue:
+              $id: '866'
               fixed: false
             deprecated: false
             documentation:
+              $id: '867'
               fixed: false
               raw: A string value 'pathItemStringPath' that appears in the path
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '164'
+              $id: '869'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '870'
                 fixed: false
                 raw: String
             name:
+              $id: '868'
               fixed: false
               raw: pathItemStringPath
             serializedName: pathItemStringPath
-          - $id: '165'
+          - $id: '871'
             collectionFormat: none
             defaultValue:
+              $id: '872'
               fixed: false
             deprecated: false
             documentation:
+              $id: '873'
               fixed: false
               raw: >-
                 A string value 'pathItemStringQuery' that appears as a query
@@ -3619,64 +4322,74 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '166'
+              $id: '875'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '876'
                 fixed: false
                 raw: String
             name:
+              $id: '874'
               fixed: false
               raw: pathItemStringQuery
             serializedName: pathItemStringQuery
-          - $id: '167'
+          - $id: '877'
             clientProperty:
-              $ref: '8'
+              $ref: '23'
             collectionFormat: none
             defaultValue:
+              $id: '878'
               fixed: false
             deprecated: false
             documentation:
+              $id: '879'
               fixed: false
               raw: A string value 'globalItemStringPath' that appears in the path
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '168'
+              $id: '881'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '882'
                 fixed: false
                 raw: String
             name:
+              $id: '880'
               fixed: false
               raw: globalStringPath
             serializedName: globalStringPath
-          - $id: '169'
+          - $id: '883'
             clientProperty:
-              $ref: '10'
+              $ref: '29'
             collectionFormat: none
             defaultValue:
+              $id: '884'
               fixed: false
             deprecated: false
             documentation:
+              $id: '885'
               fixed: false
               raw: should contain value null
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '170'
+              $id: '887'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '888'
                 fixed: false
                 raw: String
             name:
+              $id: '886'
               fixed: false
               raw: globalStringQuery
             serializedName: globalStringQuery
@@ -3685,15 +4398,19 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '891'
             isNullable: true
         returnType:
+          $id: '893'
           isNullable: true
         serializedName: pathItems_getGlobalAndLocalQueryNull
         url: >-
           /pathitem/nullable/globalStringPath/{globalStringPath}/pathItemStringPath/{pathItemStringPath}/localStringPath/{localStringPath}/null/pathItemStringQuery/null
-      - defaultResponse:
+      - $id: '894'
+        defaultResponse:
+          $id: '934'
           body:
-            $ref: '1'
+            $ref: '2'
           isNullable: true
         deprecated: false
         description: >-
@@ -3703,154 +4420,180 @@ operations:
           globalStringQuery='globalStringQuery', pathItemStringQuery=null,
           localStringQuery=null
         group:
+          $id: '932'
           fixed: false
           raw: pathItems
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+          $id: '931'
           fixed: false
           raw: getLocalPathItemQueryNull
         parameters:
-          - $id: '171'
+          - $id: '895'
             collectionFormat: none
             defaultValue:
+              $id: '896'
               fixed: false
             deprecated: false
             documentation:
+              $id: '897'
               fixed: false
               raw: should contain value 'localStringPath'
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '172'
+              $id: '899'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '900'
                 fixed: false
                 raw: String
             name:
+              $id: '898'
               fixed: false
               raw: localStringPath
             serializedName: localStringPath
-          - $id: '173'
+          - $id: '901'
             collectionFormat: none
             defaultValue:
+              $id: '902'
               fixed: false
             deprecated: false
             documentation:
+              $id: '903'
               fixed: false
               raw: should contain value null
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '174'
+              $id: '905'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '906'
                 fixed: false
                 raw: String
             name:
+              $id: '904'
               fixed: false
               raw: localStringQuery
             serializedName: localStringQuery
-          - $id: '175'
+          - $id: '907'
             collectionFormat: none
             defaultValue:
+              $id: '908'
               fixed: false
             deprecated: false
             documentation:
+              $id: '909'
               fixed: false
               raw: A string value 'pathItemStringPath' that appears in the path
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '176'
+              $id: '911'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '912'
                 fixed: false
                 raw: String
             name:
+              $id: '910'
               fixed: false
               raw: pathItemStringPath
             serializedName: pathItemStringPath
-          - $id: '177'
+          - $id: '913'
             collectionFormat: none
             defaultValue:
+              $id: '914'
               fixed: false
             deprecated: false
             documentation:
+              $id: '915'
               fixed: false
               raw: should contain value null
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '178'
+              $id: '917'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '918'
                 fixed: false
                 raw: String
             name:
+              $id: '916'
               fixed: false
               raw: pathItemStringQuery
             serializedName: pathItemStringQuery
-          - $id: '179'
+          - $id: '919'
             clientProperty:
-              $ref: '8'
+              $ref: '23'
             collectionFormat: none
             defaultValue:
+              $id: '920'
               fixed: false
             deprecated: false
             documentation:
+              $id: '921'
               fixed: false
               raw: A string value 'globalItemStringPath' that appears in the path
             isConstant: false
             isRequired: true
             location: path
             modelType:
-              $id: '180'
+              $id: '923'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '924'
                 fixed: false
                 raw: String
             name:
+              $id: '922'
               fixed: false
               raw: globalStringPath
             serializedName: globalStringPath
-          - $id: '181'
+          - $id: '925'
             clientProperty:
-              $ref: '10'
+              $ref: '29'
             collectionFormat: none
             defaultValue:
+              $id: '926'
               fixed: false
             deprecated: false
             documentation:
+              $id: '927'
               fixed: false
               raw: should contain value null
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '182'
+              $id: '929'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
+                $id: '930'
                 fixed: false
                 raw: String
             name:
+              $id: '928'
               fixed: false
               raw: globalStringQuery
             serializedName: globalStringQuery
@@ -3859,64 +4602,76 @@ operations:
           - application/json
         responses:
           OK:
+            $id: '933'
             isNullable: true
         returnType:
+          $id: '935'
           isNullable: true
         serializedName: pathItems_getLocalPathItemQueryNull
         url: >-
           /pathitem/nullable/globalStringPath/{globalStringPath}/pathItemStringPath/{pathItemStringPath}/localStringPath/{localStringPath}/globalStringQuery/null/null
     name:
+      $id: '936'
       fixed: false
       raw: PathItems
     nameForProperty: PathItems
     typeName:
+      $id: '937'
       fixed: false
 properties:
-  - $id: '8'
+  - $id: '23'
     collectionFormat: none
     defaultValue:
+      $id: '24'
       fixed: false
     deprecated: false
     documentation:
+      $id: '25'
       fixed: false
       raw: A string value 'globalItemStringPath' that appears in the path
     isConstant: false
     isReadOnly: false
     isRequired: true
     modelType:
-      $id: '9'
+      $id: '27'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
+        $id: '28'
         fixed: false
         raw: String
     name:
+      $id: '26'
       fixed: false
       raw: globalStringPath
     realPath:
       - globalStringPath
     serializedName: globalStringPath
-  - $id: '10'
+  - $id: '29'
     collectionFormat: none
     defaultValue:
+      $id: '30'
       fixed: false
     deprecated: false
     documentation:
+      $id: '31'
       fixed: false
       raw: should contain value null
     isConstant: false
     isReadOnly: false
     isRequired: false
     modelType:
-      $id: '11'
+      $id: '33'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
+        $id: '34'
         fixed: false
         raw: String
     name:
+      $id: '32'
       fixed: false
       raw: globalStringQuery
     realPath:
