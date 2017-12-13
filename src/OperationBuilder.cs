@@ -53,9 +53,23 @@ namespace AutoRest.Modeler
                 SerializedName = _operation.OperationId
             });
 
+            // non-REST operations:
+            {
+                if (_operation.IsTaggedAsNoWire())
+                {
+                    method.Url = null;
+                }
+                string forwardToTarget = _operation.ForwardTo();
+                if (forwardToTarget != null)
+                {
+                    method.Url = null;
+                    method.ForwardTo = New<Method>(new { SerializedName = forwardToTarget });
+                }
+                method.Implementation = _operation.Implementation();
+            }
+
             // assume that without specifying Consumes, that a service will consume JSON
             method.RequestContentType = _effectiveConsumes.FirstOrDefault() ?? APP_JSON_MIME;
-            
 
             // does the method Consume JSON or XML?
             string serviceConsumes = _effectiveConsumes.FirstOrDefault(s => s.StartsWith(APP_JSON_MIME, StringComparison.OrdinalIgnoreCase)) ?? _effectiveConsumes.FirstOrDefault(s => s.StartsWith(APP_XML_MIME, StringComparison.OrdinalIgnoreCase));
@@ -91,6 +105,7 @@ namespace AutoRest.Modeler
 
             // Build header object
             var responseHeaders = new Dictionary<string, Header>();
+            _operation.Responses = _operation.Responses ?? new Dictionary<string, OperationResponse>();
             foreach (var response in _operation.Responses.Values)
             {
                 var xMsHeaders = response.Extensions?.GetValue<JObject>("x-ms-headers");
@@ -319,11 +334,9 @@ namespace AutoRest.Modeler
                 else
                 {
                     if (
-                        !(TryBuildResponse(methodName, response.Key.ToHttpStatusCode(), response.Value, method,
-                            typesList, headerType) ||
+                        !(TryBuildResponse(methodName, response.Key.ToHttpStatusCode(), response.Value, method, typesList, headerType) ||
                           TryBuildStreamResponse(response.Key.ToHttpStatusCode(), response.Value, method, typesList, headerType) ||
-                          TryBuildEmptyResponse(methodName, response.Key.ToHttpStatusCode(), response.Value, method,
-                              typesList, headerType)))
+                          TryBuildEmptyResponse(methodName, response.Key.ToHttpStatusCode(), response.Value, method, typesList, headerType)))
                     {
                         throw new InvalidOperationException(
                             string.Format(CultureInfo.InvariantCulture,

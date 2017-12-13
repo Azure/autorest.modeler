@@ -110,18 +110,19 @@ namespace AutoRest.Modeler
                             {
                                 string propertyServiceTypeName;
                                 Schema refSchema = null;
+                                var propertyValue = property.Value;
 
-                                if (property.Value.Reference != null)
+                                if (propertyValue.Reference != null)
                                 {
-                                    propertyServiceTypeName = property.Value.Reference.StripComponentsSchemaPath();
-                                    var unwrappedSchema = Modeler.Resolver.Unwrap(property.Value);
+                                    propertyServiceTypeName = propertyValue.Reference.StripComponentsSchemaPath();
+                                    var unwrappedSchema = Modeler.Resolver.Unwrap(propertyValue);
 
                                     // For Enums use the referenced schema in order to set the correct property Type and Enum values
                                     if (unwrappedSchema.Enum != null)
                                     {
                                         refSchema = new Schema().LoadFrom(unwrappedSchema);
                                         //Todo: Remove the following when referenced descriptions are correctly ignored (Issue https://github.com/Azure/autorest/issues/1283)
-                                        refSchema.Description = property.Value.Description;
+                                        refSchema.Description = propertyValue.Description;
                                     }
                                 }
                                 else
@@ -131,21 +132,25 @@ namespace AutoRest.Modeler
                                 var isRequired = _schema.Required?.Contains(property.Key) ?? false;
                                 var propertyType = refSchema != null
                                                 ? refSchema.GetBuilder(Modeler).BuildServiceType(propertyServiceTypeName, isRequired)
-                                                : property.Value.GetBuilder(Modeler).BuildServiceType(propertyServiceTypeName, isRequired);
+                                                : propertyValue.GetBuilder(Modeler).BuildServiceType(propertyServiceTypeName, isRequired);
 
+                                var forwardToTarget = propertyValue.ForwardTo();
                                 var propertyObj = New<Property>(new
                                 {
                                     Name = name,
-                                    SerializedName = name,
+                                    SerializedName = propertyValue.IsTaggedAsNoWire() ? null : name,
                                     RealPath = new string[] { name },
                                     ModelType = propertyType,
-                                    IsReadOnly = property.Value.ReadOnly,
-                                    Summary = property.Value.Title,
-                                    XmlProperties = property.Value.Xml,
-                                    IsRequired = isRequired
+                                    IsReadOnly = propertyValue.ReadOnly,
+                                    Summary = propertyValue.Title,
+                                    XmlProperties = propertyValue.Xml,
+                                    IsRequired = isRequired,
+                                    ForwardTo = forwardToTarget == null ? null : New<Property>(new { SerializedName = forwardToTarget }),
+                                    Implementation = propertyValue.Implementation()
                                 });
-                                PopulateProperty(propertyObj, refSchema != null ? refSchema : property.Value);
-                                propertyObj.Deprecated = property.Value.Deprecated || (refSchema?.Deprecated ?? false);
+
+                                PopulateProperty(propertyObj, refSchema != null ? refSchema : propertyValue);
+                                propertyObj.Deprecated = propertyValue.Deprecated || (refSchema?.Deprecated ?? false);
                                 var propertyCompositeType = propertyType as CompositeType;
                                 if (propertyObj.IsConstant || true == propertyCompositeType?.ContainsConstantProperties)
                                 {
@@ -159,6 +164,8 @@ namespace AutoRest.Modeler
                                 objectType.PolymorphicDiscriminator = name;
                             }
                         }
+                        // wire up forwarded properties
+                        SwaggerModeler.ProcessForwardToProperties(objectType.Properties);
                     }
 
                     // Copy over extensions

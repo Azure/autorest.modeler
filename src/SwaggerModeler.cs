@@ -77,7 +77,7 @@ namespace AutoRest.Modeler
                 CodeModel.Add(clientProperty);
             }
 
-            var  methods = new List<Method>();
+            var methods = new List<Method>();
             // Build methods
             foreach (var path in ServiceDefinition.Paths.Concat(ServiceDefinition.CustomPaths))
             {
@@ -117,6 +117,7 @@ namespace AutoRest.Modeler
                     }
                 }
             }
+            ProcessForwardToMethods(methods);
 
             // Set base type
             foreach (var typeName in GeneratedTypes.Keys)
@@ -143,6 +144,40 @@ namespace AutoRest.Modeler
 
             ProcessParameterizedHost();
             return CodeModel;
+        }
+
+        internal static void ProcessForwardToMethods(IEnumerable<Method> allMethods)
+        {
+            foreach (var method in allMethods)
+            {
+                if (method.ForwardTo?.SerializedName != null)
+                {
+                    // resolve target method
+                    var target = allMethods.FirstOrDefault(m => m.SerializedName == method.ForwardTo.SerializedName);
+                    if (target == null)
+                    {
+                        throw new CodeGenerationException($"Cannot forward to '{method.ForwardTo.SerializedName}'. No method with that name found.");
+                    }
+                    method.ForwardTo = target;
+                }
+            }
+        }
+
+        internal static void ProcessForwardToProperties(IEnumerable<Property> properties)
+        {
+            foreach (var prop in properties)
+            {
+                if (prop.ForwardTo?.SerializedName != null)
+                {
+                    // resolve target property
+                    var target = properties.FirstOrDefault(m => m.SerializedName == prop.ForwardTo.SerializedName);
+                    if (target == null)
+                    {
+                        throw new CodeGenerationException($"Cannot forward to '{prop.ForwardTo.SerializedName}'. No property with that name found.");
+                    }
+                    prop.ForwardTo = target;
+                }
+            }
         }
 
         private void UpdateSettings()

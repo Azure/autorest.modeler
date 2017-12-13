@@ -2,6 +2,7 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using AutoRest.Core.Logging;
 using AutoRest.Core.Utilities;
@@ -16,6 +17,27 @@ namespace AutoRest.Modeler
 {
     public static class BuilderExtensions
     {
+        public static bool IsTaggedAsNoWire(this SwaggerBase item) => item.Extensions.Get<bool>("x-ms-no-wire") == true;
+        public static string ForwardTo(this SwaggerBase item) => item.Extensions.GetValue<string>("x-ms-forward-to");
+        public static Dictionary<string, string> Implementation(this SwaggerBase item)
+        {
+            var implementation = item.Extensions.GetValue<object>("x-ms-implementation");
+            if (implementation != null)
+            {
+                if (implementation is string implAgnostic)
+                {
+                    var res = new Dictionary<string, string>();
+                    res[""] = implAgnostic;
+                    return res;
+                }
+                else if (implementation is JObject impl)
+                {
+                    return impl.ToObject<Dictionary<string, string>>();
+                }
+            }
+            return null;
+        }
+
         /// <summary>
         /// Removes #/components/{component}/ or url#/components/{component} from the reference path.
         /// </summary>
