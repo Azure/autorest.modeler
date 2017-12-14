@@ -1,0 +1,1098 @@
+---
+$id: '1'
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - $ref: '2'
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '15'
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '3'
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '8'
+            fixed: false
+            raw: Int
+        name:
+          $id: '6'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '9'
+        collectionFormat: none
+        defaultValue:
+          $id: '10'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '11'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '13'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '14'
+            fixed: false
+            raw: String
+        name:
+          $id: '12'
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+  - $id: '16'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '43'
+      fixed: false
+      raw: PetAPTrue
+    properties:
+      - $id: '17'
+        collectionFormat: none
+        defaultValue:
+          $id: '18'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '19'
+          fixed: false
+          raw: >-
+            Unmatched properties from the message are deserialized this
+            collection
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '21'
+          $type: DictionaryType
+          deprecated: false
+          name:
+            $id: '24'
+            fixed: false
+          supportsAdditionalProperties: true
+          valueType:
+            $id: '22'
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: object
+            name:
+              $id: '23'
+              fixed: false
+              raw: Object
+        name:
+          $id: '20'
+          fixed: false
+          raw: additionalProperties
+      - $id: '25'
+        collectionFormat: none
+        defaultValue:
+          $id: '26'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '27'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $id: '29'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            $id: '30'
+            fixed: false
+            raw: Int
+        name:
+          $id: '28'
+          fixed: false
+          raw: id
+        realPath:
+          - id
+        serializedName: id
+      - $id: '31'
+        collectionFormat: none
+        defaultValue:
+          $id: '32'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '33'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '35'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '36'
+            fixed: false
+            raw: String
+        name:
+          $id: '34'
+          fixed: false
+          raw: name
+        realPath:
+          - name
+        serializedName: name
+      - $id: '37'
+        collectionFormat: none
+        defaultValue:
+          $id: '38'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '39'
+          fixed: false
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $id: '41'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: boolean
+          name:
+            $id: '42'
+            fixed: false
+            raw: Boolean
+        name:
+          $id: '40'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+    serializedName: PetAPTrue
+  - $id: '44'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '71'
+      fixed: false
+      raw: PetAPObject
+    properties:
+      - $id: '45'
+        collectionFormat: none
+        defaultValue:
+          $id: '46'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '47'
+          fixed: false
+          raw: >-
+            Unmatched properties from the message are deserialized this
+            collection
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '49'
+          $type: DictionaryType
+          deprecated: false
+          name:
+            $id: '52'
+            fixed: false
+          supportsAdditionalProperties: true
+          valueType:
+            $id: '50'
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: object
+            name:
+              $id: '51'
+              fixed: false
+              raw: Object
+        name:
+          $id: '48'
+          fixed: false
+          raw: additionalProperties
+      - $id: '53'
+        collectionFormat: none
+        defaultValue:
+          $id: '54'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '55'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $id: '57'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            $id: '58'
+            fixed: false
+            raw: Int
+        name:
+          $id: '56'
+          fixed: false
+          raw: id
+        realPath:
+          - id
+        serializedName: id
+      - $id: '59'
+        collectionFormat: none
+        defaultValue:
+          $id: '60'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '61'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '63'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '64'
+            fixed: false
+            raw: String
+        name:
+          $id: '62'
+          fixed: false
+          raw: name
+        realPath:
+          - name
+        serializedName: name
+      - $id: '65'
+        collectionFormat: none
+        defaultValue:
+          $id: '66'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '67'
+          fixed: false
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $id: '69'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: boolean
+          name:
+            $id: '70'
+            fixed: false
+            raw: Boolean
+        name:
+          $id: '68'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+    serializedName: PetAPObject
+  - $id: '72'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '99'
+      fixed: false
+      raw: PetAPString
+    properties:
+      - $id: '73'
+        collectionFormat: none
+        defaultValue:
+          $id: '74'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '75'
+          fixed: false
+          raw: >-
+            Unmatched properties from the message are deserialized this
+            collection
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '77'
+          $type: DictionaryType
+          deprecated: false
+          name:
+            $id: '80'
+            fixed: false
+          supportsAdditionalProperties: true
+          valueType:
+            $id: '78'
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: string
+            name:
+              $id: '79'
+              fixed: false
+              raw: String
+        name:
+          $id: '76'
+          fixed: false
+          raw: additionalProperties
+      - $id: '81'
+        collectionFormat: none
+        defaultValue:
+          $id: '82'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '83'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $id: '85'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            $id: '86'
+            fixed: false
+            raw: Int
+        name:
+          $id: '84'
+          fixed: false
+          raw: id
+        realPath:
+          - id
+        serializedName: id
+      - $id: '87'
+        collectionFormat: none
+        defaultValue:
+          $id: '88'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '89'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '91'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '92'
+            fixed: false
+            raw: String
+        name:
+          $id: '90'
+          fixed: false
+          raw: name
+        realPath:
+          - name
+        serializedName: name
+      - $id: '93'
+        collectionFormat: none
+        defaultValue:
+          $id: '94'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '95'
+          fixed: false
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $id: '97'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: boolean
+          name:
+            $id: '98'
+            fixed: false
+            raw: Boolean
+        name:
+          $id: '96'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+    serializedName: PetAPString
+  - $id: '100'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '127'
+      fixed: false
+      raw: PetAPInProperties
+    properties:
+      - $id: '101'
+        collectionFormat: none
+        defaultValue:
+          $id: '102'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '103'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $id: '105'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            $id: '106'
+            fixed: false
+            raw: Int
+        name:
+          $id: '104'
+          fixed: false
+          raw: id
+        realPath:
+          - id
+        serializedName: id
+      - $id: '107'
+        collectionFormat: none
+        defaultValue:
+          $id: '108'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '109'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '111'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '112'
+            fixed: false
+            raw: String
+        name:
+          $id: '110'
+          fixed: false
+          raw: name
+        realPath:
+          - name
+        serializedName: name
+      - $id: '113'
+        collectionFormat: none
+        defaultValue:
+          $id: '114'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '115'
+          fixed: false
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $id: '117'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: boolean
+          name:
+            $id: '118'
+            fixed: false
+            raw: Boolean
+        name:
+          $id: '116'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '119'
+        collectionFormat: none
+        defaultValue:
+          $id: '120'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '121'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '123'
+          $type: DictionaryType
+          deprecated: false
+          name:
+            $id: '126'
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $id: '124'
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: double
+            name:
+              $id: '125'
+              fixed: false
+              raw: Double
+        name:
+          $id: '122'
+          fixed: false
+          raw: additionalProperties
+        realPath:
+          - additionalProperties
+        serializedName: additionalProperties
+    serializedName: PetAPInProperties
+  - $id: '128'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '169'
+      fixed: false
+      raw: PetAPInPropertiesWithAPString
+    properties:
+      - $id: '129'
+        collectionFormat: none
+        defaultValue:
+          $id: '130'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '131'
+          fixed: false
+          raw: >-
+            Unmatched properties from the message are deserialized this
+            collection
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '133'
+          $type: DictionaryType
+          deprecated: false
+          name:
+            $id: '136'
+            fixed: false
+          supportsAdditionalProperties: true
+          valueType:
+            $id: '134'
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: string
+            name:
+              $id: '135'
+              fixed: false
+              raw: String
+        name:
+          $id: '132'
+          fixed: false
+          raw: additionalProperties
+      - $id: '137'
+        collectionFormat: none
+        defaultValue:
+          $id: '138'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '139'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $id: '141'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            $id: '142'
+            fixed: false
+            raw: Int
+        name:
+          $id: '140'
+          fixed: false
+          raw: id
+        realPath:
+          - id
+        serializedName: id
+      - $id: '143'
+        collectionFormat: none
+        defaultValue:
+          $id: '144'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '145'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '147'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '148'
+            fixed: false
+            raw: String
+        name:
+          $id: '146'
+          fixed: false
+          raw: name
+        realPath:
+          - name
+        serializedName: name
+      - $id: '149'
+        collectionFormat: none
+        defaultValue:
+          $id: '150'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '151'
+          fixed: false
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $id: '153'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: boolean
+          name:
+            $id: '154'
+            fixed: false
+            raw: Boolean
+        name:
+          $id: '152'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '155'
+        collectionFormat: none
+        defaultValue:
+          $id: '156'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '157'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $id: '159'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '160'
+            fixed: false
+            raw: String
+        name:
+          $id: '158'
+          fixed: false
+          raw: '@odata.location'
+        realPath:
+          - '@odata.location'
+        serializedName: '@odata.location'
+      - $id: '161'
+        collectionFormat: none
+        defaultValue:
+          $id: '162'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '163'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '165'
+          $type: DictionaryType
+          deprecated: false
+          name:
+            $id: '168'
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $id: '166'
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: double
+            name:
+              $id: '167'
+              fixed: false
+              raw: Double
+        name:
+          $id: '164'
+          fixed: false
+          raw: AdditionalProperties1
+        realPath:
+          - additionalProperties
+        serializedName: additionalProperties
+    serializedName: PetAPInPropertiesWithAPString
+modelsName: Models
+name: AdditionalPropertiesClient
+namespace: ''
+operations:
+  - $id: '170'
+    methods:
+      - $id: '171'
+        defaultResponse:
+          $id: '179'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Create a Pet which contains more properties than what is defined.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '177'
+          fixed: false
+          raw: Pets
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '176'
+          fixed: false
+          raw: CreateAPTrue
+        parameters:
+          - $id: '172'
+            collectionFormat: none
+            defaultValue:
+              $id: '173'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '174'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: createParameters
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '16'
+            name:
+              $id: '175'
+              fixed: false
+              raw: createParameters
+            serializedName: createParameters
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '178'
+            body:
+              $ref: '16'
+            isNullable: true
+        returnType:
+          $id: '180'
+          body:
+            $ref: '16'
+          isNullable: true
+        serializedName: Pets_CreateAPTrue
+        url: /additionalProperties/true
+      - $id: '181'
+        defaultResponse:
+          $id: '189'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Create a Pet which contains more properties than what is defined.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '187'
+          fixed: false
+          raw: Pets
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '186'
+          fixed: false
+          raw: CreateAPObject
+        parameters:
+          - $id: '182'
+            collectionFormat: none
+            defaultValue:
+              $id: '183'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '184'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: createParameters
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '44'
+            name:
+              $id: '185'
+              fixed: false
+              raw: createParameters
+            serializedName: createParameters
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '188'
+            body:
+              $ref: '44'
+            isNullable: true
+        returnType:
+          $id: '190'
+          body:
+            $ref: '44'
+          isNullable: true
+        serializedName: Pets_CreateAPObject
+        url: /additionalProperties/type/object
+      - $id: '191'
+        defaultResponse:
+          $id: '199'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Create a Pet which contains more properties than what is defined.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '197'
+          fixed: false
+          raw: Pets
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '196'
+          fixed: false
+          raw: CreateAPString
+        parameters:
+          - $id: '192'
+            collectionFormat: none
+            defaultValue:
+              $id: '193'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '194'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: createParameters
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '72'
+            name:
+              $id: '195'
+              fixed: false
+              raw: createParameters
+            serializedName: createParameters
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '198'
+            body:
+              $ref: '72'
+            isNullable: true
+        returnType:
+          $id: '200'
+          body:
+            $ref: '72'
+          isNullable: true
+        serializedName: Pets_CreateAPString
+        url: /additionalProperties/type/string
+      - $id: '201'
+        defaultResponse:
+          $id: '209'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Create a Pet which contains more properties than what is defined.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '207'
+          fixed: false
+          raw: Pets
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '206'
+          fixed: false
+          raw: CreateAPInProperties
+        parameters:
+          - $id: '202'
+            collectionFormat: none
+            defaultValue:
+              $id: '203'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '204'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: createParameters
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '100'
+            name:
+              $id: '205'
+              fixed: false
+              raw: createParameters
+            serializedName: createParameters
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '208'
+            body:
+              $ref: '100'
+            isNullable: true
+        returnType:
+          $id: '210'
+          body:
+            $ref: '100'
+          isNullable: true
+        serializedName: Pets_CreateAPInProperties
+        url: /additionalProperties/in/properties
+      - $id: '211'
+        defaultResponse:
+          $id: '219'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Create a Pet which contains more properties than what is defined.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '217'
+          fixed: false
+          raw: Pets
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '216'
+          fixed: false
+          raw: CreateAPInPropertiesWithAPString
+        parameters:
+          - $id: '212'
+            collectionFormat: none
+            defaultValue:
+              $id: '213'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '214'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: createParameters
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '128'
+            name:
+              $id: '215'
+              fixed: false
+              raw: createParameters
+            serializedName: createParameters
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '218'
+            body:
+              $ref: '128'
+            isNullable: true
+        returnType:
+          $id: '220'
+          body:
+            $ref: '128'
+          isNullable: true
+        serializedName: Pets_CreateAPInPropertiesWithAPString
+        url: /additionalProperties/in/properties/with/additionalProperties/string
+    name:
+      $id: '221'
+      fixed: false
+      raw: Pets
+    nameForProperty: Pets
+    typeName:
+      $id: '222'
+      fixed: false
