@@ -74,7 +74,7 @@ namespace AutoRest.Modeler
                     }
                     Modeler.GeneratingTypes[_schema] = objectType;
 
-                    if (_schema.Type == DataType.Object && _schema.AdditionalProperties != null)
+                    if (_schema.AdditionalProperties != null)
                     {
                         // this schema is defining 'additionalProperties' which expects to create an extra
                         // property that will catch all the unbound properties during deserialization.

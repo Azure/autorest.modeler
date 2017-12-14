@@ -39,6 +39,7 @@ regenExpected = (opts,done) ->
       return done() if instances is 0
 
 mappingsTestServer = {
+  'additionalProperties'        : 'additionalProperties.json',
   'azure-parameter-grouping'    : 'azure-parameter-grouping.json',
   'azure-report'                : 'azure-report.json',
   'azure-resource-x'            : 'azure-resource-x.json',
