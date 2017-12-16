@@ -1575,7 +1575,7 @@ operations:
                 length limit, you'll typically use a POST request unless you're
                 checking only short strings.
             isConstant: false
-            isRequired: false
+            isRequired: true
             location: formData
             modelType:
               $id: '281'
