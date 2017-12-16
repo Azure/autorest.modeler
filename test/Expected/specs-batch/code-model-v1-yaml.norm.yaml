@@ -21,9 +21,11 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: linux
+      - description: The Linux operating system.
+        name: linux
         serializedName: linux
-      - name: windows
+      - description: The Windows operating system.
+        name: windows
         serializedName: windows
   - &ref_3
     $type: EnumType
@@ -41,7 +43,10 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: job
+      - description: >-
+          Grants access to perform all operations on the job containing the
+          task.
+        name: job
         serializedName: job
   - &ref_8
     $type: EnumType
@@ -59,12 +64,25 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: active
+      - description: The certificate is available for use in pools.
+        name: active
         serializedName: active
-      - name: deleting
+      - description: >-
+          The user has requested that the certificate be deleted, but the delete
+          operation has not yet completed. You may not reference the certificate
+          when creating or updating pools.
+        name: deleting
         serializedName: deleting
-      - name: deleteFailed
-        serializedName: deleteFailed
+      - description: >-
+          The user requested that the certificate be deleted, but there are
+          pools that still have references to the certificate, or it is still
+          installed on one or more compute nodes. (The latter can occur if the
+          certificate has been removed from the pool, but the node has not yet
+          restarted. Nodes refresh their certificates only when they restart.)
+          You may use the cancel certificate delete operation to cancel the
+          delete, or the delete certificate operation to retry the delete.
+        name: deleteFailed
+        serializedName: deletefailed
   - &ref_10
     $type: EnumType
     deprecated: false
@@ -81,9 +99,13 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: pfx
+      - description: >-
+          The certificate is a PFX (PKCS#12) formatted certificate or
+          certificate chain.
+        name: pfx
         serializedName: pfx
-      - name: cer
+      - description: The certificate is a base64-encoded X.509 certificate.
+        name: cer
         serializedName: cer
   - &ref_15
     $type: EnumType
@@ -101,11 +123,18 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: none
+      - description: Take no action.
+        name: none
         serializedName: none
-      - name: disable
+      - description: >-
+          Disable the job. This is equivalent to calling the disable job API,
+          with a disableTasks value of requeue.
+        name: disable
         serializedName: disable
-      - name: terminate
+      - description: >-
+          Terminate the job. The terminateReason in the job's executionInfo is
+          set to "TaskFailed".
+        name: terminate
         serializedName: terminate
   - &ref_16
     $type: EnumType
@@ -123,9 +152,11 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: satisfy
+      - description: Satisfy the task's dependencies.
+        name: satisfy
         serializedName: satisfy
-      - name: block
+      - description: Block the task's dependencies.
+        name: block
         serializedName: block
   - &ref_20
     $type: EnumType
@@ -143,9 +174,13 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: task
+      - description: Specifies that the service should create a new user for the task.
+        name: task
         serializedName: task
-      - name: pool
+      - description: >-
+          Specifies that the task runs as the common auto user account which is
+          created on every node in a pool.
+        name: pool
         serializedName: pool
   - &ref_21
     $type: EnumType
@@ -163,9 +198,13 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: nonAdmin
-        serializedName: nonAdmin
-      - name: admin
+      - description: The user is a standard user without elevated access.
+        name: nonAdmin
+        serializedName: nonadmin
+      - description: >-
+          The user is a user with elevated access and operates with full
+          Administrator permissions.
+        name: admin
         serializedName: admin
   - &ref_25
     $type: EnumType
@@ -183,12 +222,21 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: taskSuccess
-        serializedName: taskSuccess
-      - name: taskFailure
-        serializedName: taskFailure
-      - name: taskCompletion
-        serializedName: taskCompletion
+      - description: >-
+          Upload the file(s) only after the task process exits with an exit code
+          of 0.
+        name: taskSuccess
+        serializedName: tasksuccess
+      - description: >-
+          Upload the file(s) only after the task process exits with a nonzero
+          exit code.
+        name: taskFailure
+        serializedName: taskfailure
+      - description: >-
+          Upload the file(s) after the task process exits, no matter what the
+          exit code was.
+        name: taskCompletion
+        serializedName: taskcompletion
   - &ref_36
     $type: EnumType
     deprecated: false
@@ -205,9 +253,14 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: spread
+      - description: Tasks should be assigned evenly across all nodes in the pool.
+        name: spread
         serializedName: spread
-      - name: pack
+      - description: >-
+          As many tasks as possible (maxTasksPerNode) should be assigned to each
+          node in the pool before any tasks are assigned to the next node in the
+          pool.
+        name: pack
         serializedName: pack
   - &ref_37
     $type: EnumType
@@ -225,10 +278,14 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: currentUser
-        serializedName: currentUser
-      - name: localMachine
-        serializedName: localMachine
+      - description: Certificates should be installed to the CurrentUser certificate store.
+        name: currentUser
+        serializedName: currentuser
+      - description: >-
+          Certificates should be installed to the LocalMachine certificate
+          store.
+        name: localMachine
+        serializedName: localmachine
   - &ref_38
     $type: EnumType
     deprecated: false
@@ -245,12 +302,21 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: startTask
-        serializedName: startTask
-      - name: task
+      - description: >-
+          The certificate should be visible to the user account under which the
+          start task is run.
+        name: startTask
+        serializedName: starttask
+      - description: >-
+          The certificate should be visibile to the user accounts under which
+          job tasks are run.
+        name: task
         serializedName: task
-      - name: remoteUser
-        serializedName: remoteUser
+      - description: >-
+          The certificate should be visibile to the user accounts under which
+          users remotely access the node.
+        name: remoteUser
+        serializedName: remoteuser
   - &ref_39
     $type: EnumType
     deprecated: false
@@ -267,12 +333,15 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: none
+      - description: The caching mode for the disk is not enabled.
+        name: none
         serializedName: none
-      - name: readOnly
-        serializedName: readOnly
-      - name: readWrite
-        serializedName: readWrite
+      - description: The caching mode for the disk is read only.
+        name: readOnly
+        serializedName: readonly
+      - description: The caching mode for the disk is read and write.
+        name: readWrite
+        serializedName: readwrite
   - &ref_40
     $type: EnumType
     deprecated: false
@@ -289,10 +358,12 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: Standard_LRS
-        serializedName: Standard_LRS
-      - name: Premium_LRS
-        serializedName: Premium_LRS
+      - description: The data disk should use standard locally redundant storage.
+        name: StandardLRS
+        serializedName: standard_lrs
+      - description: The data disk should use premium locally redundant storage.
+        name: PremiumLRS
+        serializedName: premium_lrs
   - &ref_46
     $type: EnumType
     deprecated: false
@@ -309,9 +380,11 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: tcp
+      - description: Use TCP for the endpoint.
+        name: tcp
         serializedName: tcp
-      - name: udp
+      - description: Use UDP for the endpoint.
+        name: udp
         serializedName: udp
   - &ref_45
     $type: EnumType
@@ -329,9 +402,11 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: allow
+      - description: Allow access.
+        name: allow
         serializedName: allow
-      - name: deny
+      - description: Deny access.
+        name: deny
         serializedName: deny
   - &ref_58
     $type: EnumType
@@ -349,9 +424,19 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: jobSchedule
-        serializedName: jobSchedule
-      - name: job
+      - description: >-
+          The pool exists for the lifetime of the job schedule. The Batch
+          Service creates the pool when it creates the first job on the
+          schedule. You may apply this option only to job schedules, not to
+          jobs.
+        name: jobSchedule
+        serializedName: jobschedule
+      - description: >-
+          The pool exists for the lifetime of the job to which it is dedicated.
+          The Batch service creates the pool when it creates the job. If the
+          'job' option is applied to a job schedule, the Batch service creates a
+          new auto pool for every job created on the schedule.
+        name: job
         serializedName: job
   - &ref_61
     $type: EnumType
@@ -369,10 +454,16 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: noAction
-        serializedName: noAction
-      - name: terminateJob
-        serializedName: terminateJob
+      - description: >-
+          Do nothing. The job remains active unless terminated or disabled by
+          some other means.
+        name: noAction
+        serializedName: noaction
+      - description: >-
+          Terminate the job. The job's terminateReason is set to
+          'AllTasksComplete'.
+        name: terminateJob
+        serializedName: terminatejob
   - &ref_62
     $type: EnumType
     deprecated: false
@@ -389,10 +480,17 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: noAction
-        serializedName: noAction
-      - name: performExitOptionsJobAction
-        serializedName: performExitOptionsJobAction
+      - description: >-
+          Do nothing. The job remains active unless terminated or disabled by
+          some other means.
+        name: noAction
+        serializedName: noaction
+      - description: >-
+          Take the action associated with the task exit condition in the task's
+          exitConditions collection. (This may still result in no action being
+          taken, if that is what the task specifies.)
+        name: performExitOptionsJobAction
+        serializedName: performexitoptionsjobaction
   - &ref_69
     $type: EnumType
     deprecated: false
@@ -409,15 +507,35 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: active
+      - description: The job schedule is active and will create jobs as per its schedule.
+        name: active
         serializedName: active
-      - name: completed
+      - description: >-
+          The schedule has terminated, either by reaching its end time or by the
+          user terminating it explicitly.
+        name: completed
         serializedName: completed
-      - name: disabled
+      - description: >-
+          The user has disabled the schedule. The scheduler will not initiate
+          any new jobs will on this schedule, but any existing active job will
+          continue to run.
+        name: disabled
         serializedName: disabled
-      - name: terminating
+      - description: >-
+          The schedule has no more work to do, or has been explicitly terminated
+          by the user, but the termination operation is still in progress. The
+          scheduler will not initiate any new jobs for this schedule, nor is any
+          existing job active.
+        name: terminating
         serializedName: terminating
-      - name: deleting
+      - description: >-
+          The user has requested that the schedule be deleted, but the delete
+          operation is still in progress. The scheduler will not initiate any
+          new jobs for this schedule, and will delete any existing jobs and
+          tasks under the schedule, including any active job. The schedule will
+          be deleted when all jobs and tasks under the schedule have been
+          deleted.
+        name: deleting
         serializedName: deleting
   - &ref_75
     $type: EnumType
@@ -435,10 +553,12 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: userError
-        serializedName: userError
-      - name: serverError
-        serializedName: serverError
+      - description: 'The error is due to a user issue, such as misconfiguration.'
+        name: userError
+        serializedName: usererror
+      - description: The error is due to an internal server issue.
+        name: serverError
+        serializedName: servererror
   - &ref_77
     $type: EnumType
     deprecated: false
@@ -455,19 +575,42 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: active
+      - description: The job is available to have tasks scheduled.
+        name: active
         serializedName: active
-      - name: disabling
+      - description: >-
+          A user has requested that the job be disabled, but the disable
+          operation is still in progress (for example, waiting for tasks to
+          terminate).
+        name: disabling
         serializedName: disabling
-      - name: disabled
+      - description: >-
+          A user has disabled the job. No tasks are running, and no new tasks
+          will be scheduled.
+        name: disabled
         serializedName: disabled
-      - name: enabling
+      - description: >-
+          A user has requested that the job be enabled, but the enable operation
+          is still in progress.
+        name: enabling
         serializedName: enabling
-      - name: terminating
+      - description: >-
+          The job is about to complete, either because a Job Manager task has
+          completed or because the user has terminated the job, but the
+          terminate operation is still in progress (for example, because Job
+          Release tasks are running).
+        name: terminating
         serializedName: terminating
-      - name: completed
+      - description: >-
+          All tasks have terminated, and the system will not accept any more
+          tasks or any further changes to the job.
+        name: completed
         serializedName: completed
-      - name: deleting
+      - description: >-
+          A user has requested that the job be deleted, but the delete operation
+          is still in progress (for example, because the system is still
+          terminating running tasks).
+        name: deleting
         serializedName: deleting
   - &ref_81
     $type: EnumType
@@ -485,9 +628,14 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: running
+      - description: The task is currently running (including retrying).
+        name: running
         serializedName: running
-      - name: completed
+      - description: >-
+          The task has exited with exit code 0, or the task has exhausted its
+          retry limit, or the Batch service was unable to start the task due to
+          task preparation errors (such as resource file download failures).
+        name: completed
         serializedName: completed
   - &ref_84
     $type: EnumType
@@ -505,9 +653,14 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: success
+      - description: The task ran successfully.
+        name: success
         serializedName: success
-      - name: failure
+      - description: >-
+          There was an error during processing of the task. The failure may have
+          occurred before the task process was launched, while the task process
+          was executing, or after the task process exited.
+        name: failure
         serializedName: failure
   - &ref_85
     $type: EnumType
@@ -525,9 +678,14 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: running
+      - description: The task is currently running (including retrying).
+        name: running
         serializedName: running
-      - name: completed
+      - description: >-
+          The task has exited with exit code 0, or the task has exhausted its
+          retry limit, or the Batch service was unable to start the task due to
+          task preparation errors (such as resource file download failures).
+        name: completed
         serializedName: completed
   - &ref_89
     $type: EnumType
@@ -545,9 +703,16 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: validated
+      - description: >-
+          The Batch service has validated the state counts against the task
+          states as reported in the List Tasks API.
+        name: validated
         serializedName: validated
-      - name: unvalidated
+      - description: >-
+          The Batch service has not been able to check state counts against the
+          task states as reported in the List Tasks API. The validationStatus
+          may be unvalidated if the job contains more than 200,000 tasks.
+        name: unvalidated
         serializedName: unvalidated
   - &ref_91
     $type: EnumType
@@ -565,11 +730,23 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: active
+      - description: >-
+          The pool is available to run tasks subject to the availability of
+          compute nodes.
+        name: active
         serializedName: active
-      - name: deleting
+      - description: >-
+          The user has requested that the pool be deleted, but the delete
+          operation has not yet completed.
+        name: deleting
         serializedName: deleting
-      - name: upgrading
+      - description: >-
+          The user has requested that the operating system of the pool's nodes
+          be upgraded, but the upgrade operation has not yet completed (that is,
+          some nodes in the pool have not yet been upgraded). While upgrading,
+          the pool may be able to run tasks (with reduced capacity) but this is
+          not guaranteed.
+        name: upgrading
         serializedName: upgrading
   - &ref_92
     $type: EnumType
@@ -587,11 +764,22 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: steady
+      - description: >-
+          The pool is not resizing. There are no changes to the number of nodes
+          in the pool in progress. A pool enters this state when it is created
+          and when no operations are being performed on the pool to change the
+          number of nodes.
+        name: steady
         serializedName: steady
-      - name: resizing
+      - description: >-
+          The pool is resizing; that is, compute nodes are being added to or
+          removed from the pool.
+        name: resizing
         serializedName: resizing
-      - name: stopping
+      - description: >-
+          The pool was resizing, but the user has requested that the resize be
+          stopped, but the stop request has not yet been completed.
+        name: stopping
         serializedName: stopping
   - &ref_100
     $type: EnumType
@@ -609,13 +797,35 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: active
+      - description: >-
+          The task is queued and able to run, but is not currently assigned to a
+          compute node. A task enters this state when it is created, when it is
+          enabled after being disabled, or when it is awaiting a retry after a
+          failed run.
+        name: active
         serializedName: active
-      - name: preparing
+      - description: >-
+          The task has been assigned to a compute node, but is waiting for a
+          required Job Preparation task to complete on the node. If the Job
+          Preparation task succeeds, the task will move to running. If the Job
+          Preparation task fails, the task will return to active and will be
+          eligible to be assigned to a different node.
+        name: preparing
         serializedName: preparing
-      - name: running
+      - description: >-
+          The task is running on a compute node. This includes task-level
+          preparation such as downloading resource files or deploying
+          application packages specified on the task - it does not necessarily
+          mean that the task command line has started executing.
+        name: running
         serializedName: running
-      - name: completed
+      - description: >-
+          The task is no longer eligible to run, usually because the task has
+          finished successfully, or the task has finished unsuccessfully and has
+          exhausted its retry limit. A task is also marked as completed if an
+          error occurred launching the task, or when the task has been
+          terminated.
+        name: completed
         serializedName: completed
   - &ref_111
     $type: EnumType
@@ -633,12 +843,19 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: success
+      - description: The task was added successfully.
+        name: success
         serializedName: success
-      - name: clientError
-        serializedName: clientError
-      - name: serverError
-        serializedName: serverError
+      - description: >-
+          The task failed to add due to a client error and should not be retried
+          without modifying the request as appropriate.
+        name: clientError
+        serializedName: clienterror
+      - description: >-
+          Task failed to add due to a server error and can be retried without
+          modification.
+        name: serverError
+        serializedName: servererror
   - &ref_113
     $type: EnumType
     deprecated: false
@@ -655,11 +872,28 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: preparing
+      - description: >-
+          The task has been assigned to a compute node, but is waiting for a
+          required Job Preparation task to complete on the node. If the Job
+          Preparation task succeeds, the task will move to running. If the Job
+          Preparation task fails, the task will return to active and will be
+          eligible to be assigned to a different node.
+        name: preparing
         serializedName: preparing
-      - name: running
+      - description: >-
+          The task is running on a compute node. This includes task-level
+          preparation such as downloading resource files or deploying
+          application packages specified on the task - it does not necessarily
+          mean that the task command line has started executing.
+        name: running
         serializedName: running
-      - name: completed
+      - description: >-
+          The task is no longer eligible to run, usually because the task has
+          finished successfully, or the task has finished unsuccessfully and has
+          exhausted its retry limit. A task is also marked as completed if an
+          error occurred launching the task, or when the task has been
+          terminated.
+        name: completed
         serializedName: completed
   - &ref_116
     $type: EnumType
@@ -677,9 +911,15 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: running
+      - description: The start task is currently running.
+        name: running
         serializedName: running
-      - name: completed
+      - description: >-
+          The start task has exited with exit code 0, or the start task has
+          failed and the retry limit has reached, or the start task process did
+          not run due to task preparation errors (such as resource file download
+          failures).
+        name: completed
         serializedName: completed
   - &ref_118
     $type: EnumType
@@ -697,31 +937,60 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: idle
+      - description: The node is not currently running a task.
+        name: idle
         serializedName: idle
-      - name: rebooting
+      - description: The node is rebooting.
+        name: rebooting
         serializedName: rebooting
-      - name: reimaging
+      - description: The node is reimaging.
+        name: reimaging
         serializedName: reimaging
-      - name: running
+      - description: The node is running one or more tasks (other than a start task).
+        name: running
         serializedName: running
-      - name: unusable
+      - description: The node cannot be used for task execution due to errors.
+        name: unusable
         serializedName: unusable
-      - name: creating
+      - description: >-
+          The Batch service has obtained the underlying virtual machine from
+          Azure Compute, but it has not yet started to join the pool.
+        name: creating
         serializedName: creating
-      - name: starting
+      - description: The Batch service is starting on the underlying virtual machine.
+        name: starting
         serializedName: starting
-      - name: waitingForStartTask
-        serializedName: waitingForStartTask
-      - name: startTaskFailed
-        serializedName: startTaskFailed
-      - name: unknown
+      - description: >-
+          The start task has started running on the compute node, but
+          waitForSuccess is set and the start task has not yet completed.
+        name: waitingForStartTask
+        serializedName: waitingforstarttask
+      - description: >-
+          The start task has failed on the compute node (and exhausted all
+          retries), and waitForSuccess is set. The node is not usable for
+          running tasks.
+        name: startTaskFailed
+        serializedName: starttaskfailed
+      - description: >-
+          The Batch service has lost contact with the node, and does not know
+          its true state.
+        name: unknown
         serializedName: unknown
-      - name: leavingPool
-        serializedName: leavingPool
-      - name: offline
+      - description: >-
+          The node is leaving the pool, either because the user explicitly
+          removed it or because the pool is resizing or autoscaling down.
+        name: leavingPool
+        serializedName: leavingpool
+      - description: >-
+          The node is not currently running a task, and scheduling of new tasks
+          to the node is disabled.
+        name: offline
         serializedName: offline
-      - name: preempted
+      - description: >-
+          The low-priority node has been preempted. Tasks which were running on
+          the node when it was pre-empted will be rescheduled when another node
+          becomes available.
+        name: preempted
         serializedName: preempted
   - &ref_119
     $type: EnumType
@@ -739,9 +1008,14 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: enabled
+      - description: Tasks can be scheduled on the node.
+        name: enabled
         serializedName: enabled
-      - name: disabled
+      - description: >-
+          No new tasks will be scheduled on the node. Tasks already running on
+          the node may still run to completion. All nodes start with scheduling
+          enabled.
+        name: disabled
         serializedName: disabled
   - &ref_125
     $type: EnumType
@@ -759,11 +1033,18 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: requeue
+      - description: >-
+          Terminate running tasks and requeue them. The tasks will run again
+          when the job is enabled.
+        name: requeue
         serializedName: requeue
-      - name: terminate
+      - description: >-
+          Terminate running tasks. The tasks will be completed with failureInfo
+          indicating that they were terminated, and will not run again.
+        name: terminate
         serializedName: terminate
-      - name: wait
+      - description: Allow currently running tasks to complete.
+        name: wait
         serializedName: wait
   - &ref_126
     $type: EnumType
@@ -781,14 +1062,29 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: requeue
+      - description: >-
+          Terminate running task processes and requeue the tasks. The tasks will
+          run again when a node is available. Remove nodes as soon as tasks have
+          been terminated.
+        name: requeue
         serializedName: requeue
-      - name: terminate
+      - description: >-
+          Terminate running tasks. The tasks will be completed with failureInfo
+          indicating that they were terminated, and will not run again. Remove
+          nodes as soon as tasks have been terminated.
+        name: terminate
         serializedName: terminate
-      - name: taskCompletion
-        serializedName: taskCompletion
-      - name: retainedData
-        serializedName: retainedData
+      - description: >-
+          Allow currently running tasks to complete. Schedule no new tasks while
+          waiting. Remove nodes when all tasks have completed.
+        name: taskCompletion
+        serializedName: taskcompletion
+      - description: >-
+          Allow currently running tasks to complete, then wait for all task data
+          retention periods to expire. Schedule no new tasks while waiting.
+          Remove nodes when all task retention periods have expired.
+        name: retainedData
+        serializedName: retaineddata
   - &ref_127
     $type: EnumType
     deprecated: false
@@ -805,14 +1101,29 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: requeue
+      - description: >-
+          Terminate running task processes and requeue the tasks. The tasks will
+          run again when a node is available. Restart the node as soon as tasks
+          have been terminated.
+        name: requeue
         serializedName: requeue
-      - name: terminate
+      - description: >-
+          Terminate running tasks. The tasks will be completed with failureInfo
+          indicating that they were terminated, and will not run again. Restart
+          the node as soon as tasks have been terminated.
+        name: terminate
         serializedName: terminate
-      - name: taskCompletion
-        serializedName: taskCompletion
-      - name: retainedData
-        serializedName: retainedData
+      - description: >-
+          Allow currently running tasks to complete. Schedule no new tasks while
+          waiting. Restart the node when all tasks have completed.
+        name: taskCompletion
+        serializedName: taskcompletion
+      - description: >-
+          Allow currently running tasks to complete, then wait for all task data
+          retention periods to expire. Schedule no new tasks while waiting.
+          Restart the node when all task retention periods have expired.
+        name: retainedData
+        serializedName: retaineddata
   - &ref_128
     $type: EnumType
     deprecated: false
@@ -829,14 +1140,29 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: requeue
+      - description: >-
+          Terminate running task processes and requeue the tasks. The tasks will
+          run again when a node is available. Reimage the node as soon as tasks
+          have been terminated.
+        name: requeue
         serializedName: requeue
-      - name: terminate
+      - description: >-
+          Terminate running tasks. The tasks will be completed with failureInfo
+          indicating that they were terminated, and will not run again. Reimage
+          the node as soon as tasks have been terminated.
+        name: terminate
         serializedName: terminate
-      - name: taskCompletion
-        serializedName: taskCompletion
-      - name: retainedData
-        serializedName: retainedData
+      - description: >-
+          Allow currently running tasks to complete. Schedule no new tasks while
+          waiting. Reimage the node when all tasks have completed.
+        name: taskCompletion
+        serializedName: taskcompletion
+      - description: >-
+          Allow currently running tasks to complete, then wait for all task data
+          retention periods to expire. Schedule no new tasks while waiting.
+          Reimage the node when all task retention periods have expired.
+        name: retainedData
+        serializedName: retaineddata
   - &ref_129
     $type: EnumType
     deprecated: false
@@ -853,12 +1179,24 @@ enumTypes:
         fixed: false
         raw: String
     values:
-      - name: requeue
+      - description: >-
+          Terminate running task processes and requeue the tasks. The tasks may
+          run again on other compute nodes, or when task scheduling is
+          re-enabled on this node. Enter offline state as soon as tasks have
+          been terminated.
+        name: requeue
         serializedName: requeue
-      - name: terminate
+      - description: >-
+          Terminate running tasks. The tasks will be completed with failureInfo
+          indicating that they were terminated, and will not run again. Enter
+          offline state as soon as tasks have been terminated.
+        name: terminate
         serializedName: terminate
-      - name: taskCompletion
-        serializedName: taskCompletion
+      - description: >-
+          Allow currently running tasks to complete. Schedule no new tasks while
+          waiting. Enter offline state when all tasks have completed.
+        name: taskCompletion
+        serializedName: taskcompletion
 errorTypes:
   - &ref_110
     $type: CompositeType
@@ -11341,6 +11679,11 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: OSType
+            values:
+              - description: The Linux operating system.
+                value: linux
+              - description: The Windows operating system.
+                value: windows
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -11386,6 +11729,11 @@ modelTypes:
             x-ms-enum:
               modelAsString: false
               name: AccessScope
+              values:
+                - description: >-
+                    Grants access to perform all operations on the job
+                    containing the task.
+                  value: job
             x-nullable: false
           name:
             fixed: false
@@ -12611,6 +12959,25 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: CertificateState
+            values:
+              - description: The certificate is available for use in pools.
+                value: active
+              - description: >-
+                  The user has requested that the certificate be deleted, but
+                  the delete operation has not yet completed. You may not
+                  reference the certificate when creating or updating pools.
+                value: deleting
+              - description: >-
+                  The user requested that the certificate be deleted, but there
+                  are pools that still have references to the certificate, or it
+                  is still installed on one or more compute nodes. (The latter
+                  can occur if the certificate has been removed from the pool,
+                  but the node has not yet restarted. Nodes refresh their
+                  certificates only when they restart.) You may use the cancel
+                  certificate delete operation to cancel the delete, or the
+                  delete certificate operation to retry the delete.
+                name: deleteFailed
+                value: deletefailed
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -12659,6 +13026,25 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: CertificateState
+            values:
+              - description: The certificate is available for use in pools.
+                value: active
+              - description: >-
+                  The user has requested that the certificate be deleted, but
+                  the delete operation has not yet completed. You may not
+                  reference the certificate when creating or updating pools.
+                value: deleting
+              - description: >-
+                  The user requested that the certificate be deleted, but there
+                  are pools that still have references to the certificate, or it
+                  is still installed on one or more compute nodes. (The latter
+                  can occur if the certificate has been removed from the pool,
+                  but the node has not yet restarted. Nodes refresh their
+                  certificates only when they restart.) You may use the cancel
+                  certificate delete operation to cancel the delete, or the
+                  delete certificate operation to retry the delete.
+                name: deleteFailed
+                value: deletefailed
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -12982,6 +13368,13 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: CertificateFormat
+            values:
+              - description: >-
+                  The certificate is a PFX (PKCS#12) formatted certificate or
+                  certificate chain.
+                value: pfx
+              - description: The certificate is a base64-encoded X.509 certificate.
+                value: cer
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -13919,18 +14312,27 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             none - Take no action.
-             disable - Disable the job. This is equivalent to calling the disable job API, with a disableTasks value of requeue.
-             terminate - Terminate the job. The terminateReason in the job's executionInfo is set to "TaskFailed". The default is none for exit code 0 and terminate for all other exit conditions.
-
-             If the job's onTaskFailed property is noAction, then specifying this property returns an error and the add task request fails with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
+          raw: >-
+            The default is none for exit code 0 and terminate for all other exit
+            conditions. If the job's onTaskFailed property is noaction, then
+            specifying this property returns an error and the add task request
+            fails with an invalid property value error; if you are calling the
+            REST API directly, the HTTP status code is 400 (Bad Request).
         extensions:
           x-ms-enum:
             modelAsString: false
             name: JobAction
+            values:
+              - description: Take no action.
+                value: none
+              - description: >-
+                  Disable the job. This is equivalent to calling the disable job
+                  API, with a disableTasks value of requeue.
+                value: disable
+              - description: >-
+                  Terminate the job. The terminateReason in the job's
+                  executionInfo is set to "TaskFailed".
+                value: terminate
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -13951,17 +14353,22 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             satisfy - Satisfy the task's dependencies.
-             block - Block the task's dependencies.
-
-             The default is 'satisfy' for exit code 0, and 'block' for all other exit conditions. If the job's usesTaskDependencies property is set to false, then specifying the dependencyAction property returns an erro and the add task request fails with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400  (Bad Request).
+          raw: >-
+            The default is 'satisfy' for exit code 0, and 'block' for all other
+            exit conditions. If the job's usesTaskDependencies property is set
+            to false, then specifying the dependencyAction property returns an
+            error and the add task request fails with an invalid property value
+            error; if you are calling the REST API directly, the HTTP status
+            code is 400  (Bad Request).
         extensions:
           x-ms-enum:
             modelAsString: false
             name: DependencyAction
+            values:
+              - description: Satisfy the task's dependencies.
+                value: satisfy
+              - description: Block the task's dependencies.
+                value: block
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -14250,16 +14657,20 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             pool - specifies that the task runs as the common auto user account which is created on every node in a pool.
-             task - specifies that the service should create a new user for the task.
-             The default value is task.
+          raw: The default value is task.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: AutoUserScope
+            values:
+              - description: >-
+                  Specifies that the service should create a new user for the
+                  task.
+                value: task
+              - description: >-
+                  Specifies that the task runs as the common auto user account
+                  which is created on every node in a pool.
+                value: pool
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -14285,6 +14696,14 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: ElevationLevel
+            values:
+              - description: The user is a standard user without elevated access.
+                name: nonAdmin
+                value: nonadmin
+              - description: >-
+                  The user is a user with elevated access and operates with full
+                  Administrator permissions.
+                value: admin
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -14523,6 +14942,14 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: ElevationLevel
+            values:
+              - description: The user is a standard user without elevated access.
+                name: nonAdmin
+                value: nonadmin
+              - description: >-
+                  The user is a user with elevated access and operates with full
+                  Administrator permissions.
+                value: admin
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -14776,11 +15203,27 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: The default is taskCompletion.
+          raw: The default is taskcompletion.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: OutputFileUploadCondition
+            values:
+              - description: >-
+                  Upload the file(s) only after the task process exits with an
+                  exit code of 0.
+                name: taskSuccess
+                value: tasksuccess
+              - description: >-
+                  Upload the file(s) only after the task process exits with a
+                  nonzero exit code.
+                name: taskFailure
+                value: taskfailure
+              - description: >-
+                  Upload the file(s) after the task process exits, no matter
+                  what the exit code was.
+                name: taskCompletion
+                value: taskcompletion
         isConstant: false
         isReadOnly: false
         isRequired: true
@@ -15828,6 +16271,14 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: ComputeNodeFillType
+            values:
+              - description: Tasks should be assigned evenly across all nodes in the pool.
+                value: spread
+              - description: >-
+                  As many tasks as possible (maxTasksPerNode) should be assigned
+                  to each node in the pool before any tasks are assigned to the
+                  next node in the pool.
+                value: pack
         isConstant: false
         isReadOnly: false
         isRequired: true
@@ -15838,11 +16289,7 @@ modelTypes:
         realPath:
           - nodeFillType
         serializedName: nodeFillType
-        summary: |-
-          How tasks are distributed across compute nodes in a pool. Values are:
-
-           pack - As many tasks as possible (maxTasksPerNode) should be assigned to each node in the pool before any tasks are assigned to the next node in the pool.
-           spread - Tasks should be assigned evenly across all nodes in the pool.
+        summary: How tasks are distributed across compute nodes in a pool.
     serializedName: TaskSchedulingPolicy
     summary: Specifies how tasks should be distributed across compute nodes.
   - &ref_54
@@ -16112,7 +16559,7 @@ modelTypes:
         documentation:
           fixed: false
           raw: >-
-            The default value is currentUser. This property is applicable only
+            The default value is currentuser. This property is applicable only
             for pools configured with Windows nodes (that is, created with
             cloudServiceConfiguration, or with virtualMachineConfiguration using
             a Windows image reference). For Linux compute nodes, the
@@ -16126,6 +16573,17 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: CertificateStoreLocation
+            values:
+              - description: >-
+                  Certificates should be installed to the CurrentUser
+                  certificate store.
+                name: currentUser
+                value: currentuser
+              - description: >-
+                  Certificates should be installed to the LocalMachine
+                  certificate store.
+                name: localMachine
+                value: localmachine
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -16177,14 +16635,9 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             starttask - The user account under which the start task is run.
-             task - The accounts under which job tasks are run.
-             remoteuser - The accounts under which users remotely access the node.
-
-             You can specify more than one visibility in this collection. The default is all accounts.
+          raw: >-
+            You can specify more than one visibility in this collection. The
+            default is all accounts.
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -16196,6 +16649,21 @@ modelTypes:
             x-ms-enum:
               modelAsString: false
               name: CertificateVisibility
+              values:
+                - description: >-
+                    The certificate should be visible to the user account under
+                    which the start task is run.
+                  name: startTask
+                  value: starttask
+                - description: >-
+                    The certificate should be visibile to the user accounts
+                    under which job tasks are run.
+                  value: task
+                - description: >-
+                    The certificate should be visibile to the user accounts
+                    under which users remotely access the node.
+                  name: remoteUser
+                  value: remoteuser
             x-nullable: false
           name:
             fixed: false
@@ -16386,18 +16854,23 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             none - The caching mode for the disk is not enabled.
-             readOnly - The caching mode for the disk is read only.
-             readWrite - The caching mode for the disk is read and write.
-
-             The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+          raw: >-
+            The default value for caching is none. For information about the
+            caching options see:
+            https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: CachingType
+            values:
+              - description: The caching mode for the disk is not enabled.
+                value: none
+              - description: The caching mode for the disk is read only.
+                name: readOnly
+                value: readonly
+              - description: The caching mode for the disk is read and write.
+                name: readWrite
+                value: readwrite
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -16486,18 +16959,23 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             none - The caching mode for the disk is not enabled.
-             readOnly - The caching mode for the disk is read only.
-             readWrite - The caching mode for the disk is read and write.
-
-             The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+          raw: >-
+            The default value for caching is none. For information about the
+            caching options see:
+            https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: CachingType
+            values:
+              - description: The caching mode for the disk is not enabled.
+                value: none
+              - description: The caching mode for the disk is read only.
+                name: readOnly
+                value: readonly
+              - description: The caching mode for the disk is read and write.
+                name: readWrite
+                value: readwrite
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -16539,15 +17017,18 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            If omitted, the default is "Standard_LRS". Values are:
-
-             Standard_LRS - The data disk should use standard locally redundant storage.
-             Premium_LRS - The data disk should use premium locally redundant storage.
+          raw: 'If omitted, the default is "standard_lrs".'
         extensions:
           x-ms-enum:
             modelAsString: false
             name: StorageAccountType
+            values:
+              - description: The data disk should use standard locally redundant storage.
+                name: StandardLRS
+                value: standard_lrs
+              - description: The data disk should use premium locally redundant storage.
+                name: PremiumLRS
+                value: premium_lrs
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -16578,14 +17059,13 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             docker - Docker will be used to launch the containers.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: ContainerType
+            values:
+              - description: Docker will be used to launch the containers.
+                value: docker
         isConstant: true
         isReadOnly: false
         isRequired: true
@@ -16769,7 +17249,14 @@ modelTypes:
           raw: >-
             This property must be specified if the compute nodes in the pool
             need to have empty data disks attached to them. This cannot be
-            updated.
+            updated. Each node gets its own disk (the disk is not a file share).
+            Existing disks cannot be attached, each attached disk is empty. When
+            the node is removed from the pool, the disk and all data associated
+            with it is also deleted. The disk is not formatted after being
+            attached, it must be formatted before use - for more information see
+            https://docs.microsoft.com/en-us/azure/virtual-machines/linux/classic/attach-disk#initialize-a-new-data-disk-in-linux
+            and
+            https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-disk-ps#add-an-empty-data-disk-to-a-virtual-machine.
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -16897,6 +17384,11 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: NetworkSecurityGroupRuleAccess
+            values:
+              - description: Allow access.
+                value: allow
+              - description: Deny access.
+                value: deny
         isConstant: false
         isReadOnly: false
         isRequired: true
@@ -16987,6 +17479,13 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: InboundEndpointProtocol
+            values:
+              - description: Use TCP for the endpoint.
+                name: tcp
+                value: tcp
+              - description: Use UDP for the endpoint.
+                name: udp
+                value: udp
         isConstant: false
         isReadOnly: false
         isRequired: true
@@ -17036,8 +17535,9 @@ modelTypes:
           raw: >-
             Acceptable values range between 1 and 65534 except ports from 50000
             to 55000 which are reserved. All ranges within a pool must be
-            distinct and cannot overlap. If any reserved or overlapping values
-            are provided the request fails with HTTP status code 400.
+            distinct and cannot overlap. Each range must contain at least 40
+            ports. If any reserved or overlapping values are provided the
+            request fails with HTTP status code 400.
         isConstant: false
         isReadOnly: false
         isRequired: true
@@ -17068,9 +17568,9 @@ modelTypes:
           raw: >-
             Acceptable values range between 1 and 65534 except ports from 50000
             to 55000 which are reserved by the Batch service. All ranges within
-            a pool must be distinct and cannot overlap. If any reserved or
-            overlapping values are provided the request fails with HTTP status
-            code 400.
+            a pool must be distinct and cannot overlap. Each range must contain
+            at least 40 ports. If any reserved or overlapping values are
+            provided the request fails with HTTP status code 400.
         isConstant: false
         isReadOnly: false
         isRequired: true
@@ -17843,20 +18343,25 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: >-
-            When the pool lifetime is jobSchedule the pool exists for the
-            lifetime of the job schedule. The Batch Service creates the pool
-            when it creates the first job on the schedule. You may apply this
-            option only to job schedules, not to jobs. When the pool lifetime is
-            job the pool exists for the lifetime of the job to which it is
-            dedicated. The Batch service creates the pool when it creates the
-            job. If the 'job' option is applied to a job schedule, the Batch
-            service creates a new auto pool for every job created on the
-            schedule.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: PoolLifetimeOption
+            values:
+              - description: >-
+                  The pool exists for the lifetime of the job schedule. The
+                  Batch Service creates the pool when it creates the first job
+                  on the schedule. You may apply this option only to job
+                  schedules, not to jobs.
+                name: jobSchedule
+                value: jobschedule
+              - description: >-
+                  The pool exists for the lifetime of the job to which it is
+                  dedicated. The Batch service creates the pool when it creates
+                  the job. If the 'job' option is applied to a job schedule, the
+                  Batch service creates a new auto pool for every job created on
+                  the schedule.
+                value: job
         isConstant: false
         isReadOnly: false
         isRequired: true
@@ -18090,14 +18595,25 @@ modelTypes:
             Note that if a job contains no tasks, then all tasks are considered
             complete. This option is therefore most commonly used with a Job
             Manager task; if you want to use automatic job termination without a
-            Job Manager, you should initially set onAllTasksComplete to noAction
+            Job Manager, you should initially set onAllTasksComplete to noaction
             and update the job properties to set onAllTasksComplete to
-            terminateJob once you have finished adding tasks. The default is
-            noAction.
+            terminatejob once you have finished adding tasks. The default is
+            noaction.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: OnAllTasksComplete
+            values:
+              - description: >-
+                  Do nothing. The job remains active unless terminated or
+                  disabled by some other means.
+                name: noAction
+                value: noaction
+              - description: >-
+                  Terminate the job. The job's terminateReason is set to
+                  'AllTasksComplete'.
+                name: terminateJob
+                value: terminatejob
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -18117,11 +18633,23 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: The default is noAction.
+          raw: The default is noaction.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: OnTaskFailure
+            values:
+              - description: >-
+                  Do nothing. The job remains active unless terminated or
+                  disabled by some other means.
+                name: noAction
+                value: noaction
+              - description: >-
+                  Take the action associated with the task exit condition in the
+                  task's exitConditions collection. (This may still result in no
+                  action being taken, if that is what the task specifies.)
+                name: performExitOptionsJobAction
+                value: performexitoptionsjobaction
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -19000,6 +19528,34 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: JobScheduleState
+            values:
+              - description: >-
+                  The job schedule is active and will create jobs as per its
+                  schedule.
+                value: active
+              - description: >-
+                  The schedule has terminated, either by reaching its end time
+                  or by the user terminating it explicitly.
+                value: completed
+              - description: >-
+                  The user has disabled the schedule. The scheduler will not
+                  initiate any new jobs will on this schedule, but any existing
+                  active job will continue to run.
+                value: disabled
+              - description: >-
+                  The schedule has no more work to do, or has been explicitly
+                  terminated by the user, but the termination operation is still
+                  in progress. The scheduler will not initiate any new jobs for
+                  this schedule, nor is any existing job active.
+                value: terminating
+              - description: >-
+                  The user has requested that the schedule be deleted, but the
+                  delete operation is still in progress. The scheduler will not
+                  initiate any new jobs for this schedule, and will delete any
+                  existing jobs and tasks under the schedule, including any
+                  active job. The schedule will be deleted when all jobs and
+                  tasks under the schedule have been deleted.
+                value: deleting
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -19048,6 +19604,34 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: JobScheduleState
+            values:
+              - description: >-
+                  The job schedule is active and will create jobs as per its
+                  schedule.
+                value: active
+              - description: >-
+                  The schedule has terminated, either by reaching its end time
+                  or by the user terminating it explicitly.
+                value: completed
+              - description: >-
+                  The user has disabled the schedule. The scheduler will not
+                  initiate any new jobs will on this schedule, but any existing
+                  active job will continue to run.
+                value: disabled
+              - description: >-
+                  The schedule has no more work to do, or has been explicitly
+                  terminated by the user, but the termination operation is still
+                  in progress. The scheduler will not initiate any new jobs for
+                  this schedule, nor is any existing job active.
+                value: terminating
+              - description: >-
+                  The user has requested that the schedule be deleted, but the
+                  delete operation is still in progress. The scheduler will not
+                  initiate any new jobs for this schedule, and will delete any
+                  existing jobs and tasks under the schedule, including any
+                  active job. The schedule will be deleted when all jobs and
+                  tasks under the schedule have been deleted.
+                value: deleting
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -19384,6 +19968,13 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: ErrorCategory
+            values:
+              - description: 'The error is due to a user issue, such as misconfiguration.'
+                name: userError
+                value: usererror
+              - description: The error is due to an internal server issue.
+                name: serverError
+                value: servererror
         isConstant: false
         isReadOnly: false
         isRequired: true
@@ -19589,11 +20180,11 @@ modelTypes:
             was set to true. MaxWallClockTimeExpiry - the job reached its
             maxWallClockTime constraint. TerminateJobSchedule - the job ran as
             part of a schedule, and the schedule terminated. AllTasksComplete -
-            the job's onAllTasksComplete attribute is set to terminateJob, and
+            the job's onAllTasksComplete attribute is set to terminatejob, and
             all tasks in the job are complete. TaskFailed - the job's
             onTaskFailure attribute is set to performExitOptionsJobAction, and a
             task in the job failed with an exit condition that specified a
-            jobAction of terminateJob. Any other string is a user-defined reason
+            jobAction of terminatejob. Any other string is a user-defined reason
             specified in a call to the 'Terminate a job' operation.
         isConstant: false
         isReadOnly: false
@@ -19811,6 +20402,37 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: JobState
+            values:
+              - description: The job is available to have tasks scheduled.
+                value: active
+              - description: >-
+                  A user has requested that the job be disabled, but the disable
+                  operation is still in progress (for example, waiting for tasks
+                  to terminate).
+                value: disabling
+              - description: >-
+                  A user has disabled the job. No tasks are running, and no new
+                  tasks will be scheduled.
+                value: disabled
+              - description: >-
+                  A user has requested that the job be enabled, but the enable
+                  operation is still in progress.
+                value: enabling
+              - description: >-
+                  The job is about to complete, either because a Job Manager
+                  task has completed or because the user has terminated the job,
+                  but the terminate operation is still in progress (for example,
+                  because Job Release tasks are running).
+                value: terminating
+              - description: >-
+                  All tasks have terminated, and the system will not accept any
+                  more tasks or any further changes to the job.
+                value: completed
+              - description: >-
+                  A user has requested that the job be deleted, but the delete
+                  operation is still in progress (for example, because the
+                  system is still terminating running tasks).
+                value: deleting
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -19857,6 +20479,37 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: JobState
+            values:
+              - description: The job is available to have tasks scheduled.
+                value: active
+              - description: >-
+                  A user has requested that the job be disabled, but the disable
+                  operation is still in progress (for example, waiting for tasks
+                  to terminate).
+                value: disabling
+              - description: >-
+                  A user has disabled the job. No tasks are running, and no new
+                  tasks will be scheduled.
+                value: disabled
+              - description: >-
+                  A user has requested that the job be enabled, but the enable
+                  operation is still in progress.
+                value: enabling
+              - description: >-
+                  The job is about to complete, either because a Job Manager
+                  task has completed or because the user has terminated the job,
+                  but the terminate operation is still in progress (for example,
+                  because Job Release tasks are running).
+                value: terminating
+              - description: >-
+                  All tasks have terminated, and the system will not accept any
+                  more tasks or any further changes to the job.
+                value: completed
+              - description: >-
+                  A user has requested that the job be deleted, but the delete
+                  operation is still in progress (for example, because the
+                  system is still terminating running tasks).
+                value: deleting
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -20046,15 +20699,22 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: >-
-            noAction - do nothing. The job remains active unless terminated or
-            disabled by some other means. terminateJob - terminate the job. The
-            job's terminateReason is set to 'AllTasksComplete'. The default is
-            noAction.
+          raw: The default is noaction.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: OnAllTasksComplete
+            values:
+              - description: >-
+                  Do nothing. The job remains active unless terminated or
+                  disabled by some other means.
+                name: noAction
+                value: noaction
+              - description: >-
+                  Terminate the job. The job's terminateReason is set to
+                  'AllTasksComplete'.
+                name: terminateJob
+                value: terminatejob
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -20078,15 +20738,24 @@ modelTypes:
             A task is considered to have failed if has a failureInfo. A
             failureInfo is set if the task completes with a non-zero exit code
             after exhausting its retry count, or if there was an error starting
-            the task, for example due to a resource file download error.
-            noAction - do nothing. performExitOptionsJobAction - take the action
-            associated with the task exit condition in the task's exitConditions
-            collection. (This may still result in no action being taken, if that
-            is what the task specifies.) The default is noAction.
+            the task, for example due to a resource file download error. The
+            default is noaction.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: OnTaskFailure
+            values:
+              - description: >-
+                  Do nothing. The job remains active unless terminated or
+                  disabled by some other means.
+                name: noAction
+                value: noaction
+              - description: >-
+                  Take the action associated with the task exit condition in the
+                  task's exitConditions collection. (This may still result in no
+                  action being taken, if that is what the task specifies.)
+                name: performExitOptionsJobAction
+                value: performexitoptionsjobaction
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -20401,17 +21070,25 @@ modelTypes:
             Note that if a job contains no tasks, then all tasks are considered
             complete. This option is therefore most commonly used with a Job
             Manager task; if you want to use automatic job termination without a
-            Job Manager, you should initially set onAllTasksComplete to noAction
+            Job Manager, you should initially set onAllTasksComplete to noaction
             and update the job properties to set onAllTasksComplete to
-            terminateJob once you have finished adding tasks. Permitted values
-            are: noAction - do nothing. The job remains active unless terminated
-            or disabled by some other means. terminateJob - terminate the job.
-            The job's terminateReason is set to 'AllTasksComplete'. The default
-            is noAction.
+            terminatejob once you have finished adding tasks. The default is
+            noaction.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: OnAllTasksComplete
+            values:
+              - description: >-
+                  Do nothing. The job remains active unless terminated or
+                  disabled by some other means.
+                name: noAction
+                value: noaction
+              - description: >-
+                  Terminate the job. The job's terminateReason is set to
+                  'AllTasksComplete'.
+                name: terminateJob
+                value: terminatejob
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -20435,15 +21112,24 @@ modelTypes:
             A task is considered to have failed if has a failureInfo. A
             failureInfo is set if the task completes with a non-zero exit code
             after exhausting its retry count, or if there was an error starting
-            the task, for example due to a resource file download error.
-            noAction - do nothing. performExitOptionsJobAction - take the action
-            associated with the task exit condition in the task's exitConditions
-            collection. (This may still result in no action being taken, if that
-            is what the task specifies.) The default is noAction.
+            the task, for example due to a resource file download error. The
+            default is noaction.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: OnTaskFailure
+            values:
+              - description: >-
+                  Do nothing. The job remains active unless terminated or
+                  disabled by some other means.
+                name: noAction
+                value: noaction
+              - description: >-
+                  Take the action associated with the task exit condition in the
+                  task's exitConditions collection. (This may still result in no
+                  action being taken, if that is what the task specifies.)
+                name: performExitOptionsJobAction
+                value: performexitoptionsjobaction
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -20668,6 +21354,13 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: ErrorCategory
+            values:
+              - description: 'The error is due to a user issue, such as misconfiguration.'
+                name: userError
+                value: usererror
+              - description: The error is due to an internal server issue.
+                name: serverError
+                value: servererror
         isConstant: false
         isReadOnly: false
         isRequired: true
@@ -20819,15 +21512,19 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             running - the task is currently running (including retrying).
-             completed - the task has exited with exit code 0, or the task has exhausted its retry limit, or the Batch service was unable to start the task due to task preparation errors (such as resource file download failures).
         extensions:
           x-ms-enum:
             modelAsString: false
             name: JobPreparationTaskState
+            values:
+              - description: The task is currently running (including retrying).
+                value: running
+              - description: >-
+                  The task has exited with exit code 0, or the task has
+                  exhausted its retry limit, or the Batch service was unable to
+                  start the task due to task preparation errors (such as
+                  resource file download failures).
+                value: completed
         isConstant: false
         isReadOnly: false
         isRequired: true
@@ -21040,6 +21737,17 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: TaskExecutionResult
+            values:
+              - description: The task ran successfully.
+                name: success
+                value: success
+              - description: >-
+                  There was an error during processing of the task. The failure
+                  may have occurred before the task process was launched, while
+                  the task process was executing, or after the task process
+                  exited.
+                name: failure
+                value: failure
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -21121,15 +21829,19 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             running - the task is currently running (including retrying).
-             completed - the task has exited, or the Batch service was unable to start the task due to task preparation errors (such as resource file download failures).
         extensions:
           x-ms-enum:
             modelAsString: false
             name: JobReleaseTaskState
+            values:
+              - description: The task is currently running (including retrying).
+                value: running
+              - description: >-
+                  The task has exited with exit code 0, or the task has
+                  exhausted its retry limit, or the Batch service was unable to
+                  start the task due to task preparation errors (such as
+                  resource file download failures).
+                value: completed
         isConstant: false
         isReadOnly: false
         isRequired: true
@@ -21275,6 +21987,17 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: TaskExecutionResult
+            values:
+              - description: The task ran successfully.
+                name: success
+                value: success
+              - description: >-
+                  There was an error during processing of the task. The failure
+                  may have occurred before the task process was launched, while
+                  the task process was executing, or after the task process
+                  exited.
+                name: failure
+                value: failure
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -21607,15 +22330,21 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: >-
-            If the validationStatus is unvalidated, then the Batch service has
-            not been able to check state counts against the task states as
-            reported in the List Tasks API. The validationStatus may be
-            unvalidated if the job contains more than 200,000 tasks.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: TaskCountValidationStatus
+            values:
+              - description: >-
+                  The Batch service has validated the state counts against the
+                  task states as reported in the List Tasks API.
+                value: validated
+              - description: >-
+                  The Batch service has not been able to check state counts
+                  against the task states as reported in the List Tasks API. The
+                  validationStatus may be unvalidated if the job contains more
+                  than 200,000 tasks.
+                value: unvalidated
         isConstant: false
         isReadOnly: false
         isRequired: true
@@ -22049,16 +22778,26 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             active - The pool is available to run tasks subject to the availability of compute nodes.
-             deleting - The user has requested that the pool be deleted, but the delete operation has not yet completed.
-             upgrading - The user has requested that the operating system of the pool's nodes be upgraded, but the upgrade operation has not yet completed (that is, some nodes in the pool have not yet been upgraded). While upgrading, the pool may be able to run tasks (with reduced capacity) but this is not guaranteed.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: PoolState
+            values:
+              - description: >-
+                  The pool is available to run tasks subject to the availability
+                  of compute nodes.
+                value: active
+              - description: >-
+                  The user has requested that the pool be deleted, but the
+                  delete operation has not yet completed.
+                value: deleting
+              - description: >-
+                  The user has requested that the operating system of the pool's
+                  nodes be upgraded, but the upgrade operation has not yet
+                  completed (that is, some nodes in the pool have not yet been
+                  upgraded). While upgrading, the pool may be able to run tasks
+                  (with reduced capacity) but this is not guaranteed.
+                value: upgrading
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -22100,16 +22839,26 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             steady - The pool is not resizing. There are no changes to the number of nodes in the pool in progress. A pool enters this state when it is created and when no operations are being performed on the pool to change the number of dedicated nodes.
-             resizing - The pool is resizing; that is, compute nodes are being added to or removed from the pool.
-             stopping - The pool was resizing, but the user has requested that the resize be stopped, but the stop request has not yet been completed.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: AllocationState
+            values:
+              - description: >-
+                  The pool is not resizing. There are no changes to the number
+                  of nodes in the pool in progress. A pool enters this state
+                  when it is created and when no operations are being performed
+                  on the pool to change the number of nodes.
+                value: steady
+              - description: >-
+                  The pool is resizing; that is, compute nodes are being added
+                  to or removed from the pool.
+                value: resizing
+              - description: >-
+                  The pool was resizing, but the user has requested that the
+                  resize be stopped, but the stop request has not yet been
+                  completed.
+                value: stopping
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -23740,6 +24489,17 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: TaskExecutionResult
+            values:
+              - description: The task ran successfully.
+                name: success
+                value: success
+              - description: >-
+                  There was an error during processing of the task. The failure
+                  may have occurred before the task process was launched, while
+                  the task process was executing, or after the task process
+                  exited.
+                name: failure
+                value: failure
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -24615,6 +25375,35 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: TaskState
+            values:
+              - description: >-
+                  The task is queued and able to run, but is not currently
+                  assigned to a compute node. A task enters this state when it
+                  is created, when it is enabled after being disabled, or when
+                  it is awaiting a retry after a failed run.
+                value: active
+              - description: >-
+                  The task has been assigned to a compute node, but is waiting
+                  for a required Job Preparation task to complete on the node.
+                  If the Job Preparation task succeeds, the task will move to
+                  running. If the Job Preparation task fails, the task will
+                  return to active and will be eligible to be assigned to a
+                  different node.
+                value: preparing
+              - description: >-
+                  The task is running on a compute node. This includes
+                  task-level preparation such as downloading resource files or
+                  deploying application packages specified on the task - it does
+                  not necessarily mean that the task command line has started
+                  executing.
+                value: running
+              - description: >-
+                  The task is no longer eligible to run, usually because the
+                  task has finished successfully, or the task has finished
+                  unsuccessfully and has exhausted its retry limit. A task is
+                  also marked as completed if an error occurred launching the
+                  task, or when the task has been terminated.
+                value: completed
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -24661,6 +25450,35 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: TaskState
+            values:
+              - description: >-
+                  The task is queued and able to run, but is not currently
+                  assigned to a compute node. A task enters this state when it
+                  is created, when it is enabled after being disabled, or when
+                  it is awaiting a retry after a failed run.
+                value: active
+              - description: >-
+                  The task has been assigned to a compute node, but is waiting
+                  for a required Job Preparation task to complete on the node.
+                  If the Job Preparation task succeeds, the task will move to
+                  running. If the Job Preparation task fails, the task will
+                  return to active and will be eligible to be assigned to a
+                  different node.
+                value: preparing
+              - description: >-
+                  The task is running on a compute node. This includes
+                  task-level preparation such as downloading resource files or
+                  deploying application packages specified on the task - it does
+                  not necessarily mean that the task command line has started
+                  executing.
+                value: running
+              - description: >-
+                  The task is no longer eligible to run, usually because the
+                  task has finished successfully, or the task has finished
+                  unsuccessfully and has exhausted its retry limit. A task is
+                  also marked as completed if an error occurred launching the
+                  task, or when the task has been terminated.
+                value: completed
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -25475,15 +26293,23 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             success - Task was added successfully.
-             clienterror - Task failed to add due to a client error and should not be retried without modifying the request as appropriate.
-             servererror - Task failed to add due to a server error and can be retried without modification.
         extensions:
           x-ms-enum:
+            modelAsString: false
             name: TaskAddStatus
+            values:
+              - description: The task was added successfully.
+                value: success
+              - description: >-
+                  The task failed to add due to a client error and should not be
+                  retried without modifying the request as appropriate.
+                name: clientError
+                value: clienterror
+              - description: >-
+                  Task failed to add due to a server error and can be retried
+                  without modification.
+                name: serverError
+                value: servererror
         isConstant: false
         isReadOnly: false
         isRequired: true
@@ -25828,6 +26654,29 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: SubtaskState
+            values:
+              - description: >-
+                  The task has been assigned to a compute node, but is waiting
+                  for a required Job Preparation task to complete on the node.
+                  If the Job Preparation task succeeds, the task will move to
+                  running. If the Job Preparation task fails, the task will
+                  return to active and will be eligible to be assigned to a
+                  different node.
+                value: preparing
+              - description: >-
+                  The task is running on a compute node. This includes
+                  task-level preparation such as downloading resource files or
+                  deploying application packages specified on the task - it does
+                  not necessarily mean that the task command line has started
+                  executing.
+                value: running
+              - description: >-
+                  The task is no longer eligible to run, usually because the
+                  task has finished successfully, or the task has finished
+                  unsuccessfully and has exhausted its retry limit. A task is
+                  also marked as completed if an error occurred launching the
+                  task, or when the task has been terminated.
+                value: completed
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -25876,6 +26725,29 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: SubtaskState
+            values:
+              - description: >-
+                  The task has been assigned to a compute node, but is waiting
+                  for a required Job Preparation task to complete on the node.
+                  If the Job Preparation task succeeds, the task will move to
+                  running. If the Job Preparation task fails, the task will
+                  return to active and will be eligible to be assigned to a
+                  different node.
+                value: preparing
+              - description: >-
+                  The task is running on a compute node. This includes
+                  task-level preparation such as downloading resource files or
+                  deploying application packages specified on the task - it does
+                  not necessarily mean that the task command line has started
+                  executing.
+                value: running
+              - description: >-
+                  The task is no longer eligible to run, usually because the
+                  task has finished successfully, or the task has finished
+                  unsuccessfully and has exhausted its retry limit. A task is
+                  also marked as completed if an error occurred launching the
+                  task, or when the task has been terminated.
+                value: completed
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -25927,6 +26799,17 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: TaskExecutionResult
+            values:
+              - description: The task ran successfully.
+                name: success
+                value: success
+              - description: >-
+                  There was an error during processing of the task. The failure
+                  may have occurred before the task process was launched, while
+                  the task process was executing, or after the task process
+                  exited.
+                name: failure
+                value: failure
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -26138,6 +27021,35 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: TaskState
+            values:
+              - description: >-
+                  The task is queued and able to run, but is not currently
+                  assigned to a compute node. A task enters this state when it
+                  is created, when it is enabled after being disabled, or when
+                  it is awaiting a retry after a failed run.
+                value: active
+              - description: >-
+                  The task has been assigned to a compute node, but is waiting
+                  for a required Job Preparation task to complete on the node.
+                  If the Job Preparation task succeeds, the task will move to
+                  running. If the Job Preparation task fails, the task will
+                  return to active and will be eligible to be assigned to a
+                  different node.
+                value: preparing
+              - description: >-
+                  The task is running on a compute node. This includes
+                  task-level preparation such as downloading resource files or
+                  deploying application packages specified on the task - it does
+                  not necessarily mean that the task command line has started
+                  executing.
+                value: running
+              - description: >-
+                  The task is no longer eligible to run, usually because the
+                  task has finished successfully, or the task has finished
+                  unsuccessfully and has exhausted its retry limit. A task is
+                  also marked as completed if an error occurred launching the
+                  task, or when the task has been terminated.
+                value: completed
         isConstant: false
         isReadOnly: false
         isRequired: true
@@ -26182,15 +27094,19 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             running - The start task is currently running.
-             completed - The start task has exited with exit code 0, or the start task has failed and the retry limit has reached, or the start task process did not run due to task preparation errors (such as resource file download failures).
         extensions:
           x-ms-enum:
             modelAsString: false
             name: StartTaskState
+            values:
+              - description: The start task is currently running.
+                value: running
+              - description: >-
+                  The start task has exited with exit code 0, or the start task
+                  has failed and the retry limit has reached, or the start task
+                  process did not run due to task preparation errors (such as
+                  resource file download failures).
+                value: completed
         isConstant: false
         isReadOnly: false
         isRequired: true
@@ -26403,6 +27319,17 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: TaskExecutionResult
+            values:
+              - description: The task ran successfully.
+                name: success
+                value: success
+              - description: >-
+                  There was an error during processing of the task. The failure
+                  may have occurred before the task process was launched, while
+                  the task process was executing, or after the task process
+                  exited.
+                name: failure
+                value: failure
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -26541,6 +27468,13 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: InboundEndpointProtocol
+            values:
+              - description: Use TCP for the endpoint.
+                name: tcp
+                value: tcp
+              - description: Use UDP for the endpoint.
+                name: udp
+                value: udp
         isConstant: false
         isReadOnly: false
         isRequired: true
@@ -26744,26 +27678,67 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             idle - The node is not currently running a task.
-             rebooting - The node is rebooting.
-             reimaging - The node is reimaging.
-             running - The node is running one or more tasks (other than a start task).
-             unusable - The node cannot be used for task execution due to errors.
-             creating - The Batch service has obtained the underlying virtual machine from Azure Compute, but it has not yet started to join the pool.
-             starting - the Batch service is starting on the underlying virtual machine.
-             waitingforstarttask - The start task has started running on the compute node, but waitForSuccess is set and the start task has not yet completed.
-             starttaskfailed - The start task has failed on the compute node (and exhausted all retries), and waitForSuccess is set. The node is not usable for running tasks.
-             unknown - The Batch service has lost contact with the node, and does not know its true state.
-             leavingpool - The node is leaving the pool, either because the user explicitly removed it or because the pool is resizing or autoscaling down.
-             offline - The node is not currently running a task, and scheduling of new tasks to the node is disabled.
-             preempted - The low-priority node has been preempted. Tasks which were running on the node when it was pre-empted will be rescheduled when another node becomes available.
+          raw: >-
+            The low-priority node has been preempted. Tasks which were running
+            on the node when it was pre-empted will be rescheduled when another
+            node becomes available.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: ComputeNodeState
+            values:
+              - description: The node is not currently running a task.
+                value: idle
+              - description: The node is rebooting.
+                value: rebooting
+              - description: The node is reimaging.
+                value: reimaging
+              - description: >-
+                  The node is running one or more tasks (other than a start
+                  task).
+                value: running
+              - description: The node cannot be used for task execution due to errors.
+                value: unusable
+              - description: >-
+                  The Batch service has obtained the underlying virtual machine
+                  from Azure Compute, but it has not yet started to join the
+                  pool.
+                value: creating
+              - description: >-
+                  The Batch service is starting on the underlying virtual
+                  machine.
+                value: starting
+              - description: >-
+                  The start task has started running on the compute node, but
+                  waitForSuccess is set and the start task has not yet
+                  completed.
+                name: waitingForStartTask
+                value: waitingforstarttask
+              - description: >-
+                  The start task has failed on the compute node (and exhausted
+                  all retries), and waitForSuccess is set. The node is not
+                  usable for running tasks.
+                name: startTaskFailed
+                value: starttaskfailed
+              - description: >-
+                  The Batch service has lost contact with the node, and does not
+                  know its true state.
+                value: unknown
+              - description: >-
+                  The node is leaving the pool, either because the user
+                  explicitly removed it or because the pool is resizing or
+                  autoscaling down.
+                name: leavingPool
+                value: leavingpool
+              - description: >-
+                  The node is not currently running a task, and scheduling of
+                  new tasks to the node is disabled.
+                value: offline
+              - description: >-
+                  The low-priority node has been preempted. Tasks which were
+                  running on the node when it was pre-empted will be rescheduled
+                  when another node becomes available.
+                value: preempted
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -26781,15 +27756,18 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             enabled - Tasks can be scheduled on the node.
-             disabled - No new tasks will be scheduled on the node. Tasks already running on the node may still run to completion. All nodes start with scheduling enabled.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: SchedulingState
+            values:
+              - description: Tasks can be scheduled on the node.
+                value: enabled
+              - description: >-
+                  No new tasks will be scheduled on the node. Tasks already
+                  running on the node may still run to completion. All nodes
+                  start with scheduling enabled.
+                value: disabled
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -27640,16 +28618,22 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             requeue - Terminate running tasks and requeue them. The tasks will run again when the job is enabled.
-             terminate - Terminate running tasks. The tasks will not run again.
-             wait - Allow currently running tasks to complete.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: DisableJobOption
+            values:
+              - description: >-
+                  Terminate running tasks and requeue them. The tasks will run
+                  again when the job is enabled.
+                value: requeue
+              - description: >-
+                  Terminate running tasks. The tasks will be completed with
+                  failureInfo indicating that they were terminated, and will not
+                  run again.
+                value: terminate
+              - description: Allow currently running tasks to complete.
+                value: wait
         isConstant: false
         isReadOnly: false
         isRequired: true
@@ -27742,7 +28726,7 @@ modelTypes:
           fixed: false
           raw: >-
             If omitted, the completion behavior is left unchanged. You may not
-            change the value from terminateJob to noAction - that is, once you
+            change the value from terminatejob to noaction - that is, once you
             have engaged automatic job termination, you cannot turn it off
             again. If you try to do this, the request fails with an 'invalid
             property value' error response; if you are calling the REST API
@@ -27751,6 +28735,17 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: OnAllTasksComplete
+            values:
+              - description: >-
+                  Do nothing. The job remains active unless terminated or
+                  disabled by some other means.
+                name: noAction
+                value: noaction
+              - description: >-
+                  Terminate the job. The job's terminateReason is set to
+                  'AllTasksComplete'.
+                name: terminateJob
+                value: terminatejob
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -27941,10 +28936,10 @@ modelTypes:
         documentation:
           fixed: false
           raw: >-
-            If omitted, the completion behavior is set to noAction. If the
-            current value is terminateJob, this is an error because a job's
-            completion behavior may not be changed from terminateJob to
-            noAction. You may not change the value from terminatejob to noaction
+            If omitted, the completion behavior is set to noaction. If the
+            current value is terminatejob, this is an error because a job's
+            completion behavior may not be changed from terminatejob to
+            noaction. You may not change the value from terminatejob to noaction
             - that is, once you have engaged automatic job termination, you
             cannot turn it off again. If you try to do this, the request fails
             and Batch returns status code 400 (Bad Request) and an 'invalid
@@ -27955,6 +28950,17 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: OnAllTasksComplete
+            values:
+              - description: >-
+                  Do nothing. The job remains active unless terminated or
+                  disabled by some other means.
+                name: noAction
+                value: noaction
+              - description: >-
+                  Terminate the job. The job's terminateReason is set to
+                  'AllTasksComplete'.
+                name: terminateJob
+                value: terminatejob
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -28184,6 +29190,30 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: ComputeNodeDeallocationOption
+            values:
+              - description: >-
+                  Terminate running task processes and requeue the tasks. The
+                  tasks will run again when a node is available. Remove nodes as
+                  soon as tasks have been terminated.
+                value: requeue
+              - description: >-
+                  Terminate running tasks. The tasks will be completed with
+                  failureInfo indicating that they were terminated, and will not
+                  run again. Remove nodes as soon as tasks have been terminated.
+                value: terminate
+              - description: >-
+                  Allow currently running tasks to complete. Schedule no new
+                  tasks while waiting. Remove nodes when all tasks have
+                  completed.
+                name: taskCompletion
+                value: taskcompletion
+              - description: >-
+                  Allow currently running tasks to complete, then wait for all
+                  task data retention periods to expire. Schedule no new tasks
+                  while waiting. Remove nodes when all task retention periods
+                  have expired.
+                name: retainedData
+                value: retaineddata
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -28630,19 +29660,36 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             requeue - Terminate running task processes and requeue the tasks. The tasks will run again when a node is available. Restart the node as soon as tasks have been terminated.
-             terminate - Terminate running tasks. The tasks will not run again. Restart the node as soon as tasks have been terminated.
-             taskcompletion - Allow currently running tasks to complete. Schedule no new tasks while waiting. Restart the node when all tasks have completed.
-             retaineddata - Allow currently running tasks to complete, then wait for all task data retention periods to expire. Schedule no new tasks while waiting. Restart the node when all task retention periods have expired.
-
-             The default value is requeue.
+          raw: The default value is requeue.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: ComputeNodeRebootOption
+            values:
+              - description: >-
+                  Terminate running task processes and requeue the tasks. The
+                  tasks will run again when a node is available. Restart the
+                  node as soon as tasks have been terminated.
+                value: requeue
+              - description: >-
+                  Terminate running tasks. The tasks will be completed with
+                  failureInfo indicating that they were terminated, and will not
+                  run again. Restart the node as soon as tasks have been
+                  terminated.
+                value: terminate
+              - description: >-
+                  Allow currently running tasks to complete. Schedule no new
+                  tasks while waiting. Restart the node when all tasks have
+                  completed.
+                name: taskCompletion
+                value: taskcompletion
+              - description: >-
+                  Allow currently running tasks to complete, then wait for all
+                  task data retention periods to expire. Schedule no new tasks
+                  while waiting. Restart the node when all task retention
+                  periods have expired.
+                name: retainedData
+                value: retaineddata
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -28672,19 +29719,36 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             requeue - Terminate running task processes and requeue the tasks. The tasks will run again when a node is available. Reimage the node as soon as tasks have been terminated.
-             terminate - Terminate running tasks. The tasks will not run again. Reimage the node as soon as tasks have been terminated.
-             taskcompletion - Allow currently running tasks to complete. Schedule no new tasks while waiting. Reimage the node when all tasks have completed.
-             retaineddata - Allow currently running tasks to complete, then wait for all task data retention periods to expire. Schedule no new tasks while waiting. Reimage the node when all task retention periods have expired.
-
-             The default value is requeue.
+          raw: The default value is requeue.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: ComputeNodeReimageOption
+            values:
+              - description: >-
+                  Terminate running task processes and requeue the tasks. The
+                  tasks will run again when a node is available. Reimage the
+                  node as soon as tasks have been terminated.
+                value: requeue
+              - description: >-
+                  Terminate running tasks. The tasks will be completed with
+                  failureInfo indicating that they were terminated, and will not
+                  run again. Reimage the node as soon as tasks have been
+                  terminated.
+                value: terminate
+              - description: >-
+                  Allow currently running tasks to complete. Schedule no new
+                  tasks while waiting. Reimage the node when all tasks have
+                  completed.
+                name: taskCompletion
+                value: taskcompletion
+              - description: >-
+                  Allow currently running tasks to complete, then wait for all
+                  task data retention periods to expire. Schedule no new tasks
+                  while waiting. Reimage the node when all task retention
+                  periods have expired.
+                name: retainedData
+                value: retaineddata
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -28714,18 +29778,30 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: |-
-            Values are:
-
-             requeue - Terminate running task processes and requeue the tasks. The tasks may run again on other compute nodes, or when task scheduling is re-enabled on this node. Enter offline state as soon as tasks have been terminated.
-             terminate - Terminate running tasks. The tasks will not run again. Enter offline state as soon as tasks have been terminated.
-             taskcompletion - Allow currently running tasks to complete. Schedule no new tasks while waiting. Enter offline state when all tasks have completed.
-
-             The default value is requeue.
+          raw: The default value is requeue.
         extensions:
           x-ms-enum:
             modelAsString: false
             name: DisableComputeNodeSchedulingOption
+            values:
+              - description: >-
+                  Terminate running task processes and requeue the tasks. The
+                  tasks may run again on other compute nodes, or when task
+                  scheduling is re-enabled on this node. Enter offline state as
+                  soon as tasks have been terminated.
+                value: requeue
+              - description: >-
+                  Terminate running tasks. The tasks will be completed with
+                  failureInfo indicating that they were terminated, and will not
+                  run again. Enter offline state as soon as tasks have been
+                  terminated.
+                value: terminate
+              - description: >-
+                  Allow currently running tasks to complete. Schedule no new
+                  tasks while waiting. Enter offline state when all tasks have
+                  completed.
+                name: taskCompletion
+                value: taskcompletion
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -28821,6 +29897,30 @@ modelTypes:
           x-ms-enum:
             modelAsString: false
             name: ComputeNodeDeallocationOption
+            values:
+              - description: >-
+                  Terminate running task processes and requeue the tasks. The
+                  tasks will run again when a node is available. Remove nodes as
+                  soon as tasks have been terminated.
+                value: requeue
+              - description: >-
+                  Terminate running tasks. The tasks will be completed with
+                  failureInfo indicating that they were terminated, and will not
+                  run again. Remove nodes as soon as tasks have been terminated.
+                value: terminate
+              - description: >-
+                  Allow currently running tasks to complete. Schedule no new
+                  tasks while waiting. Remove nodes when all tasks have
+                  completed.
+                name: taskCompletion
+                value: taskcompletion
+              - description: >-
+                  Allow currently running tasks to complete, then wait for all
+                  task data retention periods to expire. Schedule no new tasks
+                  while waiting. Remove nodes when all task retention periods
+                  have expired.
+                name: retainedData
+                value: retaineddata
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -30103,7 +31203,7 @@ operations:
                           maxTaskRetryCount: '0'
                           userIdentity:
                             autoUser:
-                              elevationLevel: nonAdmin
+                              elevationLevel: nonadmin
                               scope: task
                           waitForSuccess: false
                         state: active
@@ -31043,7 +32143,7 @@ operations:
                       maxTaskRetryCount: '0'
                       userIdentity:
                         autoUser:
-                          elevationLevel: nonAdmin
+                          elevationLevel: nonadmin
                           scope: task
                       waitForSuccess: false
                     state: active
@@ -34841,8 +35941,8 @@ operations:
                       terminateReason: UserTerminate
                     id: jobId
                     lastModified: '2016-11-19T00:05:27.5391608Z'
-                    onAllTasksComplete: noAction
-                    onTaskFailure: noAction
+                    onAllTasksComplete: noaction
+                    onTaskFailure: noaction
                     poolInfo:
                       poolId: poolId
                     previousState: active
@@ -36933,7 +38033,7 @@ operations:
                       autoPoolIdPrefix: mypool
                       pool:
                         certificateReferences:
-                          - storeLocation: localMachine
+                          - storeLocation: localmachine
                             storeName: Root
                             thumbprint: 0123456789abcdef0123456789abcdef01234567
                             thumbprintAlgorithm: sha1
@@ -37178,8 +38278,8 @@ operations:
                           startTime: '2016-11-19T00:05:25.3309105Z'
                         id: jobId
                         lastModified: '2016-11-19T00:05:27.2137716Z'
-                        onAllTasksComplete: noAction
-                        onTaskFailure: noAction
+                        onAllTasksComplete: noaction
+                        onTaskFailure: noaction
                         poolInfo:
                           poolId: poolId
                         previousState: disabled
@@ -38515,7 +39615,7 @@ operations:
                         previousState: deleting
                         previousStateTransitionTime: '2014-07-31T21:11:58.236Z'
                         publicData: '#####...'
-                        state: deleteFailed
+                        state: deletefailed
                         stateTransitionTime: '2014-07-31T21:12:58.236Z'
                         thumbprint: 0123456789abcdef0123456789abcdef01234567
                         thumbprintAlgorithm: sha1
@@ -39258,7 +40358,7 @@ operations:
                     previousState: deleting
                     previousStateTransitionTime: '2014-07-31T21:11:58.236Z'
                     publicData: '#####...'
-                    state: deleteFailed
+                    state: deletefailed
                     stateTransitionTime: '2014-07-31T21:12:58.236Z'
                     thumbprint: 0123456789abcdef0123456789abcdef01234567
                     thumbprintAlgorithm: sha1
@@ -42589,8 +43689,8 @@ operations:
                       constraints:
                         maxTaskRetryCount: '0'
                         maxWallClockTime: P10675199DT2H48M5.4775807S
-                      onAllTasksComplete: noAction
-                      onTaskFailure: noAction
+                      onAllTasksComplete: noaction
+                      onTaskFailure: noaction
                       poolInfo:
                         poolId: testPool
                       priority: '0'
@@ -44615,14 +45715,14 @@ operations:
                       runExclusive: true
                       userIdentity:
                         autoUser:
-                          elevationLevel: nonAdmin
+                          elevationLevel: nonadmin
                           scope: task
                     poolInfo:
                       autoPoolSpecification:
                         autoPoolIdPrefix: mypool
                         pool:
                           certificateReferences:
-                            - storeLocation: localMachine
+                            - storeLocation: localmachine
                               storeName: Root
                               thumbprint: 0123456789abcdef0123456789abcdef01234567
                               thumbprintAlgorithm: sha1
@@ -44659,7 +45759,7 @@ operations:
                           taskSchedulingPolicy:
                             nodeFillType: spread
                           vmSize: small
-                        poolLifetimeOption: jobSchedule
+                        poolLifetimeOption: jobschedule
                     priority: '100'
                   metadata:
                     - name: myproperty
@@ -44877,8 +45977,8 @@ operations:
                           constraints:
                             maxTaskRetryCount: '0'
                             maxWallClockTime: P10675199DT2H48M5.4775807S
-                          onAllTasksComplete: noAction
-                          onTaskFailure: noAction
+                          onAllTasksComplete: noaction
+                          onTaskFailure: noaction
                           poolInfo:
                             poolId: poolId
                           priority: '0'
@@ -44899,8 +45999,8 @@ operations:
                           constraints:
                             maxTaskRetryCount: '0'
                             maxWallClockTime: P10675199DT2H48M5.4775807S
-                          onAllTasksComplete: noAction
-                          onTaskFailure: noAction
+                          onAllTasksComplete: noaction
+                          onTaskFailure: noaction
                           poolInfo:
                             poolId: testPool2
                           priority: '0'
@@ -45226,7 +46326,7 @@ operations:
                   id: taskId
                   userIdentity:
                     autoUser:
-                      elevationLevel: nonAdmin
+                      elevationLevel: nonadmin
                       scope: task
               responses:
                 '201':
@@ -45248,7 +46348,7 @@ operations:
                   id: taskId
                   userIdentity:
                     autoUser:
-                      elevationLevel: nonAdmin
+                      elevationLevel: nonadmin
                       scope: task
               responses:
                 '201':
@@ -45489,7 +46589,7 @@ operations:
                           https://account.region.batch.azure.com/jobs/jobId/tasks/task1
                         userIdentity:
                           autoUser:
-                            elevationLevel: nonAdmin
+                            elevationLevel: nonadmin
                             scope: task
                       - commandLine: cmd /c echo task2
                         constraints:
@@ -45509,7 +46609,7 @@ operations:
                           https://account.region.batch.azure.com/jobs/jobId/tasks/task2
                         userIdentity:
                           autoUser:
-                            elevationLevel: nonAdmin
+                            elevationLevel: nonadmin
                             scope: task
           x-ms-pageable:
             nextLinkName: odata.nextLink
@@ -46479,7 +47579,7 @@ operations:
                       https://account.region.batch.azure.com/jobs/jobId/tasks/taskId
                     userIdentity:
                       autoUser:
-                        elevationLevel: nonAdmin
+                        elevationLevel: nonadmin
                         scope: task
           x-ms-request-id: request-id
         group:
@@ -48953,7 +50053,7 @@ operations:
                       maxTaskRetryCount: '0'
                       userIdentity:
                         autoUser:
-                          elevationLevel: nonAdmin
+                          elevationLevel: nonadmin
                           scope: task
                       waitForSuccess: false
                     startTaskInfo:
@@ -50620,7 +51720,7 @@ operations:
                           maxTaskRetryCount: '0'
                           userIdentity:
                             autoUser:
-                              elevationLevel: nonAdmin
+                              elevationLevel: nonadmin
                               scope: task
                           waitForSuccess: false
                         startTaskInfo:
@@ -50649,7 +51749,7 @@ operations:
                           maxTaskRetryCount: '0'
                           userIdentity:
                             autoUser:
-                              elevationLevel: nonAdmin
+                              elevationLevel: nonadmin
                               scope: task
                           waitForSuccess: false
                         startTaskInfo:
@@ -50678,7 +51778,7 @@ operations:
                           maxTaskRetryCount: '0'
                           userIdentity:
                             autoUser:
-                              elevationLevel: nonAdmin
+                              elevationLevel: nonadmin
                               scope: task
                           waitForSuccess: false
                         startTaskInfo:
