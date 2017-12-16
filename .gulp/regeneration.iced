@@ -104,7 +104,7 @@ task 'regenerate-testserver', '', (done) ->
 
 task 'regenerate-specs', '', (done) ->
   regenExpected {
-    'inputBaseDir': "https://github.com/Azure/azure-rest-api-specs/blob/2df71489cc110ca9d3251bf7a4e685ab6616f379/specification",
+    'inputBaseDir': "https://github.com/Azure/azure-rest-api-specs/blob/da7ee47971be752d22b4df5c3e137d3429ce9b9c/specification",
     'mappings': mappingsSpecs,
     'outputDir': 'test/Expected'
   },done
