@@ -1,0 +1,220 @@
+---
+$id: '1'
+apiVersion: 1.0.0
+baseUrl: 'http://{accountName}{host}'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - $ref: '2'
+extensions:
+  x-ms-parameterized-host: true
+hostParametersBack:
+  - $id: '16'
+    collectionFormat: none
+    defaultValue:
+      $id: '17'
+      fixed: false
+      raw: ''
+    deprecated: false
+    documentation:
+      $id: '18'
+      fixed: false
+      raw: Account Name
+    extensions:
+      hostParameter: true
+      x-ms-skip-url-encoding: true
+    isConstant: false
+    isRequired: true
+    location: path
+    modelType:
+      $id: '20'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '21'
+        fixed: false
+        raw: String
+    name:
+      $id: '19'
+      fixed: false
+      raw: accountName
+    serializedName: accountName
+  - $id: '22'
+    clientProperty:
+      $id: '23'
+      collectionFormat: none
+      defaultValue:
+        $id: '24'
+        fixed: false
+        raw: host
+      deprecated: false
+      documentation:
+        $id: '25'
+        fixed: false
+        raw: A string value that is used as a global part of the parameterized host
+      extensions:
+        x-ms-skip-url-encoding: true
+      isConstant: false
+      isReadOnly: false
+      isRequired: true
+      modelType:
+        $id: '27'
+        $type: PrimaryType
+        deprecated: false
+        knownPrimaryType: string
+        name:
+          $id: '28'
+          fixed: false
+          raw: String
+      name:
+        $id: '26'
+        fixed: false
+        raw: host
+      realPath:
+        - host
+      serializedName: host
+    collectionFormat: none
+    defaultValue:
+      $id: '29'
+      fixed: false
+      raw: host
+    deprecated: false
+    documentation:
+      $id: '30'
+      fixed: false
+      raw: A string value that is used as a global part of the parameterized host
+    extensions:
+      hostParameter: true
+      x-ms-skip-url-encoding: true
+    isConstant: false
+    isRequired: true
+    location: path
+    modelType:
+      $id: '32'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '33'
+        fixed: false
+        raw: String
+    name:
+      $id: '31'
+      fixed: false
+      raw: host
+    serializedName: host
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '15'
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '3'
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '8'
+            fixed: false
+            raw: Int
+        name:
+          $id: '6'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '9'
+        collectionFormat: none
+        defaultValue:
+          $id: '10'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '11'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '13'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '14'
+            fixed: false
+            raw: String
+        name:
+          $id: '12'
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelsName: Models
+name: AutoRestParameterizedHostTestClient
+namespace: ''
+operations:
+  - $id: '34'
+    methods:
+      - $id: '35'
+        defaultResponse:
+          $id: '39'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get a 200 to test a valid base uri
+        group:
+          $id: '37'
+          fixed: false
+          raw: paths
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '36'
+          fixed: false
+          raw: getEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '38'
+            isNullable: true
+        returnType:
+          $id: '40'
+          isNullable: true
+        serializedName: paths_getEmpty
+        url: /customuri
+    name:
+      $id: '41'
+      fixed: false
+      raw: Paths
+    nameForProperty: Paths
+    typeName:
+      $id: '42'
+      fixed: false
+properties:
+  - $ref: '23'

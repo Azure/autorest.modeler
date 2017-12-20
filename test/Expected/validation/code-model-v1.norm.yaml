@@ -1,0 +1,1068 @@
+---
+$id: '1'
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest. No server backend exists for these tests.
+enumTypes:
+  - $ref: '75'
+errorTypes:
+  - $ref: '81'
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    containsConstantProperties: true
+    deprecated: false
+    documentation: The product documentation.
+    name:
+      $id: '15'
+      fixed: false
+      raw: ChildProduct
+    properties:
+      - $id: '3'
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+          raw: constant
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+          raw: Constant string
+        isConstant: true
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '8'
+            fixed: false
+            raw: String
+        name:
+          $id: '6'
+          fixed: false
+          raw: constProperty
+        realPath:
+          - constProperty
+        serializedName: constProperty
+      - $id: '9'
+        collectionFormat: none
+        defaultValue:
+          $id: '10'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '11'
+          fixed: false
+          raw: Count
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '13'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            $id: '14'
+            fixed: false
+            raw: Int
+        name:
+          $id: '12'
+          fixed: false
+          raw: count
+        realPath:
+          - count
+        serializedName: count
+    serializedName: ChildProduct
+  - $id: '16'
+    $type: CompositeType
+    containsConstantProperties: true
+    deprecated: false
+    documentation: The product documentation.
+    name:
+      $id: '29'
+      fixed: false
+      raw: ConstantProduct
+    properties:
+      - $id: '17'
+        collectionFormat: none
+        defaultValue:
+          $id: '18'
+          fixed: false
+          raw: constant
+        deprecated: false
+        documentation:
+          $id: '19'
+          fixed: false
+          raw: Constant string
+        isConstant: true
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $id: '21'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '22'
+            fixed: false
+            raw: String
+        name:
+          $id: '20'
+          fixed: false
+          raw: constProperty
+        realPath:
+          - constProperty
+        serializedName: constProperty
+      - $id: '23'
+        collectionFormat: none
+        defaultValue:
+          $id: '24'
+          fixed: false
+          raw: constant2
+        deprecated: false
+        documentation:
+          $id: '25'
+          fixed: false
+          raw: Constant string2
+        isConstant: true
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $id: '27'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '28'
+            fixed: false
+            raw: String
+        name:
+          $id: '26'
+          fixed: false
+          raw: constProperty2
+        realPath:
+          - constProperty2
+        serializedName: constProperty2
+    serializedName: ConstantProduct
+  - $id: '30'
+    $type: CompositeType
+    containsConstantProperties: true
+    deprecated: false
+    documentation: The product documentation.
+    name:
+      $id: '80'
+      fixed: false
+      raw: Product
+    properties:
+      - $id: '31'
+        collectionFormat: none
+        constraints:
+          MaxItems: '6'
+          MinItems: '0'
+          UniqueItems: 'true'
+        defaultValue:
+          $id: '32'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '33'
+          fixed: false
+          raw: Non required array of unique items from 0 to 6 elements.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '35'
+          $type: SequenceType
+          deprecated: false
+          elementType:
+            $id: '36'
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: string
+            name:
+              $id: '37'
+              fixed: false
+              raw: String
+          name:
+            $id: '38'
+            fixed: false
+        name:
+          $id: '34'
+          fixed: false
+          raw: display_names
+        realPath:
+          - display_names
+        serializedName: display_names
+      - $id: '39'
+        collectionFormat: none
+        constraints:
+          ExclusiveMaximum: '100'
+          ExclusiveMinimum: '0'
+        defaultValue:
+          $id: '40'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '41'
+          fixed: false
+          raw: Non required int betwen 0 and 100 exclusive.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '43'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            $id: '44'
+            fixed: false
+            raw: Int
+        name:
+          $id: '42'
+          fixed: false
+          raw: capacity
+        realPath:
+          - capacity
+        serializedName: capacity
+      - $id: '45'
+        collectionFormat: none
+        constraints:
+          Pattern: 'http://\w+'
+        defaultValue:
+          $id: '46'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '47'
+          fixed: false
+          raw: Image URL representing the product.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '49'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '50'
+            fixed: false
+            raw: String
+        name:
+          $id: '48'
+          fixed: false
+          raw: image
+        realPath:
+          - image
+        serializedName: image
+      - $id: '51'
+        collectionFormat: none
+        defaultValue:
+          $id: '52'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '53'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $ref: '2'
+        name:
+          $id: '54'
+          fixed: false
+          raw: child
+        realPath:
+          - child
+        serializedName: child
+      - $id: '55'
+        collectionFormat: none
+        defaultValue:
+          $id: '56'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '57'
+          fixed: false
+        isConstant: true
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $ref: '16'
+        name:
+          $id: '58'
+          fixed: false
+          raw: constChild
+        realPath:
+          - constChild
+        serializedName: constChild
+      - $id: '59'
+        collectionFormat: none
+        defaultValue:
+          $id: '60'
+          fixed: false
+          raw: '0'
+        deprecated: false
+        documentation:
+          $id: '61'
+          fixed: false
+          raw: Constant int
+        isConstant: true
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $id: '63'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            $id: '64'
+            fixed: false
+            raw: Int
+        name:
+          $id: '62'
+          fixed: false
+          raw: constInt
+        realPath:
+          - constInt
+        serializedName: constInt
+      - $id: '65'
+        collectionFormat: none
+        defaultValue:
+          $id: '66'
+          fixed: false
+          raw: constant
+        deprecated: false
+        documentation:
+          $id: '67'
+          fixed: false
+          raw: Constant string
+        isConstant: true
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $id: '69'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '70'
+            fixed: false
+            raw: String
+        name:
+          $id: '68'
+          fixed: false
+          raw: constString
+        realPath:
+          - constString
+        serializedName: constString
+      - $id: '71'
+        collectionFormat: none
+        defaultValue:
+          $id: '72'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '73'
+          fixed: false
+          raw: Constant string as Enum
+        extensions:
+          x-ms-enum:
+            modelAsString: false
+            name: EnumConst
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '75'
+          $type: EnumType
+          deprecated: false
+          modelAsExtensible: false
+          modelAsString: false
+          name:
+            $id: '79'
+            fixed: false
+            raw: EnumConst
+          underlyingType:
+            $id: '77'
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: string
+            name:
+              $id: '78'
+              fixed: false
+              raw: String
+          values:
+            - $id: '76'
+              name: constant_string_as_enum
+              serializedName: constant_string_as_enum
+        name:
+          $id: '74'
+          fixed: false
+          raw: constStringAsEnum
+        realPath:
+          - constStringAsEnum
+        serializedName: constStringAsEnum
+    serializedName: Product
+  - $id: '81'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '100'
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '82'
+        collectionFormat: none
+        defaultValue:
+          $id: '83'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '84'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '86'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '87'
+            fixed: false
+            raw: Int
+        name:
+          $id: '85'
+          fixed: false
+          raw: code
+        realPath:
+          - code
+        serializedName: code
+      - $id: '88'
+        collectionFormat: none
+        defaultValue:
+          $id: '89'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '90'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '92'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '93'
+            fixed: false
+            raw: String
+        name:
+          $id: '91'
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+      - $id: '94'
+        collectionFormat: none
+        defaultValue:
+          $id: '95'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '96'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '98'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '99'
+            fixed: false
+            raw: String
+        name:
+          $id: '97'
+          fixed: false
+          raw: fields
+        realPath:
+          - fields
+        serializedName: fields
+    serializedName: Error
+modelsName: Models
+name: AutoRestValidationTest
+namespace: ''
+operations:
+  - $id: '113'
+    methods:
+      - $id: '114'
+        defaultResponse:
+          $id: '142'
+          body:
+            $ref: '81'
+          isNullable: true
+        deprecated: false
+        description: Validates input parameters on the method. See swagger for details.
+        group:
+          $id: '140'
+          fixed: false
+          raw: ''
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '139'
+          fixed: false
+          raw: validationOfMethodParameters
+        parameters:
+          - $id: '115'
+            clientProperty:
+              $ref: '101'
+            collectionFormat: none
+            defaultValue:
+              $id: '116'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '117'
+              fixed: false
+              raw: Subscription ID.
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $id: '119'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '120'
+                fixed: false
+                raw: String
+            name:
+              $id: '118'
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+          - $id: '121'
+            collectionFormat: none
+            constraints:
+              MaxLength: '10'
+              MinLength: '3'
+              Pattern: '[a-zA-Z0-9]+'
+            defaultValue:
+              $id: '122'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '123'
+              fixed: false
+              raw: >-
+                Required string between 3 and 10 chars with pattern
+                [a-zA-Z0-9]+.
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $id: '125'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '126'
+                fixed: false
+                raw: String
+            name:
+              $id: '124'
+              fixed: false
+              raw: resourceGroupName
+            serializedName: resourceGroupName
+          - $id: '127'
+            collectionFormat: none
+            constraints:
+              InclusiveMaximum: '1000'
+              InclusiveMinimum: '100'
+              MultipleOf: '10'
+            defaultValue:
+              $id: '128'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '129'
+              fixed: false
+              raw: Required int multiple of 10 from 100 to 1000.
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $id: '131'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: int
+              name:
+                $id: '132'
+                fixed: false
+                raw: Int
+            name:
+              $id: '130'
+              fixed: false
+              raw: id
+            serializedName: id
+          - $id: '133'
+            clientProperty:
+              $ref: '107'
+            collectionFormat: none
+            constraints:
+              Pattern: '\d{2}-\d{2}-\d{4}'
+            defaultValue:
+              $id: '134'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '135'
+              fixed: false
+              raw: 'Required string following pattern \d{2}-\d{2}-\d{4}'
+            isConstant: false
+            isRequired: true
+            location: query
+            modelType:
+              $id: '137'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '138'
+                fixed: false
+                raw: String
+            name:
+              $id: '136'
+              fixed: false
+              raw: apiVersion
+            serializedName: apiVersion
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '141'
+            body:
+              $ref: '30'
+            isNullable: true
+        returnType:
+          $id: '143'
+          body:
+            $ref: '30'
+          isNullable: true
+        serializedName: validationOfMethodParameters
+        summary: ''
+        url: '/fakepath/{subscriptionId}/{resourceGroupName}/{id}'
+      - $id: '144'
+        defaultResponse:
+          $id: '176'
+          body:
+            $ref: '81'
+          isNullable: true
+        deprecated: false
+        description: Validates body parameters on the method. See swagger for details.
+        extensions:
+          x-ms-requestBody-index: '3'
+        group:
+          $id: '174'
+          fixed: false
+          raw: ''
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '173'
+          fixed: false
+          raw: validationOfBody
+        parameters:
+          - $id: '145'
+            clientProperty:
+              $ref: '101'
+            collectionFormat: none
+            defaultValue:
+              $id: '146'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '147'
+              fixed: false
+              raw: Subscription ID.
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $id: '149'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '150'
+                fixed: false
+                raw: String
+            name:
+              $id: '148'
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+          - $id: '151'
+            collectionFormat: none
+            constraints:
+              MaxLength: '10'
+              MinLength: '3'
+              Pattern: '[a-zA-Z0-9]+'
+            defaultValue:
+              $id: '152'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '153'
+              fixed: false
+              raw: >-
+                Required string between 3 and 10 chars with pattern
+                [a-zA-Z0-9]+.
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $id: '155'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '156'
+                fixed: false
+                raw: String
+            name:
+              $id: '154'
+              fixed: false
+              raw: resourceGroupName
+            serializedName: resourceGroupName
+          - $id: '157'
+            collectionFormat: none
+            constraints:
+              InclusiveMaximum: '1000'
+              InclusiveMinimum: '100'
+              MultipleOf: '10'
+            defaultValue:
+              $id: '158'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '159'
+              fixed: false
+              raw: Required int multiple of 10 from 100 to 1000.
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $id: '161'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: int
+              name:
+                $id: '162'
+                fixed: false
+                raw: Int
+            name:
+              $id: '160'
+              fixed: false
+              raw: id
+            serializedName: id
+          - $id: '163'
+            collectionFormat: none
+            defaultValue:
+              $id: '164'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '165'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: body
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $ref: '30'
+            name:
+              $id: '166'
+              fixed: false
+              raw: body
+            serializedName: body
+          - $id: '167'
+            clientProperty:
+              $ref: '107'
+            collectionFormat: none
+            constraints:
+              Pattern: '\d{2}-\d{2}-\d{4}'
+            defaultValue:
+              $id: '168'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '169'
+              fixed: false
+              raw: 'Required string following pattern \d{2}-\d{2}-\d{4}'
+            isConstant: false
+            isRequired: true
+            location: query
+            modelType:
+              $id: '171'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '172'
+                fixed: false
+                raw: String
+            name:
+              $id: '170'
+              fixed: false
+              raw: apiVersion
+            serializedName: apiVersion
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '175'
+            body:
+              $ref: '30'
+            isNullable: true
+        returnType:
+          $id: '177'
+          body:
+            $ref: '30'
+          isNullable: true
+        serializedName: validationOfBody
+        summary: ''
+        url: '/fakepath/{subscriptionId}/{resourceGroupName}/{id}'
+      - $id: '178'
+        defaultResponse:
+          $id: '188'
+          isNullable: true
+        deprecated: false
+        group:
+          $id: '186'
+          fixed: false
+          raw: ''
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '185'
+          fixed: false
+          raw: getWithConstantInPath
+        parameters:
+          - $id: '179'
+            collectionFormat: none
+            defaultValue:
+              $id: '180'
+              fixed: false
+              raw: constant
+            deprecated: false
+            documentation:
+              $id: '181'
+              fixed: false
+            isConstant: true
+            isRequired: true
+            location: path
+            modelType:
+              $id: '183'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '184'
+                fixed: false
+                raw: String
+            name:
+              $id: '182'
+              fixed: false
+              raw: constantParam
+            serializedName: constantParam
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '187'
+            isNullable: true
+        returnType:
+          $id: '189'
+          isNullable: true
+        serializedName: getWithConstantInPath
+        url: '/validation/constantsInPath/{constantParam}/value'
+      - $id: '190'
+        defaultResponse:
+          $id: '204'
+          isNullable: true
+        deprecated: false
+        extensions:
+          x-ms-requestBody-index: '1'
+        group:
+          $id: '202'
+          fixed: false
+          raw: ''
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          $id: '201'
+          fixed: false
+          raw: postWithConstantInBody
+        parameters:
+          - $id: '191'
+            collectionFormat: none
+            defaultValue:
+              $id: '192'
+              fixed: false
+              raw: constant
+            deprecated: false
+            documentation:
+              $id: '193'
+              fixed: false
+            isConstant: true
+            isRequired: true
+            location: path
+            modelType:
+              $id: '195'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '196'
+                fixed: false
+                raw: String
+            name:
+              $id: '194'
+              fixed: false
+              raw: constantParam
+            serializedName: constantParam
+          - $id: '197'
+            collectionFormat: none
+            defaultValue:
+              $id: '198'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '199'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: body
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $ref: '30'
+            name:
+              $id: '200'
+              fixed: false
+              raw: body
+            serializedName: body
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '203'
+            body:
+              $ref: '30'
+            isNullable: true
+        returnType:
+          $id: '205'
+          body:
+            $ref: '30'
+          isNullable: true
+        serializedName: postWithConstantInBody
+        url: '/validation/constantsInPath/{constantParam}/value'
+    name:
+      $id: '206'
+      fixed: false
+      raw: ''
+    nameForProperty: AutoRestValidationTest
+    typeName:
+      $id: '207'
+      fixed: false
+properties:
+  - $id: '101'
+    collectionFormat: none
+    defaultValue:
+      $id: '102'
+      fixed: false
+    deprecated: false
+    documentation:
+      $id: '103'
+      fixed: false
+      raw: Subscription ID.
+    isConstant: false
+    isReadOnly: false
+    isRequired: true
+    modelType:
+      $id: '105'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '106'
+        fixed: false
+        raw: String
+    name:
+      $id: '104'
+      fixed: false
+      raw: subscriptionId
+    realPath:
+      - subscriptionId
+    serializedName: subscriptionId
+  - $id: '107'
+    collectionFormat: none
+    constraints:
+      Pattern: '\d{2}-\d{2}-\d{4}'
+    defaultValue:
+      $id: '108'
+      fixed: false
+    deprecated: false
+    documentation:
+      $id: '109'
+      fixed: false
+      raw: 'Required string following pattern \d{2}-\d{2}-\d{4}'
+    isConstant: false
+    isReadOnly: false
+    isRequired: true
+    modelType:
+      $id: '111'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '112'
+        fixed: false
+        raw: String
+    name:
+      $id: '110'
+      fixed: false
+      raw: apiVersion
+    realPath:
+      - apiVersion
+    serializedName: apiVersion

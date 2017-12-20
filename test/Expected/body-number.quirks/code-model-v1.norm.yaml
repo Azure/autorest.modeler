@@ -1,0 +1,1277 @@
+---
+$id: '1'
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - $ref: '2'
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '15'
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '3'
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '8'
+            fixed: false
+            raw: Int
+        name:
+          $id: '6'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '9'
+        collectionFormat: none
+        defaultValue:
+          $id: '10'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '11'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '13'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '14'
+            fixed: false
+            raw: String
+        name:
+          $id: '12'
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelsName: Models
+name: AutoRestNumberTestService
+namespace: ''
+operations:
+  - $id: '16'
+    methods:
+      - $id: '17'
+        defaultResponse:
+          $id: '23'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get null Number value
+        group:
+          $id: '19'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '18'
+          fixed: false
+          raw: getNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '20'
+            body:
+              $id: '21'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: double
+              name:
+                $id: '22'
+                fixed: false
+                raw: Double
+            isNullable: true
+        returnType:
+          $id: '24'
+          body:
+            $ref: '21'
+          isNullable: true
+        serializedName: number_getNull
+        url: /number/null
+      - $id: '25'
+        defaultResponse:
+          $id: '31'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get invalid float Number value
+        group:
+          $id: '27'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '26'
+          fixed: false
+          raw: getInvalidFloat
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '28'
+            body:
+              $id: '29'
+              $type: PrimaryType
+              deprecated: false
+              format: float
+              knownPrimaryType: double
+              name:
+                $id: '30'
+                fixed: false
+                raw: Double
+            isNullable: true
+        returnType:
+          $id: '32'
+          body:
+            $ref: '29'
+          isNullable: true
+        serializedName: number_getInvalidFloat
+        url: /number/invalidfloat
+      - $id: '33'
+        defaultResponse:
+          $id: '39'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get invalid double Number value
+        group:
+          $id: '35'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '34'
+          fixed: false
+          raw: getInvalidDouble
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '36'
+            body:
+              $id: '37'
+              $type: PrimaryType
+              deprecated: false
+              format: double
+              knownPrimaryType: double
+              name:
+                $id: '38'
+                fixed: false
+                raw: Double
+            isNullable: true
+        returnType:
+          $id: '40'
+          body:
+            $ref: '37'
+          isNullable: true
+        serializedName: number_getInvalidDouble
+        url: /number/invaliddouble
+      - $id: '41'
+        defaultResponse:
+          $id: '51'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Put big float value 3.402823e+20
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '49'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '48'
+          fixed: false
+          raw: putBigFloat
+        parameters:
+          - $id: '42'
+            collectionFormat: none
+            defaultValue:
+              $id: '43'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '44'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: numberBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '46'
+              $type: PrimaryType
+              deprecated: false
+              format: float
+              knownPrimaryType: double
+              name:
+                $id: '47'
+                fixed: false
+                raw: Double
+            name:
+              $id: '45'
+              fixed: false
+              raw: numberBody
+            serializedName: numberBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '50'
+            isNullable: true
+        returnType:
+          $id: '52'
+          isNullable: true
+        serializedName: number_putBigFloat
+        url: /number/big/float/3.402823e+20
+      - $id: '53'
+        defaultResponse:
+          $id: '59'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get big float value 3.402823e+20
+        group:
+          $id: '55'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '54'
+          fixed: false
+          raw: getBigFloat
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '56'
+            body:
+              $id: '57'
+              $type: PrimaryType
+              deprecated: false
+              format: float
+              knownPrimaryType: double
+              name:
+                $id: '58'
+                fixed: false
+                raw: Double
+            isNullable: true
+        returnType:
+          $id: '60'
+          body:
+            $ref: '57'
+          isNullable: true
+        serializedName: number_getBigFloat
+        url: /number/big/float/3.402823e+20
+      - $id: '61'
+        defaultResponse:
+          $id: '71'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Put big double value 2.5976931e+101
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '69'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '68'
+          fixed: false
+          raw: putBigDouble
+        parameters:
+          - $id: '62'
+            collectionFormat: none
+            defaultValue:
+              $id: '63'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '64'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: numberBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '66'
+              $type: PrimaryType
+              deprecated: false
+              format: double
+              knownPrimaryType: double
+              name:
+                $id: '67'
+                fixed: false
+                raw: Double
+            name:
+              $id: '65'
+              fixed: false
+              raw: numberBody
+            serializedName: numberBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '70'
+            isNullable: true
+        returnType:
+          $id: '72'
+          isNullable: true
+        serializedName: number_putBigDouble
+        url: /number/big/double/2.5976931e+101
+      - $id: '73'
+        defaultResponse:
+          $id: '79'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get big double value 2.5976931e+101
+        group:
+          $id: '75'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '74'
+          fixed: false
+          raw: getBigDouble
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '76'
+            body:
+              $id: '77'
+              $type: PrimaryType
+              deprecated: false
+              format: double
+              knownPrimaryType: double
+              name:
+                $id: '78'
+                fixed: false
+                raw: Double
+            isNullable: true
+        returnType:
+          $id: '80'
+          body:
+            $ref: '77'
+          isNullable: true
+        serializedName: number_getBigDouble
+        url: /number/big/double/2.5976931e+101
+      - $id: '81'
+        defaultResponse:
+          $id: '91'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Put big double value 99999999.99
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '89'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '88'
+          fixed: false
+          raw: putBigDoublePositiveDecimal
+        parameters:
+          - $id: '82'
+            collectionFormat: none
+            defaultValue:
+              $id: '83'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '84'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: numberBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '86'
+              $type: PrimaryType
+              deprecated: false
+              format: double
+              knownPrimaryType: double
+              name:
+                $id: '87'
+                fixed: false
+                raw: Double
+            name:
+              $id: '85'
+              fixed: false
+              raw: numberBody
+            serializedName: numberBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '90'
+            isNullable: true
+        returnType:
+          $id: '92'
+          isNullable: true
+        serializedName: number_putBigDoublePositiveDecimal
+        url: /number/big/double/99999999.99
+      - $id: '93'
+        defaultResponse:
+          $id: '99'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get big double value 99999999.99
+        group:
+          $id: '95'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '94'
+          fixed: false
+          raw: getBigDoublePositiveDecimal
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '96'
+            body:
+              $id: '97'
+              $type: PrimaryType
+              deprecated: false
+              format: double
+              knownPrimaryType: double
+              name:
+                $id: '98'
+                fixed: false
+                raw: Double
+            isNullable: true
+        returnType:
+          $id: '100'
+          body:
+            $ref: '97'
+          isNullable: true
+        serializedName: number_getBigDoublePositiveDecimal
+        url: /number/big/double/99999999.99
+      - $id: '101'
+        defaultResponse:
+          $id: '111'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Put big double value -99999999.99
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '109'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '108'
+          fixed: false
+          raw: putBigDoubleNegativeDecimal
+        parameters:
+          - $id: '102'
+            collectionFormat: none
+            defaultValue:
+              $id: '103'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '104'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: numberBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '106'
+              $type: PrimaryType
+              deprecated: false
+              format: double
+              knownPrimaryType: double
+              name:
+                $id: '107'
+                fixed: false
+                raw: Double
+            name:
+              $id: '105'
+              fixed: false
+              raw: numberBody
+            serializedName: numberBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '110'
+            isNullable: true
+        returnType:
+          $id: '112'
+          isNullable: true
+        serializedName: number_putBigDoubleNegativeDecimal
+        url: /number/big/double/-99999999.99
+      - $id: '113'
+        defaultResponse:
+          $id: '119'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get big double value -99999999.99
+        group:
+          $id: '115'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '114'
+          fixed: false
+          raw: getBigDoubleNegativeDecimal
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '116'
+            body:
+              $id: '117'
+              $type: PrimaryType
+              deprecated: false
+              format: double
+              knownPrimaryType: double
+              name:
+                $id: '118'
+                fixed: false
+                raw: Double
+            isNullable: true
+        returnType:
+          $id: '120'
+          body:
+            $ref: '117'
+          isNullable: true
+        serializedName: number_getBigDoubleNegativeDecimal
+        url: /number/big/double/-99999999.99
+      - $id: '121'
+        defaultResponse:
+          $id: '131'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Put big decimal value 2.5976931e+101
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '129'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '128'
+          fixed: false
+          raw: putBigDecimal
+        parameters:
+          - $id: '122'
+            collectionFormat: none
+            defaultValue:
+              $id: '123'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '124'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: numberBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '126'
+              $type: PrimaryType
+              deprecated: false
+              format: decimal
+              knownPrimaryType: decimal
+              name:
+                $id: '127'
+                fixed: false
+                raw: Decimal
+            name:
+              $id: '125'
+              fixed: false
+              raw: numberBody
+            serializedName: numberBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '130'
+            isNullable: true
+        returnType:
+          $id: '132'
+          isNullable: true
+        serializedName: number_putBigDecimal
+        url: /number/big/decimal/2.5976931e+101
+      - $id: '133'
+        defaultResponse:
+          $id: '139'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get big decimal value 2.5976931e+101
+        group:
+          $id: '135'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '134'
+          fixed: false
+          raw: getBigDecimal
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '136'
+            body:
+              $id: '137'
+              $type: PrimaryType
+              deprecated: false
+              format: decimal
+              knownPrimaryType: decimal
+              name:
+                $id: '138'
+                fixed: false
+                raw: Decimal
+            isNullable: true
+        returnType:
+          $id: '140'
+          body:
+            $ref: '137'
+          isNullable: true
+        serializedName: number_getBigDecimal
+        url: /number/big/decimal/2.5976931e+101
+      - $id: '141'
+        defaultResponse:
+          $id: '151'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Put big decimal value 99999999.99
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '149'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '148'
+          fixed: false
+          raw: putBigDecimalPositiveDecimal
+        parameters:
+          - $id: '142'
+            collectionFormat: none
+            defaultValue:
+              $id: '143'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '144'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: numberBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '146'
+              $type: PrimaryType
+              deprecated: false
+              format: decimal
+              knownPrimaryType: decimal
+              name:
+                $id: '147'
+                fixed: false
+                raw: Decimal
+            name:
+              $id: '145'
+              fixed: false
+              raw: numberBody
+            serializedName: numberBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '150'
+            isNullable: true
+        returnType:
+          $id: '152'
+          isNullable: true
+        serializedName: number_putBigDecimalPositiveDecimal
+        url: /number/big/decimal/99999999.99
+      - $id: '153'
+        defaultResponse:
+          $id: '159'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get big decimal value 99999999.99
+        group:
+          $id: '155'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '154'
+          fixed: false
+          raw: getBigDecimalPositiveDecimal
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '156'
+            body:
+              $id: '157'
+              $type: PrimaryType
+              deprecated: false
+              format: decimal
+              knownPrimaryType: decimal
+              name:
+                $id: '158'
+                fixed: false
+                raw: Decimal
+            isNullable: true
+        returnType:
+          $id: '160'
+          body:
+            $ref: '157'
+          isNullable: true
+        serializedName: number_getBigDecimalPositiveDecimal
+        url: /number/big/decimal/99999999.99
+      - $id: '161'
+        defaultResponse:
+          $id: '171'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Put big decimal value -99999999.99
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '169'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '168'
+          fixed: false
+          raw: putBigDecimalNegativeDecimal
+        parameters:
+          - $id: '162'
+            collectionFormat: none
+            defaultValue:
+              $id: '163'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '164'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: numberBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '166'
+              $type: PrimaryType
+              deprecated: false
+              format: decimal
+              knownPrimaryType: decimal
+              name:
+                $id: '167'
+                fixed: false
+                raw: Decimal
+            name:
+              $id: '165'
+              fixed: false
+              raw: numberBody
+            serializedName: numberBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '170'
+            isNullable: true
+        returnType:
+          $id: '172'
+          isNullable: true
+        serializedName: number_putBigDecimalNegativeDecimal
+        url: /number/big/decimal/-99999999.99
+      - $id: '173'
+        defaultResponse:
+          $id: '179'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get big decimal value -99999999.99
+        group:
+          $id: '175'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '174'
+          fixed: false
+          raw: getBigDecimalNegativeDecimal
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '176'
+            body:
+              $id: '177'
+              $type: PrimaryType
+              deprecated: false
+              format: decimal
+              knownPrimaryType: decimal
+              name:
+                $id: '178'
+                fixed: false
+                raw: Decimal
+            isNullable: true
+        returnType:
+          $id: '180'
+          body:
+            $ref: '177'
+          isNullable: true
+        serializedName: number_getBigDecimalNegativeDecimal
+        url: /number/big/decimal/-99999999.99
+      - $id: '181'
+        defaultResponse:
+          $id: '191'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Put small float value 3.402823e-20
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '189'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '188'
+          fixed: false
+          raw: putSmallFloat
+        parameters:
+          - $id: '182'
+            collectionFormat: none
+            defaultValue:
+              $id: '183'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '184'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: numberBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '186'
+              $type: PrimaryType
+              deprecated: false
+              format: float
+              knownPrimaryType: double
+              name:
+                $id: '187'
+                fixed: false
+                raw: Double
+            name:
+              $id: '185'
+              fixed: false
+              raw: numberBody
+            serializedName: numberBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '190'
+            isNullable: true
+        returnType:
+          $id: '192'
+          isNullable: true
+        serializedName: number_putSmallFloat
+        url: /number/small/float/3.402823e-20
+      - $id: '193'
+        defaultResponse:
+          $id: '199'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get big double value 3.402823e-20
+        group:
+          $id: '195'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '194'
+          fixed: false
+          raw: getSmallFloat
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '196'
+            body:
+              $id: '197'
+              $type: PrimaryType
+              deprecated: false
+              format: double
+              knownPrimaryType: double
+              name:
+                $id: '198'
+                fixed: false
+                raw: Double
+            isNullable: true
+        returnType:
+          $id: '200'
+          body:
+            $ref: '197'
+          isNullable: true
+        serializedName: number_getSmallFloat
+        url: /number/small/float/3.402823e-20
+      - $id: '201'
+        defaultResponse:
+          $id: '211'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Put small double value 2.5976931e-101
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '209'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '208'
+          fixed: false
+          raw: putSmallDouble
+        parameters:
+          - $id: '202'
+            collectionFormat: none
+            defaultValue:
+              $id: '203'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '204'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: numberBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '206'
+              $type: PrimaryType
+              deprecated: false
+              format: double
+              knownPrimaryType: double
+              name:
+                $id: '207'
+                fixed: false
+                raw: Double
+            name:
+              $id: '205'
+              fixed: false
+              raw: numberBody
+            serializedName: numberBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '210'
+            isNullable: true
+        returnType:
+          $id: '212'
+          isNullable: true
+        serializedName: number_putSmallDouble
+        url: /number/small/double/2.5976931e-101
+      - $id: '213'
+        defaultResponse:
+          $id: '219'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get big double value 2.5976931e-101
+        group:
+          $id: '215'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '214'
+          fixed: false
+          raw: getSmallDouble
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '216'
+            body:
+              $id: '217'
+              $type: PrimaryType
+              deprecated: false
+              format: double
+              knownPrimaryType: double
+              name:
+                $id: '218'
+                fixed: false
+                raw: Double
+            isNullable: true
+        returnType:
+          $id: '220'
+          body:
+            $ref: '217'
+          isNullable: true
+        serializedName: number_getSmallDouble
+        url: /number/small/double/2.5976931e-101
+      - $id: '221'
+        defaultResponse:
+          $id: '231'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Put small decimal value 2.5976931e-101
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '229'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '228'
+          fixed: false
+          raw: putSmallDecimal
+        parameters:
+          - $id: '222'
+            collectionFormat: none
+            defaultValue:
+              $id: '223'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '224'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: numberBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '226'
+              $type: PrimaryType
+              deprecated: false
+              format: decimal
+              knownPrimaryType: decimal
+              name:
+                $id: '227'
+                fixed: false
+                raw: Decimal
+            name:
+              $id: '225'
+              fixed: false
+              raw: numberBody
+            serializedName: numberBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '230'
+            isNullable: true
+        returnType:
+          $id: '232'
+          isNullable: true
+        serializedName: number_putSmallDecimal
+        url: /number/small/decimal/2.5976931e-101
+      - $id: '233'
+        defaultResponse:
+          $id: '239'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get small decimal value 2.5976931e-101
+        group:
+          $id: '235'
+          fixed: false
+          raw: number
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '234'
+          fixed: false
+          raw: getSmallDecimal
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '236'
+            body:
+              $id: '237'
+              $type: PrimaryType
+              deprecated: false
+              format: decimal
+              knownPrimaryType: decimal
+              name:
+                $id: '238'
+                fixed: false
+                raw: Decimal
+            isNullable: true
+        returnType:
+          $id: '240'
+          body:
+            $ref: '237'
+          isNullable: true
+        serializedName: number_getSmallDecimal
+        url: /number/small/decimal/2.5976931e-101
+    name:
+      $id: '241'
+      fixed: false
+      raw: Number
+    nameForProperty: Number
+    typeName:
+      $id: '242'
+      fixed: false

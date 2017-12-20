@@ -1,0 +1,171 @@
+---
+$id: '1'
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - $ref: '2'
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '15'
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '3'
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '8'
+            fixed: false
+            raw: Int
+        name:
+          $id: '6'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '9'
+        collectionFormat: none
+        defaultValue:
+          $id: '10'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '11'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '13'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '14'
+            fixed: false
+            raw: String
+        name:
+          $id: '12'
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelsName: Models
+name: AutoRestReportService
+namespace: ''
+operations:
+  - $id: '16'
+    methods:
+      - $id: '17'
+        defaultResponse:
+          $id: '31'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get test coverage report
+        group:
+          $id: '25'
+          fixed: false
+          raw: ''
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '24'
+          fixed: false
+          raw: getReport
+        parameters:
+          - $id: '18'
+            collectionFormat: none
+            defaultValue:
+              $id: '19'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '20'
+              fixed: false
+              raw: >-
+                If specified, qualifies the generated report further (e.g. '2.7'
+                vs '3.5' in for Python). The only effect is, that generators
+                that run all tests several times, can distinguish the generated
+                reports.
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '22'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '23'
+                fixed: false
+                raw: String
+            name:
+              $id: '21'
+              fixed: false
+              raw: qualifier
+            serializedName: qualifier
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '26'
+            body:
+              $id: '27'
+              $type: DictionaryType
+              deprecated: false
+              name:
+                $id: '30'
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $id: '28'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  $id: '29'
+                  fixed: false
+                  raw: Int
+            isNullable: true
+        returnType:
+          $id: '32'
+          body:
+            $ref: '27'
+          isNullable: true
+        serializedName: getReport
+        url: /report
+    name:
+      $id: '33'
+      fixed: false
+      raw: ''
+    nameForProperty: AutoRestReportService
+    typeName:
+      $id: '34'
+      fixed: false

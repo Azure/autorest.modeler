@@ -1,0 +1,182 @@
+---
+$id: '1'
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+codeGenExtensions:
+  ft: '2'
+documentation: Resource Flattening for AutoRest
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '11'
+      fixed: false
+      raw: AvailabilitySetUpdateParameters
+    properties:
+      - $id: '3'
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+          raw: A description about the set of tags.
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $id: '7'
+          $type: DictionaryType
+          deprecated: false
+          name:
+            $id: '10'
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $id: '8'
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: string
+            name:
+              $id: '9'
+              fixed: false
+              raw: String
+        name:
+          $id: '6'
+          fixed: false
+          raw: tags
+        realPath:
+          - tags
+        serializedName: tags
+        summary: A set of tags.
+    serializedName: AvailabilitySetUpdateParameters
+modelsName: Models
+name: AutoRestParameterFlattening
+namespace: ''
+operations:
+  - $id: '12'
+    methods:
+      - $id: '13'
+        defaultResponse:
+          $id: '33'
+          isNullable: true
+        deprecated: false
+        description: Updates the tags for an availability set.
+        extensions:
+          x-ms-requestBody-index: '2'
+        group:
+          $id: '31'
+          fixed: false
+          raw: AvailabilitySets
+        hidden: false
+        httpMethod: patch
+        isAbsoluteUrl: false
+        name:
+          $id: '30'
+          fixed: false
+          raw: Update
+        parameters:
+          - $id: '14'
+            collectionFormat: none
+            defaultValue:
+              $id: '15'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '16'
+              fixed: false
+              raw: The name of the resource group.
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $id: '18'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '19'
+                fixed: false
+                raw: String
+            name:
+              $id: '17'
+              fixed: false
+              raw: resourceGroupName
+            serializedName: resourceGroupName
+          - $id: '20'
+            collectionFormat: none
+            constraints:
+              MaxLength: '80'
+            defaultValue:
+              $id: '21'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '22'
+              fixed: false
+              raw: The name of the storage availability set.
+            extensions:
+              x-ms-client-name: avset
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $id: '24'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '25'
+                fixed: false
+                raw: String
+            name:
+              $id: '23'
+              fixed: false
+              raw: availabilitySetName
+            serializedName: availabilitySetName
+          - $id: '26'
+            collectionFormat: none
+            defaultValue:
+              $id: '27'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '28'
+              fixed: false
+              raw: The tags.
+            extensions:
+              x-ms-requestBody-name: tags
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '2'
+            name:
+              $id: '29'
+              fixed: false
+              raw: tags
+            serializedName: tags
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '32'
+            isNullable: true
+        returnType:
+          $id: '34'
+          isNullable: true
+        serializedName: AvailabilitySets_Update
+        url: '/parameterFlattening/{resourceGroupName}/{availabilitySetName}'
+    name:
+      $id: '35'
+      fixed: false
+      raw: AvailabilitySets
+    nameForProperty: AvailabilitySets
+    typeName:
+      $id: '36'
+      fixed: false

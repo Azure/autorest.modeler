@@ -1,0 +1,2973 @@
+---
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest Swagger BAT
+errorTypes:
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelTypes:
+  - &ref_36
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Widget
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: integer
+        realPath:
+          - integer
+        serializedName: integer
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: string
+        realPath:
+          - string
+        serializedName: string
+    serializedName: Widget
+  - *ref_0
+modelsName: Models
+name: AutoRestSwaggerBATdictionaryService
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get null dictionary value
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_1
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  fixed: false
+                  raw: Int
+            isNullable: true
+        returnType:
+          body: *ref_1
+          isNullable: true
+        serializedName: dictionary_getNull
+        url: /dictionary/null
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get empty dictionary value {}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_2
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  fixed: false
+                  raw: Int
+            isNullable: true
+        returnType:
+          body: *ref_2
+          isNullable: true
+        serializedName: dictionary_getEmpty
+        url: /dictionary/empty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Set dictionary value empty {}'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putEmpty
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: dictionary_putEmpty
+        url: /dictionary/empty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get Dictionary with null value
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNullValue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_3
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+            isNullable: true
+        returnType:
+          body: *ref_3
+          isNullable: true
+        serializedName: dictionary_getNullValue
+        url: /dictionary/nullvalue
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get Dictionary with null key
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNullKey
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_4
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+            isNullable: true
+        returnType:
+          body: *ref_4
+          isNullable: true
+        serializedName: dictionary_getNullKey
+        url: /dictionary/nullkey
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get Dictionary with key as empty string
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getEmptyStringKey
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_5
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+            isNullable: true
+        returnType:
+          body: *ref_5
+          isNullable: true
+        serializedName: dictionary_getEmptyStringKey
+        url: /dictionary/keyemptystring
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get invalid Dictionary value
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getInvalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_6
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+            isNullable: true
+        returnType:
+          body: *ref_6
+          isNullable: true
+        serializedName: dictionary_getInvalid
+        url: /dictionary/invalid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get boolean dictionary value {"0": true, "1": false, "2": false, "3":
+          true }
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getBooleanTfft
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_7
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: boolean
+                name:
+                  fixed: false
+                  raw: Boolean
+            isNullable: true
+        returnType:
+          body: *ref_7
+          isNullable: true
+        serializedName: dictionary_getBooleanTfft
+        url: /dictionary/prim/boolean/tfft
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Set dictionary value empty {"0": true, "1": false, "2": false, "3":
+          true }
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putBooleanTfft
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: boolean
+                name:
+                  fixed: false
+                  raw: Boolean
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: dictionary_putBooleanTfft
+        url: /dictionary/prim/boolean/tfft
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get boolean dictionary value {"0": true, "1": null, "2": false }'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getBooleanInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_8
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: boolean
+                name:
+                  fixed: false
+                  raw: Boolean
+            isNullable: true
+        returnType:
+          body: *ref_8
+          isNullable: true
+        serializedName: dictionary_getBooleanInvalidNull
+        url: /dictionary/prim/boolean/true.null.false
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get boolean dictionary value ''{"0": true, "1": "boolean", "2": false}'''
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getBooleanInvalidString
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_9
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: boolean
+                name:
+                  fixed: false
+                  raw: Boolean
+            isNullable: true
+        returnType:
+          body: *ref_9
+          isNullable: true
+        serializedName: dictionary_getBooleanInvalidString
+        url: /dictionary/prim/boolean/true.boolean.false
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get integer dictionary value {"0": 1, "1": -1, "2": 3, "3": 300}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getIntegerValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_10
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  fixed: false
+                  raw: Int
+            isNullable: true
+        returnType:
+          body: *ref_10
+          isNullable: true
+        serializedName: dictionary_getIntegerValid
+        url: /dictionary/prim/integer/1.-1.3.300
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putIntegerValid
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  fixed: false
+                  raw: Int
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: dictionary_putIntegerValid
+        url: /dictionary/prim/integer/1.-1.3.300
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get integer dictionary value {"0": 1, "1": null, "2": 0}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getIntInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_11
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  fixed: false
+                  raw: Int
+            isNullable: true
+        returnType:
+          body: *ref_11
+          isNullable: true
+        serializedName: dictionary_getIntInvalidNull
+        url: /dictionary/prim/integer/1.null.zero
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get integer dictionary value {"0": 1, "1": "integer", "2": 0}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getIntInvalidString
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_12
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  fixed: false
+                  raw: Int
+            isNullable: true
+        returnType:
+          body: *ref_12
+          isNullable: true
+        serializedName: dictionary_getIntInvalidString
+        url: /dictionary/prim/integer/1.integer.0
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get integer dictionary value {"0": 1, "1": -1, "2": 3, "3": 300}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getLongValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_13
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: int64
+                knownPrimaryType: long
+                name:
+                  fixed: false
+                  raw: Long
+            isNullable: true
+        returnType:
+          body: *ref_13
+          isNullable: true
+        serializedName: dictionary_getLongValid
+        url: /dictionary/prim/long/1.-1.3.300
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Set dictionary value empty {"0": 1, "1": -1, "2": 3, "3": 300}'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putLongValid
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: int64
+                knownPrimaryType: long
+                name:
+                  fixed: false
+                  raw: Long
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: dictionary_putLongValid
+        url: /dictionary/prim/long/1.-1.3.300
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get long dictionary value {"0": 1, "1": null, "2": 0}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getLongInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_14
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: int64
+                knownPrimaryType: long
+                name:
+                  fixed: false
+                  raw: Long
+            isNullable: true
+        returnType:
+          body: *ref_14
+          isNullable: true
+        serializedName: dictionary_getLongInvalidNull
+        url: /dictionary/prim/long/1.null.zero
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get long dictionary value {"0": 1, "1": "integer", "2": 0}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getLongInvalidString
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_15
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: int64
+                knownPrimaryType: long
+                name:
+                  fixed: false
+                  raw: Long
+            isNullable: true
+        returnType:
+          body: *ref_15
+          isNullable: true
+        serializedName: dictionary_getLongInvalidString
+        url: /dictionary/prim/long/1.integer.0
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get float dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getFloatValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_16
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: float
+                knownPrimaryType: double
+                name:
+                  fixed: false
+                  raw: Double
+            isNullable: true
+        returnType:
+          body: *ref_16
+          isNullable: true
+        serializedName: dictionary_getFloatValid
+        url: /dictionary/prim/float/0--0.01-1.2e20
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putFloatValid
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: float
+                knownPrimaryType: double
+                name:
+                  fixed: false
+                  raw: Double
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: dictionary_putFloatValid
+        url: /dictionary/prim/float/0--0.01-1.2e20
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get float dictionary value {"0": 0.0, "1": null, "2": 1.2e20}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getFloatInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_17
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: float
+                knownPrimaryType: double
+                name:
+                  fixed: false
+                  raw: Double
+            isNullable: true
+        returnType:
+          body: *ref_17
+          isNullable: true
+        serializedName: dictionary_getFloatInvalidNull
+        url: /dictionary/prim/float/0.0-null-1.2e20
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get boolean dictionary value {"0": 1.0, "1": "number", "2": 0.0}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getFloatInvalidString
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_18
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: float
+                knownPrimaryType: double
+                name:
+                  fixed: false
+                  raw: Double
+            isNullable: true
+        returnType:
+          body: *ref_18
+          isNullable: true
+        serializedName: dictionary_getFloatInvalidString
+        url: /dictionary/prim/float/1.number.0
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get float dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDoubleValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_19
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: double
+                knownPrimaryType: double
+                name:
+                  fixed: false
+                  raw: Double
+            isNullable: true
+        returnType:
+          body: *ref_19
+          isNullable: true
+        serializedName: dictionary_getDoubleValid
+        url: /dictionary/prim/double/0--0.01-1.2e20
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Set dictionary value {"0": 0, "1": -0.01, "2": 1.2e20}'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDoubleValid
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: double
+                knownPrimaryType: double
+                name:
+                  fixed: false
+                  raw: Double
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: dictionary_putDoubleValid
+        url: /dictionary/prim/double/0--0.01-1.2e20
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get float dictionary value {"0": 0.0, "1": null, "2": 1.2e20}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDoubleInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_20
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: double
+                knownPrimaryType: double
+                name:
+                  fixed: false
+                  raw: Double
+            isNullable: true
+        returnType:
+          body: *ref_20
+          isNullable: true
+        serializedName: dictionary_getDoubleInvalidNull
+        url: /dictionary/prim/double/0.0-null-1.2e20
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get boolean dictionary value {"0": 1.0, "1": "number", "2": 0.0}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDoubleInvalidString
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_21
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: double
+                knownPrimaryType: double
+                name:
+                  fixed: false
+                  raw: Double
+            isNullable: true
+        returnType:
+          body: *ref_21
+          isNullable: true
+        serializedName: dictionary_getDoubleInvalidString
+        url: /dictionary/prim/double/1.number.0
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get string dictionary value {"0": "foo1", "1": "foo2", "2": "foo3"}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getStringValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_22
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+            isNullable: true
+        returnType:
+          body: *ref_22
+          isNullable: true
+        serializedName: dictionary_getStringValid
+        url: /dictionary/prim/string/foo1.foo2.foo3
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Set dictionary value {"0": "foo1", "1": "foo2", "2": "foo3"}'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putStringValid
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: dictionary_putStringValid
+        url: /dictionary/prim/string/foo1.foo2.foo3
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get string dictionary value {"0": "foo", "1": null, "2": "foo2"}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getStringWithNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_23
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+            isNullable: true
+        returnType:
+          body: *ref_23
+          isNullable: true
+        serializedName: dictionary_getStringWithNull
+        url: /dictionary/prim/string/foo.null.foo2
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get string dictionary value {"0": "foo", "1": 123, "2": "foo2"}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getStringWithInvalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_24
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+            isNullable: true
+        returnType:
+          body: *ref_24
+          isNullable: true
+        serializedName: dictionary_getStringWithInvalid
+        url: /dictionary/prim/string/foo.123.foo2
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get integer dictionary value {"0": "2000-12-01", "1": "1980-01-02",
+          "2": "1492-10-12"}
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDateValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_25
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: date
+                knownPrimaryType: date
+                name:
+                  fixed: false
+                  raw: Date
+            isNullable: true
+        returnType:
+          body: *ref_25
+          isNullable: true
+        serializedName: dictionary_getDateValid
+        url: /dictionary/prim/date/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Set dictionary value  {"0": "2000-12-01", "1": "1980-01-02", "2":
+          "1492-10-12"}
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDateValid
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: date
+                knownPrimaryType: date
+                name:
+                  fixed: false
+                  raw: Date
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: dictionary_putDateValid
+        url: /dictionary/prim/date/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get date dictionary value {"0": "2012-01-01", "1": null, "2":
+          "1776-07-04"}
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDateInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_26
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: date
+                knownPrimaryType: date
+                name:
+                  fixed: false
+                  raw: Date
+            isNullable: true
+        returnType:
+          body: *ref_26
+          isNullable: true
+        serializedName: dictionary_getDateInvalidNull
+        url: /dictionary/prim/date/invalidnull
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get date dictionary value {"0": "2011-03-22", "1": "date"}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDateInvalidChars
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_27
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: date
+                knownPrimaryType: date
+                name:
+                  fixed: false
+                  raw: Date
+            isNullable: true
+        returnType:
+          body: *ref_27
+          isNullable: true
+        serializedName: dictionary_getDateInvalidChars
+        url: /dictionary/prim/date/invalidchars
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get date-time dictionary value {"0": "2000-12-01t00:00:01z", "1":
+          "1980-01-02T00:11:35+01:00", "2": "1492-10-12T10:15:01-08:00"}
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDateTimeValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_28
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: date-time
+                knownPrimaryType: dateTime
+                name:
+                  fixed: false
+                  raw: DateTime
+            isNullable: true
+        returnType:
+          body: *ref_28
+          isNullable: true
+        serializedName: dictionary_getDateTimeValid
+        url: /dictionary/prim/date-time/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Set dictionary value  {"0": "2000-12-01t00:00:01z", "1":
+          "1980-01-02T00:11:35+01:00", "2": "1492-10-12T10:15:01-08:00"}
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDateTimeValid
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: date-time
+                knownPrimaryType: dateTime
+                name:
+                  fixed: false
+                  raw: DateTime
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: dictionary_putDateTimeValid
+        url: /dictionary/prim/date-time/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get date dictionary value {"0": "2000-12-01t00:00:01z", "1": null}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDateTimeInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_29
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: date-time
+                knownPrimaryType: dateTime
+                name:
+                  fixed: false
+                  raw: DateTime
+            isNullable: true
+        returnType:
+          body: *ref_29
+          isNullable: true
+        serializedName: dictionary_getDateTimeInvalidNull
+        url: /dictionary/prim/date-time/invalidnull
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get date dictionary value {"0": "2000-12-01t00:00:01z", "1":
+          "date-time"}
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDateTimeInvalidChars
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_30
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: date-time
+                knownPrimaryType: dateTime
+                name:
+                  fixed: false
+                  raw: DateTime
+            isNullable: true
+        returnType:
+          body: *ref_30
+          isNullable: true
+        serializedName: dictionary_getDateTimeInvalidChars
+        url: /dictionary/prim/date-time/invalidchars
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get date-time-rfc1123 dictionary value {"0": "Fri, 01 Dec 2000
+          00:00:01 GMT", "1": "Wed, 02 Jan 1980 00:11:35 GMT", "2": "Wed, 12 Oct
+          1492 10:15:01 GMT"}
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDateTimeRfc1123Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_31
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: date-time-rfc1123
+                knownPrimaryType: dateTimeRfc1123
+                name:
+                  fixed: false
+                  raw: DateTimeRfc1123
+            isNullable: true
+        returnType:
+          body: *ref_31
+          isNullable: true
+        serializedName: dictionary_getDateTimeRfc1123Valid
+        url: /dictionary/prim/date-time-rfc1123/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Set dictionary value empty {"0": "Fri, 01 Dec 2000 00:00:01 GMT", "1":
+          "Wed, 02 Jan 1980 00:11:35 GMT", "2": "Wed, 12 Oct 1492 10:15:01 GMT"}
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDateTimeRfc1123Valid
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: date-time-rfc1123
+                knownPrimaryType: dateTimeRfc1123
+                name:
+                  fixed: false
+                  raw: DateTimeRfc1123
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: dictionary_putDateTimeRfc1123Valid
+        url: /dictionary/prim/date-time-rfc1123/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get duration dictionary value {"0": "P123DT22H14M12.011S", "1":
+          "P5DT1H0M0S"}
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDurationValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_32
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: duration
+                knownPrimaryType: timeSpan
+                name:
+                  fixed: false
+                  raw: TimeSpan
+            isNullable: true
+        returnType:
+          body: *ref_32
+          isNullable: true
+        serializedName: dictionary_getDurationValid
+        url: /dictionary/prim/duration/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Set dictionary value  {"0": "P123DT22H14M12.011S", "1": "P5DT1H0M0S"}'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDurationValid
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: duration
+                knownPrimaryType: timeSpan
+                name:
+                  fixed: false
+                  raw: TimeSpan
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: dictionary_putDurationValid
+        url: /dictionary/prim/duration/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get byte dictionary value {"0": hex(FF FF FF FA), "1": hex(01 02 03),
+          "2": hex (25, 29, 43)} with each item encoded in base64
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getByteValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_33
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: byte
+                knownPrimaryType: byteArray
+                name:
+                  fixed: false
+                  raw: ByteArray
+            isNullable: true
+        returnType:
+          body: *ref_33
+          isNullable: true
+        serializedName: dictionary_getByteValid
+        url: /dictionary/prim/byte/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Put the dictionary value {"0": hex(FF FF FF FA), "1": hex(01 02 03),
+          "2": hex (25, 29, 43)} with each elementencoded in base 64
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putByteValid
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: byte
+                knownPrimaryType: byteArray
+                name:
+                  fixed: false
+                  raw: ByteArray
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: dictionary_putByteValid
+        url: /dictionary/prim/byte/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get byte dictionary value {"0": hex(FF FF FF FA), "1": null} with the
+          first item base64 encoded
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getByteInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_34
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: byte
+                knownPrimaryType: byteArray
+                name:
+                  fixed: false
+                  raw: ByteArray
+            isNullable: true
+        returnType:
+          body: *ref_34
+          isNullable: true
+        serializedName: dictionary_getByteInvalidNull
+        url: /dictionary/prim/byte/invalidnull
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get base64url dictionary value {"0": "a string that gets encoded with
+          base64url", "1": "test string", "2": "Lorem ipsum"}
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getBase64Url
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_35
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: PrimaryType
+                deprecated: false
+                format: base64url
+                knownPrimaryType: base64Url
+                name:
+                  fixed: false
+                  raw: Base64Url
+            isNullable: true
+        returnType:
+          body: *ref_35
+          isNullable: true
+        serializedName: dictionary_getBase64Url
+        url: /dictionary/prim/base64url/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get dictionary of complex type null value
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getComplexNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_37
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType: *ref_36
+            isNullable: true
+        returnType:
+          body: *ref_37
+          isNullable: true
+        serializedName: dictionary_getComplexNull
+        url: /dictionary/complex/null
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get empty dictionary of complex type {}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getComplexEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_38
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType: *ref_36
+            isNullable: true
+        returnType:
+          body: *ref_38
+          isNullable: true
+        serializedName: dictionary_getComplexEmpty
+        url: /dictionary/complex/empty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get dictionary of complex type with null item {"0": {"integer": 1,
+          "string": "2"}, "1": null, "2": {"integer": 5, "string": "6"}}
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getComplexItemNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_39
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType: *ref_36
+            isNullable: true
+        returnType:
+          body: *ref_39
+          isNullable: true
+        serializedName: dictionary_getComplexItemNull
+        url: /dictionary/complex/itemnull
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get dictionary of complex type with empty item {"0": {"integer": 1,
+          "string": "2"}, "1:" {}, "2": {"integer": 5, "string": "6"}}
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getComplexItemEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_40
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType: *ref_36
+            isNullable: true
+        returnType:
+          body: *ref_40
+          isNullable: true
+        serializedName: dictionary_getComplexItemEmpty
+        url: /dictionary/complex/itemempty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get dictionary of complex type with {"0": {"integer": 1, "string":
+          "2"}, "1": {"integer": 3, "string": "4"}, "2": {"integer": 5,
+          "string": "6"}}
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getComplexValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_41
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType: *ref_36
+            isNullable: true
+        returnType:
+          body: *ref_41
+          isNullable: true
+        serializedName: dictionary_getComplexValid
+        url: /dictionary/complex/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Put an dictionary of complex type with values {"0": {"integer": 1,
+          "string": "2"}, "1": {"integer": 3, "string": "4"}, "2": {"integer":
+          5, "string": "6"}}
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putComplexValid
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType: *ref_36
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: dictionary_putComplexValid
+        url: /dictionary/complex/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get a null array
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getArrayNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_42
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: SequenceType
+                deprecated: false
+                elementType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+                name:
+                  fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_42
+          isNullable: true
+        serializedName: dictionary_getArrayNull
+        url: /dictionary/array/null
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get an empty dictionary {}'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getArrayEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_43
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: SequenceType
+                deprecated: false
+                elementType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+                name:
+                  fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_43
+          isNullable: true
+        serializedName: dictionary_getArrayEmpty
+        url: /dictionary/array/empty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get an dictionary of array of strings {"0": ["1", "2", "3"], "1":
+          null, "2": ["7", "8", "9"]}
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getArrayItemNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_44
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: SequenceType
+                deprecated: false
+                elementType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+                name:
+                  fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_44
+          isNullable: true
+        serializedName: dictionary_getArrayItemNull
+        url: /dictionary/array/itemnull
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get an array of array of strings [{"0": ["1", "2", "3"], "1": [], "2":
+          ["7", "8", "9"]}
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getArrayItemEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_45
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: SequenceType
+                deprecated: false
+                elementType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+                name:
+                  fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_45
+          isNullable: true
+        serializedName: dictionary_getArrayItemEmpty
+        url: /dictionary/array/itemempty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get an array of array of strings {"0": ["1", "2", "3"], "1": ["4",
+          "5", "6"], "2": ["7", "8", "9"]}
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getArrayValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_46
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: SequenceType
+                deprecated: false
+                elementType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+                name:
+                  fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_46
+          isNullable: true
+        serializedName: dictionary_getArrayValid
+        url: /dictionary/array/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Put An array of array of strings {"0": ["1", "2", "3"], "1": ["4",
+          "5", "6"], "2": ["7", "8", "9"]}
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putArrayValid
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: SequenceType
+                deprecated: false
+                elementType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+                name:
+                  fixed: false
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: dictionary_putArrayValid
+        url: /dictionary/array/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get an dictionaries of dictionaries with value null
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDictionaryNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_47
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: DictionaryType
+                deprecated: false
+                name:
+                  fixed: false
+                supportsAdditionalProperties: false
+                valueType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+            isNullable: true
+        returnType:
+          body: *ref_47
+          isNullable: true
+        serializedName: dictionary_getDictionaryNull
+        url: /dictionary/dictionary/null
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get an dictionaries of dictionaries of type <string, string> with
+          value {}
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDictionaryEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_48
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: DictionaryType
+                deprecated: false
+                name:
+                  fixed: false
+                supportsAdditionalProperties: false
+                valueType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+            isNullable: true
+        returnType:
+          body: *ref_48
+          isNullable: true
+        serializedName: dictionary_getDictionaryEmpty
+        url: /dictionary/dictionary/empty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get an dictionaries of dictionaries of type <string, string> with
+          value {"0": {"1": "one", "2": "two", "3": "three"}, "1": null, "2":
+          {"7": "seven", "8": "eight", "9": "nine"}}
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDictionaryItemNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_49
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: DictionaryType
+                deprecated: false
+                name:
+                  fixed: false
+                supportsAdditionalProperties: false
+                valueType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+            isNullable: true
+        returnType:
+          body: *ref_49
+          isNullable: true
+        serializedName: dictionary_getDictionaryItemNull
+        url: /dictionary/dictionary/itemnull
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get an dictionaries of dictionaries of type <string, string> with
+          value {"0": {"1": "one", "2": "two", "3": "three"}, "1": {}, "2":
+          {"7": "seven", "8": "eight", "9": "nine"}}
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDictionaryItemEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_50
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: DictionaryType
+                deprecated: false
+                name:
+                  fixed: false
+                supportsAdditionalProperties: false
+                valueType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+            isNullable: true
+        returnType:
+          body: *ref_50
+          isNullable: true
+        serializedName: dictionary_getDictionaryItemEmpty
+        url: /dictionary/dictionary/itemempty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get an dictionaries of dictionaries of type <string, string> with
+          value {"0": {"1": "one", "2": "two", "3": "three"}, "1": {"4": "four",
+          "5": "five", "6": "six"}, "2": {"7": "seven", "8": "eight", "9":
+          "nine"}}
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDictionaryValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_51
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: DictionaryType
+                deprecated: false
+                name:
+                  fixed: false
+                supportsAdditionalProperties: false
+                valueType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+            isNullable: true
+        returnType:
+          body: *ref_51
+          isNullable: true
+        serializedName: dictionary_getDictionaryValid
+        url: /dictionary/dictionary/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get an dictionaries of dictionaries of type <string, string> with
+          value {"0": {"1": "one", "2": "two", "3": "three"}, "1": {"4": "four",
+          "5": "five", "6": "six"}, "2": {"7": "seven", "8": "eight", "9":
+          "nine"}}
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: dictionary
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDictionaryValid
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: DictionaryType
+              deprecated: false
+              name:
+                fixed: false
+              supportsAdditionalProperties: false
+              valueType:
+                $type: DictionaryType
+                deprecated: false
+                name:
+                  fixed: false
+                supportsAdditionalProperties: false
+                valueType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: dictionary_putDictionaryValid
+        url: /dictionary/dictionary/valid
+    name:
+      fixed: false
+      raw: Dictionary
+    nameForProperty: Dictionary
+    typeName:
+      fixed: false

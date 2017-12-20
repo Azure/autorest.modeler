@@ -1,0 +1,291 @@
+---
+$id: '1'
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - $ref: '2'
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '15'
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '3'
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '8'
+            fixed: false
+            raw: Int
+        name:
+          $id: '6'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '9'
+        collectionFormat: none
+        defaultValue:
+          $id: '10'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '11'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '13'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '14'
+            fixed: false
+            raw: String
+        name:
+          $id: '12'
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelsName: Models
+name: AutoRestUrlMutliCollectionFormatTestService
+namespace: ''
+operations:
+  - $id: '16'
+    methods:
+      - $id: '17'
+        defaultResponse:
+          $id: '29'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get a null array of string using the multi-array format
+        group:
+          $id: '27'
+          fixed: false
+          raw: queries
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '26'
+          fixed: false
+          raw: ArrayStringMultiNull
+        parameters:
+          - $id: '18'
+            collectionFormat: multi
+            defaultValue:
+              $id: '19'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '20'
+              fixed: false
+              raw: a null array of string using the multi-array format
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '22'
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $id: '23'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  $id: '24'
+                  fixed: false
+                  raw: String
+              name:
+                $id: '25'
+                fixed: false
+            name:
+              $id: '21'
+              fixed: false
+              raw: arrayQuery
+            serializedName: arrayQuery
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '28'
+            isNullable: true
+        returnType:
+          $id: '30'
+          isNullable: true
+        serializedName: queries_ArrayStringMultiNull
+        url: /queries/array/multi/string/null
+      - $id: '31'
+        defaultResponse:
+          $id: '43'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: 'Get an empty array [] of string using the multi-array format'
+        group:
+          $id: '41'
+          fixed: false
+          raw: queries
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '40'
+          fixed: false
+          raw: ArrayStringMultiEmpty
+        parameters:
+          - $id: '32'
+            collectionFormat: multi
+            defaultValue:
+              $id: '33'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '34'
+              fixed: false
+              raw: 'an empty array [] of string using the multi-array format'
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '36'
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $id: '37'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  $id: '38'
+                  fixed: false
+                  raw: String
+              name:
+                $id: '39'
+                fixed: false
+            name:
+              $id: '35'
+              fixed: false
+              raw: arrayQuery
+            serializedName: arrayQuery
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '42'
+            isNullable: true
+        returnType:
+          $id: '44'
+          isNullable: true
+        serializedName: queries_ArrayStringMultiEmpty
+        url: /queries/array/multi/string/empty
+      - $id: '45'
+        defaultResponse:
+          $id: '57'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end' ,
+          null, ''] using the mult-array format
+        group:
+          $id: '55'
+          fixed: false
+          raw: queries
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '54'
+          fixed: false
+          raw: ArrayStringMultiValid
+        parameters:
+          - $id: '46'
+            collectionFormat: multi
+            defaultValue:
+              $id: '47'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '48'
+              fixed: false
+              raw: >-
+                an array of string ['ArrayQuery1', 'begin!*'();:@ &=+$,/?#[]end'
+                , null, ''] using the mult-array format
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '50'
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $id: '51'
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  $id: '52'
+                  fixed: false
+                  raw: String
+              name:
+                $id: '53'
+                fixed: false
+            name:
+              $id: '49'
+              fixed: false
+              raw: arrayQuery
+            serializedName: arrayQuery
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '56'
+            isNullable: true
+        returnType:
+          $id: '58'
+          isNullable: true
+        serializedName: queries_ArrayStringMultiValid
+        url: /queries/array/multi/string/valid
+    name:
+      $id: '59'
+      fixed: false
+      raw: Queries
+    nameForProperty: Queries
+    typeName:
+      $id: '60'
+      fixed: false

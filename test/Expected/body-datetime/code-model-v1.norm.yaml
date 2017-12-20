@@ -1,0 +1,1038 @@
+---
+$id: '1'
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - $ref: '2'
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '15'
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '3'
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '8'
+            fixed: false
+            raw: Int
+        name:
+          $id: '6'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '9'
+        collectionFormat: none
+        defaultValue:
+          $id: '10'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '11'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '13'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '14'
+            fixed: false
+            raw: String
+        name:
+          $id: '12'
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelsName: Models
+name: AutoRestDateTimeTestService
+namespace: ''
+operations:
+  - $id: '16'
+    methods:
+      - $id: '17'
+        defaultResponse:
+          $id: '23'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get null datetime value
+        group:
+          $id: '19'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '18'
+          fixed: false
+          raw: getNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '20'
+            body:
+              $id: '21'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '22'
+                fixed: false
+                raw: DateTime
+            isNullable: true
+        returnType:
+          $id: '24'
+          body:
+            $ref: '21'
+          isNullable: true
+        serializedName: datetime_getNull
+        url: /datetime/null
+      - $id: '25'
+        defaultResponse:
+          $id: '31'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get invalid datetime value
+        group:
+          $id: '27'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '26'
+          fixed: false
+          raw: getInvalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '28'
+            body:
+              $id: '29'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '30'
+                fixed: false
+                raw: DateTime
+            isNullable: true
+        returnType:
+          $id: '32'
+          body:
+            $ref: '29'
+          isNullable: true
+        serializedName: datetime_getInvalid
+        url: /datetime/invalid
+      - $id: '33'
+        defaultResponse:
+          $id: '39'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get overflow datetime value
+        group:
+          $id: '35'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '34'
+          fixed: false
+          raw: getOverflow
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '36'
+            body:
+              $id: '37'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '38'
+                fixed: false
+                raw: DateTime
+            isNullable: true
+        returnType:
+          $id: '40'
+          body:
+            $ref: '37'
+          isNullable: true
+        serializedName: datetime_getOverflow
+        url: /datetime/overflow
+      - $id: '41'
+        defaultResponse:
+          $id: '47'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get underflow datetime value
+        group:
+          $id: '43'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '42'
+          fixed: false
+          raw: getUnderflow
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '44'
+            body:
+              $id: '45'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '46'
+                fixed: false
+                raw: DateTime
+            isNullable: true
+        returnType:
+          $id: '48'
+          body:
+            $ref: '45'
+          isNullable: true
+        serializedName: datetime_getUnderflow
+        url: /datetime/underflow
+      - $id: '49'
+        defaultResponse:
+          $id: '59'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: 'Put max datetime value 9999-12-31T23:59:59.9999999Z'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '57'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '56'
+          fixed: false
+          raw: putUtcMaxDateTime
+        parameters:
+          - $id: '50'
+            collectionFormat: none
+            defaultValue:
+              $id: '51'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '52'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: datetimeBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '54'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '55'
+                fixed: false
+                raw: DateTime
+            name:
+              $id: '53'
+              fixed: false
+              raw: datetimeBody
+            serializedName: datetimeBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '58'
+            isNullable: true
+        returnType:
+          $id: '60'
+          isNullable: true
+        serializedName: datetime_putUtcMaxDateTime
+        url: /datetime/max/utc
+      - $id: '61'
+        defaultResponse:
+          $id: '67'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: 'Get max datetime value 9999-12-31t23:59:59.9999999z'
+        group:
+          $id: '63'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '62'
+          fixed: false
+          raw: getUtcLowercaseMaxDateTime
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '64'
+            body:
+              $id: '65'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '66'
+                fixed: false
+                raw: DateTime
+            isNullable: true
+        returnType:
+          $id: '68'
+          body:
+            $ref: '65'
+          isNullable: true
+        serializedName: datetime_getUtcLowercaseMaxDateTime
+        url: /datetime/max/utc/lowercase
+      - $id: '69'
+        defaultResponse:
+          $id: '75'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: 'Get max datetime value 9999-12-31T23:59:59.9999999Z'
+        group:
+          $id: '71'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '70'
+          fixed: false
+          raw: getUtcUppercaseMaxDateTime
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '72'
+            body:
+              $id: '73'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '74'
+                fixed: false
+                raw: DateTime
+            isNullable: true
+        returnType:
+          $id: '76'
+          body:
+            $ref: '73'
+          isNullable: true
+        serializedName: datetime_getUtcUppercaseMaxDateTime
+        url: /datetime/max/utc/uppercase
+      - $id: '77'
+        defaultResponse:
+          $id: '87'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Put max datetime value with positive numoffset
+          9999-12-31t23:59:59.9999999+14:00
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '85'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '84'
+          fixed: false
+          raw: putLocalPositiveOffsetMaxDateTime
+        parameters:
+          - $id: '78'
+            collectionFormat: none
+            defaultValue:
+              $id: '79'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '80'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: datetimeBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '82'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '83'
+                fixed: false
+                raw: DateTime
+            name:
+              $id: '81'
+              fixed: false
+              raw: datetimeBody
+            serializedName: datetimeBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '86'
+            isNullable: true
+        returnType:
+          $id: '88'
+          isNullable: true
+        serializedName: datetime_putLocalPositiveOffsetMaxDateTime
+        url: /datetime/max/localpositiveoffset
+      - $id: '89'
+        defaultResponse:
+          $id: '95'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get max datetime value with positive num offset
+          9999-12-31t23:59:59.9999999+14:00
+        group:
+          $id: '91'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '90'
+          fixed: false
+          raw: getLocalPositiveOffsetLowercaseMaxDateTime
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '92'
+            body:
+              $id: '93'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '94'
+                fixed: false
+                raw: DateTime
+            isNullable: true
+        returnType:
+          $id: '96'
+          body:
+            $ref: '93'
+          isNullable: true
+        serializedName: datetime_getLocalPositiveOffsetLowercaseMaxDateTime
+        url: /datetime/max/localpositiveoffset/lowercase
+      - $id: '97'
+        defaultResponse:
+          $id: '103'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get max datetime value with positive num offset
+          9999-12-31T23:59:59.9999999+14:00
+        group:
+          $id: '99'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '98'
+          fixed: false
+          raw: getLocalPositiveOffsetUppercaseMaxDateTime
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '100'
+            body:
+              $id: '101'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '102'
+                fixed: false
+                raw: DateTime
+            isNullable: true
+        returnType:
+          $id: '104'
+          body:
+            $ref: '101'
+          isNullable: true
+        serializedName: datetime_getLocalPositiveOffsetUppercaseMaxDateTime
+        url: /datetime/max/localpositiveoffset/uppercase
+      - $id: '105'
+        defaultResponse:
+          $id: '115'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Put max datetime value with positive numoffset
+          9999-12-31t23:59:59.9999999-14:00
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '113'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '112'
+          fixed: false
+          raw: putLocalNegativeOffsetMaxDateTime
+        parameters:
+          - $id: '106'
+            collectionFormat: none
+            defaultValue:
+              $id: '107'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '108'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: datetimeBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '110'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '111'
+                fixed: false
+                raw: DateTime
+            name:
+              $id: '109'
+              fixed: false
+              raw: datetimeBody
+            serializedName: datetimeBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '114'
+            isNullable: true
+        returnType:
+          $id: '116'
+          isNullable: true
+        serializedName: datetime_putLocalNegativeOffsetMaxDateTime
+        url: /datetime/max/localnegativeoffset
+      - $id: '117'
+        defaultResponse:
+          $id: '123'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get max datetime value with positive num offset
+          9999-12-31T23:59:59.9999999-14:00
+        group:
+          $id: '119'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '118'
+          fixed: false
+          raw: getLocalNegativeOffsetUppercaseMaxDateTime
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '120'
+            body:
+              $id: '121'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '122'
+                fixed: false
+                raw: DateTime
+            isNullable: true
+        returnType:
+          $id: '124'
+          body:
+            $ref: '121'
+          isNullable: true
+        serializedName: datetime_getLocalNegativeOffsetUppercaseMaxDateTime
+        url: /datetime/max/localnegativeoffset/uppercase
+      - $id: '125'
+        defaultResponse:
+          $id: '131'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get max datetime value with positive num offset
+          9999-12-31t23:59:59.9999999-14:00
+        group:
+          $id: '127'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '126'
+          fixed: false
+          raw: getLocalNegativeOffsetLowercaseMaxDateTime
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '128'
+            body:
+              $id: '129'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '130'
+                fixed: false
+                raw: DateTime
+            isNullable: true
+        returnType:
+          $id: '132'
+          body:
+            $ref: '129'
+          isNullable: true
+        serializedName: datetime_getLocalNegativeOffsetLowercaseMaxDateTime
+        url: /datetime/max/localnegativeoffset/lowercase
+      - $id: '133'
+        defaultResponse:
+          $id: '143'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: 'Put min datetime value 0001-01-01T00:00:00Z'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '141'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '140'
+          fixed: false
+          raw: putUtcMinDateTime
+        parameters:
+          - $id: '134'
+            collectionFormat: none
+            defaultValue:
+              $id: '135'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '136'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: datetimeBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '138'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '139'
+                fixed: false
+                raw: DateTime
+            name:
+              $id: '137'
+              fixed: false
+              raw: datetimeBody
+            serializedName: datetimeBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '142'
+            isNullable: true
+        returnType:
+          $id: '144'
+          isNullable: true
+        serializedName: datetime_putUtcMinDateTime
+        url: /datetime/min/utc
+      - $id: '145'
+        defaultResponse:
+          $id: '151'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: 'Get min datetime value 0001-01-01T00:00:00Z'
+        group:
+          $id: '147'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '146'
+          fixed: false
+          raw: getUtcMinDateTime
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '148'
+            body:
+              $id: '149'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '150'
+                fixed: false
+                raw: DateTime
+            isNullable: true
+        returnType:
+          $id: '152'
+          body:
+            $ref: '149'
+          isNullable: true
+        serializedName: datetime_getUtcMinDateTime
+        url: /datetime/min/utc
+      - $id: '153'
+        defaultResponse:
+          $id: '163'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: 'Put min datetime value 0001-01-01T00:00:00+14:00'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '161'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '160'
+          fixed: false
+          raw: putLocalPositiveOffsetMinDateTime
+        parameters:
+          - $id: '154'
+            collectionFormat: none
+            defaultValue:
+              $id: '155'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '156'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: datetimeBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '158'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '159'
+                fixed: false
+                raw: DateTime
+            name:
+              $id: '157'
+              fixed: false
+              raw: datetimeBody
+            serializedName: datetimeBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '162'
+            isNullable: true
+        returnType:
+          $id: '164'
+          isNullable: true
+        serializedName: datetime_putLocalPositiveOffsetMinDateTime
+        url: /datetime/min/localpositiveoffset
+      - $id: '165'
+        defaultResponse:
+          $id: '171'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: 'Get min datetime value 0001-01-01T00:00:00+14:00'
+        group:
+          $id: '167'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '166'
+          fixed: false
+          raw: getLocalPositiveOffsetMinDateTime
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '168'
+            body:
+              $id: '169'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '170'
+                fixed: false
+                raw: DateTime
+            isNullable: true
+        returnType:
+          $id: '172'
+          body:
+            $ref: '169'
+          isNullable: true
+        serializedName: datetime_getLocalPositiveOffsetMinDateTime
+        url: /datetime/min/localpositiveoffset
+      - $id: '173'
+        defaultResponse:
+          $id: '183'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: 'Put min datetime value 0001-01-01T00:00:00-14:00'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '181'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '180'
+          fixed: false
+          raw: putLocalNegativeOffsetMinDateTime
+        parameters:
+          - $id: '174'
+            collectionFormat: none
+            defaultValue:
+              $id: '175'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '176'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: datetimeBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '178'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '179'
+                fixed: false
+                raw: DateTime
+            name:
+              $id: '177'
+              fixed: false
+              raw: datetimeBody
+            serializedName: datetimeBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '182'
+            isNullable: true
+        returnType:
+          $id: '184'
+          isNullable: true
+        serializedName: datetime_putLocalNegativeOffsetMinDateTime
+        url: /datetime/min/localnegativeoffset
+      - $id: '185'
+        defaultResponse:
+          $id: '191'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: 'Get min datetime value 0001-01-01T00:00:00-14:00'
+        group:
+          $id: '187'
+          fixed: false
+          raw: datetime
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '186'
+          fixed: false
+          raw: getLocalNegativeOffsetMinDateTime
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '188'
+            body:
+              $id: '189'
+              $type: PrimaryType
+              deprecated: false
+              format: date-time
+              knownPrimaryType: dateTime
+              name:
+                $id: '190'
+                fixed: false
+                raw: DateTime
+            isNullable: true
+        returnType:
+          $id: '192'
+          body:
+            $ref: '189'
+          isNullable: true
+        serializedName: datetime_getLocalNegativeOffsetMinDateTime
+        url: /datetime/min/localnegativeoffset
+    name:
+      $id: '193'
+      fixed: false
+      raw: Datetime
+    nameForProperty: Datetime
+    typeName:
+      $id: '194'
+      fixed: false

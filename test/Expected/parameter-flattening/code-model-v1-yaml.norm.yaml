@@ -1,0 +1,146 @@
+---
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+codeGenExtensions:
+  ft: '2'
+documentation: Resource Flattening for AutoRest
+modelTypes:
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: AvailabilitySetUpdateParameters
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: A description about the set of tags.
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+        name:
+          fixed: false
+          raw: tags
+        realPath:
+          - tags
+        serializedName: tags
+        summary: A set of tags.
+    serializedName: AvailabilitySetUpdateParameters
+modelsName: Models
+name: AutoRestParameterFlattening
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          isNullable: true
+        deprecated: false
+        description: Updates the tags for an availability set.
+        extensions:
+          x-ms-requestBody-index: '2'
+        group:
+          fixed: false
+          raw: AvailabilitySets
+        hidden: false
+        httpMethod: patch
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: Update
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: The name of the resource group.
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: resourceGroupName
+            serializedName: resourceGroupName
+          - collectionFormat: none
+            constraints:
+              MaxLength: '80'
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: The name of the storage availability set.
+            extensions:
+              x-ms-client-name: avset
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: availabilitySetName
+            serializedName: availabilitySetName
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: The tags.
+            extensions:
+              x-ms-requestBody-name: tags
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType: *ref_0
+            name:
+              fixed: false
+              raw: tags
+            serializedName: tags
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: AvailabilitySets_Update
+        url: '/parameterFlattening/{resourceGroupName}/{availabilitySetName}'
+    name:
+      fixed: false
+      raw: AvailabilitySets
+    nameForProperty: AvailabilitySets
+    typeName:
+      fixed: false

@@ -155,7 +155,7 @@ namespace AutoRest.Modeler
                     }
                 }
             }
-            
+            ProcessForwardToMethods(methods);
             CodeModel.AddRange(methods);
             
             // What operation returns it decides whether an object is to be modeled as a 
@@ -178,6 +178,40 @@ namespace AutoRest.Modeler
 
             ProcessParameterizedHost();
             return CodeModel;
+        }
+
+        internal static void ProcessForwardToMethods(IEnumerable<Method> allMethods)
+        {
+            foreach (var method in allMethods)
+            {
+                if (method.ForwardTo?.SerializedName != null)
+                {
+                    // resolve target method
+                    var target = allMethods.FirstOrDefault(m => m.SerializedName == method.ForwardTo.SerializedName);
+                    if (target == null)
+                    {
+                        throw new CodeGenerationException($"Cannot forward to '{method.ForwardTo.SerializedName}'. No method with that name found.");
+                    }
+                    method.ForwardTo = target;
+                }
+            }
+        }
+
+        internal static void ProcessForwardToProperties(IEnumerable<Property> properties)
+        {
+            foreach (var prop in properties)
+            {
+                if (prop.ForwardTo?.SerializedName != null)
+                {
+                    // resolve target property
+                    var target = properties.FirstOrDefault(m => m.SerializedName == prop.ForwardTo.SerializedName);
+                    if (target == null)
+                    {
+                        throw new CodeGenerationException($"Cannot forward to '{prop.ForwardTo.SerializedName}'. No property with that name found.");
+                    }
+                    prop.ForwardTo = target;
+                }
+            }
         }
 
         private void UpdateSettings()
@@ -220,7 +254,11 @@ namespace AutoRest.Modeler
                 ? null                                                  // ...but that mocks with our multi-api-version treatment of inlining the api-version
                 : ServiceDefinition.Info.Version;
             CodeModel.Documentation = ServiceDefinition.Info.Description;
-            CodeModel.BaseUrl = ServiceDefinition.Servers[0].Url.TrimEnd('/');
+            CodeModel.BaseUrl = ServiceDefinition.Servers.FirstOrDefault()?.Url?.TrimEnd('/');
+            if (string.IsNullOrEmpty(CodeModel.BaseUrl))
+            {
+                CodeModel.BaseUrl = "http://localhost";
+            }
 
             // Copy extensions
             ServiceDefinition.Info?.CodeGenerationSettings?.Extensions.ForEach(extention => CodeModel.CodeGenExtensions.AddOrSet(extention.Key, extention.Value));

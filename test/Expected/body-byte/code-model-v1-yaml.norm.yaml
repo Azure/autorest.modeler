@@ -1,0 +1,257 @@
+---
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest Swagger BAT
+errorTypes:
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelTypes:
+  - *ref_0
+modelsName: Models
+name: AutoRestSwaggerBATByteService
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get null byte value
+        group:
+          fixed: false
+          raw: byte
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_1
+              $type: PrimaryType
+              deprecated: false
+              format: byte
+              knownPrimaryType: byteArray
+              name:
+                fixed: false
+                raw: ByteArray
+            isNullable: true
+        returnType:
+          body: *ref_1
+          isNullable: true
+        serializedName: byte_getNull
+        url: /byte/null
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get empty byte value ''
+        group:
+          fixed: false
+          raw: byte
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_2
+              $type: PrimaryType
+              deprecated: false
+              format: byte
+              knownPrimaryType: byteArray
+              name:
+                fixed: false
+                raw: ByteArray
+            isNullable: true
+        returnType:
+          body: *ref_2
+          isNullable: true
+        serializedName: byte_getEmpty
+        url: /byte/empty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get non-ascii byte string hex(FF FE FD FC FB FA F9 F8 F7 F6)
+        group:
+          fixed: false
+          raw: byte
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNonAscii
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_3
+              $type: PrimaryType
+              deprecated: false
+              format: byte
+              knownPrimaryType: byteArray
+              name:
+                fixed: false
+                raw: ByteArray
+            isNullable: true
+        returnType:
+          body: *ref_3
+          isNullable: true
+        serializedName: byte_getNonAscii
+        url: /byte/nonAscii
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Put non-ascii byte string hex(FF FE FD FC FB FA F9 F8 F7 F6)
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: byte
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putNonAscii
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                Base64-encoded non-ascii byte string hex(FF FE FD FC FB FA F9 F8
+                F7 F6)
+            extensions:
+              x-ms-requestBody-name: byteBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              format: byte
+              knownPrimaryType: byteArray
+              name:
+                fixed: false
+                raw: ByteArray
+            name:
+              fixed: false
+              raw: byteBody
+            serializedName: byteBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: byte_putNonAscii
+        url: /byte/nonAscii
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get invalid byte value '':::SWAGGER::::'''
+        group:
+          fixed: false
+          raw: byte
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getInvalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_4
+              $type: PrimaryType
+              deprecated: false
+              format: byte
+              knownPrimaryType: byteArray
+              name:
+                fixed: false
+                raw: ByteArray
+            isNullable: true
+        returnType:
+          body: *ref_4
+          isNullable: true
+        serializedName: byte_getInvalid
+        url: /byte/invalid
+    name:
+      fixed: false
+      raw: Byte
+    nameForProperty: Byte
+    typeName:
+      fixed: false

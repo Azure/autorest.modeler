@@ -1,0 +1,115 @@
+---
+$id: '1'
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+modelsName: Models
+name: AutoRestHeadTestService
+namespace: ''
+operations:
+  - $id: '2'
+    methods:
+      - $id: '3'
+        defaultResponse:
+          $id: '8'
+          isNullable: true
+        deprecated: false
+        description: Return 200 status code if successful
+        group:
+          $id: '5'
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          $id: '4'
+          fixed: false
+          raw: head200
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NotFound:
+            $id: '7'
+            isNullable: true
+          OK:
+            $id: '6'
+            isNullable: true
+        returnType:
+          $id: '9'
+          isNullable: true
+        serializedName: httpSuccess_head200
+        url: /http/success/200
+      - $id: '10'
+        defaultResponse:
+          $id: '15'
+          isNullable: true
+        deprecated: false
+        description: Return 204 status code if successful
+        group:
+          $id: '12'
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          $id: '11'
+          fixed: false
+          raw: head204
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NoContent:
+            $id: '13'
+            isNullable: true
+          NotFound:
+            $id: '14'
+            isNullable: true
+        returnType:
+          $id: '16'
+          isNullable: true
+        serializedName: httpSuccess_head204
+        url: /http/success/204
+      - $id: '17'
+        defaultResponse:
+          $id: '22'
+          isNullable: true
+        deprecated: false
+        description: Return 404 status code if successful
+        group:
+          $id: '19'
+          fixed: false
+          raw: httpSuccess
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          $id: '18'
+          fixed: false
+          raw: head404
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NoContent:
+            $id: '20'
+            isNullable: true
+          NotFound:
+            $id: '21'
+            isNullable: true
+        returnType:
+          $id: '23'
+          isNullable: true
+        serializedName: httpSuccess_head404
+        url: /http/success/404
+    name:
+      $id: '24'
+      fixed: false
+      raw: HttpSuccess
+    nameForProperty: HttpSuccess
+    typeName:
+      $id: '25'
+      fixed: false

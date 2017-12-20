@@ -1,0 +1,218 @@
+---
+$id: '1'
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest Swagger BAT
+errorTypes:
+  - $ref: '2'
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '15'
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '3'
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '8'
+            fixed: false
+            raw: Int
+        name:
+          $id: '6'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '9'
+        collectionFormat: none
+        defaultValue:
+          $id: '10'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '11'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '13'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '14'
+            fixed: false
+            raw: String
+        name:
+          $id: '12'
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelsName: Models
+name: AutoRestSwaggerBATFileService
+namespace: ''
+operations:
+  - $id: '16'
+    methods:
+      - $id: '17'
+        defaultResponse:
+          $id: '23'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get file
+        group:
+          $id: '19'
+          fixed: false
+          raw: files
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '18'
+          fixed: false
+          raw: GetFile
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - image/png
+          - application/json
+        responses:
+          OK:
+            $id: '20'
+            body:
+              $id: '21'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: stream
+              name:
+                $id: '22'
+                fixed: false
+                raw: Stream
+            isNullable: true
+        returnType:
+          $id: '24'
+          body:
+            $ref: '21'
+          isNullable: true
+        serializedName: files_GetFile
+        url: /files/stream/nonempty
+      - $id: '25'
+        defaultResponse:
+          $id: '31'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get a large file
+        group:
+          $id: '27'
+          fixed: false
+          raw: files
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '26'
+          fixed: false
+          raw: GetFileLarge
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - image/png
+          - application/json
+        responses:
+          OK:
+            $id: '28'
+            body:
+              $id: '29'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: stream
+              name:
+                $id: '30'
+                fixed: false
+                raw: Stream
+            isNullable: true
+        returnType:
+          $id: '32'
+          body:
+            $ref: '29'
+          isNullable: true
+        serializedName: files_GetFileLarge
+        url: /files/stream/verylarge
+      - $id: '33'
+        defaultResponse:
+          $id: '39'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get empty file
+        group:
+          $id: '35'
+          fixed: false
+          raw: files
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '34'
+          fixed: false
+          raw: GetEmptyFile
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - image/png
+          - application/json
+        responses:
+          OK:
+            $id: '36'
+            body:
+              $id: '37'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: stream
+              name:
+                $id: '38'
+                fixed: false
+                raw: Stream
+            isNullable: true
+        returnType:
+          $id: '40'
+          body:
+            $ref: '37'
+          isNullable: true
+        serializedName: files_GetEmptyFile
+        url: /files/stream/empty
+    name:
+      $id: '41'
+      fixed: false
+      raw: Files
+    nameForProperty: Files
+    typeName:
+      $id: '42'
+      fixed: false

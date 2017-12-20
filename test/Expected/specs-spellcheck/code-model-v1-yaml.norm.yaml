@@ -1,0 +1,1371 @@
+---
+apiVersion: '1.0'
+baseUrl: 'https://api.cognitive.microsoft.com/bing/v7.0'
+documentation: >-
+  The Spell Check API - V7 lets you check a text string for spelling and grammar
+  errors.
+enumTypes:
+  - &ref_2
+    $type: EnumType
+    deprecated: false
+    modelAsExtensible: false
+    modelAsString: true
+    name:
+      fixed: false
+      raw: ErrorType
+    underlyingType:
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: UnknownToken
+        serializedName: UnknownToken
+      - name: RepeatedToken
+        serializedName: RepeatedToken
+  - &ref_0
+    $type: EnumType
+    deprecated: false
+    modelAsExtensible: false
+    modelAsString: true
+    name:
+      fixed: false
+      raw: ErrorCode
+    underlyingType:
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: None
+        serializedName: None
+      - name: ServerError
+        serializedName: ServerError
+      - name: InvalidRequest
+        serializedName: InvalidRequest
+      - name: RateLimitExceeded
+        serializedName: RateLimitExceeded
+      - name: InvalidAuthorization
+        serializedName: InvalidAuthorization
+      - name: InsufficientAuthorization
+        serializedName: InsufficientAuthorization
+  - &ref_1
+    $type: EnumType
+    deprecated: false
+    modelAsExtensible: false
+    modelAsString: true
+    name:
+      fixed: false
+      raw: ErrorSubCode
+    underlyingType:
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: UnexpectedError
+        serializedName: UnexpectedError
+      - name: ResourceError
+        serializedName: ResourceError
+      - name: NotImplemented
+        serializedName: NotImplemented
+      - name: ParameterMissing
+        serializedName: ParameterMissing
+      - name: ParameterInvalidValue
+        serializedName: ParameterInvalidValue
+      - name: HttpNotAllowed
+        serializedName: HttpNotAllowed
+      - name: Blocked
+        serializedName: Blocked
+      - name: AuthorizationMissing
+        serializedName: AuthorizationMissing
+      - name: AuthorizationRedundancy
+        serializedName: AuthorizationRedundancy
+      - name: AuthorizationDisabled
+        serializedName: AuthorizationDisabled
+      - name: AuthorizationExpired
+        serializedName: AuthorizationExpired
+  - &ref_11
+    $type: EnumType
+    deprecated: false
+    modelAsExtensible: false
+    modelAsString: true
+    name:
+      fixed: false
+      raw: ActionType
+    underlyingType:
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: Edit
+        serializedName: Edit
+      - name: Load
+        serializedName: Load
+errorTypes:
+  - &ref_9
+    $type: CompositeType
+    baseModelType: &ref_4
+      $type: CompositeType
+      baseModelType: &ref_7
+        $type: CompositeType
+        baseModelType: &ref_10
+          $type: CompositeType
+          containsConstantProperties: false
+          deprecated: false
+          name:
+            fixed: false
+            raw: ResponseBase
+          polymorphicDiscriminator: _type
+          serializedName: ResponseBase
+        containsConstantProperties: false
+        deprecated: false
+        documentation: Defines the identity of a resource.
+        name:
+          fixed: false
+          raw: Identifiable
+        properties:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: A String identifier.
+            isConstant: false
+            isReadOnly: true
+            isRequired: false
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: id
+            realPath:
+              - id
+            serializedName: id
+        serializedName: Identifiable
+      containsConstantProperties: false
+      deprecated: false
+      documentation: >-
+        Defines a response. All schemas that could be returned at the root of a
+        response should inherit from this
+      name:
+        fixed: false
+        raw: Response
+      serializedName: Response
+    containsConstantProperties: false
+    deprecated: false
+    documentation: The top-level response that represents a failed request.
+    name:
+      fixed: false
+      raw: ErrorResponse
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: A list of errors that describe the reasons why the request failed.
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $type: SequenceType
+          deprecated: false
+          elementType: &ref_8
+            $type: CompositeType
+            containsConstantProperties: false
+            deprecated: false
+            documentation: Defines the error that occurred.
+            name:
+              fixed: false
+              raw: Error
+            properties:
+              - collectionFormat: none
+                defaultValue:
+                  fixed: false
+                  raw: None
+                deprecated: false
+                documentation:
+                  fixed: false
+                  raw: The error code that identifies the category of error.
+                extensions:
+                  x-ms-enum:
+                    modelAsString: true
+                    name: ErrorCode
+                isConstant: false
+                isReadOnly: false
+                isRequired: true
+                modelType: *ref_0
+                name:
+                  fixed: false
+                  raw: code
+                realPath:
+                  - code
+                serializedName: code
+              - collectionFormat: none
+                defaultValue:
+                  fixed: false
+                deprecated: false
+                documentation:
+                  fixed: false
+                  raw: The error code that further helps to identify the error.
+                extensions:
+                  x-ms-enum:
+                    modelAsString: true
+                    name: ErrorSubCode
+                isConstant: false
+                isReadOnly: true
+                isRequired: false
+                modelType: *ref_1
+                name:
+                  fixed: false
+                  raw: subCode
+                realPath:
+                  - subCode
+                serializedName: subCode
+              - collectionFormat: none
+                defaultValue:
+                  fixed: false
+                deprecated: false
+                documentation:
+                  fixed: false
+                  raw: A description of the error.
+                isConstant: false
+                isReadOnly: false
+                isRequired: true
+                modelType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+                name:
+                  fixed: false
+                  raw: message
+                realPath:
+                  - message
+                serializedName: message
+              - collectionFormat: none
+                defaultValue:
+                  fixed: false
+                deprecated: false
+                documentation:
+                  fixed: false
+                  raw: >-
+                    A description that provides additional information about the
+                    error.
+                isConstant: false
+                isReadOnly: true
+                isRequired: false
+                modelType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+                name:
+                  fixed: false
+                  raw: moreDetails
+                realPath:
+                  - moreDetails
+                serializedName: moreDetails
+              - collectionFormat: none
+                defaultValue:
+                  fixed: false
+                deprecated: false
+                documentation:
+                  fixed: false
+                  raw: The parameter in the request that caused the error.
+                isConstant: false
+                isReadOnly: true
+                isRequired: false
+                modelType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+                name:
+                  fixed: false
+                  raw: parameter
+                realPath:
+                  - parameter
+                serializedName: parameter
+              - collectionFormat: none
+                defaultValue:
+                  fixed: false
+                deprecated: false
+                documentation:
+                  fixed: false
+                  raw: The parameter's value in the request that was not valid.
+                isConstant: false
+                isReadOnly: true
+                isRequired: false
+                modelType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+                name:
+                  fixed: false
+                  raw: value
+                realPath:
+                  - value
+                serializedName: value
+            serializedName: Error
+          name:
+            fixed: false
+        name:
+          fixed: false
+          raw: errors
+        realPath:
+          - errors
+        serializedName: errors
+    serializedName: ErrorResponse
+extensions:
+  security:
+    - apiKeyHeader: []
+modelTypes:
+  - &ref_3
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    extensions:
+      x-ms-discriminator-value: Spelling/TokenSuggestion
+    name:
+      fixed: false
+      raw: SpellingTokenSuggestion
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: suggestion
+        realPath:
+          - suggestion
+        serializedName: suggestion
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: double
+          knownPrimaryType: double
+          name:
+            fixed: false
+            raw: Double
+        name:
+          fixed: false
+          raw: score
+        realPath:
+          - score
+        serializedName: score
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: pingUrlSuffix
+        realPath:
+          - pingUrlSuffix
+        serializedName: pingUrlSuffix
+    serializedName: Spelling/TokenSuggestion
+  - &ref_5
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    extensions:
+      x-ms-discriminator-value: Spelling/FlaggedToken
+    name:
+      fixed: false
+      raw: SpellingFlaggedToken
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: offset
+        realPath:
+          - offset
+        serializedName: offset
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: token
+        realPath:
+          - token
+        serializedName: token
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+          raw: UnknownToken
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-ms-enum:
+            modelAsString: true
+            name: ErrorType
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType: *ref_2
+        name:
+          fixed: false
+          raw: type
+        realPath:
+          - type
+        serializedName: type
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $type: SequenceType
+          deprecated: false
+          elementType: *ref_3
+          name:
+            fixed: false
+        name:
+          fixed: false
+          raw: suggestions
+        realPath:
+          - suggestions
+        serializedName: suggestions
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: true
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: pingUrlSuffix
+        realPath:
+          - pingUrlSuffix
+        serializedName: pingUrlSuffix
+    serializedName: Spelling/FlaggedToken
+  - &ref_12
+    $type: CompositeType
+    baseModelType: &ref_6
+      $type: CompositeType
+      baseModelType: *ref_4
+      containsConstantProperties: false
+      deprecated: false
+      name:
+        fixed: false
+        raw: Answer
+      serializedName: Answer
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: SpellCheck
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $type: SequenceType
+          deprecated: false
+          elementType: *ref_5
+          name:
+            fixed: false
+        name:
+          fixed: false
+          raw: flaggedTokens
+        realPath:
+          - flaggedTokens
+        serializedName: flaggedTokens
+    serializedName: SpellCheck
+  - *ref_6
+  - *ref_4
+  - *ref_7
+  - *ref_8
+  - *ref_9
+  - *ref_10
+modelsName: Models
+name: SpellCheckAPI
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          body: *ref_9
+          isNullable: true
+        deprecated: false
+        extensions:
+          x-ms-examples:
+            Successful Proof Mode query:
+              parameters:
+                Accept: application/json
+                Accept-language: en-gb
+                ActionType: Edit
+                CountryCode: US
+                Ocp-Apim-Subscription-Key: '{API key}'
+                PostContextText: paper
+                Pragma: no-cache
+                PreContextText: daily
+                SetLang: en
+                Text: nws
+                User-Agent: '{User Agent}'
+                X-BingApis-SDK: 'true'
+                X-MS-EdgeClientIP: '{IP AddresS}'
+                mkt: en-us
+              responses:
+                '200':
+                  body:
+                    _type: SpellCheck
+                    flaggedTokens:
+                      - offset: '0'
+                        suggestions:
+                          - score: '0.846818946208462'
+                            suggestion: news
+                        token: nws
+                        type: UnknownToken
+                  headers: {}
+            Successful query:
+              parameters:
+                Mode: Spell
+                Ocp-Apim-Subscription-Key: '{API key}'
+                Text: micosoft
+                X-BingApis-SDK: 'true'
+                mkt: en-US
+              responses:
+                '200':
+                  body:
+                    _type: SpellCheck
+                    flaggedTokens:
+                      - offset: '0'
+                        suggestions:
+                          - score: '1'
+                            suggestion: microsoft
+                        token: micosoft
+                        type: UnknownToken
+                  headers: {}
+          x-ms-requestBody-index: '20'
+        group:
+          fixed: false
+          raw: ''
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: SpellChecker
+        parameters:
+          - clientProperty: &ref_13
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+                raw: 'true'
+              deprecated: false
+              documentation:
+                fixed: false
+                raw: Activate swagger compliance
+              extensions:
+                x-ms-enum:
+                  modelAsString: true
+                  name: XBingApisSDK
+                x-ms-parameter-location: method
+              isConstant: true
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: X-BingApis-SDK
+              realPath:
+                - X-BingApis-SDK
+              serializedName: X-BingApis-SDK
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+              raw: 'true'
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Activate swagger compliance
+            extensions:
+              x-ms-enum:
+                modelAsString: true
+                name: XBingApisSDK
+              x-ms-parameter-location: method
+            isConstant: true
+            isRequired: true
+            location: header
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: X-BingApis-SDK
+            serializedName: X-BingApis-SDK
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                A comma-delimited list of one or more languages to use for user
+                interface strings. The list is in decreasing order of
+                preference. For additional information, including expected
+                format, see
+                [RFC2616](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
+                This header and the setLang query parameter are mutually
+                exclusive; do not specify both. If you set this header, you must
+                also specify the cc query parameter. Bing will use the first
+                supported language it finds from the list, and combine that
+                language with the cc parameter value to determine the market to
+                return results for. If the list does not include a supported
+                language, Bing will find the closest language and market that
+                supports the request, and may use an aggregated or default
+                market for the results instead of a specified one. You should
+                use this header and the cc query parameter only if you specify
+                multiple languages; otherwise, you should use the mkt and
+                setLang query parameters. A user interface string is a string
+                that's used as a label in a user interface. There are very few
+                user interface strings in the JSON response objects. Any links
+                in the response objects to Bing.com properties will apply the
+                specified language.
+            extensions:
+              x-ms-client-name: AcceptLanguage
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: Accept-Language
+            serializedName: Accept-Language
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                By default, Bing returns cached content, if available. To
+                prevent Bing from returning cached content, set the Pragma
+                header to no-cache (for example, Pragma: no-cache).
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: Pragma
+            serializedName: Pragma
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                The user agent originating the request. Bing uses the user agent
+                to provide mobile users with an optimized experience. Although
+                optional, you are strongly encouraged to always specify this
+                header. The user-agent should be the same string that any
+                commonly used browser would send. For information about user
+                agents, see [RFC
+                2616](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
+            extensions:
+              x-ms-client-name: UserAgent
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: User-Agent
+            serializedName: User-Agent
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                Bing uses this header to provide users with consistent behavior
+                across Bing API calls. Bing often flights new features and
+                improvements, and it uses the client ID as a key for assigning
+                traffic on different flights. If you do not use the same client
+                ID for a user across multiple requests, then Bing may assign the
+                user to multiple conflicting flights. Being assigned to multiple
+                conflicting flights can lead to an inconsistent user experience.
+                For example, if the second request has a different flight
+                assignment than the first, the experience may be unexpected.
+                Also, Bing can use the client ID to tailor web results to that
+                client ID’s search history, providing a richer experience for
+                the user. Bing also uses this header to help improve result
+                rankings by analyzing the activity generated by a client ID. The
+                relevance improvements help with better quality of results
+                delivered by Bing APIs and in turn enables higher click-through
+                rates for the API consumer. IMPORTANT: Although optional, you
+                should consider this header required. Persisting the client ID
+                across multiple requests for the same end user and device
+                combination enables 1) the API consumer to receive a consistent
+                user experience, and 2) higher click-through rates via better
+                quality of results from the Bing APIs. Each user that uses your
+                application on the device must have a unique, Bing generated
+                client ID. If you do not include this header in the request,
+                Bing generates an ID and returns it in the X-MSEdge-ClientID
+                response header. The only time that you should NOT include this
+                header in a request is the first time the user uses your app on
+                that device. Use the client ID for each Bing API request that
+                your app makes for this user on the device. Persist the client
+                ID. To persist the ID in a browser app, use a persistent HTTP
+                cookie to ensure the ID is used across all sessions. Do not use
+                a session cookie. For other apps such as mobile apps, use the
+                device's persistent storage to persist the ID. The next time the
+                user uses your app on that device, get the client ID that you
+                persisted. Bing responses may or may not include this header. If
+                the response includes this header, capture the client ID and use
+                it for all subsequent Bing requests for the user on that device.
+                If you include the X-MSEdge-ClientID, you must not include
+                cookies in the request.
+            extensions:
+              x-ms-client-name: ClientId
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: X-MSEdge-ClientID
+            serializedName: X-MSEdge-ClientID
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                The IPv4 or IPv6 address of the client device. The IP address is
+                used to discover the user's location. Bing uses the location
+                information to determine safe search behavior. Although
+                optional, you are encouraged to always specify this header and
+                the X-Search-Location header. Do not obfuscate the address (for
+                example, by changing the last octet to 0). Obfuscating the
+                address results in the location not being anywhere near the
+                device's actual location, which may result in Bing serving
+                erroneous results.
+            extensions:
+              x-ms-client-name: ClientIp
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: X-MSEdge-ClientIP
+            serializedName: X-MSEdge-ClientIP
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                A semicolon-delimited list of key/value pairs that describe the
+                client's geographical location. Bing uses the location
+                information to determine safe search behavior and to return
+                relevant local content. Specify the key/value pair as
+                <key>:<value>. The following are the keys that you use to
+                specify the user's location. lat (required): The latitude of the
+                client's location, in degrees. The latitude must be greater than
+                or equal to -90.0 and less than or equal to +90.0. Negative
+                values indicate southern latitudes and positive values indicate
+                northern latitudes. long (required): The longitude of the
+                client's location, in degrees. The longitude must be greater
+                than or equal to -180.0 and less than or equal to +180.0.
+                Negative values indicate western longitudes and positive values
+                indicate eastern longitudes. re (required): The radius, in
+                meters, which specifies the horizontal accuracy of the
+                coordinates. Pass the value returned by the device's location
+                service. Typical values might be 22m for GPS/Wi-Fi, 380m for
+                cell tower triangulation, and 18,000m for reverse IP lookup. ts
+                (optional): The UTC UNIX timestamp of when the client was at the
+                location. (The UNIX timestamp is the number of seconds since
+                January 1, 1970.) head (optional): The client's relative heading
+                or direction of travel. Specify the direction of travel as
+                degrees from 0 through 360, counting clockwise relative to true
+                north. Specify this key only if the sp key is nonzero. sp
+                (optional): The horizontal velocity (speed), in meters per
+                second, that the client device is traveling. alt (optional): The
+                altitude of the client device, in meters. are (optional): The
+                radius, in meters, that specifies the vertical accuracy of the
+                coordinates. Specify this key only if you specify the alt key.
+                Although many of the keys are optional, the more information
+                that you provide, the more accurate the location results are.
+                Although optional, you are encouraged to always specify the
+                user's geographical location. Providing the location is
+                especially important if the client's IP address does not
+                accurately reflect the user's physical location (for example, if
+                the client uses VPN). For optimal results, you should include
+                this header and the  X-Search-ClientIP header, but at a minimum,
+                you should include this header.
+            extensions:
+              x-ms-client-name: Location
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: X-Search-Location
+            serializedName: X-Search-Location
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                A string that's used by logging to determine whether the request
+                is coming from an interactive session or a page load. The
+                following are the possible values. 1) Edit—The request is from
+                an interactive session 2) Load—The request is from a page load
+            extensions:
+              x-ms-enum:
+                modelAsString: true
+                name: ActionType
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType: *ref_11
+            name:
+              fixed: false
+              raw: ActionType
+            serializedName: ActionType
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                The unique name of your app. The name must be known by Bing. Do
+                not include this parameter unless you have previously contacted
+                Bing to get a unique app name. To get a unique name, contact
+                your Bing Business Development manager.
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: AppName
+            serializedName: AppName
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                A 2-character country code of the country where the results come
+                from. This API supports only the United States market. If you
+                specify this query parameter, it must be set to us. If you set
+                this parameter, you must also specify the Accept-Language
+                header. Bing uses the first supported language it finds from the
+                languages list, and combine that language with the country code
+                that you specify to determine the market to return results for.
+                If the languages list does not include a supported language,
+                Bing finds the closest language and market that supports the
+                request, or it may use an aggregated or default market for the
+                results instead of a specified one. You should use this query
+                parameter and the Accept-Language query parameter only if you
+                specify multiple languages; otherwise, you should use the mkt
+                and setLang query parameters. This parameter and the mkt query
+                parameter are mutually exclusive—do not specify both.
+            extensions:
+              x-ms-client-name: CountryCode
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: cc
+            serializedName: cc
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                A unique name of the device that the request is being made from.
+                Generate a unique value for each device (the value is
+                unimportant). The service uses the ID to help debug issues and
+                improve the quality of corrections.
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: ClientMachineName
+            serializedName: ClientMachineName
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                A unique ID that identifies the document that the text belongs
+                to. Generate a unique value for each document (the value is
+                unimportant). The service uses the ID to help debug issues and
+                improve the quality of corrections.
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: DocId
+            serializedName: DocId
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                The market where the results come from. You are strongly
+                encouraged to always specify the market, if known. Specifying
+                the market helps Bing route the request and return an
+                appropriate and optimal response. This parameter and the cc
+                query parameter are mutually exclusive—do not specify both.
+            extensions:
+              x-ms-client-name: Market
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: mkt
+            serializedName: mkt
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                A unique ID that identifies this user session. Generate a unique
+                value for each user session (the value is unimportant). The
+                service uses the ID to help debug issues and improve the quality
+                of corrections
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: SessionId
+            serializedName: SessionId
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                The language to use for user interface strings. Specify the
+                language using the ISO 639-1 2-letter language code. For
+                example, the language code for English is EN. The default is EN
+                (English). Although optional, you should always specify the
+                language. Typically, you set setLang to the same language
+                specified by mkt unless the user wants the user interface
+                strings displayed in a different language. This parameter and
+                the Accept-Language header are mutually exclusive—do not specify
+                both. A user interface string is a string that's used as a label
+                in a user interface. There are few user interface strings in the
+                JSON response objects. Also, any links to Bing.com properties in
+                the response objects apply the specified language.
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: SetLang
+            serializedName: SetLang
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                A unique ID that identifies the user. Generate a unique value
+                for each user (the value is unimportant). The service uses the
+                ID to help debug issues and improve the quality of corrections.
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: UserId
+            serializedName: UserId
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                The type of spelling and grammar checks to perform. The
+                following are the possible values (the values are case
+                insensitive). The default is Proof. 1) Proof—Finds most spelling
+                and grammar mistakes. 2) Spell—Finds most spelling mistakes but
+                does not find some of the grammar errors that Proof catches (for
+                example, capitalization and repeated words)
+            isConstant: false
+            isRequired: false
+            location: formData
+            modelType:
+              $type: EnumType
+              deprecated: false
+              modelAsExtensible: false
+              modelAsString: true
+              name:
+                fixed: false
+                raw: ''
+              underlyingType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              values:
+                - name: Proof
+                  serializedName: Proof
+                - name: Spell
+                  serializedName: Spell
+            name:
+              fixed: false
+              raw: Mode
+            serializedName: Mode
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                A string that gives context to the text string. For example, the
+                text string petal is valid. However, if you set preContextText
+                to bike, the context changes and the text string becomes not
+                valid. In this case, the API suggests that you change petal to
+                pedal (as in bike pedal). This text is not checked for grammar
+                or spelling errors. The combined length of the text string,
+                preContextText string, and postContextText string may not exceed
+                10,000 characters. You may specify this parameter in the query
+                string of a GET request or in the body of a POST request.
+            isConstant: false
+            isRequired: false
+            location: formData
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: PreContextText
+            serializedName: PreContextText
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                A string that gives context to the text string. For example, the
+                text string read is valid. However, if you set postContextText
+                to carpet, the context changes and the text string becomes not
+                valid. In this case, the API suggests that you change read to
+                red (as in red carpet). This text is not checked for grammar or
+                spelling errors. The combined length of the text string,
+                preContextText string, and postContextText string may not exceed
+                10,000 characters. You may specify this parameter in the query
+                string of a GET request or in the body of a POST request.
+            isConstant: false
+            isRequired: false
+            location: formData
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: PostContextText
+            serializedName: PostContextText
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: >-
+                The text string to check for spelling and grammar errors. The
+                combined length of the text string, preContextText string, and
+                postContextText string may not exceed 10,000 characters. You may
+                specify this parameter in the query string of a GET request or
+                in the body of a POST request. Because of the query string
+                length limit, you'll typically use a POST request unless you're
+                checking only short strings.
+            isConstant: false
+            isRequired: true
+            location: formData
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: Text
+            serializedName: Text
+        requestContentType: application/x-www-form-urlencoded
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: *ref_12
+            isNullable: true
+        returnType:
+          body: *ref_12
+          isNullable: true
+        serializedName: SpellChecker
+        summary: >-
+          The Bing Spell Check API lets you perform contextual grammar and spell
+          checking. Bing has developed a web-based spell-checker that leverages
+          machine learning and statistical machine translation to dynamically
+          train a constantly evolving and highly contextual algorithm. The
+          spell-checker is based on a massive corpus of web searches and
+          documents.
+        url: /spellcheck
+    name:
+      fixed: false
+      raw: ''
+    nameForProperty: SpellCheckAPI
+    typeName:
+      fixed: false
+properties:
+  - *ref_13

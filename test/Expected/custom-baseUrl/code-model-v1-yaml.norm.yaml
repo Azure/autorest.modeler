@@ -1,0 +1,178 @@
+---
+apiVersion: 1.0.0
+baseUrl: 'http://{accountName}{host}'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+extensions:
+  x-ms-parameterized-host: true
+hostParametersBack:
+  - collectionFormat: none
+    defaultValue:
+      fixed: false
+      raw: ''
+    deprecated: false
+    documentation:
+      fixed: false
+      raw: Account Name
+    extensions:
+      hostParameter: true
+      x-ms-skip-url-encoding: true
+    isConstant: false
+    isRequired: true
+    location: path
+    modelType:
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    name:
+      fixed: false
+      raw: accountName
+    serializedName: accountName
+  - clientProperty: &ref_1
+      collectionFormat: none
+      defaultValue:
+        fixed: false
+        raw: host
+      deprecated: false
+      documentation:
+        fixed: false
+        raw: A string value that is used as a global part of the parameterized host
+      extensions:
+        x-ms-skip-url-encoding: true
+      isConstant: false
+      isReadOnly: false
+      isRequired: true
+      modelType:
+        $type: PrimaryType
+        deprecated: false
+        knownPrimaryType: string
+        name:
+          fixed: false
+          raw: String
+      name:
+        fixed: false
+        raw: host
+      realPath:
+        - host
+      serializedName: host
+    collectionFormat: none
+    defaultValue:
+      fixed: false
+      raw: host
+    deprecated: false
+    documentation:
+      fixed: false
+      raw: A string value that is used as a global part of the parameterized host
+    extensions:
+      hostParameter: true
+      x-ms-skip-url-encoding: true
+    isConstant: false
+    isRequired: true
+    location: path
+    modelType:
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    name:
+      fixed: false
+      raw: host
+    serializedName: host
+modelTypes:
+  - *ref_0
+modelsName: Models
+name: AutoRestParameterizedHostTestClient
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get a 200 to test a valid base uri
+        group:
+          fixed: false
+          raw: paths
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: paths_getEmpty
+        url: /customuri
+    name:
+      fixed: false
+      raw: Paths
+    nameForProperty: Paths
+    typeName:
+      fixed: false
+properties:
+  - *ref_1

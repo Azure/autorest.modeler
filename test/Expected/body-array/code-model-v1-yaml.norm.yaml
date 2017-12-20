@@ -1,0 +1,2913 @@
+---
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest Swagger BAT
+errorTypes:
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelTypes:
+  - &ref_35
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Product
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: integer
+        realPath:
+          - integer
+        serializedName: integer
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: string
+        realPath:
+          - string
+        serializedName: string
+    serializedName: Product
+  - *ref_0
+modelsName: Models
+name: AutoRestSwaggerBATArrayService
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get null array value
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_1
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  fixed: false
+                  raw: Int
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_1
+          isNullable: true
+        serializedName: array_getNull
+        url: /array/null
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get invalid array [1, 2, 3'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getInvalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_2
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  fixed: false
+                  raw: Int
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_2
+          isNullable: true
+        serializedName: array_getInvalid
+        url: /array/invalid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get empty array value []'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_3
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  fixed: false
+                  raw: Int
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_3
+          isNullable: true
+        serializedName: array_getEmpty
+        url: /array/empty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Set array value empty []'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putEmpty
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putEmpty
+        url: /array/empty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get boolean array value [true, false, false, true]'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getBooleanTfft
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_4
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: boolean
+                name:
+                  fixed: false
+                  raw: Boolean
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_4
+          isNullable: true
+        serializedName: array_getBooleanTfft
+        url: /array/prim/boolean/tfft
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Set array value empty [true, false, false, true]'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putBooleanTfft
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: boolean
+                name:
+                  fixed: false
+                  raw: Boolean
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putBooleanTfft
+        url: /array/prim/boolean/tfft
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get boolean array value [true, null, false]'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getBooleanInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_5
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: boolean
+                name:
+                  fixed: false
+                  raw: Boolean
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_5
+          isNullable: true
+        serializedName: array_getBooleanInvalidNull
+        url: /array/prim/boolean/true.null.false
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get boolean array value [true, ''boolean'', false]'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getBooleanInvalidString
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_6
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: boolean
+                name:
+                  fixed: false
+                  raw: Boolean
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_6
+          isNullable: true
+        serializedName: array_getBooleanInvalidString
+        url: /array/prim/boolean/true.boolean.false
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get integer array value [1, -1, 3, 300]'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getIntegerValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_7
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  fixed: false
+                  raw: Int
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_7
+          isNullable: true
+        serializedName: array_getIntegerValid
+        url: /array/prim/integer/1.-1.3.300
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Set array value empty [1, -1, 3, 300]'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putIntegerValid
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  fixed: false
+                  raw: Int
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putIntegerValid
+        url: /array/prim/integer/1.-1.3.300
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get integer array value [1, null, 0]'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getIntInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_8
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  fixed: false
+                  raw: Int
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_8
+          isNullable: true
+        serializedName: array_getIntInvalidNull
+        url: /array/prim/integer/1.null.zero
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get integer array value [1, ''integer'', 0]'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getIntInvalidString
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_9
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: int
+                name:
+                  fixed: false
+                  raw: Int
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_9
+          isNullable: true
+        serializedName: array_getIntInvalidString
+        url: /array/prim/integer/1.integer.0
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get integer array value [1, -1, 3, 300]'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getLongValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_10
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: int64
+                knownPrimaryType: long
+                name:
+                  fixed: false
+                  raw: Long
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_10
+          isNullable: true
+        serializedName: array_getLongValid
+        url: /array/prim/long/1.-1.3.300
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Set array value empty [1, -1, 3, 300]'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putLongValid
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: int64
+                knownPrimaryType: long
+                name:
+                  fixed: false
+                  raw: Long
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putLongValid
+        url: /array/prim/long/1.-1.3.300
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get long array value [1, null, 0]'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getLongInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_11
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: int64
+                knownPrimaryType: long
+                name:
+                  fixed: false
+                  raw: Long
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_11
+          isNullable: true
+        serializedName: array_getLongInvalidNull
+        url: /array/prim/long/1.null.zero
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get long array value [1, ''integer'', 0]'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getLongInvalidString
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_12
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: int64
+                knownPrimaryType: long
+                name:
+                  fixed: false
+                  raw: Long
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_12
+          isNullable: true
+        serializedName: array_getLongInvalidString
+        url: /array/prim/long/1.integer.0
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get float array value [0, -0.01, 1.2e20]'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getFloatValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_13
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: float
+                knownPrimaryType: double
+                name:
+                  fixed: false
+                  raw: Double
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_13
+          isNullable: true
+        serializedName: array_getFloatValid
+        url: /array/prim/float/0--0.01-1.2e20
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Set array value [0, -0.01, 1.2e20]'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putFloatValid
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: float
+                knownPrimaryType: double
+                name:
+                  fixed: false
+                  raw: Double
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putFloatValid
+        url: /array/prim/float/0--0.01-1.2e20
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get float array value [0.0, null, -1.2e20]'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getFloatInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_14
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: float
+                knownPrimaryType: double
+                name:
+                  fixed: false
+                  raw: Double
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_14
+          isNullable: true
+        serializedName: array_getFloatInvalidNull
+        url: /array/prim/float/0.0-null-1.2e20
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get boolean array value [1.0, ''number'', 0.0]'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getFloatInvalidString
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_15
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: float
+                knownPrimaryType: double
+                name:
+                  fixed: false
+                  raw: Double
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_15
+          isNullable: true
+        serializedName: array_getFloatInvalidString
+        url: /array/prim/float/1.number.0
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get float array value [0, -0.01, 1.2e20]'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDoubleValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_16
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: double
+                knownPrimaryType: double
+                name:
+                  fixed: false
+                  raw: Double
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_16
+          isNullable: true
+        serializedName: array_getDoubleValid
+        url: /array/prim/double/0--0.01-1.2e20
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Set array value [0, -0.01, 1.2e20]'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDoubleValid
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: double
+                knownPrimaryType: double
+                name:
+                  fixed: false
+                  raw: Double
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putDoubleValid
+        url: /array/prim/double/0--0.01-1.2e20
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get float array value [0.0, null, -1.2e20]'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDoubleInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_17
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: double
+                knownPrimaryType: double
+                name:
+                  fixed: false
+                  raw: Double
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_17
+          isNullable: true
+        serializedName: array_getDoubleInvalidNull
+        url: /array/prim/double/0.0-null-1.2e20
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get boolean array value [1.0, ''number'', 0.0]'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDoubleInvalidString
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_18
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: double
+                knownPrimaryType: double
+                name:
+                  fixed: false
+                  raw: Double
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_18
+          isNullable: true
+        serializedName: array_getDoubleInvalidString
+        url: /array/prim/double/1.number.0
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get string array value [''foo1'', ''foo2'', ''foo3'']'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getStringValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_19
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_19
+          isNullable: true
+        serializedName: array_getStringValid
+        url: /array/prim/string/foo1.foo2.foo3
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Set array value [''foo1'', ''foo2'', ''foo3'']'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putStringValid
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putStringValid
+        url: /array/prim/string/foo1.foo2.foo3
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get string array value [''foo'', null, ''foo2'']'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getStringWithNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_20
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_20
+          isNullable: true
+        serializedName: array_getStringWithNull
+        url: /array/prim/string/foo.null.foo2
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get string array value [''foo'', 123, ''foo2'']'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getStringWithInvalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_21
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_21
+          isNullable: true
+        serializedName: array_getStringWithInvalid
+        url: /array/prim/string/foo.123.foo2
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get uuid array value ['6dcc7237-45fe-45c4-8a6b-3a8a3f625652',
+          'd1399005-30f7-40d6-8da6-dd7c89ad34db',
+          'f42f6aa1-a5bc-4ddf-907e-5f915de43205']
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getUuidValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_22
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: uuid
+                knownPrimaryType: uuid
+                name:
+                  fixed: false
+                  raw: Uuid
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_22
+          isNullable: true
+        serializedName: array_getUuidValid
+        url: /array/prim/uuid/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Set array value  ['6dcc7237-45fe-45c4-8a6b-3a8a3f625652',
+          'd1399005-30f7-40d6-8da6-dd7c89ad34db',
+          'f42f6aa1-a5bc-4ddf-907e-5f915de43205']
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putUuidValid
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: uuid
+                knownPrimaryType: uuid
+                name:
+                  fixed: false
+                  raw: Uuid
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putUuidValid
+        url: /array/prim/uuid/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get uuid array value [''6dcc7237-45fe-45c4-8a6b-3a8a3f625652'', ''foo'']'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getUuidInvalidChars
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_23
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: uuid
+                knownPrimaryType: uuid
+                name:
+                  fixed: false
+                  raw: Uuid
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_23
+          isNullable: true
+        serializedName: array_getUuidInvalidChars
+        url: /array/prim/uuid/invalidchars
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get integer array value [''2000-12-01'', ''1980-01-02'', ''1492-10-12'']'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDateValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_24
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: date
+                knownPrimaryType: date
+                name:
+                  fixed: false
+                  raw: Date
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_24
+          isNullable: true
+        serializedName: array_getDateValid
+        url: /array/prim/date/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Set array value  [''2000-12-01'', ''1980-01-02'', ''1492-10-12'']'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDateValid
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: date
+                knownPrimaryType: date
+                name:
+                  fixed: false
+                  raw: Date
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putDateValid
+        url: /array/prim/date/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get date array value [''2012-01-01'', null, ''1776-07-04'']'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDateInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_25
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: date
+                knownPrimaryType: date
+                name:
+                  fixed: false
+                  raw: Date
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_25
+          isNullable: true
+        serializedName: array_getDateInvalidNull
+        url: /array/prim/date/invalidnull
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get date array value [''2011-03-22'', ''date'']'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDateInvalidChars
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_26
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: date
+                knownPrimaryType: date
+                name:
+                  fixed: false
+                  raw: Date
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_26
+          isNullable: true
+        serializedName: array_getDateInvalidChars
+        url: /array/prim/date/invalidchars
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get date-time array value ['2000-12-01t00:00:01z',
+          '1980-01-02T00:11:35+01:00', '1492-10-12T10:15:01-08:00']
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDateTimeValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_27
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: date-time
+                knownPrimaryType: dateTime
+                name:
+                  fixed: false
+                  raw: DateTime
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_27
+          isNullable: true
+        serializedName: array_getDateTimeValid
+        url: /array/prim/date-time/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Set array value  ['2000-12-01t00:00:01z', '1980-01-02T00:11:35+01:00',
+          '1492-10-12T10:15:01-08:00']
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDateTimeValid
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: date-time
+                knownPrimaryType: dateTime
+                name:
+                  fixed: false
+                  raw: DateTime
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putDateTimeValid
+        url: /array/prim/date-time/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get date array value [''2000-12-01t00:00:01z'', null]'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDateTimeInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_28
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: date-time
+                knownPrimaryType: dateTime
+                name:
+                  fixed: false
+                  raw: DateTime
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_28
+          isNullable: true
+        serializedName: array_getDateTimeInvalidNull
+        url: /array/prim/date-time/invalidnull
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get date array value [''2000-12-01t00:00:01z'', ''date-time'']'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDateTimeInvalidChars
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_29
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: date-time
+                knownPrimaryType: dateTime
+                name:
+                  fixed: false
+                  raw: DateTime
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_29
+          isNullable: true
+        serializedName: array_getDateTimeInvalidChars
+        url: /array/prim/date-time/invalidchars
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get date-time array value ['Fri, 01 Dec 2000 00:00:01 GMT', 'Wed, 02
+          Jan 1980 00:11:35 GMT', 'Wed, 12 Oct 1492 10:15:01 GMT']
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDateTimeRfc1123Valid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_30
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: date-time-rfc1123
+                knownPrimaryType: dateTimeRfc1123
+                name:
+                  fixed: false
+                  raw: DateTimeRfc1123
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_30
+          isNullable: true
+        serializedName: array_getDateTimeRfc1123Valid
+        url: /array/prim/date-time-rfc1123/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Set array value  ['Fri, 01 Dec 2000 00:00:01 GMT', 'Wed, 02 Jan 1980
+          00:11:35 GMT', 'Wed, 12 Oct 1492 10:15:01 GMT']
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDateTimeRfc1123Valid
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: date-time-rfc1123
+                knownPrimaryType: dateTimeRfc1123
+                name:
+                  fixed: false
+                  raw: DateTimeRfc1123
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putDateTimeRfc1123Valid
+        url: /array/prim/date-time-rfc1123/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get duration array value [''P123DT22H14M12.011S'', ''P5DT1H0M0S'']'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDurationValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_31
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: duration
+                knownPrimaryType: timeSpan
+                name:
+                  fixed: false
+                  raw: TimeSpan
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_31
+          isNullable: true
+        serializedName: array_getDurationValid
+        url: /array/prim/duration/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Set array value  [''P123DT22H14M12.011S'', ''P5DT1H0M0S'']'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDurationValid
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: duration
+                knownPrimaryType: timeSpan
+                name:
+                  fixed: false
+                  raw: TimeSpan
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putDurationValid
+        url: /array/prim/duration/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get byte array value [hex(FF FF FF FA), hex(01 02 03), hex (25, 29,
+          43)] with each item encoded in base64
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getByteValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_32
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: byte
+                knownPrimaryType: byteArray
+                name:
+                  fixed: false
+                  raw: ByteArray
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_32
+          isNullable: true
+        serializedName: array_getByteValid
+        url: /array/prim/byte/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Put the array value [hex(FF FF FF FA), hex(01 02 03), hex (25, 29,
+          43)] with each elementencoded in base 64
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putByteValid
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: byte
+                knownPrimaryType: byteArray
+                name:
+                  fixed: false
+                  raw: ByteArray
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putByteValid
+        url: /array/prim/byte/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get byte array value [hex(AB, AC, AD), null] with the first item
+          base64 encoded
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getByteInvalidNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_33
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: byte
+                knownPrimaryType: byteArray
+                name:
+                  fixed: false
+                  raw: ByteArray
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_33
+          isNullable: true
+        serializedName: array_getByteInvalidNull
+        url: /array/prim/byte/invalidnull
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get array value ['a string that gets encoded with base64url', 'test
+          string' 'Lorem ipsum'] with the items base64url encoded
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getBase64Url
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_34
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                format: base64url
+                knownPrimaryType: base64Url
+                name:
+                  fixed: false
+                  raw: Base64Url
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_34
+          isNullable: true
+        serializedName: array_getBase64Url
+        url: /array/prim/base64url/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get array of complex type null value
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getComplexNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_36
+              $type: SequenceType
+              deprecated: false
+              elementType: *ref_35
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_36
+          isNullable: true
+        serializedName: array_getComplexNull
+        url: /array/complex/null
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get empty array of complex type []'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getComplexEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_37
+              $type: SequenceType
+              deprecated: false
+              elementType: *ref_35
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_37
+          isNullable: true
+        serializedName: array_getComplexEmpty
+        url: /array/complex/empty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get array of complex type with null item [{'integer': 1 'string':
+          '2'}, null, {'integer': 5, 'string': '6'}]
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getComplexItemNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_38
+              $type: SequenceType
+              deprecated: false
+              elementType: *ref_35
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_38
+          isNullable: true
+        serializedName: array_getComplexItemNull
+        url: /array/complex/itemnull
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get array of complex type with empty item [{'integer': 1 'string':
+          '2'}, {}, {'integer': 5, 'string': '6'}]
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getComplexItemEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_39
+              $type: SequenceType
+              deprecated: false
+              elementType: *ref_35
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_39
+          isNullable: true
+        serializedName: array_getComplexItemEmpty
+        url: /array/complex/itemempty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get array of complex type with [{'integer': 1 'string': '2'},
+          {'integer': 3, 'string': '4'}, {'integer': 5, 'string': '6'}]
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getComplexValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_40
+              $type: SequenceType
+              deprecated: false
+              elementType: *ref_35
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_40
+          isNullable: true
+        serializedName: array_getComplexValid
+        url: /array/complex/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Put an array of complex type with values [{'integer': 1 'string':
+          '2'}, {'integer': 3, 'string': '4'}, {'integer': 5, 'string': '6'}]
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putComplexValid
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType: *ref_35
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putComplexValid
+        url: /array/complex/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get a null array
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getArrayNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_41
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: SequenceType
+                deprecated: false
+                elementType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+                name:
+                  fixed: false
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_41
+          isNullable: true
+        serializedName: array_getArrayNull
+        url: /array/array/null
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get an empty array []'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getArrayEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_42
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: SequenceType
+                deprecated: false
+                elementType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+                name:
+                  fixed: false
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_42
+          isNullable: true
+        serializedName: array_getArrayEmpty
+        url: /array/array/empty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get an array of array of strings [['1', '2', '3'], null, ['7', '8',
+          '9']]
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getArrayItemNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_43
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: SequenceType
+                deprecated: false
+                elementType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+                name:
+                  fixed: false
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_43
+          isNullable: true
+        serializedName: array_getArrayItemNull
+        url: /array/array/itemnull
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get an array of array of strings [['1', '2', '3'], [], ['7', '8',
+          '9']]
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getArrayItemEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_44
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: SequenceType
+                deprecated: false
+                elementType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+                name:
+                  fixed: false
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_44
+          isNullable: true
+        serializedName: array_getArrayItemEmpty
+        url: /array/array/itemempty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get an array of array of strings [['1', '2', '3'], ['4', '5', '6'],
+          ['7', '8', '9']]
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getArrayValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_45
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: SequenceType
+                deprecated: false
+                elementType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+                name:
+                  fixed: false
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_45
+          isNullable: true
+        serializedName: array_getArrayValid
+        url: /array/array/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Put An array of array of strings [['1', '2', '3'], ['4', '5', '6'],
+          ['7', '8', '9']]
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putArrayValid
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: SequenceType
+                deprecated: false
+                elementType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+                name:
+                  fixed: false
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putArrayValid
+        url: /array/array/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Get an array of Dictionaries with value null
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDictionaryNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_46
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: DictionaryType
+                deprecated: false
+                name:
+                  fixed: false
+                supportsAdditionalProperties: false
+                valueType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_46
+          isNullable: true
+        serializedName: array_getDictionaryNull
+        url: /array/dictionary/null
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: 'Get an array of Dictionaries of type <string, string> with value []'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDictionaryEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_47
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: DictionaryType
+                deprecated: false
+                name:
+                  fixed: false
+                supportsAdditionalProperties: false
+                valueType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_47
+          isNullable: true
+        serializedName: array_getDictionaryEmpty
+        url: /array/dictionary/empty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get an array of Dictionaries of type <string, string> with value
+          [{'1': 'one', '2': 'two', '3': 'three'}, null, {'7': 'seven', '8':
+          'eight', '9': 'nine'}]
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDictionaryItemNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_48
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: DictionaryType
+                deprecated: false
+                name:
+                  fixed: false
+                supportsAdditionalProperties: false
+                valueType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_48
+          isNullable: true
+        serializedName: array_getDictionaryItemNull
+        url: /array/dictionary/itemnull
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get an array of Dictionaries of type <string, string> with value
+          [{'1': 'one', '2': 'two', '3': 'three'}, {}, {'7': 'seven', '8':
+          'eight', '9': 'nine'}]
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDictionaryItemEmpty
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_49
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: DictionaryType
+                deprecated: false
+                name:
+                  fixed: false
+                supportsAdditionalProperties: false
+                valueType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_49
+          isNullable: true
+        serializedName: array_getDictionaryItemEmpty
+        url: /array/dictionary/itemempty
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get an array of Dictionaries of type <string, string> with value
+          [{'1': 'one', '2': 'two', '3': 'three'}, {'4': 'four', '5': 'five',
+          '6': 'six'}, {'7': 'seven', '8': 'eight', '9': 'nine'}]
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getDictionaryValid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: &ref_50
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: DictionaryType
+                deprecated: false
+                name:
+                  fixed: false
+                supportsAdditionalProperties: false
+                valueType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+              name:
+                fixed: false
+            isNullable: true
+        returnType:
+          body: *ref_50
+          isNullable: true
+        serializedName: array_getDictionaryValid
+        url: /array/dictionary/valid
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Get an array of Dictionaries of type <string, string> with value
+          [{'1': 'one', '2': 'two', '3': 'three'}, {'4': 'four', '5': 'five',
+          '6': 'six'}, {'7': 'seven', '8': 'eight', '9': 'nine'}]
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: array
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putDictionaryValid
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: arrayBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: DictionaryType
+                deprecated: false
+                name:
+                  fixed: false
+                supportsAdditionalProperties: false
+                valueType:
+                  $type: PrimaryType
+                  deprecated: false
+                  knownPrimaryType: string
+                  name:
+                    fixed: false
+                    raw: String
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: arrayBody
+            serializedName: arrayBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: array_putDictionaryValid
+        url: /array/dictionary/valid
+    name:
+      fixed: false
+      raw: Array
+    nameForProperty: Array
+    typeName:
+      fixed: false

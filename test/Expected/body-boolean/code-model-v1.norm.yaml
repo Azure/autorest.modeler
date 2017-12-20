@@ -1,0 +1,383 @@
+---
+$id: '1'
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - $ref: '2'
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '15'
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '3'
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '8'
+            fixed: false
+            raw: Int
+        name:
+          $id: '6'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '9'
+        collectionFormat: none
+        defaultValue:
+          $id: '10'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '11'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '13'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '14'
+            fixed: false
+            raw: String
+        name:
+          $id: '12'
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelsName: Models
+name: AutoRestBoolTestService
+namespace: ''
+operations:
+  - $id: '16'
+    methods:
+      - $id: '17'
+        defaultResponse:
+          $id: '23'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get true Boolean value
+        group:
+          $id: '19'
+          fixed: false
+          raw: bool
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '18'
+          fixed: false
+          raw: getTrue
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '20'
+            body:
+              $id: '21'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: boolean
+              name:
+                $id: '22'
+                fixed: false
+                raw: Boolean
+            isNullable: true
+        returnType:
+          $id: '24'
+          body:
+            $ref: '21'
+          isNullable: true
+        serializedName: bool_getTrue
+        url: /bool/true
+      - $id: '25'
+        defaultResponse:
+          $id: '35'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Set Boolean value true
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '33'
+          fixed: false
+          raw: bool
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '32'
+          fixed: false
+          raw: putTrue
+        parameters:
+          - $id: '26'
+            collectionFormat: none
+            defaultValue:
+              $id: '27'
+              fixed: false
+              raw: 'true'
+            deprecated: false
+            documentation:
+              $id: '28'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: boolBody
+            isConstant: true
+            isRequired: true
+            location: body
+            modelType:
+              $id: '30'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: boolean
+              name:
+                $id: '31'
+                fixed: false
+                raw: Boolean
+            name:
+              $id: '29'
+              fixed: false
+              raw: boolBody
+            serializedName: boolBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '34'
+            isNullable: true
+        returnType:
+          $id: '36'
+          isNullable: true
+        serializedName: bool_putTrue
+        url: /bool/true
+      - $id: '37'
+        defaultResponse:
+          $id: '43'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get false Boolean value
+        group:
+          $id: '39'
+          fixed: false
+          raw: bool
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '38'
+          fixed: false
+          raw: getFalse
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '40'
+            body:
+              $id: '41'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: boolean
+              name:
+                $id: '42'
+                fixed: false
+                raw: Boolean
+            isNullable: true
+        returnType:
+          $id: '44'
+          body:
+            $ref: '41'
+          isNullable: true
+        serializedName: bool_getFalse
+        url: /bool/false
+      - $id: '45'
+        defaultResponse:
+          $id: '55'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Set Boolean value false
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '53'
+          fixed: false
+          raw: bool
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '52'
+          fixed: false
+          raw: putFalse
+        parameters:
+          - $id: '46'
+            collectionFormat: none
+            defaultValue:
+              $id: '47'
+              fixed: false
+              raw: 'false'
+            deprecated: false
+            documentation:
+              $id: '48'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: boolBody
+            isConstant: true
+            isRequired: true
+            location: body
+            modelType:
+              $id: '50'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: boolean
+              name:
+                $id: '51'
+                fixed: false
+                raw: Boolean
+            name:
+              $id: '49'
+              fixed: false
+              raw: boolBody
+            serializedName: boolBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '54'
+            isNullable: true
+        returnType:
+          $id: '56'
+          isNullable: true
+        serializedName: bool_putFalse
+        url: /bool/false
+      - $id: '57'
+        defaultResponse:
+          $id: '63'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get null Boolean value
+        group:
+          $id: '59'
+          fixed: false
+          raw: bool
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '58'
+          fixed: false
+          raw: getNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '60'
+            body:
+              $id: '61'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: boolean
+              name:
+                $id: '62'
+                fixed: false
+                raw: Boolean
+            isNullable: true
+        returnType:
+          $id: '64'
+          body:
+            $ref: '61'
+          isNullable: true
+        serializedName: bool_getNull
+        url: /bool/null
+      - $id: '65'
+        defaultResponse:
+          $id: '71'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get invalid Boolean value
+        group:
+          $id: '67'
+          fixed: false
+          raw: bool
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '66'
+          fixed: false
+          raw: getInvalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '68'
+            body:
+              $id: '69'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: boolean
+              name:
+                $id: '70'
+                fixed: false
+                raw: Boolean
+            isNullable: true
+        returnType:
+          $id: '72'
+          body:
+            $ref: '69'
+          isNullable: true
+        serializedName: bool_getInvalid
+        url: /bool/invalid
+    name:
+      $id: '73'
+      fixed: false
+      raw: Bool
+    nameForProperty: Bool
+    typeName:
+      $id: '74'
+      fixed: false

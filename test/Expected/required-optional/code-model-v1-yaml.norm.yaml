@@ -1,0 +1,1777 @@
+---
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelTypes:
+  - *ref_0
+  - &ref_7
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: int-wrapper
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: int-wrapper
+  - &ref_9
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: int-optional-wrapper
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: int-optional-wrapper
+  - &ref_12
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: string-wrapper
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: string-wrapper
+  - &ref_14
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: string-optional-wrapper
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: string-optional-wrapper
+  - &ref_21
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: array-wrapper
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $type: SequenceType
+          deprecated: false
+          elementType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          name:
+            fixed: false
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: array-wrapper
+  - &ref_23
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: array-optional-wrapper
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: SequenceType
+          deprecated: false
+          elementType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: string
+            name:
+              fixed: false
+              raw: String
+          name:
+            fixed: false
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: array-optional-wrapper
+  - &ref_1
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: product
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: id
+        realPath:
+          - id
+        serializedName: id
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: name
+        realPath:
+          - name
+        serializedName: name
+    serializedName: product
+  - &ref_17
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: class-wrapper
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: true
+        modelType: *ref_1
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: class-wrapper
+  - &ref_19
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: class-optional-wrapper
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType: *ref_1
+        name:
+          fixed: false
+          raw: value
+        realPath:
+          - value
+        serializedName: value
+    serializedName: class-optional-wrapper
+modelsName: Models
+name: AutoRestRequiredOptionalTestService
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse: &ref_2
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Test implicitly required path parameter
+        group:
+          fixed: false
+          raw: implicit
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getRequiredPath
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: pathParameter
+            serializedName: pathParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType: *ref_2
+        serializedName: implicit_getRequiredPath
+        url: '/reqopt/implicit/required/path/{pathParameter}'
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Test implicitly optional query parameter
+        group:
+          fixed: false
+          raw: implicit
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putOptionalQuery
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: queryParameter
+            serializedName: queryParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: implicit_putOptionalQuery
+        url: /reqopt/implicit/optional/query
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Test implicitly optional header parameter
+        group:
+          fixed: false
+          raw: implicit
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putOptionalHeader
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: queryParameter
+            serializedName: queryParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: implicit_putOptionalHeader
+        url: /reqopt/implicit/optional/header
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Test implicitly optional body parameter
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: implicit
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putOptionalBody
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: implicit_putOptionalBody
+        url: /reqopt/implicit/optional/body
+      - defaultResponse: &ref_3
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Test implicitly required path parameter
+        group:
+          fixed: false
+          raw: implicit
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getRequiredGlobalPath
+        parameters:
+          - clientProperty: &ref_25
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+              deprecated: false
+              documentation:
+                fixed: false
+                raw: number of items to skip
+              isConstant: false
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: required-global-path
+              realPath:
+                - required-global-path
+              serializedName: required-global-path
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: number of items to skip
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: required-global-path
+            serializedName: required-global-path
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType: *ref_3
+        serializedName: implicit_getRequiredGlobalPath
+        url: '/reqopt/global/required/path/{required-global-path}'
+      - defaultResponse: &ref_4
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Test implicitly required query parameter
+        group:
+          fixed: false
+          raw: implicit
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getRequiredGlobalQuery
+        parameters:
+          - clientProperty: &ref_26
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+              deprecated: false
+              documentation:
+                fixed: false
+                raw: number of items to skip
+              isConstant: false
+              isReadOnly: false
+              isRequired: true
+              modelType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+                raw: required-global-query
+              realPath:
+                - required-global-query
+              serializedName: required-global-query
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: number of items to skip
+            isConstant: false
+            isRequired: true
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: required-global-query
+            serializedName: required-global-query
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType: *ref_4
+        serializedName: implicit_getRequiredGlobalQuery
+        url: /reqopt/global/required/query
+      - defaultResponse: &ref_5
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Test implicitly optional query parameter
+        group:
+          fixed: false
+          raw: implicit
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: getOptionalGlobalQuery
+        parameters:
+          - clientProperty: &ref_27
+              collectionFormat: none
+              defaultValue:
+                fixed: false
+              deprecated: false
+              documentation:
+                fixed: false
+                raw: number of items to skip
+              isConstant: false
+              isReadOnly: false
+              isRequired: false
+              modelType:
+                $type: PrimaryType
+                deprecated: false
+                format: int32
+                knownPrimaryType: int
+                name:
+                  fixed: false
+                  raw: Int
+              name:
+                fixed: false
+                raw: optional-global-query
+              realPath:
+                - optional-global-query
+              serializedName: optional-global-query
+            collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: number of items to skip
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            name:
+              fixed: false
+              raw: optional-global-query
+            serializedName: optional-global-query
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType: *ref_5
+        serializedName: implicit_getOptionalGlobalQuery
+        url: /reqopt/global/optional/query
+    name:
+      fixed: false
+      raw: Implicit
+    nameForProperty: Implicit
+    typeName:
+      fixed: false
+  - methods:
+      - defaultResponse: &ref_6
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly required integer. Please put null and the client
+          library should throw before the request is sent.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postRequiredIntegerParameter
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType: *ref_6
+        serializedName: explicit_postRequiredIntegerParameter
+        url: /reqopt/requied/integer/parameter
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Test explicitly optional integer. Please put null.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postOptionalIntegerParameter
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: explicit_postOptionalIntegerParameter
+        url: /reqopt/optional/integer/parameter
+      - defaultResponse: &ref_8
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly required integer. Please put a valid int-wrapper with
+          'value' = null and the client library should throw before the request
+          is sent.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postRequiredIntegerProperty
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType: *ref_7
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType: *ref_8
+        serializedName: explicit_postRequiredIntegerProperty
+        url: /reqopt/requied/integer/property
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly optional integer. Please put a valid int-wrapper with
+          'value' = null.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postOptionalIntegerProperty
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType: *ref_9
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: explicit_postOptionalIntegerProperty
+        url: /reqopt/optional/integer/property
+      - defaultResponse: &ref_10
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly required integer. Please put a header
+          'headerParameter' => null and the client library should throw before
+          the request is sent.
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postRequiredIntegerHeader
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            name:
+              fixed: false
+              raw: headerParameter
+            serializedName: headerParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType: *ref_10
+        serializedName: explicit_postRequiredIntegerHeader
+        url: /reqopt/requied/integer/header
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly optional integer. Please put a header
+          'headerParameter' => null.
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postOptionalIntegerHeader
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            name:
+              fixed: false
+              raw: headerParameter
+            serializedName: headerParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: explicit_postOptionalIntegerHeader
+        url: /reqopt/optional/integer/header
+      - defaultResponse: &ref_11
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly required string. Please put null and the client
+          library should throw before the request is sent.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postRequiredStringParameter
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType: *ref_11
+        serializedName: explicit_postRequiredStringParameter
+        url: /reqopt/requied/string/parameter
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Test explicitly optional string. Please put null.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postOptionalStringParameter
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: explicit_postOptionalStringParameter
+        url: /reqopt/optional/string/parameter
+      - defaultResponse: &ref_13
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly required string. Please put a valid string-wrapper
+          with 'value' = null and the client library should throw before the
+          request is sent.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postRequiredStringProperty
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType: *ref_12
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType: *ref_13
+        serializedName: explicit_postRequiredStringProperty
+        url: /reqopt/requied/string/property
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly optional integer. Please put a valid string-wrapper
+          with 'value' = null.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postOptionalStringProperty
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType: *ref_14
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: explicit_postOptionalStringProperty
+        url: /reqopt/optional/string/property
+      - defaultResponse: &ref_15
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly required string. Please put a header 'headerParameter'
+          => null and the client library should throw before the request is
+          sent.
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postRequiredStringHeader
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: headerParameter
+            serializedName: headerParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType: *ref_15
+        serializedName: explicit_postRequiredStringHeader
+        url: /reqopt/requied/string/header
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly optional string. Please put a header 'headerParameter'
+          => null.
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postOptionalStringHeader
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: explicit_postOptionalStringHeader
+        url: /reqopt/optional/string/header
+      - defaultResponse: &ref_16
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly required complex object. Please put null and the
+          client library should throw before the request is sent.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postRequiredClassParameter
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType: *ref_1
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType: *ref_16
+        serializedName: explicit_postRequiredClassParameter
+        url: /reqopt/requied/class/parameter
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Test explicitly optional complex object. Please put null.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postOptionalClassParameter
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType: *ref_1
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: explicit_postOptionalClassParameter
+        url: /reqopt/optional/class/parameter
+      - defaultResponse: &ref_18
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly required complex object. Please put a valid
+          class-wrapper with 'value' = null and the client library should throw
+          before the request is sent.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postRequiredClassProperty
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType: *ref_17
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType: *ref_18
+        serializedName: explicit_postRequiredClassProperty
+        url: /reqopt/requied/class/property
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly optional complex object. Please put a valid
+          class-wrapper with 'value' = null.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postOptionalClassProperty
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType: *ref_19
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: explicit_postOptionalClassProperty
+        url: /reqopt/optional/class/property
+      - defaultResponse: &ref_20
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly required array. Please put null and the client library
+          should throw before the request is sent.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postRequiredArrayParameter
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType: *ref_20
+        serializedName: explicit_postRequiredArrayParameter
+        url: /reqopt/requied/array/parameter
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Test explicitly optional array. Please put null.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postOptionalArrayParameter
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: explicit_postOptionalArrayParameter
+        url: /reqopt/optional/array/parameter
+      - defaultResponse: &ref_22
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly required array. Please put a valid array-wrapper with
+          'value' = null and the client library should throw before the request
+          is sent.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postRequiredArrayProperty
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType: *ref_21
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType: *ref_22
+        serializedName: explicit_postRequiredArrayProperty
+        url: /reqopt/requied/array/property
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly optional array. Please put a valid array-wrapper with
+          'value' = null.
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postOptionalArrayProperty
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: bodyParameter
+            isConstant: false
+            isRequired: false
+            location: body
+            modelType: *ref_23
+            name:
+              fixed: false
+              raw: bodyParameter
+            serializedName: bodyParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: explicit_postOptionalArrayProperty
+        url: /reqopt/optional/array/property
+      - defaultResponse: &ref_24
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly required array. Please put a header 'headerParameter'
+          => null and the client library should throw before the request is
+          sent.
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postRequiredArrayHeader
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            isConstant: false
+            isRequired: true
+            location: header
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: headerParameter
+            serializedName: headerParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        returnType: *ref_24
+        serializedName: explicit_postRequiredArrayHeader
+        url: /reqopt/requied/array/header
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: >-
+          Test explicitly optional integer. Please put a header
+          'headerParameter' => null.
+        group:
+          fixed: false
+          raw: explicit
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postOptionalArrayHeader
+        parameters:
+          - collectionFormat: csv
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $type: SequenceType
+              deprecated: false
+              elementType:
+                $type: PrimaryType
+                deprecated: false
+                knownPrimaryType: string
+                name:
+                  fixed: false
+                  raw: String
+              name:
+                fixed: false
+            name:
+              fixed: false
+              raw: headerParameter
+            serializedName: headerParameter
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: explicit_postOptionalArrayHeader
+        url: /reqopt/optional/array/header
+    name:
+      fixed: false
+      raw: Explicit
+    nameForProperty: Explicit
+    typeName:
+      fixed: false
+properties:
+  - *ref_25
+  - *ref_26
+  - *ref_27

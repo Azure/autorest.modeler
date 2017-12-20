@@ -1,0 +1,579 @@
+---
+$id: '1'
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - $ref: '2'
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '15'
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '3'
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '8'
+            fixed: false
+            raw: Int
+        name:
+          $id: '6'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '9'
+        collectionFormat: none
+        defaultValue:
+          $id: '10'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '11'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '13'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '14'
+            fixed: false
+            raw: String
+        name:
+          $id: '12'
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelsName: Models
+name: AutoRestParameterGroupingTestService
+namespace: ''
+operations:
+  - $id: '16'
+    methods:
+      - $id: '17'
+        defaultResponse:
+          $id: '45'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Post a bunch of required parameters grouped
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '43'
+          fixed: false
+          raw: parameterGrouping
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          $id: '42'
+          fixed: false
+          raw: postRequired
+        parameters:
+          - $id: '18'
+            collectionFormat: none
+            defaultValue:
+              $id: '19'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '20'
+              fixed: false
+            extensions:
+              x-ms-parameter-grouping: {}
+              x-ms-requestBody-name: body
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '22'
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                $id: '23'
+                fixed: false
+                raw: Int
+            name:
+              $id: '21'
+              fixed: false
+              raw: body
+            serializedName: body
+          - $id: '24'
+            collectionFormat: none
+            defaultValue:
+              $id: '25'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '26'
+              fixed: false
+            extensions:
+              x-ms-parameter-grouping: {}
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $id: '28'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '29'
+                fixed: false
+                raw: String
+            name:
+              $id: '27'
+              fixed: false
+              raw: customHeader
+            serializedName: customHeader
+          - $id: '30'
+            collectionFormat: none
+            defaultValue:
+              $id: '31'
+              fixed: false
+              raw: '30'
+            deprecated: false
+            documentation:
+              $id: '32'
+              fixed: false
+              raw: Query parameter with default
+            extensions:
+              x-ms-parameter-grouping: {}
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '34'
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                $id: '35'
+                fixed: false
+                raw: Int
+            name:
+              $id: '33'
+              fixed: false
+              raw: query
+            serializedName: query
+          - $id: '36'
+            collectionFormat: none
+            defaultValue:
+              $id: '37'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '38'
+              fixed: false
+              raw: Path parameter
+            extensions:
+              x-ms-parameter-grouping: {}
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $id: '40'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '41'
+                fixed: false
+                raw: String
+            name:
+              $id: '39'
+              fixed: false
+              raw: path
+            serializedName: path
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '44'
+            isNullable: true
+        returnType:
+          $id: '46'
+          isNullable: true
+        serializedName: parameterGrouping_postRequired
+        url: '/parameterGrouping/postRequired/{path}'
+      - $id: '47'
+        defaultResponse:
+          $id: '63'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Post a bunch of optional parameters grouped
+        group:
+          $id: '61'
+          fixed: false
+          raw: parameterGrouping
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          $id: '60'
+          fixed: false
+          raw: postOptional
+        parameters:
+          - $id: '48'
+            collectionFormat: none
+            defaultValue:
+              $id: '49'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '50'
+              fixed: false
+            extensions:
+              x-ms-parameter-grouping: {}
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $id: '52'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '53'
+                fixed: false
+                raw: String
+            name:
+              $id: '51'
+              fixed: false
+              raw: customHeader
+            serializedName: customHeader
+          - $id: '54'
+            collectionFormat: none
+            defaultValue:
+              $id: '55'
+              fixed: false
+              raw: '30'
+            deprecated: false
+            documentation:
+              $id: '56'
+              fixed: false
+              raw: Query parameter with default
+            extensions:
+              x-ms-parameter-grouping: {}
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '58'
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                $id: '59'
+                fixed: false
+                raw: Int
+            name:
+              $id: '57'
+              fixed: false
+              raw: query
+            serializedName: query
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '62'
+            isNullable: true
+        returnType:
+          $id: '64'
+          isNullable: true
+        serializedName: parameterGrouping_postOptional
+        url: /parameterGrouping/postOptional
+      - $id: '65'
+        defaultResponse:
+          $id: '93'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Post parameters from multiple different parameter groups
+        group:
+          $id: '91'
+          fixed: false
+          raw: parameterGrouping
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          $id: '90'
+          fixed: false
+          raw: postMultiParamGroups
+        parameters:
+          - $id: '66'
+            collectionFormat: none
+            defaultValue:
+              $id: '67'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '68'
+              fixed: false
+            extensions:
+              x-ms-parameter-grouping:
+                name: first-parameter-group
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $id: '70'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '71'
+                fixed: false
+                raw: String
+            name:
+              $id: '69'
+              fixed: false
+              raw: header-one
+            serializedName: header-one
+          - $id: '72'
+            collectionFormat: none
+            defaultValue:
+              $id: '73'
+              fixed: false
+              raw: '30'
+            deprecated: false
+            documentation:
+              $id: '74'
+              fixed: false
+              raw: Query parameter with default
+            extensions:
+              x-ms-parameter-grouping:
+                name: first-parameter-group
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '76'
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                $id: '77'
+                fixed: false
+                raw: Int
+            name:
+              $id: '75'
+              fixed: false
+              raw: query-one
+            serializedName: query-one
+          - $id: '78'
+            collectionFormat: none
+            defaultValue:
+              $id: '79'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '80'
+              fixed: false
+            extensions:
+              x-ms-parameter-grouping:
+                postfix: second-param-group
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $id: '82'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '83'
+                fixed: false
+                raw: String
+            name:
+              $id: '81'
+              fixed: false
+              raw: header-two
+            serializedName: header-two
+          - $id: '84'
+            collectionFormat: none
+            defaultValue:
+              $id: '85'
+              fixed: false
+              raw: '30'
+            deprecated: false
+            documentation:
+              $id: '86'
+              fixed: false
+              raw: Query parameter with default
+            extensions:
+              x-ms-parameter-grouping:
+                postfix: second-param-group
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '88'
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                $id: '89'
+                fixed: false
+                raw: Int
+            name:
+              $id: '87'
+              fixed: false
+              raw: query-two
+            serializedName: query-two
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '92'
+            isNullable: true
+        returnType:
+          $id: '94'
+          isNullable: true
+        serializedName: parameterGrouping_postMultiParamGroups
+        url: /parameterGrouping/postMultipleParameterGroups
+      - $id: '95'
+        defaultResponse:
+          $id: '111'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Post parameters with a shared parameter group object
+        group:
+          $id: '109'
+          fixed: false
+          raw: parameterGrouping
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          $id: '108'
+          fixed: false
+          raw: postSharedParameterGroupObject
+        parameters:
+          - $id: '96'
+            collectionFormat: none
+            defaultValue:
+              $id: '97'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '98'
+              fixed: false
+            extensions:
+              x-ms-parameter-grouping:
+                name: first-parameter-group
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $id: '100'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '101'
+                fixed: false
+                raw: String
+            name:
+              $id: '99'
+              fixed: false
+              raw: header-one
+            serializedName: header-one
+          - $id: '102'
+            collectionFormat: none
+            defaultValue:
+              $id: '103'
+              fixed: false
+              raw: '30'
+            deprecated: false
+            documentation:
+              $id: '104'
+              fixed: false
+              raw: Query parameter with default
+            extensions:
+              x-ms-parameter-grouping:
+                name: first-parameter-group
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '106'
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                $id: '107'
+                fixed: false
+                raw: Int
+            name:
+              $id: '105'
+              fixed: false
+              raw: query-one
+            serializedName: query-one
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '110'
+            isNullable: true
+        returnType:
+          $id: '112'
+          isNullable: true
+        serializedName: parameterGrouping_postSharedParameterGroupObject
+        url: /parameterGrouping/sharedParameterGroupObject
+    name:
+      $id: '113'
+      fixed: false
+      raw: ParameterGrouping
+    nameForProperty: ParameterGrouping
+    typeName:
+      $id: '114'
+      fixed: false

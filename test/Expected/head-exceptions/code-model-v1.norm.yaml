@@ -1,0 +1,106 @@
+---
+$id: '1'
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+modelsName: Models
+name: AutoRestHeadExceptionTestService
+namespace: ''
+operations:
+  - $id: '2'
+    methods:
+      - $id: '3'
+        defaultResponse:
+          $id: '7'
+          isNullable: true
+        deprecated: false
+        description: Return 200 status code if successful
+        group:
+          $id: '5'
+          fixed: false
+          raw: headException
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          $id: '4'
+          fixed: false
+          raw: head200
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '6'
+            isNullable: true
+        returnType:
+          $id: '8'
+          isNullable: true
+        serializedName: headException_head200
+        url: /http/success/200
+      - $id: '9'
+        defaultResponse:
+          $id: '13'
+          isNullable: true
+        deprecated: false
+        description: Return 204 status code if successful
+        group:
+          $id: '11'
+          fixed: false
+          raw: headException
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          $id: '10'
+          fixed: false
+          raw: head204
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NoContent:
+            $id: '12'
+            isNullable: true
+        returnType:
+          $id: '14'
+          isNullable: true
+        serializedName: headException_head204
+        url: /http/success/204
+      - $id: '15'
+        defaultResponse:
+          $id: '19'
+          isNullable: true
+        deprecated: false
+        description: Return 404 status code if successful
+        group:
+          $id: '17'
+          fixed: false
+          raw: headException
+        hidden: false
+        httpMethod: head
+        isAbsoluteUrl: false
+        name:
+          $id: '16'
+          fixed: false
+          raw: head404
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          NoContent:
+            $id: '18'
+            isNullable: true
+        returnType:
+          $id: '20'
+          isNullable: true
+        serializedName: headException_head404
+        url: /http/success/404
+    name:
+      $id: '21'
+      fixed: false
+      raw: HeadException
+    nameForProperty: HeadException
+    typeName:
+      $id: '22'
+      fixed: false

@@ -1,0 +1,339 @@
+---
+$id: '1'
+apiVersion: 2014-04-01-preview
+baseUrl: 'https://management.azure.com'
+documentation: Some cool documentation.
+errorTypes:
+  - $ref: '16'
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '15'
+      fixed: false
+      raw: SampleResourceGroup
+    properties:
+      - $id: '3'
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+          raw: resource group name 'testgroup101'
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '8'
+            fixed: false
+            raw: String
+        name:
+          $id: '6'
+          fixed: false
+          raw: name
+        realPath:
+          - name
+        serializedName: name
+      - $id: '9'
+        collectionFormat: none
+        defaultValue:
+          $id: '10'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '11'
+          fixed: false
+          raw: resource group location 'West US'
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '13'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '14'
+            fixed: false
+            raw: String
+        name:
+          $id: '12'
+          fixed: false
+          raw: location
+        realPath:
+          - location
+        serializedName: location
+    serializedName: SampleResourceGroup
+  - $id: '16'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '29'
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '17'
+        collectionFormat: none
+        defaultValue:
+          $id: '18'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '19'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '21'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '22'
+            fixed: false
+            raw: Int
+        name:
+          $id: '20'
+          fixed: false
+          raw: code
+        realPath:
+          - code
+        serializedName: code
+      - $id: '23'
+        collectionFormat: none
+        defaultValue:
+          $id: '24'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '25'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '27'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '28'
+            fixed: false
+            raw: String
+        name:
+          $id: '26'
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelsName: Models
+name: MicrosoftAzureTestUrl
+namespace: ''
+operations:
+  - $id: '42'
+    methods:
+      - $id: '43'
+        defaultResponse:
+          $id: '65'
+          body:
+            $ref: '16'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Provides a resouce group with name 'testgroup101' and location 'West
+          US'.
+        group:
+          $id: '63'
+          fixed: false
+          raw: group
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '62'
+          fixed: false
+          raw: getSampleResourceGroup
+        parameters:
+          - $id: '44'
+            clientProperty:
+              $ref: '30'
+            collectionFormat: none
+            defaultValue:
+              $id: '45'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '46'
+              fixed: false
+              raw: Subscription Id.
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $id: '48'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '49'
+                fixed: false
+                raw: String
+            name:
+              $id: '47'
+              fixed: false
+              raw: subscriptionId
+            serializedName: subscriptionId
+          - $id: '50'
+            collectionFormat: none
+            defaultValue:
+              $id: '51'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '52'
+              fixed: false
+              raw: Resource Group name 'testgroup101'.
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $id: '54'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '55'
+                fixed: false
+                raw: String
+            name:
+              $id: '53'
+              fixed: false
+              raw: resourceGroupName
+            serializedName: resourceGroupName
+          - $id: '56'
+            clientProperty:
+              $ref: '36'
+            collectionFormat: none
+            defaultValue:
+              $id: '57'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '58'
+              fixed: false
+              raw: API Version with value '2014-04-01-preview'.
+            isConstant: false
+            isRequired: true
+            location: query
+            modelType:
+              $id: '60'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '61'
+                fixed: false
+                raw: String
+            name:
+              $id: '59'
+              fixed: false
+              raw: api-version
+            serializedName: api-version
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '64'
+            body:
+              $ref: '2'
+            isNullable: true
+        returnType:
+          $id: '66'
+          body:
+            $ref: '2'
+          isNullable: true
+        serializedName: group_getSampleResourceGroup
+        url: '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}'
+    name:
+      $id: '67'
+      fixed: false
+      raw: Group
+    nameForProperty: Group
+    typeName:
+      $id: '68'
+      fixed: false
+properties:
+  - $id: '30'
+    collectionFormat: none
+    defaultValue:
+      $id: '31'
+      fixed: false
+    deprecated: false
+    documentation:
+      $id: '32'
+      fixed: false
+      raw: Subscription Id.
+    isConstant: false
+    isReadOnly: false
+    isRequired: true
+    modelType:
+      $id: '34'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '35'
+        fixed: false
+        raw: String
+    name:
+      $id: '33'
+      fixed: false
+      raw: subscriptionId
+    realPath:
+      - subscriptionId
+    serializedName: subscriptionId
+  - $id: '36'
+    collectionFormat: none
+    defaultValue:
+      $id: '37'
+      fixed: false
+    deprecated: false
+    documentation:
+      $id: '38'
+      fixed: false
+      raw: API Version with value '2014-04-01-preview'.
+    isConstant: false
+    isReadOnly: false
+    isRequired: true
+    modelType:
+      $id: '40'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '41'
+        fixed: false
+        raw: String
+    name:
+      $id: '39'
+      fixed: false
+      raw: api-version
+    realPath:
+      - api-version
+    serializedName: api-version

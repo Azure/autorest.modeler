@@ -1,0 +1,266 @@
+---
+$id: '1'
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest Swagger BAT
+errorTypes:
+  - $ref: '2'
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '15'
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '3'
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '8'
+            fixed: false
+            raw: Int
+        name:
+          $id: '6'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '9'
+        collectionFormat: none
+        defaultValue:
+          $id: '10'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '11'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '13'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '14'
+            fixed: false
+            raw: String
+        name:
+          $id: '12'
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelsName: Models
+name: AutoRestSwaggerBATFormDataService
+namespace: ''
+operations:
+  - $id: '16'
+    methods:
+      - $id: '17'
+        defaultResponse:
+          $id: '35'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Upload file
+        extensions:
+          x-ms-requestBody-index: '1'
+        group:
+          $id: '31'
+          fixed: false
+          raw: formdata
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          $id: '30'
+          fixed: false
+          raw: UploadFile
+        parameters:
+          - $id: '18'
+            collectionFormat: none
+            defaultValue:
+              $id: '19'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '20'
+              fixed: false
+              raw: File to upload.
+            isConstant: false
+            isRequired: true
+            location: formData
+            modelType:
+              $id: '22'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: stream
+              name:
+                $id: '23'
+                fixed: false
+                raw: Stream
+            name:
+              $id: '21'
+              fixed: false
+              raw: fileContent
+            serializedName: fileContent
+          - $id: '24'
+            collectionFormat: none
+            defaultValue:
+              $id: '25'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '26'
+              fixed: false
+              raw: >-
+                File name to upload. Name has to be spelled exactly as written
+                here.
+            isConstant: false
+            isRequired: true
+            location: formData
+            modelType:
+              $id: '28'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '29'
+                fixed: false
+                raw: String
+            name:
+              $id: '27'
+              fixed: false
+              raw: fileName
+            serializedName: fileName
+        requestContentType: multipart/form-data
+        responseContentTypes:
+          - application/octet-stream
+          - application/json
+        responses:
+          OK:
+            $id: '32'
+            body:
+              $id: '33'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: stream
+              name:
+                $id: '34'
+                fixed: false
+                raw: Stream
+            isNullable: true
+        returnType:
+          $id: '36'
+          body:
+            $ref: '33'
+          isNullable: true
+        serializedName: formdata_UploadFile
+        url: /formdata/stream/uploadfile
+      - $id: '37'
+        defaultResponse:
+          $id: '49'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Upload file
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '45'
+          fixed: false
+          raw: formdata
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '44'
+          fixed: false
+          raw: UploadFileViaBody
+        parameters:
+          - $id: '38'
+            collectionFormat: none
+            defaultValue:
+              $id: '39'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '40'
+              fixed: false
+              raw: File to upload.
+            extensions:
+              x-ms-requestBody-name: fileContent
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '42'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: stream
+              name:
+                $id: '43'
+                fixed: false
+                raw: Stream
+            name:
+              $id: '41'
+              fixed: false
+              raw: fileContent
+            serializedName: fileContent
+        requestContentType: application/octet-stream
+        responseContentTypes:
+          - application/octet-stream
+          - application/json
+        responses:
+          OK:
+            $id: '46'
+            body:
+              $id: '47'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: stream
+              name:
+                $id: '48'
+                fixed: false
+                raw: Stream
+            isNullable: true
+        returnType:
+          $id: '50'
+          body:
+            $ref: '47'
+          isNullable: true
+        serializedName: formdata_UploadFileViaBody
+        url: /formdata/stream/uploadfile
+    name:
+      $id: '51'
+      fixed: false
+      raw: Formdata
+    nameForProperty: Formdata
+    typeName:
+      $id: '52'
+      fixed: false

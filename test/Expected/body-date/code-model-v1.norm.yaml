@@ -1,0 +1,473 @@
+---
+$id: '1'
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - $ref: '2'
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '15'
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '3'
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '8'
+            fixed: false
+            raw: Int
+        name:
+          $id: '6'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '9'
+        collectionFormat: none
+        defaultValue:
+          $id: '10'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '11'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '13'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '14'
+            fixed: false
+            raw: String
+        name:
+          $id: '12'
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelsName: Models
+name: AutoRestDateTestService
+namespace: ''
+operations:
+  - $id: '16'
+    methods:
+      - $id: '17'
+        defaultResponse:
+          $id: '23'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get null date value
+        group:
+          $id: '19'
+          fixed: false
+          raw: date
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '18'
+          fixed: false
+          raw: getNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '20'
+            body:
+              $id: '21'
+              $type: PrimaryType
+              deprecated: false
+              format: date
+              knownPrimaryType: date
+              name:
+                $id: '22'
+                fixed: false
+                raw: Date
+            isNullable: true
+        returnType:
+          $id: '24'
+          body:
+            $ref: '21'
+          isNullable: true
+        serializedName: date_getNull
+        url: /date/null
+      - $id: '25'
+        defaultResponse:
+          $id: '31'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get invalid date value
+        group:
+          $id: '27'
+          fixed: false
+          raw: date
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '26'
+          fixed: false
+          raw: getInvalidDate
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '28'
+            body:
+              $id: '29'
+              $type: PrimaryType
+              deprecated: false
+              format: date
+              knownPrimaryType: date
+              name:
+                $id: '30'
+                fixed: false
+                raw: Date
+            isNullable: true
+        returnType:
+          $id: '32'
+          body:
+            $ref: '29'
+          isNullable: true
+        serializedName: date_getInvalidDate
+        url: /date/invaliddate
+      - $id: '33'
+        defaultResponse:
+          $id: '39'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get overflow date value
+        group:
+          $id: '35'
+          fixed: false
+          raw: date
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '34'
+          fixed: false
+          raw: getOverflowDate
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '36'
+            body:
+              $id: '37'
+              $type: PrimaryType
+              deprecated: false
+              format: date
+              knownPrimaryType: date
+              name:
+                $id: '38'
+                fixed: false
+                raw: Date
+            isNullable: true
+        returnType:
+          $id: '40'
+          body:
+            $ref: '37'
+          isNullable: true
+        serializedName: date_getOverflowDate
+        url: /date/overflowdate
+      - $id: '41'
+        defaultResponse:
+          $id: '47'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get underflow date value
+        group:
+          $id: '43'
+          fixed: false
+          raw: date
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '42'
+          fixed: false
+          raw: getUnderflowDate
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '44'
+            body:
+              $id: '45'
+              $type: PrimaryType
+              deprecated: false
+              format: date
+              knownPrimaryType: date
+              name:
+                $id: '46'
+                fixed: false
+                raw: Date
+            isNullable: true
+        returnType:
+          $id: '48'
+          body:
+            $ref: '45'
+          isNullable: true
+        serializedName: date_getUnderflowDate
+        url: /date/underflowdate
+      - $id: '49'
+        defaultResponse:
+          $id: '59'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Put max date value 9999-12-31
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '57'
+          fixed: false
+          raw: date
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '56'
+          fixed: false
+          raw: putMaxDate
+        parameters:
+          - $id: '50'
+            collectionFormat: none
+            defaultValue:
+              $id: '51'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '52'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: dateBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '54'
+              $type: PrimaryType
+              deprecated: false
+              format: date
+              knownPrimaryType: date
+              name:
+                $id: '55'
+                fixed: false
+                raw: Date
+            name:
+              $id: '53'
+              fixed: false
+              raw: dateBody
+            serializedName: dateBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '58'
+            isNullable: true
+        returnType:
+          $id: '60'
+          isNullable: true
+        serializedName: date_putMaxDate
+        url: /date/max
+      - $id: '61'
+        defaultResponse:
+          $id: '67'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get max date value 9999-12-31
+        group:
+          $id: '63'
+          fixed: false
+          raw: date
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '62'
+          fixed: false
+          raw: getMaxDate
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '64'
+            body:
+              $id: '65'
+              $type: PrimaryType
+              deprecated: false
+              format: date
+              knownPrimaryType: date
+              name:
+                $id: '66'
+                fixed: false
+                raw: Date
+            isNullable: true
+        returnType:
+          $id: '68'
+          body:
+            $ref: '65'
+          isNullable: true
+        serializedName: date_getMaxDate
+        url: /date/max
+      - $id: '69'
+        defaultResponse:
+          $id: '79'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Put min date value 0000-01-01
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '77'
+          fixed: false
+          raw: date
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '76'
+          fixed: false
+          raw: putMinDate
+        parameters:
+          - $id: '70'
+            collectionFormat: none
+            defaultValue:
+              $id: '71'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '72'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: dateBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '74'
+              $type: PrimaryType
+              deprecated: false
+              format: date
+              knownPrimaryType: date
+              name:
+                $id: '75'
+                fixed: false
+                raw: Date
+            name:
+              $id: '73'
+              fixed: false
+              raw: dateBody
+            serializedName: dateBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '78'
+            isNullable: true
+        returnType:
+          $id: '80'
+          isNullable: true
+        serializedName: date_putMinDate
+        url: /date/min
+      - $id: '81'
+        defaultResponse:
+          $id: '87'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get min date value 0000-01-01
+        group:
+          $id: '83'
+          fixed: false
+          raw: date
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '82'
+          fixed: false
+          raw: getMinDate
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '84'
+            body:
+              $id: '85'
+              $type: PrimaryType
+              deprecated: false
+              format: date
+              knownPrimaryType: date
+              name:
+                $id: '86'
+                fixed: false
+                raw: Date
+            isNullable: true
+        returnType:
+          $id: '88'
+          body:
+            $ref: '85'
+          isNullable: true
+        serializedName: date_getMinDate
+        url: /date/min
+    name:
+      $id: '89'
+      fixed: false
+      raw: Date
+    nameForProperty: Date
+    typeName:
+      $id: '90'
+      fixed: false

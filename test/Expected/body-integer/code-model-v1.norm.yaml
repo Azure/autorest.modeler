@@ -1,0 +1,789 @@
+---
+$id: '1'
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - $ref: '2'
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '15'
+      fixed: false
+      raw: Error
+    properties:
+      - $id: '3'
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            $id: '8'
+            fixed: false
+            raw: Int
+        name:
+          $id: '6'
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - $id: '9'
+        collectionFormat: none
+        defaultValue:
+          $id: '10'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '11'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '13'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '14'
+            fixed: false
+            raw: String
+        name:
+          $id: '12'
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelsName: Models
+name: AutoRestIntegerTestService
+namespace: ''
+operations:
+  - $id: '16'
+    methods:
+      - $id: '17'
+        defaultResponse:
+          $id: '23'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get null Int value
+        group:
+          $id: '19'
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '18'
+          fixed: false
+          raw: getNull
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '20'
+            body:
+              $id: '21'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: int
+              name:
+                $id: '22'
+                fixed: false
+                raw: Int
+            isNullable: true
+        returnType:
+          $id: '24'
+          body:
+            $ref: '21'
+          isNullable: true
+        serializedName: int_getNull
+        url: /int/null
+      - $id: '25'
+        defaultResponse:
+          $id: '31'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get invalid Int value
+        group:
+          $id: '27'
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '26'
+          fixed: false
+          raw: getInvalid
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '28'
+            body:
+              $id: '29'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: int
+              name:
+                $id: '30'
+                fixed: false
+                raw: Int
+            isNullable: true
+        returnType:
+          $id: '32'
+          body:
+            $ref: '29'
+          isNullable: true
+        serializedName: int_getInvalid
+        url: /int/invalid
+      - $id: '33'
+        defaultResponse:
+          $id: '39'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get overflow Int32 value
+        group:
+          $id: '35'
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '34'
+          fixed: false
+          raw: getOverflowInt32
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '36'
+            body:
+              $id: '37'
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                $id: '38'
+                fixed: false
+                raw: Int
+            isNullable: true
+        returnType:
+          $id: '40'
+          body:
+            $ref: '37'
+          isNullable: true
+        serializedName: int_getOverflowInt32
+        url: /int/overflowint32
+      - $id: '41'
+        defaultResponse:
+          $id: '47'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get underflow Int32 value
+        group:
+          $id: '43'
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '42'
+          fixed: false
+          raw: getUnderflowInt32
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '44'
+            body:
+              $id: '45'
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                $id: '46'
+                fixed: false
+                raw: Int
+            isNullable: true
+        returnType:
+          $id: '48'
+          body:
+            $ref: '45'
+          isNullable: true
+        serializedName: int_getUnderflowInt32
+        url: /int/underflowint32
+      - $id: '49'
+        defaultResponse:
+          $id: '55'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get overflow Int64 value
+        group:
+          $id: '51'
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '50'
+          fixed: false
+          raw: getOverflowInt64
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '52'
+            body:
+              $id: '53'
+              $type: PrimaryType
+              deprecated: false
+              format: int64
+              knownPrimaryType: long
+              name:
+                $id: '54'
+                fixed: false
+                raw: Long
+            isNullable: true
+        returnType:
+          $id: '56'
+          body:
+            $ref: '53'
+          isNullable: true
+        serializedName: int_getOverflowInt64
+        url: /int/overflowint64
+      - $id: '57'
+        defaultResponse:
+          $id: '63'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get underflow Int64 value
+        group:
+          $id: '59'
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '58'
+          fixed: false
+          raw: getUnderflowInt64
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '60'
+            body:
+              $id: '61'
+              $type: PrimaryType
+              deprecated: false
+              format: int64
+              knownPrimaryType: long
+              name:
+                $id: '62'
+                fixed: false
+                raw: Long
+            isNullable: true
+        returnType:
+          $id: '64'
+          body:
+            $ref: '61'
+          isNullable: true
+        serializedName: int_getUnderflowInt64
+        url: /int/underflowint64
+      - $id: '65'
+        defaultResponse:
+          $id: '75'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Put max int32 value
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '73'
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '72'
+          fixed: false
+          raw: putMax32
+        parameters:
+          - $id: '66'
+            collectionFormat: none
+            defaultValue:
+              $id: '67'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '68'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: intBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '70'
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                $id: '71'
+                fixed: false
+                raw: Int
+            name:
+              $id: '69'
+              fixed: false
+              raw: intBody
+            serializedName: intBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '74'
+            isNullable: true
+        returnType:
+          $id: '76'
+          isNullable: true
+        serializedName: int_putMax32
+        url: /int/max/32
+      - $id: '77'
+        defaultResponse:
+          $id: '87'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Put max int64 value
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '85'
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '84'
+          fixed: false
+          raw: putMax64
+        parameters:
+          - $id: '78'
+            collectionFormat: none
+            defaultValue:
+              $id: '79'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '80'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: intBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '82'
+              $type: PrimaryType
+              deprecated: false
+              format: int64
+              knownPrimaryType: long
+              name:
+                $id: '83'
+                fixed: false
+                raw: Long
+            name:
+              $id: '81'
+              fixed: false
+              raw: intBody
+            serializedName: intBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '86'
+            isNullable: true
+        returnType:
+          $id: '88'
+          isNullable: true
+        serializedName: int_putMax64
+        url: /int/max/64
+      - $id: '89'
+        defaultResponse:
+          $id: '99'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Put min int32 value
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '97'
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '96'
+          fixed: false
+          raw: putMin32
+        parameters:
+          - $id: '90'
+            collectionFormat: none
+            defaultValue:
+              $id: '91'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '92'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: intBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '94'
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                $id: '95'
+                fixed: false
+                raw: Int
+            name:
+              $id: '93'
+              fixed: false
+              raw: intBody
+            serializedName: intBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '98'
+            isNullable: true
+        returnType:
+          $id: '100'
+          isNullable: true
+        serializedName: int_putMin32
+        url: /int/min/32
+      - $id: '101'
+        defaultResponse:
+          $id: '111'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Put min int64 value
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '109'
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '108'
+          fixed: false
+          raw: putMin64
+        parameters:
+          - $id: '102'
+            collectionFormat: none
+            defaultValue:
+              $id: '103'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '104'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: intBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '106'
+              $type: PrimaryType
+              deprecated: false
+              format: int64
+              knownPrimaryType: long
+              name:
+                $id: '107'
+                fixed: false
+                raw: Long
+            name:
+              $id: '105'
+              fixed: false
+              raw: intBody
+            serializedName: intBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '110'
+            isNullable: true
+        returnType:
+          $id: '112'
+          isNullable: true
+        serializedName: int_putMin64
+        url: /int/min/64
+      - $id: '113'
+        defaultResponse:
+          $id: '119'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get datetime encoded as Unix time value
+        group:
+          $id: '115'
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '114'
+          fixed: false
+          raw: getUnixTime
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '116'
+            body:
+              $id: '117'
+              $type: PrimaryType
+              deprecated: false
+              format: unixtime
+              knownPrimaryType: unixTime
+              name:
+                $id: '118'
+                fixed: false
+                raw: UnixTime
+            isNullable: true
+        returnType:
+          $id: '120'
+          body:
+            $ref: '117'
+          isNullable: true
+        serializedName: int_getUnixTime
+        url: /int/unixtime
+      - $id: '121'
+        defaultResponse:
+          $id: '131'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Put datetime encoded as Unix time
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '129'
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '128'
+          fixed: false
+          raw: putUnixTimeDate
+        parameters:
+          - $id: '122'
+            collectionFormat: none
+            defaultValue:
+              $id: '123'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '124'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: intBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $id: '126'
+              $type: PrimaryType
+              deprecated: false
+              format: unixtime
+              knownPrimaryType: unixTime
+              name:
+                $id: '127'
+                fixed: false
+                raw: UnixTime
+            name:
+              $id: '125'
+              fixed: false
+              raw: intBody
+            serializedName: intBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '130'
+            isNullable: true
+        returnType:
+          $id: '132'
+          isNullable: true
+        serializedName: int_putUnixTimeDate
+        url: /int/unixtime
+      - $id: '133'
+        defaultResponse:
+          $id: '139'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get invalid Unix time value
+        group:
+          $id: '135'
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '134'
+          fixed: false
+          raw: getInvalidUnixTime
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '136'
+            body:
+              $id: '137'
+              $type: PrimaryType
+              deprecated: false
+              format: unixtime
+              knownPrimaryType: unixTime
+              name:
+                $id: '138'
+                fixed: false
+                raw: UnixTime
+            isNullable: true
+        returnType:
+          $id: '140'
+          body:
+            $ref: '137'
+          isNullable: true
+        serializedName: int_getInvalidUnixTime
+        url: /int/invalidunixtime
+      - $id: '141'
+        defaultResponse:
+          $id: '147'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: Get null Unix time value
+        group:
+          $id: '143'
+          fixed: false
+          raw: int
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '142'
+          fixed: false
+          raw: getNullUnixTime
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '144'
+            body:
+              $id: '145'
+              $type: PrimaryType
+              deprecated: false
+              format: unixtime
+              knownPrimaryType: unixTime
+              name:
+                $id: '146'
+                fixed: false
+                raw: UnixTime
+            isNullable: true
+        returnType:
+          $id: '148'
+          body:
+            $ref: '145'
+          isNullable: true
+        serializedName: int_getNullUnixTime
+        url: /int/nullunixtime
+    name:
+      $id: '149'
+      fixed: false
+      raw: Int
+    nameForProperty: Int
+    typeName:
+      $id: '150'
+      fixed: false

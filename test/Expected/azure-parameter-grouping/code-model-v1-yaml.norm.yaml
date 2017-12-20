@@ -1,0 +1,462 @@
+---
+apiVersion: 1.0.0
+baseUrl: 'http://localhost:3000'
+documentation: Test Infrastructure for AutoRest
+errorTypes:
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Error
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          format: int32
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: status
+        realPath:
+          - status
+        serializedName: status
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: message
+        realPath:
+          - message
+        serializedName: message
+    serializedName: Error
+modelTypes:
+  - *ref_0
+modelsName: Models
+name: AutoRestParameterGroupingTestService
+namespace: ''
+operations:
+  - methods:
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Post a bunch of required parameters grouped
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: parameterGrouping
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postRequired
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-parameter-grouping: {}
+              x-ms-requestBody-name: body
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            name:
+              fixed: false
+              raw: body
+            serializedName: body
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-parameter-grouping: {}
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: customHeader
+            serializedName: customHeader
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+              raw: '30'
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Query parameter with default
+            extensions:
+              x-ms-parameter-grouping: {}
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            name:
+              fixed: false
+              raw: query
+            serializedName: query
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Path parameter
+            extensions:
+              x-ms-parameter-grouping: {}
+            isConstant: false
+            isRequired: true
+            location: path
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: path
+            serializedName: path
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: parameterGrouping_postRequired
+        url: '/parameterGrouping/postRequired/{path}'
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Post a bunch of optional parameters grouped
+        group:
+          fixed: false
+          raw: parameterGrouping
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postOptional
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-parameter-grouping: {}
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: customHeader
+            serializedName: customHeader
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+              raw: '30'
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Query parameter with default
+            extensions:
+              x-ms-parameter-grouping: {}
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            name:
+              fixed: false
+              raw: query
+            serializedName: query
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: parameterGrouping_postOptional
+        url: /parameterGrouping/postOptional
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Post parameters from multiple different parameter groups
+        group:
+          fixed: false
+          raw: parameterGrouping
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postMultiParamGroups
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-parameter-grouping:
+                name: first-parameter-group
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: header-one
+            serializedName: header-one
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+              raw: '30'
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Query parameter with default
+            extensions:
+              x-ms-parameter-grouping:
+                name: first-parameter-group
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            name:
+              fixed: false
+              raw: query-one
+            serializedName: query-one
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-parameter-grouping:
+                postfix: second-param-group
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: header-two
+            serializedName: header-two
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+              raw: '30'
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Query parameter with default
+            extensions:
+              x-ms-parameter-grouping:
+                postfix: second-param-group
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            name:
+              fixed: false
+              raw: query-two
+            serializedName: query-two
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: parameterGrouping_postMultiParamGroups
+        url: /parameterGrouping/postMultipleParameterGroups
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
+        description: Post parameters with a shared parameter group object
+        group:
+          fixed: false
+          raw: parameterGrouping
+        hidden: false
+        httpMethod: post
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: postSharedParameterGroupObject
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-parameter-grouping:
+                name: first-parameter-group
+            isConstant: false
+            isRequired: false
+            location: header
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                fixed: false
+                raw: String
+            name:
+              fixed: false
+              raw: header-one
+            serializedName: header-one
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+              raw: '30'
+            deprecated: false
+            documentation:
+              fixed: false
+              raw: Query parameter with default
+            extensions:
+              x-ms-parameter-grouping:
+                name: first-parameter-group
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $type: PrimaryType
+              deprecated: false
+              format: int32
+              knownPrimaryType: int
+              name:
+                fixed: false
+                raw: Int
+            name:
+              fixed: false
+              raw: query-one
+            serializedName: query-one
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            isNullable: true
+        returnType:
+          isNullable: true
+        serializedName: parameterGrouping_postSharedParameterGroupObject
+        url: /parameterGrouping/sharedParameterGroupObject
+    name:
+      fixed: false
+      raw: ParameterGrouping
+    nameForProperty: ParameterGrouping
+    typeName:
+      fixed: false

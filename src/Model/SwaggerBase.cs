@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace AutoRest.Modeler.Model
 {
-    public abstract class SwaggerBase
+    public class SwaggerBase
     {
         public SwaggerBase()
         {
