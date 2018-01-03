@@ -451,8 +451,7 @@ namespace AutoRest.Modeler
                     s => GenerateResponseObjectName(s, responseStatusCode), out serviceType))
                 {
                     method.Responses[responseStatusCode] = new Response(serviceType, headerType);
-                    //if(response.Extensions.Get<bool>("x-ms-error-response")!=true)
-                    if(response.Extensions.Get<bool>("x-error-response")!=true)
+                    if(response.Extensions.Get<bool>("x-ms-error-response")!=true)
                     {
                         BuildMethodReturnTypeStack(serviceType, types);
                     }
