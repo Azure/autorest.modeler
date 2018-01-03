@@ -119,7 +119,8 @@ namespace AutoRest.Modeler
                         methods.Add(method);
 
                         // Add error models marked by x-ms-error-response
-                        var xmsErrorResponses = method.Responses.Values.Where(resp=>resp.Extensions.ContainsKey("x-ms-error-response") && (bool)resp.Extensions["x-ms-error-response"] && resp.Body is CompositeType)
+                        //var xmsErrorResponses = method.Responses.Values.Where(resp=>resp.Extensions.ContainsKey("x-ms-error-response") && (bool)resp.Extensions["x-ms-error-response"] && resp.Body is CompositeType)
+                        var xmsErrorResponses = method.Responses.Values.Where(resp=>resp.Extensions.ContainsKey("x-error-response") && (bool)resp.Extensions["x-error-response"] && resp.Body is CompositeType)
                                                                         .Select(resp=>(CompositeType)resp.Body);
                         xmsErrorResponses.ForEach(errModel=>CodeModel.AddError(errModel));
 
@@ -162,7 +163,8 @@ namespace AutoRest.Modeler
             // regular model class or an exception class
             // Set base type
             var errorResponses = 
-                ServiceDefinition.Paths.Values.SelectMany(pathObj=>pathObj.Values.SelectMany(opObj=>opObj.Responses.Values.Where(res=>res.Extensions?.ContainsKey("x-ms-error-response")==true && (bool)res.Extensions["x-ms-error-response"])));
+                //ServiceDefinition.Paths.Values.SelectMany(pathObj=>pathObj.Values.SelectMany(opObj=>opObj.Responses.Values.Where(res=>res.Extensions?.ContainsKey("x-ms-error-response")==true && (bool)res.Extensions["x-ms-error-response"])));
+                ServiceDefinition.Paths.Values.SelectMany(pathObj=>pathObj.Values.SelectMany(opObj=>opObj.Responses.Values.Where(res=>res.Extensions?.ContainsKey("x-error-response")==true && (bool)res.Extensions["x-error-response"])));
             var errorModels = errorResponses.Select(resp=>resp.Schema?.Reference).Where(modelRef=>!string.IsNullOrEmpty(modelRef)).Select(modelRef=>GeneratedTypes[modelRef]);
             errorModels.ForEach(errorModel=>CodeModel.AddError(errorModel));
 
