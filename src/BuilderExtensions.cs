@@ -19,7 +19,7 @@ namespace AutoRest.Modeler
     public static class BuilderExtensions
     {
         public static IEnumerable<JToken> StringsToTokens(this IEnumerable<string> xs) => xs.Select<string, JToken>(x => x);
-        public static IEnumerable<string> TokensToStrings(this IEnumerable<JToken> xs) => xs.Select<JToken, string>(x => (string)x);
+        public static IEnumerable<string> TokensToStrings(this IEnumerable<JToken> xs) => xs.Select<JToken, string>(x => x.ToString(Newtonsoft.Json.Formatting.None));
 
         public static bool IsTaggedAsNoWire(this SwaggerBase item) => item.Extensions.Get<bool>("x-ms-no-wire") == true;
         public static string ForwardTo(this SwaggerBase item) => item.Extensions.GetValue<string>("x-ms-forward-to");
