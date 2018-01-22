@@ -260,7 +260,7 @@ namespace AutoRest.Modeler
                         In = ParameterLocation.Path,
                         Name = serverVar.Key,
                         Description = serverVar.Value.Description,
-                        Schema = new Schema { Type = DataType.String, Default = serverVar.Value.Default, Enum = serverVar.Value.Enum },
+                        Schema = new Schema { Type = DataType.String, Default = serverVar.Value.Default, Enum = serverVar.Value.Enum?.StringsToTokens().ToList() },
                         Extensions = serverVar.Value.Extensions,
                         IsRequired = true
                     };

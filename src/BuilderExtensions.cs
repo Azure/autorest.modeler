@@ -4,6 +4,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using AutoRest.Core.Logging;
 using AutoRest.Core.Utilities;
 using AutoRest.Modeler.JsonConverters;
@@ -17,6 +18,9 @@ namespace AutoRest.Modeler
 {
     public static class BuilderExtensions
     {
+        public static IEnumerable<JToken> StringsToTokens(this IEnumerable<string> xs) => xs.Select<string, JToken>(x => x);
+        public static IEnumerable<string> TokensToStrings(this IEnumerable<JToken> xs) => xs.Select<JToken, string>(x => JsonConvert.DeserializeObject<string>(JsonConvert.SerializeObject(x)));
+
         public static bool IsTaggedAsNoWire(this SwaggerBase item) => item.Extensions.Get<bool>("x-ms-no-wire") == true;
         public static string ForwardTo(this SwaggerBase item) => item.Extensions.GetValue<string>("x-ms-forward-to");
         public static Dictionary<string, string> Implementation(this SwaggerBase item)

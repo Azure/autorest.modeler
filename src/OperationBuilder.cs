@@ -270,7 +270,7 @@ namespace AutoRest.Modeler
                                 swaggerParameter.IsRequired = actualSwaggerParameter.IsRequired;
                                 swaggerParameter.Name = actualSwaggerParameter.Name;
                                 swaggerParameter.Schema = actualSwaggerParameter.Schema;
-                                swaggerParameter.Schema.Enum = _effectiveConsumes.ToList();
+                                swaggerParameter.Schema.Enum = _effectiveConsumes.StringsToTokens().ToList();
 
                                 // if not treated explicitly, add choices to the global choices
                                 if (swaggerParameter.Extensions.GetValue<JObject>("x-ms-enum") == null) {

@@ -70,7 +70,7 @@ namespace AutoRest.Modeler
                 var enumType = New<EnumType>();
                 // Set the underlying type. This helps to determine whether the values in EnumValue are of type string, number, etc.
                 enumType.UnderlyingType = type;
-                SwaggerObject.Enum.ForEach(v => enumType.Values.Add(new EnumValue { Name = v, SerializedName = v }));
+                SwaggerObject.Enum.OfType<JValue>().Select(x => (string)x).ForEach(v => enumType.Values.Add(new EnumValue { Name = v, SerializedName = v }));
                 if (xMsEnum is JContainer enumObject)
                 {
                     var enumName = "" + enumObject["name"];
@@ -224,7 +224,7 @@ namespace AutoRest.Modeler
 
             if (IsSwaggerObjectConstant(swaggerObject, property.IsRequired))
             {
-                property.DefaultValue = swaggerObject.Enum[0];
+                property.DefaultValue = swaggerObject.Enum.TokensToStrings().First();
                 property.IsConstant = true;
             }
 
@@ -251,7 +251,7 @@ namespace AutoRest.Modeler
 
             if (IsSwaggerObjectConstant(swaggerObject.Schema, parameter.IsRequired))
             {
-                parameter.DefaultValue = swaggerObject.Schema.Enum[0];
+                parameter.DefaultValue = swaggerObject.Schema.Enum.TokensToStrings().First();
                 parameter.IsConstant = true;
             }
 
