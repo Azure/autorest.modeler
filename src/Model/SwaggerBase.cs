@@ -3,9 +3,12 @@
 
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace AutoRest.Modeler.Model
 {
+    public enum EntityType { Type, Parameter, Property, Operation }
+
     public class SwaggerBase
     {
         public SwaggerBase()
@@ -18,6 +21,32 @@ namespace AutoRest.Modeler.Model
         /// </summary>
         [JsonExtensionData]
         public Dictionary<string, object> Extensions { get; set; }
+
+        public bool Deprecated { get; set; }
+
+        /// <summary>
+        /// Indicates whether this entity is deprecated (if "!= null") and if so, returns a corresponding message.
+        /// </summary>
+        public string GetDeprecationMessage(EntityType entityType)
+        {
+            var genericMessage = $"This {entityType.ToString().ToLowerInvariant()} is deprecated.";
+            var extension = Extensions.GetValueOrDefault("x-deprecated") as JObject;
+            var extDescription = extension?["description"]?.ToString();
+            var extReplacedBy = extension?["replaced-by"]?.ToString();
+            if (extDescription != null)
+            {
+                return extDescription;
+            }
+            if (extReplacedBy != null)
+            {
+                return $"{genericMessage} Please use {extReplacedBy} instead.";
+            }
+            if (Deprecated)
+            {
+                return $"{genericMessage} Please do not use it any longer.";
+            }
+            return null;
+        }
 
         public ObjectBuilder GetBuilder(SwaggerModeler swaggerSpecBuilder)
         {

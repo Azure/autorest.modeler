@@ -1,0 +1,796 @@
+{
+  "ModelTypes": [
+    {
+      "$id": "1",
+      "$type": "CompositeType",
+      "Properties": [
+        {
+          "$id": "2",
+          "IsReadOnly": false,
+          "Summary": null,
+          "RealPath": [
+            "name"
+          ],
+          "XmlProperties": null,
+          "Implementation": null,
+          "ForwardTo": null,
+          "CollectionFormat": 0,
+          "Constraints": {},
+          "DefaultValue": {
+            "fixed": false,
+            "raw": null
+          },
+          "DeprecationMessage": null,
+          "Deprecated": false,
+          "Documentation": {
+            "fixed": false,
+            "raw": "name of the pet"
+          },
+          "Extensions": {},
+          "IsRequired": false,
+          "IsConstant": false,
+          "Name": {
+            "fixed": false,
+            "raw": "name"
+          },
+          "SerializedName": "name",
+          "ModelType": {
+            "$id": "3",
+            "$type": "PrimaryType",
+            "Format": null,
+            "KnownPrimaryType": 6,
+            "Deprecated": false,
+            "Name": {
+              "fixed": false,
+              "raw": "String"
+            },
+            "Extensions": {},
+            "DeprecationMessage": null,
+            "XmlProperties": null
+          }
+        }
+      ],
+      "SerializedName": "PetNo",
+      "BaseModelType": null,
+      "PolymorphicDiscriminator": null,
+      "Summary": null,
+      "Documentation": null,
+      "ExternalDocsUrl": null,
+      "ContainsConstantProperties": false,
+      "Name": {
+        "fixed": false,
+        "raw": "PetNo"
+      },
+      "Extensions": {},
+      "DeprecationMessage": null,
+      "Deprecated": false,
+      "XmlProperties": null
+    },
+    {
+      "$id": "4",
+      "$type": "CompositeType",
+      "Properties": [
+        {
+          "$id": "5",
+          "IsReadOnly": false,
+          "Summary": null,
+          "RealPath": [
+            "name"
+          ],
+          "XmlProperties": null,
+          "Implementation": null,
+          "ForwardTo": null,
+          "CollectionFormat": 0,
+          "Constraints": {},
+          "DefaultValue": {
+            "fixed": false,
+            "raw": null
+          },
+          "DeprecationMessage": null,
+          "Deprecated": false,
+          "Documentation": {
+            "fixed": false,
+            "raw": "name of the pet"
+          },
+          "Extensions": {},
+          "IsRequired": false,
+          "IsConstant": false,
+          "Name": {
+            "fixed": false,
+            "raw": "name"
+          },
+          "SerializedName": "name",
+          "ModelType": {
+            "$id": "6",
+            "$type": "PrimaryType",
+            "Format": null,
+            "KnownPrimaryType": 6,
+            "Deprecated": false,
+            "Name": {
+              "fixed": false,
+              "raw": "String"
+            },
+            "Extensions": {},
+            "DeprecationMessage": null,
+            "XmlProperties": null
+          }
+        }
+      ],
+      "SerializedName": "PetYes",
+      "BaseModelType": null,
+      "PolymorphicDiscriminator": null,
+      "Summary": null,
+      "Documentation": null,
+      "ExternalDocsUrl": null,
+      "ContainsConstantProperties": false,
+      "Name": {
+        "fixed": false,
+        "raw": "PetYes"
+      },
+      "Extensions": {},
+      "DeprecationMessage": "This type is deprecated. Please do not use it any longer.",
+      "Deprecated": true,
+      "XmlProperties": null
+    },
+    {
+      "$id": "7",
+      "$type": "CompositeType",
+      "Properties": [
+        {
+          "$id": "8",
+          "IsReadOnly": false,
+          "Summary": null,
+          "RealPath": [
+            "nameNo"
+          ],
+          "XmlProperties": null,
+          "Implementation": null,
+          "ForwardTo": null,
+          "CollectionFormat": 0,
+          "Constraints": {},
+          "DefaultValue": {
+            "fixed": false,
+            "raw": null
+          },
+          "DeprecationMessage": null,
+          "Deprecated": false,
+          "Documentation": {
+            "fixed": false,
+            "raw": "name of the pet"
+          },
+          "Extensions": {},
+          "IsRequired": false,
+          "IsConstant": false,
+          "Name": {
+            "fixed": false,
+            "raw": "nameNo"
+          },
+          "SerializedName": "nameNo",
+          "ModelType": {
+            "$id": "9",
+            "$type": "PrimaryType",
+            "Format": null,
+            "KnownPrimaryType": 6,
+            "Deprecated": false,
+            "Name": {
+              "fixed": false,
+              "raw": "String"
+            },
+            "Extensions": {},
+            "DeprecationMessage": null,
+            "XmlProperties": null
+          }
+        },
+        {
+          "$id": "10",
+          "IsReadOnly": false,
+          "Summary": null,
+          "RealPath": [
+            "nameYes"
+          ],
+          "XmlProperties": null,
+          "Implementation": null,
+          "ForwardTo": null,
+          "CollectionFormat": 0,
+          "Constraints": {},
+          "DefaultValue": {
+            "fixed": false,
+            "raw": null
+          },
+          "DeprecationMessage": "This property is deprecated. Please do not use it any longer.",
+          "Deprecated": true,
+          "Documentation": {
+            "fixed": false,
+            "raw": "name of the pet"
+          },
+          "Extensions": {},
+          "IsRequired": false,
+          "IsConstant": false,
+          "Name": {
+            "fixed": false,
+            "raw": "nameYes"
+          },
+          "SerializedName": "nameYes",
+          "ModelType": {
+            "$id": "11",
+            "$type": "PrimaryType",
+            "Format": null,
+            "KnownPrimaryType": 6,
+            "Deprecated": true,
+            "Name": {
+              "fixed": false,
+              "raw": "String"
+            },
+            "Extensions": {},
+            "DeprecationMessage": "This type is deprecated. Please do not use it any longer.",
+            "XmlProperties": null
+          }
+        }
+      ],
+      "SerializedName": "Pet",
+      "BaseModelType": null,
+      "PolymorphicDiscriminator": null,
+      "Summary": null,
+      "Documentation": null,
+      "ExternalDocsUrl": null,
+      "ContainsConstantProperties": false,
+      "Name": {
+        "fixed": false,
+        "raw": "Pet"
+      },
+      "Extensions": {},
+      "DeprecationMessage": null,
+      "Deprecated": false,
+      "XmlProperties": null
+    },
+    {
+      "$id": "12",
+      "$type": "CompositeType",
+      "Properties": [
+        {
+          "$id": "13",
+          "IsReadOnly": false,
+          "Summary": null,
+          "RealPath": [
+            "parentNo"
+          ],
+          "XmlProperties": null,
+          "Implementation": null,
+          "ForwardTo": null,
+          "CollectionFormat": 0,
+          "Constraints": {},
+          "DefaultValue": {
+            "fixed": false,
+            "raw": null
+          },
+          "DeprecationMessage": null,
+          "Deprecated": false,
+          "Documentation": {
+            "fixed": false,
+            "raw": null
+          },
+          "Extensions": {},
+          "IsRequired": false,
+          "IsConstant": false,
+          "Name": {
+            "fixed": false,
+            "raw": "parentNo"
+          },
+          "SerializedName": "parentNo",
+          "ModelType": {
+            "$ref": "1"
+          }
+        },
+        {
+          "$id": "14",
+          "IsReadOnly": false,
+          "Summary": null,
+          "RealPath": [
+            "parentYes"
+          ],
+          "XmlProperties": null,
+          "Implementation": null,
+          "ForwardTo": null,
+          "CollectionFormat": 0,
+          "Constraints": {},
+          "DefaultValue": {
+            "fixed": false,
+            "raw": null
+          },
+          "DeprecationMessage": null,
+          "Deprecated": false,
+          "Documentation": {
+            "fixed": false,
+            "raw": null
+          },
+          "Extensions": {},
+          "IsRequired": false,
+          "IsConstant": false,
+          "Name": {
+            "fixed": false,
+            "raw": "parentYes"
+          },
+          "SerializedName": "parentYes",
+          "ModelType": {
+            "$ref": "4"
+          }
+        }
+      ],
+      "SerializedName": "ChildPet",
+      "BaseModelType": null,
+      "PolymorphicDiscriminator": null,
+      "Summary": null,
+      "Documentation": "Properties should not inherit deprecatedness of types (type could be swapped out but property stays the same).\nNote that service teams will get a warning at the property in the generated C# SDK, but that's exactly what you want -- bother the service team in that case, not the user.",
+      "ExternalDocsUrl": null,
+      "ContainsConstantProperties": false,
+      "Name": {
+        "fixed": false,
+        "raw": "ChildPet"
+      },
+      "Extensions": {},
+      "DeprecationMessage": null,
+      "Deprecated": false,
+      "XmlProperties": null
+    }
+  ],
+  "ErrorTypes": [],
+  "HeaderTypes": [],
+  "EnumTypes": [
+    {
+      "$id": "15",
+      "$type": "EnumType",
+      "ModelAsExtensible": false,
+      "Values": [
+        {
+          "AllowedValues": [],
+          "Description": null,
+          "Name": "a",
+          "SerializedName": "a"
+        },
+        {
+          "AllowedValues": [],
+          "Description": null,
+          "Name": "b",
+          "SerializedName": "b"
+        }
+      ],
+      "ModelAsString": false,
+      "UnderlyingType": {
+        "$id": "16",
+        "$type": "PrimaryType",
+        "Format": null,
+        "KnownPrimaryType": 6,
+        "Deprecated": false,
+        "Name": {
+          "fixed": false,
+          "raw": "String"
+        },
+        "Extensions": {},
+        "DeprecationMessage": null,
+        "XmlProperties": null
+      },
+      "Deprecated": false,
+      "Name": {
+        "fixed": false,
+        "raw": "Enum1No"
+      },
+      "Extensions": {},
+      "DeprecationMessage": null,
+      "XmlProperties": null
+    },
+    {
+      "$id": "17",
+      "$type": "EnumType",
+      "ModelAsExtensible": false,
+      "Values": [
+        {
+          "AllowedValues": [],
+          "Description": null,
+          "Name": "a",
+          "SerializedName": "a"
+        },
+        {
+          "AllowedValues": [],
+          "Description": null,
+          "Name": "b",
+          "SerializedName": "b"
+        }
+      ],
+      "ModelAsString": false,
+      "UnderlyingType": {
+        "$id": "18",
+        "$type": "PrimaryType",
+        "Format": null,
+        "KnownPrimaryType": 6,
+        "Deprecated": false,
+        "Name": {
+          "fixed": false,
+          "raw": "String"
+        },
+        "Extensions": {},
+        "DeprecationMessage": null,
+        "XmlProperties": null
+      },
+      "Deprecated": true,
+      "Name": {
+        "fixed": false,
+        "raw": "Enum1Yes"
+      },
+      "Extensions": {},
+      "DeprecationMessage": "This type is deprecated. Please do not use it any longer.",
+      "XmlProperties": null
+    },
+    {
+      "$id": "19",
+      "$type": "EnumType",
+      "ModelAsExtensible": false,
+      "Values": [
+        {
+          "AllowedValues": [],
+          "Description": null,
+          "Name": "a",
+          "SerializedName": "a"
+        },
+        {
+          "AllowedValues": [],
+          "Description": null,
+          "Name": "b",
+          "SerializedName": "b"
+        }
+      ],
+      "ModelAsString": true,
+      "UnderlyingType": {
+        "$id": "20",
+        "$type": "PrimaryType",
+        "Format": null,
+        "KnownPrimaryType": 6,
+        "Deprecated": false,
+        "Name": {
+          "fixed": false,
+          "raw": "String"
+        },
+        "Extensions": {},
+        "DeprecationMessage": null,
+        "XmlProperties": null
+      },
+      "Deprecated": false,
+      "Name": {
+        "fixed": false,
+        "raw": "Enum2No"
+      },
+      "Extensions": {},
+      "DeprecationMessage": null,
+      "XmlProperties": null
+    },
+    {
+      "$id": "21",
+      "$type": "EnumType",
+      "ModelAsExtensible": false,
+      "Values": [
+        {
+          "AllowedValues": [],
+          "Description": null,
+          "Name": "a",
+          "SerializedName": "a"
+        },
+        {
+          "AllowedValues": [],
+          "Description": null,
+          "Name": "b",
+          "SerializedName": "b"
+        }
+      ],
+      "ModelAsString": true,
+      "UnderlyingType": {
+        "$id": "22",
+        "$type": "PrimaryType",
+        "Format": null,
+        "KnownPrimaryType": 6,
+        "Deprecated": false,
+        "Name": {
+          "fixed": false,
+          "raw": "String"
+        },
+        "Extensions": {},
+        "DeprecationMessage": null,
+        "XmlProperties": null
+      },
+      "Deprecated": true,
+      "Name": {
+        "fixed": false,
+        "raw": "Enum2Yes"
+      },
+      "Extensions": {},
+      "DeprecationMessage": "This type is deprecated. Please do not use it any longer.",
+      "XmlProperties": null
+    },
+    {
+      "$id": "23",
+      "$type": "EnumType",
+      "ModelAsExtensible": true,
+      "Values": [
+        {
+          "AllowedValues": [],
+          "Description": null,
+          "Name": "a",
+          "SerializedName": "a"
+        },
+        {
+          "AllowedValues": [],
+          "Description": null,
+          "Name": "b",
+          "SerializedName": "b"
+        }
+      ],
+      "ModelAsString": false,
+      "UnderlyingType": {
+        "$id": "24",
+        "$type": "PrimaryType",
+        "Format": null,
+        "KnownPrimaryType": 6,
+        "Deprecated": false,
+        "Name": {
+          "fixed": false,
+          "raw": "String"
+        },
+        "Extensions": {},
+        "DeprecationMessage": null,
+        "XmlProperties": null
+      },
+      "Deprecated": false,
+      "Name": {
+        "fixed": false,
+        "raw": "Enum3No"
+      },
+      "Extensions": {},
+      "DeprecationMessage": null,
+      "XmlProperties": null
+    },
+    {
+      "$id": "25",
+      "$type": "EnumType",
+      "ModelAsExtensible": true,
+      "Values": [
+        {
+          "AllowedValues": [],
+          "Description": null,
+          "Name": "a",
+          "SerializedName": "a"
+        },
+        {
+          "AllowedValues": [],
+          "Description": null,
+          "Name": "b",
+          "SerializedName": "b"
+        }
+      ],
+      "ModelAsString": false,
+      "UnderlyingType": {
+        "$id": "26",
+        "$type": "PrimaryType",
+        "Format": null,
+        "KnownPrimaryType": 6,
+        "Deprecated": false,
+        "Name": {
+          "fixed": false,
+          "raw": "String"
+        },
+        "Extensions": {},
+        "DeprecationMessage": null,
+        "XmlProperties": null
+      },
+      "Deprecated": true,
+      "Name": {
+        "fixed": false,
+        "raw": "Enum3Yes"
+      },
+      "Extensions": {},
+      "DeprecationMessage": "This type is deprecated. Please do not use it any longer.",
+      "XmlProperties": null
+    }
+  ],
+  "HostParametersFront": null,
+  "HostParametersBack": null,
+  "Name": "Deprecated",
+  "Namespace": null,
+  "ModelsName": "Models",
+  "ApiVersion": "2016-07-07",
+  "BaseUrl": "https://localhost",
+  "Documentation": "Deprecated stuff mixed with non-deprecated stuff (having \"yes\" or \"no\" in it's name, respectively)",
+  "Extensions": {},
+  "CodeGenExtensions": {},
+  "Properties": [],
+  "Operations": [
+    {
+      "Methods": [
+        {
+          "Parameters": [
+            {
+              "$id": "27",
+              "ClientProperty": null,
+              "Location": 2,
+              "Deprecated": false,
+              "CollectionFormat": 0,
+              "Constraints": {},
+              "DefaultValue": {
+                "fixed": false,
+                "raw": null
+              },
+              "DeprecationMessage": null,
+              "Documentation": {
+                "fixed": false,
+                "raw": null
+              },
+              "Extensions": {},
+              "IsRequired": false,
+              "IsConstant": false,
+              "Name": {
+                "fixed": false,
+                "raw": "arg"
+              },
+              "SerializedName": "arg",
+              "ModelType": {
+                "$id": "28",
+                "$type": "PrimaryType",
+                "Format": null,
+                "KnownPrimaryType": 6,
+                "Deprecated": false,
+                "Name": {
+                  "fixed": false,
+                  "raw": "String"
+                },
+                "Extensions": {},
+                "DeprecationMessage": null,
+                "XmlProperties": null
+              }
+            }
+          ],
+          "Name": {
+            "fixed": false,
+            "raw": "No"
+          },
+          "Group": {
+            "fixed": false,
+            "raw": "Path"
+          },
+          "SerializedName": "Path_No",
+          "Url": "/path/no",
+          "IsAbsoluteUrl": false,
+          "HttpMethod": 0,
+          "InputParameterTransformation": [],
+          "Responses": {
+            "OK": {
+              "Body": null,
+              "Headers": null,
+              "Extensions": {},
+              "IsNullable": true
+            }
+          },
+          "DefaultResponse": {
+            "Body": null,
+            "Headers": null,
+            "Extensions": {},
+            "IsNullable": true
+          },
+          "ReturnType": {
+            "Body": null,
+            "Headers": null,
+            "Extensions": {},
+            "IsNullable": true
+          },
+          "Description": null,
+          "Summary": null,
+          "ExternalDocsUrl": null,
+          "RequestContentType": "application/json; charset=utf-8",
+          "ResponseContentTypes": [
+            "application/json"
+          ],
+          "Extensions": {},
+          "DeprecationMessage": null,
+          "Deprecated": false,
+          "Hidden": false,
+          "Implementation": null,
+          "ForwardTo": null
+        },
+        {
+          "Parameters": [
+            {
+              "$id": "29",
+              "ClientProperty": null,
+              "Location": 2,
+              "Deprecated": false,
+              "CollectionFormat": 0,
+              "Constraints": {},
+              "DefaultValue": {
+                "fixed": false,
+                "raw": null
+              },
+              "DeprecationMessage": null,
+              "Documentation": {
+                "fixed": false,
+                "raw": null
+              },
+              "Extensions": {},
+              "IsRequired": false,
+              "IsConstant": false,
+              "Name": {
+                "fixed": false,
+                "raw": "arg"
+              },
+              "SerializedName": "arg",
+              "ModelType": {
+                "$id": "30",
+                "$type": "PrimaryType",
+                "Format": null,
+                "KnownPrimaryType": 6,
+                "Deprecated": false,
+                "Name": {
+                  "fixed": false,
+                  "raw": "String"
+                },
+                "Extensions": {},
+                "DeprecationMessage": null,
+                "XmlProperties": null
+              }
+            }
+          ],
+          "Name": {
+            "fixed": false,
+            "raw": "Yes"
+          },
+          "Group": {
+            "fixed": false,
+            "raw": "Path"
+          },
+          "SerializedName": "Path_Yes",
+          "Url": "/path/yes",
+          "IsAbsoluteUrl": false,
+          "HttpMethod": 0,
+          "InputParameterTransformation": [],
+          "Responses": {
+            "OK": {
+              "Body": null,
+              "Headers": null,
+              "Extensions": {},
+              "IsNullable": true
+            }
+          },
+          "DefaultResponse": {
+            "Body": null,
+            "Headers": null,
+            "Extensions": {},
+            "IsNullable": true
+          },
+          "ReturnType": {
+            "Body": null,
+            "Headers": null,
+            "Extensions": {},
+            "IsNullable": true
+          },
+          "Description": null,
+          "Summary": null,
+          "ExternalDocsUrl": null,
+          "RequestContentType": "application/json; charset=utf-8",
+          "ResponseContentTypes": [
+            "application/json"
+          ],
+          "Extensions": {},
+          "DeprecationMessage": null,
+          "Deprecated": false,
+          "Hidden": false,
+          "Implementation": null,
+          "ForwardTo": null
+        }
+      ],
+      "Name": {
+        "fixed": false,
+        "raw": "Path"
+      },
+      "TypeName": {
+        "fixed": false,
+        "raw": null
+      },
+      "NameForProperty": "Path"
+    }
+  ]
+}
