@@ -30,9 +30,10 @@ namespace AutoRest.Modeler.Model
         public string GetDeprecationMessage(EntityType entityType)
         {
             var genericMessage = $"This {entityType.ToString().ToLowerInvariant()} is deprecated.";
-            var extension = Extensions.GetValueOrDefault("x-deprecated") as JObject;
-            var extDescription = extension?["description"]?.ToString();
-            var extReplacedBy = extension?["replaced-by"]?.ToString();
+            var extension = Extensions.GetValueOrDefault("x-deprecated");
+            var extensionObj = extension as JObject;
+            var extDescription = extensionObj?["description"]?.ToString();
+            var extReplacedBy = extensionObj?["replaced-by"]?.ToString();
             if (extDescription != null)
             {
                 return extDescription;
@@ -41,7 +42,7 @@ namespace AutoRest.Modeler.Model
             {
                 return $"{genericMessage} Please use {extReplacedBy} instead.";
             }
-            if (Deprecated)
+            if (Deprecated || extension != null)
             {
                 return $"{genericMessage} Please do not use it any longer.";
             }
