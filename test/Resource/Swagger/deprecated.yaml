@@ -69,6 +69,37 @@ paths:
       responses:
         '200':
           description: OK
+  '/path/params':
+    get:
+      deprecated: true
+      x-deprecated:
+        replaced-by: No
+      operationId: Path_Replaced
+      parameters:
+        - name: argNo
+          in: query
+          schema:
+            type: string
+        - name: argYes
+          in: query
+          schema:
+            type: string
+          x-deprecated: true
+        - name: argCustom
+          in: query
+          schema:
+            type: string
+          x-deprecated:
+            description: This parameter will be removed in 2005.
+        - name: argReplaced
+          in: query
+          schema:
+            type: string
+          x-deprecated:
+            replaced-by: argNo
+      responses:
+        '200':
+          description: OK
 components:
   schemas:
     PetNo:

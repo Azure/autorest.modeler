@@ -1551,6 +1551,226 @@
           "Hidden": false,
           "Implementation": null,
           "ForwardTo": null
+        },
+        {
+          "Parameters": [
+            {
+              "$id": "59",
+              "ClientProperty": null,
+              "Location": 2,
+              "Deprecated": false,
+              "CollectionFormat": 0,
+              "Constraints": {},
+              "DefaultValue": {
+                "fixed": false,
+                "raw": null
+              },
+              "DeprecationMessage": null,
+              "Documentation": {
+                "fixed": false,
+                "raw": null
+              },
+              "Extensions": {},
+              "IsRequired": false,
+              "IsConstant": false,
+              "Name": {
+                "fixed": false,
+                "raw": "argNo"
+              },
+              "SerializedName": "argNo",
+              "ModelType": {
+                "$id": "60",
+                "$type": "PrimaryType",
+                "Format": null,
+                "KnownPrimaryType": 6,
+                "Deprecated": false,
+                "Name": {
+                  "fixed": false,
+                  "raw": "String"
+                },
+                "Extensions": {},
+                "DeprecationMessage": null,
+                "XmlProperties": null
+              }
+            },
+            {
+              "$id": "61",
+              "ClientProperty": null,
+              "Location": 2,
+              "Deprecated": true,
+              "CollectionFormat": 0,
+              "Constraints": {},
+              "DefaultValue": {
+                "fixed": false,
+                "raw": null
+              },
+              "DeprecationMessage": "This parameter is deprecated. Please do not use it any longer.",
+              "Documentation": {
+                "fixed": false,
+                "raw": null
+              },
+              "Extensions": {
+                "x-deprecated": true
+              },
+              "IsRequired": false,
+              "IsConstant": false,
+              "Name": {
+                "fixed": false,
+                "raw": "argYes"
+              },
+              "SerializedName": "argYes",
+              "ModelType": {
+                "$id": "62",
+                "$type": "PrimaryType",
+                "Format": null,
+                "KnownPrimaryType": 6,
+                "Deprecated": false,
+                "Name": {
+                  "fixed": false,
+                  "raw": "String"
+                },
+                "Extensions": {},
+                "DeprecationMessage": null,
+                "XmlProperties": null
+              }
+            },
+            {
+              "$id": "63",
+              "ClientProperty": null,
+              "Location": 2,
+              "Deprecated": true,
+              "CollectionFormat": 0,
+              "Constraints": {},
+              "DefaultValue": {
+                "fixed": false,
+                "raw": null
+              },
+              "DeprecationMessage": "This parameter will be removed in 2005.",
+              "Documentation": {
+                "fixed": false,
+                "raw": null
+              },
+              "Extensions": {
+                "x-deprecated": {
+                  "description": "This parameter will be removed in 2005."
+                }
+              },
+              "IsRequired": false,
+              "IsConstant": false,
+              "Name": {
+                "fixed": false,
+                "raw": "argCustom"
+              },
+              "SerializedName": "argCustom",
+              "ModelType": {
+                "$id": "64",
+                "$type": "PrimaryType",
+                "Format": null,
+                "KnownPrimaryType": 6,
+                "Deprecated": false,
+                "Name": {
+                  "fixed": false,
+                  "raw": "String"
+                },
+                "Extensions": {},
+                "DeprecationMessage": null,
+                "XmlProperties": null
+              }
+            },
+            {
+              "$id": "65",
+              "ClientProperty": null,
+              "Location": 2,
+              "Deprecated": true,
+              "CollectionFormat": 0,
+              "Constraints": {},
+              "DefaultValue": {
+                "fixed": false,
+                "raw": null
+              },
+              "DeprecationMessage": "This parameter is deprecated. Please use argNo instead.",
+              "Documentation": {
+                "fixed": false,
+                "raw": null
+              },
+              "Extensions": {
+                "x-deprecated": {
+                  "replaced-by": "argNo"
+                }
+              },
+              "IsRequired": false,
+              "IsConstant": false,
+              "Name": {
+                "fixed": false,
+                "raw": "argReplaced"
+              },
+              "SerializedName": "argReplaced",
+              "ModelType": {
+                "$id": "66",
+                "$type": "PrimaryType",
+                "Format": null,
+                "KnownPrimaryType": 6,
+                "Deprecated": false,
+                "Name": {
+                  "fixed": false,
+                  "raw": "String"
+                },
+                "Extensions": {},
+                "DeprecationMessage": null,
+                "XmlProperties": null
+              }
+            }
+          ],
+          "Name": {
+            "fixed": false,
+            "raw": "Replaced1"
+          },
+          "Group": {
+            "fixed": false,
+            "raw": "Path"
+          },
+          "SerializedName": "Path_Replaced",
+          "Url": "/path/params",
+          "IsAbsoluteUrl": false,
+          "HttpMethod": 0,
+          "InputParameterTransformation": [],
+          "Responses": {
+            "OK": {
+              "Body": null,
+              "Headers": null,
+              "Extensions": {},
+              "IsNullable": true
+            }
+          },
+          "DefaultResponse": {
+            "Body": null,
+            "Headers": null,
+            "Extensions": {},
+            "IsNullable": true
+          },
+          "ReturnType": {
+            "Body": null,
+            "Headers": null,
+            "Extensions": {},
+            "IsNullable": true
+          },
+          "Description": null,
+          "Summary": null,
+          "ExternalDocsUrl": null,
+          "RequestContentType": "application/json; charset=utf-8",
+          "ResponseContentTypes": [
+            "application/json"
+          ],
+          "Extensions": {
+            "x-deprecated": {
+              "replaced-by": "No"
+            }
+          },
+          "DeprecationMessage": "This operation is deprecated. Please use No instead.",
+          "Deprecated": true,
+          "Hidden": false,
+          "Implementation": null,
+          "ForwardTo": null
         }
       ],
       "Name": {
