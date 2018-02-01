@@ -61,8 +61,6 @@ namespace AutoRest.Modeler.Model
         /// </summary>
         public string Default { get; set; }
 
-        public bool Deprecated { get; set; }
-
         public string MultipleOf { get; set; }
 
         public string Maximum { get; set; }

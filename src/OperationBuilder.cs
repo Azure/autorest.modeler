@@ -94,7 +94,7 @@ namespace AutoRest.Modeler
             method.Description = _operation.Description;
             method.Summary = _operation.Summary;
             method.ExternalDocsUrl = _operation.ExternalDocs?.Url;
-            method.Deprecated = _operation.Deprecated;
+            method.DeprecationMessage = _operation.GetDeprecationMessage(EntityType.Operation);
 
             // Service parameters
             BuildMethodParameters(method);
