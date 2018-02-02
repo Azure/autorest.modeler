@@ -189,7 +189,7 @@ namespace AutoRest.Modeler
                     ElementXmlProperties = SwaggerObject.Items?.Xml
                 });
             }
-            if (SwaggerObject.AdditionalProperties != null)
+            if (SwaggerObject.Type == DataType.Object && SwaggerObject.AdditionalProperties != null)
             {
                 string dictionaryValueServiceTypeName;
                 if (SwaggerObject.AdditionalProperties.Reference != null)

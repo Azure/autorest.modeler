@@ -7,6 +7,7 @@ info:
 paths: {}
 definitions:
   Cowbell:
+    type: object
     properties: # suffix: "type: <1/2 => object/string>";"additionalProperties: { <1/2 => with/without type> }";"properties: { <1/2 => with/without properties> }"
       object000:
         x-semantics:

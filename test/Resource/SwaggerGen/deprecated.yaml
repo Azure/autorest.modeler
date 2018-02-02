@@ -92,17 +92,20 @@ paths:
           description: OK
 definitions:
   PetNo:
+    type: object
     properties:
       name:
         type: string
         description: name of the pet
   PetYes:
+    type: object
     x-deprecated: true
     properties:
       name:
         type: string
         description: name of the pet
   PetCustom:
+    type: object
     x-deprecated:
       description: This type will be removed in 2005.
     properties:
@@ -110,6 +113,7 @@ definitions:
         type: string
         description: name of the pet
   PetReplaced:
+    type: object
     x-deprecated:
       replaced-by: PetNo
     properties:
@@ -117,6 +121,7 @@ definitions:
         type: string
         description: name of the pet
   Pet:
+    type: object
     properties:
       nameNo:
         type: string
@@ -136,6 +141,7 @@ definitions:
         type: string
         description: name of the pet
   ChildPet:
+    type: object
     description: |-
       Properties should not inherit deprecatedness of types (type could be swapped out but property stays the same).
       Note that service teams will get a warning at the property in the generated C# SDK, but that's exactly what you want -- bother the service team in that case, not the user.
