@@ -66,7 +66,7 @@ namespace AutoRest.Modeler
         ///      this type is a Dictionary. (and is handled by ObjectBuilder)
         /// </summary>
         public static bool IsPrimitiveType(this Schema _schema)
-            => (_schema.Type != null && _schema.Type != DataType.Object || (_schema.Type == DataType.Object && _schema.AdditionalProperties != null && _schema.Properties.IsNullOrEmpty()));
+            => (_schema.Type != null && _schema.Type != DataType.Object || (_schema.Type == DataType.Object && _schema.AdditionalProperties != null && _schema.Properties == null));
 
         /// <summary>
         /// A schema represents a simple primary type if it's a stream, or an object with no properties
