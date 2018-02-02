@@ -12,197 +12,6 @@ modelTypes:
     extensions:
       x-semantics:
         oneOf:
-          - type: array
-          - type: boolean
-          - type: integer
-          - type: number
-          - type: 'null'
-          - properties:
-              prop:
-                type: integer
-            type: object
-          - type: string
-    name:
-      fixed: false
-      raw: Cowbell_object002
-    properties:
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: int
-          name:
-            fixed: false
-            raw: Int
-        name:
-          fixed: false
-          raw: prop
-        realPath:
-          - prop
-        serializedName: prop
-    serializedName: Cowbell_object002
-  - &ref_1
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    extensions:
-      x-semantics:
-        oneOf:
-          - type: array
-          - type: boolean
-          - type: integer
-          - type: number
-          - type: 'null'
-          - additionalProperties: {}
-            properties:
-              prop:
-                type: integer
-            type: object
-          - type: string
-    name:
-      fixed: false
-      raw: Cowbell_object012
-    properties:
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: >-
-            Unmatched properties from the message are deserialized this
-            collection
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $type: DictionaryType
-          deprecated: false
-          name:
-            fixed: false
-          supportsAdditionalProperties: true
-          valueType:
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: object
-            name:
-              fixed: false
-              raw: Object
-        name:
-          fixed: false
-          raw: additionalProperties
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: int
-          name:
-            fixed: false
-            raw: Int
-        name:
-          fixed: false
-          raw: prop
-        realPath:
-          - prop
-        serializedName: prop
-    serializedName: Cowbell_object012
-  - &ref_2
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    extensions:
-      x-semantics:
-        oneOf:
-          - type: array
-          - type: boolean
-          - type: integer
-          - type: number
-          - type: 'null'
-          - additionalProperties:
-              type: boolean
-            properties:
-              prop:
-                type: integer
-            type: object
-          - type: string
-    name:
-      fixed: false
-      raw: Cowbell_object022
-    properties:
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: >-
-            Unmatched properties from the message are deserialized this
-            collection
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $type: DictionaryType
-          deprecated: false
-          name:
-            fixed: false
-          supportsAdditionalProperties: true
-          valueType:
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: boolean
-            name:
-              fixed: false
-              raw: Boolean
-        name:
-          fixed: false
-          raw: additionalProperties
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: int
-          name:
-            fixed: false
-            raw: Int
-        name:
-          fixed: false
-          raw: prop
-        realPath:
-          - prop
-        serializedName: prop
-    serializedName: Cowbell_object022
-  - &ref_3
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    extensions:
-      x-semantics:
-        oneOf:
           - properties:
               prop:
                 type: integer
@@ -234,7 +43,7 @@ modelTypes:
           - prop
         serializedName: prop
     serializedName: Cowbell_object102
-  - &ref_4
+  - &ref_1
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -269,12 +78,10 @@ modelTypes:
             fixed: false
           supportsAdditionalProperties: true
           valueType:
-            $type: PrimaryType
+            $type: MultiType
             deprecated: false
-            knownPrimaryType: object
             name:
               fixed: false
-              raw: Object
         name:
           fixed: false
           raw: additionalProperties
@@ -301,7 +108,7 @@ modelTypes:
           - prop
         serializedName: prop
     serializedName: Cowbell_object112
-  - &ref_5
+  - &ref_2
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -396,12 +203,10 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $type: PrimaryType
+          $type: MultiType
           deprecated: false
-          knownPrimaryType: object
           name:
             fixed: false
-            raw: Object
         name:
           fixed: false
           raw: object000
@@ -429,12 +234,10 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $type: PrimaryType
+          $type: MultiType
           deprecated: false
-          knownPrimaryType: object
           name:
             fixed: false
-            raw: Object
         name:
           fixed: false
           raw: object001
@@ -463,7 +266,11 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType: *ref_0
+        modelType:
+          $type: MultiType
+          deprecated: false
+          name:
+            fixed: false
         name:
           fixed: false
           raw: object002
@@ -491,18 +298,10 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $type: DictionaryType
+          $type: MultiType
           deprecated: false
           name:
             fixed: false
-          supportsAdditionalProperties: false
-          valueType:
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: object
-            name:
-              fixed: false
-              raw: Object
         name:
           fixed: false
           raw: object010
@@ -531,18 +330,10 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $type: DictionaryType
+          $type: MultiType
           deprecated: false
           name:
             fixed: false
-          supportsAdditionalProperties: false
-          valueType:
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: object
-            name:
-              fixed: false
-              raw: Object
         name:
           fixed: false
           raw: object011
@@ -572,7 +363,11 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType: *ref_1
+        modelType:
+          $type: MultiType
+          deprecated: false
+          name:
+            fixed: false
         name:
           fixed: false
           raw: object012
@@ -601,18 +396,10 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $type: DictionaryType
+          $type: MultiType
           deprecated: false
           name:
             fixed: false
-          supportsAdditionalProperties: false
-          valueType:
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: boolean
-            name:
-              fixed: false
-              raw: Boolean
         name:
           fixed: false
           raw: object020
@@ -642,18 +429,10 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $type: DictionaryType
+          $type: MultiType
           deprecated: false
           name:
             fixed: false
-          supportsAdditionalProperties: false
-          valueType:
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: boolean
-            name:
-              fixed: false
-              raw: Boolean
         name:
           fixed: false
           raw: object021
@@ -684,7 +463,11 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType: *ref_2
+        modelType:
+          $type: MultiType
+          deprecated: false
+          name:
+            fixed: false
         name:
           fixed: false
           raw: object022
@@ -760,7 +543,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType: *ref_3
+        modelType: *ref_0
         name:
           fixed: false
           raw: object102
@@ -788,12 +571,10 @@ modelTypes:
             fixed: false
           supportsAdditionalProperties: false
           valueType:
-            $type: PrimaryType
+            $type: MultiType
             deprecated: false
-            knownPrimaryType: object
             name:
               fixed: false
-              raw: Object
         name:
           fixed: false
           raw: object110
@@ -822,12 +603,10 @@ modelTypes:
             fixed: false
           supportsAdditionalProperties: false
           valueType:
-            $type: PrimaryType
+            $type: MultiType
             deprecated: false
-            knownPrimaryType: object
             name:
               fixed: false
-              raw: Object
         name:
           fixed: false
           raw: object111
@@ -851,7 +630,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType: *ref_4
+        modelType: *ref_1
         name:
           fixed: false
           raw: object112
@@ -945,7 +724,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType: *ref_5
+        modelType: *ref_2
         name:
           fixed: false
           raw: object122
@@ -1044,18 +823,12 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $type: DictionaryType
+          $type: PrimaryType
           deprecated: false
+          knownPrimaryType: string
           name:
             fixed: false
-          supportsAdditionalProperties: false
-          valueType:
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: object
-            name:
-              fixed: false
-              raw: Object
+            raw: String
         name:
           fixed: false
           raw: object210
@@ -1076,18 +849,12 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $type: DictionaryType
+          $type: PrimaryType
           deprecated: false
+          knownPrimaryType: string
           name:
             fixed: false
-          supportsAdditionalProperties: false
-          valueType:
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: object
-            name:
-              fixed: false
-              raw: Object
+            raw: String
         name:
           fixed: false
           raw: object211
@@ -1108,18 +875,12 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $type: DictionaryType
+          $type: PrimaryType
           deprecated: false
+          knownPrimaryType: string
           name:
             fixed: false
-          supportsAdditionalProperties: false
-          valueType:
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: object
-            name:
-              fixed: false
-              raw: Object
+            raw: String
         name:
           fixed: false
           raw: object212
@@ -1140,18 +901,12 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $type: DictionaryType
+          $type: PrimaryType
           deprecated: false
+          knownPrimaryType: string
           name:
             fixed: false
-          supportsAdditionalProperties: false
-          valueType:
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: boolean
-            name:
-              fixed: false
-              raw: Boolean
+            raw: String
         name:
           fixed: false
           raw: object220
@@ -1172,18 +927,12 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $type: DictionaryType
+          $type: PrimaryType
           deprecated: false
+          knownPrimaryType: string
           name:
             fixed: false
-          supportsAdditionalProperties: false
-          valueType:
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: boolean
-            name:
-              fixed: false
-              raw: Boolean
+            raw: String
         name:
           fixed: false
           raw: object221
@@ -1204,18 +953,12 @@ modelTypes:
         isReadOnly: false
         isRequired: false
         modelType:
-          $type: DictionaryType
+          $type: PrimaryType
           deprecated: false
+          knownPrimaryType: string
           name:
             fixed: false
-          supportsAdditionalProperties: false
-          valueType:
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: boolean
-            name:
-              fixed: false
-              raw: Boolean
+            raw: String
         name:
           fixed: false
           raw: object222
