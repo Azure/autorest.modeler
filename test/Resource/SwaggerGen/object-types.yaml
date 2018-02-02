@@ -1,0 +1,250 @@
+swagger: "2.0"
+host: localhost
+info:
+  version: '2016-07-07'
+  title: ObjectTypes  # "additionalProperties: false" is the default! https://github.com/swagger-api/swagger-core/issues/1437#issuecomment-149352606
+  description: Collection of different object-like types; explicit types explaining the expected matching and modeling behavior are provided under x-semantics
+paths: {}
+definitions:
+  Cowbell:
+    properties: # suffix: "type: <1/2 => object/string>";"additionalProperties: { <1/2 => with/without type> }";"properties: { <1/2 => with/without properties> }"
+      object000:
+        x-semantics:
+          oneOf: # see https://tools.ietf.org/html/draft-zyp-json-schema-04#section-3.5
+          - type: array
+          - type: boolean
+          - type: integer
+          - type: number
+          - type: "null"
+          - type: object
+          - type: string
+      object001:
+        properties: {}
+        x-semantics:
+          oneOf:
+          - type: array
+          - type: boolean
+          - type: integer
+          - type: number
+          - type: "null"
+          - type: object
+            properties: {}
+          - type: string
+      object002:
+        properties: { prop: { type: integer } }
+        x-semantics:
+          oneOf:
+          - type: array
+          - type: boolean
+          - type: integer
+          - type: number
+          - type: "null"
+          - type: object
+            properties: { prop: { type: integer } }
+          - type: string
+      object010:
+        additionalProperties: { }
+        x-semantics:
+          oneOf:
+          - type: array
+          - type: boolean
+          - type: integer
+          - type: number
+          - type: "null"
+          - type: object
+            additionalProperties: { }
+          - type: string
+      object011:
+        additionalProperties: { }
+        properties: {}
+        x-semantics:
+          oneOf:
+          - type: array
+          - type: boolean
+          - type: integer
+          - type: number
+          - type: "null"
+          - type: object
+            additionalProperties: { }
+            properties: {}
+          - type: string
+      object012:
+        additionalProperties: { }
+        properties: { prop: { type: integer } }
+        x-semantics:
+          oneOf:
+          - type: array
+          - type: boolean
+          - type: integer
+          - type: number
+          - type: "null"
+          - type: object
+            additionalProperties: { }
+            properties: { prop: { type: integer } }
+          - type: string
+      object020:
+        additionalProperties: { type: boolean }
+        x-semantics:
+          oneOf:
+          - type: array
+          - type: boolean
+          - type: integer
+          - type: number
+          - type: "null"
+          - type: object
+            additionalProperties: { type: boolean }
+          - type: string
+      object021:
+        additionalProperties: { type: boolean }
+        properties: {}
+        x-semantics:
+          oneOf:
+          - type: array
+          - type: boolean
+          - type: integer
+          - type: number
+          - type: "null"
+          - type: object
+            additionalProperties: { type: boolean }
+            properties: {}
+          - type: string
+      object022:
+        additionalProperties: { type: boolean }
+        properties: { prop: { type: integer } }
+        x-semantics:
+          oneOf:
+          - type: array
+          - type: boolean
+          - type: integer
+          - type: number
+          - type: "null"
+          - type: object
+            additionalProperties: { type: boolean }
+            properties: { prop: { type: integer } }
+          - type: string
+      object100:
+        type: object
+        x-semantics:
+          oneOf:
+          - type: object
+      object101:
+        type: object
+        properties: {}
+        x-semantics:
+          oneOf:
+          - type: object
+            properties: {}
+      object102:
+        type: object
+        properties: { prop: { type: integer } }
+        x-semantics:
+          oneOf:
+          - type: object
+            properties: { prop: { type: integer } }
+      object110:
+        type: object
+        additionalProperties: { }
+        x-semantics:
+          oneOf:
+          - type: object
+            additionalProperties: { }
+      object111:
+        type: object
+        additionalProperties: { }
+        properties: {}
+        x-semantics:
+          oneOf:
+          - type: object
+            additionalProperties: { }
+            properties: {}
+      object112:
+        type: object
+        additionalProperties: { }
+        properties: { prop: { type: integer } }
+        x-semantics:
+          oneOf:
+          - type: object
+            additionalProperties: { }
+            properties: { prop: { type: integer } }
+      object120:
+        type: object
+        additionalProperties: { type: boolean }
+        x-semantics:
+          oneOf:
+          - type: object
+            additionalProperties: { type: boolean }
+      object121:
+        type: object
+        additionalProperties: { type: boolean }
+        properties: {}
+        x-semantics:
+          oneOf:
+          - type: object
+            additionalProperties: { type: boolean }
+            properties: {}
+      object122:
+        type: object
+        additionalProperties: { type: boolean }
+        properties: { prop: { type: integer } }
+        x-semantics:
+          oneOf:
+          - type: object
+            additionalProperties: { type: boolean }
+            properties: { prop: { type: integer } }
+      object200:
+        type: string
+        x-semantics:
+          oneOf:
+          - type: string
+      object201:
+        type: string
+        properties: {}
+        x-semantics:
+          oneOf:
+          - type: string
+      object202:
+        type: string
+        properties: { prop: { type: integer } }
+        x-semantics:
+          oneOf:
+          - type: string
+      object210:
+        type: string
+        additionalProperties: { }
+        x-semantics:
+          oneOf:
+          - type: string
+      object211:
+        type: string
+        additionalProperties: { }
+        properties: {}
+        x-semantics:
+          oneOf:
+          - type: string
+      object212:
+        type: string
+        additionalProperties: { }
+        properties: { prop: { type: integer } }
+        x-semantics:
+          oneOf:
+          - type: string
+      object220:
+        type: string
+        additionalProperties: { type: boolean }
+        x-semantics:
+          oneOf:
+          - type: string
+      object221:
+        type: string
+        additionalProperties: { type: boolean }
+        properties: {}
+        x-semantics:
+          oneOf:
+          - type: string
+      object222:
+        type: string
+        additionalProperties: { type: boolean }
+        properties: { prop: { type: integer } }
+        x-semantics:
+          oneOf:
+          - type: string
