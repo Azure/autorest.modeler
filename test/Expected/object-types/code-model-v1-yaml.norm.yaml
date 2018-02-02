@@ -1,0 +1,1228 @@
+---
+apiVersion: '2016-07-07'
+baseUrl: 'http://localhost'
+documentation: >-
+  Collection of different object-like types; explicit types explaining the
+  expected matching and modeling behavior are provided under x-semantics
+modelTypes:
+  - &ref_0
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    extensions:
+      x-semantics:
+        oneOf:
+          - type: array
+          - type: boolean
+          - type: integer
+          - type: number
+          - type: 'null'
+          - properties:
+              prop:
+                type: integer
+            type: object
+          - type: string
+    name:
+      fixed: false
+      raw: Cowbell_object002
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: prop
+        realPath:
+          - prop
+        serializedName: prop
+    serializedName: Cowbell_object002
+  - &ref_1
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    extensions:
+      x-semantics:
+        oneOf:
+          - type: array
+          - type: boolean
+          - type: integer
+          - type: number
+          - type: 'null'
+          - additionalProperties: {}
+            properties:
+              prop:
+                type: integer
+            type: object
+          - type: string
+    name:
+      fixed: false
+      raw: Cowbell_object012
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: >-
+            Unmatched properties from the message are deserialized this
+            collection
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: true
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: object
+            name:
+              fixed: false
+              raw: Object
+        name:
+          fixed: false
+          raw: additionalProperties
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: prop
+        realPath:
+          - prop
+        serializedName: prop
+    serializedName: Cowbell_object012
+  - &ref_2
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    extensions:
+      x-semantics:
+        oneOf:
+          - type: array
+          - type: boolean
+          - type: integer
+          - type: number
+          - type: 'null'
+          - additionalProperties:
+              type: boolean
+            properties:
+              prop:
+                type: integer
+            type: object
+          - type: string
+    name:
+      fixed: false
+      raw: Cowbell_object022
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: >-
+            Unmatched properties from the message are deserialized this
+            collection
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: true
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: boolean
+            name:
+              fixed: false
+              raw: Boolean
+        name:
+          fixed: false
+          raw: additionalProperties
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: prop
+        realPath:
+          - prop
+        serializedName: prop
+    serializedName: Cowbell_object022
+  - &ref_3
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    extensions:
+      x-semantics:
+        oneOf:
+          - properties:
+              prop:
+                type: integer
+            type: object
+    name:
+      fixed: false
+      raw: Cowbell_object102
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: prop
+        realPath:
+          - prop
+        serializedName: prop
+    serializedName: Cowbell_object102
+  - &ref_4
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    extensions:
+      x-semantics:
+        oneOf:
+          - additionalProperties: {}
+            properties:
+              prop:
+                type: integer
+            type: object
+    name:
+      fixed: false
+      raw: Cowbell_object112
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: >-
+            Unmatched properties from the message are deserialized this
+            collection
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: true
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: object
+            name:
+              fixed: false
+              raw: Object
+        name:
+          fixed: false
+          raw: additionalProperties
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: prop
+        realPath:
+          - prop
+        serializedName: prop
+    serializedName: Cowbell_object112
+  - &ref_5
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    extensions:
+      x-semantics:
+        oneOf:
+          - additionalProperties:
+              type: boolean
+            properties:
+              prop:
+                type: integer
+            type: object
+    name:
+      fixed: false
+      raw: Cowbell_object122
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: >-
+            Unmatched properties from the message are deserialized this
+            collection
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: true
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: boolean
+            name:
+              fixed: false
+              raw: Boolean
+        name:
+          fixed: false
+          raw: additionalProperties
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: int
+          name:
+            fixed: false
+            raw: Int
+        name:
+          fixed: false
+          raw: prop
+        realPath:
+          - prop
+        serializedName: prop
+    serializedName: Cowbell_object122
+  - $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: Cowbell
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: array
+              - type: boolean
+              - type: integer
+              - type: number
+              - type: 'null'
+              - type: object
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: object
+          name:
+            fixed: false
+            raw: Object
+        name:
+          fixed: false
+          raw: object000
+        realPath:
+          - object000
+        serializedName: object000
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: array
+              - type: boolean
+              - type: integer
+              - type: number
+              - type: 'null'
+              - properties: {}
+                type: object
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: object
+          name:
+            fixed: false
+            raw: Object
+        name:
+          fixed: false
+          raw: object001
+        realPath:
+          - object001
+        serializedName: object001
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: array
+              - type: boolean
+              - type: integer
+              - type: number
+              - type: 'null'
+              - properties:
+                  prop:
+                    type: integer
+                type: object
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType: *ref_0
+        name:
+          fixed: false
+          raw: object002
+        realPath:
+          - object002
+        serializedName: object002
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: array
+              - type: boolean
+              - type: integer
+              - type: number
+              - type: 'null'
+              - additionalProperties: {}
+                type: object
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: object
+            name:
+              fixed: false
+              raw: Object
+        name:
+          fixed: false
+          raw: object010
+        realPath:
+          - object010
+        serializedName: object010
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: array
+              - type: boolean
+              - type: integer
+              - type: number
+              - type: 'null'
+              - additionalProperties: {}
+                properties: {}
+                type: object
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: object
+            name:
+              fixed: false
+              raw: Object
+        name:
+          fixed: false
+          raw: object011
+        realPath:
+          - object011
+        serializedName: object011
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: array
+              - type: boolean
+              - type: integer
+              - type: number
+              - type: 'null'
+              - additionalProperties: {}
+                properties:
+                  prop:
+                    type: integer
+                type: object
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType: *ref_1
+        name:
+          fixed: false
+          raw: object012
+        realPath:
+          - object012
+        serializedName: object012
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: array
+              - type: boolean
+              - type: integer
+              - type: number
+              - type: 'null'
+              - additionalProperties:
+                  type: boolean
+                type: object
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: boolean
+            name:
+              fixed: false
+              raw: Boolean
+        name:
+          fixed: false
+          raw: object020
+        realPath:
+          - object020
+        serializedName: object020
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: array
+              - type: boolean
+              - type: integer
+              - type: number
+              - type: 'null'
+              - additionalProperties:
+                  type: boolean
+                properties: {}
+                type: object
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: boolean
+            name:
+              fixed: false
+              raw: Boolean
+        name:
+          fixed: false
+          raw: object021
+        realPath:
+          - object021
+        serializedName: object021
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: array
+              - type: boolean
+              - type: integer
+              - type: number
+              - type: 'null'
+              - additionalProperties:
+                  type: boolean
+                properties:
+                  prop:
+                    type: integer
+                type: object
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType: *ref_2
+        name:
+          fixed: false
+          raw: object022
+        realPath:
+          - object022
+        serializedName: object022
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: object
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: object
+          name:
+            fixed: false
+            raw: Object
+        name:
+          fixed: false
+          raw: object100
+        realPath:
+          - object100
+        serializedName: object100
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - properties: {}
+                type: object
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: object
+          name:
+            fixed: false
+            raw: Object
+        name:
+          fixed: false
+          raw: object101
+        realPath:
+          - object101
+        serializedName: object101
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - properties:
+                  prop:
+                    type: integer
+                type: object
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType: *ref_3
+        name:
+          fixed: false
+          raw: object102
+        realPath:
+          - object102
+        serializedName: object102
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - additionalProperties: {}
+                type: object
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: object
+            name:
+              fixed: false
+              raw: Object
+        name:
+          fixed: false
+          raw: object110
+        realPath:
+          - object110
+        serializedName: object110
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - additionalProperties: {}
+                properties: {}
+                type: object
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: object
+            name:
+              fixed: false
+              raw: Object
+        name:
+          fixed: false
+          raw: object111
+        realPath:
+          - object111
+        serializedName: object111
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - additionalProperties: {}
+                properties:
+                  prop:
+                    type: integer
+                type: object
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType: *ref_4
+        name:
+          fixed: false
+          raw: object112
+        realPath:
+          - object112
+        serializedName: object112
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - additionalProperties:
+                  type: boolean
+                type: object
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: boolean
+            name:
+              fixed: false
+              raw: Boolean
+        name:
+          fixed: false
+          raw: object120
+        realPath:
+          - object120
+        serializedName: object120
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - additionalProperties:
+                  type: boolean
+                properties: {}
+                type: object
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: boolean
+            name:
+              fixed: false
+              raw: Boolean
+        name:
+          fixed: false
+          raw: object121
+        realPath:
+          - object121
+        serializedName: object121
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - additionalProperties:
+                  type: boolean
+                properties:
+                  prop:
+                    type: integer
+                type: object
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType: *ref_5
+        name:
+          fixed: false
+          raw: object122
+        realPath:
+          - object122
+        serializedName: object122
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: object200
+        realPath:
+          - object200
+        serializedName: object200
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: object201
+        realPath:
+          - object201
+        serializedName: object201
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: object202
+        realPath:
+          - object202
+        serializedName: object202
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: object
+            name:
+              fixed: false
+              raw: Object
+        name:
+          fixed: false
+          raw: object210
+        realPath:
+          - object210
+        serializedName: object210
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: object
+            name:
+              fixed: false
+              raw: Object
+        name:
+          fixed: false
+          raw: object211
+        realPath:
+          - object211
+        serializedName: object211
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: object
+            name:
+              fixed: false
+              raw: Object
+        name:
+          fixed: false
+          raw: object212
+        realPath:
+          - object212
+        serializedName: object212
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: boolean
+            name:
+              fixed: false
+              raw: Boolean
+        name:
+          fixed: false
+          raw: object220
+        realPath:
+          - object220
+        serializedName: object220
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: boolean
+            name:
+              fixed: false
+              raw: Boolean
+        name:
+          fixed: false
+          raw: object221
+        realPath:
+          - object221
+        serializedName: object221
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        extensions:
+          x-semantics:
+            oneOf:
+              - type: string
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: false
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: boolean
+            name:
+              fixed: false
+              raw: Boolean
+        name:
+          fixed: false
+          raw: object222
+        realPath:
+          - object222
+        serializedName: object222
+    serializedName: Cowbell
+modelsName: Models
+name: ObjectTypes
+namespace: ''

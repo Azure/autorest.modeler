@@ -97,7 +97,8 @@ mappingsSpecs = {
 }
 
 mappingsCustom = {
-  'deprecated'          : 'deprecated.yaml'
+  'deprecated'          : 'deprecated.yaml',
+  'object-types'        : 'object-types.yaml'
 }
 
 task 'regenerate-testserver', '', (done) ->
