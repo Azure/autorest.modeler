@@ -51,6 +51,47 @@ modelTypes:
       x-semantics:
         oneOf:
           - additionalProperties: {}
+            properties: {}
+            type: object
+    name:
+      fixed: false
+      raw: Cowbell_object111
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: >-
+            Unmatched properties from the message are deserialized this
+            collection
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: true
+          valueType:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
+        name:
+          fixed: false
+          raw: additionalProperties
+    serializedName: Cowbell_object111
+  - &ref_2
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    extensions:
+      x-semantics:
+        oneOf:
+          - additionalProperties: {}
             properties:
               prop:
                 type: integer
@@ -108,7 +149,51 @@ modelTypes:
           - prop
         serializedName: prop
     serializedName: Cowbell_object112
-  - &ref_2
+  - &ref_3
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    extensions:
+      x-semantics:
+        oneOf:
+          - additionalProperties:
+              type: boolean
+            properties: {}
+            type: object
+    name:
+      fixed: false
+      raw: Cowbell_object121
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: >-
+            Unmatched properties from the message are deserialized this
+            collection
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: DictionaryType
+          deprecated: false
+          name:
+            fixed: false
+          supportsAdditionalProperties: true
+          valueType:
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: boolean
+            name:
+              fixed: false
+              raw: Boolean
+        name:
+          fixed: false
+          raw: additionalProperties
+    serializedName: Cowbell_object121
+  - &ref_4
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -596,17 +681,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $type: DictionaryType
-          deprecated: false
-          name:
-            fixed: false
-          supportsAdditionalProperties: false
-          valueType:
-            $type: MultiType
-            deprecated: false
-            name:
-              fixed: false
+        modelType: *ref_1
         name:
           fixed: false
           raw: object111
@@ -630,7 +705,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType: *ref_1
+        modelType: *ref_2
         name:
           fixed: false
           raw: object112
@@ -687,19 +762,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType:
-          $type: DictionaryType
-          deprecated: false
-          name:
-            fixed: false
-          supportsAdditionalProperties: false
-          valueType:
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: boolean
-            name:
-              fixed: false
-              raw: Boolean
+        modelType: *ref_3
         name:
           fixed: false
           raw: object121
@@ -724,7 +787,7 @@ modelTypes:
         isConstant: false
         isReadOnly: false
         isRequired: false
-        modelType: *ref_2
+        modelType: *ref_4
         name:
           fixed: false
           raw: object122
