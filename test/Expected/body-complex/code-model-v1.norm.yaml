@@ -3932,9 +3932,7 @@ operations:
             $ref: '2'
           isNullable: true
         deprecated: false
-        description: >-
-          Put complex types that are polymorphic, attempting to omit required
-          'birthday' field - the request should not be allowed from the client
+        description: 'Put complex types that are polymorphic, omitting the discriminator'
         extensions:
           x-ms-requestBody-index: '0'
         group:
@@ -3947,7 +3945,7 @@ operations:
         name:
           $id: '750'
           fixed: false
-          raw: putValidMissingRequired
+          raw: putMissingDiscriminator
         parameters:
           - $id: '746'
             collectionFormat: none
@@ -3957,6 +3955,67 @@ operations:
             deprecated: false
             documentation:
               $id: '748'
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType:
+              $ref: '106'
+            name:
+              $id: '728'
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '731'
+            body:
+              $ref: '106'
+            isNullable: true
+        returnType:
+          $id: '733'
+          body:
+            $ref: '106'
+          isNullable: true
+        serializedName: polymorphism_putMissingDiscriminator
+        url: /complex/polymorphism/missingdiscriminator
+      - $id: '734'
+        defaultResponse:
+          $id: '742'
+          body:
+            $ref: '2'
+          isNullable: true
+        deprecated: false
+        description: >-
+          Put complex types that are polymorphic, attempting to omit required
+          'birthday' field - the request should not be allowed from the client
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          $id: '740'
+          fixed: false
+          raw: polymorphism
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          $id: '739'
+          fixed: false
+          raw: putValidMissingRequired
+        parameters:
+          - $id: '735'
+            collectionFormat: none
+            defaultValue:
+              $id: '736'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '737'
               fixed: false
               raw: >-
                 Please attempt put a sawshark that looks like this, the client
@@ -3995,7 +4054,11 @@ operations:
             modelType:
               $ref: '86'
             name:
+<<<<<<< HEAD
               $id: '749'
+=======
+              $id: '738'
+>>>>>>> better errors
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -4004,19 +4067,31 @@ operations:
           - application/json
         responses:
           OK:
+<<<<<<< HEAD
             $id: '752'
             isNullable: true
         returnType:
           $id: '754'
+=======
+            $id: '741'
+            isNullable: true
+        returnType:
+          $id: '743'
+>>>>>>> better errors
           isNullable: true
         serializedName: polymorphism_putValidMissingRequired
         url: /complex/polymorphism/missingrequired/invalid
     name:
+<<<<<<< HEAD
       $id: '755'
+=======
+      $id: '744'
+>>>>>>> better errors
       fixed: false
       raw: Polymorphism
     nameForProperty: Polymorphism
     typeName:
+<<<<<<< HEAD
       $id: '756'
       fixed: false
   - $id: '757'
@@ -4024,20 +4099,37 @@ operations:
       - $id: '758'
         defaultResponse:
           $id: '762'
+=======
+      $id: '745'
+      fixed: false
+  - $id: '746'
+    methods:
+      - $id: '747'
+        defaultResponse:
+          $id: '751'
+>>>>>>> better errors
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types that are polymorphic and have recursive references
         group:
+<<<<<<< HEAD
           $id: '760'
+=======
+          $id: '749'
+>>>>>>> better errors
           fixed: false
           raw: polymorphicrecursive
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+<<<<<<< HEAD
           $id: '759'
+=======
+          $id: '748'
+>>>>>>> better errors
           fixed: false
           raw: getValid
         requestContentType: application/json; charset=utf-8
@@ -4045,20 +4137,34 @@ operations:
           - application/json
         responses:
           OK:
+<<<<<<< HEAD
             $id: '761'
+=======
+            $id: '750'
+>>>>>>> better errors
             body:
               $ref: '86'
             isNullable: true
         returnType:
+<<<<<<< HEAD
           $id: '763'
+=======
+          $id: '752'
+>>>>>>> better errors
           body:
             $ref: '86'
           isNullable: true
         serializedName: polymorphicrecursive_getValid
         url: /complex/polymorphicrecursive/valid
+<<<<<<< HEAD
       - $id: '764'
         defaultResponse:
           $id: '772'
+=======
+      - $id: '753'
+        defaultResponse:
+          $id: '761'
+>>>>>>> better errors
           body:
             $ref: '2'
           isNullable: true
@@ -4067,13 +4173,18 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+<<<<<<< HEAD
           $id: '770'
+=======
+          $id: '759'
+>>>>>>> better errors
           fixed: false
           raw: polymorphicrecursive
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+<<<<<<< HEAD
           $id: '769'
           fixed: false
           raw: putValid
@@ -4086,6 +4197,20 @@ operations:
             deprecated: false
             documentation:
               $id: '767'
+=======
+          $id: '758'
+          fixed: false
+          raw: putValid
+        parameters:
+          - $id: '754'
+            collectionFormat: none
+            defaultValue:
+              $id: '755'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '756'
+>>>>>>> better errors
               fixed: false
               raw: |-
                 Please put a salmon that looks like this:
@@ -4149,7 +4274,11 @@ operations:
             modelType:
               $ref: '86'
             name:
+<<<<<<< HEAD
               $id: '768'
+=======
+              $id: '757'
+>>>>>>> better errors
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -4158,19 +4287,31 @@ operations:
           - application/json
         responses:
           OK:
+<<<<<<< HEAD
             $id: '771'
             isNullable: true
         returnType:
           $id: '773'
+=======
+            $id: '760'
+            isNullable: true
+        returnType:
+          $id: '762'
+>>>>>>> better errors
           isNullable: true
         serializedName: polymorphicrecursive_putValid
         url: /complex/polymorphicrecursive/valid
     name:
+<<<<<<< HEAD
       $id: '774'
+=======
+      $id: '763'
+>>>>>>> better errors
       fixed: false
       raw: Polymorphicrecursive
     nameForProperty: Polymorphicrecursive
     typeName:
+<<<<<<< HEAD
       $id: '775'
       fixed: false
   - $id: '776'
@@ -4178,20 +4319,37 @@ operations:
       - $id: '777'
         defaultResponse:
           $id: '781'
+=======
+      $id: '764'
+      fixed: false
+  - $id: '765'
+    methods:
+      - $id: '766'
+        defaultResponse:
+          $id: '770'
+>>>>>>> better errors
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types that have readonly properties
         group:
+<<<<<<< HEAD
           $id: '779'
+=======
+          $id: '768'
+>>>>>>> better errors
           fixed: false
           raw: readonlyproperty
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
+<<<<<<< HEAD
           $id: '778'
+=======
+          $id: '767'
+>>>>>>> better errors
           fixed: false
           raw: getValid
         requestContentType: application/json; charset=utf-8
@@ -4199,20 +4357,34 @@ operations:
           - application/json
         responses:
           OK:
+<<<<<<< HEAD
             $id: '780'
+=======
+            $id: '769'
+>>>>>>> better errors
             body:
               $ref: '347'
             isNullable: true
         returnType:
+<<<<<<< HEAD
           $id: '782'
+=======
+          $id: '771'
+>>>>>>> better errors
           body:
             $ref: '347'
           isNullable: true
         serializedName: readonlyproperty_getValid
         url: /complex/readonlyproperty/valid
+<<<<<<< HEAD
       - $id: '783'
         defaultResponse:
           $id: '791'
+=======
+      - $id: '772'
+        defaultResponse:
+          $id: '780'
+>>>>>>> better errors
           body:
             $ref: '2'
           isNullable: true
@@ -4221,13 +4393,18 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
+<<<<<<< HEAD
           $id: '789'
+=======
+          $id: '778'
+>>>>>>> better errors
           fixed: false
           raw: readonlyproperty
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
+<<<<<<< HEAD
           $id: '788'
           fixed: false
           raw: putValid
@@ -4240,6 +4417,20 @@ operations:
             deprecated: false
             documentation:
               $id: '786'
+=======
+          $id: '777'
+          fixed: false
+          raw: putValid
+        parameters:
+          - $id: '773'
+            collectionFormat: none
+            defaultValue:
+              $id: '774'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '775'
+>>>>>>> better errors
               fixed: false
             extensions:
               x-ms-requestBody-name: complexBody
@@ -4249,7 +4440,11 @@ operations:
             modelType:
               $ref: '347'
             name:
+<<<<<<< HEAD
               $id: '787'
+=======
+              $id: '776'
+>>>>>>> better errors
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -4258,20 +4453,35 @@ operations:
           - application/json
         responses:
           OK:
+<<<<<<< HEAD
             $id: '790'
             isNullable: true
         returnType:
           $id: '792'
+=======
+            $id: '779'
+            isNullable: true
+        returnType:
+          $id: '781'
+>>>>>>> better errors
           isNullable: true
         serializedName: readonlyproperty_putValid
         url: /complex/readonlyproperty/valid
     name:
+<<<<<<< HEAD
       $id: '793'
+=======
+      $id: '782'
+>>>>>>> better errors
       fixed: false
       raw: Readonlyproperty
     nameForProperty: Readonlyproperty
     typeName:
+<<<<<<< HEAD
       $id: '794'
+=======
+      $id: '783'
+>>>>>>> better errors
       fixed: false
 properties:
   - $id: '361'
