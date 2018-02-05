@@ -94,7 +94,7 @@ namespace AutoRest.Modeler
             method.Description = _operation.Description;
             method.Summary = _operation.Summary;
             method.ExternalDocsUrl = _operation.ExternalDocs?.Url;
-            method.Deprecated = _operation.Deprecated;
+            method.DeprecationMessage = _operation.GetDeprecationMessage(EntityType.Operation);
 
             // Service parameters
             BuildMethodParameters(method);
@@ -270,7 +270,7 @@ namespace AutoRest.Modeler
                                 swaggerParameter.IsRequired = actualSwaggerParameter.IsRequired;
                                 swaggerParameter.Name = actualSwaggerParameter.Name;
                                 swaggerParameter.Schema = actualSwaggerParameter.Schema;
-                                swaggerParameter.Schema.Enum = _effectiveConsumes.ToList();
+                                swaggerParameter.Schema.Enum = _effectiveConsumes.StringsToTokens().ToList();
 
                                 // if not treated explicitly, add choices to the global choices
                                 if (swaggerParameter.Extensions.GetValue<JObject>("x-ms-enum") == null) {
