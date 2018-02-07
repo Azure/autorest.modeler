@@ -1,6 +1,6 @@
 {
   "name": "@microsoft.azure/autorest.modeler",
-  "version": "2.3.0",
+  "version": "2.4.0-error-response",
   "description": "The modeler extension for classic generators in AutoRest.",
   "scripts": {
     "start": "dotnet src/bin/netcoreapp2.0/autorest.modeler.dll --server",
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/Azure/autorest.modeler/blob/master/README.md",
   "devDependencies": {
-    "@microsoft.azure/autorest.testserver": "2.3.17",
+    "@microsoft.azure/autorest.testserver": "2.3.24",
     "autorest": "^2.0.4225",
     "coffee-script": "^1.11.1",
     "dotnet-sdk-2.0.0": "^1.4.4",

@@ -77,18 +77,6 @@ namespace AutoRest.Modeler
                 CodeModel.Add(clientProperty);
             }
 
-            // Set base type
-            foreach (var typeName in GeneratedTypes.Keys)
-            {
-                var objectType = GeneratedTypes[typeName];
-                if (ExtendedTypes.ContainsKey(typeName))
-                {
-                    objectType.BaseModelType = GeneratedTypes[ExtendedTypes[typeName]];
-                }
-
-                CodeModel.Add(objectType);
-            }
-
             var  methods = new List<Method>();
             // Build methods
             foreach (var path in ServiceDefinition.Paths.Concat(ServiceDefinition.CustomPaths))
@@ -156,6 +144,20 @@ namespace AutoRest.Modeler
                 }
             }
             ProcessForwardToMethods(methods);
+
+            
+            // Set base type
+            foreach (var typeName in GeneratedTypes.Keys)
+            {
+                var objectType = GeneratedTypes[typeName];
+                if (ExtendedTypes.ContainsKey(typeName))
+                {
+                    objectType.BaseModelType = GeneratedTypes[ExtendedTypes[typeName]];
+                }
+
+                CodeModel.Add(objectType);
+            }
+
             CodeModel.AddRange(methods);
             
             // What operation returns it decides whether an object is to be modeled as a 
