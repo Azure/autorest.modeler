@@ -77,7 +77,8 @@ namespace AutoRest.Modeler
                 CodeModel.Add(clientProperty);
             }
 
-            var  methods = new List<Method>();
+            var baseErrorResponses = new List<Fixable<string>>();
+            var methods = new List<Method>();
             // Build methods
             foreach (var path in ServiceDefinition.Paths.Concat(ServiceDefinition.CustomPaths))
             {
@@ -94,7 +95,7 @@ namespace AutoRest.Modeler
                     }
                     var methodName = GetMethodNameFromOperationId(operation.OperationId);
                     var methodGroup = GetMethodGroup(operation);
-
+                    
                     if (verb.ToHttpMethod() != HttpMethod.Options)
                     {
                         string url = path.Key;
@@ -112,28 +113,14 @@ namespace AutoRest.Modeler
                         xmsErrorResponses.ForEach(errModel=>CodeModel.AddError(errModel));
 
                         // If marked error models have a polymorphic discriminator, include all models that allOf on them (at any level of inheritence)
-                        var baseErrorResponses = xmsErrorResponses.Where(errModel=>!string.IsNullOrEmpty(errModel.PolymorphicDiscriminator) && ExtendedTypes.ContainsKey(errModel.Name))
-                                                                  .Select(errModel=>errModel.Name).ToList();
+                        baseErrorResponses = baseErrorResponses.Union(xmsErrorResponses.Where(errModel=>!string.IsNullOrEmpty(errModel.PolymorphicDiscriminator) && ExtendedTypes.ContainsKey(errModel.Name))
+                                                                  .Select(errModel=>errModel.Name)).ToList();
 
                         // Add the default error model if exists
                         if (method.DefaultResponse.Body is CompositeType)
                         {
                             baseErrorResponses.Add(((CompositeType)method.DefaultResponse.Body).Name);
                             CodeModel.AddError((CompositeType)method.DefaultResponse.Body);
-                        }
-
-                        foreach(var k in GeneratedTypes.Keys)
-                        {
-                            var baseModelType = GeneratedTypes[k].BaseModelType;
-                            while(baseModelType != null && baseModelType is CompositeType && !baseErrorResponses.Contains(k))
-                            {
-                                if(baseErrorResponses.Contains(baseModelType.Name))
-                                {
-                                    CodeModel.AddError(GeneratedTypes[k]);
-                                    break;
-                                }
-                                baseModelType = baseModelType.BaseModelType;
-                            }
                         }
                
                     }
@@ -159,6 +146,21 @@ namespace AutoRest.Modeler
             }
 
             CodeModel.AddRange(methods);
+
+            
+            foreach(var k in GeneratedTypes.Keys)
+            {
+                var baseModelType = GeneratedTypes[k].BaseModelType;
+                while(baseModelType != null && baseModelType is CompositeType && !baseErrorResponses.Contains(k))
+                {
+                    if(baseErrorResponses.Contains(baseModelType.Name))
+                    {
+                        CodeModel.AddError(GeneratedTypes[k]);
+                        break;
+                    }
+                    baseModelType = baseModelType.BaseModelType;
+                }
+            }
             
             // What operation returns it decides whether an object is to be modeled as a 
             // regular model class or an exception class
