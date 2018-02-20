@@ -6,11 +6,11 @@ enumTypes:
   - &ref_0
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: GreyscaleColors
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false

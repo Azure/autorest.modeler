@@ -12,12 +12,12 @@ enumTypes:
   - $id: '220'
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       $id: '227'
       fixed: false
       raw: IndexActionType
+    oldModelAsString: false
     underlyingType:
       $id: '225'
       $type: PrimaryType
@@ -532,12 +532,12 @@ modelTypes:
           $id: '91'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '96'
             fixed: false
             raw: QueryType
+          oldModelAsString: false
           underlyingType:
             $id: '94'
             $type: PrimaryType
@@ -717,12 +717,12 @@ modelTypes:
           $id: '127'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '132'
             fixed: false
             raw: SearchMode
+          oldModelAsString: false
           underlyingType:
             $id: '130'
             $type: PrimaryType

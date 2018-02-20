@@ -385,12 +385,12 @@ modelTypes:
           $id: '75'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '79'
             fixed: false
             raw: EnumConst
+          oldModelAsString: false
           underlyingType:
             $id: '77'
             $type: PrimaryType

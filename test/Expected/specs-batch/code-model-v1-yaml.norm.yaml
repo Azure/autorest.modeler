@@ -8,11 +8,11 @@ enumTypes:
   - &ref_2
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: OSType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -30,11 +30,11 @@ enumTypes:
   - &ref_3
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: AccessScope
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -51,11 +51,11 @@ enumTypes:
   - &ref_8
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: CertificateState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -86,11 +86,11 @@ enumTypes:
   - &ref_10
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: CertificateFormat
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -110,11 +110,11 @@ enumTypes:
   - &ref_15
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: JobAction
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -139,11 +139,11 @@ enumTypes:
   - &ref_16
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: DependencyAction
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -161,11 +161,11 @@ enumTypes:
   - &ref_20
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: AutoUserScope
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -185,11 +185,11 @@ enumTypes:
   - &ref_21
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: ElevationLevel
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -209,11 +209,11 @@ enumTypes:
   - &ref_25
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: OutputFileUploadCondition
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -240,11 +240,11 @@ enumTypes:
   - &ref_36
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: ComputeNodeFillType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -265,11 +265,11 @@ enumTypes:
   - &ref_37
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: CertificateStoreLocation
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -289,11 +289,11 @@ enumTypes:
   - &ref_38
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: CertificateVisibility
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -320,11 +320,11 @@ enumTypes:
   - &ref_39
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: CachingType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -345,11 +345,11 @@ enumTypes:
   - &ref_40
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: StorageAccountType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -367,11 +367,11 @@ enumTypes:
   - &ref_46
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: InboundEndpointProtocol
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -389,11 +389,11 @@ enumTypes:
   - &ref_45
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: NetworkSecurityGroupRuleAccess
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -411,11 +411,11 @@ enumTypes:
   - &ref_58
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: PoolLifetimeOption
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -441,11 +441,11 @@ enumTypes:
   - &ref_61
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: OnAllTasksComplete
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -467,11 +467,11 @@ enumTypes:
   - &ref_62
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: OnTaskFailure
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -494,11 +494,11 @@ enumTypes:
   - &ref_69
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: JobScheduleState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -540,11 +540,11 @@ enumTypes:
   - &ref_75
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: ErrorCategory
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -562,11 +562,11 @@ enumTypes:
   - &ref_77
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: JobState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -615,11 +615,11 @@ enumTypes:
   - &ref_81
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: JobPreparationTaskState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -640,11 +640,11 @@ enumTypes:
   - &ref_84
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: TaskExecutionResult
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -665,11 +665,11 @@ enumTypes:
   - &ref_85
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: JobReleaseTaskState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -690,11 +690,11 @@ enumTypes:
   - &ref_89
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: TaskCountValidationStatus
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -717,11 +717,11 @@ enumTypes:
   - &ref_91
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: PoolState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -751,11 +751,11 @@ enumTypes:
   - &ref_92
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: AllocationState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -784,11 +784,11 @@ enumTypes:
   - &ref_100
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: TaskState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -830,11 +830,11 @@ enumTypes:
   - &ref_111
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: TaskAddStatus
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -859,11 +859,11 @@ enumTypes:
   - &ref_113
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: SubtaskState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -898,11 +898,11 @@ enumTypes:
   - &ref_116
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: StartTaskState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -924,11 +924,11 @@ enumTypes:
   - &ref_118
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: ComputeNodeState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -995,11 +995,11 @@ enumTypes:
   - &ref_119
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: SchedulingState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -1020,11 +1020,11 @@ enumTypes:
   - &ref_125
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: DisableJobOption
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -1049,11 +1049,11 @@ enumTypes:
   - &ref_126
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: ComputeNodeDeallocationOption
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -1088,11 +1088,11 @@ enumTypes:
   - &ref_127
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: ComputeNodeRebootOption
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -1127,11 +1127,11 @@ enumTypes:
   - &ref_128
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: ComputeNodeReimageOption
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -1166,11 +1166,11 @@ enumTypes:
   - &ref_129
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: DisableComputeNodeSchedulingOption
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false

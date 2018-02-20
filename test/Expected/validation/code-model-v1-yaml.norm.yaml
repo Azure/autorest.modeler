@@ -6,11 +6,11 @@ enumTypes:
   - &ref_2
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: EnumConst
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false

@@ -272,11 +272,11 @@ modelTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $type: PrimaryType
             deprecated: false
