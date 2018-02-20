@@ -74,7 +74,7 @@ namespace AutoRest.Modeler
                     }
                     Modeler.GeneratingTypes[_schema] = objectType;
 
-                    if (_schema.Type == DataType.Object && _schema.AdditionalProperties != null)
+                    if (_schema.AdditionalProperties != null)
                     {
                         // this schema is defining 'additionalProperties' which expects to create an extra
                         // property that will catch all the unbound properties during deserialization.
@@ -150,7 +150,7 @@ namespace AutoRest.Modeler
                                 });
 
                                 PopulateProperty(propertyObj, refSchema != null ? refSchema : propertyValue);
-                                propertyObj.Deprecated = propertyValue.Deprecated || (refSchema?.Deprecated ?? false);
+                                propertyObj.DeprecationMessage = propertyValue.GetDeprecationMessage(EntityType.Property) ?? refSchema?.GetDeprecationMessage(EntityType.Property);
                                 var propertyCompositeType = propertyType as CompositeType;
                                 if (propertyObj.IsConstant || true == propertyCompositeType?.ContainsConstantProperties)
                                 {
@@ -208,7 +208,7 @@ namespace AutoRest.Modeler
             }
             // xml properties
             result.XmlProperties = _schema.Xml;
-            result.Deprecated = _schema.Deprecated;
+            result.DeprecationMessage = _schema.GetDeprecationMessage(EntityType.Type);
             return result;
         }
 

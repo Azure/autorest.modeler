@@ -67,6 +67,7 @@ namespace AutoRest.Modeler
             }
 
             PopulateParameter(parameter, unwrappedParameter);
+            parameter.DeprecationMessage = unwrappedParameter.GetDeprecationMessage(EntityType.Parameter);
 
             if (_swaggerParameter.Reference != null)
             {

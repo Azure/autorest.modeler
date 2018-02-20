@@ -3,7 +3,7 @@ apiVersion: 1.0.0
 baseUrl: 'http://localhost:3000'
 documentation: Test Infrastructure for AutoRest
 errorTypes:
-  - &ref_0
+  - &ref_1
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -57,7 +57,7 @@ errorTypes:
           - message
         serializedName: message
     serializedName: Error
-  - &ref_1
+  - &ref_0
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -90,8 +90,40 @@ errorTypes:
           - statusCode
         serializedName: statusCode
     serializedName: A
+  - &ref_2
+    $type: CompositeType
+    baseModelType: *ref_0
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      fixed: false
+      raw: B
+    properties:
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+        deprecated: false
+        documentation:
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            fixed: false
+            raw: String
+        name:
+          fixed: false
+          raw: textStatusCode
+        realPath:
+          - textStatusCode
+        serializedName: textStatusCode
+    serializedName: B
 headerTypes:
-  - &ref_6
+  - &ref_7
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -135,7 +167,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-head300-Headers
-  - &ref_7
+  - &ref_8
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -179,7 +211,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-get300-Headers
-  - &ref_9
+  - &ref_10
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -223,7 +255,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-head301-Headers
-  - &ref_10
+  - &ref_11
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -267,7 +299,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-get301-Headers
-  - &ref_11
+  - &ref_12
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -311,7 +343,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-put301-Headers
-  - &ref_12
+  - &ref_13
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -355,7 +387,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-head302-Headers
-  - &ref_13
+  - &ref_14
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -399,7 +431,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-get302-Headers
-  - &ref_14
+  - &ref_15
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -443,7 +475,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-patch302-Headers
-  - &ref_15
+  - &ref_16
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -487,7 +519,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-post303-Headers
-  - &ref_16
+  - &ref_17
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -531,7 +563,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-head307-Headers
-  - &ref_17
+  - &ref_18
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -575,7 +607,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-get307-Headers
-  - &ref_18
+  - &ref_19
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -619,7 +651,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: HttpRedirects-put307-Headers
-  - &ref_19
+  - &ref_20
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -663,7 +695,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-patch307-Headers
-  - &ref_20
+  - &ref_21
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -707,7 +739,7 @@ headerTypes:
           - Location
         serializedName: Location
     serializedName: httpRedirects-post307-Headers
-  - &ref_21
+  - &ref_22
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -752,40 +784,9 @@ headerTypes:
         serializedName: Location
     serializedName: httpRedirects-delete307-Headers
 modelTypes:
-  - *ref_0
   - *ref_1
-  - &ref_49
-    $type: CompositeType
-    baseModelType: *ref_1
-    containsConstantProperties: false
-    deprecated: false
-    name:
-      fixed: false
-      raw: B
-    properties:
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: textStatusCode
-        realPath:
-          - textStatusCode
-        serializedName: textStatusCode
-    serializedName: B
+  - *ref_0
+  - *ref_2
   - &ref_50
     $type: CompositeType
     containsConstantProperties: false
@@ -854,7 +855,7 @@ namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Get empty error form server
@@ -872,7 +873,7 @@ operations:
           - application/json
         responses:
           OK:
-            body: &ref_2
+            body: &ref_3
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: boolean
@@ -881,7 +882,7 @@ operations:
                 raw: Boolean
             isNullable: true
         returnType:
-          body: *ref_2
+          body: *ref_3
           isNullable: true
         serializedName: httpFailure_getEmptyError
         url: /http/failure/emptybody/error
@@ -903,7 +904,7 @@ operations:
           - application/json
         responses:
           OK:
-            body: &ref_3
+            body: &ref_4
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: boolean
@@ -912,7 +913,7 @@ operations:
                 raw: Boolean
             isNullable: true
         returnType:
-          body: *ref_3
+          body: *ref_4
           isNullable: true
         serializedName: httpFailure_getNoModelError
         url: /http/failure/nomodel/error
@@ -934,7 +935,7 @@ operations:
           - application/json
         responses:
           OK:
-            body: &ref_4
+            body: &ref_5
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: boolean
@@ -943,7 +944,7 @@ operations:
                 raw: Boolean
             isNullable: true
         returnType:
-          body: *ref_4
+          body: *ref_5
           isNullable: true
         serializedName: httpFailure_getNoModelEmpty
         url: /http/failure/nomodel/empty
@@ -955,7 +956,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Return 200 status code if successful
@@ -979,7 +980,7 @@ operations:
         serializedName: httpSuccess_head200
         url: /http/success/200
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Get 200 success
@@ -997,7 +998,7 @@ operations:
           - application/json
         responses:
           OK:
-            body: &ref_5
+            body: &ref_6
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: boolean
@@ -1006,12 +1007,12 @@ operations:
                 raw: Boolean
             isNullable: true
         returnType:
-          body: *ref_5
+          body: *ref_6
           isNullable: true
         serializedName: httpSuccess_get200
         url: /http/success/200
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Put boolean value true returning 200 success
@@ -1061,7 +1062,7 @@ operations:
         serializedName: httpSuccess_put200
         url: /http/success/200
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Patch true Boolean value in request returning 200
@@ -1111,7 +1112,7 @@ operations:
         serializedName: httpSuccess_patch200
         url: /http/success/200
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Post bollean value true in request that returns a 200
@@ -1161,7 +1162,7 @@ operations:
         serializedName: httpSuccess_post200
         url: /http/success/200
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Delete simple boolean value true returns 200
@@ -1211,7 +1212,7 @@ operations:
         serializedName: httpSuccess_delete200
         url: /http/success/200
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Put true Boolean value in request returns 201
@@ -1261,7 +1262,7 @@ operations:
         serializedName: httpSuccess_put201
         url: /http/success/201
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Post true Boolean value in request returns 201 (Created)
@@ -1311,7 +1312,7 @@ operations:
         serializedName: httpSuccess_post201
         url: /http/success/201
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Put true Boolean value in request returns 202 (Accepted)
@@ -1361,7 +1362,7 @@ operations:
         serializedName: httpSuccess_put202
         url: /http/success/202
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Patch true Boolean value in request returns 202
@@ -1411,7 +1412,7 @@ operations:
         serializedName: httpSuccess_patch202
         url: /http/success/202
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Post true Boolean value in request returns 202 (Accepted)
@@ -1461,7 +1462,7 @@ operations:
         serializedName: httpSuccess_post202
         url: /http/success/202
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Delete true Boolean value in request returns 202 (accepted)
@@ -1511,7 +1512,7 @@ operations:
         serializedName: httpSuccess_delete202
         url: /http/success/202
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Return 204 status code if successful
@@ -1535,7 +1536,7 @@ operations:
         serializedName: httpSuccess_head204
         url: /http/success/204
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Put true Boolean value in request returns 204 (no content)
@@ -1585,7 +1586,7 @@ operations:
         serializedName: httpSuccess_put204
         url: /http/success/204
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Patch true Boolean value in request returns 204 (no content)
@@ -1635,7 +1636,7 @@ operations:
         serializedName: httpSuccess_patch204
         url: /http/success/204
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Post true Boolean value in request returns 204 (no content)
@@ -1685,7 +1686,7 @@ operations:
         serializedName: HttpSuccess_post204
         url: /http/success/204
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Delete true Boolean value in request returns 204 (no content)
@@ -1735,7 +1736,7 @@ operations:
         serializedName: httpSuccess_delete204
         url: /http/success/204
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Return 404 status code
@@ -1768,8 +1769,8 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body: *ref_0
-          headers: *ref_6
+          body: *ref_1
+          headers: *ref_7
           isNullable: true
         deprecated: false
         description: Return 300 status code and redirect to /http/success/200
@@ -1787,19 +1788,19 @@ operations:
           - application/json
         responses:
           MultipleChoices:
-            headers: *ref_6
+            headers: *ref_7
             isNullable: true
           OK:
-            headers: *ref_6
+            headers: *ref_7
             isNullable: true
         returnType:
-          headers: *ref_6
+          headers: *ref_7
           isNullable: true
         serializedName: httpRedirects_head300
         url: /http/redirect/300
       - defaultResponse:
-          body: *ref_0
-          headers: *ref_7
+          body: *ref_1
+          headers: *ref_8
           isNullable: true
         deprecated: false
         description: Return 300 status code and redirect to /http/success/200
@@ -1817,7 +1818,7 @@ operations:
           - application/json
         responses:
           MultipleChoices:
-            body: &ref_8
+            body: &ref_9
               $type: SequenceType
               deprecated: false
               elementType:
@@ -1829,20 +1830,20 @@ operations:
                   raw: String
               name:
                 fixed: false
-            headers: *ref_7
+            headers: *ref_8
             isNullable: true
           OK:
-            headers: *ref_7
+            headers: *ref_8
             isNullable: true
         returnType:
-          body: *ref_8
-          headers: *ref_7
+          body: *ref_9
+          headers: *ref_8
           isNullable: true
         serializedName: httpRedirects_get300
         url: /http/redirect/300
       - defaultResponse:
-          body: *ref_0
-          headers: *ref_9
+          body: *ref_1
+          headers: *ref_10
           isNullable: true
         deprecated: false
         description: Return 301 status code and redirect to /http/success/200
@@ -1860,19 +1861,19 @@ operations:
           - application/json
         responses:
           MovedPermanently:
-            headers: *ref_9
+            headers: *ref_10
             isNullable: true
           OK:
-            headers: *ref_9
+            headers: *ref_10
             isNullable: true
         returnType:
-          headers: *ref_9
+          headers: *ref_10
           isNullable: true
         serializedName: httpRedirects_head301
         url: /http/redirect/301
       - defaultResponse:
-          body: *ref_0
-          headers: *ref_10
+          body: *ref_1
+          headers: *ref_11
           isNullable: true
         deprecated: false
         description: Return 301 status code and redirect to /http/success/200
@@ -1890,19 +1891,19 @@ operations:
           - application/json
         responses:
           MovedPermanently:
-            headers: *ref_10
+            headers: *ref_11
             isNullable: true
           OK:
-            headers: *ref_10
+            headers: *ref_11
             isNullable: true
         returnType:
-          headers: *ref_10
+          headers: *ref_11
           isNullable: true
         serializedName: httpRedirects_get301
         url: /http/redirect/301
       - defaultResponse:
-          body: *ref_0
-          headers: *ref_11
+          body: *ref_1
+          headers: *ref_12
           isNullable: true
         deprecated: false
         description: >-
@@ -1949,16 +1950,16 @@ operations:
           - application/json
         responses:
           MovedPermanently:
-            headers: *ref_11
+            headers: *ref_12
             isNullable: true
         returnType:
-          headers: *ref_11
+          headers: *ref_12
           isNullable: true
         serializedName: httpRedirects_put301
         url: /http/redirect/301
       - defaultResponse:
-          body: *ref_0
-          headers: *ref_12
+          body: *ref_1
+          headers: *ref_13
           isNullable: true
         deprecated: false
         description: Return 302 status code and redirect to /http/success/200
@@ -1976,19 +1977,19 @@ operations:
           - application/json
         responses:
           OK:
-            headers: *ref_12
+            headers: *ref_13
             isNullable: true
           Redirect:
-            headers: *ref_12
+            headers: *ref_13
             isNullable: true
         returnType:
-          headers: *ref_12
+          headers: *ref_13
           isNullable: true
         serializedName: httpRedirects_head302
         url: /http/redirect/302
       - defaultResponse:
-          body: *ref_0
-          headers: *ref_13
+          body: *ref_1
+          headers: *ref_14
           isNullable: true
         deprecated: false
         description: Return 302 status code and redirect to /http/success/200
@@ -2006,19 +2007,19 @@ operations:
           - application/json
         responses:
           OK:
-            headers: *ref_13
+            headers: *ref_14
             isNullable: true
           Redirect:
-            headers: *ref_13
+            headers: *ref_14
             isNullable: true
         returnType:
-          headers: *ref_13
+          headers: *ref_14
           isNullable: true
         serializedName: httpRedirects_get302
         url: /http/redirect/302
       - defaultResponse:
-          body: *ref_0
-          headers: *ref_14
+          body: *ref_1
+          headers: *ref_15
           isNullable: true
         deprecated: false
         description: >-
@@ -2065,16 +2066,16 @@ operations:
           - application/json
         responses:
           Redirect:
-            headers: *ref_14
+            headers: *ref_15
             isNullable: true
         returnType:
-          headers: *ref_14
+          headers: *ref_15
           isNullable: true
         serializedName: httpRedirects_patch302
         url: /http/redirect/302
       - defaultResponse:
-          body: *ref_0
-          headers: *ref_15
+          body: *ref_1
+          headers: *ref_16
           isNullable: true
         deprecated: false
         description: >-
@@ -2121,19 +2122,19 @@ operations:
           - application/json
         responses:
           OK:
-            headers: *ref_15
+            headers: *ref_16
             isNullable: true
           SeeOther:
-            headers: *ref_15
+            headers: *ref_16
             isNullable: true
         returnType:
-          headers: *ref_15
+          headers: *ref_16
           isNullable: true
         serializedName: httpRedirects_post303
         url: /http/redirect/303
       - defaultResponse:
-          body: *ref_0
-          headers: *ref_16
+          body: *ref_1
+          headers: *ref_17
           isNullable: true
         deprecated: false
         description: 'Redirect with 307, resulting in a 200 success'
@@ -2151,19 +2152,19 @@ operations:
           - application/json
         responses:
           OK:
-            headers: *ref_16
+            headers: *ref_17
             isNullable: true
           TemporaryRedirect:
-            headers: *ref_16
+            headers: *ref_17
             isNullable: true
         returnType:
-          headers: *ref_16
+          headers: *ref_17
           isNullable: true
         serializedName: httpRedirects_head307
         url: /http/redirect/307
       - defaultResponse:
-          body: *ref_0
-          headers: *ref_17
+          body: *ref_1
+          headers: *ref_18
           isNullable: true
         deprecated: false
         description: 'Redirect get with 307, resulting in a 200 success'
@@ -2181,19 +2182,19 @@ operations:
           - application/json
         responses:
           OK:
-            headers: *ref_17
+            headers: *ref_18
             isNullable: true
           TemporaryRedirect:
-            headers: *ref_17
+            headers: *ref_18
             isNullable: true
         returnType:
-          headers: *ref_17
+          headers: *ref_18
           isNullable: true
         serializedName: httpRedirects_get307
         url: /http/redirect/307
       - defaultResponse:
-          body: *ref_0
-          headers: *ref_18
+          body: *ref_1
+          headers: *ref_19
           isNullable: true
         deprecated: false
         description: 'Put redirected with 307, resulting in a 200 after redirect'
@@ -2237,19 +2238,19 @@ operations:
           - application/json
         responses:
           OK:
-            headers: *ref_18
+            headers: *ref_19
             isNullable: true
           TemporaryRedirect:
-            headers: *ref_18
+            headers: *ref_19
             isNullable: true
         returnType:
-          headers: *ref_18
+          headers: *ref_19
           isNullable: true
         serializedName: HttpRedirects_put307
         url: /http/redirect/307
       - defaultResponse:
-          body: *ref_0
-          headers: *ref_19
+          body: *ref_1
+          headers: *ref_20
           isNullable: true
         deprecated: false
         description: 'Patch redirected with 307, resulting in a 200 after redirect'
@@ -2293,19 +2294,19 @@ operations:
           - application/json
         responses:
           OK:
-            headers: *ref_19
+            headers: *ref_20
             isNullable: true
           TemporaryRedirect:
-            headers: *ref_19
+            headers: *ref_20
             isNullable: true
         returnType:
-          headers: *ref_19
+          headers: *ref_20
           isNullable: true
         serializedName: httpRedirects_patch307
         url: /http/redirect/307
       - defaultResponse:
-          body: *ref_0
-          headers: *ref_20
+          body: *ref_1
+          headers: *ref_21
           isNullable: true
         deprecated: false
         description: 'Post redirected with 307, resulting in a 200 after redirect'
@@ -2349,19 +2350,19 @@ operations:
           - application/json
         responses:
           OK:
-            headers: *ref_20
+            headers: *ref_21
             isNullable: true
           TemporaryRedirect:
-            headers: *ref_20
+            headers: *ref_21
             isNullable: true
         returnType:
-          headers: *ref_20
+          headers: *ref_21
           isNullable: true
         serializedName: httpRedirects_post307
         url: /http/redirect/307
       - defaultResponse:
-          body: *ref_0
-          headers: *ref_21
+          body: *ref_1
+          headers: *ref_22
           isNullable: true
         deprecated: false
         description: 'Delete redirected with 307, resulting in a 200 after redirect'
@@ -2405,13 +2406,13 @@ operations:
           - application/json
         responses:
           OK:
-            headers: *ref_21
+            headers: *ref_22
             isNullable: true
           TemporaryRedirect:
-            headers: *ref_21
+            headers: *ref_22
             isNullable: true
         returnType:
-          headers: *ref_21
+          headers: *ref_22
           isNullable: true
         serializedName: httpRedirects_delete307
         url: /http/redirect/307
@@ -2422,8 +2423,8 @@ operations:
     typeName:
       fixed: false
   - methods:
-      - defaultResponse: &ref_22
-          body: *ref_0
+      - defaultResponse: &ref_23
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -2441,11 +2442,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_22
+        returnType: *ref_23
         serializedName: httpClientFailure_head400
         url: /http/failure/client/400
-      - defaultResponse: &ref_23
-          body: *ref_0
+      - defaultResponse: &ref_24
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -2463,11 +2464,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_23
+        returnType: *ref_24
         serializedName: httpClientFailure_get400
         url: /http/failure/client/400
-      - defaultResponse: &ref_24
-          body: *ref_0
+      - defaultResponse: &ref_25
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -2511,11 +2512,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_24
+        returnType: *ref_25
         serializedName: httpClientFailure_put400
         url: /http/failure/client/400
-      - defaultResponse: &ref_25
-          body: *ref_0
+      - defaultResponse: &ref_26
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -2559,11 +2560,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_25
+        returnType: *ref_26
         serializedName: httpClientFailure_patch400
         url: /http/failure/client/400
-      - defaultResponse: &ref_26
-          body: *ref_0
+      - defaultResponse: &ref_27
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -2607,11 +2608,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_26
+        returnType: *ref_27
         serializedName: httpClientFailure_post400
         url: /http/failure/client/400
-      - defaultResponse: &ref_27
-          body: *ref_0
+      - defaultResponse: &ref_28
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -2655,11 +2656,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_27
+        returnType: *ref_28
         serializedName: httpClientFailure_delete400
         url: /http/failure/client/400
-      - defaultResponse: &ref_28
-          body: *ref_0
+      - defaultResponse: &ref_29
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -2677,11 +2678,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_28
+        returnType: *ref_29
         serializedName: httpClientFailure_head401
         url: /http/failure/client/401
-      - defaultResponse: &ref_29
-          body: *ref_0
+      - defaultResponse: &ref_30
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -2699,11 +2700,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_29
+        returnType: *ref_30
         serializedName: httpClientFailure_get402
         url: /http/failure/client/402
-      - defaultResponse: &ref_30
-          body: *ref_0
+      - defaultResponse: &ref_31
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -2721,11 +2722,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_30
+        returnType: *ref_31
         serializedName: httpClientFailure_get403
         url: /http/failure/client/403
-      - defaultResponse: &ref_31
-          body: *ref_0
+      - defaultResponse: &ref_32
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -2769,11 +2770,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_31
+        returnType: *ref_32
         serializedName: httpClientFailure_put404
         url: /http/failure/client/404
-      - defaultResponse: &ref_32
-          body: *ref_0
+      - defaultResponse: &ref_33
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -2817,11 +2818,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_32
+        returnType: *ref_33
         serializedName: httpClientFailure_patch405
         url: /http/failure/client/405
-      - defaultResponse: &ref_33
-          body: *ref_0
+      - defaultResponse: &ref_34
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -2865,11 +2866,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_33
+        returnType: *ref_34
         serializedName: httpClientFailure_post406
         url: /http/failure/client/406
-      - defaultResponse: &ref_34
-          body: *ref_0
+      - defaultResponse: &ref_35
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -2913,11 +2914,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_34
+        returnType: *ref_35
         serializedName: httpClientFailure_delete407
         url: /http/failure/client/407
-      - defaultResponse: &ref_35
-          body: *ref_0
+      - defaultResponse: &ref_36
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -2961,11 +2962,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_35
+        returnType: *ref_36
         serializedName: httpClientFailure_put409
         url: /http/failure/client/409
-      - defaultResponse: &ref_36
-          body: *ref_0
+      - defaultResponse: &ref_37
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -2983,11 +2984,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_36
+        returnType: *ref_37
         serializedName: httpClientFailure_head410
         url: /http/failure/client/410
-      - defaultResponse: &ref_37
-          body: *ref_0
+      - defaultResponse: &ref_38
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -3005,11 +3006,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_37
+        returnType: *ref_38
         serializedName: httpClientFailure_get411
         url: /http/failure/client/411
-      - defaultResponse: &ref_38
-          body: *ref_0
+      - defaultResponse: &ref_39
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -3027,11 +3028,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_38
+        returnType: *ref_39
         serializedName: httpClientFailure_get412
         url: /http/failure/client/412
-      - defaultResponse: &ref_39
-          body: *ref_0
+      - defaultResponse: &ref_40
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -3075,11 +3076,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_39
+        returnType: *ref_40
         serializedName: httpClientFailure_put413
         url: /http/failure/client/413
-      - defaultResponse: &ref_40
-          body: *ref_0
+      - defaultResponse: &ref_41
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -3123,11 +3124,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_40
+        returnType: *ref_41
         serializedName: httpClientFailure_patch414
         url: /http/failure/client/414
-      - defaultResponse: &ref_41
-          body: *ref_0
+      - defaultResponse: &ref_42
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -3171,11 +3172,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_41
+        returnType: *ref_42
         serializedName: httpClientFailure_post415
         url: /http/failure/client/415
-      - defaultResponse: &ref_42
-          body: *ref_0
+      - defaultResponse: &ref_43
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -3193,11 +3194,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_42
+        returnType: *ref_43
         serializedName: httpClientFailure_get416
         url: /http/failure/client/416
-      - defaultResponse: &ref_43
-          body: *ref_0
+      - defaultResponse: &ref_44
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -3241,11 +3242,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_43
+        returnType: *ref_44
         serializedName: httpClientFailure_delete417
         url: /http/failure/client/417
-      - defaultResponse: &ref_44
-          body: *ref_0
+      - defaultResponse: &ref_45
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -3263,7 +3264,7 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_44
+        returnType: *ref_45
         serializedName: httpClientFailure_head429
         url: /http/failure/client/429
     name:
@@ -3273,8 +3274,8 @@ operations:
     typeName:
       fixed: false
   - methods:
-      - defaultResponse: &ref_45
-          body: *ref_0
+      - defaultResponse: &ref_46
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -3292,11 +3293,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_45
+        returnType: *ref_46
         serializedName: httpServerFailure_head501
         url: /http/failure/server/501
-      - defaultResponse: &ref_46
-          body: *ref_0
+      - defaultResponse: &ref_47
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -3314,11 +3315,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_46
+        returnType: *ref_47
         serializedName: httpServerFailure_get501
         url: /http/failure/server/501
-      - defaultResponse: &ref_47
-          body: *ref_0
+      - defaultResponse: &ref_48
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -3362,11 +3363,11 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_47
+        returnType: *ref_48
         serializedName: httpServerFailure_post505
         url: /http/failure/server/505
-      - defaultResponse: &ref_48
-          body: *ref_0
+      - defaultResponse: &ref_49
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -3410,7 +3411,7 @@ operations:
         requestContentType: application/json; charset=utf-8
         responseContentTypes:
           - application/json
-        returnType: *ref_48
+        returnType: *ref_49
         serializedName: httpServerFailure_delete505
         url: /http/failure/server/505
     name:
@@ -3421,7 +3422,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Return 408 status code, then 200 after retry'
@@ -3445,7 +3446,7 @@ operations:
         serializedName: httpRetry_head408
         url: /http/retry/408
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Return 500 status code, then 200 after retry'
@@ -3495,7 +3496,7 @@ operations:
         serializedName: httpRetry_put500
         url: /http/retry/500
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Return 500 status code, then 200 after retry'
@@ -3545,7 +3546,7 @@ operations:
         serializedName: httpRetry_patch500
         url: /http/retry/500
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Return 502 status code, then 200 after retry'
@@ -3569,7 +3570,7 @@ operations:
         serializedName: httpRetry_get502
         url: /http/retry/502
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Return 503 status code, then 200 after retry'
@@ -3619,7 +3620,7 @@ operations:
         serializedName: httpRetry_post503
         url: /http/retry/503
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Return 503 status code, then 200 after retry'
@@ -3669,7 +3670,7 @@ operations:
         serializedName: httpRetry_delete503
         url: /http/retry/503
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Return 504 status code, then 200 after retry'
@@ -3719,7 +3720,7 @@ operations:
         serializedName: httpRetry_put504
         url: /http/retry/504
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Return 504 status code, then 200 after retry'
@@ -3776,7 +3777,7 @@ operations:
       fixed: false
   - methods:
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Send a 200 response with valid payload: {''statusCode'': ''200''}'
@@ -3796,15 +3797,15 @@ operations:
           NoContent:
             isNullable: true
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         serializedName: multipleResponses_get200Model204NoModelDefaultError200Valid
         url: /http/payloads/200/A/204/none/default/Error/response/200/valid
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Send a 204 response with no payload
@@ -3824,15 +3825,15 @@ operations:
           NoContent:
             isNullable: true
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         serializedName: multipleResponses_get200Model204NoModelDefaultError204Valid
         url: /http/payloads/200/A/204/none/default/Error/response/204/none
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Send a 201 response with valid payload: {''statusCode'': ''201''}'
@@ -3852,15 +3853,15 @@ operations:
           NoContent:
             isNullable: true
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         serializedName: multipleResponses_get200Model204NoModelDefaultError201Invalid
         url: /http/payloads/200/A/204/none/default/Error/response/201/valid
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Send a 202 response with no payload:'
@@ -3880,15 +3881,15 @@ operations:
           NoContent:
             isNullable: true
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         serializedName: multipleResponses_get200Model204NoModelDefaultError202None
         url: /http/payloads/200/A/204/none/default/Error/response/202/none
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -3910,15 +3911,15 @@ operations:
           NoContent:
             isNullable: true
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         serializedName: multipleResponses_get200Model204NoModelDefaultError400Valid
         url: /http/payloads/200/A/204/none/default/Error/response/400/valid
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Send a 200 response with valid payload: {''statusCode'': ''200''}'
@@ -3936,18 +3937,18 @@ operations:
           - application/json
         responses:
           Created:
-            body: *ref_49
+            body: *ref_2
             isNullable: true
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         serializedName: multipleResponses_get200Model201ModelDefaultError200Valid
         url: /http/payloads/200/A/201/B/default/Error/response/200/valid
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -3967,18 +3968,18 @@ operations:
           - application/json
         responses:
           Created:
-            body: *ref_49
+            body: *ref_2
             isNullable: true
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         serializedName: multipleResponses_get200Model201ModelDefaultError201Valid
         url: /http/payloads/200/A/201/B/default/Error/response/201/valid
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -3998,18 +3999,18 @@ operations:
           - application/json
         responses:
           Created:
-            body: *ref_49
+            body: *ref_2
             isNullable: true
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         serializedName: multipleResponses_get200Model201ModelDefaultError400Valid
         url: /http/payloads/200/A/201/B/default/Error/response/400/valid
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Send a 200 response with valid payload: {''statusCode'': ''200''}'
@@ -4033,7 +4034,7 @@ operations:
             body: *ref_51
             isNullable: true
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
           body:
@@ -4047,7 +4048,7 @@ operations:
         serializedName: multipleResponses_get200ModelA201ModelC404ModelDDefaultError200Valid
         url: /http/payloads/200/A/201/C/404/D/default/Error/response/200/valid
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Send a 200 response with valid payload: {''httpCode'': ''201''}'
@@ -4071,7 +4072,7 @@ operations:
             body: *ref_51
             isNullable: true
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
           body:
@@ -4085,7 +4086,7 @@ operations:
         serializedName: multipleResponses_get200ModelA201ModelC404ModelDDefaultError201Valid
         url: /http/payloads/200/A/201/C/404/D/default/Error/response/201/valid
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: 'Send a 200 response with valid payload: {''httpStatusCode'': ''404''}'
@@ -4109,7 +4110,7 @@ operations:
             body: *ref_51
             isNullable: true
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
           body:
@@ -4123,7 +4124,7 @@ operations:
         serializedName: multipleResponses_get200ModelA201ModelC404ModelDDefaultError404Valid
         url: /http/payloads/200/A/201/C/404/D/default/Error/response/404/valid
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -4149,7 +4150,7 @@ operations:
             body: *ref_51
             isNullable: true
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
           body:
@@ -4163,7 +4164,7 @@ operations:
         serializedName: multipleResponses_get200ModelA201ModelC404ModelDDefaultError400Valid
         url: /http/payloads/200/A/201/C/404/D/default/Error/response/400/valid
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Send a 202 response with no payload
@@ -4189,7 +4190,7 @@ operations:
         serializedName: multipleResponses_get202None204NoneDefaultError202None
         url: /http/payloads/202/none/204/none/default/Error/response/202/none
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: Send a 204 response with no payload
@@ -4215,7 +4216,7 @@ operations:
         serializedName: multipleResponses_get202None204NoneDefaultError204None
         url: /http/payloads/202/none/204/none/default/Error/response/204/none
       - defaultResponse:
-          body: *ref_0
+          body: *ref_1
           isNullable: true
         deprecated: false
         description: >-
@@ -4343,7 +4344,7 @@ operations:
         serializedName: multipleResponses_get202None204NoneDefaultNone400Invalid
         url: /http/payloads/202/none/204/none/default/none/response/400/invalid
       - defaultResponse: &ref_52
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Send a 200 response with valid payload: {''statusCode'': ''200''}'
@@ -4363,7 +4364,7 @@ operations:
         serializedName: multipleResponses_getDefaultModelA200Valid
         url: /http/payloads/default/A/response/200/valid
       - defaultResponse: &ref_53
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Send a 200 response with no payload
@@ -4383,7 +4384,7 @@ operations:
         serializedName: multipleResponses_getDefaultModelA200None
         url: /http/payloads/default/A/response/200/none
       - defaultResponse: &ref_54
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: 'Send a 400 response with valid payload: {''statusCode'': ''400''}'
@@ -4403,7 +4404,7 @@ operations:
         serializedName: multipleResponses_getDefaultModelA400Valid
         url: /http/payloads/default/A/response/400/valid
       - defaultResponse: &ref_55
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         deprecated: false
         description: Send a 400 response with no payload
@@ -4518,10 +4519,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         serializedName: multipleResponses_get200ModelA200None
         url: /http/payloads/200/A/response/200/none
@@ -4543,10 +4544,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         serializedName: multipleResponses_get200ModelA200Valid
         url: /http/payloads/200/A/response/200/valid
@@ -4568,10 +4569,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         serializedName: multipleResponses_get200ModelA200Invalid
         url: /http/payloads/200/A/response/200/invalid
@@ -4595,10 +4596,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         serializedName: multipleResponses_get200ModelA400None
         url: /http/payloads/200/A/response/400/none
@@ -4620,10 +4621,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         serializedName: multipleResponses_get200ModelA400Valid
         url: /http/payloads/200/A/response/400/valid
@@ -4645,10 +4646,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         serializedName: multipleResponses_get200ModelA400Invalid
         url: /http/payloads/200/A/response/400/invalid
@@ -4670,10 +4671,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_1
+            body: *ref_0
             isNullable: true
         returnType:
-          body: *ref_1
+          body: *ref_0
           isNullable: true
         serializedName: multipleResponses_get200ModelA202Valid
         url: /http/payloads/200/A/response/202/valid

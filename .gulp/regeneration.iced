@@ -39,6 +39,7 @@ regenExpected = (opts,done) ->
       return done() if instances is 0
 
 mappingsTestServer = {
+  'additionalProperties'        : 'additionalProperties.json',
   'azure-parameter-grouping'    : 'azure-parameter-grouping.json',
   'azure-report'                : 'azure-report.json',
   'azure-resource-x'            : 'azure-resource-x.json',
@@ -91,7 +92,8 @@ mappingsSpecs = {
   'specs-mobileengagement' : 'mobileengagement/resource-manager/Microsoft.MobileEngagement/2014-12-01/mobile-engagement.json',
   'specs-datalake-store'   : 'datalake-store/data-plane/Microsoft.DataLakeStore/2016-11-01/filesystem.json',
   'specs-search'           : 'search/data-plane/Microsoft.Search/2016-09-01/searchindex.json',
-  'specs-batch'            : 'batch/data-plane/Microsoft.Batch/2017-09-01.6.0/BatchService.json'
+  'specs-batch'            : 'batch/data-plane/Microsoft.Batch/2017-09-01.6.0/BatchService.json',
+  'specs-spellcheck'       : 'cognitiveservices/data-plane/SpellCheck/V1.0/SpellCheck.json'
 }
 
 task 'regenerate-testserver', '', (done) ->
@@ -104,7 +106,7 @@ task 'regenerate-testserver', '', (done) ->
 
 task 'regenerate-specs', '', (done) ->
   regenExpected {
-    'inputBaseDir': "https://github.com/Azure/azure-rest-api-specs/blob/2df71489cc110ca9d3251bf7a4e685ab6616f379/specification",
+    'inputBaseDir': "https://github.com/Azure/azure-rest-api-specs/blob/da7ee47971be752d22b4df5c3e137d3429ce9b9c/specification",
     'mappings': mappingsSpecs,
     'outputDir': 'test/Expected'
   },done

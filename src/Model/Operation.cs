@@ -99,7 +99,5 @@ namespace AutoRest.Modeler.Model
         /// The list of possible responses as they are returned from executing this operation.
         /// </summary>
         public Dictionary<string, OperationResponse> Responses { get; set; }
-
-        public bool Deprecated { get; set; }
     }
 }

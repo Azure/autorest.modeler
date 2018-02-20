@@ -8,6 +8,7 @@ using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
 using AutoRest.Modeler.Properties;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using static AutoRest.Core.Utilities.DependencyInjection;
 
 namespace AutoRest.Modeler.Model
@@ -60,8 +61,6 @@ namespace AutoRest.Modeler.Model
         /// </summary>
         public string Default { get; set; }
 
-        public bool Deprecated { get; set; }
-
         public string MultipleOf { get; set; }
 
         public string Maximum { get; set; }
@@ -84,7 +83,7 @@ namespace AutoRest.Modeler.Model
 
         public bool UniqueItems { get; set; }
 
-        public IList<string> Enum { get; set; }
+        public IList<JToken> Enum { get; set; }
 
         /// <summary>
         /// Returns the PrimaryType that the SwaggerObject maps to, given the Type and the KnownFormat.

@@ -4420,7 +4420,7 @@ modelTypes:
     baseModelType: *ref_12
     containsConstantProperties: false
     deprecated: false
-    documentation: Identifier.
+    documentation: A domain specific resource identifier.
     name:
       fixed: false
       raw: Identifier
@@ -6506,7 +6506,7 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: SKU.
+          raw: Premier add on SKU.
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -6529,7 +6529,7 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: Product.
+          raw: Premier add on Product.
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -6552,7 +6552,7 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: Vendor.
+          raw: Premier add on Vendor.
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -6575,7 +6575,7 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: Name.
+          raw: Premier add on Name.
         extensions:
           x-ms-client-name: PremierAddOnName
         isConstant: false
@@ -6600,7 +6600,7 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: Location.
+          raw: Premier add on Location.
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -6623,7 +6623,7 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: Tags.
+          raw: Premier add on Tags.
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -6652,7 +6652,7 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: Marketplace publisher.
+          raw: Premier add on Marketplace publisher.
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -6675,7 +6675,7 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: Marketplace offer.
+          raw: Premier add on Marketplace offer.
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -10229,7 +10229,7 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: Decryption.
+          raw: Algorithm used for decryption.
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -10866,7 +10866,7 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: Count.
+          raw: Request Count.
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -10947,7 +10947,7 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: SubStatus.
+          raw: Request Sub Status.
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -10995,7 +10995,7 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: Count.
+          raw: Request Count.
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -11075,7 +11075,7 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: Count.
+          raw: Request Count.
         isConstant: false
         isReadOnly: false
         isRequired: false
@@ -17959,7 +17959,7 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: Properties.
+          raw: Resource metric definition properties.
         isConstant: false
         isReadOnly: true
         isRequired: false
@@ -19731,7 +19731,9 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: Reserved.
+          raw: >-
+            If Linux app service plan <code>true</code>, <code>false</code>
+            otherwise.
         extensions:
           x-ms-mutability:
             - create
@@ -20315,7 +20317,7 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: Properties.
+          raw: Resource metric properties collection.
         isConstant: false
         isReadOnly: true
         isRequired: false
@@ -20526,7 +20528,7 @@ modelTypes:
         deprecated: false
         documentation:
           fixed: false
-          raw: Properties.
+          raw: Resource metric properties collection.
         isConstant: false
         isReadOnly: true
         isRequired: false
@@ -20712,7 +20714,7 @@ modelTypes:
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
-    documentation: Operation.
+    documentation: An operation on a resource.
     name:
       fixed: false
       raw: Operation
@@ -36266,6 +36268,8 @@ operations:
         responseContentTypes:
           - application/json
         responses:
+          NoContent:
+            isNullable: true
           OK:
             isNullable: true
         returnType:
@@ -39233,6 +39237,8 @@ operations:
           - application/json
         responses:
           Accepted:
+            isNullable: true
+          OK:
             isNullable: true
         returnType:
           isNullable: true
@@ -56965,6 +56971,8 @@ operations:
         responseContentTypes:
           - application/json
         responses:
+          NoContent:
+            isNullable: true
           OK:
             isNullable: true
         returnType:
@@ -60392,6 +60400,8 @@ operations:
           - application/json
         responses:
           Accepted:
+            isNullable: true
+          OK:
             isNullable: true
         returnType:
           isNullable: true

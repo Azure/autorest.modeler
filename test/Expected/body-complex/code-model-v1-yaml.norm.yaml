@@ -3017,6 +3017,51 @@ operations:
           body: *ref_0
           isNullable: true
         deprecated: false
+        description: 'Put complex types that are polymorphic, omitting the discriminator'
+        extensions:
+          x-ms-requestBody-index: '0'
+        group:
+          fixed: false
+          raw: polymorphism
+        hidden: false
+        httpMethod: put
+        isAbsoluteUrl: false
+        name:
+          fixed: false
+          raw: putMissingDiscriminator
+        parameters:
+          - collectionFormat: none
+            defaultValue:
+              fixed: false
+            deprecated: false
+            documentation:
+              fixed: false
+            extensions:
+              x-ms-requestBody-name: complexBody
+            isConstant: false
+            isRequired: true
+            location: body
+            modelType: *ref_6
+            name:
+              fixed: false
+              raw: complexBody
+            serializedName: complexBody
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            body: *ref_6
+            isNullable: true
+        returnType:
+          body: *ref_6
+          isNullable: true
+        serializedName: polymorphism_putMissingDiscriminator
+        url: /complex/polymorphism/missingdiscriminator
+      - defaultResponse:
+          body: *ref_0
+          isNullable: true
+        deprecated: false
         description: >-
           Put complex types that are polymorphic, attempting to omit required
           'birthday' field - the request should not be allowed from the client

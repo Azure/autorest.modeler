@@ -6,6 +6,7 @@ documentation: Test Infrastructure for AutoRest
 errorTypes:
   - $ref: '2'
   - $ref: '16'
+  - $ref: '24'
 headerTypes:
   - $id: '48'
     $type: CompositeType

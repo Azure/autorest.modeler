@@ -77,6 +77,7 @@ namespace AutoRest.Modeler
                 CodeModel.Add(clientProperty);
             }
 
+            var baseErrorResponses = new List<Fixable<string>>();
             var methods = new List<Method>();
             // Build methods
             foreach (var path in ServiceDefinition.Paths.Concat(ServiceDefinition.CustomPaths))
@@ -94,7 +95,7 @@ namespace AutoRest.Modeler
                     }
                     var methodName = GetMethodNameFromOperationId(operation.OperationId);
                     var methodGroup = GetMethodGroup(operation);
-
+                    
                     if (verb.ToHttpMethod() != HttpMethod.Options)
                     {
                         string url = path.Key;
@@ -104,12 +105,24 @@ namespace AutoRest.Modeler
                         }
                         var method = BuildMethod(verb.ToHttpMethod(), url, methodName, operation);
                         method.Group = methodGroup;
-                        
                         methods.Add(method);
+
+                        // Add error models marked by x-ms-error-response
+                        var xmsErrorResponses = method.Responses.Values.Where(resp=>resp.Extensions.ContainsKey("x-ms-error-response") && (bool)resp.Extensions["x-ms-error-response"] && resp.Body is CompositeType)
+                                                                       .Select(resp=>(CompositeType)resp.Body);
+                        xmsErrorResponses.ForEach(errModel=>CodeModel.AddError(errModel));
+
+                        // If marked error models have a polymorphic discriminator, include all models that allOf on them (at any level of inheritence)
+                        baseErrorResponses = baseErrorResponses.Union(xmsErrorResponses.Where(errModel=>!string.IsNullOrEmpty(errModel.PolymorphicDiscriminator) && ExtendedTypes.ContainsKey(errModel.Name))
+                                                                  .Select(errModel=>errModel.Name)).ToList();
+
+                        // Add the default error model if exists
                         if (method.DefaultResponse.Body is CompositeType)
                         {
+                            baseErrorResponses.Add(((CompositeType)method.DefaultResponse.Body).Name);
                             CodeModel.AddError((CompositeType)method.DefaultResponse.Body);
                         }
+               
                     }
                     else
                     {
@@ -119,6 +132,7 @@ namespace AutoRest.Modeler
             }
             ProcessForwardToMethods(methods);
 
+            
             // Set base type
             foreach (var typeName in GeneratedTypes.Keys)
             {
@@ -130,8 +144,32 @@ namespace AutoRest.Modeler
 
                 CodeModel.Add(objectType);
             }
+
             CodeModel.AddRange(methods);
+
             
+            foreach(var k in GeneratedTypes.Keys)
+            {
+                var baseModelType = GeneratedTypes[k].BaseModelType;
+                while(baseModelType != null && baseModelType is CompositeType && !baseErrorResponses.Contains(k))
+                {
+                    if(baseErrorResponses.Contains(baseModelType.Name))
+                    {
+                        CodeModel.AddError(GeneratedTypes[k]);
+                        break;
+                    }
+                    baseModelType = baseModelType.BaseModelType;
+                }
+            }
+            
+            // What operation returns it decides whether an object is to be modeled as a 
+            // regular model class or an exception class
+            // Set base type
+            var errorResponses = 
+                ServiceDefinition.Paths.Values.SelectMany(pathObj=>pathObj.Values.SelectMany(opObj=>opObj.Responses.Values.Where(res=>res.Extensions?.ContainsKey("x-ms-error-response")==true && (bool)res.Extensions["x-ms-error-response"])));
+            var errorModels = errorResponses.Select(resp=>resp.Schema?.Reference).Where(modelRef=>!string.IsNullOrEmpty(modelRef)).Select(modelRef=>GeneratedTypes[modelRef]);
+            errorModels.ForEach(errorModel=>CodeModel.AddError(errorModel));
+
             // Build ContentType enum
             if (ContentTypeChoices.Count > 0)
             {
@@ -260,7 +298,7 @@ namespace AutoRest.Modeler
                         In = ParameterLocation.Path,
                         Name = serverVar.Key,
                         Description = serverVar.Value.Description,
-                        Schema = new Schema { Type = DataType.String, Default = serverVar.Value.Default, Enum = serverVar.Value.Enum },
+                        Schema = new Schema { Type = DataType.String, Default = serverVar.Value.Default, Enum = serverVar.Value.Enum?.StringsToTokens().ToList() },
                         Extensions = serverVar.Value.Extensions,
                         IsRequired = true
                     };
