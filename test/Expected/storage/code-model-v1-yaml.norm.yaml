@@ -5,11 +5,11 @@ enumTypes:
   - &ref_0
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: Reason
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -25,11 +25,11 @@ enumTypes:
   - &ref_1
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: AccountType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -51,11 +51,11 @@ enumTypes:
   - &ref_6
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: ProvisioningState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -73,11 +73,11 @@ enumTypes:
   - &ref_7
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: AccountStatus
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -93,11 +93,11 @@ enumTypes:
   - &ref_13
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: KeyName
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -113,11 +113,11 @@ enumTypes:
   - &ref_14
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: UsageUnit
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false

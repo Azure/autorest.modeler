@@ -6,11 +6,11 @@ enumTypes:
   - &ref_4
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
       raw: ProvisioningStates
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -26,11 +26,11 @@ enumTypes:
   - &ref_16
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
       raw: PushModes
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -48,11 +48,11 @@ enumTypes:
   - &ref_17
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
       raw: CampaignTypes
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -72,11 +72,11 @@ enumTypes:
   - &ref_18
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
       raw: DeliveryTimes
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -94,11 +94,11 @@ enumTypes:
   - &ref_19
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
       raw: NotificationTypes
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -114,11 +114,11 @@ enumTypes:
   - &ref_23
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
       raw: CampaignStates
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -140,11 +140,11 @@ enumTypes:
   - &ref_25
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
       raw: CampaignFeedbacks
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -164,11 +164,11 @@ enumTypes:
   - &ref_26
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
       raw: AudienceOperators
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -190,11 +190,11 @@ enumTypes:
   - &ref_34
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: CampaignType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -214,11 +214,11 @@ enumTypes:
   - &ref_35
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: ExportState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -238,11 +238,11 @@ enumTypes:
   - &ref_36
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: ExportType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -272,11 +272,11 @@ enumTypes:
   - &ref_33
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: ExportFormat
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -292,11 +292,11 @@ enumTypes:
   - &ref_39
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
       raw: JobStates
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -316,11 +316,11 @@ enumTypes:
   - &ref_49
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
       raw: CampaignKinds
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false

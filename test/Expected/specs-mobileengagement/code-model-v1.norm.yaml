@@ -20,12 +20,12 @@ enumTypes:
   - $id: '1613'
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: true
     name:
       $id: '1620'
       fixed: false
       raw: CampaignKinds
+    oldModelAsString: false
     underlyingType:
       $id: '1618'
       $type: PrimaryType
@@ -1032,12 +1032,12 @@ modelTypes:
           $id: '101'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             $id: '106'
             fixed: false
             raw: ProvisioningStates
+          oldModelAsString: false
           underlyingType:
             $id: '104'
             $type: PrimaryType
@@ -2422,12 +2422,12 @@ modelTypes:
           $id: '359'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             $id: '365'
             fixed: false
             raw: PushModes
+          oldModelAsString: false
           underlyingType:
             $id: '363'
             $type: PrimaryType
@@ -2485,12 +2485,12 @@ modelTypes:
           $id: '370'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             $id: '377'
             fixed: false
             raw: CampaignTypes
+          oldModelAsString: false
           underlyingType:
             $id: '375'
             $type: PrimaryType
@@ -2547,12 +2547,12 @@ modelTypes:
           $id: '382'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             $id: '388'
             fixed: false
             raw: DeliveryTimes
+          oldModelAsString: false
           underlyingType:
             $id: '386'
             $type: PrimaryType
@@ -2745,12 +2745,12 @@ modelTypes:
           $id: '419'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             $id: '424'
             fixed: false
             raw: NotificationTypes
+          oldModelAsString: false
           underlyingType:
             $id: '422'
             $type: PrimaryType
@@ -3155,12 +3155,12 @@ modelTypes:
           $id: '493'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             $id: '501'
             fixed: false
             raw: CampaignStates
+          oldModelAsString: false
           underlyingType:
             $id: '499'
             $type: PrimaryType
@@ -3938,12 +3938,12 @@ modelTypes:
           $id: '640'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             $id: '647'
             fixed: false
             raw: CampaignFeedbacks
+          oldModelAsString: false
           underlyingType:
             $id: '645'
             $type: PrimaryType
@@ -4439,12 +4439,12 @@ modelTypes:
           $id: '732'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             $id: '740'
             fixed: false
             raw: AudienceOperators
+          oldModelAsString: false
           underlyingType:
             $id: '738'
             $type: PrimaryType
@@ -7298,12 +7298,12 @@ modelTypes:
           $id: '1285'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '1290'
             fixed: false
             raw: ExportFormat
+          oldModelAsString: false
           underlyingType:
             $id: '1288'
             $type: PrimaryType
@@ -7509,12 +7509,12 @@ modelTypes:
           $id: '1327'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '1334'
             fixed: false
             raw: CampaignType
+          oldModelAsString: false
           underlyingType:
             $id: '1332'
             $type: PrimaryType
@@ -7880,12 +7880,12 @@ modelTypes:
           $id: '1399'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '1406'
             fixed: false
             raw: ExportState
+          oldModelAsString: false
           underlyingType:
             $id: '1404'
             $type: PrimaryType
@@ -7995,12 +7995,12 @@ modelTypes:
           $id: '1423'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '1435'
             fixed: false
             raw: ExportType
+          oldModelAsString: false
           underlyingType:
             $id: '1433'
             $type: PrimaryType
@@ -8249,12 +8249,12 @@ modelTypes:
           $id: '1476'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             $id: '1483'
             fixed: false
             raw: JobStates
+          oldModelAsString: false
           underlyingType:
             $id: '1481'
             $type: PrimaryType

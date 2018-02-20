@@ -299,12 +299,12 @@ modelTypes:
           $id: '59'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             $id: '65'
             fixed: false
             raw: NetworkOperationStatus
+          oldModelAsString: false
           underlyingType:
             $id: '63'
             $type: PrimaryType

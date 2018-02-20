@@ -7,12 +7,12 @@ enumTypes:
   - $id: '16'
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       $id: '22'
       fixed: false
       raw: UriColor
+    oldModelAsString: false
     underlyingType:
       $id: '20'
       $type: PrimaryType

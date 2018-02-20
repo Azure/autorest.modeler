@@ -4930,12 +4930,12 @@ modelTypes:
           $id: '75'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             $id: '89'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '87'
             $type: PrimaryType
@@ -5077,12 +5077,12 @@ modelTypes:
           $id: '108'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             $id: '122'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '120'
             $type: PrimaryType
@@ -5304,12 +5304,12 @@ modelTypes:
           $id: '157'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             $id: '171'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '169'
             $type: PrimaryType

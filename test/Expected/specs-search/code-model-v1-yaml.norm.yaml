@@ -10,11 +10,11 @@ documentation: >-
 enumTypes:
   - $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: IndexActionType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -34,11 +34,11 @@ enumTypes:
   - &ref_2
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: SearchMode
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -54,11 +54,11 @@ enumTypes:
   - &ref_1
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: QueryType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false

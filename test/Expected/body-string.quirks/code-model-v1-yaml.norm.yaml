@@ -6,11 +6,11 @@ enumTypes:
   - &ref_9
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: Colors
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -169,11 +169,11 @@ operations:
             body: &ref_1
               $type: EnumType
               deprecated: false
-              oldModelAsString: true
               modelAsString: true
               name:
                 fixed: false
                 raw: ''
+              oldModelAsString: false
               underlyingType:
                 $type: PrimaryType
                 deprecated: false
@@ -260,11 +260,11 @@ operations:
             body: &ref_2
               $type: EnumType
               deprecated: false
-              oldModelAsString: true
               modelAsString: true
               name:
                 fixed: false
                 raw: ''
+              oldModelAsString: false
               underlyingType:
                 $type: PrimaryType
                 deprecated: false
@@ -354,11 +354,11 @@ operations:
             body: &ref_3
               $type: EnumType
               deprecated: false
-              oldModelAsString: true
               modelAsString: true
               name:
                 fixed: false
                 raw: ''
+              oldModelAsString: false
               underlyingType:
                 $type: PrimaryType
                 deprecated: false
@@ -453,11 +453,11 @@ operations:
             body: &ref_4
               $type: EnumType
               deprecated: false
-              oldModelAsString: true
               modelAsString: true
               name:
                 fixed: false
                 raw: ''
+              oldModelAsString: false
               underlyingType:
                 $type: PrimaryType
                 deprecated: false
