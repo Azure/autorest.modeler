@@ -581,7 +581,6 @@
     {
       "$id": "25",
       "$type": "EnumType",
-      "ModelAsExtensible": false,
       "Values": [
         {
           "AllowedValues": [],
@@ -596,6 +595,7 @@
           "SerializedName": "b"
         }
       ],
+      "OldModelAsString": false,
       "ModelAsString": false,
       "UnderlyingType": {
         "$id": "26",
@@ -623,7 +623,6 @@
     {
       "$id": "27",
       "$type": "EnumType",
-      "ModelAsExtensible": false,
       "Values": [
         {
           "AllowedValues": [],
@@ -638,6 +637,7 @@
           "SerializedName": "b"
         }
       ],
+      "OldModelAsString": false,
       "ModelAsString": false,
       "UnderlyingType": {
         "$id": "28",
@@ -665,7 +665,6 @@
     {
       "$id": "29",
       "$type": "EnumType",
-      "ModelAsExtensible": false,
       "Values": [
         {
           "AllowedValues": [],
@@ -680,6 +679,7 @@
           "SerializedName": "b"
         }
       ],
+      "OldModelAsString": false,
       "ModelAsString": false,
       "UnderlyingType": {
         "$id": "30",
@@ -707,7 +707,6 @@
     {
       "$id": "31",
       "$type": "EnumType",
-      "ModelAsExtensible": false,
       "Values": [
         {
           "AllowedValues": [],
@@ -722,6 +721,7 @@
           "SerializedName": "b"
         }
       ],
+      "OldModelAsString": false,
       "ModelAsString": false,
       "UnderlyingType": {
         "$id": "32",
@@ -749,7 +749,6 @@
     {
       "$id": "33",
       "$type": "EnumType",
-      "ModelAsExtensible": false,
       "Values": [
         {
           "AllowedValues": [],
@@ -764,6 +763,7 @@
           "SerializedName": "b"
         }
       ],
+      "OldModelAsString": false,
       "ModelAsString": true,
       "UnderlyingType": {
         "$id": "34",
@@ -791,7 +791,6 @@
     {
       "$id": "35",
       "$type": "EnumType",
-      "ModelAsExtensible": false,
       "Values": [
         {
           "AllowedValues": [],
@@ -806,6 +805,7 @@
           "SerializedName": "b"
         }
       ],
+      "OldModelAsString": false,
       "ModelAsString": true,
       "UnderlyingType": {
         "$id": "36",
@@ -833,7 +833,6 @@
     {
       "$id": "37",
       "$type": "EnumType",
-      "ModelAsExtensible": false,
       "Values": [
         {
           "AllowedValues": [],
@@ -848,6 +847,7 @@
           "SerializedName": "b"
         }
       ],
+      "OldModelAsString": false,
       "ModelAsString": true,
       "UnderlyingType": {
         "$id": "38",
@@ -875,7 +875,6 @@
     {
       "$id": "39",
       "$type": "EnumType",
-      "ModelAsExtensible": false,
       "Values": [
         {
           "AllowedValues": [],
@@ -890,6 +889,7 @@
           "SerializedName": "b"
         }
       ],
+      "OldModelAsString": false,
       "ModelAsString": true,
       "UnderlyingType": {
         "$id": "40",
@@ -917,7 +917,6 @@
     {
       "$id": "41",
       "$type": "EnumType",
-      "ModelAsExtensible": true,
       "Values": [
         {
           "AllowedValues": [],
@@ -932,6 +931,7 @@
           "SerializedName": "b"
         }
       ],
+      "OldModelAsString": false,
       "ModelAsString": false,
       "UnderlyingType": {
         "$id": "42",
@@ -959,7 +959,6 @@
     {
       "$id": "43",
       "$type": "EnumType",
-      "ModelAsExtensible": true,
       "Values": [
         {
           "AllowedValues": [],
@@ -974,6 +973,7 @@
           "SerializedName": "b"
         }
       ],
+      "OldModelAsString": false,
       "ModelAsString": false,
       "UnderlyingType": {
         "$id": "44",
@@ -1001,7 +1001,6 @@
     {
       "$id": "45",
       "$type": "EnumType",
-      "ModelAsExtensible": true,
       "Values": [
         {
           "AllowedValues": [],
@@ -1016,6 +1015,7 @@
           "SerializedName": "b"
         }
       ],
+      "OldModelAsString": false,
       "ModelAsString": false,
       "UnderlyingType": {
         "$id": "46",
@@ -1043,7 +1043,6 @@
     {
       "$id": "47",
       "$type": "EnumType",
-      "ModelAsExtensible": true,
       "Values": [
         {
           "AllowedValues": [],
@@ -1058,6 +1057,7 @@
           "SerializedName": "b"
         }
       ],
+      "OldModelAsString": false,
       "ModelAsString": false,
       "UnderlyingType": {
         "$id": "48",
