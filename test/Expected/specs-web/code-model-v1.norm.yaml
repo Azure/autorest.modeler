@@ -74,12 +74,12 @@ modelTypes:
           $id: '7'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '15'
             fixed: false
             raw: LogLevel
+          oldModelAsString: false
           underlyingType:
             $id: '13'
             $type: PrimaryType
@@ -494,12 +494,12 @@ modelTypes:
           $id: '86'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             $id: '93'
             fixed: false
             raw: DatabaseType
+          oldModelAsString: false
           underlyingType:
             $id: '91'
             $type: PrimaryType
@@ -778,12 +778,12 @@ modelTypes:
           $id: '142'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '155'
             fixed: false
             raw: BackupItemStatus
+          oldModelAsString: false
           underlyingType:
             $id: '153'
             $type: PrimaryType
@@ -1408,12 +1408,12 @@ modelTypes:
           $id: '268'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '273'
             fixed: false
             raw: FrequencyUnit
+          oldModelAsString: false
           underlyingType:
             $id: '271'
             $type: PrimaryType
@@ -1736,12 +1736,12 @@ modelTypes:
           $id: '332'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '339'
             fixed: false
             raw: BackupRestoreOperationType
+          oldModelAsString: false
           underlyingType:
             $id: '337'
             $type: PrimaryType
@@ -1869,12 +1869,12 @@ modelTypes:
           $id: '358'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '372'
             fixed: false
             raw: ConnectionStringType
+          oldModelAsString: false
           underlyingType:
             $id: '370'
             $type: PrimaryType
@@ -2004,12 +2004,12 @@ modelTypes:
           $id: '387'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '395'
             fixed: false
             raw: ContinuousWebJobStatus
+          oldModelAsString: false
           underlyingType:
             $id: '393'
             $type: PrimaryType
@@ -2237,12 +2237,12 @@ modelTypes:
           $id: '436'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '441'
             fixed: false
             raw: WebJobType
+          oldModelAsString: false
           underlyingType:
             $id: '439'
             $type: PrimaryType
@@ -2503,12 +2503,12 @@ modelTypes:
           $id: '488'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             $id: '494'
             fixed: false
             raw: PublishingProfileFormat
+          oldModelAsString: false
           underlyingType:
             $id: '492'
             $type: PrimaryType
@@ -2863,12 +2863,12 @@ modelTypes:
           $id: '561'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '567'
             fixed: false
             raw: DnsVerificationTestResult
+          oldModelAsString: false
           underlyingType:
             $id: '565'
             $type: PrimaryType
@@ -4466,12 +4466,12 @@ modelTypes:
           $id: '874'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '879'
             fixed: false
             raw: AzureResourceType
+          oldModelAsString: false
           underlyingType:
             $id: '877'
             $type: PrimaryType
@@ -4519,12 +4519,12 @@ modelTypes:
           $id: '884'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '889'
             fixed: false
             raw: CustomHostNameDnsRecordType
+          oldModelAsString: false
           underlyingType:
             $id: '887'
             $type: PrimaryType
@@ -4572,12 +4572,12 @@ modelTypes:
           $id: '894'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '899'
             fixed: false
             raw: HostNameType
+          oldModelAsString: false
           underlyingType:
             $id: '897'
             $type: PrimaryType
@@ -4625,12 +4625,12 @@ modelTypes:
           $id: '904'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '910'
             fixed: false
             raw: SslState
+          oldModelAsString: false
           underlyingType:
             $id: '908'
             $type: PrimaryType
@@ -5367,12 +5367,12 @@ modelTypes:
           $id: '1045'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '1051'
             fixed: false
             raw: MSDeployLogEntryType
+          oldModelAsString: false
           underlyingType:
             $id: '1049'
             $type: PrimaryType
@@ -5570,12 +5570,12 @@ modelTypes:
           $id: '1084'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '1092'
             fixed: false
             raw: MSDeployProvisioningState
+          oldModelAsString: false
           underlyingType:
             $id: '1090'
             $type: PrimaryType
@@ -5797,12 +5797,12 @@ modelTypes:
           $id: '1129'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '1134'
             fixed: false
             raw: MySqlMigrationType
+          oldModelAsString: false
           underlyingType:
             $id: '1132'
             $type: PrimaryType
@@ -5897,12 +5897,12 @@ modelTypes:
           $id: '1147'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '1155'
             fixed: false
             raw: OperationStatus
+          oldModelAsString: false
           underlyingType:
             $id: '1153'
             $type: PrimaryType
@@ -6174,12 +6174,12 @@ modelTypes:
           $id: '1198'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             $id: '1204'
             fixed: false
             raw: RouteType
+          oldModelAsString: false
           underlyingType:
             $id: '1202'
             $type: PrimaryType
@@ -10327,12 +10327,12 @@ modelTypes:
           $id: '2023'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '2029'
             fixed: false
             raw: PublicCertificateLocation
+          oldModelAsString: false
           underlyingType:
             $id: '2027'
             $type: PrimaryType
@@ -11060,12 +11060,12 @@ modelTypes:
           $id: '2160'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '2165'
             fixed: false
             raw: UnauthenticatedClientAction
+          oldModelAsString: false
           underlyingType:
             $id: '2163'
             $type: PrimaryType
@@ -11194,12 +11194,12 @@ modelTypes:
           $id: '2184'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '2192'
             fixed: false
             raw: BuiltInAuthenticationProvider
+          oldModelAsString: false
           underlyingType:
             $id: '2190'
             $type: PrimaryType
@@ -12021,12 +12021,12 @@ modelTypes:
           $id: '2331'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '2337'
             fixed: false
             raw: CloneAbilityResult
+          oldModelAsString: false
           underlyingType:
             $id: '2335'
             $type: PrimaryType
@@ -13696,12 +13696,12 @@ modelTypes:
           $id: '2660'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '2666'
             fixed: false
             raw: AutoHealActionType
+          oldModelAsString: false
           underlyingType:
             $id: '2664'
             $type: PrimaryType
@@ -14801,12 +14801,12 @@ modelTypes:
           $id: '2877'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: true
           name:
             $id: '2893'
             fixed: false
             raw: ScmType
+          oldModelAsString: false
           underlyingType:
             $id: '2891'
             $type: PrimaryType
@@ -15093,12 +15093,12 @@ modelTypes:
           $id: '2940'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '2945'
             fixed: false
             raw: ManagedPipelineMode
+          oldModelAsString: false
           underlyingType:
             $id: '2943'
             $type: PrimaryType
@@ -15172,12 +15172,12 @@ modelTypes:
           $id: '2956'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '2964'
             fixed: false
             raw: SiteLoadBalancing
+          oldModelAsString: false
           underlyingType:
             $id: '2962'
             $type: PrimaryType
@@ -15904,12 +15904,12 @@ modelTypes:
           $id: '3097'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '3102'
             fixed: false
             raw: SiteExtensionType
+          oldModelAsString: false
           underlyingType:
             $id: '3100'
             $type: PrimaryType
@@ -16937,12 +16937,12 @@ modelTypes:
           $id: '3299'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '3304'
             fixed: false
             raw: HostType
+          oldModelAsString: false
           underlyingType:
             $id: '3302'
             $type: PrimaryType
@@ -17940,12 +17940,12 @@ modelTypes:
           $id: '3491'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '3496'
             fixed: false
             raw: UsageState
+          oldModelAsString: false
           underlyingType:
             $id: '3494'
             $type: PrimaryType
@@ -18062,12 +18062,12 @@ modelTypes:
           $id: '3515'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '3521'
             fixed: false
             raw: SiteAvailabilityState
+          oldModelAsString: false
           underlyingType:
             $id: '3519'
             $type: PrimaryType
@@ -20283,12 +20283,12 @@ modelTypes:
           $id: '3930'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '3936'
             fixed: false
             raw: TriggeredWebJobStatus
+          oldModelAsString: false
           underlyingType:
             $id: '3934'
             $type: PrimaryType
@@ -24130,12 +24130,12 @@ modelTypes:
           $id: '4675'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '4681'
             fixed: false
             raw: StatusOptions
+          oldModelAsString: false
           underlyingType:
             $id: '4679'
             $type: PrimaryType
@@ -24581,12 +24581,12 @@ modelTypes:
           $id: '4762'
           $type: EnumType
           deprecated: false
-          oldModelAsString: true
           modelAsString: false
           name:
             $id: '4770'
             fixed: false
             raw: ProvisioningState
+          oldModelAsString: false
           underlyingType:
             $id: '4768'
             $type: PrimaryType

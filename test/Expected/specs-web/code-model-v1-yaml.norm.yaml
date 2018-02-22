@@ -5,11 +5,11 @@ enumTypes:
   - &ref_0
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: LogLevel
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -31,11 +31,11 @@ enumTypes:
   - &ref_5
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: BackupItemStatus
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -67,11 +67,11 @@ enumTypes:
   - &ref_4
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
       raw: DatabaseType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -91,11 +91,11 @@ enumTypes:
   - &ref_9
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: FrequencyUnit
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -111,11 +111,11 @@ enumTypes:
   - &ref_11
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: BackupRestoreOperationType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -135,11 +135,11 @@ enumTypes:
   - &ref_14
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: ConnectionStringType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -173,11 +173,11 @@ enumTypes:
   - &ref_16
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: ContinuousWebJobStatus
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -199,11 +199,11 @@ enumTypes:
   - &ref_17
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: WebJobType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -219,11 +219,11 @@ enumTypes:
   - &ref_20
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
       raw: PublishingProfileFormat
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -241,11 +241,11 @@ enumTypes:
   - &ref_22
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: DnsVerificationTestResult
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -263,11 +263,11 @@ enumTypes:
   - &ref_29
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: AzureResourceType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -283,11 +283,11 @@ enumTypes:
   - &ref_30
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: CustomHostNameDnsRecordType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -303,11 +303,11 @@ enumTypes:
   - &ref_31
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: HostNameType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -323,11 +323,11 @@ enumTypes:
   - &ref_32
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: SslState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -345,11 +345,11 @@ enumTypes:
   - &ref_40
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: MSDeployLogEntryType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -367,11 +367,11 @@ enumTypes:
   - &ref_43
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: MSDeployProvisioningState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -393,11 +393,11 @@ enumTypes:
   - &ref_45
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: MySqlMigrationType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -413,11 +413,11 @@ enumTypes:
   - &ref_47
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: OperationStatus
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -439,11 +439,11 @@ enumTypes:
   - &ref_49
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
       raw: RouteType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -461,11 +461,11 @@ enumTypes:
   - &ref_69
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: PublicCertificateLocation
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -483,11 +483,11 @@ enumTypes:
   - &ref_74
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: UnauthenticatedClientAction
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -503,11 +503,11 @@ enumTypes:
   - &ref_75
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: BuiltInAuthenticationProvider
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -529,11 +529,11 @@ enumTypes:
   - &ref_77
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: CloneAbilityResult
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -551,11 +551,11 @@ enumTypes:
   - &ref_93
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: true
     name:
       fixed: false
       raw: ScmType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -593,11 +593,11 @@ enumTypes:
   - &ref_94
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: ManagedPipelineMode
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -613,11 +613,11 @@ enumTypes:
   - &ref_96
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: SiteLoadBalancing
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -639,11 +639,11 @@ enumTypes:
   - &ref_84
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: AutoHealActionType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -661,11 +661,11 @@ enumTypes:
   - &ref_108
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: SiteExtensionType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -681,11 +681,11 @@ enumTypes:
   - &ref_119
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: UsageState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -701,11 +701,11 @@ enumTypes:
   - &ref_120
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: SiteAvailabilityState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -723,11 +723,11 @@ enumTypes:
   - &ref_116
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: HostType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -743,11 +743,11 @@ enumTypes:
   - &ref_136
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: TriggeredWebJobStatus
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -765,11 +765,11 @@ enumTypes:
   - &ref_157
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: StatusOptions
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -787,11 +787,11 @@ enumTypes:
   - &ref_158
     $type: EnumType
     deprecated: false
-    oldModelAsString: true
     modelAsString: false
     name:
       fixed: false
       raw: ProvisioningState
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
