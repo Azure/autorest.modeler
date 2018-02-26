@@ -574,12 +574,12 @@ headerTypes:
           $id: '125'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '131'
             fixed: false
             raw: GreyscaleColors
+          oldModelAsString: false
           underlyingType:
             $id: '129'
             $type: PrimaryType

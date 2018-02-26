@@ -7,12 +7,12 @@ enumTypes:
   - $id: '30'
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       $id: '36'
       fixed: false
       raw: Colors
+    oldModelAsString: false
     underlyingType:
       $id: '34'
       $type: PrimaryType
@@ -210,12 +210,12 @@ operations:
               $id: '42'
               $type: EnumType
               deprecated: false
-              modelAsExtensible: false
               modelAsString: true
               name:
                 $id: '46'
                 fixed: false
                 raw: ''
+              oldModelAsString: false
               underlyingType:
                 $id: '44'
                 $type: PrimaryType
@@ -275,12 +275,12 @@ operations:
               $id: '54'
               $type: EnumType
               deprecated: false
-              modelAsExtensible: false
               modelAsString: true
               name:
                 $id: '58'
                 fixed: false
                 raw: ''
+              oldModelAsString: false
               underlyingType:
                 $id: '56'
                 $type: PrimaryType
@@ -338,12 +338,12 @@ operations:
               $id: '68'
               $type: EnumType
               deprecated: false
-              modelAsExtensible: false
               modelAsString: true
               name:
                 $id: '72'
                 fixed: false
                 raw: ''
+              oldModelAsString: false
               underlyingType:
                 $id: '70'
                 $type: PrimaryType
@@ -459,12 +459,12 @@ operations:
               $id: '91'
               $type: EnumType
               deprecated: false
-              modelAsExtensible: false
               modelAsString: true
               name:
                 $id: '95'
                 fixed: false
                 raw: ''
+              oldModelAsString: false
               underlyingType:
                 $id: '93'
                 $type: PrimaryType
@@ -586,12 +586,12 @@ operations:
               $id: '114'
               $type: EnumType
               deprecated: false
-              modelAsExtensible: false
               modelAsString: true
               name:
                 $id: '118'
                 fixed: false
                 raw: ''
+              oldModelAsString: false
               underlyingType:
                 $id: '116'
                 $type: PrimaryType

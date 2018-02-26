@@ -6,11 +6,11 @@ enumTypes:
   - &ref_0
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: StatusLevelTypes
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -28,11 +28,11 @@ enumTypes:
   - &ref_11
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: OperatingSystemTypes
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -48,11 +48,11 @@ enumTypes:
   - &ref_20
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: true
     name:
       fixed: false
       raw: VirtualMachineSizeTypes
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -258,11 +258,11 @@ enumTypes:
   - &ref_26
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: CachingTypes
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -280,11 +280,11 @@ enumTypes:
   - &ref_27
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: DiskCreateOptionTypes
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -302,11 +302,11 @@ enumTypes:
   - &ref_23
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: StorageAccountTypes
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -322,11 +322,11 @@ enumTypes:
   - &ref_32
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: PassNames
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -340,11 +340,11 @@ enumTypes:
   - &ref_33
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: ComponentNames
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -358,11 +358,11 @@ enumTypes:
   - &ref_34
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: SettingNames
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -378,11 +378,11 @@ enumTypes:
   - &ref_35
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: ProtocolTypes
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -398,11 +398,11 @@ enumTypes:
   - &ref_49
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: ResourceIdentityType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -416,11 +416,11 @@ enumTypes:
   - &ref_50
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: MaintenanceOperationResultCodeTypes
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -440,11 +440,11 @@ enumTypes:
   - &ref_66
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: UpgradeMode
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -462,11 +462,11 @@ enumTypes:
   - &ref_68
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: OperatingSystemStateTypes
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -482,11 +482,11 @@ enumTypes:
   - &ref_74
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: ResourceSkuCapacityScaleType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -504,11 +504,11 @@ enumTypes:
   - &ref_75
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: ResourceSkuRestrictionsType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -522,11 +522,11 @@ enumTypes:
   - &ref_76
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: ResourceSkuRestrictionsReasonCode
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -542,11 +542,11 @@ enumTypes:
   - &ref_90
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: true
     name:
       fixed: false
       raw: IPVersion
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -562,11 +562,11 @@ enumTypes:
   - &ref_121
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: VirtualMachineScaleSetSkuScaleType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -582,11 +582,11 @@ enumTypes:
   - &ref_127
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: RollingUpgradeStatusCode
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -606,11 +606,11 @@ enumTypes:
   - &ref_128
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: RollingUpgradeActionType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -626,11 +626,11 @@ enumTypes:
   - &ref_155
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: InstanceViewTypes
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false

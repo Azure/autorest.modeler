@@ -164,12 +164,12 @@ modelTypes:
           $id: '33'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '40'
             fixed: false
             raw: CMYKColors
+          oldModelAsString: false
           underlyingType:
             $id: '38'
             $type: PrimaryType

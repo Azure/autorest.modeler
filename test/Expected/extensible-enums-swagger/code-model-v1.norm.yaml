@@ -66,12 +66,12 @@ modelTypes:
           $id: '13'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: true
           modelAsString: false
           name:
             $id: '23'
             fixed: false
             raw: DaysOfWeekExtensibleEnum
+          oldModelAsString: false
           underlyingType:
             $id: '21'
             $type: PrimaryType
@@ -152,12 +152,12 @@ modelTypes:
           $id: '28'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: true
           modelAsString: true
           name:
             $id: '34'
             fixed: false
             raw: IntEnum
+          oldModelAsString: false
           underlyingType:
             $id: '32'
             $type: PrimaryType

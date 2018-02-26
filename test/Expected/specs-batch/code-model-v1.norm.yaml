@@ -12576,12 +12576,12 @@ modelTypes:
           $id: '109'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '114'
             fixed: false
             raw: OSType
+          oldModelAsString: false
           underlyingType:
             $id: '112'
             $type: PrimaryType
@@ -12646,12 +12646,12 @@ modelTypes:
             $id: '122'
             $type: EnumType
             deprecated: false
-            modelAsExtensible: false
             modelAsString: false
             name:
               $id: '126'
               fixed: false
               raw: AccessScope
+            oldModelAsString: false
             underlyingType:
               $id: '124'
               $type: PrimaryType
@@ -14211,12 +14211,12 @@ modelTypes:
           $id: '414'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '420'
             fixed: false
             raw: CertificateState
+          oldModelAsString: false
           underlyingType:
             $id: '418'
             $type: PrimaryType
@@ -14735,12 +14735,12 @@ modelTypes:
           $id: '507'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '512'
             fixed: false
             raw: CertificateFormat
+          oldModelAsString: false
           underlyingType:
             $id: '510'
             $type: PrimaryType
@@ -15923,12 +15923,12 @@ modelTypes:
           $id: '721'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '727'
             fixed: false
             raw: JobAction
+          oldModelAsString: false
           underlyingType:
             $id: '725'
             $type: PrimaryType
@@ -15998,12 +15998,12 @@ modelTypes:
           $id: '732'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '737'
             fixed: false
             raw: DependencyAction
+          oldModelAsString: false
           underlyingType:
             $id: '735'
             $type: PrimaryType
@@ -16392,12 +16392,12 @@ modelTypes:
           $id: '800'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '805'
             fixed: false
             raw: AutoUserScope
+          oldModelAsString: false
           underlyingType:
             $id: '803'
             $type: PrimaryType
@@ -16460,12 +16460,12 @@ modelTypes:
           $id: '810'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '815'
             fixed: false
             raw: ElevationLevel
+          oldModelAsString: false
           underlyingType:
             $id: '813'
             $type: PrimaryType
@@ -17106,12 +17106,12 @@ modelTypes:
           $id: '916'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '922'
             fixed: false
             raw: OutputFileUploadCondition
+          oldModelAsString: false
           underlyingType:
             $id: '920'
             $type: PrimaryType
@@ -18408,12 +18408,12 @@ modelTypes:
           $id: '1119'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1124'
             fixed: false
             raw: ComputeNodeFillType
+          oldModelAsString: false
           underlyingType:
             $id: '1122'
             $type: PrimaryType
@@ -18803,12 +18803,12 @@ modelTypes:
           $id: '1183'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1188'
             fixed: false
             raw: CertificateStoreLocation
+          oldModelAsString: false
           underlyingType:
             $id: '1186'
             $type: PrimaryType
@@ -18902,12 +18902,12 @@ modelTypes:
             $id: '1200'
             $type: EnumType
             deprecated: false
-            modelAsExtensible: false
             modelAsString: false
             name:
               $id: '1206'
               fixed: false
               raw: CertificateVisibility
+            oldModelAsString: false
             underlyingType:
               $id: '1204'
               $type: PrimaryType
@@ -19207,12 +19207,12 @@ modelTypes:
           $id: '1248'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1254'
             fixed: false
             raw: CachingType
+          oldModelAsString: false
           underlyingType:
             $id: '1252'
             $type: PrimaryType
@@ -19425,12 +19425,12 @@ modelTypes:
           $id: '1285'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1290'
             fixed: false
             raw: StorageAccountType
+          oldModelAsString: false
           underlyingType:
             $id: '1288'
             $type: PrimaryType
@@ -19885,12 +19885,12 @@ modelTypes:
           $id: '1361'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1366'
             fixed: false
             raw: NetworkSecurityGroupRuleAccess
+          oldModelAsString: false
           underlyingType:
             $id: '1364'
             $type: PrimaryType
@@ -20026,12 +20026,12 @@ modelTypes:
           $id: '1385'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1390'
             fixed: false
             raw: InboundEndpointProtocol
+          oldModelAsString: false
           underlyingType:
             $id: '1388'
             $type: PrimaryType
@@ -21107,12 +21107,12 @@ modelTypes:
           $id: '1561'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1566'
             fixed: false
             raw: PoolLifetimeOption
+          oldModelAsString: false
           underlyingType:
             $id: '1564'
             $type: PrimaryType
@@ -21441,12 +21441,12 @@ modelTypes:
           $id: '1613'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1618'
             fixed: false
             raw: OnAllTasksComplete
+          oldModelAsString: false
           underlyingType:
             $id: '1616'
             $type: PrimaryType
@@ -21512,12 +21512,12 @@ modelTypes:
           $id: '1623'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1628'
             fixed: false
             raw: OnTaskFailure
+          oldModelAsString: false
           underlyingType:
             $id: '1626'
             $type: PrimaryType
@@ -22646,12 +22646,12 @@ modelTypes:
           $id: '1821'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1829'
             fixed: false
             raw: JobScheduleState
+          oldModelAsString: false
           underlyingType:
             $id: '1827'
             $type: PrimaryType
@@ -23214,12 +23214,12 @@ modelTypes:
           $id: '1916'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1921'
             fixed: false
             raw: ErrorCategory
+          oldModelAsString: false
           underlyingType:
             $id: '1919'
             $type: PrimaryType
@@ -23795,12 +23795,12 @@ modelTypes:
           $id: '2018'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '2028'
             fixed: false
             raw: JobState
+          oldModelAsString: false
           underlyingType:
             $id: '2026'
             $type: PrimaryType
@@ -25181,12 +25181,12 @@ modelTypes:
           $id: '2241'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '2246'
             fixed: false
             raw: JobPreparationTaskState
+          oldModelAsString: false
           underlyingType:
             $id: '2244'
             $type: PrimaryType
@@ -25479,12 +25479,12 @@ modelTypes:
           $id: '2289'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '2294'
             fixed: false
             raw: TaskExecutionResult
+          oldModelAsString: false
           underlyingType:
             $id: '2292'
             $type: PrimaryType
@@ -25621,12 +25621,12 @@ modelTypes:
           $id: '2313'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '2318'
             fixed: false
             raw: JobReleaseTaskState
+          oldModelAsString: false
           underlyingType:
             $id: '2316'
             $type: PrimaryType
@@ -26266,12 +26266,12 @@ modelTypes:
           $id: '2427'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '2432'
             fixed: false
             raw: TaskCountValidationStatus
+          oldModelAsString: false
           underlyingType:
             $id: '2430'
             $type: PrimaryType
@@ -26851,12 +26851,12 @@ modelTypes:
           $id: '2533'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '2539'
             fixed: false
             raw: PoolState
+          oldModelAsString: false
           underlyingType:
             $id: '2537'
             $type: PrimaryType
@@ -26962,12 +26962,12 @@ modelTypes:
           $id: '2550'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '2556'
             fixed: false
             raw: AllocationState
+          oldModelAsString: false
           underlyingType:
             $id: '2554'
             $type: PrimaryType
@@ -30117,12 +30117,12 @@ modelTypes:
           $id: '3109'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '3116'
             fixed: false
             raw: TaskState
+          oldModelAsString: false
           underlyingType:
             $id: '3114'
             $type: PrimaryType
@@ -31512,12 +31512,12 @@ modelTypes:
           $id: '3339'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '3345'
             fixed: false
             raw: TaskAddStatus
+          oldModelAsString: false
           underlyingType:
             $id: '3343'
             $type: PrimaryType
@@ -31995,12 +31995,12 @@ modelTypes:
           $id: '3424'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '3430'
             fixed: false
             raw: SubtaskState
+          oldModelAsString: false
           underlyingType:
             $id: '3428'
             $type: PrimaryType
@@ -32555,12 +32555,12 @@ modelTypes:
           $id: '3513'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '3518'
             fixed: false
             raw: StartTaskState
+          oldModelAsString: false
           underlyingType:
             $id: '3516'
             $type: PrimaryType
@@ -33344,12 +33344,12 @@ modelTypes:
           $id: '3643'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '3659'
             fixed: false
             raw: ComputeNodeState
+          oldModelAsString: false
           underlyingType:
             $id: '3657'
             $type: PrimaryType
@@ -33464,12 +33464,12 @@ modelTypes:
           $id: '3664'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '3669'
             fixed: false
             raw: SchedulingState
+          oldModelAsString: false
           underlyingType:
             $id: '3667'
             $type: PrimaryType
@@ -34555,12 +34555,12 @@ modelTypes:
           $id: '3858'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '3864'
             fixed: false
             raw: DisableJobOption
+          oldModelAsString: false
           underlyingType:
             $id: '3862'
             $type: PrimaryType
@@ -35279,12 +35279,12 @@ modelTypes:
           $id: '3971'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '3978'
             fixed: false
             raw: ComputeNodeDeallocationOption
+          oldModelAsString: false
           underlyingType:
             $id: '3976'
             $type: PrimaryType
@@ -35893,12 +35893,12 @@ modelTypes:
           $id: '4067'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '4074'
             fixed: false
             raw: ComputeNodeRebootOption
+          oldModelAsString: false
           underlyingType:
             $id: '4072'
             $type: PrimaryType
@@ -36005,12 +36005,12 @@ modelTypes:
           $id: '4081'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '4088'
             fixed: false
             raw: ComputeNodeReimageOption
+          oldModelAsString: false
           underlyingType:
             $id: '4086'
             $type: PrimaryType
@@ -36111,12 +36111,12 @@ modelTypes:
           $id: '4095'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '4101'
             fixed: false
             raw: DisableComputeNodeSchedulingOption
+          oldModelAsString: false
           underlyingType:
             $id: '4099'
             $type: PrimaryType

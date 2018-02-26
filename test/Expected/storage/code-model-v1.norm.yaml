@@ -141,12 +141,12 @@ modelTypes:
           $id: '27'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '32'
             fixed: false
             raw: Reason
+          oldModelAsString: false
           underlyingType:
             $id: '30'
             $type: PrimaryType
@@ -229,12 +229,12 @@ modelTypes:
           $id: '45'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '53'
             fixed: false
             raw: AccountType
+          oldModelAsString: false
           underlyingType:
             $id: '51'
             $type: PrimaryType
@@ -786,12 +786,12 @@ modelTypes:
           $id: '154'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '160'
             fixed: false
             raw: ProvisioningState
+          oldModelAsString: false
           underlyingType:
             $id: '158'
             $type: PrimaryType
@@ -919,12 +919,12 @@ modelTypes:
           $id: '179'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '184'
             fixed: false
             raw: AccountStatus
+          oldModelAsString: false
           underlyingType:
             $id: '182'
             $type: PrimaryType
@@ -1426,12 +1426,12 @@ modelTypes:
           $id: '271'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '276'
             fixed: false
             raw: KeyName
+          oldModelAsString: false
           underlyingType:
             $id: '274'
             $type: PrimaryType
@@ -1555,12 +1555,12 @@ modelTypes:
           $id: '297'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '306'
             fixed: false
             raw: UsageUnit
+          oldModelAsString: false
           underlyingType:
             $id: '304'
             $type: PrimaryType

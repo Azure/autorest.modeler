@@ -28,12 +28,12 @@ enumTypes:
   - $id: '2954'
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       $id: '2958'
       fixed: false
       raw: InstanceViewTypes
+    oldModelAsString: false
     underlyingType:
       $id: '2956'
       $type: PrimaryType
@@ -112,12 +112,12 @@ modelTypes:
           $id: '13'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '19'
             fixed: false
             raw: StatusLevelTypes
+          oldModelAsString: false
           underlyingType:
             $id: '17'
             $type: PrimaryType
@@ -1926,12 +1926,12 @@ modelTypes:
           $id: '368'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '373'
             fixed: false
             raw: OperatingSystemTypes
+          oldModelAsString: false
           underlyingType:
             $id: '371'
             $type: PrimaryType
@@ -2738,12 +2738,12 @@ modelTypes:
           $id: '522'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '622'
             fixed: false
             raw: VirtualMachineSizeTypes
+          oldModelAsString: false
           underlyingType:
             $id: '620'
             $type: PrimaryType
@@ -3483,12 +3483,12 @@ modelTypes:
           $id: '703'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '708'
             fixed: false
             raw: StorageAccountTypes
+          oldModelAsString: false
           underlyingType:
             $id: '706'
             $type: PrimaryType
@@ -3683,12 +3683,12 @@ modelTypes:
           $id: '737'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '743'
             fixed: false
             raw: CachingTypes
+          oldModelAsString: false
           underlyingType:
             $id: '741'
             $type: PrimaryType
@@ -3744,12 +3744,12 @@ modelTypes:
           $id: '748'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '754'
             fixed: false
             raw: DiskCreateOptionTypes
+          oldModelAsString: false
           underlyingType:
             $id: '752'
             $type: PrimaryType
@@ -4204,12 +4204,12 @@ modelTypes:
           $id: '827'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '831'
             fixed: false
             raw: PassNames
+          oldModelAsString: false
           underlyingType:
             $id: '829'
             $type: PrimaryType
@@ -4253,12 +4253,12 @@ modelTypes:
           $id: '836'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '840'
             fixed: false
             raw: ComponentNames
+          oldModelAsString: false
           underlyingType:
             $id: '838'
             $type: PrimaryType
@@ -4302,12 +4302,12 @@ modelTypes:
           $id: '845'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '850'
             fixed: false
             raw: SettingNames
+          oldModelAsString: false
           underlyingType:
             $id: '848'
             $type: PrimaryType
@@ -4398,12 +4398,12 @@ modelTypes:
           $id: '863'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '868'
             fixed: false
             raw: ProtocolTypes
+          oldModelAsString: false
           underlyingType:
             $id: '866'
             $type: PrimaryType
@@ -5949,12 +5949,12 @@ modelTypes:
           $id: '1145'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1149'
             fixed: false
             raw: ResourceIdentityType
+          oldModelAsString: false
           underlyingType:
             $id: '1147'
             $type: PrimaryType
@@ -6156,12 +6156,12 @@ modelTypes:
           $id: '1186'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1193'
             fixed: false
             raw: MaintenanceOperationResultCodeTypes
+          oldModelAsString: false
           underlyingType:
             $id: '1191'
             $type: PrimaryType
@@ -7177,12 +7177,12 @@ modelTypes:
           $id: '1372'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1378'
             fixed: false
             raw: UpgradeMode
+          oldModelAsString: false
           underlyingType:
             $id: '1376'
             $type: PrimaryType
@@ -7326,12 +7326,12 @@ modelTypes:
           $id: '1399'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1404'
             fixed: false
             raw: OperatingSystemStateTypes
+          oldModelAsString: false
           underlyingType:
             $id: '1402'
             $type: PrimaryType
@@ -8211,12 +8211,12 @@ modelTypes:
           $id: '1559'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1565'
             fixed: false
             raw: ResourceSkuCapacityScaleType
+          oldModelAsString: false
           underlyingType:
             $id: '1563'
             $type: PrimaryType
@@ -8443,12 +8443,12 @@ modelTypes:
           $id: '1606'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1610'
             fixed: false
             raw: ResourceSkuRestrictionsType
+          oldModelAsString: false
           underlyingType:
             $id: '1608'
             $type: PrimaryType
@@ -8529,12 +8529,12 @@ modelTypes:
           $id: '1623'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '1628'
             fixed: false
             raw: ResourceSkuRestrictionsReasonCode
+          oldModelAsString: false
           underlyingType:
             $id: '1626'
             $type: PrimaryType
@@ -10434,12 +10434,12 @@ modelTypes:
           $id: '1969'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '1974'
             fixed: false
             raw: IPVersion
+          oldModelAsString: false
           underlyingType:
             $id: '1972'
             $type: PrimaryType
@@ -13624,12 +13624,12 @@ modelTypes:
           $id: '2573'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '2578'
             fixed: false
             raw: VirtualMachineScaleSetSkuScaleType
+          oldModelAsString: false
           underlyingType:
             $id: '2576'
             $type: PrimaryType
@@ -14685,12 +14685,12 @@ modelTypes:
           $id: '2771'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '2778'
             fixed: false
             raw: RollingUpgradeStatusCode
+          oldModelAsString: false
           underlyingType:
             $id: '2776'
             $type: PrimaryType
@@ -14771,12 +14771,12 @@ modelTypes:
           $id: '2789'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '2794'
             fixed: false
             raw: RollingUpgradeActionType
+          oldModelAsString: false
           underlyingType:
             $id: '2792'
             $type: PrimaryType

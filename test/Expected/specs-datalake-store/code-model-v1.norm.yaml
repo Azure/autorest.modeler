@@ -10,12 +10,12 @@ enumTypes:
   - $id: '220'
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       $id: '227'
       fixed: false
       raw: ExpiryOptionType
+    oldModelAsString: false
     underlyingType:
       $id: '225'
       $type: PrimaryType
@@ -41,12 +41,12 @@ enumTypes:
   - $id: '228'
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       $id: '232'
       fixed: false
       raw: AppendModeType
+    oldModelAsString: false
     underlyingType:
       $id: '230'
       $type: PrimaryType
@@ -63,12 +63,12 @@ enumTypes:
   - $id: '233'
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       $id: '239'
       fixed: false
       raw: SyncFlag
+    oldModelAsString: false
     underlyingType:
       $id: '237'
       $type: PrimaryType
@@ -925,12 +925,12 @@ modelTypes:
           $id: '147'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: false
           name:
             $id: '152'
             fixed: false
             raw: FileType
+          oldModelAsString: false
           underlyingType:
             $id: '150'
             $type: PrimaryType

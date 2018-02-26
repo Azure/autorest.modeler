@@ -8,11 +8,11 @@ enumTypes:
   - &ref_2
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: FileType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -28,11 +28,11 @@ enumTypes:
   - &ref_7
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: ExpiryOptionType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -52,11 +52,11 @@ enumTypes:
   - &ref_8
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: AppendModeType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -70,11 +70,11 @@ enumTypes:
   - &ref_9
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: SyncFlag
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
