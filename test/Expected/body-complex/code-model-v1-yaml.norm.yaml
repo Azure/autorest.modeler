@@ -27,6 +27,28 @@ enumTypes:
         serializedName: YELLOW
       - name: blacK
         serializedName: blacK
+  - &ref_8
+    $type: EnumType
+    deprecated: false
+    modelAsString: true
+    name:
+      fixed: false
+      raw: GoblinSharkColor
+    oldModelAsString: false
+    underlyingType:
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        fixed: false
+        raw: String
+    values:
+      - name: pink
+        serializedName: pink
+      - name: gray
+        serializedName: gray
+      - name: brown
+        serializedName: brown
 errorTypes:
   - &ref_0
     $type: CompositeType
@@ -84,7 +106,7 @@ errorTypes:
     serializedName: Error
 modelTypes:
   - *ref_0
-  - &ref_8
+  - &ref_9
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -299,7 +321,7 @@ modelTypes:
           - hates
         serializedName: hates
     serializedName: cat
-  - &ref_22
+  - &ref_23
     $type: CompositeType
     baseModelType: *ref_4
     containsConstantProperties: false
@@ -640,6 +662,28 @@ modelTypes:
         realPath:
           - jawsize
         serializedName: jawsize
+      - collectionFormat: none
+        defaultValue:
+          fixed: false
+          raw: gray
+        deprecated: false
+        documentation:
+          fixed: false
+          raw: Colors possible
+        extensions:
+          x-ms-enum:
+            modelAsString: true
+            name: GoblinSharkColor
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType: *ref_8
+        name:
+          fixed: false
+          raw: color
+        realPath:
+          - color
+        serializedName: color
     serializedName: goblin
   - $type: CompositeType
     baseModelType: *ref_7
@@ -649,7 +693,7 @@ modelTypes:
       fixed: false
       raw: cookiecuttershark
     serializedName: cookiecuttershark
-  - &ref_9
+  - &ref_10
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -704,7 +748,7 @@ modelTypes:
           - field2
         serializedName: field2
     serializedName: int-wrapper
-  - &ref_10
+  - &ref_11
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -759,7 +803,7 @@ modelTypes:
           - field2
         serializedName: field2
     serializedName: long-wrapper
-  - &ref_11
+  - &ref_12
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -814,7 +858,7 @@ modelTypes:
           - field2
         serializedName: field2
     serializedName: float-wrapper
-  - &ref_12
+  - &ref_13
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -872,7 +916,7 @@ modelTypes:
         serializedName: >-
           field_56_zeros_after_the_dot_and_negative_zero_before_dot_and_this_is_a_long_field_name_on_purpose
     serializedName: double-wrapper
-  - &ref_13
+  - &ref_14
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -925,7 +969,7 @@ modelTypes:
           - field_false
         serializedName: field_false
     serializedName: boolean-wrapper
-  - &ref_14
+  - &ref_15
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -1000,7 +1044,7 @@ modelTypes:
           - 'null'
         serializedName: 'null'
     serializedName: string-wrapper
-  - &ref_15
+  - &ref_16
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -1055,7 +1099,7 @@ modelTypes:
           - leap
         serializedName: leap
     serializedName: date-wrapper
-  - &ref_16
+  - &ref_17
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -1110,7 +1154,7 @@ modelTypes:
           - now
         serializedName: now
     serializedName: datetime-wrapper
-  - &ref_17
+  - &ref_18
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -1165,7 +1209,7 @@ modelTypes:
           - now
         serializedName: now
     serializedName: datetimerfc1123-wrapper
-  - &ref_18
+  - &ref_19
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -1197,7 +1241,7 @@ modelTypes:
           - field
         serializedName: field
     serializedName: duration-wrapper
-  - &ref_19
+  - &ref_20
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -1229,7 +1273,7 @@ modelTypes:
           - field
         serializedName: field
     serializedName: byte-wrapper
-  - &ref_20
+  - &ref_21
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -1265,7 +1309,7 @@ modelTypes:
           - array
         serializedName: array
     serializedName: array-wrapper
-  - &ref_21
+  - &ref_22
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -1302,7 +1346,7 @@ modelTypes:
           - defaultProgram
         serializedName: defaultProgram
     serializedName: dictionary-wrapper
-  - &ref_23
+  - &ref_24
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
@@ -1380,10 +1424,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_8
+            body: *ref_9
             isNullable: true
         returnType:
-          body: *ref_8
+          body: *ref_9
           isNullable: true
         serializedName: basic_getValid
         url: /complex/basic/valid
@@ -1416,12 +1460,12 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_8
+            modelType: *ref_9
             name:
               fixed: false
               raw: complexBody
             serializedName: complexBody
-          - clientProperty: &ref_24
+          - clientProperty: &ref_25
               collectionFormat: none
               defaultValue:
                 fixed: false
@@ -1497,10 +1541,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_8
+            body: *ref_9
             isNullable: true
         returnType:
-          body: *ref_8
+          body: *ref_9
           isNullable: true
         serializedName: basic_getInvalid
         url: /complex/basic/invalid
@@ -1523,10 +1567,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_8
+            body: *ref_9
             isNullable: true
         returnType:
-          body: *ref_8
+          body: *ref_9
           isNullable: true
         serializedName: basic_getEmpty
         url: /complex/basic/empty
@@ -1549,10 +1593,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_8
+            body: *ref_9
             isNullable: true
         returnType:
-          body: *ref_8
+          body: *ref_9
           isNullable: true
         serializedName: basic_getNull
         url: /complex/basic/null
@@ -1577,10 +1621,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_8
+            body: *ref_9
             isNullable: true
         returnType:
-          body: *ref_8
+          body: *ref_9
           isNullable: true
         serializedName: basic_getNotProvided
         url: /complex/basic/notprovided
@@ -1610,10 +1654,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_9
+            body: *ref_10
             isNullable: true
         returnType:
-          body: *ref_9
+          body: *ref_10
           isNullable: true
         serializedName: primitive_getInt
         url: /complex/primitive/integer
@@ -1646,7 +1690,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_9
+            modelType: *ref_10
             name:
               fixed: false
               raw: complexBody
@@ -1680,10 +1724,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_10
+            body: *ref_11
             isNullable: true
         returnType:
-          body: *ref_10
+          body: *ref_11
           isNullable: true
         serializedName: primitive_getLong
         url: /complex/primitive/long
@@ -1716,7 +1760,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_10
+            modelType: *ref_11
             name:
               fixed: false
               raw: complexBody
@@ -1750,10 +1794,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_11
+            body: *ref_12
             isNullable: true
         returnType:
-          body: *ref_11
+          body: *ref_12
           isNullable: true
         serializedName: primitive_getFloat
         url: /complex/primitive/float
@@ -1786,7 +1830,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_11
+            modelType: *ref_12
             name:
               fixed: false
               raw: complexBody
@@ -1820,10 +1864,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_12
+            body: *ref_13
             isNullable: true
         returnType:
-          body: *ref_12
+          body: *ref_13
           isNullable: true
         serializedName: primitive_getDouble
         url: /complex/primitive/double
@@ -1858,7 +1902,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_12
+            modelType: *ref_13
             name:
               fixed: false
               raw: complexBody
@@ -1892,10 +1936,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_13
+            body: *ref_14
             isNullable: true
         returnType:
-          body: *ref_13
+          body: *ref_14
           isNullable: true
         serializedName: primitive_getBool
         url: /complex/primitive/bool
@@ -1928,7 +1972,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_13
+            modelType: *ref_14
             name:
               fixed: false
               raw: complexBody
@@ -1962,10 +2006,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_14
+            body: *ref_15
             isNullable: true
         returnType:
-          body: *ref_14
+          body: *ref_15
           isNullable: true
         serializedName: primitive_getString
         url: /complex/primitive/string
@@ -1998,7 +2042,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_14
+            modelType: *ref_15
             name:
               fixed: false
               raw: complexBody
@@ -2032,10 +2076,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_15
+            body: *ref_16
             isNullable: true
         returnType:
-          body: *ref_15
+          body: *ref_16
           isNullable: true
         serializedName: primitive_getDate
         url: /complex/primitive/date
@@ -2068,7 +2112,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_15
+            modelType: *ref_16
             name:
               fixed: false
               raw: complexBody
@@ -2102,10 +2146,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_16
+            body: *ref_17
             isNullable: true
         returnType:
-          body: *ref_16
+          body: *ref_17
           isNullable: true
         serializedName: primitive_getDateTime
         url: /complex/primitive/datetime
@@ -2140,7 +2184,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_16
+            modelType: *ref_17
             name:
               fixed: false
               raw: complexBody
@@ -2174,10 +2218,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_17
+            body: *ref_18
             isNullable: true
         returnType:
-          body: *ref_17
+          body: *ref_18
           isNullable: true
         serializedName: primitive_getDateTimeRfc1123
         url: /complex/primitive/datetimerfc1123
@@ -2212,7 +2256,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_17
+            modelType: *ref_18
             name:
               fixed: false
               raw: complexBody
@@ -2246,10 +2290,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_18
+            body: *ref_19
             isNullable: true
         returnType:
-          body: *ref_18
+          body: *ref_19
           isNullable: true
         serializedName: primitive_getDuration
         url: /complex/primitive/duration
@@ -2282,7 +2326,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_18
+            modelType: *ref_19
             name:
               fixed: false
               raw: complexBody
@@ -2316,10 +2360,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_19
+            body: *ref_20
             isNullable: true
         returnType:
-          body: *ref_19
+          body: *ref_20
           isNullable: true
         serializedName: primitive_getByte
         url: /complex/primitive/byte
@@ -2354,7 +2398,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_19
+            modelType: *ref_20
             name:
               fixed: false
               raw: complexBody
@@ -2395,10 +2439,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_20
+            body: *ref_21
             isNullable: true
         returnType:
-          body: *ref_20
+          body: *ref_21
           isNullable: true
         serializedName: array_getValid
         url: /complex/array/valid
@@ -2433,7 +2477,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_20
+            modelType: *ref_21
             name:
               fixed: false
               raw: complexBody
@@ -2467,10 +2511,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_20
+            body: *ref_21
             isNullable: true
         returnType:
-          body: *ref_20
+          body: *ref_21
           isNullable: true
         serializedName: array_getEmpty
         url: /complex/array/empty
@@ -2503,7 +2547,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_20
+            modelType: *ref_21
             name:
               fixed: false
               raw: complexBody
@@ -2539,10 +2583,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_20
+            body: *ref_21
             isNullable: true
         returnType:
-          body: *ref_20
+          body: *ref_21
           isNullable: true
         serializedName: array_getNotProvided
         url: /complex/array/notprovided
@@ -2572,10 +2616,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_21
+            body: *ref_22
             isNullable: true
         returnType:
-          body: *ref_21
+          body: *ref_22
           isNullable: true
         serializedName: dictionary_getValid
         url: /complex/dictionary/typed/valid
@@ -2610,7 +2654,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_21
+            modelType: *ref_22
             name:
               fixed: false
               raw: complexBody
@@ -2644,10 +2688,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_21
+            body: *ref_22
             isNullable: true
         returnType:
-          body: *ref_21
+          body: *ref_22
           isNullable: true
         serializedName: dictionary_getEmpty
         url: /complex/dictionary/typed/empty
@@ -2680,7 +2724,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_21
+            modelType: *ref_22
             name:
               fixed: false
               raw: complexBody
@@ -2714,10 +2758,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_21
+            body: *ref_22
             isNullable: true
         returnType:
-          body: *ref_21
+          body: *ref_22
           isNullable: true
         serializedName: dictionary_getNull
         url: /complex/dictionary/typed/null
@@ -2742,10 +2786,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_21
+            body: *ref_22
             isNullable: true
         returnType:
-          body: *ref_21
+          body: *ref_22
           isNullable: true
         serializedName: dictionary_getNotProvided
         url: /complex/dictionary/typed/notprovided
@@ -2775,10 +2819,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_22
+            body: *ref_23
             isNullable: true
         returnType:
-          body: *ref_22
+          body: *ref_23
           isNullable: true
         serializedName: inheritance_getValid
         url: /complex/inheritance/valid
@@ -2815,7 +2859,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_22
+            modelType: *ref_23
             name:
               fixed: false
               raw: complexBody
@@ -3288,10 +3332,10 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_23
+            body: *ref_24
             isNullable: true
         returnType:
-          body: *ref_23
+          body: *ref_24
           isNullable: true
         serializedName: readonlyproperty_getValid
         url: /complex/readonlyproperty/valid
@@ -3323,7 +3367,7 @@ operations:
             isConstant: false
             isRequired: true
             location: body
-            modelType: *ref_23
+            modelType: *ref_24
             name:
               fixed: false
               raw: complexBody
@@ -3345,4 +3389,4 @@ operations:
     typeName:
       fixed: false
 properties:
-  - *ref_24
+  - *ref_25
