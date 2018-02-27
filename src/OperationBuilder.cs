@@ -419,7 +419,7 @@ namespace AutoRest.Modeler
                     var compositeType = serviceType as CompositeType;
                     if (compositeType != null)
                     {
-                        VerifyFirstPropertyIsByteArray(compositeType);
+                        VerifyFirstPropertyIsByteArray(method, compositeType);
                     }
                     method.Responses[responseStatusCode] = new Response(serviceType, headerType);
                     handled = true;
@@ -428,22 +428,20 @@ namespace AutoRest.Modeler
             return handled;
         }
 
-        private void VerifyFirstPropertyIsByteArray(CompositeType serviceType)
+        private void VerifyFirstPropertyIsByteArray(Method method, CompositeType serviceType)
         {
             var referenceKey = serviceType.Name.RawValue;
             var responseType = _swaggerModeler.GeneratedTypes[referenceKey];
             var property = responseType.Properties.FirstOrDefault(p => (p.ModelType as PrimaryType)?.KnownPrimaryType == KnownPrimaryType.ByteArray);
             if (property == null)
             {
-                throw new KeyNotFoundException(
-                    "Please specify a field with type of System.Byte[] to deserialize the file contents to");
+                throw new KeyNotFoundException($"The 'produces' of '{method.SerializedName}' requires that schema '{referenceKey}' models a stream/binary data (e.g. 'type: string, format: binary'), however '{referenceKey}' is an object schema (which would require 'produces' of 'application/json' or 'application/xml'). Please adjust either the 'produces' or the response schema to match your service's behavior.");
             }
         }
 
         private bool TryBuildResponse(string methodName, HttpStatusCode responseStatusCode,
             OperationResponse response, Method method, List<Stack<IModelType>> types, IModelType headerType)
         {
-            bool handled = false;
             IModelType serviceType;
             if (SwaggerOperationProducesSomethingDeserializable())
             {
@@ -455,11 +453,10 @@ namespace AutoRest.Modeler
                     {
                         BuildMethodReturnTypeStack(serviceType, types);
                     }
-                    handled = true;
+                    return true;
                 }
             }
-
-            return handled;
+            return false;
         }
 
         private bool TryBuildEmptyResponse(string methodName, HttpStatusCode responseStatusCode,
