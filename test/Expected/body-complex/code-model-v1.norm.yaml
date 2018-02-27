@@ -5,6 +5,7 @@ baseUrl: 'http://localhost:3000'
 documentation: Test Infrastructure for AutoRest
 enumTypes:
   - $ref: '33'
+  - $ref: '169'
 errorTypes:
   - $ref: '2'
 modelTypes:
@@ -774,7 +775,7 @@ modelTypes:
     extensions:
       x-ms-discriminator-value: goblin
     name:
-      $id: '165'
+      $id: '176'
       fixed: false
       raw: goblinshark
     properties:
@@ -806,284 +807,338 @@ modelTypes:
         realPath:
           - jawsize
         serializedName: jawsize
+      - $id: '165'
+        collectionFormat: none
+        defaultValue:
+          $id: '166'
+          fixed: false
+          raw: gray
+        deprecated: false
+        documentation:
+          $id: '167'
+          fixed: false
+          raw: Colors possible
+        extensions:
+          x-ms-enum:
+            modelAsString: true
+            name: GoblinSharkColor
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '169'
+          $type: EnumType
+          deprecated: false
+          modelAsString: true
+          name:
+            $id: '175'
+            fixed: false
+            raw: GoblinSharkColor
+          oldModelAsString: false
+          underlyingType:
+            $id: '173'
+            $type: PrimaryType
+            deprecated: false
+            knownPrimaryType: string
+            name:
+              $id: '174'
+              fixed: false
+              raw: String
+          values:
+            - $id: '170'
+              name: pink
+              serializedName: pink
+            - $id: '171'
+              name: gray
+              serializedName: gray
+            - $id: '172'
+              name: brown
+              serializedName: brown
+        name:
+          $id: '168'
+          fixed: false
+          raw: color
+        realPath:
+          - color
+        serializedName: color
     serializedName: goblin
-  - $id: '166'
+  - $id: '177'
     $type: CompositeType
     baseModelType:
       $ref: '136'
     containsConstantProperties: false
     deprecated: false
     name:
-      $id: '167'
+      $id: '178'
       fixed: false
       raw: cookiecuttershark
     serializedName: cookiecuttershark
-  - $id: '168'
+  - $id: '179'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
-      $id: '181'
+      $id: '192'
       fixed: false
       raw: int-wrapper
     properties:
-      - $id: '169'
+      - $id: '180'
         collectionFormat: none
         defaultValue:
-          $id: '170'
+          $id: '181'
           fixed: false
         deprecated: false
         documentation:
-          $id: '171'
+          $id: '182'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '173'
+          $id: '184'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
-            $id: '174'
+            $id: '185'
             fixed: false
             raw: Int
         name:
-          $id: '172'
+          $id: '183'
           fixed: false
           raw: field1
         realPath:
           - field1
         serializedName: field1
-      - $id: '175'
+      - $id: '186'
         collectionFormat: none
         defaultValue:
-          $id: '176'
+          $id: '187'
           fixed: false
         deprecated: false
         documentation:
-          $id: '177'
+          $id: '188'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '179'
+          $id: '190'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
-            $id: '180'
+            $id: '191'
             fixed: false
             raw: Int
         name:
-          $id: '178'
+          $id: '189'
           fixed: false
           raw: field2
         realPath:
           - field2
         serializedName: field2
     serializedName: int-wrapper
-  - $id: '182'
+  - $id: '193'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
-      $id: '195'
+      $id: '206'
       fixed: false
       raw: long-wrapper
     properties:
-      - $id: '183'
+      - $id: '194'
         collectionFormat: none
         defaultValue:
-          $id: '184'
+          $id: '195'
           fixed: false
         deprecated: false
         documentation:
-          $id: '185'
+          $id: '196'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '187'
+          $id: '198'
           $type: PrimaryType
           deprecated: false
           format: int64
           knownPrimaryType: long
           name:
-            $id: '188'
+            $id: '199'
             fixed: false
             raw: Long
         name:
-          $id: '186'
+          $id: '197'
           fixed: false
           raw: field1
         realPath:
           - field1
         serializedName: field1
-      - $id: '189'
+      - $id: '200'
         collectionFormat: none
         defaultValue:
-          $id: '190'
+          $id: '201'
           fixed: false
         deprecated: false
         documentation:
-          $id: '191'
+          $id: '202'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '193'
+          $id: '204'
           $type: PrimaryType
           deprecated: false
           format: int64
           knownPrimaryType: long
           name:
-            $id: '194'
+            $id: '205'
             fixed: false
             raw: Long
         name:
-          $id: '192'
+          $id: '203'
           fixed: false
           raw: field2
         realPath:
           - field2
         serializedName: field2
     serializedName: long-wrapper
-  - $id: '196'
+  - $id: '207'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
-      $id: '209'
+      $id: '220'
       fixed: false
       raw: float-wrapper
     properties:
-      - $id: '197'
+      - $id: '208'
         collectionFormat: none
         defaultValue:
-          $id: '198'
+          $id: '209'
           fixed: false
         deprecated: false
         documentation:
-          $id: '199'
+          $id: '210'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '201'
+          $id: '212'
           $type: PrimaryType
           deprecated: false
           format: float
           knownPrimaryType: double
           name:
-            $id: '202'
+            $id: '213'
             fixed: false
             raw: Double
         name:
-          $id: '200'
+          $id: '211'
           fixed: false
           raw: field1
         realPath:
           - field1
         serializedName: field1
-      - $id: '203'
+      - $id: '214'
         collectionFormat: none
         defaultValue:
-          $id: '204'
+          $id: '215'
           fixed: false
         deprecated: false
         documentation:
-          $id: '205'
+          $id: '216'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '207'
+          $id: '218'
           $type: PrimaryType
           deprecated: false
           format: float
           knownPrimaryType: double
           name:
-            $id: '208'
+            $id: '219'
             fixed: false
             raw: Double
         name:
-          $id: '206'
+          $id: '217'
           fixed: false
           raw: field2
         realPath:
           - field2
         serializedName: field2
     serializedName: float-wrapper
-  - $id: '210'
+  - $id: '221'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
-      $id: '223'
+      $id: '234'
       fixed: false
       raw: double-wrapper
     properties:
-      - $id: '211'
+      - $id: '222'
         collectionFormat: none
         defaultValue:
-          $id: '212'
+          $id: '223'
           fixed: false
         deprecated: false
         documentation:
-          $id: '213'
+          $id: '224'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '215'
+          $id: '226'
           $type: PrimaryType
           deprecated: false
           format: double
           knownPrimaryType: double
           name:
-            $id: '216'
+            $id: '227'
             fixed: false
             raw: Double
         name:
-          $id: '214'
+          $id: '225'
           fixed: false
           raw: field1
         realPath:
           - field1
         serializedName: field1
-      - $id: '217'
+      - $id: '228'
         collectionFormat: none
         defaultValue:
-          $id: '218'
+          $id: '229'
           fixed: false
         deprecated: false
         documentation:
-          $id: '219'
+          $id: '230'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '221'
+          $id: '232'
           $type: PrimaryType
           deprecated: false
           format: double
           knownPrimaryType: double
           name:
-            $id: '222'
+            $id: '233'
             fixed: false
             raw: Double
         name:
-          $id: '220'
+          $id: '231'
           fixed: false
           raw: >-
             field_56_zeros_after_the_dot_and_negative_zero_before_dot_and_this_is_a_long_field_name_on_purpose
@@ -1093,600 +1148,600 @@ modelTypes:
         serializedName: >-
           field_56_zeros_after_the_dot_and_negative_zero_before_dot_and_this_is_a_long_field_name_on_purpose
     serializedName: double-wrapper
-  - $id: '224'
+  - $id: '235'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
-      $id: '237'
+      $id: '248'
       fixed: false
       raw: boolean-wrapper
     properties:
-      - $id: '225'
+      - $id: '236'
         collectionFormat: none
         defaultValue:
-          $id: '226'
+          $id: '237'
           fixed: false
         deprecated: false
         documentation:
-          $id: '227'
+          $id: '238'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '229'
+          $id: '240'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: boolean
           name:
-            $id: '230'
+            $id: '241'
             fixed: false
             raw: Boolean
         name:
-          $id: '228'
+          $id: '239'
           fixed: false
           raw: field_true
         realPath:
           - field_true
         serializedName: field_true
-      - $id: '231'
+      - $id: '242'
         collectionFormat: none
         defaultValue:
-          $id: '232'
+          $id: '243'
           fixed: false
         deprecated: false
         documentation:
-          $id: '233'
+          $id: '244'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '235'
+          $id: '246'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: boolean
           name:
-            $id: '236'
+            $id: '247'
             fixed: false
             raw: Boolean
         name:
-          $id: '234'
+          $id: '245'
           fixed: false
           raw: field_false
         realPath:
           - field_false
         serializedName: field_false
     serializedName: boolean-wrapper
-  - $id: '238'
+  - $id: '249'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
-      $id: '257'
+      $id: '268'
       fixed: false
       raw: string-wrapper
     properties:
-      - $id: '239'
+      - $id: '250'
         collectionFormat: none
         defaultValue:
-          $id: '240'
+          $id: '251'
           fixed: false
         deprecated: false
         documentation:
-          $id: '241'
+          $id: '252'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '243'
+          $id: '254'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
-            $id: '244'
+            $id: '255'
             fixed: false
             raw: String
         name:
-          $id: '242'
+          $id: '253'
           fixed: false
           raw: field
         realPath:
           - field
         serializedName: field
-      - $id: '245'
+      - $id: '256'
         collectionFormat: none
         defaultValue:
-          $id: '246'
+          $id: '257'
           fixed: false
         deprecated: false
         documentation:
-          $id: '247'
+          $id: '258'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '249'
+          $id: '260'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
-            $id: '250'
+            $id: '261'
             fixed: false
             raw: String
         name:
-          $id: '248'
+          $id: '259'
           fixed: false
           raw: empty
         realPath:
           - empty
         serializedName: empty
-      - $id: '251'
+      - $id: '262'
         collectionFormat: none
         defaultValue:
-          $id: '252'
+          $id: '263'
           fixed: false
         deprecated: false
         documentation:
-          $id: '253'
+          $id: '264'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '255'
+          $id: '266'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
-            $id: '256'
+            $id: '267'
             fixed: false
             raw: String
         name:
-          $id: '254'
+          $id: '265'
           fixed: false
           raw: 'null'
         realPath:
           - 'null'
         serializedName: 'null'
     serializedName: string-wrapper
-  - $id: '258'
+  - $id: '269'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
-      $id: '271'
+      $id: '282'
       fixed: false
       raw: date-wrapper
     properties:
-      - $id: '259'
+      - $id: '270'
         collectionFormat: none
         defaultValue:
-          $id: '260'
+          $id: '271'
           fixed: false
         deprecated: false
         documentation:
-          $id: '261'
+          $id: '272'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '263'
+          $id: '274'
           $type: PrimaryType
           deprecated: false
           format: date
           knownPrimaryType: date
           name:
-            $id: '264'
+            $id: '275'
             fixed: false
             raw: Date
         name:
-          $id: '262'
+          $id: '273'
           fixed: false
           raw: field
         realPath:
           - field
         serializedName: field
-      - $id: '265'
+      - $id: '276'
         collectionFormat: none
         defaultValue:
-          $id: '266'
+          $id: '277'
           fixed: false
         deprecated: false
         documentation:
-          $id: '267'
+          $id: '278'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '269'
+          $id: '280'
           $type: PrimaryType
           deprecated: false
           format: date
           knownPrimaryType: date
           name:
-            $id: '270'
+            $id: '281'
             fixed: false
             raw: Date
         name:
-          $id: '268'
+          $id: '279'
           fixed: false
           raw: leap
         realPath:
           - leap
         serializedName: leap
     serializedName: date-wrapper
-  - $id: '272'
+  - $id: '283'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
-      $id: '285'
+      $id: '296'
       fixed: false
       raw: datetime-wrapper
     properties:
-      - $id: '273'
+      - $id: '284'
         collectionFormat: none
         defaultValue:
-          $id: '274'
+          $id: '285'
           fixed: false
         deprecated: false
         documentation:
-          $id: '275'
+          $id: '286'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '277'
+          $id: '288'
           $type: PrimaryType
           deprecated: false
           format: date-time
           knownPrimaryType: dateTime
           name:
-            $id: '278'
+            $id: '289'
             fixed: false
             raw: DateTime
         name:
-          $id: '276'
+          $id: '287'
           fixed: false
           raw: field
         realPath:
           - field
         serializedName: field
-      - $id: '279'
+      - $id: '290'
         collectionFormat: none
         defaultValue:
-          $id: '280'
+          $id: '291'
           fixed: false
         deprecated: false
         documentation:
-          $id: '281'
+          $id: '292'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '283'
+          $id: '294'
           $type: PrimaryType
           deprecated: false
           format: date-time
           knownPrimaryType: dateTime
           name:
-            $id: '284'
+            $id: '295'
             fixed: false
             raw: DateTime
         name:
-          $id: '282'
+          $id: '293'
           fixed: false
           raw: now
         realPath:
           - now
         serializedName: now
     serializedName: datetime-wrapper
-  - $id: '286'
+  - $id: '297'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
-      $id: '299'
+      $id: '310'
       fixed: false
       raw: datetimerfc1123-wrapper
     properties:
-      - $id: '287'
+      - $id: '298'
         collectionFormat: none
         defaultValue:
-          $id: '288'
+          $id: '299'
           fixed: false
         deprecated: false
         documentation:
-          $id: '289'
+          $id: '300'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '291'
+          $id: '302'
           $type: PrimaryType
           deprecated: false
           format: date-time-rfc1123
           knownPrimaryType: dateTimeRfc1123
           name:
-            $id: '292'
+            $id: '303'
             fixed: false
             raw: DateTimeRfc1123
         name:
-          $id: '290'
+          $id: '301'
           fixed: false
           raw: field
         realPath:
           - field
         serializedName: field
-      - $id: '293'
+      - $id: '304'
         collectionFormat: none
         defaultValue:
-          $id: '294'
+          $id: '305'
           fixed: false
         deprecated: false
         documentation:
-          $id: '295'
+          $id: '306'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '297'
+          $id: '308'
           $type: PrimaryType
           deprecated: false
           format: date-time-rfc1123
           knownPrimaryType: dateTimeRfc1123
           name:
-            $id: '298'
+            $id: '309'
             fixed: false
             raw: DateTimeRfc1123
         name:
-          $id: '296'
+          $id: '307'
           fixed: false
           raw: now
         realPath:
           - now
         serializedName: now
     serializedName: datetimerfc1123-wrapper
-  - $id: '300'
+  - $id: '311'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
-      $id: '307'
+      $id: '318'
       fixed: false
       raw: duration-wrapper
     properties:
-      - $id: '301'
+      - $id: '312'
         collectionFormat: none
         defaultValue:
-          $id: '302'
+          $id: '313'
           fixed: false
         deprecated: false
         documentation:
-          $id: '303'
+          $id: '314'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '305'
+          $id: '316'
           $type: PrimaryType
           deprecated: false
           format: duration
           knownPrimaryType: timeSpan
           name:
-            $id: '306'
+            $id: '317'
             fixed: false
             raw: TimeSpan
         name:
-          $id: '304'
+          $id: '315'
           fixed: false
           raw: field
         realPath:
           - field
         serializedName: field
     serializedName: duration-wrapper
-  - $id: '308'
+  - $id: '319'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
-      $id: '315'
+      $id: '326'
       fixed: false
       raw: byte-wrapper
     properties:
-      - $id: '309'
+      - $id: '320'
         collectionFormat: none
         defaultValue:
-          $id: '310'
+          $id: '321'
           fixed: false
         deprecated: false
         documentation:
-          $id: '311'
+          $id: '322'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '313'
+          $id: '324'
           $type: PrimaryType
           deprecated: false
           format: byte
           knownPrimaryType: byteArray
           name:
-            $id: '314'
+            $id: '325'
             fixed: false
             raw: ByteArray
         name:
-          $id: '312'
+          $id: '323'
           fixed: false
           raw: field
         realPath:
           - field
         serializedName: field
     serializedName: byte-wrapper
-  - $id: '316'
+  - $id: '327'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
-      $id: '325'
+      $id: '336'
       fixed: false
       raw: array-wrapper
     properties:
-      - $id: '317'
+      - $id: '328'
         collectionFormat: none
         defaultValue:
-          $id: '318'
+          $id: '329'
           fixed: false
         deprecated: false
         documentation:
-          $id: '319'
+          $id: '330'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '321'
+          $id: '332'
           $type: SequenceType
           deprecated: false
           elementType:
-            $id: '322'
+            $id: '333'
             $type: PrimaryType
             deprecated: false
             knownPrimaryType: string
             name:
-              $id: '323'
+              $id: '334'
               fixed: false
               raw: String
           name:
-            $id: '324'
+            $id: '335'
             fixed: false
         name:
-          $id: '320'
+          $id: '331'
           fixed: false
           raw: array
         realPath:
           - array
         serializedName: array
     serializedName: array-wrapper
-  - $id: '326'
+  - $id: '337'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
-      $id: '335'
+      $id: '346'
       fixed: false
       raw: dictionary-wrapper
     properties:
-      - $id: '327'
+      - $id: '338'
         collectionFormat: none
         defaultValue:
-          $id: '328'
+          $id: '339'
           fixed: false
         deprecated: false
         documentation:
-          $id: '329'
+          $id: '340'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '331'
+          $id: '342'
           $type: DictionaryType
           deprecated: false
           name:
-            $id: '334'
+            $id: '345'
             fixed: false
           supportsAdditionalProperties: false
           valueType:
-            $id: '332'
+            $id: '343'
             $type: PrimaryType
             deprecated: false
             knownPrimaryType: string
             name:
-              $id: '333'
+              $id: '344'
               fixed: false
               raw: String
         name:
-          $id: '330'
+          $id: '341'
           fixed: false
           raw: defaultProgram
         realPath:
           - defaultProgram
         serializedName: defaultProgram
     serializedName: dictionary-wrapper
-  - $id: '336'
+  - $id: '347'
     $type: CompositeType
     containsConstantProperties: false
     deprecated: false
     name:
-      $id: '349'
+      $id: '360'
       fixed: false
       raw: readonly-obj
     properties:
-      - $id: '337'
+      - $id: '348'
         collectionFormat: none
         defaultValue:
-          $id: '338'
+          $id: '349'
           fixed: false
         deprecated: false
         documentation:
-          $id: '339'
+          $id: '350'
           fixed: false
         isConstant: false
         isReadOnly: true
         isRequired: false
         modelType:
-          $id: '341'
+          $id: '352'
           $type: PrimaryType
           deprecated: false
           knownPrimaryType: string
           name:
-            $id: '342'
+            $id: '353'
             fixed: false
             raw: String
         name:
-          $id: '340'
+          $id: '351'
           fixed: false
           raw: id
         realPath:
           - id
         serializedName: id
-      - $id: '343'
+      - $id: '354'
         collectionFormat: none
         defaultValue:
-          $id: '344'
+          $id: '355'
           fixed: false
         deprecated: false
         documentation:
-          $id: '345'
+          $id: '356'
           fixed: false
         isConstant: false
         isReadOnly: false
         isRequired: false
         modelType:
-          $id: '347'
+          $id: '358'
           $type: PrimaryType
           deprecated: false
           format: int32
           knownPrimaryType: int
           name:
-            $id: '348'
+            $id: '359'
             fixed: false
             raw: Int
         name:
-          $id: '346'
+          $id: '357'
           fixed: false
           raw: size
         realPath:
@@ -1697,25 +1752,25 @@ modelsName: Models
 name: AutoRestComplexTestService
 namespace: ''
 operations:
-  - $id: '356'
+  - $id: '367'
     methods:
-      - $id: '357'
+      - $id: '368'
         defaultResponse:
-          $id: '361'
+          $id: '372'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: 'Get complex type {id: 2, name: ''abc'', color: ''YELLOW''}'
         group:
-          $id: '359'
+          $id: '370'
           fixed: false
           raw: basic
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '358'
+          $id: '369'
           fixed: false
           raw: getValid
         requestContentType: application/json; charset=utf-8
@@ -1723,20 +1778,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '360'
+            $id: '371'
             body:
               $ref: '16'
             isNullable: true
         returnType:
-          $id: '362'
+          $id: '373'
           body:
             $ref: '16'
           isNullable: true
         serializedName: basic_getValid
         url: /complex/basic/valid
-      - $id: '363'
+      - $id: '374'
         defaultResponse:
-          $id: '377'
+          $id: '388'
           body:
             $ref: '2'
           isNullable: true
@@ -1745,25 +1800,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '375'
+          $id: '386'
           fixed: false
           raw: basic
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '374'
+          $id: '385'
           fixed: false
           raw: putValid
         parameters:
-          - $id: '364'
+          - $id: '375'
             collectionFormat: none
             defaultValue:
-              $id: '365'
+              $id: '376'
               fixed: false
             deprecated: false
             documentation:
-              $id: '366'
+              $id: '377'
               fixed: false
               raw: 'Please put {id: 2, name: ''abc'', color: ''Magenta''}'
             extensions:
@@ -1774,37 +1829,37 @@ operations:
             modelType:
               $ref: '16'
             name:
-              $id: '367'
+              $id: '378'
               fixed: false
               raw: complexBody
             serializedName: complexBody
-          - $id: '368'
+          - $id: '379'
             clientProperty:
-              $ref: '350'
+              $ref: '361'
             collectionFormat: none
             defaultValue:
-              $id: '369'
+              $id: '380'
               fixed: false
               raw: 2014-04-01-preview
             deprecated: false
             documentation:
-              $id: '370'
+              $id: '381'
               fixed: false
               raw: API ID.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '372'
+              $id: '383'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '373'
+                $id: '384'
                 fixed: false
                 raw: String
             name:
-              $id: '371'
+              $id: '382'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -1813,30 +1868,30 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '376'
+            $id: '387'
             isNullable: true
         returnType:
-          $id: '378'
+          $id: '389'
           isNullable: true
         serializedName: basic_putValid
         url: /complex/basic/valid
-      - $id: '379'
+      - $id: '390'
         defaultResponse:
-          $id: '383'
+          $id: '394'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get a basic complex type that is invalid for the local strong type
         group:
-          $id: '381'
+          $id: '392'
           fixed: false
           raw: basic
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '380'
+          $id: '391'
           fixed: false
           raw: getInvalid
         requestContentType: application/json; charset=utf-8
@@ -1844,34 +1899,34 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '382'
+            $id: '393'
             body:
               $ref: '16'
             isNullable: true
         returnType:
-          $id: '384'
+          $id: '395'
           body:
             $ref: '16'
           isNullable: true
         serializedName: basic_getInvalid
         url: /complex/basic/invalid
-      - $id: '385'
+      - $id: '396'
         defaultResponse:
-          $id: '389'
+          $id: '400'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get a basic complex type that is empty
         group:
-          $id: '387'
+          $id: '398'
           fixed: false
           raw: basic
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '386'
+          $id: '397'
           fixed: false
           raw: getEmpty
         requestContentType: application/json; charset=utf-8
@@ -1879,34 +1934,34 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '388'
+            $id: '399'
             body:
               $ref: '16'
             isNullable: true
         returnType:
-          $id: '390'
+          $id: '401'
           body:
             $ref: '16'
           isNullable: true
         serializedName: basic_getEmpty
         url: /complex/basic/empty
-      - $id: '391'
+      - $id: '402'
         defaultResponse:
-          $id: '395'
+          $id: '406'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get a basic complex type whose properties are null
         group:
-          $id: '393'
+          $id: '404'
           fixed: false
           raw: basic
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '392'
+          $id: '403'
           fixed: false
           raw: getNull
         requestContentType: application/json; charset=utf-8
@@ -1914,20 +1969,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '394'
+            $id: '405'
             body:
               $ref: '16'
             isNullable: true
         returnType:
-          $id: '396'
+          $id: '407'
           body:
             $ref: '16'
           isNullable: true
         serializedName: basic_getNull
         url: /complex/basic/null
-      - $id: '397'
+      - $id: '408'
         defaultResponse:
-          $id: '401'
+          $id: '412'
           body:
             $ref: '2'
           isNullable: true
@@ -1936,14 +1991,14 @@ operations:
           Get a basic complex type while the server doesn't provide a response
           payload
         group:
-          $id: '399'
+          $id: '410'
           fixed: false
           raw: basic
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '398'
+          $id: '409'
           fixed: false
           raw: getNotProvided
         requestContentType: application/json; charset=utf-8
@@ -1951,44 +2006,44 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '400'
+            $id: '411'
             body:
               $ref: '16'
             isNullable: true
         returnType:
-          $id: '402'
+          $id: '413'
           body:
             $ref: '16'
           isNullable: true
         serializedName: basic_getNotProvided
         url: /complex/basic/notprovided
     name:
-      $id: '403'
+      $id: '414'
       fixed: false
       raw: Basic
     nameForProperty: Basic
     typeName:
-      $id: '404'
+      $id: '415'
       fixed: false
-  - $id: '405'
+  - $id: '416'
     methods:
-      - $id: '406'
+      - $id: '417'
         defaultResponse:
-          $id: '410'
+          $id: '421'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types with integer properties
         group:
-          $id: '408'
+          $id: '419'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '407'
+          $id: '418'
           fixed: false
           raw: getInt
         requestContentType: application/json; charset=utf-8
@@ -1996,20 +2051,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '409'
+            $id: '420'
             body:
-              $ref: '168'
+              $ref: '179'
             isNullable: true
         returnType:
-          $id: '411'
+          $id: '422'
           body:
-            $ref: '168'
+            $ref: '179'
           isNullable: true
         serializedName: primitive_getInt
         url: /complex/primitive/integer
-      - $id: '412'
+      - $id: '423'
         defaultResponse:
-          $id: '420'
+          $id: '431'
           body:
             $ref: '2'
           isNullable: true
@@ -2018,25 +2073,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '418'
+          $id: '429'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '417'
+          $id: '428'
           fixed: false
           raw: putInt
         parameters:
-          - $id: '413'
+          - $id: '424'
             collectionFormat: none
             defaultValue:
-              $id: '414'
+              $id: '425'
               fixed: false
             deprecated: false
             documentation:
-              $id: '415'
+              $id: '426'
               fixed: false
               raw: Please put -1 and 2
             extensions:
@@ -2045,9 +2100,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '168'
+              $ref: '179'
             name:
-              $id: '416'
+              $id: '427'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -2056,30 +2111,30 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '419'
+            $id: '430'
             isNullable: true
         returnType:
-          $id: '421'
+          $id: '432'
           isNullable: true
         serializedName: primitive_putInt
         url: /complex/primitive/integer
-      - $id: '422'
+      - $id: '433'
         defaultResponse:
-          $id: '426'
+          $id: '437'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types with long properties
         group:
-          $id: '424'
+          $id: '435'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '423'
+          $id: '434'
           fixed: false
           raw: getLong
         requestContentType: application/json; charset=utf-8
@@ -2087,20 +2142,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '425'
+            $id: '436'
             body:
-              $ref: '182'
+              $ref: '193'
             isNullable: true
         returnType:
-          $id: '427'
+          $id: '438'
           body:
-            $ref: '182'
+            $ref: '193'
           isNullable: true
         serializedName: primitive_getLong
         url: /complex/primitive/long
-      - $id: '428'
+      - $id: '439'
         defaultResponse:
-          $id: '436'
+          $id: '447'
           body:
             $ref: '2'
           isNullable: true
@@ -2109,25 +2164,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '434'
+          $id: '445'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '433'
+          $id: '444'
           fixed: false
           raw: putLong
         parameters:
-          - $id: '429'
+          - $id: '440'
             collectionFormat: none
             defaultValue:
-              $id: '430'
+              $id: '441'
               fixed: false
             deprecated: false
             documentation:
-              $id: '431'
+              $id: '442'
               fixed: false
               raw: Please put 1099511627775 and -999511627788
             extensions:
@@ -2136,9 +2191,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '182'
+              $ref: '193'
             name:
-              $id: '432'
+              $id: '443'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -2147,30 +2202,30 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '435'
+            $id: '446'
             isNullable: true
         returnType:
-          $id: '437'
+          $id: '448'
           isNullable: true
         serializedName: primitive_putLong
         url: /complex/primitive/long
-      - $id: '438'
+      - $id: '449'
         defaultResponse:
-          $id: '442'
+          $id: '453'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types with float properties
         group:
-          $id: '440'
+          $id: '451'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '439'
+          $id: '450'
           fixed: false
           raw: getFloat
         requestContentType: application/json; charset=utf-8
@@ -2178,20 +2233,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '441'
+            $id: '452'
             body:
-              $ref: '196'
+              $ref: '207'
             isNullable: true
         returnType:
-          $id: '443'
+          $id: '454'
           body:
-            $ref: '196'
+            $ref: '207'
           isNullable: true
         serializedName: primitive_getFloat
         url: /complex/primitive/float
-      - $id: '444'
+      - $id: '455'
         defaultResponse:
-          $id: '452'
+          $id: '463'
           body:
             $ref: '2'
           isNullable: true
@@ -2200,25 +2255,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '450'
+          $id: '461'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '449'
+          $id: '460'
           fixed: false
           raw: putFloat
         parameters:
-          - $id: '445'
+          - $id: '456'
             collectionFormat: none
             defaultValue:
-              $id: '446'
+              $id: '457'
               fixed: false
             deprecated: false
             documentation:
-              $id: '447'
+              $id: '458'
               fixed: false
               raw: Please put 1.05 and -0.003
             extensions:
@@ -2227,9 +2282,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '196'
+              $ref: '207'
             name:
-              $id: '448'
+              $id: '459'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -2238,30 +2293,30 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '451'
+            $id: '462'
             isNullable: true
         returnType:
-          $id: '453'
+          $id: '464'
           isNullable: true
         serializedName: primitive_putFloat
         url: /complex/primitive/float
-      - $id: '454'
+      - $id: '465'
         defaultResponse:
-          $id: '458'
+          $id: '469'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types with double properties
         group:
-          $id: '456'
+          $id: '467'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '455'
+          $id: '466'
           fixed: false
           raw: getDouble
         requestContentType: application/json; charset=utf-8
@@ -2269,20 +2324,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '457'
+            $id: '468'
             body:
-              $ref: '210'
+              $ref: '221'
             isNullable: true
         returnType:
-          $id: '459'
+          $id: '470'
           body:
-            $ref: '210'
+            $ref: '221'
           isNullable: true
         serializedName: primitive_getDouble
         url: /complex/primitive/double
-      - $id: '460'
+      - $id: '471'
         defaultResponse:
-          $id: '468'
+          $id: '479'
           body:
             $ref: '2'
           isNullable: true
@@ -2291,25 +2346,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '466'
+          $id: '477'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '465'
+          $id: '476'
           fixed: false
           raw: putDouble
         parameters:
-          - $id: '461'
+          - $id: '472'
             collectionFormat: none
             defaultValue:
-              $id: '462'
+              $id: '473'
               fixed: false
             deprecated: false
             documentation:
-              $id: '463'
+              $id: '474'
               fixed: false
               raw: >-
                 Please put 3e-100 and
@@ -2320,9 +2375,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '210'
+              $ref: '221'
             name:
-              $id: '464'
+              $id: '475'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -2331,30 +2386,30 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '467'
+            $id: '478'
             isNullable: true
         returnType:
-          $id: '469'
+          $id: '480'
           isNullable: true
         serializedName: primitive_putDouble
         url: /complex/primitive/double
-      - $id: '470'
+      - $id: '481'
         defaultResponse:
-          $id: '474'
+          $id: '485'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types with bool properties
         group:
-          $id: '472'
+          $id: '483'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '471'
+          $id: '482'
           fixed: false
           raw: getBool
         requestContentType: application/json; charset=utf-8
@@ -2362,20 +2417,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '473'
+            $id: '484'
             body:
-              $ref: '224'
+              $ref: '235'
             isNullable: true
         returnType:
-          $id: '475'
+          $id: '486'
           body:
-            $ref: '224'
+            $ref: '235'
           isNullable: true
         serializedName: primitive_getBool
         url: /complex/primitive/bool
-      - $id: '476'
+      - $id: '487'
         defaultResponse:
-          $id: '484'
+          $id: '495'
           body:
             $ref: '2'
           isNullable: true
@@ -2384,25 +2439,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '482'
+          $id: '493'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '481'
+          $id: '492'
           fixed: false
           raw: putBool
         parameters:
-          - $id: '477'
+          - $id: '488'
             collectionFormat: none
             defaultValue:
-              $id: '478'
+              $id: '489'
               fixed: false
             deprecated: false
             documentation:
-              $id: '479'
+              $id: '490'
               fixed: false
               raw: Please put true and false
             extensions:
@@ -2411,9 +2466,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '224'
+              $ref: '235'
             name:
-              $id: '480'
+              $id: '491'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -2422,30 +2477,30 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '483'
+            $id: '494'
             isNullable: true
         returnType:
-          $id: '485'
+          $id: '496'
           isNullable: true
         serializedName: primitive_putBool
         url: /complex/primitive/bool
-      - $id: '486'
+      - $id: '497'
         defaultResponse:
-          $id: '490'
+          $id: '501'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types with string properties
         group:
-          $id: '488'
+          $id: '499'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '487'
+          $id: '498'
           fixed: false
           raw: getString
         requestContentType: application/json; charset=utf-8
@@ -2453,20 +2508,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '489'
+            $id: '500'
             body:
-              $ref: '238'
+              $ref: '249'
             isNullable: true
         returnType:
-          $id: '491'
+          $id: '502'
           body:
-            $ref: '238'
+            $ref: '249'
           isNullable: true
         serializedName: primitive_getString
         url: /complex/primitive/string
-      - $id: '492'
+      - $id: '503'
         defaultResponse:
-          $id: '500'
+          $id: '511'
           body:
             $ref: '2'
           isNullable: true
@@ -2475,25 +2530,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '498'
+          $id: '509'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '497'
+          $id: '508'
           fixed: false
           raw: putString
         parameters:
-          - $id: '493'
+          - $id: '504'
             collectionFormat: none
             defaultValue:
-              $id: '494'
+              $id: '505'
               fixed: false
             deprecated: false
             documentation:
-              $id: '495'
+              $id: '506'
               fixed: false
               raw: 'Please put ''goodrequest'', '''', and null'
             extensions:
@@ -2502,9 +2557,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '238'
+              $ref: '249'
             name:
-              $id: '496'
+              $id: '507'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -2513,30 +2568,30 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '499'
+            $id: '510'
             isNullable: true
         returnType:
-          $id: '501'
+          $id: '512'
           isNullable: true
         serializedName: primitive_putString
         url: /complex/primitive/string
-      - $id: '502'
+      - $id: '513'
         defaultResponse:
-          $id: '506'
+          $id: '517'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types with date properties
         group:
-          $id: '504'
+          $id: '515'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '503'
+          $id: '514'
           fixed: false
           raw: getDate
         requestContentType: application/json; charset=utf-8
@@ -2544,20 +2599,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '505'
+            $id: '516'
             body:
-              $ref: '258'
+              $ref: '269'
             isNullable: true
         returnType:
-          $id: '507'
+          $id: '518'
           body:
-            $ref: '258'
+            $ref: '269'
           isNullable: true
         serializedName: primitive_getDate
         url: /complex/primitive/date
-      - $id: '508'
+      - $id: '519'
         defaultResponse:
-          $id: '516'
+          $id: '527'
           body:
             $ref: '2'
           isNullable: true
@@ -2566,25 +2621,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '514'
+          $id: '525'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '513'
+          $id: '524'
           fixed: false
           raw: putDate
         parameters:
-          - $id: '509'
+          - $id: '520'
             collectionFormat: none
             defaultValue:
-              $id: '510'
+              $id: '521'
               fixed: false
             deprecated: false
             documentation:
-              $id: '511'
+              $id: '522'
               fixed: false
               raw: Please put '0001-01-01' and '2016-02-29'
             extensions:
@@ -2593,9 +2648,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '258'
+              $ref: '269'
             name:
-              $id: '512'
+              $id: '523'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -2604,30 +2659,30 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '515'
+            $id: '526'
             isNullable: true
         returnType:
-          $id: '517'
+          $id: '528'
           isNullable: true
         serializedName: primitive_putDate
         url: /complex/primitive/date
-      - $id: '518'
+      - $id: '529'
         defaultResponse:
-          $id: '522'
+          $id: '533'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types with datetime properties
         group:
-          $id: '520'
+          $id: '531'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '519'
+          $id: '530'
           fixed: false
           raw: getDateTime
         requestContentType: application/json; charset=utf-8
@@ -2635,20 +2690,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '521'
+            $id: '532'
             body:
-              $ref: '272'
+              $ref: '283'
             isNullable: true
         returnType:
-          $id: '523'
+          $id: '534'
           body:
-            $ref: '272'
+            $ref: '283'
           isNullable: true
         serializedName: primitive_getDateTime
         url: /complex/primitive/datetime
-      - $id: '524'
+      - $id: '535'
         defaultResponse:
-          $id: '532'
+          $id: '543'
           body:
             $ref: '2'
           isNullable: true
@@ -2657,25 +2712,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '530'
+          $id: '541'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '529'
+          $id: '540'
           fixed: false
           raw: putDateTime
         parameters:
-          - $id: '525'
+          - $id: '536'
             collectionFormat: none
             defaultValue:
-              $id: '526'
+              $id: '537'
               fixed: false
             deprecated: false
             documentation:
-              $id: '527'
+              $id: '538'
               fixed: false
               raw: >-
                 Please put '0001-01-01T12:00:00-04:00' and
@@ -2686,9 +2741,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '272'
+              $ref: '283'
             name:
-              $id: '528'
+              $id: '539'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -2697,30 +2752,30 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '531'
+            $id: '542'
             isNullable: true
         returnType:
-          $id: '533'
+          $id: '544'
           isNullable: true
         serializedName: primitive_putDateTime
         url: /complex/primitive/datetime
-      - $id: '534'
+      - $id: '545'
         defaultResponse:
-          $id: '538'
+          $id: '549'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types with datetimeRfc1123 properties
         group:
-          $id: '536'
+          $id: '547'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '535'
+          $id: '546'
           fixed: false
           raw: getDateTimeRfc1123
         requestContentType: application/json; charset=utf-8
@@ -2728,20 +2783,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '537'
+            $id: '548'
             body:
-              $ref: '286'
+              $ref: '297'
             isNullable: true
         returnType:
-          $id: '539'
+          $id: '550'
           body:
-            $ref: '286'
+            $ref: '297'
           isNullable: true
         serializedName: primitive_getDateTimeRfc1123
         url: /complex/primitive/datetimerfc1123
-      - $id: '540'
+      - $id: '551'
         defaultResponse:
-          $id: '548'
+          $id: '559'
           body:
             $ref: '2'
           isNullable: true
@@ -2750,25 +2805,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '546'
+          $id: '557'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '545'
+          $id: '556'
           fixed: false
           raw: putDateTimeRfc1123
         parameters:
-          - $id: '541'
+          - $id: '552'
             collectionFormat: none
             defaultValue:
-              $id: '542'
+              $id: '553'
               fixed: false
             deprecated: false
             documentation:
-              $id: '543'
+              $id: '554'
               fixed: false
               raw: >-
                 Please put 'Mon, 01 Jan 0001 12:00:00 GMT' and 'Mon, 18 May 2015
@@ -2779,9 +2834,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '286'
+              $ref: '297'
             name:
-              $id: '544'
+              $id: '555'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -2790,30 +2845,30 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '547'
+            $id: '558'
             isNullable: true
         returnType:
-          $id: '549'
+          $id: '560'
           isNullable: true
         serializedName: primitive_putDateTimeRfc1123
         url: /complex/primitive/datetimerfc1123
-      - $id: '550'
+      - $id: '561'
         defaultResponse:
-          $id: '554'
+          $id: '565'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types with duration properties
         group:
-          $id: '552'
+          $id: '563'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '551'
+          $id: '562'
           fixed: false
           raw: getDuration
         requestContentType: application/json; charset=utf-8
@@ -2821,20 +2876,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '553'
+            $id: '564'
             body:
-              $ref: '300'
+              $ref: '311'
             isNullable: true
         returnType:
-          $id: '555'
+          $id: '566'
           body:
-            $ref: '300'
+            $ref: '311'
           isNullable: true
         serializedName: primitive_getDuration
         url: /complex/primitive/duration
-      - $id: '556'
+      - $id: '567'
         defaultResponse:
-          $id: '564'
+          $id: '575'
           body:
             $ref: '2'
           isNullable: true
@@ -2843,25 +2898,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '562'
+          $id: '573'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '561'
+          $id: '572'
           fixed: false
           raw: putDuration
         parameters:
-          - $id: '557'
+          - $id: '568'
             collectionFormat: none
             defaultValue:
-              $id: '558'
+              $id: '569'
               fixed: false
             deprecated: false
             documentation:
-              $id: '559'
+              $id: '570'
               fixed: false
               raw: Please put 'P123DT22H14M12.011S'
             extensions:
@@ -2870,9 +2925,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '300'
+              $ref: '311'
             name:
-              $id: '560'
+              $id: '571'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -2881,30 +2936,30 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '563'
+            $id: '574'
             isNullable: true
         returnType:
-          $id: '565'
+          $id: '576'
           isNullable: true
         serializedName: primitive_putDuration
         url: /complex/primitive/duration
-      - $id: '566'
+      - $id: '577'
         defaultResponse:
-          $id: '570'
+          $id: '581'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types with byte properties
         group:
-          $id: '568'
+          $id: '579'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '567'
+          $id: '578'
           fixed: false
           raw: getByte
         requestContentType: application/json; charset=utf-8
@@ -2912,20 +2967,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '569'
+            $id: '580'
             body:
-              $ref: '308'
+              $ref: '319'
             isNullable: true
         returnType:
-          $id: '571'
+          $id: '582'
           body:
-            $ref: '308'
+            $ref: '319'
           isNullable: true
         serializedName: primitive_getByte
         url: /complex/primitive/byte
-      - $id: '572'
+      - $id: '583'
         defaultResponse:
-          $id: '580'
+          $id: '591'
           body:
             $ref: '2'
           isNullable: true
@@ -2934,25 +2989,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '578'
+          $id: '589'
           fixed: false
           raw: primitive
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '577'
+          $id: '588'
           fixed: false
           raw: putByte
         parameters:
-          - $id: '573'
+          - $id: '584'
             collectionFormat: none
             defaultValue:
-              $id: '574'
+              $id: '585'
               fixed: false
             deprecated: false
             documentation:
-              $id: '575'
+              $id: '586'
               fixed: false
               raw: >-
                 Please put non-ascii byte string hex(FF FE FD FC 00 FA F9 F8 F7
@@ -2963,9 +3018,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '308'
+              $ref: '319'
             name:
-              $id: '576'
+              $id: '587'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -2974,40 +3029,40 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '579'
+            $id: '590'
             isNullable: true
         returnType:
-          $id: '581'
+          $id: '592'
           isNullable: true
         serializedName: primitive_putByte
         url: /complex/primitive/byte
     name:
-      $id: '582'
+      $id: '593'
       fixed: false
       raw: Primitive
     nameForProperty: Primitive
     typeName:
-      $id: '583'
+      $id: '594'
       fixed: false
-  - $id: '584'
+  - $id: '595'
     methods:
-      - $id: '585'
+      - $id: '596'
         defaultResponse:
-          $id: '589'
+          $id: '600'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types with array property
         group:
-          $id: '587'
+          $id: '598'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '586'
+          $id: '597'
           fixed: false
           raw: getValid
         requestContentType: application/json; charset=utf-8
@@ -3015,20 +3070,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '588'
+            $id: '599'
             body:
-              $ref: '316'
+              $ref: '327'
             isNullable: true
         returnType:
-          $id: '590'
+          $id: '601'
           body:
-            $ref: '316'
+            $ref: '327'
           isNullable: true
         serializedName: array_getValid
         url: /complex/array/valid
-      - $id: '591'
+      - $id: '602'
         defaultResponse:
-          $id: '599'
+          $id: '610'
           body:
             $ref: '2'
           isNullable: true
@@ -3037,25 +3092,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '597'
+          $id: '608'
           fixed: false
           raw: array
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '596'
+          $id: '607'
           fixed: false
           raw: putValid
         parameters:
-          - $id: '592'
+          - $id: '603'
             collectionFormat: none
             defaultValue:
-              $id: '593'
+              $id: '604'
               fixed: false
             deprecated: false
             documentation:
-              $id: '594'
+              $id: '605'
               fixed: false
               raw: >-
                 Please put an array with 4 items: "1, 2, 3, 4", "", null,
@@ -3066,9 +3121,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '316'
+              $ref: '327'
             name:
-              $id: '595'
+              $id: '606'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -3077,30 +3132,30 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '598'
+            $id: '609'
             isNullable: true
         returnType:
-          $id: '600'
+          $id: '611'
           isNullable: true
         serializedName: array_putValid
         url: /complex/array/valid
-      - $id: '601'
+      - $id: '612'
         defaultResponse:
-          $id: '605'
+          $id: '616'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types with array property which is empty
         group:
-          $id: '603'
+          $id: '614'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '602'
+          $id: '613'
           fixed: false
           raw: getEmpty
         requestContentType: application/json; charset=utf-8
@@ -3108,20 +3163,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '604'
+            $id: '615'
             body:
-              $ref: '316'
+              $ref: '327'
             isNullable: true
         returnType:
-          $id: '606'
+          $id: '617'
           body:
-            $ref: '316'
+            $ref: '327'
           isNullable: true
         serializedName: array_getEmpty
         url: /complex/array/empty
-      - $id: '607'
+      - $id: '618'
         defaultResponse:
-          $id: '615'
+          $id: '626'
           body:
             $ref: '2'
           isNullable: true
@@ -3130,25 +3185,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '613'
+          $id: '624'
           fixed: false
           raw: array
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '612'
+          $id: '623'
           fixed: false
           raw: putEmpty
         parameters:
-          - $id: '608'
+          - $id: '619'
             collectionFormat: none
             defaultValue:
-              $id: '609'
+              $id: '620'
               fixed: false
             deprecated: false
             documentation:
-              $id: '610'
+              $id: '621'
               fixed: false
               raw: Please put an empty array
             extensions:
@@ -3157,9 +3212,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '316'
+              $ref: '327'
             name:
-              $id: '611'
+              $id: '622'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -3168,16 +3223,16 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '614'
+            $id: '625'
             isNullable: true
         returnType:
-          $id: '616'
+          $id: '627'
           isNullable: true
         serializedName: array_putEmpty
         url: /complex/array/empty
-      - $id: '617'
+      - $id: '628'
         defaultResponse:
-          $id: '621'
+          $id: '632'
           body:
             $ref: '2'
           isNullable: true
@@ -3186,14 +3241,14 @@ operations:
           Get complex types with array property while server doesn't provide a
           response payload
         group:
-          $id: '619'
+          $id: '630'
           fixed: false
           raw: array
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '618'
+          $id: '629'
           fixed: false
           raw: getNotProvided
         requestContentType: application/json; charset=utf-8
@@ -3201,44 +3256,44 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '620'
+            $id: '631'
             body:
-              $ref: '316'
+              $ref: '327'
             isNullable: true
         returnType:
-          $id: '622'
+          $id: '633'
           body:
-            $ref: '316'
+            $ref: '327'
           isNullable: true
         serializedName: array_getNotProvided
         url: /complex/array/notprovided
     name:
-      $id: '623'
+      $id: '634'
       fixed: false
       raw: Array
     nameForProperty: Array
     typeName:
-      $id: '624'
+      $id: '635'
       fixed: false
-  - $id: '625'
+  - $id: '636'
     methods:
-      - $id: '626'
+      - $id: '637'
         defaultResponse:
-          $id: '630'
+          $id: '641'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types with dictionary property
         group:
-          $id: '628'
+          $id: '639'
           fixed: false
           raw: dictionary
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '627'
+          $id: '638'
           fixed: false
           raw: getValid
         requestContentType: application/json; charset=utf-8
@@ -3246,20 +3301,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '629'
+            $id: '640'
             body:
-              $ref: '326'
+              $ref: '337'
             isNullable: true
         returnType:
-          $id: '631'
+          $id: '642'
           body:
-            $ref: '326'
+            $ref: '337'
           isNullable: true
         serializedName: dictionary_getValid
         url: /complex/dictionary/typed/valid
-      - $id: '632'
+      - $id: '643'
         defaultResponse:
-          $id: '640'
+          $id: '651'
           body:
             $ref: '2'
           isNullable: true
@@ -3268,25 +3323,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '638'
+          $id: '649'
           fixed: false
           raw: dictionary
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '637'
+          $id: '648'
           fixed: false
           raw: putValid
         parameters:
-          - $id: '633'
+          - $id: '644'
             collectionFormat: none
             defaultValue:
-              $id: '634'
+              $id: '645'
               fixed: false
             deprecated: false
             documentation:
-              $id: '635'
+              $id: '646'
               fixed: false
               raw: >-
                 Please put a dictionary with 5 key-value pairs: "txt":"notepad",
@@ -3297,9 +3352,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '326'
+              $ref: '337'
             name:
-              $id: '636'
+              $id: '647'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -3308,30 +3363,30 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '639'
+            $id: '650'
             isNullable: true
         returnType:
-          $id: '641'
+          $id: '652'
           isNullable: true
         serializedName: dictionary_putValid
         url: /complex/dictionary/typed/valid
-      - $id: '642'
+      - $id: '653'
         defaultResponse:
-          $id: '646'
+          $id: '657'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types with dictionary property which is empty
         group:
-          $id: '644'
+          $id: '655'
           fixed: false
           raw: dictionary
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '643'
+          $id: '654'
           fixed: false
           raw: getEmpty
         requestContentType: application/json; charset=utf-8
@@ -3339,20 +3394,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '645'
+            $id: '656'
             body:
-              $ref: '326'
+              $ref: '337'
             isNullable: true
         returnType:
-          $id: '647'
+          $id: '658'
           body:
-            $ref: '326'
+            $ref: '337'
           isNullable: true
         serializedName: dictionary_getEmpty
         url: /complex/dictionary/typed/empty
-      - $id: '648'
+      - $id: '659'
         defaultResponse:
-          $id: '656'
+          $id: '667'
           body:
             $ref: '2'
           isNullable: true
@@ -3361,25 +3416,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '654'
+          $id: '665'
           fixed: false
           raw: dictionary
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '653'
+          $id: '664'
           fixed: false
           raw: putEmpty
         parameters:
-          - $id: '649'
+          - $id: '660'
             collectionFormat: none
             defaultValue:
-              $id: '650'
+              $id: '661'
               fixed: false
             deprecated: false
             documentation:
-              $id: '651'
+              $id: '662'
               fixed: false
               raw: Please put an empty dictionary
             extensions:
@@ -3388,9 +3443,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '326'
+              $ref: '337'
             name:
-              $id: '652'
+              $id: '663'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -3399,30 +3454,30 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '655'
+            $id: '666'
             isNullable: true
         returnType:
-          $id: '657'
+          $id: '668'
           isNullable: true
         serializedName: dictionary_putEmpty
         url: /complex/dictionary/typed/empty
-      - $id: '658'
+      - $id: '669'
         defaultResponse:
-          $id: '662'
+          $id: '673'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types with dictionary property which is null
         group:
-          $id: '660'
+          $id: '671'
           fixed: false
           raw: dictionary
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '659'
+          $id: '670'
           fixed: false
           raw: getNull
         requestContentType: application/json; charset=utf-8
@@ -3430,20 +3485,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '661'
+            $id: '672'
             body:
-              $ref: '326'
+              $ref: '337'
             isNullable: true
         returnType:
-          $id: '663'
+          $id: '674'
           body:
-            $ref: '326'
+            $ref: '337'
           isNullable: true
         serializedName: dictionary_getNull
         url: /complex/dictionary/typed/null
-      - $id: '664'
+      - $id: '675'
         defaultResponse:
-          $id: '668'
+          $id: '679'
           body:
             $ref: '2'
           isNullable: true
@@ -3452,14 +3507,14 @@ operations:
           Get complex types with dictionary property while server doesn't
           provide a response payload
         group:
-          $id: '666'
+          $id: '677'
           fixed: false
           raw: dictionary
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '665'
+          $id: '676'
           fixed: false
           raw: getNotProvided
         requestContentType: application/json; charset=utf-8
@@ -3467,44 +3522,44 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '667'
+            $id: '678'
             body:
-              $ref: '326'
+              $ref: '337'
             isNullable: true
         returnType:
-          $id: '669'
+          $id: '680'
           body:
-            $ref: '326'
+            $ref: '337'
           isNullable: true
         serializedName: dictionary_getNotProvided
         url: /complex/dictionary/typed/notprovided
     name:
-      $id: '670'
+      $id: '681'
       fixed: false
       raw: Dictionary
     nameForProperty: Dictionary
     typeName:
-      $id: '671'
+      $id: '682'
       fixed: false
-  - $id: '672'
+  - $id: '683'
     methods:
-      - $id: '673'
+      - $id: '684'
         defaultResponse:
-          $id: '677'
+          $id: '688'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types that extend others
         group:
-          $id: '675'
+          $id: '686'
           fixed: false
           raw: inheritance
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '674'
+          $id: '685'
           fixed: false
           raw: getValid
         requestContentType: application/json; charset=utf-8
@@ -3512,20 +3567,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '676'
+            $id: '687'
             body:
               $ref: '78'
             isNullable: true
         returnType:
-          $id: '678'
+          $id: '689'
           body:
             $ref: '78'
           isNullable: true
         serializedName: inheritance_getValid
         url: /complex/inheritance/valid
-      - $id: '679'
+      - $id: '690'
         defaultResponse:
-          $id: '687'
+          $id: '698'
           body:
             $ref: '2'
           isNullable: true
@@ -3534,25 +3589,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '685'
+          $id: '696'
           fixed: false
           raw: inheritance
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '684'
+          $id: '695'
           fixed: false
           raw: putValid
         parameters:
-          - $id: '680'
+          - $id: '691'
             collectionFormat: none
             defaultValue:
-              $id: '681'
+              $id: '692'
               fixed: false
             deprecated: false
             documentation:
-              $id: '682'
+              $id: '693'
               fixed: false
               raw: >-
                 Please put a siamese with id=2, name="Siameee", color=green,
@@ -3567,7 +3622,7 @@ operations:
             modelType:
               $ref: '78'
             name:
-              $id: '683'
+              $id: '694'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -3576,40 +3631,40 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '686'
+            $id: '697'
             isNullable: true
         returnType:
-          $id: '688'
+          $id: '699'
           isNullable: true
         serializedName: inheritance_putValid
         url: /complex/inheritance/valid
     name:
-      $id: '689'
+      $id: '700'
       fixed: false
       raw: Inheritance
     nameForProperty: Inheritance
     typeName:
-      $id: '690'
+      $id: '701'
       fixed: false
-  - $id: '691'
+  - $id: '702'
     methods:
-      - $id: '692'
+      - $id: '703'
         defaultResponse:
-          $id: '696'
+          $id: '707'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types that are polymorphic
         group:
-          $id: '694'
+          $id: '705'
           fixed: false
           raw: polymorphism
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '693'
+          $id: '704'
           fixed: false
           raw: getValid
         requestContentType: application/json; charset=utf-8
@@ -3617,20 +3672,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '695'
+            $id: '706'
             body:
               $ref: '86'
             isNullable: true
         returnType:
-          $id: '697'
+          $id: '708'
           body:
             $ref: '86'
           isNullable: true
         serializedName: polymorphism_getValid
         url: /complex/polymorphism/valid
-      - $id: '698'
+      - $id: '709'
         defaultResponse:
-          $id: '706'
+          $id: '717'
           body:
             $ref: '2'
           isNullable: true
@@ -3639,25 +3694,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '704'
+          $id: '715'
           fixed: false
           raw: polymorphism
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '703'
+          $id: '714'
           fixed: false
           raw: putValid
         parameters:
-          - $id: '699'
+          - $id: '710'
             collectionFormat: none
             defaultValue:
-              $id: '700'
+              $id: '711'
               fixed: false
             deprecated: false
             documentation:
-              $id: '701'
+              $id: '712'
               fixed: false
               raw: |-
                 Please put a salmon that looks like this:
@@ -3701,7 +3756,7 @@ operations:
             modelType:
               $ref: '86'
             name:
-              $id: '702'
+              $id: '713'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -3710,16 +3765,16 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '705'
+            $id: '716'
             isNullable: true
         returnType:
-          $id: '707'
+          $id: '718'
           isNullable: true
         serializedName: polymorphism_putValid
         url: /complex/polymorphism/valid
-      - $id: '708'
+      - $id: '719'
         defaultResponse:
-          $id: '712'
+          $id: '723'
           body:
             $ref: '2'
           isNullable: true
@@ -3728,14 +3783,14 @@ operations:
           Get complex types that are polymorphic, but not at the root of the
           hierarchy; also have additional properties
         group:
-          $id: '710'
+          $id: '721'
           fixed: false
           raw: polymorphism
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '709'
+          $id: '720'
           fixed: false
           raw: getComplicated
         requestContentType: application/json; charset=utf-8
@@ -3743,20 +3798,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '711'
+            $id: '722'
             body:
               $ref: '106'
             isNullable: true
         returnType:
-          $id: '713'
+          $id: '724'
           body:
             $ref: '106'
           isNullable: true
         serializedName: polymorphism_getComplicated
         url: /complex/polymorphism/complicated
-      - $id: '714'
+      - $id: '725'
         defaultResponse:
-          $id: '722'
+          $id: '733'
           body:
             $ref: '2'
           isNullable: true
@@ -3767,25 +3822,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '720'
+          $id: '731'
           fixed: false
           raw: polymorphism
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '719'
+          $id: '730'
           fixed: false
           raw: putComplicated
         parameters:
-          - $id: '715'
+          - $id: '726'
             collectionFormat: none
             defaultValue:
-              $id: '716'
+              $id: '727'
               fixed: false
             deprecated: false
             documentation:
-              $id: '717'
+              $id: '728'
               fixed: false
             extensions:
               x-ms-requestBody-name: complexBody
@@ -3795,7 +3850,7 @@ operations:
             modelType:
               $ref: '106'
             name:
-              $id: '718'
+              $id: '729'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -3804,16 +3859,16 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '721'
+            $id: '732'
             isNullable: true
         returnType:
-          $id: '723'
+          $id: '734'
           isNullable: true
         serializedName: polymorphism_putComplicated
         url: /complex/polymorphism/complicated
-      - $id: '724'
+      - $id: '735'
         defaultResponse:
-          $id: '732'
+          $id: '743'
           body:
             $ref: '2'
           isNullable: true
@@ -3822,25 +3877,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '730'
+          $id: '741'
           fixed: false
           raw: polymorphism
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '729'
+          $id: '740'
           fixed: false
           raw: putMissingDiscriminator
         parameters:
-          - $id: '725'
+          - $id: '736'
             collectionFormat: none
             defaultValue:
-              $id: '726'
+              $id: '737'
               fixed: false
             deprecated: false
             documentation:
-              $id: '727'
+              $id: '738'
               fixed: false
             extensions:
               x-ms-requestBody-name: complexBody
@@ -3850,7 +3905,7 @@ operations:
             modelType:
               $ref: '106'
             name:
-              $id: '728'
+              $id: '739'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -3859,20 +3914,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '731'
+            $id: '742'
             body:
               $ref: '106'
             isNullable: true
         returnType:
-          $id: '733'
+          $id: '744'
           body:
             $ref: '106'
           isNullable: true
         serializedName: polymorphism_putMissingDiscriminator
         url: /complex/polymorphism/missingdiscriminator
-      - $id: '734'
+      - $id: '745'
         defaultResponse:
-          $id: '742'
+          $id: '753'
           body:
             $ref: '2'
           isNullable: true
@@ -3883,25 +3938,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '740'
+          $id: '751'
           fixed: false
           raw: polymorphism
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '739'
+          $id: '750'
           fixed: false
           raw: putValidMissingRequired
         parameters:
-          - $id: '735'
+          - $id: '746'
             collectionFormat: none
             defaultValue:
-              $id: '736'
+              $id: '747'
               fixed: false
             deprecated: false
             documentation:
-              $id: '737'
+              $id: '748'
               fixed: false
               raw: >-
                 Please attempt put a sawshark that looks like this, the client
@@ -3940,7 +3995,7 @@ operations:
             modelType:
               $ref: '86'
             name:
-              $id: '738'
+              $id: '749'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -3949,40 +4004,40 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '741'
+            $id: '752'
             isNullable: true
         returnType:
-          $id: '743'
+          $id: '754'
           isNullable: true
         serializedName: polymorphism_putValidMissingRequired
         url: /complex/polymorphism/missingrequired/invalid
     name:
-      $id: '744'
+      $id: '755'
       fixed: false
       raw: Polymorphism
     nameForProperty: Polymorphism
     typeName:
-      $id: '745'
+      $id: '756'
       fixed: false
-  - $id: '746'
+  - $id: '757'
     methods:
-      - $id: '747'
+      - $id: '758'
         defaultResponse:
-          $id: '751'
+          $id: '762'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types that are polymorphic and have recursive references
         group:
-          $id: '749'
+          $id: '760'
           fixed: false
           raw: polymorphicrecursive
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '748'
+          $id: '759'
           fixed: false
           raw: getValid
         requestContentType: application/json; charset=utf-8
@@ -3990,20 +4045,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '750'
+            $id: '761'
             body:
               $ref: '86'
             isNullable: true
         returnType:
-          $id: '752'
+          $id: '763'
           body:
             $ref: '86'
           isNullable: true
         serializedName: polymorphicrecursive_getValid
         url: /complex/polymorphicrecursive/valid
-      - $id: '753'
+      - $id: '764'
         defaultResponse:
-          $id: '761'
+          $id: '772'
           body:
             $ref: '2'
           isNullable: true
@@ -4012,25 +4067,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '759'
+          $id: '770'
           fixed: false
           raw: polymorphicrecursive
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '758'
+          $id: '769'
           fixed: false
           raw: putValid
         parameters:
-          - $id: '754'
+          - $id: '765'
             collectionFormat: none
             defaultValue:
-              $id: '755'
+              $id: '766'
               fixed: false
             deprecated: false
             documentation:
-              $id: '756'
+              $id: '767'
               fixed: false
               raw: |-
                 Please put a salmon that looks like this:
@@ -4094,7 +4149,7 @@ operations:
             modelType:
               $ref: '86'
             name:
-              $id: '757'
+              $id: '768'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -4103,40 +4158,40 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '760'
+            $id: '771'
             isNullable: true
         returnType:
-          $id: '762'
+          $id: '773'
           isNullable: true
         serializedName: polymorphicrecursive_putValid
         url: /complex/polymorphicrecursive/valid
     name:
-      $id: '763'
+      $id: '774'
       fixed: false
       raw: Polymorphicrecursive
     nameForProperty: Polymorphicrecursive
     typeName:
-      $id: '764'
+      $id: '775'
       fixed: false
-  - $id: '765'
+  - $id: '776'
     methods:
-      - $id: '766'
+      - $id: '777'
         defaultResponse:
-          $id: '770'
+          $id: '781'
           body:
             $ref: '2'
           isNullable: true
         deprecated: false
         description: Get complex types that have readonly properties
         group:
-          $id: '768'
+          $id: '779'
           fixed: false
           raw: readonlyproperty
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '767'
+          $id: '778'
           fixed: false
           raw: getValid
         requestContentType: application/json; charset=utf-8
@@ -4144,20 +4199,20 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '769'
+            $id: '780'
             body:
-              $ref: '336'
+              $ref: '347'
             isNullable: true
         returnType:
-          $id: '771'
+          $id: '782'
           body:
-            $ref: '336'
+            $ref: '347'
           isNullable: true
         serializedName: readonlyproperty_getValid
         url: /complex/readonlyproperty/valid
-      - $id: '772'
+      - $id: '783'
         defaultResponse:
-          $id: '780'
+          $id: '791'
           body:
             $ref: '2'
           isNullable: true
@@ -4166,25 +4221,25 @@ operations:
         extensions:
           x-ms-requestBody-index: '0'
         group:
-          $id: '778'
+          $id: '789'
           fixed: false
           raw: readonlyproperty
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '777'
+          $id: '788'
           fixed: false
           raw: putValid
         parameters:
-          - $id: '773'
+          - $id: '784'
             collectionFormat: none
             defaultValue:
-              $id: '774'
+              $id: '785'
               fixed: false
             deprecated: false
             documentation:
-              $id: '775'
+              $id: '786'
               fixed: false
             extensions:
               x-ms-requestBody-name: complexBody
@@ -4192,9 +4247,9 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $ref: '336'
+              $ref: '347'
             name:
-              $id: '776'
+              $id: '787'
               fixed: false
               raw: complexBody
             serializedName: complexBody
@@ -4203,47 +4258,47 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '779'
+            $id: '790'
             isNullable: true
         returnType:
-          $id: '781'
+          $id: '792'
           isNullable: true
         serializedName: readonlyproperty_putValid
         url: /complex/readonlyproperty/valid
     name:
-      $id: '782'
+      $id: '793'
       fixed: false
       raw: Readonlyproperty
     nameForProperty: Readonlyproperty
     typeName:
-      $id: '783'
+      $id: '794'
       fixed: false
 properties:
-  - $id: '350'
+  - $id: '361'
     collectionFormat: none
     defaultValue:
-      $id: '351'
+      $id: '362'
       fixed: false
       raw: 2014-04-01-preview
     deprecated: false
     documentation:
-      $id: '352'
+      $id: '363'
       fixed: false
       raw: API ID.
     isConstant: true
     isReadOnly: false
     isRequired: true
     modelType:
-      $id: '354'
+      $id: '365'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
-        $id: '355'
+        $id: '366'
         fixed: false
         raw: String
     name:
-      $id: '353'
+      $id: '364'
       fixed: false
       raw: api-version
     realPath:
