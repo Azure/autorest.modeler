@@ -6,104 +6,101 @@ codeGenExtensions:
   internalConstructors: true
 documentation: Creates an Azure Data Lake Store filesystem client.
 enumTypes:
-  - $ref: '147'
-  - $id: '220'
+  - $id: '2'
     $type: EnumType
     deprecated: false
     modelAsString: false
     name:
-      $id: '227'
+      $id: '9'
       fixed: false
       raw: ExpiryOptionType
     oldModelAsString: false
     underlyingType:
-      $id: '225'
+      $id: '7'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
-        $id: '226'
+        $id: '8'
         fixed: false
         raw: String
     values:
-      - $id: '221'
+      - $id: '3'
         name: NeverExpire
         serializedName: NeverExpire
-      - $id: '222'
+      - $id: '4'
         name: RelativeToNow
         serializedName: RelativeToNow
-      - $id: '223'
+      - $id: '5'
         name: RelativeToCreationDate
         serializedName: RelativeToCreationDate
-      - $id: '224'
+      - $id: '6'
         name: Absolute
         serializedName: Absolute
-  - $id: '228'
+  - $id: '10'
     $type: EnumType
     deprecated: false
     modelAsString: false
     name:
-      $id: '232'
+      $id: '14'
       fixed: false
       raw: AppendModeType
     oldModelAsString: false
     underlyingType:
-      $id: '230'
+      $id: '12'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
-        $id: '231'
+        $id: '13'
         fixed: false
         raw: String
     values:
-      - $id: '229'
+      - $id: '11'
         name: autocreate
         serializedName: autocreate
-  - $id: '233'
+  - $id: '15'
     $type: EnumType
     deprecated: false
     modelAsString: false
     name:
-      $id: '239'
+      $id: '21'
       fixed: false
       raw: SyncFlag
     oldModelAsString: false
     underlyingType:
-      $id: '237'
+      $id: '19'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
-        $id: '238'
+        $id: '20'
         fixed: false
         raw: String
     values:
-      - $id: '234'
+      - $id: '16'
         name: DATA
         serializedName: DATA
-      - $id: '235'
+      - $id: '17'
         name: METADATA
         serializedName: METADATA
-      - $id: '236'
+      - $id: '18'
         name: CLOSE
         serializedName: CLOSE
-errorTypes:
-  - $ref: '214'
 extensions:
   x-ms-parameterized-host: true
 hostParametersFront:
-  - $id: '240'
+  - $id: '22'
     clientProperty:
-      $id: '241'
+      $id: '23'
       collectionFormat: none
       defaultValue:
-        $id: '242'
+        $id: '24'
         fixed: false
         raw: azuredatalakestore.net
       deprecated: false
       documentation:
-        $id: '243'
+        $id: '25'
         fixed: false
         raw: Gets the URI used as the base for all cloud service requests.
       extensions:
@@ -112,16 +109,16 @@ hostParametersFront:
       isReadOnly: false
       isRequired: true
       modelType:
-        $id: '245'
+        $id: '27'
         $type: PrimaryType
         deprecated: false
         knownPrimaryType: string
         name:
-          $id: '246'
+          $id: '28'
           fixed: false
           raw: String
       name:
-        $id: '244'
+        $id: '26'
         fixed: false
         raw: adlsFileSystemDnsSuffix
       realPath:
@@ -129,12 +126,12 @@ hostParametersFront:
       serializedName: adlsFileSystemDnsSuffix
     collectionFormat: none
     defaultValue:
-      $id: '247'
+      $id: '29'
       fixed: false
       raw: azuredatalakestore.net
     deprecated: false
     documentation:
-      $id: '248'
+      $id: '30'
       fixed: false
       raw: Gets the URI used as the base for all cloud service requests.
     extensions:
@@ -144,28 +141,28 @@ hostParametersFront:
     isRequired: true
     location: path
     modelType:
-      $id: '250'
+      $id: '32'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
-        $id: '251'
+        $id: '33'
         fixed: false
         raw: String
     name:
-      $id: '249'
+      $id: '31'
       fixed: false
       raw: adlsFileSystemDnsSuffix
     serializedName: adlsFileSystemDnsSuffix
-  - $id: '252'
+  - $id: '34'
     collectionFormat: none
     defaultValue:
-      $id: '253'
+      $id: '35'
       fixed: false
       raw: ''
     deprecated: false
     documentation:
-      $id: '254'
+      $id: '36'
       fixed: false
       raw: The Azure Data Lake Store account to execute filesystem operations on.
     extensions:
@@ -175,1207 +172,35 @@ hostParametersFront:
     isRequired: true
     location: path
     modelType:
-      $id: '256'
+      $id: '38'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
-        $id: '257'
+        $id: '39'
         fixed: false
         raw: String
     name:
-      $id: '255'
+      $id: '37'
       fixed: false
       raw: accountName
     serializedName: accountName
-modelTypes:
-  - $id: '2'
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: The result of the request or operation.
-    name:
-      $id: '9'
-      fixed: false
-      raw: FileOperationResult
-    properties:
-      - $id: '3'
-        collectionFormat: none
-        defaultValue:
-          $id: '4'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '5'
-          fixed: false
-          raw: the result of the operation or request.
-        extensions:
-          x-ms-client-name: operationResult
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '7'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: boolean
-          name:
-            $id: '8'
-            fixed: false
-            raw: Boolean
-        name:
-          $id: '6'
-          fixed: false
-          raw: boolean
-        realPath:
-          - boolean
-        serializedName: boolean
-    serializedName: FileOperationResult
-  - $id: '10'
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store file or directory Access Control List information.
-    name:
-      $id: '43'
-      fixed: false
-      raw: AclStatus
-    properties:
-      - $id: '11'
-        collectionFormat: none
-        defaultValue:
-          $id: '12'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '13'
-          fixed: false
-          raw: the list of ACLSpec entries on a file or directory.
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '15'
-          $type: SequenceType
-          deprecated: false
-          elementType:
-            $id: '16'
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: string
-            name:
-              $id: '17'
-              fixed: false
-              raw: String
-          name:
-            $id: '18'
-            fixed: false
-        name:
-          $id: '14'
-          fixed: false
-          raw: entries
-        realPath:
-          - entries
-        serializedName: entries
-      - $id: '19'
-        collectionFormat: none
-        defaultValue:
-          $id: '20'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '21'
-          fixed: false
-          raw: 'the group owner, an AAD Object ID.'
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '23'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            $id: '24'
-            fixed: false
-            raw: String
-        name:
-          $id: '22'
-          fixed: false
-          raw: group
-        realPath:
-          - group
-        serializedName: group
-      - $id: '25'
-        collectionFormat: none
-        defaultValue:
-          $id: '26'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '27'
-          fixed: false
-          raw: 'the user owner, an AAD Object ID.'
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '29'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            $id: '30'
-            fixed: false
-            raw: String
-        name:
-          $id: '28'
-          fixed: false
-          raw: owner
-        realPath:
-          - owner
-        serializedName: owner
-      - $id: '31'
-        collectionFormat: none
-        defaultValue:
-          $id: '32'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '33'
-          fixed: false
-          raw: >-
-            The octal representation of the unnamed user, mask and other
-            permissions.
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $id: '35'
-          $type: PrimaryType
-          deprecated: false
-          format: int32
-          knownPrimaryType: int
-          name:
-            $id: '36'
-            fixed: false
-            raw: Int
-        name:
-          $id: '34'
-          fixed: false
-          raw: permission
-        realPath:
-          - permission
-        serializedName: permission
-      - $id: '37'
-        collectionFormat: none
-        defaultValue:
-          $id: '38'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '39'
-          fixed: false
-          raw: the indicator of whether the sticky bit is on or off.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '41'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: boolean
-          name:
-            $id: '42'
-            fixed: false
-            raw: Boolean
-        name:
-          $id: '40'
-          fixed: false
-          raw: stickyBit
-        realPath:
-          - stickyBit
-        serializedName: stickyBit
-    serializedName: AclStatus
-  - $id: '44'
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store file or directory Access Control List information.
-    name:
-      $id: '49'
-      fixed: false
-      raw: AclStatusResult
-    properties:
-      - $id: '45'
-        collectionFormat: none
-        defaultValue:
-          $id: '46'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '47'
-          fixed: false
-          raw: the AclStatus object for a given file or directory.
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $ref: '10'
-        name:
-          $id: '48'
-          fixed: false
-          raw: AclStatus
-        realPath:
-          - AclStatus
-        serializedName: AclStatus
-    serializedName: AclStatusResult
-  - $id: '50'
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store content summary information
-    name:
-      $id: '75'
-      fixed: false
-      raw: ContentSummary
-    properties:
-      - $id: '51'
-        collectionFormat: none
-        defaultValue:
-          $id: '52'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '53'
-          fixed: false
-          raw: the number of directories.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '55'
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            $id: '56'
-            fixed: false
-            raw: Long
-        name:
-          $id: '54'
-          fixed: false
-          raw: directoryCount
-        realPath:
-          - directoryCount
-        serializedName: directoryCount
-      - $id: '57'
-        collectionFormat: none
-        defaultValue:
-          $id: '58'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '59'
-          fixed: false
-          raw: the number of files.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '61'
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            $id: '62'
-            fixed: false
-            raw: Long
-        name:
-          $id: '60'
-          fixed: false
-          raw: fileCount
-        realPath:
-          - fileCount
-        serializedName: fileCount
-      - $id: '63'
-        collectionFormat: none
-        defaultValue:
-          $id: '64'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '65'
-          fixed: false
-          raw: the number of bytes used by the content.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '67'
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            $id: '68'
-            fixed: false
-            raw: Long
-        name:
-          $id: '66'
-          fixed: false
-          raw: length
-        realPath:
-          - length
-        serializedName: length
-      - $id: '69'
-        collectionFormat: none
-        defaultValue:
-          $id: '70'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '71'
-          fixed: false
-          raw: the disk space consumed by the content.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '73'
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            $id: '74'
-            fixed: false
-            raw: Long
-        name:
-          $id: '72'
-          fixed: false
-          raw: spaceConsumed
-        realPath:
-          - spaceConsumed
-        serializedName: spaceConsumed
-    serializedName: ContentSummary
-  - $id: '76'
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store filesystem content summary information response.
-    name:
-      $id: '81'
-      fixed: false
-      raw: ContentSummaryResult
-    properties:
-      - $id: '77'
-        collectionFormat: none
-        defaultValue:
-          $id: '78'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '79'
-          fixed: false
-          raw: the content summary for the specified path
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $ref: '50'
-        name:
-          $id: '80'
-          fixed: false
-          raw: ContentSummary
-        realPath:
-          - ContentSummary
-        serializedName: ContentSummary
-    serializedName: ContentSummaryResult
-  - $id: '82'
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store file or directory information.
-    name:
-      $id: '159'
-      fixed: false
-      raw: FileStatusProperties
-    properties:
-      - $id: '83'
-        collectionFormat: none
-        defaultValue:
-          $id: '84'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '85'
-          fixed: false
-          raw: the last access time as ticks since the epoch.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '87'
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            $id: '88'
-            fixed: false
-            raw: Long
-        name:
-          $id: '86'
-          fixed: false
-          raw: accessTime
-        realPath:
-          - accessTime
-        serializedName: accessTime
-      - $id: '89'
-        collectionFormat: none
-        defaultValue:
-          $id: '90'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '91'
-          fixed: false
-          raw: the block size for the file.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '93'
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            $id: '94'
-            fixed: false
-            raw: Long
-        name:
-          $id: '92'
-          fixed: false
-          raw: blockSize
-        realPath:
-          - blockSize
-        serializedName: blockSize
-      - $id: '95'
-        collectionFormat: none
-        defaultValue:
-          $id: '96'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '97'
-          fixed: false
-          raw: the number of children in the directory.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '99'
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            $id: '100'
-            fixed: false
-            raw: Long
-        name:
-          $id: '98'
-          fixed: false
-          raw: childrenNum
-        realPath:
-          - childrenNum
-        serializedName: childrenNum
-      - $id: '101'
-        collectionFormat: none
-        defaultValue:
-          $id: '102'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '103'
-          fixed: false
-          raw: >-
-            Gets the expiration time, if any, as ticks since the epoch. If the
-            value is 0 or DateTime.MaxValue there is no expiration.
-        extensions:
-          x-ms-client-name: expirationTime
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '105'
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            $id: '106'
-            fixed: false
-            raw: Long
-        name:
-          $id: '104'
-          fixed: false
-          raw: msExpirationTime
-        realPath:
-          - msExpirationTime
-        serializedName: msExpirationTime
-      - $id: '107'
-        collectionFormat: none
-        defaultValue:
-          $id: '108'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '109'
-          fixed: false
-          raw: the group owner.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '111'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            $id: '112'
-            fixed: false
-            raw: String
-        name:
-          $id: '110'
-          fixed: false
-          raw: group
-        realPath:
-          - group
-        serializedName: group
-      - $id: '113'
-        collectionFormat: none
-        defaultValue:
-          $id: '114'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '115'
-          fixed: false
-          raw: the number of bytes in a file.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '117'
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            $id: '118'
-            fixed: false
-            raw: Long
-        name:
-          $id: '116'
-          fixed: false
-          raw: length
-        realPath:
-          - length
-        serializedName: length
-      - $id: '119'
-        collectionFormat: none
-        defaultValue:
-          $id: '120'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '121'
-          fixed: false
-          raw: the modification time as ticks since the epoch.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '123'
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            $id: '124'
-            fixed: false
-            raw: Long
-        name:
-          $id: '122'
-          fixed: false
-          raw: modificationTime
-        realPath:
-          - modificationTime
-        serializedName: modificationTime
-      - $id: '125'
-        collectionFormat: none
-        defaultValue:
-          $id: '126'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '127'
-          fixed: false
-          raw: the user who is the owner.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '129'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            $id: '130'
-            fixed: false
-            raw: String
-        name:
-          $id: '128'
-          fixed: false
-          raw: owner
-        realPath:
-          - owner
-        serializedName: owner
-      - $id: '131'
-        collectionFormat: none
-        defaultValue:
-          $id: '132'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '133'
-          fixed: false
-          raw: the path suffix.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '135'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            $id: '136'
-            fixed: false
-            raw: String
-        name:
-          $id: '134'
-          fixed: false
-          raw: pathSuffix
-        realPath:
-          - pathSuffix
-        serializedName: pathSuffix
-      - $id: '137'
-        collectionFormat: none
-        defaultValue:
-          $id: '138'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '139'
-          fixed: false
-          raw: the permission represented as an string.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '141'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            $id: '142'
-            fixed: false
-            raw: String
-        name:
-          $id: '140'
-          fixed: false
-          raw: permission
-        realPath:
-          - permission
-        serializedName: permission
-      - $id: '143'
-        collectionFormat: none
-        defaultValue:
-          $id: '144'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '145'
-          fixed: false
-          raw: the type of the path object.
-        extensions:
-          x-ms-enum:
-            modelAsString: false
-            name: FileType
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '147'
-          $type: EnumType
-          deprecated: false
-          modelAsString: false
-          name:
-            $id: '152'
-            fixed: false
-            raw: FileType
-          oldModelAsString: false
-          underlyingType:
-            $id: '150'
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: string
-            name:
-              $id: '151'
-              fixed: false
-              raw: String
-          values:
-            - $id: '148'
-              name: FILE
-              serializedName: FILE
-            - $id: '149'
-              name: DIRECTORY
-              serializedName: DIRECTORY
-        name:
-          $id: '146'
-          fixed: false
-          raw: type
-        realPath:
-          - type
-        serializedName: type
-      - $id: '153'
-        collectionFormat: none
-        defaultValue:
-          $id: '154'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '155'
-          fixed: false
-          raw: 'flag to indicate if extended acls are enabled '
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '157'
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: boolean
-          name:
-            $id: '158'
-            fixed: false
-            raw: Boolean
-        name:
-          $id: '156'
-          fixed: false
-          raw: aclBit
-        realPath:
-          - aclBit
-        serializedName: aclBit
-    serializedName: FileStatusProperties
-  - $id: '160'
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store file status list information.
-    name:
-      $id: '167'
-      fixed: false
-      raw: FileStatuses
-    properties:
-      - $id: '161'
-        collectionFormat: none
-        defaultValue:
-          $id: '162'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '163'
-          fixed: false
-          raw: the object containing the list of properties of the files.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $id: '165'
-          $type: SequenceType
-          deprecated: false
-          elementType:
-            $ref: '82'
-          name:
-            $id: '166'
-            fixed: false
-        name:
-          $id: '164'
-          fixed: false
-          raw: FileStatus
-        realPath:
-          - FileStatus
-        serializedName: FileStatus
-    serializedName: FileStatuses
-  - $id: '168'
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store filesystem file status list information response.
-    name:
-      $id: '173'
-      fixed: false
-      raw: FileStatusesResult
-    properties:
-      - $id: '169'
-        collectionFormat: none
-        defaultValue:
-          $id: '170'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '171'
-          fixed: false
-          raw: the object representing the list of file statuses.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $ref: '160'
-        name:
-          $id: '172'
-          fixed: false
-          raw: FileStatuses
-        realPath:
-          - FileStatuses
-        serializedName: FileStatuses
-    serializedName: FileStatusesResult
-  - $id: '174'
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store filesystem file status information response.
-    name:
-      $id: '179'
-      fixed: false
-      raw: FileStatusResult
-    properties:
-      - $id: '175'
-        collectionFormat: none
-        defaultValue:
-          $id: '176'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '177'
-          fixed: false
-          raw: the file status object associated with the specified path.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $ref: '82'
-        name:
-          $id: '178'
-          fixed: false
-          raw: FileStatus
-        realPath:
-          - FileStatus
-        serializedName: FileStatus
-    serializedName: FileStatusResult
-  - $id: '180'
-    $type: CompositeType
-    baseModelType:
-      $id: '181'
-      $type: CompositeType
-      containsConstantProperties: false
-      deprecated: false
-      documentation: >-
-        Data Lake Store filesystem exception based on the WebHDFS definition for
-        RemoteExceptions. This is a WebHDFS 'catch all' exception
-      name:
-        $id: '194'
-        fixed: false
-        raw: AdlsRemoteException
-      polymorphicDiscriminator: exception
-      properties:
-        - $id: '182'
-          collectionFormat: none
-          defaultValue:
-            $id: '183'
-            fixed: false
-          deprecated: false
-          documentation:
-            $id: '184'
-            fixed: false
-            raw: >-
-              the full class package name for the exception thrown, such as
-              'java.lang.IllegalArgumentException'.
-          isConstant: false
-          isReadOnly: true
-          isRequired: false
-          modelType:
-            $id: '186'
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: string
-            name:
-              $id: '187'
-              fixed: false
-              raw: String
-          name:
-            $id: '185'
-            fixed: false
-            raw: javaClassName
-          realPath:
-            - javaClassName
-          serializedName: javaClassName
-        - $id: '188'
-          collectionFormat: none
-          defaultValue:
-            $id: '189'
-            fixed: false
-          deprecated: false
-          documentation:
-            $id: '190'
-            fixed: false
-            raw: >-
-              the message associated with the exception that was thrown, such as
-              'Invalid value for webhdfs parameter "permission":...'.
-          isConstant: false
-          isReadOnly: true
-          isRequired: false
-          modelType:
-            $id: '192'
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: string
-            name:
-              $id: '193'
-              fixed: false
-              raw: String
-          name:
-            $id: '191'
-            fixed: false
-            raw: message
-          realPath:
-            - message
-          serializedName: message
-      serializedName: AdlsRemoteException
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating that one more arguments is
-      incorrect. Thrown when a 400 error response code is returned (bad
-      request).
-    extensions:
-      x-ms-discriminator-value: IllegalArgumentException
-    name:
-      $id: '195'
-      fixed: false
-      raw: AdlsIllegalArgumentException
-    serializedName: IllegalArgumentException
-  - $id: '196'
-    $type: CompositeType
-    baseModelType:
-      $ref: '181'
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating that the requested operation is not
-      supported. Thrown when a 400 error response code is returned (bad
-      request).
-    extensions:
-      x-ms-discriminator-value: UnsupportedOperationException
-    name:
-      $id: '197'
-      fixed: false
-      raw: AdlsUnsupportedOperationException
-    serializedName: UnsupportedOperationException
-  - $id: '198'
-    $type: CompositeType
-    baseModelType:
-      $ref: '181'
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating that access is denied. Thrown when a
-      401 error response code is returned (Unauthorized).
-    extensions:
-      x-ms-discriminator-value: SecurityException
-    name:
-      $id: '199'
-      fixed: false
-      raw: AdlsSecurityException
-    serializedName: SecurityException
-  - $id: '200'
-    $type: CompositeType
-    baseModelType:
-      $ref: '181'
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating there was an IO (read or write)
-      error. Thrown when a 403 error response code is returned (forbidden).
-    extensions:
-      x-ms-discriminator-value: IOException
-    name:
-      $id: '201'
-      fixed: false
-      raw: AdlsIOException
-    serializedName: IOException
-  - $id: '202'
-    $type: CompositeType
-    baseModelType:
-      $ref: '181'
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating the file or folder could not be
-      found. Thrown when a 404 error response code is returned (not found).
-    extensions:
-      x-ms-discriminator-value: FileNotFoundException
-    name:
-      $id: '203'
-      fixed: false
-      raw: AdlsFileNotFoundException
-    serializedName: FileNotFoundException
-  - $id: '204'
-    $type: CompositeType
-    baseModelType:
-      $ref: '181'
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating the file or folder already exists.
-      Thrown when a 403 error response code is returned (forbidden).
-    extensions:
-      x-ms-discriminator-value: FileAlreadyExistsException
-    name:
-      $id: '205'
-      fixed: false
-      raw: AdlsFileAlreadyExistsException
-    serializedName: FileAlreadyExistsException
-  - $id: '206'
-    $type: CompositeType
-    baseModelType:
-      $ref: '181'
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating the append or read is from a bad
-      offset. Thrown when a 400 error response code is returned for append and
-      open operations (Bad request).
-    extensions:
-      x-ms-discriminator-value: BadOffsetException
-    name:
-      $id: '207'
-      fixed: false
-      raw: AdlsBadOffsetException
-    serializedName: BadOffsetException
-  - $id: '208'
-    $type: CompositeType
-    baseModelType:
-      $ref: '181'
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown when an unexpected error occurs during an
-      operation. Thrown when a 500 error response code is returned (Internal
-      server error).
-    extensions:
-      x-ms-discriminator-value: RuntimeException
-    name:
-      $id: '209'
-      fixed: false
-      raw: AdlsRuntimeException
-    serializedName: RuntimeException
-  - $id: '210'
-    $type: CompositeType
-    baseModelType:
-      $ref: '181'
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating that access is denied due to
-      insufficient permissions. Thrown when a 403 error response code is
-      returned (forbidden).
-    extensions:
-      x-ms-discriminator-value: AccessControlException
-    name:
-      $id: '211'
-      fixed: false
-      raw: AdlsAccessControlException
-    serializedName: AccessControlException
-  - $id: '212'
-    $type: CompositeType
-    baseModelType:
-      $ref: '181'
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating that the request is being throttled.
-      Reducing the number of requests or request size helps to mitigate this
-      error.
-    extensions:
-      x-ms-discriminator-value: ThrottledException
-    name:
-      $id: '213'
-      fixed: false
-      raw: AdlsThrottledException
-    serializedName: ThrottledException
-  - $ref: '181'
-  - $id: '214'
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store filesystem error containing a specific WebHDFS exception.
-    name:
-      $id: '219'
-      fixed: false
-      raw: AdlsError
-    properties:
-      - $id: '215'
-        collectionFormat: none
-        defaultValue:
-          $id: '216'
-          fixed: false
-        deprecated: false
-        documentation:
-          $id: '217'
-          fixed: false
-          raw: the object representing the actual WebHDFS exception being returned.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $ref: '181'
-        name:
-          $id: '218'
-          fixed: false
-          raw: RemoteException
-        realPath:
-          - RemoteException
-        serializedName: RemoteException
-    serializedName: AdlsError
 modelsName: Models
 name: DataLakeStoreFileSystemManagementClient
 namespace: ''
 operations:
-  - $id: '264'
+  - $id: '46'
     methods:
-      - $id: '265'
+      - $id: '47'
         defaultResponse:
-          $id: '297'
+          $id: '79'
           body:
-            $ref: '214'
+            $id: '80'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '81'
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -1394,25 +219,25 @@ operations:
               responses:
                 '200': {}
         group:
-          $id: '295'
+          $id: '77'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '294'
+          $id: '76'
           fixed: false
           raw: SetFileExpiry
         parameters:
-          - $id: '266'
+          - $id: '48'
             collectionFormat: none
             defaultValue:
-              $id: '267'
+              $id: '49'
               fixed: false
             deprecated: false
             documentation:
-              $id: '268'
+              $id: '50'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the file on
@@ -1421,27 +246,27 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '270'
+              $id: '52'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '271'
+                $id: '53'
                 fixed: false
                 raw: String
             name:
-              $id: '269'
+              $id: '51'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '272'
+          - $id: '54'
             collectionFormat: none
             defaultValue:
-              $id: '273'
+              $id: '55'
               fixed: false
             deprecated: false
             documentation:
-              $id: '274'
+              $id: '56'
               fixed: false
               raw: >-
                 Indicates the type of expiration to use for the file: 1.
@@ -1460,20 +285,20 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $ref: '220'
+              $ref: '2'
             name:
-              $id: '275'
+              $id: '57'
               fixed: false
               raw: expiryOption
             serializedName: expiryOption
-          - $id: '276'
+          - $id: '58'
             collectionFormat: none
             defaultValue:
-              $id: '277'
+              $id: '59'
               fixed: false
             deprecated: false
             documentation:
-              $id: '278'
+              $id: '60'
               fixed: false
               raw: >-
                 The time that the file will expire, corresponding to the
@@ -1482,74 +307,74 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '280'
+              $id: '62'
               $type: PrimaryType
               deprecated: false
               format: int64
               knownPrimaryType: long
               name:
-                $id: '281'
+                $id: '63'
                 fixed: false
                 raw: Long
             name:
-              $id: '279'
+              $id: '61'
               fixed: false
               raw: expireTime
             serializedName: expireTime
-          - $id: '282'
+          - $id: '64'
             collectionFormat: none
             defaultValue:
-              $id: '283'
+              $id: '65'
               fixed: false
               raw: SETEXPIRY
             deprecated: false
             documentation:
-              $id: '284'
+              $id: '66'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '286'
+              $id: '68'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '287'
+                $id: '69'
                 fixed: false
                 raw: String
             name:
-              $id: '285'
+              $id: '67'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '288'
+          - $id: '70'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '289'
+              $id: '71'
               fixed: false
             deprecated: false
             documentation:
-              $id: '290'
+              $id: '72'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '292'
+              $id: '74'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '293'
+                $id: '75'
                 fixed: false
                 raw: String
             name:
-              $id: '291'
+              $id: '73'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -1558,18 +383,23 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '296'
+            $id: '78'
             isNullable: true
         returnType:
-          $id: '298'
+          $id: '82'
           isNullable: true
         serializedName: FileSystem_SetFileExpiry
         url: '/WebHdfsExt/{path}'
-      - $id: '299'
+      - $id: '83'
         defaultResponse:
-          $id: '341'
+          $id: '125'
           body:
-            $ref: '214'
+            $id: '126'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '127'
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -1598,25 +428,25 @@ operations:
                 '200': {}
           x-ms-requestBody-index: '1'
         group:
-          $id: '339'
+          $id: '123'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
-          $id: '338'
+          $id: '122'
           fixed: false
           raw: ConcurrentAppend
         parameters:
-          - $id: '300'
+          - $id: '84'
             collectionFormat: none
             defaultValue:
-              $id: '301'
+              $id: '85'
               fixed: false
             deprecated: false
             documentation:
-              $id: '302'
+              $id: '86'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the file to
@@ -1625,27 +455,27 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '304'
+              $id: '88'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '305'
+                $id: '89'
                 fixed: false
                 raw: String
             name:
-              $id: '303'
+              $id: '87'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '306'
+          - $id: '90'
             collectionFormat: none
             defaultValue:
-              $id: '307'
+              $id: '91'
               fixed: false
             deprecated: false
             documentation:
-              $id: '308'
+              $id: '92'
               fixed: false
               raw: The file contents to include when appending to the file.
             extensions:
@@ -1654,27 +484,27 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '310'
+              $id: '94'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: stream
               name:
-                $id: '311'
+                $id: '95'
                 fixed: false
                 raw: Stream
             name:
-              $id: '309'
+              $id: '93'
               fixed: false
               raw: streamContents
             serializedName: streamContents
-          - $id: '312'
+          - $id: '96'
             collectionFormat: none
             defaultValue:
-              $id: '313'
+              $id: '97'
               fixed: false
             deprecated: false
             documentation:
-              $id: '314'
+              $id: '98'
               fixed: false
               raw: >-
                 Indicates the concurrent append call should create the file if
@@ -1687,49 +517,49 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $ref: '228'
+              $ref: '10'
             name:
-              $id: '315'
+              $id: '99'
               fixed: false
               raw: appendMode
             serializedName: appendMode
-          - $id: '316'
+          - $id: '100'
             collectionFormat: none
             defaultValue:
-              $id: '317'
+              $id: '101'
               fixed: false
               raw: CONCURRENTAPPEND
             deprecated: false
             documentation:
-              $id: '318'
+              $id: '102'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '320'
+              $id: '104'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '321'
+                $id: '105'
                 fixed: false
                 raw: String
             name:
-              $id: '319'
+              $id: '103'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '322'
+          - $id: '106'
             collectionFormat: none
             defaultValue:
-              $id: '323'
+              $id: '107'
               fixed: false
               raw: chunked
             deprecated: false
             documentation:
-              $id: '324'
+              $id: '108'
               fixed: false
               raw: >-
                 Indicates the data being sent to the server is being streamed in
@@ -1738,28 +568,28 @@ operations:
             isRequired: true
             location: header
             modelType:
-              $id: '326'
+              $id: '110'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '327'
+                $id: '111'
                 fixed: false
                 raw: String
             name:
-              $id: '325'
+              $id: '109'
               fixed: false
               raw: Transfer-Encoding
             serializedName: Transfer-Encoding
-          - $id: '328'
+          - $id: '112'
             collectionFormat: none
             defaultValue:
-              $id: '329'
+              $id: '113'
               fixed: false
               raw: DATA
             deprecated: false
             documentation:
-              $id: '330'
+              $id: '114'
               fixed: false
               raw: >-
                 Optionally indicates what to do after completion of the
@@ -1780,38 +610,38 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $ref: '233'
+              $ref: '15'
             name:
-              $id: '331'
+              $id: '115'
               fixed: false
               raw: syncFlag
             serializedName: syncFlag
-          - $id: '332'
+          - $id: '116'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '333'
+              $id: '117'
               fixed: false
             deprecated: false
             documentation:
-              $id: '334'
+              $id: '118'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '336'
+              $id: '120'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '337'
+                $id: '121'
                 fixed: false
                 raw: String
             name:
-              $id: '335'
+              $id: '119'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -1820,18 +650,23 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '340'
+            $id: '124'
             isNullable: true
         returnType:
-          $id: '342'
+          $id: '128'
           isNullable: true
         serializedName: FileSystem_ConcurrentAppend
         url: '/WebHdfsExt/{path}'
-      - $id: '343'
+      - $id: '129'
         defaultResponse:
-          $id: '371'
+          $id: '157'
           body:
-            $ref: '214'
+            $id: '158'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '159'
+              fixed: false
           isNullable: true
         deprecated: false
         description: Checks if the specified access is available at the given path.
@@ -1846,25 +681,25 @@ operations:
               responses:
                 '200': {}
         group:
-          $id: '369'
+          $id: '155'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '368'
+          $id: '154'
           fixed: false
           raw: CheckAccess
         parameters:
-          - $id: '344'
+          - $id: '130'
             collectionFormat: none
             defaultValue:
-              $id: '345'
+              $id: '131'
               fixed: false
             deprecated: false
             documentation:
-              $id: '346'
+              $id: '132'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the file or
@@ -1873,27 +708,27 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '348'
+              $id: '134'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '349'
+                $id: '135'
                 fixed: false
                 raw: String
             name:
-              $id: '347'
+              $id: '133'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '350'
+          - $id: '136'
             collectionFormat: none
             defaultValue:
-              $id: '351'
+              $id: '137'
               fixed: false
             deprecated: false
             documentation:
-              $id: '352'
+              $id: '138'
               fixed: false
               raw: >-
                 File system operation read/write/execute in string form,
@@ -1902,73 +737,73 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '354'
+              $id: '140'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '355'
+                $id: '141'
                 fixed: false
                 raw: String
             name:
-              $id: '353'
+              $id: '139'
               fixed: false
               raw: fsaction
             serializedName: fsaction
-          - $id: '356'
+          - $id: '142'
             collectionFormat: none
             defaultValue:
-              $id: '357'
+              $id: '143'
               fixed: false
               raw: CHECKACCESS
             deprecated: false
             documentation:
-              $id: '358'
+              $id: '144'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '360'
+              $id: '146'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '361'
+                $id: '147'
                 fixed: false
                 raw: String
             name:
-              $id: '359'
+              $id: '145'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '362'
+          - $id: '148'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '363'
+              $id: '149'
               fixed: false
             deprecated: false
             documentation:
-              $id: '364'
+              $id: '150'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '366'
+              $id: '152'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '367'
+                $id: '153'
                 fixed: false
                 raw: String
             name:
-              $id: '365'
+              $id: '151'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -1977,18 +812,23 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '370'
+            $id: '156'
             isNullable: true
         returnType:
-          $id: '372'
+          $id: '160'
           isNullable: true
         serializedName: FileSystem_CheckAccess
         url: '/webhdfs/v1/{path}'
-      - $id: '373'
+      - $id: '161'
         defaultResponse:
-          $id: '401'
+          $id: '191'
           body:
-            $ref: '214'
+            $id: '192'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '193'
+              fixed: false
           isNullable: true
         deprecated: false
         description: Creates a directory.
@@ -2005,25 +845,25 @@ operations:
                   body:
                     boolean: false
         group:
-          $id: '399'
+          $id: '187'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '398'
+          $id: '186'
           fixed: false
           raw: Mkdirs
         parameters:
-          - $id: '374'
+          - $id: '162'
             collectionFormat: none
             defaultValue:
-              $id: '375'
+              $id: '163'
               fixed: false
             deprecated: false
             documentation:
-              $id: '376'
+              $id: '164'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the directory to
@@ -2032,27 +872,27 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '378'
+              $id: '166'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '379'
+                $id: '167'
                 fixed: false
                 raw: String
             name:
-              $id: '377'
+              $id: '165'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '380'
+          - $id: '168'
             collectionFormat: none
             defaultValue:
-              $id: '381'
+              $id: '169'
               fixed: false
             deprecated: false
             documentation:
-              $id: '382'
+              $id: '170'
               fixed: false
               raw: >-
                 Optional octal permission with which the directory should be
@@ -2061,74 +901,74 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '384'
+              $id: '172'
               $type: PrimaryType
               deprecated: false
               format: int32
               knownPrimaryType: int
               name:
-                $id: '385'
+                $id: '173'
                 fixed: false
                 raw: Int
             name:
-              $id: '383'
+              $id: '171'
               fixed: false
               raw: permission
             serializedName: permission
-          - $id: '386'
+          - $id: '174'
             collectionFormat: none
             defaultValue:
-              $id: '387'
+              $id: '175'
               fixed: false
               raw: MKDIRS
             deprecated: false
             documentation:
-              $id: '388'
+              $id: '176'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '390'
+              $id: '178'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '391'
+                $id: '179'
                 fixed: false
                 raw: String
             name:
-              $id: '389'
+              $id: '177'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '392'
+          - $id: '180'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '393'
+              $id: '181'
               fixed: false
             deprecated: false
             documentation:
-              $id: '394'
+              $id: '182'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '396'
+              $id: '184'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '397'
+                $id: '185'
                 fixed: false
                 raw: String
             name:
-              $id: '395'
+              $id: '183'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -2137,22 +977,32 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '400'
+            $id: '188'
             body:
-              $ref: '2'
+              $id: '189'
+              $type: MultiType
+              deprecated: false
+              name:
+                $id: '190'
+                fixed: false
             isNullable: true
         returnType:
-          $id: '402'
+          $id: '194'
           body:
-            $ref: '2'
+            $ref: '189'
           isNullable: true
         serializedName: FileSystem_Mkdirs
         url: '/webhdfs/v1/{path}'
-      - $id: '403'
+      - $id: '195'
         defaultResponse:
-          $id: '433'
+          $id: '225'
           body:
-            $ref: '214'
+            $id: '226'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '227'
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -2171,25 +1021,25 @@ operations:
               responses:
                 '200': {}
         group:
-          $id: '431'
+          $id: '223'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
-          $id: '430'
+          $id: '222'
           fixed: false
           raw: Concat
         parameters:
-          - $id: '404'
+          - $id: '196'
             collectionFormat: none
             defaultValue:
-              $id: '405'
+              $id: '197'
               fixed: false
             deprecated: false
             documentation:
-              $id: '406'
+              $id: '198'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the destination
@@ -2198,27 +1048,27 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '408'
+              $id: '200'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '409'
+                $id: '201'
                 fixed: false
                 raw: String
             name:
-              $id: '407'
+              $id: '199'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '410'
+          - $id: '202'
             collectionFormat: csv
             defaultValue:
-              $id: '411'
+              $id: '203'
               fixed: false
             deprecated: false
             documentation:
-              $id: '412'
+              $id: '204'
               fixed: false
               raw: >-
                 A list of comma separated Data Lake Store paths (starting with
@@ -2228,80 +1078,80 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '414'
+              $id: '206'
               $type: SequenceType
               deprecated: false
               elementType:
-                $id: '415'
+                $id: '207'
                 $type: PrimaryType
                 deprecated: false
                 knownPrimaryType: string
                 name:
-                  $id: '416'
+                  $id: '208'
                   fixed: false
                   raw: String
               name:
-                $id: '417'
+                $id: '209'
                 fixed: false
             name:
-              $id: '413'
+              $id: '205'
               fixed: false
               raw: sources
             serializedName: sources
-          - $id: '418'
+          - $id: '210'
             collectionFormat: none
             defaultValue:
-              $id: '419'
+              $id: '211'
               fixed: false
               raw: CONCAT
             deprecated: false
             documentation:
-              $id: '420'
+              $id: '212'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '422'
+              $id: '214'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '423'
+                $id: '215'
                 fixed: false
                 raw: String
             name:
-              $id: '421'
+              $id: '213'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '424'
+          - $id: '216'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '425'
+              $id: '217'
               fixed: false
             deprecated: false
             documentation:
-              $id: '426'
+              $id: '218'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '428'
+              $id: '220'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '429'
+                $id: '221'
                 fixed: false
                 raw: String
             name:
-              $id: '427'
+              $id: '219'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -2310,18 +1160,23 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '432'
+            $id: '224'
             isNullable: true
         returnType:
-          $id: '434'
+          $id: '228'
           isNullable: true
         serializedName: FileSystem_Concat
         url: '/webhdfs/v1/{path}'
-      - $id: '435'
+      - $id: '229'
         defaultResponse:
-          $id: '469'
+          $id: '263'
           body:
-            $ref: '214'
+            $id: '264'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '265'
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -2344,25 +1199,25 @@ operations:
                 '200': {}
           x-ms-requestBody-index: '2'
         group:
-          $id: '467'
+          $id: '261'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
-          $id: '466'
+          $id: '260'
           fixed: false
           raw: MsConcat
         parameters:
-          - $id: '436'
+          - $id: '230'
             collectionFormat: none
             defaultValue:
-              $id: '437'
+              $id: '231'
               fixed: false
             deprecated: false
             documentation:
-              $id: '438'
+              $id: '232'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the destination
@@ -2371,27 +1226,27 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '440'
+              $id: '234'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '441'
+                $id: '235'
                 fixed: false
                 raw: String
             name:
-              $id: '439'
+              $id: '233'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '442'
+          - $id: '236'
             collectionFormat: none
             defaultValue:
-              $id: '443'
+              $id: '237'
               fixed: false
             deprecated: false
             documentation:
-              $id: '444'
+              $id: '238'
               fixed: false
               raw: >-
                 Indicates that as an optimization instead of deleting each
@@ -2406,27 +1261,27 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '446'
+              $id: '240'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: boolean
               name:
-                $id: '447'
+                $id: '241'
                 fixed: false
                 raw: Boolean
             name:
-              $id: '445'
+              $id: '239'
               fixed: false
               raw: deleteSourceDirectory
             serializedName: deleteSourceDirectory
-          - $id: '448'
+          - $id: '242'
             collectionFormat: none
             defaultValue:
-              $id: '449'
+              $id: '243'
               fixed: false
             deprecated: false
             documentation:
-              $id: '450'
+              $id: '244'
               fixed: false
               raw: >-
                 A list of Data Lake Store paths (starting with '/') of the
@@ -2438,73 +1293,73 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '452'
+              $id: '246'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: stream
               name:
-                $id: '453'
+                $id: '247'
                 fixed: false
                 raw: Stream
             name:
-              $id: '451'
+              $id: '245'
               fixed: false
               raw: streamContents
             serializedName: streamContents
-          - $id: '454'
+          - $id: '248'
             collectionFormat: none
             defaultValue:
-              $id: '455'
+              $id: '249'
               fixed: false
               raw: MSCONCAT
             deprecated: false
             documentation:
-              $id: '456'
+              $id: '250'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '458'
+              $id: '252'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '459'
+                $id: '253'
                 fixed: false
                 raw: String
             name:
-              $id: '457'
+              $id: '251'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '460'
+          - $id: '254'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '461'
+              $id: '255'
               fixed: false
             deprecated: false
             documentation:
-              $id: '462'
+              $id: '256'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '464'
+              $id: '258'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '465'
+                $id: '259'
                 fixed: false
                 raw: String
             name:
-              $id: '463'
+              $id: '257'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -2513,18 +1368,23 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '468'
+            $id: '262'
             isNullable: true
         returnType:
-          $id: '470'
+          $id: '266'
           isNullable: true
         serializedName: FileSystem_MsConcat
         url: '/webhdfs/v1/{path}'
-      - $id: '471'
+      - $id: '267'
         defaultResponse:
-          $id: '517'
+          $id: '315'
           body:
-            $ref: '214'
+            $id: '316'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '317'
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -2559,25 +1419,25 @@ operations:
                           permission: test_permission
                           type: FILE
         group:
-          $id: '515'
+          $id: '311'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '514'
+          $id: '310'
           fixed: false
           raw: ListFileStatus
         parameters:
-          - $id: '472'
+          - $id: '268'
             collectionFormat: none
             defaultValue:
-              $id: '473'
+              $id: '269'
               fixed: false
             deprecated: false
             documentation:
-              $id: '474'
+              $id: '270'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the directory to
@@ -2586,55 +1446,55 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '476'
+              $id: '272'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '477'
+                $id: '273'
                 fixed: false
                 raw: String
             name:
-              $id: '475'
+              $id: '271'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '478'
+          - $id: '274'
             collectionFormat: none
             defaultValue:
-              $id: '479'
+              $id: '275'
               fixed: false
             deprecated: false
             documentation:
-              $id: '480'
+              $id: '276'
               fixed: false
               raw: Gets or sets the number of items to return. Optional.
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '482'
+              $id: '278'
               $type: PrimaryType
               deprecated: false
               format: int32
               knownPrimaryType: int
               name:
-                $id: '483'
+                $id: '279'
                 fixed: false
                 raw: Int
             name:
-              $id: '481'
+              $id: '277'
               fixed: false
               raw: listSize
             serializedName: listSize
-          - $id: '484'
+          - $id: '280'
             collectionFormat: none
             defaultValue:
-              $id: '485'
+              $id: '281'
               fixed: false
             deprecated: false
             documentation:
-              $id: '486'
+              $id: '282'
               fixed: false
               raw: >-
                 Gets or sets the item or lexographical index after which to
@@ -2645,27 +1505,27 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '488'
+              $id: '284'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '489'
+                $id: '285'
                 fixed: false
                 raw: String
             name:
-              $id: '487'
+              $id: '283'
               fixed: false
               raw: listAfter
             serializedName: listAfter
-          - $id: '490'
+          - $id: '286'
             collectionFormat: none
             defaultValue:
-              $id: '491'
+              $id: '287'
               fixed: false
             deprecated: false
             documentation:
-              $id: '492'
+              $id: '288'
               fixed: false
               raw: >-
                 Gets or sets the item or lexographical index before which to
@@ -2676,27 +1536,27 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '494'
+              $id: '290'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '495'
+                $id: '291'
                 fixed: false
                 raw: String
             name:
-              $id: '493'
+              $id: '289'
               fixed: false
               raw: listBefore
             serializedName: listBefore
-          - $id: '496'
+          - $id: '292'
             collectionFormat: none
             defaultValue:
-              $id: '497'
+              $id: '293'
               fixed: false
             deprecated: false
             documentation:
-              $id: '498'
+              $id: '294'
               fixed: false
               raw: >-
                 An optional switch to return friendly names in place of owner
@@ -2706,73 +1566,73 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '500'
+              $id: '296'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: boolean
               name:
-                $id: '501'
+                $id: '297'
                 fixed: false
                 raw: Boolean
             name:
-              $id: '499'
+              $id: '295'
               fixed: false
               raw: tooId
             serializedName: tooId
-          - $id: '502'
+          - $id: '298'
             collectionFormat: none
             defaultValue:
-              $id: '503'
+              $id: '299'
               fixed: false
               raw: LISTSTATUS
             deprecated: false
             documentation:
-              $id: '504'
+              $id: '300'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '506'
+              $id: '302'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '507'
+                $id: '303'
                 fixed: false
                 raw: String
             name:
-              $id: '505'
+              $id: '301'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '508'
+          - $id: '304'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '509'
+              $id: '305'
               fixed: false
             deprecated: false
             documentation:
-              $id: '510'
+              $id: '306'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '512'
+              $id: '308'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '513'
+                $id: '309'
                 fixed: false
                 raw: String
             name:
-              $id: '511'
+              $id: '307'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -2781,22 +1641,32 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '516'
+            $id: '312'
             body:
-              $ref: '168'
+              $id: '313'
+              $type: MultiType
+              deprecated: false
+              name:
+                $id: '314'
+                fixed: false
             isNullable: true
         returnType:
-          $id: '518'
+          $id: '318'
           body:
-            $ref: '168'
+            $ref: '313'
           isNullable: true
         serializedName: FileSystem_ListFileStatus
         url: '/webhdfs/v1/{path}'
-      - $id: '519'
+      - $id: '319'
         defaultResponse:
-          $id: '541'
+          $id: '343'
           body:
-            $ref: '214'
+            $id: '344'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '345'
+              fixed: false
           isNullable: true
         deprecated: false
         description: Gets the file content summary object specified by the file path.
@@ -2816,25 +1686,25 @@ operations:
                       length: '1'
                       spaceConsumed: '1'
         group:
-          $id: '539'
+          $id: '339'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '538'
+          $id: '338'
           fixed: false
           raw: GetContentSummary
         parameters:
-          - $id: '520'
+          - $id: '320'
             collectionFormat: none
             defaultValue:
-              $id: '521'
+              $id: '321'
               fixed: false
             deprecated: false
             documentation:
-              $id: '522'
+              $id: '322'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the file for
@@ -2843,73 +1713,73 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '524'
+              $id: '324'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '525'
+                $id: '325'
                 fixed: false
                 raw: String
             name:
-              $id: '523'
+              $id: '323'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '526'
+          - $id: '326'
             collectionFormat: none
             defaultValue:
-              $id: '527'
+              $id: '327'
               fixed: false
               raw: GETCONTENTSUMMARY
             deprecated: false
             documentation:
-              $id: '528'
+              $id: '328'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '530'
+              $id: '330'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '531'
+                $id: '331'
                 fixed: false
                 raw: String
             name:
-              $id: '529'
+              $id: '329'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '532'
+          - $id: '332'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '533'
+              $id: '333'
               fixed: false
             deprecated: false
             documentation:
-              $id: '534'
+              $id: '334'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '536'
+              $id: '336'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '537'
+                $id: '337'
                 fixed: false
                 raw: String
             name:
-              $id: '535'
+              $id: '335'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -2918,22 +1788,32 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '540'
+            $id: '340'
             body:
-              $ref: '76'
+              $id: '341'
+              $type: MultiType
+              deprecated: false
+              name:
+                $id: '342'
+                fixed: false
             isNullable: true
         returnType:
-          $id: '542'
+          $id: '346'
           body:
-            $ref: '76'
+            $ref: '341'
           isNullable: true
         serializedName: FileSystem_GetContentSummary
         url: '/webhdfs/v1/{path}'
-      - $id: '543'
+      - $id: '347'
         defaultResponse:
-          $id: '571'
+          $id: '377'
           body:
-            $ref: '214'
+            $id: '378'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '379'
+              fixed: false
           isNullable: true
         deprecated: false
         description: Get the file status object specified by the file path.
@@ -2962,25 +1842,25 @@ operations:
                       permission: test_permission
                       type: FILE
         group:
-          $id: '569'
+          $id: '373'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '568'
+          $id: '372'
           fixed: false
           raw: GetFileStatus
         parameters:
-          - $id: '544'
+          - $id: '348'
             collectionFormat: none
             defaultValue:
-              $id: '545'
+              $id: '349'
               fixed: false
             deprecated: false
             documentation:
-              $id: '546'
+              $id: '350'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the file or
@@ -2989,27 +1869,27 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '548'
+              $id: '352'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '549'
+                $id: '353'
                 fixed: false
                 raw: String
             name:
-              $id: '547'
+              $id: '351'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '550'
+          - $id: '354'
             collectionFormat: none
             defaultValue:
-              $id: '551'
+              $id: '355'
               fixed: false
             deprecated: false
             documentation:
-              $id: '552'
+              $id: '356'
               fixed: false
               raw: >-
                 An optional switch to return friendly names in place of owner
@@ -3019,73 +1899,73 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '554'
+              $id: '358'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: boolean
               name:
-                $id: '555'
+                $id: '359'
                 fixed: false
                 raw: Boolean
             name:
-              $id: '553'
+              $id: '357'
               fixed: false
               raw: tooId
             serializedName: tooId
-          - $id: '556'
+          - $id: '360'
             collectionFormat: none
             defaultValue:
-              $id: '557'
+              $id: '361'
               fixed: false
               raw: GETFILESTATUS
             deprecated: false
             documentation:
-              $id: '558'
+              $id: '362'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '560'
+              $id: '364'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '561'
+                $id: '365'
                 fixed: false
                 raw: String
             name:
-              $id: '559'
+              $id: '363'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '562'
+          - $id: '366'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '563'
+              $id: '367'
               fixed: false
             deprecated: false
             documentation:
-              $id: '564'
+              $id: '368'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '566'
+              $id: '370'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '567'
+                $id: '371'
                 fixed: false
                 raw: String
             name:
-              $id: '565'
+              $id: '369'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -3094,20 +1974,25 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '570'
+            $id: '374'
             body:
-              $ref: '174'
+              $id: '375'
+              $type: MultiType
+              deprecated: false
+              name:
+                $id: '376'
+                fixed: false
             isNullable: true
         returnType:
-          $id: '572'
+          $id: '380'
           body:
-            $ref: '174'
+            $ref: '375'
           isNullable: true
         serializedName: FileSystem_GetFileStatus
         url: '/webhdfs/v1/{path}'
-      - $id: '573'
+      - $id: '381'
         defaultResponse:
-          $id: '621'
+          $id: '429'
           isNullable: true
         deprecated: false
         description: Opens and reads from the specified file.
@@ -3128,25 +2013,25 @@ operations:
                     This is actually a byte stream. This request/response is
                     being presented as a string for readability in the example
         group:
-          $id: '617'
+          $id: '425'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '616'
+          $id: '424'
           fixed: false
           raw: Open
         parameters:
-          - $id: '574'
+          - $id: '382'
             collectionFormat: none
             defaultValue:
-              $id: '575'
+              $id: '383'
               fixed: false
             deprecated: false
             documentation:
-              $id: '576'
+              $id: '384'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the file to
@@ -3155,27 +2040,27 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '578'
+              $id: '386'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '579'
+                $id: '387'
                 fixed: false
                 raw: String
             name:
-              $id: '577'
+              $id: '385'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '580'
+          - $id: '388'
             collectionFormat: none
             defaultValue:
-              $id: '581'
+              $id: '389'
               fixed: false
             deprecated: false
             documentation:
-              $id: '582'
+              $id: '390'
               fixed: false
               raw: >-
                 The number of bytes that the server will attempt to retrieve. It
@@ -3184,56 +2069,56 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '584'
+              $id: '392'
               $type: PrimaryType
               deprecated: false
               format: int64
               knownPrimaryType: long
               name:
-                $id: '585'
+                $id: '393'
                 fixed: false
                 raw: Long
             name:
-              $id: '583'
+              $id: '391'
               fixed: false
               raw: length
             serializedName: length
-          - $id: '586'
+          - $id: '394'
             collectionFormat: none
             defaultValue:
-              $id: '587'
+              $id: '395'
               fixed: false
             deprecated: false
             documentation:
-              $id: '588'
+              $id: '396'
               fixed: false
               raw: The byte offset to start reading data from.
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '590'
+              $id: '398'
               $type: PrimaryType
               deprecated: false
               format: int64
               knownPrimaryType: long
               name:
-                $id: '591'
+                $id: '399'
                 fixed: false
                 raw: Long
             name:
-              $id: '589'
+              $id: '397'
               fixed: false
               raw: offset
             serializedName: offset
-          - $id: '592'
+          - $id: '400'
             collectionFormat: none
             defaultValue:
-              $id: '593'
+              $id: '401'
               fixed: false
             deprecated: false
             documentation:
-              $id: '594'
+              $id: '402'
               fixed: false
               raw: >-
                 Optional unique GUID per file indicating all the reads with the
@@ -3243,29 +2128,29 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '596'
+              $id: '404'
               $type: PrimaryType
               deprecated: false
               format: uuid
               knownPrimaryType: uuid
               name:
-                $id: '597'
+                $id: '405'
                 fixed: false
                 raw: Uuid
             name:
-              $id: '595'
+              $id: '403'
               fixed: false
               raw: fileSessionId
             serializedName: fileSessionId
-          - $id: '598'
+          - $id: '406'
             collectionFormat: none
             defaultValue:
-              $id: '599'
+              $id: '407'
               fixed: false
               raw: 'true'
             deprecated: false
             documentation:
-              $id: '600'
+              $id: '408'
               fixed: false
               raw: >-
                 Flag to skip redirection. When read=false or not specified, the
@@ -3276,73 +2161,73 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '602'
+              $id: '410'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '603'
+                $id: '411'
                 fixed: false
                 raw: String
             name:
-              $id: '601'
+              $id: '409'
               fixed: false
               raw: read
             serializedName: read
-          - $id: '604'
+          - $id: '412'
             collectionFormat: none
             defaultValue:
-              $id: '605'
+              $id: '413'
               fixed: false
               raw: OPEN
             deprecated: false
             documentation:
-              $id: '606'
+              $id: '414'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '608'
+              $id: '416'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '609'
+                $id: '417'
                 fixed: false
                 raw: String
             name:
-              $id: '607'
+              $id: '415'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '610'
+          - $id: '418'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '611'
+              $id: '419'
               fixed: false
             deprecated: false
             documentation:
-              $id: '612'
+              $id: '420'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '614'
+              $id: '422'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '615'
+                $id: '423'
                 fixed: false
                 raw: String
             name:
-              $id: '613'
+              $id: '421'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -3351,29 +2236,34 @@ operations:
           - application/octet-stream
         responses:
           OK:
-            $id: '618'
+            $id: '426'
             body:
-              $id: '619'
+              $id: '427'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: stream
               name:
-                $id: '620'
+                $id: '428'
                 fixed: false
                 raw: Stream
             isNullable: true
         returnType:
-          $id: '622'
+          $id: '430'
           body:
-            $ref: '619'
+            $ref: '427'
           isNullable: true
         serializedName: FileSystem_Open
         url: '/webhdfs/v1/{path}'
-      - $id: '623'
+      - $id: '431'
         defaultResponse:
-          $id: '679'
+          $id: '487'
           body:
-            $ref: '214'
+            $id: '488'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '489'
+              fixed: false
           isNullable: true
         deprecated: false
         description: "Used for serial appends to the specified file.\_NOTE: The target must not contain data added by ConcurrentAppend. ConcurrentAppend and Append cannot be used interchangeably; once a target file has been modified using either of these append options, the other append option cannot be used on the target file."
@@ -3396,25 +2286,25 @@ operations:
                 '200': {}
           x-ms-requestBody-index: '1'
         group:
-          $id: '677'
+          $id: '485'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: post
         isAbsoluteUrl: false
         name:
-          $id: '676'
+          $id: '484'
           fixed: false
           raw: Append
         parameters:
-          - $id: '624'
+          - $id: '432'
             collectionFormat: none
             defaultValue:
-              $id: '625'
+              $id: '433'
               fixed: false
             deprecated: false
             documentation:
-              $id: '626'
+              $id: '434'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the file to
@@ -3423,27 +2313,27 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '628'
+              $id: '436'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '629'
+                $id: '437'
                 fixed: false
                 raw: String
             name:
-              $id: '627'
+              $id: '435'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '630'
+          - $id: '438'
             collectionFormat: none
             defaultValue:
-              $id: '631'
+              $id: '439'
               fixed: false
             deprecated: false
             documentation:
-              $id: '632'
+              $id: '440'
               fixed: false
               raw: The file contents to include when appending to the file.
             extensions:
@@ -3452,27 +2342,27 @@ operations:
             isRequired: true
             location: body
             modelType:
-              $id: '634'
+              $id: '442'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: stream
               name:
-                $id: '635'
+                $id: '443'
                 fixed: false
                 raw: Stream
             name:
-              $id: '633'
+              $id: '441'
               fixed: false
               raw: streamContents
             serializedName: streamContents
-          - $id: '636'
+          - $id: '444'
             collectionFormat: none
             defaultValue:
-              $id: '637'
+              $id: '445'
               fixed: false
             deprecated: false
             documentation:
-              $id: '638'
+              $id: '446'
               fixed: false
               raw: >-
                 The optional offset in the stream to begin the append operation.
@@ -3481,29 +2371,29 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '640'
+              $id: '448'
               $type: PrimaryType
               deprecated: false
               format: int64
               knownPrimaryType: long
               name:
-                $id: '641'
+                $id: '449'
                 fixed: false
                 raw: Long
             name:
-              $id: '639'
+              $id: '447'
               fixed: false
               raw: offset
             serializedName: offset
-          - $id: '642'
+          - $id: '450'
             collectionFormat: none
             defaultValue:
-              $id: '643'
+              $id: '451'
               fixed: false
               raw: CLOSE
             deprecated: false
             documentation:
-              $id: '644'
+              $id: '452'
               fixed: false
               raw: >-
                 Optionally indicates what to do after completion of the
@@ -3524,20 +2414,20 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $ref: '233'
+              $ref: '15'
             name:
-              $id: '645'
+              $id: '453'
               fixed: false
               raw: syncFlag
             serializedName: syncFlag
-          - $id: '646'
+          - $id: '454'
             collectionFormat: none
             defaultValue:
-              $id: '647'
+              $id: '455'
               fixed: false
             deprecated: false
             documentation:
-              $id: '648'
+              $id: '456'
               fixed: false
               raw: >-
                 Optional unique GUID per file to ensure single writer semantics,
@@ -3547,28 +2437,28 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '650'
+              $id: '458'
               $type: PrimaryType
               deprecated: false
               format: uuid
               knownPrimaryType: uuid
               name:
-                $id: '651'
+                $id: '459'
                 fixed: false
                 raw: Uuid
             name:
-              $id: '649'
+              $id: '457'
               fixed: false
               raw: leaseId
             serializedName: leaseId
-          - $id: '652'
+          - $id: '460'
             collectionFormat: none
             defaultValue:
-              $id: '653'
+              $id: '461'
               fixed: false
             deprecated: false
             documentation:
-              $id: '654'
+              $id: '462'
               fixed: false
               raw: >-
                 Optional unique GUID per file indicating all the appends with
@@ -3579,29 +2469,29 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '656'
+              $id: '464'
               $type: PrimaryType
               deprecated: false
               format: uuid
               knownPrimaryType: uuid
               name:
-                $id: '657'
+                $id: '465'
                 fixed: false
                 raw: Uuid
             name:
-              $id: '655'
+              $id: '463'
               fixed: false
               raw: fileSessionId
             serializedName: fileSessionId
-          - $id: '658'
+          - $id: '466'
             collectionFormat: none
             defaultValue:
-              $id: '659'
+              $id: '467'
               fixed: false
               raw: 'true'
             deprecated: false
             documentation:
-              $id: '660'
+              $id: '468'
               fixed: false
               raw: >-
                 Flag to skip redirection. When append=false or not specified,
@@ -3612,73 +2502,73 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '662'
+              $id: '470'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '663'
+                $id: '471'
                 fixed: false
                 raw: String
             name:
-              $id: '661'
+              $id: '469'
               fixed: false
               raw: append
             serializedName: append
-          - $id: '664'
+          - $id: '472'
             collectionFormat: none
             defaultValue:
-              $id: '665'
+              $id: '473'
               fixed: false
               raw: APPEND
             deprecated: false
             documentation:
-              $id: '666'
+              $id: '474'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '668'
+              $id: '476'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '669'
+                $id: '477'
                 fixed: false
                 raw: String
             name:
-              $id: '667'
+              $id: '475'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '670'
+          - $id: '478'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '671'
+              $id: '479'
               fixed: false
             deprecated: false
             documentation:
-              $id: '672'
+              $id: '480'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '674'
+              $id: '482'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '675'
+                $id: '483'
                 fixed: false
                 raw: String
             name:
-              $id: '673'
+              $id: '481'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -3687,18 +2577,23 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '678'
+            $id: '486'
             isNullable: true
         returnType:
-          $id: '680'
+          $id: '490'
           isNullable: true
         serializedName: FileSystem_Append
         url: '/webhdfs/v1/{path}'
-      - $id: '681'
+      - $id: '491'
         defaultResponse:
-          $id: '737'
+          $id: '547'
           body:
-            $ref: '214'
+            $id: '548'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '549'
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -3723,25 +2618,25 @@ operations:
                 '201': {}
           x-ms-requestBody-index: '1'
         group:
-          $id: '735'
+          $id: '545'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '734'
+          $id: '544'
           fixed: false
           raw: Create
         parameters:
-          - $id: '682'
+          - $id: '492'
             collectionFormat: none
             defaultValue:
-              $id: '683'
+              $id: '493'
               fixed: false
             deprecated: false
             documentation:
-              $id: '684'
+              $id: '494'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the file to
@@ -3750,27 +2645,27 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '686'
+              $id: '496'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '687'
+                $id: '497'
                 fixed: false
                 raw: String
             name:
-              $id: '685'
+              $id: '495'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '688'
+          - $id: '498'
             collectionFormat: none
             defaultValue:
-              $id: '689'
+              $id: '499'
               fixed: false
             deprecated: false
             documentation:
-              $id: '690'
+              $id: '500'
               fixed: false
               raw: >-
                 The file contents to include when creating the file. This
@@ -3782,55 +2677,55 @@ operations:
             isRequired: false
             location: body
             modelType:
-              $id: '692'
+              $id: '502'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: stream
               name:
-                $id: '693'
+                $id: '503'
                 fixed: false
                 raw: Stream
             name:
-              $id: '691'
+              $id: '501'
               fixed: false
               raw: streamContents
             serializedName: streamContents
-          - $id: '694'
+          - $id: '504'
             collectionFormat: none
             defaultValue:
-              $id: '695'
+              $id: '505'
               fixed: false
             deprecated: false
             documentation:
-              $id: '696'
+              $id: '506'
               fixed: false
               raw: The indication of if the file should be overwritten.
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '698'
+              $id: '508'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: boolean
               name:
-                $id: '699'
+                $id: '509'
                 fixed: false
                 raw: Boolean
             name:
-              $id: '697'
+              $id: '507'
               fixed: false
               raw: overwrite
             serializedName: overwrite
-          - $id: '700'
+          - $id: '510'
             collectionFormat: none
             defaultValue:
-              $id: '701'
+              $id: '511'
               fixed: false
               raw: CLOSE
             deprecated: false
             documentation:
-              $id: '702'
+              $id: '512'
               fixed: false
               raw: >-
                 Optionally indicates what to do after completion of the create.
@@ -3850,20 +2745,20 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $ref: '233'
+              $ref: '15'
             name:
-              $id: '703'
+              $id: '513'
               fixed: false
               raw: syncFlag
             serializedName: syncFlag
-          - $id: '704'
+          - $id: '514'
             collectionFormat: none
             defaultValue:
-              $id: '705'
+              $id: '515'
               fixed: false
             deprecated: false
             documentation:
-              $id: '706'
+              $id: '516'
               fixed: false
               raw: >-
                 Optional unique GUID per file to ensure single writer semantics,
@@ -3873,28 +2768,28 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '708'
+              $id: '518'
               $type: PrimaryType
               deprecated: false
               format: uuid
               knownPrimaryType: uuid
               name:
-                $id: '709'
+                $id: '519'
                 fixed: false
                 raw: Uuid
             name:
-              $id: '707'
+              $id: '517'
               fixed: false
               raw: leaseId
             serializedName: leaseId
-          - $id: '710'
+          - $id: '520'
             collectionFormat: none
             defaultValue:
-              $id: '711'
+              $id: '521'
               fixed: false
             deprecated: false
             documentation:
-              $id: '712'
+              $id: '522'
               fixed: false
               raw: >-
                 The octal representation of the unnamed user, mask and other
@@ -3904,29 +2799,29 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '714'
+              $id: '524'
               $type: PrimaryType
               deprecated: false
               format: int32
               knownPrimaryType: int
               name:
-                $id: '715'
+                $id: '525'
                 fixed: false
                 raw: Int
             name:
-              $id: '713'
+              $id: '523'
               fixed: false
               raw: permission
             serializedName: permission
-          - $id: '716'
+          - $id: '526'
             collectionFormat: none
             defaultValue:
-              $id: '717'
+              $id: '527'
               fixed: false
               raw: 'true'
             deprecated: false
             documentation:
-              $id: '718'
+              $id: '528'
               fixed: false
               raw: >-
                 Flag to skip redirection. When write=false or not specified, the
@@ -3937,73 +2832,73 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '720'
+              $id: '530'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '721'
+                $id: '531'
                 fixed: false
                 raw: String
             name:
-              $id: '719'
+              $id: '529'
               fixed: false
               raw: write
             serializedName: write
-          - $id: '722'
+          - $id: '532'
             collectionFormat: none
             defaultValue:
-              $id: '723'
+              $id: '533'
               fixed: false
               raw: CREATE
             deprecated: false
             documentation:
-              $id: '724'
+              $id: '534'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '726'
+              $id: '536'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '727'
+                $id: '537'
                 fixed: false
                 raw: String
             name:
-              $id: '725'
+              $id: '535'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '728'
+          - $id: '538'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '729'
+              $id: '539'
               fixed: false
             deprecated: false
             documentation:
-              $id: '730'
+              $id: '540'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '732'
+              $id: '542'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '733'
+                $id: '543'
                 fixed: false
                 raw: String
             name:
-              $id: '731'
+              $id: '541'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -4012,18 +2907,23 @@ operations:
           - application/json
         responses:
           Created:
-            $id: '736'
+            $id: '546'
             isNullable: true
         returnType:
-          $id: '738'
+          $id: '550'
           isNullable: true
         serializedName: FileSystem_Create
         url: '/webhdfs/v1/{path}'
-      - $id: '739'
+      - $id: '551'
         defaultResponse:
-          $id: '767'
+          $id: '579'
           body:
-            $ref: '214'
+            $id: '580'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '581'
+              fixed: false
           isNullable: true
         deprecated: false
         description: Sets the Access Control List (ACL) for a file or folder.
@@ -4038,25 +2938,25 @@ operations:
               responses:
                 '200': {}
         group:
-          $id: '765'
+          $id: '577'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '764'
+          $id: '576'
           fixed: false
           raw: SetAcl
         parameters:
-          - $id: '740'
+          - $id: '552'
             collectionFormat: none
             defaultValue:
-              $id: '741'
+              $id: '553'
               fixed: false
             deprecated: false
             documentation:
-              $id: '742'
+              $id: '554'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the file or
@@ -4065,27 +2965,27 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '744'
+              $id: '556'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '745'
+                $id: '557'
                 fixed: false
                 raw: String
             name:
-              $id: '743'
+              $id: '555'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '746'
+          - $id: '558'
             collectionFormat: none
             defaultValue:
-              $id: '747'
+              $id: '559'
               fixed: false
             deprecated: false
             documentation:
-              $id: '748'
+              $id: '560'
               fixed: false
               raw: >-
                 The ACL spec included in ACL creation operations in the format
@@ -4094,73 +2994,73 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '750'
+              $id: '562'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '751'
+                $id: '563'
                 fixed: false
                 raw: String
             name:
-              $id: '749'
+              $id: '561'
               fixed: false
               raw: aclspec
             serializedName: aclspec
-          - $id: '752'
+          - $id: '564'
             collectionFormat: none
             defaultValue:
-              $id: '753'
+              $id: '565'
               fixed: false
               raw: SETACL
             deprecated: false
             documentation:
-              $id: '754'
+              $id: '566'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '756'
+              $id: '568'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '757'
+                $id: '569'
                 fixed: false
                 raw: String
             name:
-              $id: '755'
+              $id: '567'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '758'
+          - $id: '570'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '759'
+              $id: '571'
               fixed: false
             deprecated: false
             documentation:
-              $id: '760'
+              $id: '572'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '762'
+              $id: '574'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '763'
+                $id: '575'
                 fixed: false
                 raw: String
             name:
-              $id: '761'
+              $id: '573'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -4169,18 +3069,23 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '766'
+            $id: '578'
             isNullable: true
         returnType:
-          $id: '768'
+          $id: '582'
           isNullable: true
         serializedName: FileSystem_SetAcl
         url: '/webhdfs/v1/{path}'
-      - $id: '769'
+      - $id: '583'
         defaultResponse:
-          $id: '797'
+          $id: '611'
           body:
-            $ref: '214'
+            $id: '612'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '613'
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -4197,25 +3102,25 @@ operations:
               responses:
                 '200': {}
         group:
-          $id: '795'
+          $id: '609'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '794'
+          $id: '608'
           fixed: false
           raw: ModifyAclEntries
         parameters:
-          - $id: '770'
+          - $id: '584'
             collectionFormat: none
             defaultValue:
-              $id: '771'
+              $id: '585'
               fixed: false
             deprecated: false
             documentation:
-              $id: '772'
+              $id: '586'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the file or
@@ -4224,27 +3129,27 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '774'
+              $id: '588'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '775'
+                $id: '589'
                 fixed: false
                 raw: String
             name:
-              $id: '773'
+              $id: '587'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '776'
+          - $id: '590'
             collectionFormat: none
             defaultValue:
-              $id: '777'
+              $id: '591'
               fixed: false
             deprecated: false
             documentation:
-              $id: '778'
+              $id: '592'
               fixed: false
               raw: >-
                 The ACL specification included in ACL modification operations in
@@ -4253,73 +3158,73 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '780'
+              $id: '594'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '781'
+                $id: '595'
                 fixed: false
                 raw: String
             name:
-              $id: '779'
+              $id: '593'
               fixed: false
               raw: aclspec
             serializedName: aclspec
-          - $id: '782'
+          - $id: '596'
             collectionFormat: none
             defaultValue:
-              $id: '783'
+              $id: '597'
               fixed: false
               raw: MODIFYACLENTRIES
             deprecated: false
             documentation:
-              $id: '784'
+              $id: '598'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '786'
+              $id: '600'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '787'
+                $id: '601'
                 fixed: false
                 raw: String
             name:
-              $id: '785'
+              $id: '599'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '788'
+          - $id: '602'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '789'
+              $id: '603'
               fixed: false
             deprecated: false
             documentation:
-              $id: '790'
+              $id: '604'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '792'
+              $id: '606'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '793'
+                $id: '607'
                 fixed: false
                 raw: String
             name:
-              $id: '791'
+              $id: '605'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -4328,18 +3233,23 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '796'
+            $id: '610'
             isNullable: true
         returnType:
-          $id: '798'
+          $id: '614'
           isNullable: true
         serializedName: FileSystem_ModifyAclEntries
         url: '/webhdfs/v1/{path}'
-      - $id: '799'
+      - $id: '615'
         defaultResponse:
-          $id: '827'
+          $id: '643'
           body:
-            $ref: '214'
+            $id: '644'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '645'
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -4356,25 +3266,25 @@ operations:
               responses:
                 '200': {}
         group:
-          $id: '825'
+          $id: '641'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '824'
+          $id: '640'
           fixed: false
           raw: RemoveAclEntries
         parameters:
-          - $id: '800'
+          - $id: '616'
             collectionFormat: none
             defaultValue:
-              $id: '801'
+              $id: '617'
               fixed: false
             deprecated: false
             documentation:
-              $id: '802'
+              $id: '618'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the file or
@@ -4383,27 +3293,27 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '804'
+              $id: '620'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '805'
+                $id: '621'
                 fixed: false
                 raw: String
             name:
-              $id: '803'
+              $id: '619'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '806'
+          - $id: '622'
             collectionFormat: none
             defaultValue:
-              $id: '807'
+              $id: '623'
               fixed: false
             deprecated: false
             documentation:
-              $id: '808'
+              $id: '624'
               fixed: false
               raw: >-
                 The ACL spec included in ACL removal operations in the format
@@ -4412,73 +3322,73 @@ operations:
             isRequired: true
             location: query
             modelType:
-              $id: '810'
+              $id: '626'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '811'
+                $id: '627'
                 fixed: false
                 raw: String
             name:
-              $id: '809'
+              $id: '625'
               fixed: false
               raw: aclspec
             serializedName: aclspec
-          - $id: '812'
+          - $id: '628'
             collectionFormat: none
             defaultValue:
-              $id: '813'
+              $id: '629'
               fixed: false
               raw: REMOVEACLENTRIES
             deprecated: false
             documentation:
-              $id: '814'
+              $id: '630'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '816'
+              $id: '632'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '817'
+                $id: '633'
                 fixed: false
                 raw: String
             name:
-              $id: '815'
+              $id: '631'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '818'
+          - $id: '634'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '819'
+              $id: '635'
               fixed: false
             deprecated: false
             documentation:
-              $id: '820'
+              $id: '636'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '822'
+              $id: '638'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '823'
+                $id: '639'
                 fixed: false
                 raw: String
             name:
-              $id: '821'
+              $id: '637'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -4487,18 +3397,23 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '826'
+            $id: '642'
             isNullable: true
         returnType:
-          $id: '828'
+          $id: '646'
           isNullable: true
         serializedName: FileSystem_RemoveAclEntries
         url: '/webhdfs/v1/{path}'
-      - $id: '829'
+      - $id: '647'
         defaultResponse:
-          $id: '851'
+          $id: '669'
           body:
-            $ref: '214'
+            $id: '670'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '671'
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -4514,25 +3429,25 @@ operations:
               responses:
                 '200': {}
         group:
-          $id: '849'
+          $id: '667'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '848'
+          $id: '666'
           fixed: false
           raw: RemoveDefaultAcl
         parameters:
-          - $id: '830'
+          - $id: '648'
             collectionFormat: none
             defaultValue:
-              $id: '831'
+              $id: '649'
               fixed: false
             deprecated: false
             documentation:
-              $id: '832'
+              $id: '650'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the directory
@@ -4541,73 +3456,73 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '834'
+              $id: '652'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '835'
+                $id: '653'
                 fixed: false
                 raw: String
             name:
-              $id: '833'
+              $id: '651'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '836'
+          - $id: '654'
             collectionFormat: none
             defaultValue:
-              $id: '837'
+              $id: '655'
               fixed: false
               raw: REMOVEDEFAULTACL
             deprecated: false
             documentation:
-              $id: '838'
+              $id: '656'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '840'
+              $id: '658'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '841'
+                $id: '659'
                 fixed: false
                 raw: String
             name:
-              $id: '839'
+              $id: '657'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '842'
+          - $id: '660'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '843'
+              $id: '661'
               fixed: false
             deprecated: false
             documentation:
-              $id: '844'
+              $id: '662'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '846'
+              $id: '664'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '847'
+                $id: '665'
                 fixed: false
                 raw: String
             name:
-              $id: '845'
+              $id: '663'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -4616,18 +3531,23 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '850'
+            $id: '668'
             isNullable: true
         returnType:
-          $id: '852'
+          $id: '672'
           isNullable: true
         serializedName: FileSystem_RemoveDefaultAcl
         url: '/webhdfs/v1/{path}'
-      - $id: '853'
+      - $id: '673'
         defaultResponse:
-          $id: '875'
+          $id: '695'
           body:
-            $ref: '214'
+            $id: '696'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '697'
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -4643,25 +3563,25 @@ operations:
               responses:
                 '200': {}
         group:
-          $id: '873'
+          $id: '693'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '872'
+          $id: '692'
           fixed: false
           raw: RemoveAcl
         parameters:
-          - $id: '854'
+          - $id: '674'
             collectionFormat: none
             defaultValue:
-              $id: '855'
+              $id: '675'
               fixed: false
             deprecated: false
             documentation:
-              $id: '856'
+              $id: '676'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the file or
@@ -4670,73 +3590,73 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '858'
+              $id: '678'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '859'
+                $id: '679'
                 fixed: false
                 raw: String
             name:
-              $id: '857'
+              $id: '677'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '860'
+          - $id: '680'
             collectionFormat: none
             defaultValue:
-              $id: '861'
+              $id: '681'
               fixed: false
               raw: REMOVEACL
             deprecated: false
             documentation:
-              $id: '862'
+              $id: '682'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '864'
+              $id: '684'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '865'
+                $id: '685'
                 fixed: false
                 raw: String
             name:
-              $id: '863'
+              $id: '683'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '866'
+          - $id: '686'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '867'
+              $id: '687'
               fixed: false
             deprecated: false
             documentation:
-              $id: '868'
+              $id: '688'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '870'
+              $id: '690'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '871'
+                $id: '691'
                 fixed: false
                 raw: String
             name:
-              $id: '869'
+              $id: '689'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -4745,18 +3665,23 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '874'
+            $id: '694'
             isNullable: true
         returnType:
-          $id: '876'
+          $id: '698'
           isNullable: true
         serializedName: FileSystem_RemoveAcl
         url: '/webhdfs/v1/{path}'
-      - $id: '877'
+      - $id: '699'
         defaultResponse:
-          $id: '905'
+          $id: '729'
           body:
-            $ref: '214'
+            $id: '730'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '731'
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -4781,25 +3706,25 @@ operations:
                     permission: '1'
                     stickyBit: false
         group:
-          $id: '903'
+          $id: '725'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: get
         isAbsoluteUrl: false
         name:
-          $id: '902'
+          $id: '724'
           fixed: false
           raw: GetAclStatus
         parameters:
-          - $id: '878'
+          - $id: '700'
             collectionFormat: none
             defaultValue:
-              $id: '879'
+              $id: '701'
               fixed: false
             deprecated: false
             documentation:
-              $id: '880'
+              $id: '702'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the file or
@@ -4808,27 +3733,27 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '882'
+              $id: '704'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '883'
+                $id: '705'
                 fixed: false
                 raw: String
             name:
-              $id: '881'
+              $id: '703'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '884'
+          - $id: '706'
             collectionFormat: none
             defaultValue:
-              $id: '885'
+              $id: '707'
               fixed: false
             deprecated: false
             documentation:
-              $id: '886'
+              $id: '708'
               fixed: false
               raw: >-
                 An optional switch to return friendly names in place of object
@@ -4839,73 +3764,73 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '888'
+              $id: '710'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: boolean
               name:
-                $id: '889'
+                $id: '711'
                 fixed: false
                 raw: Boolean
             name:
-              $id: '887'
+              $id: '709'
               fixed: false
               raw: tooId
             serializedName: tooId
-          - $id: '890'
+          - $id: '712'
             collectionFormat: none
             defaultValue:
-              $id: '891'
+              $id: '713'
               fixed: false
               raw: GETACLSTATUS
             deprecated: false
             documentation:
-              $id: '892'
+              $id: '714'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '894'
+              $id: '716'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '895'
+                $id: '717'
                 fixed: false
                 raw: String
             name:
-              $id: '893'
+              $id: '715'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '896'
+          - $id: '718'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '897'
+              $id: '719'
               fixed: false
             deprecated: false
             documentation:
-              $id: '898'
+              $id: '720'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '900'
+              $id: '722'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '901'
+                $id: '723'
                 fixed: false
                 raw: String
             name:
-              $id: '899'
+              $id: '721'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -4914,22 +3839,32 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '904'
+            $id: '726'
             body:
-              $ref: '44'
+              $id: '727'
+              $type: MultiType
+              deprecated: false
+              name:
+                $id: '728'
+                fixed: false
             isNullable: true
         returnType:
-          $id: '906'
+          $id: '732'
           body:
-            $ref: '44'
+            $ref: '727'
           isNullable: true
         serializedName: FileSystem_GetAclStatus
         url: '/webhdfs/v1/{path}'
-      - $id: '907'
+      - $id: '733'
         defaultResponse:
-          $id: '935'
+          $id: '763'
           body:
-            $ref: '214'
+            $id: '764'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '765'
+              fixed: false
           isNullable: true
         deprecated: false
         description: 'Deletes the requested file or directory, optionally recursively.'
@@ -4946,25 +3881,25 @@ operations:
                   body:
                     boolean: false
         group:
-          $id: '933'
+          $id: '759'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: delete
         isAbsoluteUrl: false
         name:
-          $id: '932'
+          $id: '758'
           fixed: false
           raw: Delete
         parameters:
-          - $id: '908'
+          - $id: '734'
             collectionFormat: none
             defaultValue:
-              $id: '909'
+              $id: '735'
               fixed: false
             deprecated: false
             documentation:
-              $id: '910'
+              $id: '736'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the file or
@@ -4973,100 +3908,100 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '912'
+              $id: '738'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '913'
+                $id: '739'
                 fixed: false
                 raw: String
             name:
-              $id: '911'
+              $id: '737'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '914'
+          - $id: '740'
             collectionFormat: none
             defaultValue:
-              $id: '915'
+              $id: '741'
               fixed: false
             deprecated: false
             documentation:
-              $id: '916'
+              $id: '742'
               fixed: false
               raw: The optional switch indicating if the delete should be recursive
             isConstant: false
             isRequired: false
             location: query
             modelType:
-              $id: '918'
+              $id: '744'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: boolean
               name:
-                $id: '919'
+                $id: '745'
                 fixed: false
                 raw: Boolean
             name:
-              $id: '917'
+              $id: '743'
               fixed: false
               raw: recursive
             serializedName: recursive
-          - $id: '920'
+          - $id: '746'
             collectionFormat: none
             defaultValue:
-              $id: '921'
+              $id: '747'
               fixed: false
               raw: DELETE
             deprecated: false
             documentation:
-              $id: '922'
+              $id: '748'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '924'
+              $id: '750'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '925'
+                $id: '751'
                 fixed: false
                 raw: String
             name:
-              $id: '923'
+              $id: '749'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '926'
+          - $id: '752'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '927'
+              $id: '753'
               fixed: false
             deprecated: false
             documentation:
-              $id: '928'
+              $id: '754'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '930'
+              $id: '756'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '931'
+                $id: '757'
                 fixed: false
                 raw: String
             name:
-              $id: '929'
+              $id: '755'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -5075,22 +4010,32 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '934'
+            $id: '760'
             body:
-              $ref: '2'
+              $id: '761'
+              $type: MultiType
+              deprecated: false
+              name:
+                $id: '762'
+                fixed: false
             isNullable: true
         returnType:
-          $id: '936'
+          $id: '766'
           body:
-            $ref: '2'
+            $ref: '761'
           isNullable: true
         serializedName: FileSystem_Delete
         url: '/webhdfs/v1/{path}'
-      - $id: '937'
+      - $id: '767'
         defaultResponse:
-          $id: '965'
+          $id: '797'
           body:
-            $ref: '214'
+            $id: '798'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '799'
+              fixed: false
           isNullable: true
         deprecated: false
         description: Rename a file or directory.
@@ -5107,25 +4052,25 @@ operations:
                   body:
                     boolean: false
         group:
-          $id: '963'
+          $id: '793'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '962'
+          $id: '792'
           fixed: false
           raw: Rename
         parameters:
-          - $id: '938'
+          - $id: '768'
             collectionFormat: none
             defaultValue:
-              $id: '939'
+              $id: '769'
               fixed: false
             deprecated: false
             documentation:
-              $id: '940'
+              $id: '770'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the file or
@@ -5134,100 +4079,100 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '942'
+              $id: '772'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '943'
+                $id: '773'
                 fixed: false
                 raw: String
             name:
-              $id: '941'
+              $id: '771'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '944'
+          - $id: '774'
             collectionFormat: none
             defaultValue:
-              $id: '945'
+              $id: '775'
               fixed: false
             deprecated: false
             documentation:
-              $id: '946'
+              $id: '776'
               fixed: false
               raw: The path to move/rename the file or folder to
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '948'
+              $id: '778'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '949'
+                $id: '779'
                 fixed: false
                 raw: String
             name:
-              $id: '947'
+              $id: '777'
               fixed: false
               raw: destination
             serializedName: destination
-          - $id: '950'
+          - $id: '780'
             collectionFormat: none
             defaultValue:
-              $id: '951'
+              $id: '781'
               fixed: false
               raw: RENAME
             deprecated: false
             documentation:
-              $id: '952'
+              $id: '782'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '954'
+              $id: '784'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '955'
+                $id: '785'
                 fixed: false
                 raw: String
             name:
-              $id: '953'
+              $id: '783'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '956'
+          - $id: '786'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '957'
+              $id: '787'
               fixed: false
             deprecated: false
             documentation:
-              $id: '958'
+              $id: '788'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '960'
+              $id: '790'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '961'
+                $id: '791'
                 fixed: false
                 raw: String
             name:
-              $id: '959'
+              $id: '789'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -5236,22 +4181,32 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '964'
+            $id: '794'
             body:
-              $ref: '2'
+              $id: '795'
+              $type: MultiType
+              deprecated: false
+              name:
+                $id: '796'
+                fixed: false
             isNullable: true
         returnType:
-          $id: '966'
+          $id: '800'
           body:
-            $ref: '2'
+            $ref: '795'
           isNullable: true
         serializedName: FileSystem_Rename
         url: '/webhdfs/v1/{path}'
-      - $id: '967'
+      - $id: '801'
         defaultResponse:
-          $id: '1001'
+          $id: '835'
           body:
-            $ref: '214'
+            $id: '836'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '837'
+              fixed: false
           isNullable: true
         deprecated: false
         description: Sets the owner of a file or directory.
@@ -5267,25 +4222,25 @@ operations:
               responses:
                 '200': {}
         group:
-          $id: '999'
+          $id: '833'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '998'
+          $id: '832'
           fixed: false
           raw: SetOwner
         parameters:
-          - $id: '968'
+          - $id: '802'
             collectionFormat: none
             defaultValue:
-              $id: '969'
+              $id: '803'
               fixed: false
             deprecated: false
             documentation:
-              $id: '970'
+              $id: '804'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the file or
@@ -5294,27 +4249,27 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '972'
+              $id: '806'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '973'
+                $id: '807'
                 fixed: false
                 raw: String
             name:
-              $id: '971'
+              $id: '805'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '974'
+          - $id: '808'
             collectionFormat: none
             defaultValue:
-              $id: '975'
+              $id: '809'
               fixed: false
             deprecated: false
             documentation:
-              $id: '976'
+              $id: '810'
               fixed: false
               raw: >-
                 The AAD Object ID of the user owner of the file or directory. If
@@ -5323,27 +4278,27 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '978'
+              $id: '812'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '979'
+                $id: '813'
                 fixed: false
                 raw: String
             name:
-              $id: '977'
+              $id: '811'
               fixed: false
               raw: owner
             serializedName: owner
-          - $id: '980'
+          - $id: '814'
             collectionFormat: none
             defaultValue:
-              $id: '981'
+              $id: '815'
               fixed: false
             deprecated: false
             documentation:
-              $id: '982'
+              $id: '816'
               fixed: false
               raw: >-
                 The AAD Object ID of the group owner of the file or directory.
@@ -5352,73 +4307,73 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '984'
+              $id: '818'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '985'
+                $id: '819'
                 fixed: false
                 raw: String
             name:
-              $id: '983'
+              $id: '817'
               fixed: false
               raw: group
             serializedName: group
-          - $id: '986'
+          - $id: '820'
             collectionFormat: none
             defaultValue:
-              $id: '987'
+              $id: '821'
               fixed: false
               raw: SETOWNER
             deprecated: false
             documentation:
-              $id: '988'
+              $id: '822'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '990'
+              $id: '824'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '991'
+                $id: '825'
                 fixed: false
                 raw: String
             name:
-              $id: '989'
+              $id: '823'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '992'
+          - $id: '826'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '993'
+              $id: '827'
               fixed: false
             deprecated: false
             documentation:
-              $id: '994'
+              $id: '828'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '996'
+              $id: '830'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '997'
+                $id: '831'
                 fixed: false
                 raw: String
             name:
-              $id: '995'
+              $id: '829'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -5427,18 +4382,23 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '1000'
+            $id: '834'
             isNullable: true
         returnType:
-          $id: '1002'
+          $id: '838'
           isNullable: true
         serializedName: FileSystem_SetOwner
         url: '/webhdfs/v1/{path}'
-      - $id: '1003'
+      - $id: '839'
         defaultResponse:
-          $id: '1031'
+          $id: '867'
           body:
-            $ref: '214'
+            $id: '868'
+            $type: MultiType
+            deprecated: false
+            name:
+              $id: '869'
+              fixed: false
           isNullable: true
         deprecated: false
         description: Sets the permission of the file or folder.
@@ -5453,25 +4413,25 @@ operations:
               responses:
                 '200': {}
         group:
-          $id: '1029'
+          $id: '865'
           fixed: false
           raw: FileSystem
         hidden: false
         httpMethod: put
         isAbsoluteUrl: false
         name:
-          $id: '1028'
+          $id: '864'
           fixed: false
           raw: SetPermission
         parameters:
-          - $id: '1004'
+          - $id: '840'
             collectionFormat: none
             defaultValue:
-              $id: '1005'
+              $id: '841'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1006'
+              $id: '842'
               fixed: false
               raw: >-
                 The Data Lake Store path (starting with '/') of the file or
@@ -5480,27 +4440,27 @@ operations:
             isRequired: true
             location: path
             modelType:
-              $id: '1008'
+              $id: '844'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '1009'
+                $id: '845'
                 fixed: false
                 raw: String
             name:
-              $id: '1007'
+              $id: '843'
               fixed: false
               raw: path
             serializedName: path
-          - $id: '1010'
+          - $id: '846'
             collectionFormat: none
             defaultValue:
-              $id: '1011'
+              $id: '847'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1012'
+              $id: '848'
               fixed: false
               raw: >-
                 A string representation of the permission (i.e 'rwx'). If empty,
@@ -5509,73 +4469,73 @@ operations:
             isRequired: false
             location: query
             modelType:
-              $id: '1014'
+              $id: '850'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '1015'
+                $id: '851'
                 fixed: false
                 raw: String
             name:
-              $id: '1013'
+              $id: '849'
               fixed: false
               raw: permission
             serializedName: permission
-          - $id: '1016'
+          - $id: '852'
             collectionFormat: none
             defaultValue:
-              $id: '1017'
+              $id: '853'
               fixed: false
               raw: SETPERMISSION
             deprecated: false
             documentation:
-              $id: '1018'
+              $id: '854'
               fixed: false
               raw: The constant value for the operation.
             isConstant: true
             isRequired: true
             location: query
             modelType:
-              $id: '1020'
+              $id: '856'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '1021'
+                $id: '857'
                 fixed: false
                 raw: String
             name:
-              $id: '1019'
+              $id: '855'
               fixed: false
               raw: op
             serializedName: op
-          - $id: '1022'
+          - $id: '858'
             clientProperty:
-              $ref: '258'
+              $ref: '40'
             collectionFormat: none
             defaultValue:
-              $id: '1023'
+              $id: '859'
               fixed: false
             deprecated: false
             documentation:
-              $id: '1024'
+              $id: '860'
               fixed: false
               raw: Client Api Version.
             isConstant: false
             isRequired: true
             location: query
             modelType:
-              $id: '1026'
+              $id: '862'
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: string
               name:
-                $id: '1027'
+                $id: '863'
                 fixed: false
                 raw: String
             name:
-              $id: '1025'
+              $id: '861'
               fixed: false
               raw: api-version
             serializedName: api-version
@@ -5584,49 +4544,49 @@ operations:
           - application/json
         responses:
           OK:
-            $id: '1030'
+            $id: '866'
             isNullable: true
         returnType:
-          $id: '1032'
+          $id: '870'
           isNullable: true
         serializedName: FileSystem_SetPermission
         url: '/webhdfs/v1/{path}'
     name:
-      $id: '1033'
+      $id: '871'
       fixed: false
       raw: FileSystem
     nameForProperty: FileSystem
     typeName:
-      $id: '1034'
+      $id: '872'
       fixed: false
 properties:
-  - $id: '258'
+  - $id: '40'
     collectionFormat: none
     defaultValue:
-      $id: '259'
+      $id: '41'
       fixed: false
     deprecated: false
     documentation:
-      $id: '260'
+      $id: '42'
       fixed: false
       raw: Client Api Version.
     isConstant: false
     isReadOnly: false
     isRequired: true
     modelType:
-      $id: '262'
+      $id: '44'
       $type: PrimaryType
       deprecated: false
       knownPrimaryType: string
       name:
-        $id: '263'
+        $id: '45'
         fixed: false
         raw: String
     name:
-      $id: '261'
+      $id: '43'
       fixed: false
       raw: api-version
     realPath:
       - api-version
     serializedName: api-version
-  - $ref: '241'
+  - $ref: '23'
