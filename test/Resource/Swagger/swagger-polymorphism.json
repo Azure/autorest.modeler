@@ -76,6 +76,7 @@
   "components": {
     "schemas": {
       "Pet": {
+        "type": "object",
         "discriminator": {
           "propertyName": "dtype"
         },
@@ -97,6 +98,7 @@
         }
       },
       "Cat": {
+        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Pet"
@@ -110,6 +112,7 @@
         }
       },
       "Seamise": {
+        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Cat"
@@ -123,6 +126,7 @@
         }
       },
       "Burmese": {
+        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Seamise"
@@ -136,6 +140,7 @@
         }
       },
       "Himalayan": {
+        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Seamise"
@@ -149,6 +154,7 @@
         }
       },
       "Persian": {
+        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Cat"
@@ -162,6 +168,7 @@
         }
       },
       "Dog": {
+        "type": "object",
         "id": "Dog",
         "allOf": [
           {
@@ -176,6 +183,7 @@
         }
       },
       "Horse": {
+        "type": "object",
         "id": "Horse",
         "allOf": [
           {
@@ -190,6 +198,7 @@
         }
       },
       "Lizard": {
+        "type": "object",
         "x-ms-discriminator-value": "lzd",
         "allOf": [
           {
@@ -205,6 +214,7 @@
         }
       },
       "Error": {
+        "type": "object",
         "properties": {
           "code": {
             "type": "integer",

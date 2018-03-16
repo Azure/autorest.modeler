@@ -696,6 +696,7 @@
   "components": {
     "schemas": {
       "pet": {
+        "type": "object",
         "required": [
           "id",
           "name"
@@ -719,6 +720,7 @@
             "$ref": "#/components/schemas/pet"
           },
           {
+            "type": "object",
             "required": [
               "breed"
             ],
@@ -739,6 +741,7 @@
             "$ref": "#/components/schemas/siamese"
           }
         ],
+        "type": "object",
         "properties": {
           "mood": {
             "type": "string"
@@ -751,6 +754,7 @@
             "$ref": "#/components/schemas/newPet"
           }
         ],
+        "type": "object",
         "required": [
           "pedigree"
         ],
@@ -766,6 +770,7 @@
             "$ref": "#/components/schemas/dog"
           },
           {
+            "type": "object",
             "required": [
               "name"
             ],
@@ -779,6 +784,7 @@
         ]
       },
       "errorModel": {
+        "type": "object",
         "required": [
           "code",
           "message"

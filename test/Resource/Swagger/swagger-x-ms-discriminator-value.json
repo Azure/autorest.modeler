@@ -485,6 +485,7 @@
   "components": {
     "schemas": {
       "pet": {
+        "type": "object",
         "required": [
           "id",
           "name",
@@ -511,6 +512,7 @@
         }
       },
       "cat": {
+        "type": "object",
         "x-ms-discriminator-value": "Microsoft.Models.MSCat",
         "allOf": [
           {
@@ -530,6 +532,7 @@
         }
       },
       "siamese": {
+        "type": "object",
         "x-ms-discriminator-value": "Microsoft.Models.MSSiameseCat",
         "allOf": [
           {
@@ -543,6 +546,7 @@
         }
       },
       "dog": {
+        "type": "object",
         "x-ms-discriminator-value": "Microsoft.Models.MSDog",
         "allOf": [
           {
@@ -559,6 +563,7 @@
         }
       },
       "newPet": {
+        "type": "object",
         "x-ms-discriminator-value": "Microsoft.Models.MSNewPet",
         "allOf": [
           {
@@ -578,6 +583,7 @@
         ]
       },
       "errorModel": {
+        "type": "object",
         "required": [
           "code",
           "message"

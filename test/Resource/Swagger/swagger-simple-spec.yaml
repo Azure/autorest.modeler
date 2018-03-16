@@ -86,6 +86,7 @@ paths:
 components:
   schemas:
     Product:
+      type: object
       description: The product documentation.
       properties:
         product_id:
@@ -110,6 +111,7 @@ components:
         name: Puma
         id: 1
     Error:
+      type: object
       properties:
         code:
           type: integer
