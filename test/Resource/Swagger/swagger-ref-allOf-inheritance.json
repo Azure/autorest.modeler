@@ -69,6 +69,7 @@
   "components": {
     "schemas": {
       "Sku": {
+        "type": "object",
         "properties": {
           "name": {
             "type": "string",
@@ -109,6 +110,7 @@
         "description": "Sku parameters supplied to the create redis operation."
       },
       "RedisProperties": {
+        "type": "object",
         "properties": {
           "sku": {
             "$ref": "#/components/schemas/Sku",
@@ -152,6 +154,7 @@
         "description": "'RedisProperties' - Parameters supplied to CreateOrUpdate redis operation."
       },
       "Resource": {
+        "type": "object",
         "properties": {
           "id": {
             "readOnly": true,
@@ -187,6 +190,7 @@
         "x-ms-azure-resource": true
       },
       "RedisCreateOrUpdateParameters": {
+        "type": "object",
         "properties": {
           "properties": {
             "x-ms-client-flatten": true,
@@ -205,6 +209,7 @@
         "description": "'RedisCreateOrUpdateParameters' - Parameters supplied to the CreateOrUpdate Redis operation."
       },
       "RedisAccessKeys": {
+        "type": "object",
         "properties": {
           "primaryKey": {
             "type": "string",
@@ -218,6 +223,7 @@
         "description": "'RedisAccessKeys' - Redis cache access keys."
       },
       "RedisReadableProperties": {
+        "type": "object",
         "properties": {
           "provisioningState": {
             "type": "string",
@@ -246,6 +252,7 @@
         "description": "'RedisReadableProperties' - Parameters describing a redis instance"
       },
       "RedisReadablePropertiesWithAccessKey": {
+        "type": "object",
         "properties": {
           "accessKeys": {
             "$ref": "#/components/schemas/RedisAccessKeys",
@@ -260,6 +267,7 @@
         "description": "'RedisReadablePropertiesWithAccessKey' - Access Keys in addition to RedisReadableProperties"
       },
       "RedisResourceWithAccessKey": {
+        "type": "object",
         "properties": {
           "properties": {
             "x-ms-client-flatten": true,
@@ -275,6 +283,7 @@
         "description": "'RedisResourceWithAccessKey' - A redis item in CreateOrUpdate Operation response."
       },
       "RedisResource": {
+        "type": "object",
         "properties": {
           "properties": {
             "x-ms-client-flatten": true,

@@ -1169,6 +1169,7 @@
   "components": {
     "schemas": {
       "pet": {
+        "type": "object",
         "required": [
           "id",
           "name"
@@ -1187,6 +1188,7 @@
         }
       },
       "cat": {
+        "type": "object",
         "extends": "pet",
         "required": [
           "breed"
@@ -1201,6 +1203,7 @@
         }
       },
       "siamese": {
+        "type": "object",
         "extends": "cat",
         "properties": {
           "mood": {
@@ -1209,6 +1212,7 @@
         }
       },
       "dog": {
+        "type": "object",
         "extends": "pet",
         "required": [
           "pedigree"
@@ -1225,6 +1229,7 @@
             "$ref": "#/components/schemas/pet"
           },
           {
+            "type": "object",
             "required": [
               "name"
             ],
@@ -1238,6 +1243,7 @@
         ]
       },
       "errorModel": {
+        "type": "object",
         "required": [
           "code",
           "message"
@@ -1253,6 +1259,7 @@
         }
       },
       "VirtualMachineGetRemoteDesktopFileResponse": {
+        "type": "object",
         "properties": {
           "RemoteDesktopFile": {
             "type": "string",
