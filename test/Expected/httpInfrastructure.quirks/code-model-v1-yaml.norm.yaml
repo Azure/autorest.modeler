@@ -145,11 +145,11 @@ headerTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $type: PrimaryType
             deprecated: false
@@ -189,11 +189,11 @@ headerTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $type: PrimaryType
             deprecated: false
@@ -233,11 +233,11 @@ headerTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $type: PrimaryType
             deprecated: false
@@ -277,11 +277,11 @@ headerTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $type: PrimaryType
             deprecated: false
@@ -321,11 +321,11 @@ headerTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $type: PrimaryType
             deprecated: false
@@ -365,11 +365,11 @@ headerTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $type: PrimaryType
             deprecated: false
@@ -409,11 +409,11 @@ headerTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $type: PrimaryType
             deprecated: false
@@ -453,11 +453,11 @@ headerTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $type: PrimaryType
             deprecated: false
@@ -497,11 +497,11 @@ headerTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $type: PrimaryType
             deprecated: false
@@ -541,11 +541,11 @@ headerTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $type: PrimaryType
             deprecated: false
@@ -585,11 +585,11 @@ headerTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $type: PrimaryType
             deprecated: false
@@ -629,11 +629,11 @@ headerTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $type: PrimaryType
             deprecated: false
@@ -673,11 +673,11 @@ headerTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $type: PrimaryType
             deprecated: false
@@ -717,11 +717,11 @@ headerTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $type: PrimaryType
             deprecated: false
@@ -761,11 +761,11 @@ headerTypes:
         modelType:
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $type: PrimaryType
             deprecated: false

@@ -137,9 +137,13 @@ namespace AutoRest.Modeler
             foreach (var typeName in GeneratedTypes.Keys)
             {
                 var objectType = GeneratedTypes[typeName];
-                if (ExtendedTypes.ContainsKey(typeName))
+                if (ExtendedTypes.TryGetValue(typeName, out string extType))
                 {
-                    objectType.BaseModelType = GeneratedTypes[ExtendedTypes[typeName]];
+                    if (!GeneratedTypes.ContainsKey(extType))
+                    {
+                        throw new InvalidOperationException($"Type '{extType}' not present among generated types (make sure the referenced schema has type 'object')");
+                    }
+                    objectType.BaseModelType = GeneratedTypes[extType];
                 }
 
                 CodeModel.Add(objectType);

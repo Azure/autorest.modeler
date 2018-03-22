@@ -14,6 +14,7 @@
   "components": {
     "schemas": {
       "FrontendIPConfigurationPropertiesFormat": {
+        "type": "object",
         "properties": {
           "inboundNatRules": {
             "type": "array",
@@ -75,6 +76,7 @@
         "description": "Properties of Frontend IP Configuration of the load balancer"
       },
       "FrontendIPConfiguration": {
+        "type": "object",
         "properties": {
           "properties": {
             "$ref": "#/components/schemas/FrontendIPConfigurationPropertiesFormat"
@@ -96,6 +98,7 @@
         "description": "Frontend IP address of the load balancer"
       },
       "BackendAddressPoolPropertiesFormat": {
+        "type": "object",
         "properties": {
           "backendIPConfigurations": {
             "type": "array",
@@ -123,6 +126,7 @@
         "description": "Properties of BackendAddressPool"
       },
       "BackendAddressPool": {
+        "type": "object",
         "properties": {
           "properties": {
             "$ref": "#/components/schemas/BackendAddressPoolPropertiesFormat"
@@ -144,6 +148,7 @@
         "description": "Pool of backend IP addresseses"
       },
       "InboundNatRulePropertiesFormat": {
+        "type": "object",
         "properties": {
           "frontendIPConfiguration": {
             "$ref": "#/components/schemas/SubResource",
@@ -192,6 +197,7 @@
         "description": "Properties of Inbound NAT rule"
       },
       "InboundNatRule": {
+        "type": "object",
         "properties": {
           "properties": {
             "$ref": "#/components/schemas/InboundNatRulePropertiesFormat"
@@ -213,6 +219,7 @@
         "description": "Inbound NAT rule of the loadbalancer"
       },
       "InboundNatPoolPropertiesFormat": {
+        "type": "object",
         "properties": {
           "frontendIPConfiguration": {
             "$ref": "#/components/schemas/SubResource",
@@ -259,6 +266,7 @@
         "description": "Properties of Inbound NAT pool"
       },
       "InboundNatPool": {
+        "type": "object",
         "properties": {
           "properties": {
             "$ref": "#/components/schemas/InboundNatPoolPropertiesFormat"
@@ -280,6 +288,7 @@
         "description": "Inbound NAT pool of the loadbalancer"
       },
       "OutboundNatRulePropertiesFormat": {
+        "type": "object",
         "properties": {
           "allocatedOutboundPorts": {
             "type": "integer",
@@ -308,6 +317,7 @@
         "description": "Outbound NAT pool of the loadbalancer"
       },
       "OutboundNatRule": {
+        "type": "object",
         "properties": {
           "properties": {
             "$ref": "#/components/schemas/OutboundNatRulePropertiesFormat"
@@ -329,6 +339,7 @@
         "description": "Outbound NAT pool of the loadbalancer"
       },
       "NetworkInterfaceIPConfigurationPropertiesFormat": {
+        "type": "object",
         "properties": {
           "loadBalancerBackendAddressPools": {
             "type": "array",
@@ -372,6 +383,7 @@
         "description": "Properties of IPConfiguration"
       },
       "NetworkInterfaceIPConfiguration": {
+        "type": "object",
         "properties": {
           "properties": {
             "$ref": "#/components/schemas/NetworkInterfaceIPConfigurationPropertiesFormat"
@@ -393,6 +405,7 @@
         "description": "IPConfiguration in a NetworkInterface"
       },
       "NetworkInterfaceDnsSettings": {
+        "type": "object",
         "properties": {
           "dnsServers": {
             "type": "array",
@@ -420,6 +433,7 @@
         "description": "Dns Settings of a network interface"
       },
       "NetworkInterfacePropertiesFormat": {
+        "type": "object",
         "properties": {
           "virtualMachine": {
             "$ref": "#/components/schemas/SubResource",
@@ -464,6 +478,7 @@
         "description": "NetworkInterface properties. "
       },
       "NetworkInterface": {
+        "type": "object",
         "properties": {
           "properties": {
             "$ref": "#/components/schemas/NetworkInterfacePropertiesFormat"
@@ -481,6 +496,7 @@
         "description": "A NetworkInterface in a resource group"
       },
       "SecurityRulePropertiesFormat": {
+        "type": "object",
         "properties": {
           "description": {
             "type": "string",
@@ -558,6 +574,7 @@
         ]
       },
       "SecurityRule": {
+        "type": "object",
         "properties": {
           "properties": {
             "$ref": "#/components/schemas/SecurityRulePropertiesFormat"
@@ -579,6 +596,7 @@
         "description": "Network security rule"
       },
       "NetworkSecurityGroupPropertiesFormat": {
+        "type": "object",
         "properties": {
           "securityRules": {
             "type": "array",
@@ -620,6 +638,7 @@
         "description": "Network Security Group resource"
       },
       "NetworkSecurityGroup": {
+        "type": "object",
         "properties": {
           "properties": {
             "$ref": "#/components/schemas/NetworkSecurityGroupPropertiesFormat"
@@ -637,6 +656,7 @@
         "description": "NetworkSecurityGroup resource"
       },
       "PublicIPAddressDnsSettings": {
+        "type": "object",
         "properties": {
           "domainNameLabel": {
             "type": "string",
@@ -654,6 +674,7 @@
         "description": "Contains FQDN of the DNS record associated with the public IP address"
       },
       "PublicIPAddressPropertiesFormat": {
+        "type": "object",
         "properties": {
           "publicIPAllocationMethod": {
             "type": "string",
@@ -694,6 +715,7 @@
         "description": "PublicIpAddress properties"
       },
       "PublicIPAddress": {
+        "type": "object",
         "properties": {
           "properties": {
             "$ref": "#/components/schemas/PublicIPAddressPropertiesFormat"
@@ -711,6 +733,7 @@
         "description": "PublicIPAddress resource"
       },
       "RoutePropertiesFormat": {
+        "type": "object",
         "properties": {
           "addressPrefix": {
             "type": "string",
@@ -746,6 +769,7 @@
         "description": "Route resource"
       },
       "Route": {
+        "type": "object",
         "properties": {
           "properties": {
             "$ref": "#/components/schemas/RoutePropertiesFormat"
@@ -767,6 +791,7 @@
         "description": "Route resource"
       },
       "RouteTablePropertiesFormat": {
+        "type": "object",
         "properties": {
           "routes": {
             "type": "array",
@@ -790,6 +815,7 @@
         "description": "Route Table resource"
       },
       "RouteTable": {
+        "type": "object",
         "properties": {
           "properties": {
             "$ref": "#/components/schemas/RouteTablePropertiesFormat"
@@ -807,6 +833,7 @@
         "description": "RouteTable resource"
       },
       "IPConfigurationPropertiesFormat": {
+        "type": "object",
         "properties": {
           "privateIPAddress": {
             "type": "string",
@@ -840,6 +867,7 @@
         "description": "Properties of IPConfiguration"
       },
       "IPConfiguration": {
+        "type": "object",
         "properties": {
           "properties": {
             "$ref": "#/components/schemas/IPConfigurationPropertiesFormat"
@@ -861,6 +889,7 @@
         "description": "IPConfiguration"
       },
       "SubnetPropertiesFormat": {
+        "type": "object",
         "properties": {
           "addressPrefix": {
             "type": "string",
@@ -888,6 +917,7 @@
         }
       },
       "Subnet": {
+        "type": "object",
         "properties": {
           "properties": {
             "$ref": "#/components/schemas/SubnetPropertiesFormat"
@@ -909,6 +939,7 @@
         "description": "Subnet in a VirtualNework resource"
       },
       "Resource": {
+        "type": "object",
         "properties": {
           "id": {
             "type": "string",
@@ -939,6 +970,7 @@
         "x-ms-azure-resource": true
       },
       "SubResource": {
+        "type": "object",
         "properties": {
           "id": {
             "type": "string",

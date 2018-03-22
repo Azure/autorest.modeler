@@ -6,11 +6,11 @@ enumTypes:
   - &ref_1
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: UriColor
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false

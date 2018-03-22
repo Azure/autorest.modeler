@@ -5,34 +5,14 @@ codeGenExtensions:
   internalConstructors: true
 documentation: Creates an Azure Data Lake Store filesystem client.
 enumTypes:
-  - &ref_2
+  - &ref_0
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
-    modelAsString: false
-    name:
-      fixed: false
-      raw: FileType
-    underlyingType:
-      $type: PrimaryType
-      deprecated: false
-      knownPrimaryType: string
-      name:
-        fixed: false
-        raw: String
-    values:
-      - name: FILE
-        serializedName: FILE
-      - name: DIRECTORY
-        serializedName: DIRECTORY
-  - &ref_7
-    $type: EnumType
-    deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: ExpiryOptionType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -49,14 +29,14 @@ enumTypes:
         serializedName: RelativeToCreationDate
       - name: Absolute
         serializedName: Absolute
-  - &ref_8
+  - &ref_1
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: AppendModeType
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -67,14 +47,14 @@ enumTypes:
     values:
       - name: autocreate
         serializedName: autocreate
-  - &ref_9
+  - &ref_2
     $type: EnumType
     deprecated: false
-    modelAsExtensible: false
     modelAsString: false
     name:
       fixed: false
       raw: SyncFlag
+    oldModelAsString: false
     underlyingType:
       $type: PrimaryType
       deprecated: false
@@ -89,101 +69,10 @@ enumTypes:
         serializedName: METADATA
       - name: CLOSE
         serializedName: CLOSE
-errorTypes:
-  - &ref_6
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store filesystem error containing a specific WebHDFS exception.
-    name:
-      fixed: false
-      raw: AdlsError
-    properties:
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the object representing the actual WebHDFS exception being returned.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType: &ref_5
-          $type: CompositeType
-          containsConstantProperties: false
-          deprecated: false
-          documentation: >-
-            Data Lake Store filesystem exception based on the WebHDFS definition
-            for RemoteExceptions. This is a WebHDFS 'catch all' exception
-          name:
-            fixed: false
-            raw: AdlsRemoteException
-          polymorphicDiscriminator: exception
-          properties:
-            - collectionFormat: none
-              defaultValue:
-                fixed: false
-              deprecated: false
-              documentation:
-                fixed: false
-                raw: >-
-                  the full class package name for the exception thrown, such as
-                  'java.lang.IllegalArgumentException'.
-              isConstant: false
-              isReadOnly: true
-              isRequired: false
-              modelType:
-                $type: PrimaryType
-                deprecated: false
-                knownPrimaryType: string
-                name:
-                  fixed: false
-                  raw: String
-              name:
-                fixed: false
-                raw: javaClassName
-              realPath:
-                - javaClassName
-              serializedName: javaClassName
-            - collectionFormat: none
-              defaultValue:
-                fixed: false
-              deprecated: false
-              documentation:
-                fixed: false
-                raw: >-
-                  the message associated with the exception that was thrown,
-                  such as 'Invalid value for webhdfs parameter
-                  "permission":...'.
-              isConstant: false
-              isReadOnly: true
-              isRequired: false
-              modelType:
-                $type: PrimaryType
-                deprecated: false
-                knownPrimaryType: string
-                name:
-                  fixed: false
-                  raw: String
-              name:
-                fixed: false
-                raw: message
-              realPath:
-                - message
-              serializedName: message
-          serializedName: AdlsRemoteException
-        name:
-          fixed: false
-          raw: RemoteException
-        realPath:
-          - RemoteException
-        serializedName: RemoteException
-    serializedName: AdlsError
 extensions:
   x-ms-parameterized-host: true
 hostParametersFront:
-  - clientProperty: &ref_17
+  - clientProperty: &ref_12
       collectionFormat: none
       defaultValue:
         fixed: false
@@ -260,860 +149,17 @@ hostParametersFront:
       fixed: false
       raw: accountName
     serializedName: accountName
-modelTypes:
-  - &ref_11
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: The result of the request or operation.
-    name:
-      fixed: false
-      raw: FileOperationResult
-    properties:
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the result of the operation or request.
-        extensions:
-          x-ms-client-name: operationResult
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: boolean
-          name:
-            fixed: false
-            raw: Boolean
-        name:
-          fixed: false
-          raw: boolean
-        realPath:
-          - boolean
-        serializedName: boolean
-    serializedName: FileOperationResult
-  - &ref_0
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store file or directory Access Control List information.
-    name:
-      fixed: false
-      raw: AclStatus
-    properties:
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the list of ACLSpec entries on a file or directory.
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $type: SequenceType
-          deprecated: false
-          elementType:
-            $type: PrimaryType
-            deprecated: false
-            knownPrimaryType: string
-            name:
-              fixed: false
-              raw: String
-          name:
-            fixed: false
-        name:
-          fixed: false
-          raw: entries
-        realPath:
-          - entries
-        serializedName: entries
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: 'the group owner, an AAD Object ID.'
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: group
-        realPath:
-          - group
-        serializedName: group
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: 'the user owner, an AAD Object ID.'
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: owner
-        realPath:
-          - owner
-        serializedName: owner
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: >-
-            The octal representation of the unnamed user, mask and other
-            permissions.
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          format: int32
-          knownPrimaryType: int
-          name:
-            fixed: false
-            raw: Int
-        name:
-          fixed: false
-          raw: permission
-        realPath:
-          - permission
-        serializedName: permission
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the indicator of whether the sticky bit is on or off.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: boolean
-          name:
-            fixed: false
-            raw: Boolean
-        name:
-          fixed: false
-          raw: stickyBit
-        realPath:
-          - stickyBit
-        serializedName: stickyBit
-    serializedName: AclStatus
-  - &ref_16
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store file or directory Access Control List information.
-    name:
-      fixed: false
-      raw: AclStatusResult
-    properties:
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the AclStatus object for a given file or directory.
-        isConstant: false
-        isReadOnly: false
-        isRequired: false
-        modelType: *ref_0
-        name:
-          fixed: false
-          raw: AclStatus
-        realPath:
-          - AclStatus
-        serializedName: AclStatus
-    serializedName: AclStatusResult
-  - &ref_1
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store content summary information
-    name:
-      fixed: false
-      raw: ContentSummary
-    properties:
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the number of directories.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            fixed: false
-            raw: Long
-        name:
-          fixed: false
-          raw: directoryCount
-        realPath:
-          - directoryCount
-        serializedName: directoryCount
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the number of files.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            fixed: false
-            raw: Long
-        name:
-          fixed: false
-          raw: fileCount
-        realPath:
-          - fileCount
-        serializedName: fileCount
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the number of bytes used by the content.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            fixed: false
-            raw: Long
-        name:
-          fixed: false
-          raw: length
-        realPath:
-          - length
-        serializedName: length
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the disk space consumed by the content.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            fixed: false
-            raw: Long
-        name:
-          fixed: false
-          raw: spaceConsumed
-        realPath:
-          - spaceConsumed
-        serializedName: spaceConsumed
-    serializedName: ContentSummary
-  - &ref_13
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store filesystem content summary information response.
-    name:
-      fixed: false
-      raw: ContentSummaryResult
-    properties:
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the content summary for the specified path
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType: *ref_1
-        name:
-          fixed: false
-          raw: ContentSummary
-        realPath:
-          - ContentSummary
-        serializedName: ContentSummary
-    serializedName: ContentSummaryResult
-  - &ref_3
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store file or directory information.
-    name:
-      fixed: false
-      raw: FileStatusProperties
-    properties:
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the last access time as ticks since the epoch.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            fixed: false
-            raw: Long
-        name:
-          fixed: false
-          raw: accessTime
-        realPath:
-          - accessTime
-        serializedName: accessTime
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the block size for the file.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            fixed: false
-            raw: Long
-        name:
-          fixed: false
-          raw: blockSize
-        realPath:
-          - blockSize
-        serializedName: blockSize
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the number of children in the directory.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            fixed: false
-            raw: Long
-        name:
-          fixed: false
-          raw: childrenNum
-        realPath:
-          - childrenNum
-        serializedName: childrenNum
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: >-
-            Gets the expiration time, if any, as ticks since the epoch. If the
-            value is 0 or DateTime.MaxValue there is no expiration.
-        extensions:
-          x-ms-client-name: expirationTime
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            fixed: false
-            raw: Long
-        name:
-          fixed: false
-          raw: msExpirationTime
-        realPath:
-          - msExpirationTime
-        serializedName: msExpirationTime
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the group owner.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: group
-        realPath:
-          - group
-        serializedName: group
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the number of bytes in a file.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            fixed: false
-            raw: Long
-        name:
-          fixed: false
-          raw: length
-        realPath:
-          - length
-        serializedName: length
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the modification time as ticks since the epoch.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          format: int64
-          knownPrimaryType: long
-          name:
-            fixed: false
-            raw: Long
-        name:
-          fixed: false
-          raw: modificationTime
-        realPath:
-          - modificationTime
-        serializedName: modificationTime
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the user who is the owner.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: owner
-        realPath:
-          - owner
-        serializedName: owner
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the path suffix.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: pathSuffix
-        realPath:
-          - pathSuffix
-        serializedName: pathSuffix
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the permission represented as an string.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: string
-          name:
-            fixed: false
-            raw: String
-        name:
-          fixed: false
-          raw: permission
-        realPath:
-          - permission
-        serializedName: permission
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the type of the path object.
-        extensions:
-          x-ms-enum:
-            modelAsString: false
-            name: FileType
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType: *ref_2
-        name:
-          fixed: false
-          raw: type
-        realPath:
-          - type
-        serializedName: type
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: 'flag to indicate if extended acls are enabled '
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: PrimaryType
-          deprecated: false
-          knownPrimaryType: boolean
-          name:
-            fixed: false
-            raw: Boolean
-        name:
-          fixed: false
-          raw: aclBit
-        realPath:
-          - aclBit
-        serializedName: aclBit
-    serializedName: FileStatusProperties
-  - &ref_4
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store file status list information.
-    name:
-      fixed: false
-      raw: FileStatuses
-    properties:
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the object containing the list of properties of the files.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType:
-          $type: SequenceType
-          deprecated: false
-          elementType: *ref_3
-          name:
-            fixed: false
-        name:
-          fixed: false
-          raw: FileStatus
-        realPath:
-          - FileStatus
-        serializedName: FileStatus
-    serializedName: FileStatuses
-  - &ref_12
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store filesystem file status list information response.
-    name:
-      fixed: false
-      raw: FileStatusesResult
-    properties:
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the object representing the list of file statuses.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType: *ref_4
-        name:
-          fixed: false
-          raw: FileStatuses
-        realPath:
-          - FileStatuses
-        serializedName: FileStatuses
-    serializedName: FileStatusesResult
-  - &ref_14
-    $type: CompositeType
-    containsConstantProperties: false
-    deprecated: false
-    documentation: Data Lake Store filesystem file status information response.
-    name:
-      fixed: false
-      raw: FileStatusResult
-    properties:
-      - collectionFormat: none
-        defaultValue:
-          fixed: false
-        deprecated: false
-        documentation:
-          fixed: false
-          raw: the file status object associated with the specified path.
-        isConstant: false
-        isReadOnly: true
-        isRequired: false
-        modelType: *ref_3
-        name:
-          fixed: false
-          raw: FileStatus
-        realPath:
-          - FileStatus
-        serializedName: FileStatus
-    serializedName: FileStatusResult
-  - $type: CompositeType
-    baseModelType: *ref_5
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating that one more arguments is
-      incorrect. Thrown when a 400 error response code is returned (bad
-      request).
-    extensions:
-      x-ms-discriminator-value: IllegalArgumentException
-    name:
-      fixed: false
-      raw: AdlsIllegalArgumentException
-    serializedName: IllegalArgumentException
-  - $type: CompositeType
-    baseModelType: *ref_5
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating that the requested operation is not
-      supported. Thrown when a 400 error response code is returned (bad
-      request).
-    extensions:
-      x-ms-discriminator-value: UnsupportedOperationException
-    name:
-      fixed: false
-      raw: AdlsUnsupportedOperationException
-    serializedName: UnsupportedOperationException
-  - $type: CompositeType
-    baseModelType: *ref_5
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating that access is denied. Thrown when a
-      401 error response code is returned (Unauthorized).
-    extensions:
-      x-ms-discriminator-value: SecurityException
-    name:
-      fixed: false
-      raw: AdlsSecurityException
-    serializedName: SecurityException
-  - $type: CompositeType
-    baseModelType: *ref_5
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating there was an IO (read or write)
-      error. Thrown when a 403 error response code is returned (forbidden).
-    extensions:
-      x-ms-discriminator-value: IOException
-    name:
-      fixed: false
-      raw: AdlsIOException
-    serializedName: IOException
-  - $type: CompositeType
-    baseModelType: *ref_5
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating the file or folder could not be
-      found. Thrown when a 404 error response code is returned (not found).
-    extensions:
-      x-ms-discriminator-value: FileNotFoundException
-    name:
-      fixed: false
-      raw: AdlsFileNotFoundException
-    serializedName: FileNotFoundException
-  - $type: CompositeType
-    baseModelType: *ref_5
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating the file or folder already exists.
-      Thrown when a 403 error response code is returned (forbidden).
-    extensions:
-      x-ms-discriminator-value: FileAlreadyExistsException
-    name:
-      fixed: false
-      raw: AdlsFileAlreadyExistsException
-    serializedName: FileAlreadyExistsException
-  - $type: CompositeType
-    baseModelType: *ref_5
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating the append or read is from a bad
-      offset. Thrown when a 400 error response code is returned for append and
-      open operations (Bad request).
-    extensions:
-      x-ms-discriminator-value: BadOffsetException
-    name:
-      fixed: false
-      raw: AdlsBadOffsetException
-    serializedName: BadOffsetException
-  - $type: CompositeType
-    baseModelType: *ref_5
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown when an unexpected error occurs during an
-      operation. Thrown when a 500 error response code is returned (Internal
-      server error).
-    extensions:
-      x-ms-discriminator-value: RuntimeException
-    name:
-      fixed: false
-      raw: AdlsRuntimeException
-    serializedName: RuntimeException
-  - $type: CompositeType
-    baseModelType: *ref_5
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating that access is denied due to
-      insufficient permissions. Thrown when a 403 error response code is
-      returned (forbidden).
-    extensions:
-      x-ms-discriminator-value: AccessControlException
-    name:
-      fixed: false
-      raw: AdlsAccessControlException
-    serializedName: AccessControlException
-  - $type: CompositeType
-    baseModelType: *ref_5
-    containsConstantProperties: false
-    deprecated: false
-    documentation: >-
-      A WebHDFS exception thrown indicating that the request is being throttled.
-      Reducing the number of requests or request size helps to mitigate this
-      error.
-    extensions:
-      x-ms-discriminator-value: ThrottledException
-    name:
-      fixed: false
-      raw: AdlsThrottledException
-    serializedName: ThrottledException
-  - *ref_5
-  - *ref_6
 modelsName: Models
 name: DataLakeStoreFileSystemManagementClient
 namespace: ''
 operations:
   - methods:
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -1186,7 +232,7 @@ operations:
             isConstant: false
             isRequired: true
             location: query
-            modelType: *ref_7
+            modelType: *ref_0
             name:
               fixed: false
               raw: expiryOption
@@ -1237,7 +283,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: &ref_10
+          - clientProperty: &ref_3
               collectionFormat: none
               defaultValue:
                 fixed: false
@@ -1293,7 +339,11 @@ operations:
         serializedName: FileSystem_SetFileExpiry
         url: '/WebHdfsExt/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -1393,7 +443,7 @@ operations:
             isConstant: false
             isRequired: false
             location: query
-            modelType: *ref_8
+            modelType: *ref_1
             name:
               fixed: false
               raw: appendMode
@@ -1469,12 +519,12 @@ operations:
             isConstant: false
             isRequired: false
             location: query
-            modelType: *ref_9
+            modelType: *ref_2
             name:
               fixed: false
               raw: syncFlag
             serializedName: syncFlag
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1507,7 +557,11 @@ operations:
         serializedName: FileSystem_ConcurrentAppend
         url: '/WebHdfsExt/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: Checks if the specified access is available at the given path.
@@ -1599,7 +653,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1632,7 +686,11 @@ operations:
         serializedName: FileSystem_CheckAccess
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: Creates a directory.
@@ -1727,7 +785,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1754,15 +812,23 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_11
+            body: &ref_4
+              $type: MultiType
+              deprecated: false
+              name:
+                fixed: false
             isNullable: true
         returnType:
-          body: *ref_11
+          body: *ref_4
           isNullable: true
         serializedName: FileSystem_Mkdirs
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -1864,7 +930,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -1897,7 +963,11 @@ operations:
         serializedName: FileSystem_Concat
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -2029,7 +1099,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2062,7 +1132,11 @@ operations:
         serializedName: FileSystem_MsConcat
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -2247,7 +1321,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2274,15 +1348,23 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_12
+            body: &ref_5
+              $type: MultiType
+              deprecated: false
+              name:
+                fixed: false
             isNullable: true
         returnType:
-          body: *ref_12
+          body: *ref_5
           isNullable: true
         serializedName: FileSystem_ListFileStatus
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: Gets the file content summary object specified by the file path.
@@ -2356,7 +1438,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2383,15 +1465,23 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_13
+            body: &ref_6
+              $type: MultiType
+              deprecated: false
+              name:
+                fixed: false
             isNullable: true
         returnType:
-          body: *ref_13
+          body: *ref_6
           isNullable: true
         serializedName: FileSystem_GetContentSummary
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: Get the file status object specified by the file path.
@@ -2498,7 +1588,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2525,10 +1615,14 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_14
+            body: &ref_7
+              $type: MultiType
+              deprecated: false
+              name:
+                fixed: false
             isNullable: true
         returnType:
-          body: *ref_14
+          body: *ref_7
           isNullable: true
         serializedName: FileSystem_GetFileStatus
         url: '/webhdfs/v1/{path}'
@@ -2704,7 +1798,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -2731,7 +1825,7 @@ operations:
           - application/octet-stream
         responses:
           OK:
-            body: &ref_15
+            body: &ref_8
               $type: PrimaryType
               deprecated: false
               knownPrimaryType: stream
@@ -2740,12 +1834,16 @@ operations:
                 raw: Stream
             isNullable: true
         returnType:
-          body: *ref_15
+          body: *ref_8
           isNullable: true
         serializedName: FileSystem_Open
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: "Used for serial appends to the specified file.\_NOTE: The target must not contain data added by ConcurrentAppend. ConcurrentAppend and Append cannot be used interchangeably; once a target file has been modified using either of these append options, the other append option cannot be used on the target file."
@@ -2872,7 +1970,7 @@ operations:
             isConstant: false
             isRequired: false
             location: query
-            modelType: *ref_9
+            modelType: *ref_2
             name:
               fixed: false
               raw: syncFlag
@@ -2976,7 +2074,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -3009,7 +2107,11 @@ operations:
         serializedName: FileSystem_Append
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -3137,7 +2239,7 @@ operations:
             isConstant: false
             isRequired: false
             location: query
-            modelType: *ref_9
+            modelType: *ref_2
             name:
               fixed: false
               raw: syncFlag
@@ -3240,7 +2342,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -3273,7 +2375,11 @@ operations:
         serializedName: FileSystem_Create
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: Sets the Access Control List (ACL) for a file or folder.
@@ -3365,7 +2471,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -3398,7 +2504,11 @@ operations:
         serializedName: FileSystem_SetAcl
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -3492,7 +2602,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -3525,7 +2635,11 @@ operations:
         serializedName: FileSystem_ModifyAclEntries
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -3619,7 +2733,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -3652,7 +2766,11 @@ operations:
         serializedName: FileSystem_RemoveAclEntries
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -3722,7 +2840,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -3755,7 +2873,11 @@ operations:
         serializedName: FileSystem_RemoveDefaultAcl
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -3825,7 +2947,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -3858,7 +2980,11 @@ operations:
         serializedName: FileSystem_RemoveAcl
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: >-
@@ -3962,7 +3088,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -3989,15 +3115,23 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_16
+            body: &ref_9
+              $type: MultiType
+              deprecated: false
+              name:
+                fixed: false
             isNullable: true
         returnType:
-          body: *ref_16
+          body: *ref_9
           isNullable: true
         serializedName: FileSystem_GetAclStatus
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: 'Deletes the requested file or directory, optionally recursively.'
@@ -4089,7 +3223,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -4116,15 +3250,23 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_11
+            body: &ref_10
+              $type: MultiType
+              deprecated: false
+              name:
+                fixed: false
             isNullable: true
         returnType:
-          body: *ref_11
+          body: *ref_10
           isNullable: true
         serializedName: FileSystem_Delete
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: Rename a file or directory.
@@ -4216,7 +3358,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -4243,7 +3385,11 @@ operations:
           - application/json
         responses:
           OK:
-            body: *ref_11
+            body: &ref_11
+              $type: MultiType
+              deprecated: false
+              name:
+                fixed: false
             isNullable: true
         returnType:
           body: *ref_11
@@ -4251,7 +3397,11 @@ operations:
         serializedName: FileSystem_Rename
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: Sets the owner of a file or directory.
@@ -4367,7 +3517,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -4400,7 +3550,11 @@ operations:
         serializedName: FileSystem_SetOwner
         url: '/webhdfs/v1/{path}'
       - defaultResponse:
-          body: *ref_6
+          body:
+            $type: MultiType
+            deprecated: false
+            name:
+              fixed: false
           isNullable: true
         deprecated: false
         description: Sets the permission of the file or folder.
@@ -4492,7 +3646,7 @@ operations:
               fixed: false
               raw: op
             serializedName: op
-          - clientProperty: *ref_10
+          - clientProperty: *ref_3
             collectionFormat: none
             defaultValue:
               fixed: false
@@ -4531,5 +3685,5 @@ operations:
     typeName:
       fixed: false
 properties:
-  - *ref_10
-  - *ref_17
+  - *ref_3
+  - *ref_12

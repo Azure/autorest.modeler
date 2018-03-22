@@ -88,7 +88,7 @@ namespace AutoRest.Modeler.JsonConverters
         }
 
         /// <summary>
-        /// Returns the value of the reference or the value of the name and locattion (query, path, body)
+        /// Returns the value of the reference or the value of the name and location (query, path, body)
         /// </summary>
         /// <param name="param"></param>
         /// <returns></returns>

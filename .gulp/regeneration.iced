@@ -88,12 +88,17 @@ mappingsTestServer = {
 mappingsSpecs = {
   'specs-compute'          : 'compute/resource-manager/Microsoft.Compute/2017-03-30/compute.json',
   'specs-network'          : 'network/resource-manager/Microsoft.Network/2017-10-01/network.json',
-  'specs-web'              : 'web/resource-manager/Microsoft.Web/2016-08-01/WebApps.json',
+  # 'specs-web'              : 'web/resource-manager/Microsoft.Web/2016-08-01/WebApps.json', # Resource doesn't have type: object
   'specs-mobileengagement' : 'mobileengagement/resource-manager/Microsoft.MobileEngagement/2014-12-01/mobile-engagement.json',
   'specs-datalake-store'   : 'datalake-store/data-plane/Microsoft.DataLakeStore/2016-11-01/filesystem.json',
   'specs-search'           : 'search/data-plane/Microsoft.Search/2016-09-01/searchindex.json',
   'specs-batch'            : 'batch/data-plane/Microsoft.Batch/2017-09-01.6.0/BatchService.json',
   'specs-spellcheck'       : 'cognitiveservices/data-plane/SpellCheck/V1.0/SpellCheck.json'
+}
+
+mappingsCustom = {
+  'deprecated'          : 'deprecated.yaml',
+  'object-types'        : 'object-types.yaml'
 }
 
 task 'regenerate-testserver', '', (done) ->
@@ -108,6 +113,14 @@ task 'regenerate-specs', '', (done) ->
   regenExpected {
     'inputBaseDir': "https://github.com/Azure/azure-rest-api-specs/blob/da7ee47971be752d22b4df5c3e137d3429ce9b9c/specification",
     'mappings': mappingsSpecs,
+    'outputDir': 'test/Expected'
+  },done
+  return null
+
+task 'regenerate-custom', '', (done) ->
+  regenExpected {
+    'inputBaseDir': "test/Resource/SwaggerGen",
+    'mappings': mappingsCustom,
     'outputDir': 'test/Expected'
   },done
   return null

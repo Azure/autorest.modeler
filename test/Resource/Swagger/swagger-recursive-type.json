@@ -88,6 +88,7 @@
   "components": {
     "schemas": {
       "Product": {
+        "type": "object",
         "properties": {
           "product_id": {
             "type": "string",
@@ -105,6 +106,7 @@
         }
       },
       "Error": {
+        "type": "object",
         "properties": {
           "code": {
             "type": "integer",

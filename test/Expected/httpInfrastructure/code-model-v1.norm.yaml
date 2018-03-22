@@ -35,12 +35,12 @@ headerTypes:
           $id: '53'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '57'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '55'
             $type: PrimaryType
@@ -89,12 +89,12 @@ headerTypes:
           $id: '64'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '68'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '66'
             $type: PrimaryType
@@ -143,12 +143,12 @@ headerTypes:
           $id: '75'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '79'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '77'
             $type: PrimaryType
@@ -197,12 +197,12 @@ headerTypes:
           $id: '86'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '90'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '88'
             $type: PrimaryType
@@ -251,12 +251,12 @@ headerTypes:
           $id: '97'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '101'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '99'
             $type: PrimaryType
@@ -305,12 +305,12 @@ headerTypes:
           $id: '108'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '112'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '110'
             $type: PrimaryType
@@ -359,12 +359,12 @@ headerTypes:
           $id: '119'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '123'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '121'
             $type: PrimaryType
@@ -413,12 +413,12 @@ headerTypes:
           $id: '130'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '134'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '132'
             $type: PrimaryType
@@ -467,12 +467,12 @@ headerTypes:
           $id: '141'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '145'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '143'
             $type: PrimaryType
@@ -521,12 +521,12 @@ headerTypes:
           $id: '152'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '156'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '154'
             $type: PrimaryType
@@ -575,12 +575,12 @@ headerTypes:
           $id: '163'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '167'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '165'
             $type: PrimaryType
@@ -629,12 +629,12 @@ headerTypes:
           $id: '174'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '178'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '176'
             $type: PrimaryType
@@ -683,12 +683,12 @@ headerTypes:
           $id: '185'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '189'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '187'
             $type: PrimaryType
@@ -737,12 +737,12 @@ headerTypes:
           $id: '196'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '200'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '198'
             $type: PrimaryType
@@ -791,12 +791,12 @@ headerTypes:
           $id: '207'
           $type: EnumType
           deprecated: false
-          modelAsExtensible: false
           modelAsString: true
           name:
             $id: '211'
             fixed: false
             raw: ''
+          oldModelAsString: false
           underlyingType:
             $id: '209'
             $type: PrimaryType

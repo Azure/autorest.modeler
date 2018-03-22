@@ -42,8 +42,11 @@ namespace AutoRest.Modeler
 
             IModelType result = null;
 
-            // If it's a primitive type, let the parent build service handle it
-            if (_schema.IsPrimitiveType())
+            if (_schema.Type == null)
+            {
+                result = new MultiType();
+            }
+            else if (_schema.IsPrimitiveType()) // If it's a primitive type, let the parent build service handle it
             {
                 result = _schema.GetBuilder(Modeler).ParentBuildServiceType(serviceTypeName, required);
             }

@@ -115,6 +115,7 @@
   "components": {
     "schemas": {
       "Product": {
+        "type": "object",
         "description": "The product documentation.",
         "required": [
           "myintconst",
@@ -197,6 +198,7 @@
         }
       },
       "Error": {
+        "type": "object",
         "properties": {
           "code": {
             "type": "integer",
