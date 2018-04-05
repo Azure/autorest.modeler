@@ -124,5 +124,5 @@ task 'regenerate-custom', '', (done) ->
   },done
   return null
 
-task 'regenerate', "regenerate expected code for tests", ['regenerate-testserver', 'regenerate-specs'], (done) ->
+task 'regenerate', "regenerate expected code for tests", ['regenerate-testserver', 'regenerate-specs', 'regenerate-custom'], (done) ->
   done();

@@ -1,0 +1,1131 @@
+---
+$id: '1'
+apiVersion: '2016-07-07'
+baseUrl: 'http://localhost'
+documentation: >-
+  Deprecated stuff mixed with non-deprecated stuff (having "yes" or "no" in it's
+  name, respectively)
+enumTypes:
+  - $id: '70'
+    $type: EnumType
+    deprecated: false
+    modelAsString: false
+    name:
+      $id: '75'
+      fixed: false
+      raw: Enum1No
+    oldModelAsString: false
+    underlyingType:
+      $id: '73'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '74'
+        fixed: false
+        raw: String
+    values:
+      - $id: '71'
+        name: a
+        serializedName: a
+      - $id: '72'
+        name: b
+        serializedName: b
+  - $id: '76'
+    $type: EnumType
+    deprecated: true
+    deprecationMessage: This type is deprecated. Please do not use it any longer.
+    modelAsString: false
+    name:
+      $id: '81'
+      fixed: false
+      raw: Enum1Yes
+    oldModelAsString: false
+    underlyingType:
+      $id: '79'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '80'
+        fixed: false
+        raw: String
+    values:
+      - $id: '77'
+        name: a
+        serializedName: a
+      - $id: '78'
+        name: b
+        serializedName: b
+  - $id: '82'
+    $type: EnumType
+    deprecated: true
+    deprecationMessage: This enum will be removed in 2005.
+    modelAsString: false
+    name:
+      $id: '87'
+      fixed: false
+      raw: Enum1Custom
+    oldModelAsString: false
+    underlyingType:
+      $id: '85'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '86'
+        fixed: false
+        raw: String
+    values:
+      - $id: '83'
+        name: a
+        serializedName: a
+      - $id: '84'
+        name: b
+        serializedName: b
+  - $id: '88'
+    $type: EnumType
+    deprecated: true
+    deprecationMessage: This type is deprecated. Please use Enum1No instead.
+    modelAsString: false
+    name:
+      $id: '93'
+      fixed: false
+      raw: Enum1Replaced
+    oldModelAsString: false
+    underlyingType:
+      $id: '91'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '92'
+        fixed: false
+        raw: String
+    values:
+      - $id: '89'
+        name: a
+        serializedName: a
+      - $id: '90'
+        name: b
+        serializedName: b
+  - $id: '94'
+    $type: EnumType
+    deprecated: false
+    modelAsString: true
+    name:
+      $id: '99'
+      fixed: false
+      raw: Enum2No
+    oldModelAsString: false
+    underlyingType:
+      $id: '97'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '98'
+        fixed: false
+        raw: String
+    values:
+      - $id: '95'
+        name: a
+        serializedName: a
+      - $id: '96'
+        name: b
+        serializedName: b
+  - $id: '100'
+    $type: EnumType
+    deprecated: true
+    deprecationMessage: This type is deprecated. Please do not use it any longer.
+    modelAsString: true
+    name:
+      $id: '105'
+      fixed: false
+      raw: Enum2Yes
+    oldModelAsString: false
+    underlyingType:
+      $id: '103'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '104'
+        fixed: false
+        raw: String
+    values:
+      - $id: '101'
+        name: a
+        serializedName: a
+      - $id: '102'
+        name: b
+        serializedName: b
+  - $id: '106'
+    $type: EnumType
+    deprecated: true
+    deprecationMessage: This enum will be removed in 2005.
+    modelAsString: true
+    name:
+      $id: '111'
+      fixed: false
+      raw: Enum2Custom
+    oldModelAsString: false
+    underlyingType:
+      $id: '109'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '110'
+        fixed: false
+        raw: String
+    values:
+      - $id: '107'
+        name: a
+        serializedName: a
+      - $id: '108'
+        name: b
+        serializedName: b
+  - $id: '112'
+    $type: EnumType
+    deprecated: true
+    deprecationMessage: This type is deprecated. Please use Enum2No instead.
+    modelAsString: true
+    name:
+      $id: '117'
+      fixed: false
+      raw: Enum2Replaced
+    oldModelAsString: false
+    underlyingType:
+      $id: '115'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '116'
+        fixed: false
+        raw: String
+    values:
+      - $id: '113'
+        name: a
+        serializedName: a
+      - $id: '114'
+        name: b
+        serializedName: b
+  - $id: '118'
+    $type: EnumType
+    deprecated: false
+    modelAsString: false
+    name:
+      $id: '123'
+      fixed: false
+      raw: Enum3No
+    oldModelAsString: false
+    underlyingType:
+      $id: '121'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '122'
+        fixed: false
+        raw: String
+    values:
+      - $id: '119'
+        name: a
+        serializedName: a
+      - $id: '120'
+        name: b
+        serializedName: b
+  - $id: '124'
+    $type: EnumType
+    deprecated: true
+    deprecationMessage: This type is deprecated. Please do not use it any longer.
+    modelAsString: false
+    name:
+      $id: '129'
+      fixed: false
+      raw: Enum3Yes
+    oldModelAsString: false
+    underlyingType:
+      $id: '127'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '128'
+        fixed: false
+        raw: String
+    values:
+      - $id: '125'
+        name: a
+        serializedName: a
+      - $id: '126'
+        name: b
+        serializedName: b
+  - $id: '130'
+    $type: EnumType
+    deprecated: true
+    deprecationMessage: This enum will be removed in 2005.
+    modelAsString: false
+    name:
+      $id: '135'
+      fixed: false
+      raw: Enum3Custom
+    oldModelAsString: false
+    underlyingType:
+      $id: '133'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '134'
+        fixed: false
+        raw: String
+    values:
+      - $id: '131'
+        name: a
+        serializedName: a
+      - $id: '132'
+        name: b
+        serializedName: b
+  - $id: '136'
+    $type: EnumType
+    deprecated: true
+    deprecationMessage: This type is deprecated. Please use Enum3No instead.
+    modelAsString: false
+    name:
+      $id: '141'
+      fixed: false
+      raw: Enum3Replaced
+    oldModelAsString: false
+    underlyingType:
+      $id: '139'
+      $type: PrimaryType
+      deprecated: false
+      knownPrimaryType: string
+      name:
+        $id: '140'
+        fixed: false
+        raw: String
+    values:
+      - $id: '137'
+        name: a
+        serializedName: a
+      - $id: '138'
+        name: b
+        serializedName: b
+modelTypes:
+  - $id: '2'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '9'
+      fixed: false
+      raw: PetNo
+    properties:
+      - $id: '3'
+        collectionFormat: none
+        defaultValue:
+          $id: '4'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '5'
+          fixed: false
+          raw: name of the pet
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '7'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '8'
+            fixed: false
+            raw: String
+        name:
+          $id: '6'
+          fixed: false
+          raw: name
+        realPath:
+          - name
+        serializedName: name
+    serializedName: PetNo
+  - $id: '10'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: true
+    deprecationMessage: This type is deprecated. Please do not use it any longer.
+    extensions:
+      x-deprecated: true
+    name:
+      $id: '17'
+      fixed: false
+      raw: PetYes
+    properties:
+      - $id: '11'
+        collectionFormat: none
+        defaultValue:
+          $id: '12'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '13'
+          fixed: false
+          raw: name of the pet
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '15'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '16'
+            fixed: false
+            raw: String
+        name:
+          $id: '14'
+          fixed: false
+          raw: name
+        realPath:
+          - name
+        serializedName: name
+    serializedName: PetYes
+  - $id: '18'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: true
+    deprecationMessage: This type will be removed in 2005.
+    extensions:
+      x-deprecated:
+        description: This type will be removed in 2005.
+    name:
+      $id: '25'
+      fixed: false
+      raw: PetCustom
+    properties:
+      - $id: '19'
+        collectionFormat: none
+        defaultValue:
+          $id: '20'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '21'
+          fixed: false
+          raw: name of the pet
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '23'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '24'
+            fixed: false
+            raw: String
+        name:
+          $id: '22'
+          fixed: false
+          raw: name
+        realPath:
+          - name
+        serializedName: name
+    serializedName: PetCustom
+  - $id: '26'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: true
+    deprecationMessage: This type is deprecated. Please use PetNo instead.
+    extensions:
+      x-deprecated:
+        replaced-by: PetNo
+    name:
+      $id: '33'
+      fixed: false
+      raw: PetReplaced
+    properties:
+      - $id: '27'
+        collectionFormat: none
+        defaultValue:
+          $id: '28'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '29'
+          fixed: false
+          raw: name of the pet
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '31'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '32'
+            fixed: false
+            raw: String
+        name:
+          $id: '30'
+          fixed: false
+          raw: name
+        realPath:
+          - name
+        serializedName: name
+    serializedName: PetReplaced
+  - $id: '34'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    name:
+      $id: '59'
+      fixed: false
+      raw: Pet
+    properties:
+      - $id: '35'
+        collectionFormat: none
+        defaultValue:
+          $id: '36'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '37'
+          fixed: false
+          raw: name of the pet
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '39'
+          $type: PrimaryType
+          deprecated: false
+          knownPrimaryType: string
+          name:
+            $id: '40'
+            fixed: false
+            raw: String
+        name:
+          $id: '38'
+          fixed: false
+          raw: nameNo
+        realPath:
+          - nameNo
+        serializedName: nameNo
+      - $id: '41'
+        collectionFormat: none
+        defaultValue:
+          $id: '42'
+          fixed: false
+        deprecated: true
+        deprecationMessage: This property is deprecated. Please do not use it any longer.
+        documentation:
+          $id: '43'
+          fixed: false
+          raw: name of the pet
+        extensions:
+          x-deprecated: true
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '45'
+          $type: PrimaryType
+          deprecated: true
+          deprecationMessage: This type is deprecated. Please do not use it any longer.
+          knownPrimaryType: string
+          name:
+            $id: '46'
+            fixed: false
+            raw: String
+        name:
+          $id: '44'
+          fixed: false
+          raw: nameYes
+        realPath:
+          - nameYes
+        serializedName: nameYes
+      - $id: '47'
+        collectionFormat: none
+        defaultValue:
+          $id: '48'
+          fixed: false
+        deprecated: true
+        deprecationMessage: This property will be removed in 2005.
+        documentation:
+          $id: '49'
+          fixed: false
+          raw: name of the pet
+        extensions:
+          x-deprecated:
+            description: This property will be removed in 2005.
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '51'
+          $type: PrimaryType
+          deprecated: true
+          deprecationMessage: This property will be removed in 2005.
+          knownPrimaryType: string
+          name:
+            $id: '52'
+            fixed: false
+            raw: String
+        name:
+          $id: '50'
+          fixed: false
+          raw: nameCustom
+        realPath:
+          - nameCustom
+        serializedName: nameCustom
+      - $id: '53'
+        collectionFormat: none
+        defaultValue:
+          $id: '54'
+          fixed: false
+        deprecated: true
+        deprecationMessage: This property is deprecated. Please use nameNo instead.
+        documentation:
+          $id: '55'
+          fixed: false
+          raw: name of the pet
+        extensions:
+          x-deprecated:
+            replaced-by: nameNo
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $id: '57'
+          $type: PrimaryType
+          deprecated: true
+          deprecationMessage: This type is deprecated. Please use nameNo instead.
+          knownPrimaryType: string
+          name:
+            $id: '58'
+            fixed: false
+            raw: String
+        name:
+          $id: '56'
+          fixed: false
+          raw: nameReplaced
+        realPath:
+          - nameReplaced
+        serializedName: nameReplaced
+    serializedName: Pet
+  - $id: '60'
+    $type: CompositeType
+    containsConstantProperties: false
+    deprecated: false
+    documentation: >-
+      Properties should not inherit deprecatedness of types (type could be
+      swapped out but property stays the same).
+
+      Note that service teams will get a warning at the property in the
+      generated C# SDK, but that's exactly what you want -- bother the service
+      team in that case, not the user.
+    name:
+      $id: '69'
+      fixed: false
+      raw: ChildPet
+    properties:
+      - $id: '61'
+        collectionFormat: none
+        defaultValue:
+          $id: '62'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '63'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $ref: '2'
+        name:
+          $id: '64'
+          fixed: false
+          raw: parentNo
+        realPath:
+          - parentNo
+        serializedName: parentNo
+      - $id: '65'
+        collectionFormat: none
+        defaultValue:
+          $id: '66'
+          fixed: false
+        deprecated: false
+        documentation:
+          $id: '67'
+          fixed: false
+        isConstant: false
+        isReadOnly: false
+        isRequired: false
+        modelType:
+          $ref: '10'
+        name:
+          $id: '68'
+          fixed: false
+          raw: parentYes
+        realPath:
+          - parentYes
+        serializedName: parentYes
+    serializedName: ChildPet
+modelsName: Models
+name: Deprecated
+namespace: ''
+operations:
+  - $id: '142'
+    methods:
+      - $id: '143'
+        defaultResponse:
+          $id: '153'
+          isNullable: true
+        deprecated: false
+        group:
+          $id: '151'
+          fixed: false
+          raw: Path
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '150'
+          fixed: false
+          raw: 'No'
+        parameters:
+          - $id: '144'
+            collectionFormat: none
+            defaultValue:
+              $id: '145'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '146'
+              fixed: false
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '148'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '149'
+                fixed: false
+                raw: String
+            name:
+              $id: '147'
+              fixed: false
+              raw: arg
+            serializedName: arg
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '152'
+            isNullable: true
+        returnType:
+          $id: '154'
+          isNullable: true
+        serializedName: Path_No
+        url: /path/no
+      - $id: '155'
+        defaultResponse:
+          $id: '165'
+          isNullable: true
+        deprecated: true
+        deprecationMessage: This operation is deprecated. Please do not use it any longer.
+        group:
+          $id: '163'
+          fixed: false
+          raw: Path
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '162'
+          fixed: false
+          raw: Yes1
+        parameters:
+          - $id: '156'
+            collectionFormat: none
+            defaultValue:
+              $id: '157'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '158'
+              fixed: false
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '160'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '161'
+                fixed: false
+                raw: String
+            name:
+              $id: '159'
+              fixed: false
+              raw: arg
+            serializedName: arg
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '164'
+            isNullable: true
+        returnType:
+          $id: '166'
+          isNullable: true
+        serializedName: Path_Yes1
+        url: /path/yes1
+      - $id: '167'
+        defaultResponse:
+          $id: '177'
+          isNullable: true
+        deprecated: true
+        deprecationMessage: This operation is deprecated. Please do not use it any longer.
+        extensions:
+          x-deprecated: true
+        group:
+          $id: '175'
+          fixed: false
+          raw: Path
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '174'
+          fixed: false
+          raw: Yes2
+        parameters:
+          - $id: '168'
+            collectionFormat: none
+            defaultValue:
+              $id: '169'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '170'
+              fixed: false
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '172'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '173'
+                fixed: false
+                raw: String
+            name:
+              $id: '171'
+              fixed: false
+              raw: arg
+            serializedName: arg
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '176'
+            isNullable: true
+        returnType:
+          $id: '178'
+          isNullable: true
+        serializedName: Path_Yes2
+        url: /path/yes2
+      - $id: '179'
+        defaultResponse:
+          $id: '189'
+          isNullable: true
+        deprecated: true
+        deprecationMessage: This operation will be removed in 2005.
+        extensions:
+          x-deprecated:
+            description: This operation will be removed in 2005.
+        group:
+          $id: '187'
+          fixed: false
+          raw: Path
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '186'
+          fixed: false
+          raw: Custom
+        parameters:
+          - $id: '180'
+            collectionFormat: none
+            defaultValue:
+              $id: '181'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '182'
+              fixed: false
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '184'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '185'
+                fixed: false
+                raw: String
+            name:
+              $id: '183'
+              fixed: false
+              raw: arg
+            serializedName: arg
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '188'
+            isNullable: true
+        returnType:
+          $id: '190'
+          isNullable: true
+        serializedName: Path_Custom
+        url: /path/custom
+      - $id: '191'
+        defaultResponse:
+          $id: '201'
+          isNullable: true
+        deprecated: true
+        deprecationMessage: This operation is deprecated. Please use No instead.
+        extensions:
+          x-deprecated:
+            replaced-by: 'No'
+        group:
+          $id: '199'
+          fixed: false
+          raw: Path
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '198'
+          fixed: false
+          raw: Replaced
+        parameters:
+          - $id: '192'
+            collectionFormat: none
+            defaultValue:
+              $id: '193'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '194'
+              fixed: false
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '196'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '197'
+                fixed: false
+                raw: String
+            name:
+              $id: '195'
+              fixed: false
+              raw: arg
+            serializedName: arg
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '200'
+            isNullable: true
+        returnType:
+          $id: '202'
+          isNullable: true
+        serializedName: Path_Replaced
+        url: /path/replaced
+      - $id: '203'
+        defaultResponse:
+          $id: '231'
+          isNullable: true
+        deprecated: true
+        deprecationMessage: This operation is deprecated. Please use No instead.
+        extensions:
+          x-deprecated:
+            replaced-by: 'No'
+        group:
+          $id: '229'
+          fixed: false
+          raw: Path
+        hidden: false
+        httpMethod: get
+        isAbsoluteUrl: false
+        name:
+          $id: '228'
+          fixed: false
+          raw: Replaced1
+        parameters:
+          - $id: '204'
+            collectionFormat: none
+            defaultValue:
+              $id: '205'
+              fixed: false
+            deprecated: false
+            documentation:
+              $id: '206'
+              fixed: false
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '208'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '209'
+                fixed: false
+                raw: String
+            name:
+              $id: '207'
+              fixed: false
+              raw: argNo
+            serializedName: argNo
+          - $id: '210'
+            collectionFormat: none
+            defaultValue:
+              $id: '211'
+              fixed: false
+            deprecated: true
+            deprecationMessage: This parameter is deprecated. Please do not use it any longer.
+            documentation:
+              $id: '212'
+              fixed: false
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '214'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '215'
+                fixed: false
+                raw: String
+            name:
+              $id: '213'
+              fixed: false
+              raw: argYes
+            serializedName: argYes
+          - $id: '216'
+            collectionFormat: none
+            defaultValue:
+              $id: '217'
+              fixed: false
+            deprecated: true
+            deprecationMessage: This parameter will be removed in 2005.
+            documentation:
+              $id: '218'
+              fixed: false
+            extensions:
+              x-deprecated:
+                description: This parameter will be removed in 2005.
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '220'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '221'
+                fixed: false
+                raw: String
+            name:
+              $id: '219'
+              fixed: false
+              raw: argCustom
+            serializedName: argCustom
+          - $id: '222'
+            collectionFormat: none
+            defaultValue:
+              $id: '223'
+              fixed: false
+            deprecated: true
+            deprecationMessage: This parameter is deprecated. Please use argNo instead.
+            documentation:
+              $id: '224'
+              fixed: false
+            extensions:
+              x-deprecated:
+                replaced-by: argNo
+            isConstant: false
+            isRequired: false
+            location: query
+            modelType:
+              $id: '226'
+              $type: PrimaryType
+              deprecated: false
+              knownPrimaryType: string
+              name:
+                $id: '227'
+                fixed: false
+                raw: String
+            name:
+              $id: '225'
+              fixed: false
+              raw: argReplaced
+            serializedName: argReplaced
+        requestContentType: application/json; charset=utf-8
+        responseContentTypes:
+          - application/json
+        responses:
+          OK:
+            $id: '230'
+            isNullable: true
+        returnType:
+          $id: '232'
+          isNullable: true
+        serializedName: Path_Replaced
+        url: /path/params
+    name:
+      $id: '233'
+      fixed: false
+      raw: Path
+    nameForProperty: Path
+    typeName:
+      $id: '234'
+      fixed: false
