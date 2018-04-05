@@ -96,6 +96,10 @@ mappingsSpecs = {
   'specs-spellcheck'       : 'cognitiveservices/data-plane/SpellCheck/V1.0/SpellCheck.json'
 }
 
+mappingsCustom = {
+  'deprecated'          : 'deprecated.yaml'
+}
+
 task 'regenerate-testserver', '', (done) ->
   regenExpected {
     'inputBaseDir': "node_modules/@microsoft.azure/autorest.testserver/swagger",
@@ -112,5 +116,13 @@ task 'regenerate-specs', '', (done) ->
   },done
   return null
 
-task 'regenerate', "regenerate expected code for tests", ['regenerate-testserver', 'regenerate-specs'], (done) ->
+task 'regenerate-custom', '', (done) ->
+  regenExpected {
+    'inputBaseDir': "test/Resource/SwaggerGen",
+    'mappings': mappingsCustom,
+    'outputDir': 'test/Expected'
+  },done
+  return null
+
+task 'regenerate', "regenerate expected code for tests", ['regenerate-testserver', 'regenerate-specs', 'regenerate-custom'], (done) ->
   done();
