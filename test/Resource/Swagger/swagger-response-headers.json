@@ -156,6 +156,7 @@
   "components": {
     "schemas": {
       "Product": {
+        "type": "object",
         "description": "The product documentation.",
         "properties": {
           "product_id": {
@@ -185,6 +186,7 @@
         }
       },
       "Error": {
+        "type": "object",
         "properties": {
           "code": {
             "type": "integer",

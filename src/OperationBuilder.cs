@@ -371,9 +371,13 @@ namespace AutoRest.Modeler
                 IModelType type = typeStack.Peek();
                 while (!Equals(type, baseType))
                 {
-                    if (type is CompositeType && _swaggerModeler.ExtendedTypes.ContainsKey(type.Name.RawValue))
+                    if (type is CompositeType && _swaggerModeler.ExtendedTypes.TryGetValue(type.Name.RawValue, out string extType))
                     {
-                        type = _swaggerModeler.GeneratedTypes[_swaggerModeler.ExtendedTypes[type.Name.RawValue]];
+                        if (!_swaggerModeler.GeneratedTypes.ContainsKey(extType))
+                        {
+                            throw new InvalidOperationException($"Type '{extType}' not present among generated types (make sure the referenced schema has type 'object')");
+                        }
+                        type = _swaggerModeler.GeneratedTypes[extType];
                     }
                     else
                     {
