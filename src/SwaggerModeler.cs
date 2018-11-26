@@ -465,6 +465,12 @@ namespace AutoRest.Modeler
                 }
             }
 
+            // unwrap models that are referenced. (might need this elsewhere too!)
+            if (swaggerParameter.Schema != null && swaggerParameter.Schema.Reference != null )
+            {
+                swaggerParameter.Schema = Resolver.Unwrap(swaggerParameter.Schema);
+            }
+ 
             // Unwrap the schema if in "body"
             if (swaggerParameter.Schema != null && swaggerParameter.In == ParameterLocation.Body)
             {
