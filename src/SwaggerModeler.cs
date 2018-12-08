@@ -82,9 +82,9 @@ namespace AutoRest.Modeler
             // Build methods
             foreach (var path in ServiceDefinition.Paths.Concat(ServiceDefinition.CustomPaths))
             {
-                foreach (var verb in path.Value.Keys)
-                {
-                    var operation = path.Value[verb];
+                foreach (var verb in path.Value.ToOperationsDictionary().Keys)
+                {         
+                    var operation = path.Value.ToOperationsDictionary()[verb];
                     if (string.IsNullOrWhiteSpace(operation.OperationId))
                     {
                         throw ErrorManager.CreateError(
@@ -93,12 +93,12 @@ namespace AutoRest.Modeler
                                 verb,
                                 path.Key));
                     }
+
                     var methodName = GetMethodNameFromOperationId(operation.OperationId);
-                    var methodGroup = GetMethodGroup(operation);
-                    
+                    var methodGroup = GetMethodGroup(operation);                    
                     if (verb.ToHttpMethod() != HttpMethod.Options)
                     {
-                        string url = path.Key;
+                        var url = path.Value.XMsMetadata["path"].ToString();
                         if (url.Contains("?"))
                         {
                             url = url.Substring(0, url.IndexOf('?'));
@@ -109,12 +109,12 @@ namespace AutoRest.Modeler
 
                         // Add error models marked by x-ms-error-response
                         var xmsErrorResponses = method.Responses.Values.Where(resp=>resp.Extensions.ContainsKey("x-ms-error-response") && (bool)resp.Extensions["x-ms-error-response"] && resp.Body is CompositeType)
-                                                                       .Select(resp=>(CompositeType)resp.Body);
+                                                                    .Select(resp=>(CompositeType)resp.Body);
                         xmsErrorResponses.ForEach(errModel=>CodeModel.AddError(errModel));
 
                         // If marked error models have a polymorphic discriminator, include all models that allOf on them (at any level of inheritence)
                         baseErrorResponses = baseErrorResponses.Union(xmsErrorResponses.Where(errModel=>!string.IsNullOrEmpty(errModel.PolymorphicDiscriminator) && ExtendedTypes.ContainsKey(errModel.Name))
-                                                                  .Select(errModel=>errModel.Name)).ToList();
+                                                                .Select(errModel=>errModel.Name)).ToList();
 
                         // Add the default error model if exists
                         if (method.DefaultResponse.Body is CompositeType)
@@ -122,13 +122,14 @@ namespace AutoRest.Modeler
                             baseErrorResponses.Add(((CompositeType)method.DefaultResponse.Body).Name);
                             CodeModel.AddError((CompositeType)method.DefaultResponse.Body);
                         }
-               
+            
                     }
                     else
                     {
                         Logger.Instance.Log(Category.Warning, Resources.OptionsNotSupported);
                     }
-                }
+
+                }    
             }
             ProcessForwardToMethods(methods);
 
@@ -166,7 +167,7 @@ namespace AutoRest.Modeler
             // regular model class or an exception class
             // Set base type
             var errorResponses = 
-                ServiceDefinition.Paths.Values.SelectMany(pathObj=>pathObj.Values.SelectMany(opObj=>opObj.Responses.Values.Where(res=>res.Extensions?.ContainsKey("x-ms-error-response")==true && (bool)res.Extensions["x-ms-error-response"])));
+                ServiceDefinition.Paths.Values.SelectMany(pathObj=>pathObj.ToOperationsDictionary().Values.SelectMany(opObj=>opObj.Responses.Values.Where(res=>res.Extensions?.ContainsKey("x-ms-error-response")==true && (bool)res.Extensions["x-ms-error-response"])));
             var errorModels = errorResponses.Select(resp=>resp.Schema?.Reference).Where(modelRef=>!string.IsNullOrEmpty(modelRef)).Select(modelRef=>GeneratedTypes[modelRef]);
             errorModels.ForEach(errorModel=>CodeModel.AddError(errorModel));
 
@@ -342,10 +343,10 @@ namespace AutoRest.Modeler
             // Build service types and validate allOf
             if (schemas != null)
             {
-                foreach (var schemaName in schemas.Keys.ToArray())
+                foreach (var schemaUid in schemas.Keys.ToArray())
                 {
-                    var schema = schemas[schemaName];
-                    schema.GetBuilder(this).BuildServiceType(schemaName, false);
+                    var schema = schemas[schemaUid];
+                    schema.GetBuilder(this).BuildServiceType(schemaUid, false);
 
                     Resolver.ExpandAllOf(schema);
                     var parent = string.IsNullOrEmpty(schema.Extends.StripComponentsSchemaPath())
@@ -356,7 +357,7 @@ namespace AutoRest.Modeler
                         !AncestorsHaveProperties(parent.Properties, parent.Extends) &&
                         !GenerateEmptyClasses)
                     {
-                        throw ErrorManager.CreateError(Resources.InvalidAncestors, schemaName);
+                        throw ErrorManager.CreateError(Resources.InvalidAncestors, schemaUid);
                     }
                 }
             }

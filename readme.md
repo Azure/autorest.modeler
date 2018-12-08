@@ -36,7 +36,7 @@ scope-cm-yaml/emitter:
 ``` yaml $(standalone-modeler)
 pipeline:
   standalone/imodeler1:
-    input: openapi-document/identity
+    input: openapi-document/multi-api/identity
     output-artifact: code-model-v1
     scope: standalone-modeler
   standalone/commonmarker:

@@ -4,6 +4,7 @@
 using System;
 using System.Globalization;
 using AutoRest.Core;
+using System.Collections.Generic;
 using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
 using AutoRest.Modeler.Model;
@@ -11,6 +12,7 @@ using AutoRest.Modeler.Properties;
 using static AutoRest.Core.Utilities.DependencyInjection;
 using System.Linq;
 using AutoRest.Swagger;
+using Newtonsoft.Json.Linq;
 
 namespace AutoRest.Modeler
 {
@@ -33,6 +35,10 @@ namespace AutoRest.Modeler
         public override IModelType BuildServiceType(string serviceTypeName, bool required)
         {
             _schema = Modeler.Resolver.Unwrap(_schema);
+            var metadata =  _schema.Extensions.GetValue<JObject>("x-ms-metadata");
+            if (metadata != null) {
+                serviceTypeName = metadata.ToObject<Dictionary<string,object>>().GetValue<string>("name");
+            }
 
             // translate nullable back to what "code-model-v1"-gen generators expect
             if (_schema.Nullable.HasValue && !_schema.Extensions.ContainsKey("x-nullable"))

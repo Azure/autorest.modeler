@@ -52,6 +52,7 @@ namespace AutoRest.Modeler
                 unwrappedParameter.Schema.Extensions["x-ms-enum"] = unwrappedParameter.Extensions["x-ms-enum"];
             }
             IModelType parameterType = BuildServiceType(parameterName, isRequired);
+            //var extractedName = schema.Extensions.GetValue<JObject>("x-ms-metadata").ToObject<Dictionary<string,object>>().GetValue<string>("name");
             var parameter = New<Parameter>(new
             {
                 Name = unwrappedParameter.Name,
