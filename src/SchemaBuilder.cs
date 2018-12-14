@@ -35,10 +35,6 @@ namespace AutoRest.Modeler
         public override IModelType BuildServiceType(string serviceTypeName, bool required)
         {
             _schema = Modeler.Resolver.Unwrap(_schema);
-            var metadata =  _schema.Extensions.GetValue<JObject>("x-ms-metadata");
-            if (metadata != null) {
-                serviceTypeName = metadata.ToObject<Dictionary<string,object>>().GetValue<string>("name");
-            }
 
             // translate nullable back to what "code-model-v1"-gen generators expect
             if (_schema.Nullable.HasValue && !_schema.Extensions.ContainsKey("x-nullable"))

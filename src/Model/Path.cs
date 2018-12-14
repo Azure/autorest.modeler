@@ -45,10 +45,10 @@ namespace AutoRest.Modeler.Model
 
         public Dictionary<string, Operation> ToOperationsDictionary() =>  
             new Dictionary<string, Operation> {
-                { "get", Get },
-                { "put", Put },
+                { "put", Put },       
+                { "delete", Delete },                         
+                { "get", Get },                
                 { "post", Post },
-                { "delete", Delete },
                 { "options", Options },
                 { "head", Head },
                 { "patch", Patch },
