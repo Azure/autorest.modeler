@@ -687,5 +687,15 @@ namespace AutoRest.Modeler.Tests
             // is it marked as an 'additionalProperties' bucket?
             Assert.True(dictionaryProperty.SupportsAdditionalProperties);
         }
+
+        [Fact]
+        public void TestResponseBody()
+        {
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-response-body.yaml");
+            var modeler = new SwaggerModeler();
+            var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
+
+            Assert.Equal(1, codeModel.Methods.Count());
+        }
     }
 }

@@ -250,6 +250,15 @@ namespace AutoRest.Modeler
 
         private void BuildMethodParameters(Method method)
         {
+            if (_operation.RequestBody?.Content != null)
+            {
+                foreach (var contentDescription in _operation.RequestBody.Content.Values)
+                {
+                    // Resolve schema for content.
+                    contentDescription.Schema = _swaggerModeler.Resolver.Unwrap(contentDescription.Schema) ?? contentDescription.Schema;
+                }
+            }
+
             foreach (var swaggerParameter in DeduplicateParameters(_operation.Parameters))
             {
                 var actualSwaggerParameter = _swaggerModeler.Unwrap(swaggerParameter);
