@@ -51,6 +51,14 @@ namespace AutoRest.Modeler
             {
                 unwrappedParameter.Schema.Extensions["x-ms-enum"] = unwrappedParameter.Extensions["x-ms-enum"];
             }
+            if (unwrappedParameter.Extensions.ContainsKey("x-ms-header-collection-prefix") && unwrappedParameter.Schema.AdditionalProperties == null)
+            {
+                unwrappedParameter.Schema.Type = DataType.Object;
+                unwrappedParameter.Schema.AdditionalProperties = new Schema
+                {
+                    Type = DataType.String
+                };
+            }
             IModelType parameterType = BuildServiceType(parameterName, isRequired);
             var parameter = New<Parameter>(new
             {
