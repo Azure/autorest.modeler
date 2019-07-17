@@ -31,7 +31,9 @@ namespace AutoRest.Modeler
         private readonly SwaggerModeler _swaggerModeler;
         private readonly Operation _operation;
         private const string APP_JSON_MIME = "application/json";
+        private const string APP_START_MIME = "application/";
         private const string APP_XML_MIME = "application/xml";
+        private const string VENDOR_JSON_MIME = "+json";
 
         public OperationBuilder(Operation operation, SwaggerModeler swaggerModeler)
         {
@@ -526,7 +528,8 @@ namespace AutoRest.Modeler
 
         private bool SwaggerOperationProducesSomethingDeserializable()
         {
-            return true == _effectiveProduces?.Any(s => s.StartsWith(APP_JSON_MIME, StringComparison.OrdinalIgnoreCase) || s.StartsWith(APP_XML_MIME, StringComparison.OrdinalIgnoreCase));
+            return true == _effectiveProduces?.Any(s => s.StartsWith(APP_JSON_MIME, StringComparison.OrdinalIgnoreCase) || s.StartsWith(APP_XML_MIME, StringComparison.OrdinalIgnoreCase) 
+                || s.StartsWith(APP_START_MIME, StringComparison.OrdinalIgnoreCase) && s.Split(';')[0].TrimEnd().EndsWith(VENDOR_JSON_MIME, StringComparison.OrdinalIgnoreCase));
         }
 
         private bool SwaggerOperationProducesNotEmpty() => true == _effectiveProduces?.Any();
