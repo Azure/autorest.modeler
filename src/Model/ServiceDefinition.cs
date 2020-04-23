@@ -17,8 +17,8 @@ namespace AutoRest.Modeler.Model
         public ServiceDefinition()
         {
             Components = new Components();
-            Paths = new Dictionary<string, Dictionary<string, Operation>>();
-            CustomPaths = new Dictionary<string, Dictionary<string, Operation>>();
+            Paths = new Dictionary<string, Path>();
+            CustomPaths = new Dictionary<string, Path>();
             Tags = new List<Tag>();
         }
 
@@ -37,13 +37,13 @@ namespace AutoRest.Modeler.Model
         /// <summary>
         /// Key is actual path and the value is serializationProperty of http operations and operation objects.
         /// </summary>
-        public Dictionary<string, Dictionary<string, Operation>> Paths { get; set; }
+        public Dictionary<string, Path> Paths { get; set; }
 
         /// <summary>
         /// Key is actual path and the value is serializationProperty of http operations and operation objects.
         /// </summary>
         [JsonProperty("x-ms-paths")]
-        public Dictionary<string, Dictionary<string, Operation>> CustomPaths { get; set; }
+        public Dictionary<string, Path> CustomPaths { get; set; }
 
         public Components Components { get; set; }
 

@@ -4,6 +4,7 @@
 using System;
 using System.Globalization;
 using AutoRest.Core;
+using System.Collections.Generic;
 using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
 using AutoRest.Modeler.Model;
@@ -11,6 +12,7 @@ using AutoRest.Modeler.Properties;
 using static AutoRest.Core.Utilities.DependencyInjection;
 using System.Linq;
 using AutoRest.Swagger;
+using Newtonsoft.Json.Linq;
 
 namespace AutoRest.Modeler
 {

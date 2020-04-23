@@ -70,7 +70,7 @@ namespace AutoRest.Modeler.JsonConverters
             {
                 try
                 {
-                    if (operation.Name == null || operation.Name.StartsWith("x-"))
+                    if (operation.Name == null)
                     {
                         continue;
                     }
