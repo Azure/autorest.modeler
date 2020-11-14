@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Net;
-using System.Text;
+using System.Text.RegularExpressions;
 using AutoRest.Core.Model;
 using AutoRest.Core.Logging;
 using AutoRest.Core.Utilities;
@@ -31,10 +31,9 @@ namespace AutoRest.Modeler
         private readonly SwaggerModeler _swaggerModeler;
         private readonly Operation _operation;
         private const string APP_JSON_MIME = "application/json";
-        private const string APP_START_MIME = "application/";
         private const string APP_XML_MIME = "application/xml";
-        private const string VENDOR_JSON_MIME = "+json";
-
+        private static Regex REGEX_MIME = new Regex(@"^application\/([a-z0-9][a-z0-9-.!#$&^]*\+)?(json|xml)$", RegexOptions.IgnoreCase);
+ 
         public OperationBuilder(Operation operation, SwaggerModeler swaggerModeler)
         {
             _operation = operation ?? throw new ArgumentNullException("operation");
@@ -528,9 +527,8 @@ namespace AutoRest.Modeler
 
         private bool SwaggerOperationProducesSomethingDeserializable()
         {
-            return true == _effectiveProduces?.Any(s => s.StartsWith(APP_JSON_MIME, StringComparison.OrdinalIgnoreCase) || s.StartsWith(APP_XML_MIME, StringComparison.OrdinalIgnoreCase) 
-                || s.StartsWith(APP_START_MIME, StringComparison.OrdinalIgnoreCase) && s.Split(';')[0].TrimEnd().EndsWith(VENDOR_JSON_MIME, StringComparison.OrdinalIgnoreCase));
-        }
+            return true == _effectiveProduces?.Any(s => REGEX_MIME.IsMatch(s.Split(';')[0].TrimEnd()));
+    }
 
         private bool SwaggerOperationProducesNotEmpty() => true == _effectiveProduces?.Any();
 
