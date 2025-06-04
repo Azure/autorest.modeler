@@ -1,3 +1,6 @@
+> [!IMPORTANT]  
+> This package/repo is not maintained anymore. See TypeSpec https://github.com/microsoft/typespec for the approach Azure is taking in generating SDK moving forward.
+
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
