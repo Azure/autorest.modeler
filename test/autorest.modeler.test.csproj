@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk" >
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <VersionPrefix>1.0.0</VersionPrefix>
     <GenerateFullPaths>true</GenerateFullPaths>
@@ -9,7 +9,7 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
-  <Target Name="Nuke" AfterTargets="clean" >
+  <Target Name="Nuke" AfterTargets="clean">
     <Delete Files="$(BaseOutputPath)**;$(BaseIntermediateOutputPath)razor/**;$(BaseIntermediateOutputPath)Debug/**;$(BaseIntermediateOutputPath)Release/**" />
     <RemoveDir Directories="$(BaseOutputPath);$(BaseIntermediateOutputPath)/Debug;$(BaseIntermediateOutputPath)/Release" />
   </Target>
@@ -18,6 +18,14 @@
     <Content Include="$(MSBuildProjectDirectory)\Resource\**">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="Resource\Swagger\swagger-response-body.yaml" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Include="Resource\Swagger\swagger-response-body.yaml" />
   </ItemGroup>
 
   <ItemGroup>

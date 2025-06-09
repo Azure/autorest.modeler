@@ -1,0 +1,35 @@
+openapi: 3.0.0
+servers: []
+info:
+  title: Xml Tests
+  version: 1.0.0
+paths: {}
+components:
+  schemas:
+    ModelPlain:
+      description: ModelPlain
+      type: object
+      properties:
+        PropertyPlain:
+          description: PropertyPlain
+          type: string
+        PropertyOverridden:
+          description: PropertyOverride
+          type: string
+paths:
+  /patients:
+    post:
+      summary: Register new patient
+      requestBody:
+        required: true
+        content:
+          'application/x-www-form-urlencoded':
+            schema:
+              $ref: '#/components/schemas/ModelPlain'
+      responses:
+        '200':
+          description: Results of operation
+          content:
+            application/json:    
+              schema:
+                $ref: "#/components/schemas/ModelPlain"
