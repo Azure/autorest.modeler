@@ -509,6 +509,71 @@ namespace AutoRest.Modeler.Tests
             Assert.Equal("0", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[3].Constraints[Constraint.ExclusiveMinimum]);
         }
 
+       [Fact]
+        public void TestClientWithVendorMimeTypes()
+        {
+            var input = Path.Combine(CodeBaseDirectory, "Resource", "Swagger", "swagger-vendor-mime.json");
+            var modeler = new SwaggerModeler();
+            var codeModel = modeler.Build(SwaggerParser.Parse(File.ReadAllText(input)));
+
+            var methods = codeModel.Methods.ToList();
+            Assert.Equal("resourceGroupName", methods[0].Parameters[1].Name);
+            Assert.Equal(true, methods[0].Parameters[1].IsRequired);
+            Assert.Equal(3, methods[0].Parameters[1].Constraints.Count);
+            Assert.Equal("10", methods[0].Parameters[1].Constraints[Constraint.MaxLength]);
+            Assert.Equal("3", methods[0].Parameters[1].Constraints[Constraint.MinLength]);
+            Assert.Equal("[a-zA-Z0-9]+", methods[0].Parameters[1].Constraints[Constraint.Pattern]);
+            Assert.False(methods[0].Parameters[1].Constraints.ContainsKey(Constraint.MultipleOf));
+            Assert.False(methods[0].Parameters[1].Constraints.ContainsKey(Constraint.ExclusiveMaximum));
+            Assert.False(methods[0].Parameters[1].Constraints.ContainsKey(Constraint.ExclusiveMinimum));
+            Assert.False(methods[0].Parameters[1].Constraints.ContainsKey(Constraint.InclusiveMinimum));
+            Assert.False(methods[0].Parameters[1].Constraints.ContainsKey(Constraint.InclusiveMaximum));
+            Assert.False(methods[0].Parameters[1].Constraints.ContainsKey(Constraint.MinItems));
+            Assert.False(methods[0].Parameters[1].Constraints.ContainsKey(Constraint.MaxItems));
+            Assert.False(methods[0].Parameters[1].Constraints.ContainsKey(Constraint.UniqueItems));
+            Assert.Equal("application/vnd.mycompany-customtype.v1+json;version=2020", methods[0].ResponseContentTypes.First());
+            Assert.Equal("application/vnd.mycompany-customtype.v1+json", methods[0].ResponseContentTypes.Last());
+
+            Assert.Equal("id", methods[0].Parameters[2].Name);
+            Assert.Equal(3, methods[0].Parameters[2].Constraints.Count);
+            Assert.Equal("10", methods[0].Parameters[2].Constraints[Constraint.MultipleOf]);
+            Assert.Equal("100", methods[0].Parameters[2].Constraints[Constraint.InclusiveMinimum]);
+            Assert.Equal("1000", methods[0].Parameters[2].Constraints[Constraint.InclusiveMaximum]);
+            Assert.False(methods[0].Parameters[2].Constraints.ContainsKey(Constraint.ExclusiveMaximum));
+            Assert.False(methods[0].Parameters[2].Constraints.ContainsKey(Constraint.ExclusiveMinimum));
+            Assert.False(methods[0].Parameters[2].Constraints.ContainsKey(Constraint.MaxLength));
+            Assert.False(methods[0].Parameters[2].Constraints.ContainsKey(Constraint.MinLength));
+            Assert.False(methods[0].Parameters[2].Constraints.ContainsKey(Constraint.Pattern));
+            Assert.False(methods[0].Parameters[2].Constraints.ContainsKey(Constraint.MinItems));
+            Assert.False(methods[0].Parameters[2].Constraints.ContainsKey(Constraint.MaxItems));
+            Assert.False(methods[0].Parameters[2].Constraints.ContainsKey(Constraint.UniqueItems));
+
+            Assert.Equal("apiVersion", methods[0].Parameters[3].Name);
+            Assert.NotNull(methods[0].Parameters[3].ClientProperty);
+            Assert.Equal(1, methods[0].Parameters[3].Constraints.Count);
+            Assert.Equal("\\d{2}-\\d{2}-\\d{4}", methods[0].Parameters[3].Constraints[Constraint.Pattern]);
+
+            Assert.Equal("Product", codeModel.ModelTypes.First(m => m.Name == "Product").Name);
+            Assert.Equal("DisplayNames", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[2].Name);
+            Assert.Equal(3, codeModel.ModelTypes.First(m => m.Name == "Product").Properties[2].Constraints.Count);
+            Assert.Equal("6", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[2].Constraints[Constraint.MaxItems]);
+            Assert.Equal("0", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[2].Constraints[Constraint.MinItems]);
+            Assert.Equal("true", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[2].Constraints[Constraint.UniqueItems]);
+            Assert.False(codeModel.ModelTypes.First(m => m.Name == "Product").Properties[2].Constraints.ContainsKey(Constraint.ExclusiveMaximum));
+            Assert.False(codeModel.ModelTypes.First(m => m.Name == "Product").Properties[2].Constraints.ContainsKey(Constraint.ExclusiveMinimum));
+            Assert.False(codeModel.ModelTypes.First(m => m.Name == "Product").Properties[2].Constraints.ContainsKey(Constraint.InclusiveMaximum));
+            Assert.False(codeModel.ModelTypes.First(m => m.Name == "Product").Properties[2].Constraints.ContainsKey(Constraint.InclusiveMinimum));
+            Assert.False(codeModel.ModelTypes.First(m => m.Name == "Product").Properties[2].Constraints.ContainsKey(Constraint.MultipleOf));
+            Assert.False(codeModel.ModelTypes.First(m => m.Name == "Product").Properties[2].Constraints.ContainsKey(Constraint.MinLength));
+            Assert.False(codeModel.ModelTypes.First(m => m.Name == "Product").Properties[2].Constraints.ContainsKey(Constraint.MaxLength));
+            Assert.False(codeModel.ModelTypes.First(m => m.Name == "Product").Properties[2].Constraints.ContainsKey(Constraint.Pattern));
+
+            Assert.Equal("Capacity", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[3].Name);
+            Assert.Equal(2, codeModel.ModelTypes.First(m => m.Name == "Product").Properties[3].Constraints.Count);
+            Assert.Equal("100", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[3].Constraints[Constraint.ExclusiveMaximum]);
+            Assert.Equal("0", codeModel.ModelTypes.First(m => m.Name == "Product").Properties[3].Constraints[Constraint.ExclusiveMinimum]);
+        }
+
         [Fact]
         public void TestConstants()
         {
