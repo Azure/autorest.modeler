@@ -64,5 +64,16 @@ namespace AutoRest.Modeler.Tests
                 }
             }
         }
+
+        [Fact]
+        public void TestModelOfPetstore()
+        {
+            // https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v2.0/yaml/petstore.yaml
+            var input = Path.Combine("Resource", "Swagger", "petstore.yaml");
+            var serviceDefinition = SwaggerParser.Parse(File.ReadAllText(input));
+            var modeler = new SwaggerModeler();
+            var codeModel = modeler.Build(serviceDefinition);
+        }
+
     }
 }
